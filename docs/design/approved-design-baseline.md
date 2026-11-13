@@ -650,6 +650,10 @@ The approved `court-records-content.html` reference has SHA-256 `3bad111103fe080
 
 “View docket” describes the actual docket destination. An empty successful search has its own message. A partial outage keeps the available results and names the affected source. The release browser test checks keyword and semantic requests, record destinations, keyboard submission, successful, partial, failed and empty responses, reset and translated layouts with controlled API responses.
 
+### Court Date Guide
+
+The court-date guide follows the approved court-date-guide-content.html layout. Four section links organize preparation by task, with a separate shortcut to the existing missed-date guidance. Six day-of checklist selections live only on the open page. The browser checks cover all seven published sections, localized content, keyboard interaction, checklist reset and navigation in three languages and both themes.
+
 ### Public Defender Intake Form
 
 The approved pd-intake-content.html groups the seven existing sections into four sheets. The on-screen index links to each section and the print action opens the browser print dialog. All answers are handwritten. The page has no answer fields, storage or submission. The release browser checks verify the published field labels, answer options, advisories, keyboard navigation, print trigger and four-page output on Letter and A4 paper in English, Spanish and Chinese.

@@ -1,0 +1,2058 @@
+{
+  "schemaVersion": 1,
+  "scope": "florida_restraint_publication",
+  "acquisitionMetadata": {
+    "741.28": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "741.2801": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "775.082": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "775.083": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "775.084": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "787.01": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "787.02": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "787.025": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.025.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "787.03": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.03.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "787.04": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "827.03": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    }
+  },
+  "supportingSpans": [
+    {
+      "id": "fl-fs-787-01-2-restraint",
+      "sections": [
+        {
+          "section": "787.01",
+          "scope": "(1)",
+          "start": 84,
+          "end": 737,
+          "sourceHash": "0977116eafb0b4d5107654ae6cb61212989377d42976ab90935fc603eb132a80",
+          "quoteHash": "714deab9d7aa9dcfcb0d1013a0ee8c71ff3744f0725a2fafe3bcee83b88211a7"
+        },
+        {
+          "section": "787.01",
+          "scope": "(2)",
+          "start": 737,
+          "end": 939,
+          "sourceHash": "0977116eafb0b4d5107654ae6cb61212989377d42976ab90935fc603eb132a80",
+          "quoteHash": "04a2e93416c1b916e2250c8412f8dcf2e9a9c6f36f1edab979a4fcf9f04756ae"
+        },
+        {
+          "section": "787.01",
+          "scope": "(3)",
+          "start": 939,
+          "end": 2407,
+          "sourceHash": "0977116eafb0b4d5107654ae6cb61212989377d42976ab90935fc603eb132a80",
+          "quoteHash": "7788bf563666f8da7cee0b51a8f6099f73e41057cb943652ba9817d87c00d5d9"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-787-02-2-restraint",
+      "sections": [
+        {
+          "section": "787.02",
+          "scope": "(1)",
+          "start": 100,
+          "end": 491,
+          "sourceHash": "2edbc58f0e14721d8deedc269e65b48a9ff9388da46e4c809bd627b4fc3c1547",
+          "quoteHash": "531fa3b4948bb2f5197c04c96c87f12a9ce09ac587e3475c52b942f0c68ddac7"
+        },
+        {
+          "section": "787.02",
+          "scope": "(2)",
+          "start": 491,
+          "end": 660,
+          "sourceHash": "2edbc58f0e14721d8deedc269e65b48a9ff9388da46e4c809bd627b4fc3c1547",
+          "quoteHash": "d865805cdeeaaeb67f40ad4b54ce22ab9c41d8c0d7a84ea682c04ace8e781448"
+        },
+        {
+          "section": "787.02",
+          "scope": "(3)",
+          "start": 660,
+          "end": 2252,
+          "sourceHash": "2edbc58f0e14721d8deedc269e65b48a9ff9388da46e4c809bd627b4fc3c1547",
+          "quoteHash": "ecf10be2af11967db1f693ba88017b4a30bfec4c1a7d615a96b00e8519b1d9cc"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-787-025-2-a-restraint",
+      "sections": [
+        {
+          "section": "787.025",
+          "scope": "(1)",
+          "start": 40,
+          "end": 761,
+          "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+          "quoteHash": "4f8485aa91dbd7864405905f34b6f2accfc0a81d4a2a873f54e45052461130bc"
+        },
+        {
+          "section": "787.025",
+          "scope": "(2)(a)",
+          "start": 761,
+          "end": 1086,
+          "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+          "quoteHash": "fcd2baac5d19179643baa91942f5043d2440e3d8af4146c26aecc8ae7f864504"
+        },
+        {
+          "section": "787.025",
+          "scope": "(3)",
+          "start": 1951,
+          "end": 2612,
+          "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+          "quoteHash": "73471422564ebb3c71a549b95ad13f153c5384794521615e9570aa5fa986d323"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-787-025-2-b-restraint",
+      "sections": [
+        {
+          "section": "787.025",
+          "scope": "(1)",
+          "start": 40,
+          "end": 761,
+          "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+          "quoteHash": "4f8485aa91dbd7864405905f34b6f2accfc0a81d4a2a873f54e45052461130bc"
+        },
+        {
+          "section": "787.025",
+          "scope": "(2)(b)",
+          "start": 1086,
+          "end": 1476,
+          "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+          "quoteHash": "618eac287fc7eeb62def028c3b3083a1071973a2104c0f28edf40a239c822986"
+        },
+        {
+          "section": "787.025",
+          "scope": "(3)",
+          "start": 1951,
+          "end": 2612,
+          "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+          "quoteHash": "73471422564ebb3c71a549b95ad13f153c5384794521615e9570aa5fa986d323"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-787-025-2-c-restraint",
+      "sections": [
+        {
+          "section": "787.025",
+          "scope": "(1)",
+          "start": 40,
+          "end": 761,
+          "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+          "quoteHash": "4f8485aa91dbd7864405905f34b6f2accfc0a81d4a2a873f54e45052461130bc"
+        },
+        {
+          "section": "787.025",
+          "scope": "(2)(c)",
+          "start": 1476,
+          "end": 1951,
+          "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+          "quoteHash": "a199346cec9a9078216e22d92caf94005361c393000974962017e6bd4009b355"
+        },
+        {
+          "section": "787.025",
+          "scope": "(3)",
+          "start": 1951,
+          "end": 2612,
+          "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+          "quoteHash": "73471422564ebb3c71a549b95ad13f153c5384794521615e9570aa5fa986d323"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-787-03-1-restraint",
+      "sections": [
+        {
+          "section": "787.03",
+          "scope": "(1)",
+          "start": 38,
+          "end": 577,
+          "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+          "quoteHash": "fa60ece5d52ddd5936abc06520e088cd30d186e1002fb190886bd4480022d0d1"
+        },
+        {
+          "section": "787.03",
+          "scope": "(3)",
+          "start": 1209,
+          "end": 1322,
+          "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+          "quoteHash": "3e7fbd109f7337329dbd487cba5d4a47a761423cb6079bc570bfa5840e6e7c0a"
+        },
+        {
+          "section": "787.03",
+          "scope": "(4)",
+          "start": 1322,
+          "end": 2313,
+          "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+          "quoteHash": "3423fa123d6475f118977b561730640d11ba659ef818a36959baf2c5e4267149"
+        },
+        {
+          "section": "787.03",
+          "scope": "(5)",
+          "start": 2313,
+          "end": 2480,
+          "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+          "quoteHash": "e8df4b02d6ed25e2321e0fbb85626c54ce02f9ce0a402deed930a510803e6fc3"
+        },
+        {
+          "section": "787.03",
+          "scope": "(6)",
+          "start": 2480,
+          "end": 4962,
+          "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+          "quoteHash": "a5882fe7b9a3891eb2913e0ea3eeda78373ee40c87e2c02fdc6c9dd18e934148"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-787-03-2-restraint",
+      "sections": [
+        {
+          "section": "787.03",
+          "scope": "(2)",
+          "start": 577,
+          "end": 1209,
+          "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+          "quoteHash": "caf2bd5ef1486017c754147f6ca188f88fc0d8094c9497d502378f76c13321d2"
+        },
+        {
+          "section": "787.03",
+          "scope": "(3)",
+          "start": 1209,
+          "end": 1322,
+          "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+          "quoteHash": "3e7fbd109f7337329dbd487cba5d4a47a761423cb6079bc570bfa5840e6e7c0a"
+        },
+        {
+          "section": "787.03",
+          "scope": "(4)",
+          "start": 1322,
+          "end": 2313,
+          "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+          "quoteHash": "3423fa123d6475f118977b561730640d11ba659ef818a36959baf2c5e4267149"
+        },
+        {
+          "section": "787.03",
+          "scope": "(5)",
+          "start": 2313,
+          "end": 2480,
+          "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+          "quoteHash": "e8df4b02d6ed25e2321e0fbb85626c54ce02f9ce0a402deed930a510803e6fc3"
+        },
+        {
+          "section": "787.03",
+          "scope": "(6)",
+          "start": 2480,
+          "end": 4962,
+          "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+          "quoteHash": "a5882fe7b9a3891eb2913e0ea3eeda78373ee40c87e2c02fdc6c9dd18e934148"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-787-04-1-restraint",
+      "sections": [
+        {
+          "section": "787.04",
+          "scope": "(1)",
+          "start": 106,
+          "end": 325,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+          "quoteHash": "9618d25f7d5c2fb30147465c75bc9b369b383f1dc0c36c8537012c9c41d69745"
+        },
+        {
+          "section": "787.04",
+          "scope": "(5)",
+          "start": 1779,
+          "end": 2031,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+          "quoteHash": "c49657783161c2dae50e06c6fb0b2dd10707bda07f0837b503064ebbe522f8c3"
+        },
+        {
+          "section": "787.04",
+          "scope": "(6)",
+          "start": 2031,
+          "end": 2461,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+          "quoteHash": "92683569f2596a6e613d46269b317ec40450f710cad028575cf8dd69fdf7c9c3"
+        },
+        {
+          "section": "827.03",
+          "scope": "(1)",
+          "start": 71,
+          "end": 2752,
+          "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+          "quoteHash": "bf86dfe83788bdbdb683dae93433cd21ea8603acd9cbb44e0db6ba39ae44d0ad"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-787-04-2-restraint",
+      "sections": [
+        {
+          "section": "787.04",
+          "scope": "(2)",
+          "start": 325,
+          "end": 752,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+          "quoteHash": "37233e353949f4dfa8bc0841515201e82f64daa861690cea76bdf9d882564029"
+        },
+        {
+          "section": "787.04",
+          "scope": "(5)",
+          "start": 1779,
+          "end": 2031,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+          "quoteHash": "c49657783161c2dae50e06c6fb0b2dd10707bda07f0837b503064ebbe522f8c3"
+        },
+        {
+          "section": "787.04",
+          "scope": "(6)",
+          "start": 2031,
+          "end": 2461,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+          "quoteHash": "92683569f2596a6e613d46269b317ec40450f710cad028575cf8dd69fdf7c9c3"
+        },
+        {
+          "section": "827.03",
+          "scope": "(1)",
+          "start": 71,
+          "end": 2752,
+          "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+          "quoteHash": "bf86dfe83788bdbdb683dae93433cd21ea8603acd9cbb44e0db6ba39ae44d0ad"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-787-04-3-restraint",
+      "sections": [
+        {
+          "section": "787.04",
+          "scope": "(3)",
+          "start": 752,
+          "end": 1370,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+          "quoteHash": "35295583c8198587d24d656a1f30d42ce619d267b153939eba1e3c4efb6fd8a4"
+        },
+        {
+          "section": "787.04",
+          "scope": "(5)",
+          "start": 1779,
+          "end": 2031,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+          "quoteHash": "c49657783161c2dae50e06c6fb0b2dd10707bda07f0837b503064ebbe522f8c3"
+        },
+        {
+          "section": "787.04",
+          "scope": "(6)",
+          "start": 2031,
+          "end": 2461,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+          "quoteHash": "92683569f2596a6e613d46269b317ec40450f710cad028575cf8dd69fdf7c9c3"
+        },
+        {
+          "section": "827.03",
+          "scope": "(1)",
+          "start": 71,
+          "end": 2752,
+          "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+          "quoteHash": "bf86dfe83788bdbdb683dae93433cd21ea8603acd9cbb44e0db6ba39ae44d0ad"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-787-04-4-restraint",
+      "sections": [
+        {
+          "section": "787.04",
+          "scope": "(4)",
+          "start": 1370,
+          "end": 1779,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+          "quoteHash": "c4899497578fb0498515fda6c95bc20bf6b14d11d7195b8528581f3143463353"
+        },
+        {
+          "section": "787.04",
+          "scope": "(5)",
+          "start": 1779,
+          "end": 2031,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+          "quoteHash": "c49657783161c2dae50e06c6fb0b2dd10707bda07f0837b503064ebbe522f8c3"
+        },
+        {
+          "section": "787.04",
+          "scope": "(6)",
+          "start": 2031,
+          "end": 2461,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+          "quoteHash": "92683569f2596a6e613d46269b317ec40450f710cad028575cf8dd69fdf7c9c3"
+        },
+        {
+          "section": "827.03",
+          "scope": "(1)",
+          "start": 71,
+          "end": 2752,
+          "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+          "quoteHash": "bf86dfe83788bdbdb683dae93433cd21ea8603acd9cbb44e0db6ba39ae44d0ad"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    }
+  ],
+  "report": {
+    "schemaVersion": 1,
+    "kind": "florida_source_first_review",
+    "drafts": [
+      {
+        "id": "fl-fs-787-01-2-restraint",
+        "name": "Kidnapping",
+        "code": "787.01(2)",
+        "citation": "Fla. Stat. § 787.01(2)",
+        "primarySourceKey": "fl:statute:787.01:2",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:787.01:2",
+          "target": "title",
+          "text": "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "start": 0,
+          "end": 71,
+          "sourceHash": "0977116eafb0b4d5107654ae6cb61212989377d42976ab90935fc603eb132a80"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:787.01:2",
+            "target": "text",
+            "text": "(2) \nA person who kidnaps a person is guilty of a felony of the first degree, punishable by imprisonment for a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 737,
+            "end": 937,
+            "sourceHash": "0977116eafb0b4d5107654ae6cb61212989377d42976ab90935fc603eb132a80"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:787.01:2",
+            "target": "text",
+            "text": "(2) \nA person who kidnaps a person is guilty of a felony of the first degree, punishable by imprisonment for a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 737,
+            "end": 937,
+            "sourceHash": "0977116eafb0b4d5107654ae6cb61212989377d42976ab90935fc603eb132a80",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:787.01:2",
+            "role": "offense",
+            "contentHash": "0977116eafb0b4d5107654ae6cb61212989377d42976ab90935fc603eb132a80"
+          },
+          {
+            "sourceKey": "fl:statute:787.01",
+            "role": "grading",
+            "contentHash": "0977116eafb0b4d5107654ae6cb61212989377d42976ab90935fc603eb132a80"
+          },
+          {
+            "sourceKey": "fl:statute:741.28",
+            "role": "definition",
+            "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+          },
+          {
+            "sourceKey": "fl:statute:741.2801",
+            "role": "definition",
+            "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(2) \nA person who kidnaps a person is guilty of a felony of the first degree, punishable by imprisonment for a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(2) \nA person who kidnaps a person is guilty of a felony of the first degree, punishable by imprisonment for a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 787.01(2). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-787-02-2-restraint",
+        "name": "False imprisonment",
+        "code": "787.02(2)",
+        "citation": "Fla. Stat. § 787.02(2)",
+        "primarySourceKey": "fl:statute:787.02:2",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:787.02:2",
+          "target": "title",
+          "text": "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "start": 0,
+          "end": 87,
+          "sourceHash": "2edbc58f0e14721d8deedc269e65b48a9ff9388da46e4c809bd627b4fc3c1547"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:787.02:2",
+            "target": "text",
+            "text": "(2) \nA person who commits the offense of false imprisonment is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 491,
+            "end": 658,
+            "sourceHash": "2edbc58f0e14721d8deedc269e65b48a9ff9388da46e4c809bd627b4fc3c1547"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:787.02:2",
+            "target": "text",
+            "text": "(2) \nA person who commits the offense of false imprisonment is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 491,
+            "end": 658,
+            "sourceHash": "2edbc58f0e14721d8deedc269e65b48a9ff9388da46e4c809bd627b4fc3c1547",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:787.02:2",
+            "role": "offense",
+            "contentHash": "2edbc58f0e14721d8deedc269e65b48a9ff9388da46e4c809bd627b4fc3c1547"
+          },
+          {
+            "sourceKey": "fl:statute:787.02",
+            "role": "grading",
+            "contentHash": "2edbc58f0e14721d8deedc269e65b48a9ff9388da46e4c809bd627b4fc3c1547"
+          },
+          {
+            "sourceKey": "fl:statute:741.28",
+            "role": "definition",
+            "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+          },
+          {
+            "sourceKey": "fl:statute:741.2801",
+            "role": "definition",
+            "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(2) \nA person who commits the offense of false imprisonment is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(2) \nA person who commits the offense of false imprisonment is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 787.02(2). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-787-025-2-a-restraint",
+        "name": "Luring or enticing a child",
+        "code": "787.025(2)(a)",
+        "citation": "Fla. Stat. § 787.025(2)(a)",
+        "primarySourceKey": "fl:statute:787.025:2_a",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:787.025:2_a",
+          "target": "title",
+          "text": "Luring or enticing a child",
+          "start": 0,
+          "end": 26,
+          "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:787.025:2_a",
+            "target": "text",
+            "text": "(2)(a) \nA person 18 years of age or older who intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 761,
+            "end": 1084,
+            "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:787.025:2_a",
+            "target": "text",
+            "text": "(2)(a) \nA person 18 years of age or older who intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 761,
+            "end": 1084,
+            "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:787.025:2_a",
+            "role": "offense",
+            "contentHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9"
+          },
+          {
+            "sourceKey": "fl:statute:787.025",
+            "role": "grading",
+            "contentHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(2)(a) \nA person 18 years of age or older who intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(2)(a) \nA person 18 years of age or older who intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 787.025(2)(a). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-787-025-2-b-restraint",
+        "name": "Luring or enticing a child after a prior luring conviction",
+        "code": "787.025(2)(b)",
+        "citation": "Fla. Stat. § 787.025(2)(b)",
+        "primarySourceKey": "fl:statute:787.025:2_b",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:787.025:2_b",
+          "target": "title",
+          "text": "Luring or enticing a child",
+          "start": 0,
+          "end": 26,
+          "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:787.025:2_b",
+            "target": "text",
+            "text": "(b) \nA person 18 years of age or older who, having been previously convicted of a violation of paragraph (a), intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 1086,
+            "end": 1474,
+            "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:787.025:2_b",
+            "target": "text",
+            "text": "(b) \nA person 18 years of age or older who, having been previously convicted of a violation of paragraph (a), intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 1086,
+            "end": 1474,
+            "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:787.025:2_b",
+            "role": "offense",
+            "contentHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9"
+          },
+          {
+            "sourceKey": "fl:statute:787.025",
+            "role": "grading",
+            "contentHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(b) \nA person 18 years of age or older who, having been previously convicted of a violation of paragraph (a), intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(b) \nA person 18 years of age or older who, having been previously convicted of a violation of paragraph (a), intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 787.025(2)(b). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-787-025-2-c-restraint",
+        "name": "Luring or enticing a child after a listed sex-offense conviction",
+        "code": "787.025(2)(c)",
+        "citation": "Fla. Stat. § 787.025(2)(c)",
+        "primarySourceKey": "fl:statute:787.025:2_c",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:787.025:2_c",
+          "target": "title",
+          "text": "Luring or enticing a child",
+          "start": 0,
+          "end": 26,
+          "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:787.025:2_c",
+            "target": "text",
+            "text": "(c) \nA person 18 years of age or older who, having been previously convicted of a violation of chapter 794, s. 800.04, or s. 847.0135(5), or a violation of a similar law of another jurisdiction, intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 1476,
+            "end": 1949,
+            "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:787.025:2_c",
+            "target": "text",
+            "text": "(c) \nA person 18 years of age or older who, having been previously convicted of a violation of chapter 794, s. 800.04, or s. 847.0135(5), or a violation of a similar law of another jurisdiction, intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 1476,
+            "end": 1949,
+            "sourceHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:787.025:2_c",
+            "role": "offense",
+            "contentHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9"
+          },
+          {
+            "sourceKey": "fl:statute:787.025",
+            "role": "grading",
+            "contentHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(c) \nA person 18 years of age or older who, having been previously convicted of a violation of chapter 794, s. 800.04, or s. 847.0135(5), or a violation of a similar law of another jurisdiction, intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(c) \nA person 18 years of age or older who, having been previously convicted of a violation of chapter 794, s. 800.04, or s. 847.0135(5), or a violation of a similar law of another jurisdiction, intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 787.025(2)(c). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-787-03-1-restraint",
+        "name": "Interference with custody: taking or enticing from lawful custody",
+        "code": "787.03(1)",
+        "citation": "Fla. Stat. § 787.03(1)",
+        "primarySourceKey": "fl:statute:787.03:1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:787.03:1",
+          "target": "title",
+          "text": "Interference with custody",
+          "start": 0,
+          "end": 25,
+          "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:787.03:1",
+            "target": "text",
+            "text": "(1) \nWhoever, without lawful authority, knowingly or recklessly takes or entices, or aids, abets, hires, or otherwise procures another to take or entice, any minor or any incompetent person from the custody of the minor’s or incompetent person’s parent, his or her guardian, a public agency having the lawful charge of the minor or incompetent person, or any other lawful custodian commits the offense of interference with custody and commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 38,
+            "end": 575,
+            "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:787.03:1",
+            "target": "text",
+            "text": "(1) \nWhoever, without lawful authority, knowingly or recklessly takes or entices, or aids, abets, hires, or otherwise procures another to take or entice, any minor or any incompetent person from the custody of the minor’s or incompetent person’s parent, his or her guardian, a public agency having the lawful charge of the minor or incompetent person, or any other lawful custodian commits the offense of interference with custody and commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 38,
+            "end": 575,
+            "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:787.03:1",
+            "role": "offense",
+            "contentHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc"
+          },
+          {
+            "sourceKey": "fl:statute:787.03",
+            "role": "grading",
+            "contentHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc"
+          },
+          {
+            "sourceKey": "fl:statute:741.28",
+            "role": "definition",
+            "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(1) \nWhoever, without lawful authority, knowingly or recklessly takes or entices, or aids, abets, hires, or otherwise procures another to take or entice, any minor or any incompetent person from the custody of the minor’s or incompetent person’s parent, his or her guardian, a public agency having the lawful charge of the minor or incompetent person, or any other lawful custodian commits the offense of interference with custody and commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(1) \nWhoever, without lawful authority, knowingly or recklessly takes or entices, or aids, abets, hires, or otherwise procures another to take or entice, any minor or any incompetent person from the custody of the minor’s or incompetent person’s parent, his or her guardian, a public agency having the lawful charge of the minor or incompetent person, or any other lawful custodian commits the offense of interference with custody and commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 787.03(1). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-787-03-2-restraint",
+        "name": "Interference with custody: malicious deprivation without a custody order",
+        "code": "787.03(2)",
+        "citation": "Fla. Stat. § 787.03(2)",
+        "primarySourceKey": "fl:statute:787.03:2",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:787.03:2",
+          "target": "title",
+          "text": "Interference with custody",
+          "start": 0,
+          "end": 25,
+          "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:787.03:2",
+            "target": "text",
+            "text": "(2) \nIn the absence of a court order determining rights to custody or visitation with any minor or with any incompetent person, any parent of the minor or incompetent person, whether natural or adoptive, stepparent, legal guardian, or relative of the minor or incompetent person who has custody thereof and who takes, detains, conceals, or entices away that minor or incompetent person within or without the state with malicious intent to deprive another person of his or her right to custody of the minor or incompetent person commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 577,
+            "end": 1207,
+            "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:787.03:2",
+            "target": "text",
+            "text": "(2) \nIn the absence of a court order determining rights to custody or visitation with any minor or with any incompetent person, any parent of the minor or incompetent person, whether natural or adoptive, stepparent, legal guardian, or relative of the minor or incompetent person who has custody thereof and who takes, detains, conceals, or entices away that minor or incompetent person within or without the state with malicious intent to deprive another person of his or her right to custody of the minor or incompetent person commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 577,
+            "end": 1207,
+            "sourceHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:787.03:2",
+            "role": "offense",
+            "contentHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc"
+          },
+          {
+            "sourceKey": "fl:statute:787.03",
+            "role": "grading",
+            "contentHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc"
+          },
+          {
+            "sourceKey": "fl:statute:741.28",
+            "role": "definition",
+            "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(2) \nIn the absence of a court order determining rights to custody or visitation with any minor or with any incompetent person, any parent of the minor or incompetent person, whether natural or adoptive, stepparent, legal guardian, or relative of the minor or incompetent person who has custody thereof and who takes, detains, conceals, or entices away that minor or incompetent person within or without the state with malicious intent to deprive another person of his or her right to custody of the minor or incompetent person commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(2) \nIn the absence of a court order determining rights to custody or visitation with any minor or with any incompetent person, any parent of the minor or incompetent person, whether natural or adoptive, stepparent, legal guardian, or relative of the minor or incompetent person who has custody thereof and who takes, detains, conceals, or entices away that minor or incompetent person within or without the state with malicious intent to deprive another person of his or her right to custody of the minor or incompetent person commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 787.03(2). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-787-04-1-restraint",
+        "name": "Removing or concealing a minor contrary to a known court order",
+        "code": "787.04(1)",
+        "citation": "Fla. Stat. § 787.04(1)",
+        "primarySourceKey": "fl:statute:787.04:1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:787.04:1",
+          "target": "title",
+          "text": "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "start": 0,
+          "end": 93,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:787.04:1",
+            "target": "text",
+            "text": "(1) \nIt is unlawful for any person, in violation of a court order, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, with personal knowledge of the order.",
+            "start": 106,
+            "end": 323,
+            "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:787.04",
+            "target": "text",
+            "text": "(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+            "start": 2031,
+            "end": 2461,
+            "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:787.04:1",
+            "role": "offense",
+            "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+          },
+          {
+            "sourceKey": "fl:statute:787.04",
+            "role": "grading",
+            "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+          },
+          {
+            "sourceKey": "fl:statute:827.03",
+            "role": "definition",
+            "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(1) \nIt is unlawful for any person, in violation of a court order, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, with personal knowledge of the order.",
+        "grading": "(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+        "interpretation": "Scope 787.04(1). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-787-04-2-restraint",
+        "name": "Removing or concealing a minor during a pending custody proceeding",
+        "code": "787.04(2)",
+        "citation": "Fla. Stat. § 787.04(2)",
+        "primarySourceKey": "fl:statute:787.04:2",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:787.04:2",
+          "target": "title",
+          "text": "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "start": 0,
+          "end": 93,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:787.04:2",
+            "target": "text",
+            "text": "(2) \nIt is unlawful for any person, with criminal intent, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, during the pendency of any action or proceeding affecting custody of the minor, after having received notice as required by law of the pendency of the action or proceeding, without the permission of the court in which the action or proceeding is pending.",
+            "start": 325,
+            "end": 750,
+            "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:787.04",
+            "target": "text",
+            "text": "(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+            "start": 2031,
+            "end": 2461,
+            "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:787.04:2",
+            "role": "offense",
+            "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+          },
+          {
+            "sourceKey": "fl:statute:787.04",
+            "role": "grading",
+            "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+          },
+          {
+            "sourceKey": "fl:statute:827.03",
+            "role": "definition",
+            "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(2) \nIt is unlawful for any person, with criminal intent, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, during the pendency of any action or proceeding affecting custody of the minor, after having received notice as required by law of the pendency of the action or proceeding, without the permission of the court in which the action or proceeding is pending.",
+        "grading": "(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+        "interpretation": "Scope 787.04(2). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-787-04-3-restraint",
+        "name": "Removing or concealing a minor during a dependency or abuse proceeding",
+        "code": "787.04(3)",
+        "citation": "Fla. Stat. § 787.04(3)",
+        "primarySourceKey": "fl:statute:787.04:3",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:787.04:3",
+          "target": "title",
+          "text": "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "start": 0,
+          "end": 93,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:787.04:3",
+            "target": "text",
+            "text": "(3) \nIt is unlawful for any person to knowingly and willfully lead, take, entice, or remove a minor beyond the limits of this state, or to knowingly and willfully conceal the location of a minor, during the pendency of a dependency proceeding affecting such minor or during the pendency of any investigation, action, or proceeding concerning the alleged abuse or neglect of such minor, after having received actual or constructive notice of the pendency of such investigation, action, or proceeding and without the permission of the state agency or court in which the investigation, action, or proceeding is pending.",
+            "start": 752,
+            "end": 1368,
+            "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:787.04",
+            "target": "text",
+            "text": "(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+            "start": 2031,
+            "end": 2461,
+            "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:787.04:3",
+            "role": "offense",
+            "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+          },
+          {
+            "sourceKey": "fl:statute:787.04",
+            "role": "grading",
+            "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+          },
+          {
+            "sourceKey": "fl:statute:827.03",
+            "role": "definition",
+            "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(3) \nIt is unlawful for any person to knowingly and willfully lead, take, entice, or remove a minor beyond the limits of this state, or to knowingly and willfully conceal the location of a minor, during the pendency of a dependency proceeding affecting such minor or during the pendency of any investigation, action, or proceeding concerning the alleged abuse or neglect of such minor, after having received actual or constructive notice of the pendency of such investigation, action, or proceeding and without the permission of the state agency or court in which the investigation, action, or proceeding is pending.",
+        "grading": "(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+        "interpretation": "Scope 787.04(3). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-787-04-4-restraint",
+        "name": "Failure to produce or deliver a minor after court-authorized removal",
+        "code": "787.04(4)",
+        "citation": "Fla. Stat. § 787.04(4)",
+        "primarySourceKey": "fl:statute:787.04:4",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:787.04:4",
+          "target": "title",
+          "text": "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "start": 0,
+          "end": 93,
+          "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:787.04:4",
+            "target": "text",
+            "text": "(4) \nIt is unlawful for any person, who has carried beyond the limits of this state any minor whose custody is involved in any action or proceeding pending in this state pursuant to the order of the court in which the action or proceeding is pending or pursuant to the permission of the court, thereafter, to fail to produce the minor in the court or deliver the minor to the person designated by the court.",
+            "start": 1370,
+            "end": 1777,
+            "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:787.04",
+            "target": "text",
+            "text": "(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+            "start": 2031,
+            "end": 2461,
+            "sourceHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:787.04:4",
+            "role": "offense",
+            "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+          },
+          {
+            "sourceKey": "fl:statute:787.04",
+            "role": "grading",
+            "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06"
+          },
+          {
+            "sourceKey": "fl:statute:827.03",
+            "role": "definition",
+            "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(4) \nIt is unlawful for any person, who has carried beyond the limits of this state any minor whose custody is involved in any action or proceeding pending in this state pursuant to the order of the court in which the action or proceeding is pending or pursuant to the permission of the court, thereafter, to fail to produce the minor in the court or deliver the minor to the person designated by the court.",
+        "grading": "(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+        "interpretation": "Scope 787.04(4). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      }
+    ],
+    "sourceEvidence": {
+      "fl:statute:787.01:2": {
+        "sourceKey": "fl:statute:787.01:2",
+        "section": "787.01",
+        "subdivision": "(2)",
+        "citation": "Fla. Stat. § 787.01(2)",
+        "title": "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html",
+        "text": "787.01 \nKidnapping; kidnapping of child under age 13, aggravating circumstances.\n—\n\n(1)(a) \nThe term “kidnapping” means forcibly, secretly, or by threat confining, abducting, or imprisoning another person against her or his will and without lawful authority, with intent to:\n1. \nHold for ransom or reward or as a shield or hostage.\n\n2. \nCommit or facilitate commission of any felony.\n\n3. \nInflict bodily harm upon or to terrorize the victim or another person.\n\n4. \nInterfere with the performance of any governmental or political function.\n\n(b) \nConfinement of a child under the age of 13 is against her or his will within the meaning of this subsection if such confinement is without the consent of her or his parent or legal guardian.\n\n(2) \nA person who kidnaps a person is guilty of a felony of the first degree, punishable by imprisonment for a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \nA person who commits the offense of kidnapping upon a child under the age of 13 and who, in the course of committing the offense, commits one or more of the following:\n1. \nAggravated child abuse, as defined in s. 827.03;\n\n2. \nSexual battery, as defined in chapter 794, against the child;\n\n3. \nLewd or lascivious battery, lewd or lascivious molestation, lewd or lascivious conduct, or lewd or lascivious exhibition, in violation of s. 800.04 or s. 847.0135(5);\n\n4. \nA violation of former s. 796.03 or s. 796.04, relating to prostitution, upon the child;\n\n5. \nExploitation of the child or allowing the child to be exploited, in violation of s. 450.151; or\n\n6. \nA violation of s. 787.06(3)(g) or (5), relating to human trafficking,\n\ncommits a life felony, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nPursuant to s. 775.021(4), nothing contained herein shall be construed to prohibit the imposition of separate judgments and sentences for the life felony described in paragraph (a) and for each separate offense enumerated in subparagraphs (a)1.-6.\n\nHistory.\n—\ns. 1, ch. 5907, 1909; RGS 5058; CGL 7160; s. 1, ch 16063, 1933; s. 784, ch. 71-136; s. 8, ch. 72-724; s. 22, ch 74-383; s. 12, ch. 75-298; s. 1, ch. 77-174; s. 1, ch. 84-238; s. 2, ch. 90-120; s. 2, ch. 93-227; s. 9, ch. 96-322; s. 1813, ch. 97-102; s. 4, ch. 99-201; s. 3, ch. 2000-246; s. 18, ch. 2008-172; s. 19, ch. 2014-160; s. 5, ch. 2025-156.\n\nNote.\n—\nFormer s. 805.02.",
+        "contentHash": "0977116eafb0b4d5107654ae6cb61212989377d42976ab90935fc603eb132a80",
+        "retrievedAt": "2026-11-13T04:37:03.775Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)",
+            "start": 737,
+            "end": 939
+          }
+        ]
+      },
+      "fl:statute:787.01": {
+        "sourceKey": "fl:statute:787.01",
+        "section": "787.01",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 787.01",
+        "title": "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html",
+        "text": "787.01 \nKidnapping; kidnapping of child under age 13, aggravating circumstances.\n—\n\n(1)(a) \nThe term “kidnapping” means forcibly, secretly, or by threat confining, abducting, or imprisoning another person against her or his will and without lawful authority, with intent to:\n1. \nHold for ransom or reward or as a shield or hostage.\n\n2. \nCommit or facilitate commission of any felony.\n\n3. \nInflict bodily harm upon or to terrorize the victim or another person.\n\n4. \nInterfere with the performance of any governmental or political function.\n\n(b) \nConfinement of a child under the age of 13 is against her or his will within the meaning of this subsection if such confinement is without the consent of her or his parent or legal guardian.\n\n(2) \nA person who kidnaps a person is guilty of a felony of the first degree, punishable by imprisonment for a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \nA person who commits the offense of kidnapping upon a child under the age of 13 and who, in the course of committing the offense, commits one or more of the following:\n1. \nAggravated child abuse, as defined in s. 827.03;\n\n2. \nSexual battery, as defined in chapter 794, against the child;\n\n3. \nLewd or lascivious battery, lewd or lascivious molestation, lewd or lascivious conduct, or lewd or lascivious exhibition, in violation of s. 800.04 or s. 847.0135(5);\n\n4. \nA violation of former s. 796.03 or s. 796.04, relating to prostitution, upon the child;\n\n5. \nExploitation of the child or allowing the child to be exploited, in violation of s. 450.151; or\n\n6. \nA violation of s. 787.06(3)(g) or (5), relating to human trafficking,\n\ncommits a life felony, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nPursuant to s. 775.021(4), nothing contained herein shall be construed to prohibit the imposition of separate judgments and sentences for the life felony described in paragraph (a) and for each separate offense enumerated in subparagraphs (a)1.-6.\n\nHistory.\n—\ns. 1, ch. 5907, 1909; RGS 5058; CGL 7160; s. 1, ch 16063, 1933; s. 784, ch. 71-136; s. 8, ch. 72-724; s. 22, ch 74-383; s. 12, ch. 75-298; s. 1, ch. 77-174; s. 1, ch. 84-238; s. 2, ch. 90-120; s. 2, ch. 93-227; s. 9, ch. 96-322; s. 1813, ch. 97-102; s. 4, ch. 99-201; s. 3, ch. 2000-246; s. 18, ch. 2008-172; s. 19, ch. 2014-160; s. 5, ch. 2025-156.\n\nNote.\n—\nFormer s. 805.02.",
+        "contentHash": "0977116eafb0b4d5107654ae6cb61212989377d42976ab90935fc603eb132a80",
+        "retrievedAt": "2026-11-13T04:37:03.775Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:741.28": {
+        "sourceKey": "fl:statute:741.28",
+        "section": "741.28",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 741.28",
+        "title": "Domestic violence; definitions",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html",
+        "text": "741.28 \nDomestic violence; definitions.\n—\n\nAs used in ss. 741.28-741.31:\n(1) \n“Department” means the Florida Department of Law Enforcement.\n\n(2) \n“Domestic violence” means any assault, aggravated assault, battery, aggravated battery, sexual assault, sexual battery, stalking, aggravated stalking, kidnapping, false imprisonment, or any criminal offense resulting in physical injury or death of one family or household member by another family or household member.\n\n(3) \n“Family or household member” means spouses, former spouses, persons related by blood or marriage, persons who are presently residing together as if a family or who have resided together in the past as if a family, and persons who are parents of a child in common regardless of whether they have been married. With the exception of persons who have a child in common, the family or household members must be currently residing or have in the past resided together in the same single dwelling unit.\n\n(4) \n“Law enforcement officer” means any person who is elected, appointed, or employed by any municipality or the state or any political subdivision thereof who meets the minimum qualifications established in s. 943.13 and is certified as a law enforcement officer under s. 943.1395.\n\n(5) \n“Military protective order” means a protective order issued in accordance with 10 U.S.C. s. 1567 by a commanding officer in the Armed Forces of the United States or the National Guard of any state against a person under such officer’s command.\n\nHistory.\n—\ns. 1, ch. 94-134; s. 1, ch. 94-135; s. 1, ch. 95-195; s. 4, ch. 97-155; s. 9, ch. 2002-55; s. 1, ch. 2026-86.",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+        "retrievedAt": "2026-11-13T04:37:11.617Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:741.2801": {
+        "sourceKey": "fl:statute:741.2801",
+        "section": "741.2801",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 741.2801",
+        "title": "Domestic violence; enhanced penalties",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html",
+        "text": "741.2801 \nDomestic violence; enhanced penalties.\n—\n\n(1) \nAs used in this section, the term “conviction” means a determination of guilt that is the result of a plea or trial, regardless of whether adjudication is withheld or a plea of nolo contendere is entered.\n\n(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.\n\n(3) \nThe penalty enhancement in this section does not apply to a conviction for felony battery under s. 784.03(2).\n\nHistory.\n—\ns. 2, ch. 2026-86.",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+        "retrievedAt": "2026-11-13T04:37:12.581Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:775.082": {
+        "sourceKey": "fl:statute:775.082",
+        "section": "775.082",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 775.082",
+        "title": "Penalties; applicability of sentencing structures; mandatory minimum sentences for certain reoffenders previously released from prison",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html",
+        "text": "775.082 \nPenalties; applicability of sentencing structures; mandatory minimum sentences for certain reoffenders previously released from prison.\n—\n\n(1)(a) \nExcept as provided in paragraph (b), a person who has been convicted of a capital felony shall be punished by death if the proceeding held to determine sentence according to the procedure set forth in s. 921.141 results in a determination that such person shall be punished by death, otherwise such person shall be punished by life imprisonment and shall be ineligible for parole.\n\n(b)1. \nA person who actually killed, intended to kill, or attempted to kill the victim and who is convicted under s. 782.04 of a capital felony, or an offense that was reclassified as a capital felony, which was committed before the person attained 18 years of age shall be punished by a term of imprisonment for life if, after a sentencing hearing conducted by the court in accordance with s. 921.1401, the court finds that life imprisonment is an appropriate sentence. If the court finds that life imprisonment is not an appropriate sentence, such person shall be punished by a term of imprisonment of at least 40 years. A person sentenced pursuant to this subparagraph is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(a).\n\n2. \nA person who did not actually kill, intend to kill, or attempt to kill the victim and who is convicted under s. 782.04 of a capital felony, or an offense that was reclassified as a capital felony, which was committed before the person attained 18 years of age may be punished by a term of imprisonment for life or by a term of years equal to life if, after a sentencing hearing conducted by the court in accordance with s. 921.1401, the court finds that life imprisonment is an appropriate sentence. A person who is sentenced to a term of imprisonment of more than 15 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(c).\n\n3. \nThe court shall make a written finding as to whether a person is eligible for a sentence review hearing under s. 921.1402(2)(a) or (c). Such a finding shall be based upon whether the person actually killed, intended to kill, or attempted to kill the victim. The court may find that multiple defendants killed, intended to kill, or attempted to kill the victim.\n\n(2) \nIn the event the death penalty in a capital felony is held to be unconstitutional by the Florida Supreme Court or the United States Supreme Court, the court having jurisdiction over a person previously sentenced to death for a capital felony shall cause such person to be brought before the court, and the court shall sentence such person to life imprisonment as provided in subsection (1). No sentence of death shall be reduced as a result of a determination that a method of execution is held to be unconstitutional under the State Constitution or the Constitution of the United States.\n\n(3) \nA person who has been convicted of any other designated felony may be punished as follows:\n(a)1. \nFor a life felony committed before October 1, 1983, by a term of imprisonment for life or for a term of at least 30 years.\n\n2. \nFor a life felony committed on or after October 1, 1983, by a term of imprisonment for life or by a term of imprisonment not exceeding 40 years.\n\n3. \nExcept as provided in subparagraph 4., for a life felony committed on or after July 1, 1995, by a term of imprisonment for life or by imprisonment for a term of years not exceeding life imprisonment.\n\n4.a. \nExcept as provided in sub-subparagraph b., for a life felony committed on or after September 1, 2005, which is a violation of s. 800.04(5)(b), by:\n(I) \nA term of imprisonment for life; or\n\n(II) \nA split sentence that is a term of at least 25 years’ imprisonment and not exceeding life imprisonment, followed by probation or community control for the remainder of the person’s natural life, as provided in s. 948.012(4).\n\nb. \nFor a life felony committed on or after July 1, 2008, which is a person’s second or subsequent violation of s. 800.04(5)(b), by a term of imprisonment for life.\n\n5. \nNotwithstanding subparagraphs 1.-4., a person who is convicted under s. 782.04 of an offense that was reclassified as a life felony which was committed before the person attained 18 years of age may be punished by a term of imprisonment for life or by a term of years equal to life imprisonment if the judge conducts a sentencing hearing in accordance with s. 921.1401 and finds that life imprisonment or a term of years equal to life imprisonment is an appropriate sentence.\na. \nA person who actually killed, intended to kill, or attempted to kill the victim and is sentenced to a term of imprisonment of more than 25 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(b).\n\nb. \nA person who did not actually kill, intend to kill, or attempt to kill the victim and is sentenced to a term of imprisonment of more than 15 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(c).\n\nc. \nThe court shall make a written finding as to whether a person is eligible for a sentence review hearing under s. 921.1402(2)(b) or (c). Such a finding shall be based upon whether the person actually killed, intended to kill, or attempted to kill the victim. The court may find that multiple defendants killed, intended to kill, or attempted to kill the victim.\n\n6. \nFor a life felony committed on or after October 1, 2014, which is a violation of s. 787.06(3)(g), by a term of imprisonment for life.\n\n(b)1. \nFor a felony of the first degree, by a term of imprisonment not exceeding 30 years or, when specifically provided by statute, by imprisonment for a term of years not exceeding life imprisonment.\n\n2. \nNotwithstanding subparagraph 1., a person convicted under s. 782.04 of a first degree felony punishable by a term of years not exceeding life imprisonment, or an offense that was reclassified as a first degree felony punishable by a term of years not exceeding life, which was committed before the person attained 18 years of age may be punished by a term of years equal to life imprisonment if the judge conducts a sentencing hearing in accordance with s. 921.1401 and finds that a term of years equal to life imprisonment is an appropriate sentence.\na. \nA person who actually killed, intended to kill, or attempted to kill the victim and is sentenced to a term of imprisonment of more than 25 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(b).\n\nb. \nA person who did not actually kill, intend to kill, or attempt to kill the victim and is sentenced to a term of imprisonment of more than 15 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(c).\n\nc. \nThe court shall make a written finding as to whether a person is eligible for a sentence review hearing under s. 921.1402(2)(b) or (c). Such a finding shall be based upon whether the person actually killed, intended to kill, or attempted to kill the victim. The court may find that multiple defendants killed, intended to kill, or attempted to kill the victim.\n\n(c) \nNotwithstanding paragraphs (a) and (b), a person convicted of an offense that is not included in s. 782.04 but that is an offense that is a life felony or is punishable by a term of imprisonment for life or by a term of years not exceeding life imprisonment, or an offense that was reclassified as a life felony or an offense punishable by a term of imprisonment for life or by a term of years not exceeding life imprisonment, which was committed before the person attained 18 years of age may be punished by a term of imprisonment for life or a term of years equal to life imprisonment if the judge conducts a sentencing hearing in accordance with s. 921.1401 and finds that life imprisonment or a term of years equal to life imprisonment is an appropriate sentence. A person who is sentenced to a term of imprisonment of more than 20 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(d).\n\n(d) \nFor a felony of the second degree, by a term of imprisonment not exceeding 15 years.\n\n(e) \nFor a felony of the third degree, by a term of imprisonment not exceeding 5 years.\n\n(4) \nA person who has been convicted of a designated misdemeanor may be sentenced as follows:\n(a) \nFor a misdemeanor of the first degree, by a definite term of imprisonment not exceeding 1 year;\n\n(b) \nFor a misdemeanor of the second degree, by a definite term of imprisonment not exceeding 60 days.\n\n(5) \nAny person who has been convicted of a noncriminal violation may not be sentenced to a term of imprisonment nor to any other punishment more severe than a fine, forfeiture, or other civil penalty, except as provided in chapter 316 or by ordinance of any city or county.\n\n(6) \nNothing in this section shall be construed to alter the operation of any statute of this state authorizing a trial court, in its discretion, to impose a sentence of imprisonment for an indeterminate period within minimum and maximum limits as provided by law, except as provided in subsection (1).\n\n(7) \nThis section does not deprive the court of any authority conferred by law to decree a forfeiture of property, suspend or cancel a license, remove a person from office, or impose any other civil penalty. Such a judgment or order may be included in the sentence.\n\n(8)(a) \nThe sentencing guidelines that were effective October 1, 1983, and any revisions thereto, apply to all felonies, except capital felonies, committed on or after October 1, 1983, and before January 1, 1994, and to all felonies, except capital felonies and life felonies, committed before October 1, 1983, when the defendant affirmatively selects to be sentenced pursuant to such provisions.\n\n(b) \nThe 1994 sentencing guidelines, that were effective January 1, 1994, and any revisions thereto, apply to all felonies, except capital felonies, committed on or after January 1, 1994, and before October 1, 1995.\n\n(c) \nThe 1995 sentencing guidelines that were effective October 1, 1995, and any revisions thereto, apply to all felonies, except capital felonies, committed on or after October 1, 1995, and before October 1, 1998.\n\n(d) \nThe Criminal Punishment Code applies to all felonies, except capital felonies, committed on or after October 1, 1998. Any revision to the Criminal Punishment Code applies to sentencing for all felonies, except capital felonies, committed on or after the effective date of the revision.\n\n(e) \nFelonies, except capital felonies, with continuing dates of enterprise shall be sentenced under the sentencing guidelines or the Criminal Punishment Code in effect on the beginning date of the criminal activity.\n\n(9)(a)1. \n“Prison releasee reoffender” means any defendant who commits, or attempts to commit:\na. \nTreason;\n\nb. \nMurder;\n\nc. \nManslaughter;\n\nd. \nSexual battery;\n\ne. \nCarjacking;\n\nf. \nHome-invasion robbery;\n\ng. \nRobbery;\n\nh. \nArson;\n\ni. \nKidnapping;\n\nj. \nAggravated assault with a deadly weapon;\n\nk. \nAggravated battery;\n\nl. \nAggravated stalking;\n\nm. \nAircraft piracy;\n\nn. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\no. \nAny felony that involves the use or threat of physical force or violence against an individual;\n\np. \nArmed burglary;\n\nq. \nBurglary of a dwelling or burglary of an occupied structure;\n\nr. \nAny felony violation of s. 790.07, s. 800.04, s. 827.03, s. 827.071, or s. 847.0135(5); or\n\ns. \nBattery on a law enforcement officer which results in bodily injury;\n\nwithin 3 years after being released from a state correctional facility operated by the Department of Corrections or a private vendor, a county detention facility following incarceration for an offense for which the sentence pronounced was a prison sentence, or a correctional institution of another state, the District of Columbia, the United States, any possession or territory of the United States, or any foreign jurisdiction, following incarceration for an offense for which the sentence is punishable by more than 1 year in this state.\n\n2. \n“Prison releasee reoffender” also means any defendant who commits or attempts to commit any offense listed in sub-subparagraphs 1.a.-s. while the defendant was serving a prison sentence or on escape status from a state correctional facility operated by the Department of Corrections or a private vendor or while the defendant was on escape status from a correctional institution of another state, the District of Columbia, the United States, any possession or territory of the United States, or any foreign jurisdiction, following incarceration for an offense for which the sentence is punishable by more than 1 year in this state.\n\n3. \nIf the state attorney determines that a defendant is a prison releasee reoffender as defined in subparagraph 1., the state attorney may seek to have the court sentence the defendant as a prison releasee reoffender. Upon proof from the state attorney that establishes by a preponderance of the evidence that a defendant is a prison releasee reoffender as defined in this section, such defendant is not eligible for sentencing under the sentencing guidelines and must be sentenced as follows:\na. \nFor a felony punishable by life, by a term of imprisonment for life;\n\nb. \nFor a felony of the first degree, by a term of imprisonment of 30 years;\n\nc. \nFor a felony of the second degree, by a term of imprisonment of 15 years; and\n\nd. \nFor a felony of the third degree, by a term of imprisonment of 5 years.\n\n(b) \nA person sentenced under paragraph (a) shall be released only by expiration of sentence and shall not be eligible for parole, control release, or any form of early release. Any person sentenced under paragraph (a) must serve 100 percent of the court-imposed sentence.\n\n(c) \nNothing in this subsection shall prevent a court from imposing a greater sentence of incarceration as authorized by law, pursuant to s. 775.084 or any other provision of law.\n\n(d)1. \nIt is the intent of the Legislature that offenders previously released from prison or a county detention facility following incarceration for an offense for which the sentence pronounced was a prison sentence who meet the criteria in paragraph (a) be punished to the fullest extent of the law and as provided in this subsection, unless the state attorney determines that extenuating circumstances exist which preclude the just prosecution of the offender, including whether the victim recommends that the offender not be sentenced as provided in this subsection.\n\n2. \nFor every case in which the offender meets the criteria in paragraph (a) and does not receive the mandatory minimum prison sentence, the state attorney must explain the sentencing deviation in writing and place such explanation in the case file maintained by the state attorney.\n\n(10) \nIf a defendant is sentenced for an offense committed on or after July 1, 2009, which is a third degree felony but not a forcible felony as defined in s. 776.08, and excluding any third degree felony violation under chapter 810, and if the total sentence points pursuant to s. 921.0024 are 22 points or fewer, the court must sentence the offender to a nonstate prison sanction. However, if the court makes written findings that a nonstate prison sanction could present a danger to the public, the court may sentence the offender to a state correctional facility pursuant to this section.\n\n(11) \nThe purpose of this section is to provide uniform punishment for those crimes made punishable under this section and, to this end, a reference to this section constitutes a general reference under the doctrine of incorporation by reference.\n\nHistory.\n—\ns. 3, ch. 71-136; ss. 1, 2, ch. 72-118; s. 2, ch. 72-724; s. 5, ch. 74-383; s. 1, ch. 77-174; s. 1, ch. 83-87; s. 1, ch. 94-228; s. 16, ch. 95-184; s. 4, ch. 95-294; s. 2, ch. 97-239; s. 2, ch. 98-3; s. 10, ch. 98-204; s. 2, ch. 99-188; s. 3, ch. 2000-246; s. 1, ch. 2001-239; s. 2, ch. 2002-70; ss. 1, 2, ch. 2002-211; s. 4, ch. 2005-28; s. 13, ch. 2008-172; s. 1, ch. 2008-182; s. 1, ch. 2009-63; s. 2, ch. 2011-200; s. 8, ch. 2014-160; s. 1, ch. 2014-220; s. 1, ch. 2016-13; s. 19, ch. 2016-24; s. 3, ch. 2017-1; s. 21, ch. 2017-37; s. 11, ch. 2017-107; s. 30, ch. 2019-167; s. 1, ch. 2026-149.",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+        "retrievedAt": "2026-11-13T04:37:08.600Z",
+        "effectiveDateStart": "October 1, 1995",
+        "subdivisionRanges": []
+      },
+      "fl:statute:775.083": {
+        "sourceKey": "fl:statute:775.083",
+        "section": "775.083",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 775.083",
+        "title": "Fines",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html",
+        "text": "775.083 \nFines.\n—\n\n(1) \nA person who has been convicted of an offense other than a capital felony may be sentenced to pay a fine in addition to any punishment described in s. 775.082; when specifically authorized by statute, he or she may be sentenced to pay a fine in lieu of any punishment described in s. 775.082. A person who has been convicted of a noncriminal violation may be sentenced to pay a fine. Fines for designated crimes and for noncriminal violations shall not exceed:\n(a) \n$15,000, when the conviction is of a life felony.\n\n(b) \n$10,000, when the conviction is of a felony of the first or second degree.\n\n(c) \n$5,000, when the conviction is of a felony of the third degree.\n\n(d) \n$1,000, when the conviction is of a misdemeanor of the first degree.\n\n(e) \n$500, when the conviction is of a misdemeanor of the second degree or a noncriminal violation.\n\n(f) \nAny higher amount equal to double the pecuniary gain derived from the offense by the offender or double the pecuniary loss suffered by the victim.\n\n(g) \nAny higher amount specifically authorized by statute.\n\nFines imposed in this subsection shall be deposited by the clerk of the court in the fine and forfeiture fund established pursuant to s. 142.01. If a defendant is unable to pay a fine, the court may defer payment of the fine to a date certain. As used in this subsection, the term “convicted” or “conviction” means a determination of guilt which is the result of a trial or the entry of a plea of guilty or nolo contendere, regardless of whether adjudication is withheld.\n\n(2) \nIn addition to the fines set forth in subsection (1), court costs shall be assessed and collected in each instance a defendant pleads nolo contendere to, or is convicted of, or adjudicated delinquent for, a felony, a misdemeanor, or a criminal traffic offense under state law, or a violation of any municipal or county ordinance if the violation constitutes a misdemeanor under state law. The court costs imposed by this section shall be $50 for a felony and $20 for any other offense and shall be deposited by the clerk of the court into an appropriate county account for disbursement for the purposes provided in this subsection. A county shall account for the funds separately from other county funds as crime prevention funds. The county, in consultation with the sheriff, must expend such funds for crime prevention programs in the county.\n\n(3) \nThe clerk of the court of each county is the entity responsible for collecting payment of fines, fees, service charges, and court costs. Unless otherwise designated by the court, a person who has been ordered to pay court obligations under this section shall immediately contact the clerk to pay fines, fees, service charges, and court costs in full or to apply for enrollment in a payment plan pursuant to s. 28.246(4).\n\n(4) \nThe purpose of this section is to provide uniform penalty authorization for criminal offenses and, to this end, a reference to this section constitutes a general reference under the doctrine of incorporation by reference.\n\nHistory.\n—\ns. 4, ch. 71-136; s. 6, ch. 74-383; s. 1, ch. 77-97; s. 1, ch. 77-174; s. 1, ch. 96-408; s. 1810, ch. 97-102; s. 117, ch. 2003-402; s. 5, ch. 2009-6; s. 29, ch. 2010-162; s. 8, ch. 2017-126; s. 13, ch. 2021-116; s. 19, ch. 2021-131.",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+        "retrievedAt": "2026-11-13T04:37:09.549Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:775.084": {
+        "sourceKey": "fl:statute:775.084",
+        "section": "775.084",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 775.084",
+        "title": "Violent career criminals; habitual felony offenders and habitual violent felony offenders; three-time violent felony offenders; definitions; procedure; enhanced penalties or mandatory minimum prison terms",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html",
+        "text": "775.084 \nViolent career criminals; habitual felony offenders and habitual violent felony offenders; three-time violent felony offenders; definitions; procedure; enhanced penalties or mandatory minimum prison terms.\n—\n\n(1) \nAs used in this act:\n(a) \n“Habitual felony offender” means a defendant for whom the court may impose an extended term of imprisonment, as provided in paragraph (4)(a), if it finds that:\n1. \nThe defendant has previously been convicted of any combination of two or more felonies in this state or other qualified offenses.\n\n2. \nThe felony for which the defendant is to be sentenced was committed:\na. \nWhile the defendant was serving a prison sentence or other sentence, or court-ordered or lawfully imposed supervision that is imposed as a result of a prior conviction for a felony or other qualified offense; or\n\nb. \nWithin 5 years of the date of the conviction of the defendant’s last prior felony or other qualified offense, or within 5 years of the defendant’s release from a prison sentence, probation, community control, control release, conditional release, parole or court-ordered or lawfully imposed supervision or other sentence that is imposed as a result of a prior conviction for a felony or other qualified offense, whichever is later.\n\n3. \nThe felony for which the defendant is to be sentenced, and one of the two prior felony convictions, is not a violation of s. 893.13 relating to the purchase or the possession of a controlled substance.\n\n4. \nThe defendant has not received a pardon for any felony or other qualified offense that is necessary for the operation of this paragraph.\n\n5. \nA conviction of a felony or other qualified offense necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(b) \n“Habitual violent felony offender” means a defendant for whom the court may impose an extended term of imprisonment, as provided in paragraph (4)(b), if it finds that:\n1. \nThe defendant has previously been convicted of a felony or an attempt or conspiracy to commit a felony and one or more of such convictions was for:\na. \nArson;\n\nb. \nSexual battery;\n\nc. \nRobbery;\n\nd. \nKidnapping;\n\ne. \nAggravated child abuse;\n\nf. \nAggravated abuse of an elderly person or disabled adult;\n\ng. \nAggravated assault with a deadly weapon;\n\nh. \nMurder;\n\ni. \nManslaughter;\n\nj. \nAggravated manslaughter of an elderly person or disabled adult;\n\nk. \nAggravated manslaughter of a child;\n\nl. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\nm. \nArmed burglary;\n\nn. \nAggravated battery; or\n\no. \nAggravated stalking.\n\n2. \nThe felony for which the defendant is to be sentenced was committed:\na. \nWhile the defendant was serving a prison sentence or other sentence, or court-ordered or lawfully imposed supervision that is imposed as a result of a prior conviction for an enumerated felony; or\n\nb. \nWithin 5 years of the date of the conviction of the last prior enumerated felony, or within 5 years of the defendant’s release from a prison sentence, probation, community control, control release, conditional release, parole, or court-ordered or lawfully imposed supervision or other sentence that is imposed as a result of a prior conviction for an enumerated felony, whichever is later.\n\n3. \nThe defendant has not received a pardon on the ground of innocence for any crime that is necessary for the operation of this paragraph.\n\n4. \nA conviction of a crime necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(c) \n“Three-time violent felony offender” means a defendant for whom the court must impose a mandatory minimum term of imprisonment, as provided in paragraph (4)(c), if it finds that:\n1. \nThe defendant has previously been convicted as an adult two or more times of a felony, or an attempt to commit a felony, and two or more of such convictions were for committing, or attempting to commit, any of the following offenses or combination thereof:\na. \nArson;\n\nb. \nSexual battery;\n\nc. \nRobbery;\n\nd. \nKidnapping;\n\ne. \nAggravated child abuse;\n\nf. \nAggravated abuse of an elderly person or disabled adult;\n\ng. \nAggravated assault with a deadly weapon;\n\nh. \nMurder;\n\ni. \nManslaughter;\n\nj. \nAggravated manslaughter of an elderly person or disabled adult;\n\nk. \nAggravated manslaughter of a child;\n\nl. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\nm. \nArmed burglary;\n\nn. \nAggravated battery;\n\no. \nAggravated stalking;\n\np. \nHome invasion/robbery;\n\nq. \nCarjacking; or\n\nr. \nAn offense which is in violation of a law of any other jurisdiction if the elements of the offense are substantially similar to the elements of any felony offense enumerated in sub-subparagraphs a.-q., or an attempt to commit any such felony offense.\n\n2. \nThe felony for which the defendant is to be sentenced is one of the felonies enumerated in sub-subparagraphs 1.a.-q. and was committed:\na. \nWhile the defendant was serving a prison sentence or other sentence imposed as a result of a prior conviction for any offense enumerated in sub-subparagraphs 1.a.-r.; or\n\nb. \nWithin 5 years after the date of the conviction of the last prior offense enumerated in sub-subparagraphs 1.a.-r., or within 5 years after the defendant’s release from a prison sentence, probation, community control, or other sentence imposed as a result of a prior conviction for any offense enumerated in sub-subparagraphs 1.a.-r., whichever is later.\n\n3. \nThe defendant has not received a pardon on the ground of innocence for any crime that is necessary for the operation of this paragraph.\n\n4. \nA conviction of a crime necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(d) \n“Violent career criminal” means a defendant for whom the court must impose imprisonment pursuant to paragraph (4)(d), if it finds that:\n1. \nThe defendant has previously been convicted as an adult three or more times for an offense in this state or other qualified offense that is:\na. \nAny forcible felony, as described in s. 776.08;\n\nb. \nAggravated stalking, as described in s. 784.048(3) and (4);\n\nc. \nAggravated child abuse, as described in s. 827.03(2)(a);\n\nd. \nAggravated abuse of an elderly person or disabled adult, as described in s. 825.102(2);\n\ne. \nLewd or lascivious battery, lewd or lascivious molestation, lewd or lascivious conduct, or lewd or lascivious exhibition, as described in s. 800.04 or s. 847.0135(5);\n\nf. \nEscape, as described in s. 944.40; or\n\ng. \nA felony violation of chapter 790 involving the use or possession of a firearm.\n\n2. \nThe defendant has been incarcerated in a state prison or a federal prison.\n\n3. \nThe primary felony offense for which the defendant is to be sentenced is a felony enumerated in subparagraph 1. and was committed on or after October 1, 1995, and:\na. \nWhile the defendant was serving a prison sentence or other sentence, or court-ordered or lawfully imposed supervision that is imposed as a result of a prior conviction for an enumerated felony; or\n\nb. \nWithin 5 years after the conviction of the last prior enumerated felony, or within 5 years after the defendant’s release from a prison sentence, probation, community control, control release, conditional release, parole, or court-ordered or lawfully imposed supervision or other sentence that is imposed as a result of a prior conviction for an enumerated felony, whichever is later.\n\n4. \nThe defendant has not received a pardon for any felony or other qualified offense that is necessary for the operation of this paragraph.\n\n5. \nA conviction of a felony or other qualified offense necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(e) \n“Qualified offense” means any offense, substantially similar in elements and penalties to an offense in this state, which is in violation of a law of any other jurisdiction, whether that of another state, the District of Columbia, the United States or any possession or territory thereof, or any foreign jurisdiction, that was punishable under the law of such jurisdiction at the time of its commission by the defendant by death or imprisonment exceeding 1 year.\n\n(2) \nFor the purposes of this section, the placing of a person on probation or community control without an adjudication of guilt shall be treated as a prior conviction.\n\n(3)(a) \nIn a separate proceeding, the court shall determine if the defendant is a habitual felony offender or a habitual violent felony offender. The procedure shall be as follows:\n1. \nThe court shall obtain and consider a presentence investigation prior to the imposition of a sentence as a habitual felony offender or a habitual violent felony offender.\n\n2. \nWritten notice shall be served on the defendant and the defendant’s attorney a sufficient time prior to the entry of a plea or prior to the imposition of sentence in order to allow the preparation of a submission on behalf of the defendant.\n\n3. \nExcept as provided in subparagraph 1., all evidence presented shall be presented in open court with full rights of confrontation, cross-examination, and representation by counsel.\n\n4. \nEach of the findings required as the basis for such sentence shall be found to exist by a preponderance of the evidence and shall be appealable to the extent normally applicable to similar findings.\n\n5. \nFor the purpose of identification of a habitual felony offender or a habitual violent felony offender, the court shall fingerprint the defendant pursuant to s. 921.241.\n\n6. \nFor an offense committed on or after October 1, 1995, if the state attorney pursues a habitual felony offender sanction or a habitual violent felony offender sanction against the defendant and the court, in a separate proceeding pursuant to this paragraph, determines that the defendant meets the criteria under subsection (1) for imposing such sanction, the court must sentence the defendant as a habitual felony offender or a habitual violent felony offender, subject to imprisonment pursuant to this section unless the court finds that such sentence is not necessary for the protection of the public. If the court finds that it is not necessary for the protection of the public to sentence the defendant as a habitual felony offender or a habitual violent felony offender, the court shall provide written reasons; a written transcript of orally stated reasons is permissible, if filed by the court within 7 days after the date of sentencing. Each month, the court shall submit to the Office of Economic and Demographic Research of the Legislature the written reasons or transcripts in each case in which the court determines not to sentence a defendant as a habitual felony offender or a habitual violent felony offender as provided in this subparagraph.\n\n(b) \nIn a separate proceeding, the court shall determine if the defendant is a three-time violent felony offender. The procedure shall be as follows:\n1. \nThe court shall obtain and consider a presentence investigation prior to the imposition of a sentence as a three-time violent felony offender.\n\n2. \nWritten notice shall be served on the defendant and the defendant’s attorney a sufficient time prior to the entry of a plea or prior to the imposition of sentence in order to allow the preparation of a submission on behalf of the defendant.\n\n3. \nExcept as provided in subparagraph 1., all evidence presented shall be presented in open court with full rights of confrontation, cross-examination, and representation by counsel.\n\n4. \nEach of the findings required as the basis for such sentence shall be found to exist by a preponderance of the evidence and shall be appealable to the extent normally applicable to similar findings.\n\n5. \nFor the purpose of identification of a three-time violent felony offender, the court shall fingerprint the defendant pursuant to s. 921.241.\n\n6. \nFor an offense committed on or after the effective date of this act, if the state attorney pursues a three-time violent felony offender sanction against the defendant and the court, in a separate proceeding pursuant to this paragraph, determines that the defendant meets the criteria under subsection (1) for imposing such sanction, the court must sentence the defendant as a three-time violent felony offender, subject to imprisonment pursuant to this section as provided in paragraph (4)(c).\n\n(c) \nIn a separate proceeding, the court shall determine whether the defendant is a violent career criminal with respect to a primary offense committed on or after October 1, 1995. The procedure shall be as follows:\n1. \nWritten notice shall be served on the defendant and the defendant’s attorney a sufficient time prior to the entry of a plea or prior to the imposition of sentence in order to allow the preparation of a submission on behalf of the defendant.\n\n2. \nAll evidence presented shall be presented in open court with full rights of confrontation, cross-examination, and representation by counsel.\n\n3. \nEach of the findings required as the basis for such sentence shall be found to exist by a preponderance of the evidence and shall be appealable only as provided in paragraph (d).\n\n4. \nFor the purpose of identification, the court shall fingerprint the defendant pursuant to s. 921.241.\n\n5. \nFor an offense committed on or after October 1, 1995, if the state attorney pursues a violent career criminal sanction against the defendant and the court, in a separate proceeding pursuant to this paragraph, determines that the defendant meets the criteria under subsection (1) for imposing such sanction, the court must sentence the defendant as a violent career criminal, subject to imprisonment pursuant to this section unless the court finds that such sentence is not necessary for the protection of the public. If the court finds that it is not necessary for the protection of the public to sentence the defendant as a violent career criminal, the court shall provide written reasons; a written transcript of orally stated reasons is permissible, if filed by the court within 7 days after the date of sentencing. Each month, the court shall submit to the Office of Economic and Demographic Research of the Legislature the written reasons or transcripts in each case in which the court determines not to sentence a defendant as a violent career criminal as provided in this subparagraph.\n\n(d)1. \nA person sentenced under paragraph (4)(d) as a violent career criminal has the right of direct appeal, and either the state or the defendant may petition the trial court to vacate an illegal sentence at any time. However, the determination of the trial court to impose or not to impose a violent career criminal sentence is presumed appropriate and no petition or motion for collateral or other postconviction relief may be considered based on an allegation either by the state or the defendant that such sentence is inappropriate, inadequate, or excessive.\n\n2. \nIt is the intent of the Legislature that, with respect to both direct appeal and collateral review of violent career criminal sentences, all claims of error or illegality be raised at the first opportunity and that no claim should be filed more than 2 years after the judgment and sentence became final, unless it is established that the basis for the claim could not have been ascertained at the time by the exercise of due diligence. Technical violations and mistakes at trials and sentencing proceedings involving violent career criminals that do not affect due process or fundamental fairness are not appealable by either the state or the defendant.\n\n3. \nIt is the intent of the Legislature that no funds, resources, or employees of the state or its political subdivisions be used, directly or indirectly, in appellate or collateral proceedings based on violent career criminal sentencing, except when such use is constitutionally or statutorily mandated.\n\n(4)(a) \nThe court, in conformity with the procedure established in paragraph (3)(a), may sentence the habitual felony offender as follows:\n1. \nIn the case of a life felony or a felony of the first degree, for life.\n\n2. \nIn the case of a felony of the second degree, for a term of years not exceeding 30.\n\n3. \nIn the case of a felony of the third degree, for a term of years not exceeding 10.\n\n(b) \nThe court, in conformity with the procedure established in paragraph (3)(a), may sentence the habitual violent felony offender as follows:\n1. \nIn the case of a life felony or a felony of the first degree, for life, and such offender shall not be eligible for release for 15 years.\n\n2. \nIn the case of a felony of the second degree, for a term of years not exceeding 30, and such offender shall not be eligible for release for 10 years.\n\n3. \nIn the case of a felony of the third degree, for a term of years not exceeding 10, and such offender shall not be eligible for release for 5 years.\n\n(c)1. \nThe court, in conformity with the procedure established in paragraph (3)(b), must sentence the three-time violent felony offender to a mandatory minimum term of imprisonment, as follows:\na. \nIn the case of a felony punishable by life, to a term of imprisonment for life;\n\nb. \nIn the case of a felony of the first degree, to a term of imprisonment of 30 years;\n\nc. \nIn the case of a felony of the second degree, to a term of imprisonment of 15 years; or\n\nd. \nIn the case of a felony of the third degree, to a term of imprisonment of 5 years.\n\n2. \nNothing in this subsection shall prevent a court from imposing a greater sentence of incarceration as authorized by law.\n\n(d) \nThe court, in conformity with the procedure established in paragraph (3)(c), shall sentence the violent career criminal as follows:\n1. \nIn the case of a life felony or a felony of the first degree, for life.\n\n2. \nIn the case of a felony of the second degree, for a term of years not exceeding 40, with a mandatory minimum term of 30 years’ imprisonment.\n\n3. \nIn the case of a felony of the third degree, for a term of years not exceeding 15, with a mandatory minimum term of 10 years’ imprisonment.\n\n(e) \nIf the court finds, pursuant to paragraph (3)(a) or paragraph (3)(c), that it is not necessary for the protection of the public to sentence a defendant who meets the criteria for sentencing as a habitual felony offender, a habitual violent felony offender, or a violent career criminal, with respect to an offense committed on or after October 1, 1995, sentence shall be imposed without regard to this section.\n\n(f) \nAt any time when it appears to the court that the defendant is eligible for sentencing under this section, the court shall make that determination as provided in paragraph (3)(a), paragraph (3)(b), or paragraph (3)(c).\n\n(g) \nA sentence imposed under this section shall not be increased after such imposition.\n\n(h) \nA sentence imposed under this section is not subject to s. 921.002.\n\n(i) \nThe provisions of this section do not apply to capital felonies, and a sentence authorized under this section does not preclude the imposition of the death penalty for a capital felony.\n\n(j) \nThe provisions of s. 947.1405 shall apply to persons sentenced as habitual felony offenders and persons sentenced as habitual violent felony offenders.\n\n(k)1. \nA defendant sentenced under this section as a habitual felony offender, a habitual violent felony offender, or a violent career criminal is eligible for gain-time granted by the Department of Corrections as provided in s. 944.275(4)(b).\n\n2. \nFor an offense committed on or after October 1, 1995, a defendant sentenced under this section as a violent career criminal is not eligible for any form of discretionary early release, other than pardon or executive clemency, or conditional medical release granted pursuant to s. 947.149.\n\n3. \nFor an offense committed on or after July 1, 1999, a defendant sentenced under this section as a three-time violent felony offender shall be released only by expiration of sentence and shall not be eligible for parole, control release, or any form of early release.\n\n(5) \nIn order to be counted as a prior felony for purposes of sentencing under this section, the felony must have resulted in a conviction sentenced separately prior to the current offense and sentenced separately from any other felony conviction that is to be counted as a prior felony.\n\n(6) \nThe purpose of this section is to provide uniform punishment for those crimes made punishable under this section, and to this end, a reference to this section constitutes a general reference under the doctrine of incorporation by reference.\n\nHistory.\n—\ns. 5, ch. 71-136; s. 7, ch. 74-383; s. 1, ch. 75-116; s. 2, ch. 75-298; s. 1, ch. 77-174; s. 6, ch. 88-131; s. 1, ch. 89-280; s. 2, ch. 93-406; s. 2, ch. 95-182; s. 8, ch. 95-195; s. 14, ch. 96-322; s. 44, ch. 96-388; s. 12, ch. 97-78; s. 12, ch. 97-194; s. 11, ch. 98-204; s. 3, ch. 99-188; s. 3, ch. 99-201; s. 3, ch. 2000-246; ss. 1, 2, ch. 2002-210; s. 2, ch. 2003-23; s. 14, ch. 2008-172; s. 10, ch. 2012-155; s. 39, ch. 2016-105; s. 8, ch. 2019-98.",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+        "retrievedAt": "2026-11-13T04:37:10.670Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:787.02:2": {
+        "sourceKey": "fl:statute:787.02:2",
+        "section": "787.02",
+        "subdivision": "(2)",
+        "citation": "Fla. Stat. § 787.02(2)",
+        "title": "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html",
+        "text": "787.02 \nFalse imprisonment; false imprisonment of child under age 13, aggravating circumstances.\n—\n\n(1)(a) \nThe term “false imprisonment” means forcibly, by threat, or secretly confining, abducting, imprisoning, or restraining another person without lawful authority and against her or his will.\n\n(b) \nConfinement of a child under the age of 13 is against her or his will within the meaning of this section if such confinement is without the consent of her or his parent or legal guardian.\n\n(2) \nA person who commits the offense of false imprisonment is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \nA person who commits the offense of false imprisonment upon a child under the age of 13 and who, in the course of committing the offense, commits any offense enumerated in subparagraphs (a)1.-6., commits a felony of the first degree, punishable by imprisonment for a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084.\n1. \nAggravated child abuse, as defined in s. 827.03;\n\n2. \nSexual battery, as defined in chapter 794, against the child;\n\n3. \nLewd or lascivious battery, lewd or lascivious molestation, lewd or lascivious conduct, or lewd or lascivious exhibition, in violation of s. 800.04 or s. 847.0135(5);\n\n4. \nA violation of former s. 796.03 or s. 796.04, relating to prostitution, upon the child;\n\n5. \nExploitation of the child or allowing the child to be exploited, in violation of s. 450.151; or\n\n6. \nA violation of s. 787.06(3)(g) or (5), relating to human trafficking.\n\n(b) \nPursuant to s. 775.021(4), nothing contained herein shall be construed to prohibit the imposition of separate judgments and sentences for the first degree offense described in paragraph (a) and for each separate offense enumerated in subparagraphs (a)1.-6.\n\nHistory.\n—\ns. 43, sub-ch. 3, ch. 1637, 1868; RS 2399; GS 3225; RGS 5057; CGL 7159; s. 783, ch. 71-136; s. 23, ch. 74-383; s. 13, ch. 75-298; s. 1, ch. 84-238; s. 2, ch. 90-120; s. 1, ch. 93-156; ss. 2, 18, ch. 93-227; s. 9, ch. 96-322; s. 1814, ch. 97-102; s. 5, ch. 99-201; s. 3, ch. 2000-246; s. 19, ch. 2008-172; s. 20, ch. 2014-160; s. 95, ch. 2015-2; s. 6, ch. 2025-156.\n\nNote.\n—\nFormer s. 805.01.",
+        "contentHash": "2edbc58f0e14721d8deedc269e65b48a9ff9388da46e4c809bd627b4fc3c1547",
+        "retrievedAt": "2026-11-13T04:37:04.742Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)",
+            "start": 491,
+            "end": 660
+          }
+        ]
+      },
+      "fl:statute:787.02": {
+        "sourceKey": "fl:statute:787.02",
+        "section": "787.02",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 787.02",
+        "title": "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html",
+        "text": "787.02 \nFalse imprisonment; false imprisonment of child under age 13, aggravating circumstances.\n—\n\n(1)(a) \nThe term “false imprisonment” means forcibly, by threat, or secretly confining, abducting, imprisoning, or restraining another person without lawful authority and against her or his will.\n\n(b) \nConfinement of a child under the age of 13 is against her or his will within the meaning of this section if such confinement is without the consent of her or his parent or legal guardian.\n\n(2) \nA person who commits the offense of false imprisonment is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \nA person who commits the offense of false imprisonment upon a child under the age of 13 and who, in the course of committing the offense, commits any offense enumerated in subparagraphs (a)1.-6., commits a felony of the first degree, punishable by imprisonment for a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084.\n1. \nAggravated child abuse, as defined in s. 827.03;\n\n2. \nSexual battery, as defined in chapter 794, against the child;\n\n3. \nLewd or lascivious battery, lewd or lascivious molestation, lewd or lascivious conduct, or lewd or lascivious exhibition, in violation of s. 800.04 or s. 847.0135(5);\n\n4. \nA violation of former s. 796.03 or s. 796.04, relating to prostitution, upon the child;\n\n5. \nExploitation of the child or allowing the child to be exploited, in violation of s. 450.151; or\n\n6. \nA violation of s. 787.06(3)(g) or (5), relating to human trafficking.\n\n(b) \nPursuant to s. 775.021(4), nothing contained herein shall be construed to prohibit the imposition of separate judgments and sentences for the first degree offense described in paragraph (a) and for each separate offense enumerated in subparagraphs (a)1.-6.\n\nHistory.\n—\ns. 43, sub-ch. 3, ch. 1637, 1868; RS 2399; GS 3225; RGS 5057; CGL 7159; s. 783, ch. 71-136; s. 23, ch. 74-383; s. 13, ch. 75-298; s. 1, ch. 84-238; s. 2, ch. 90-120; s. 1, ch. 93-156; ss. 2, 18, ch. 93-227; s. 9, ch. 96-322; s. 1814, ch. 97-102; s. 5, ch. 99-201; s. 3, ch. 2000-246; s. 19, ch. 2008-172; s. 20, ch. 2014-160; s. 95, ch. 2015-2; s. 6, ch. 2025-156.\n\nNote.\n—\nFormer s. 805.01.",
+        "contentHash": "2edbc58f0e14721d8deedc269e65b48a9ff9388da46e4c809bd627b4fc3c1547",
+        "retrievedAt": "2026-11-13T04:37:04.742Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:787.025:2_a": {
+        "sourceKey": "fl:statute:787.025:2_a",
+        "section": "787.025",
+        "subdivision": "(2)(a)",
+        "citation": "Fla. Stat. § 787.025(2)(a)",
+        "title": "Luring or enticing a child",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.025.html",
+        "text": "787.025 \nLuring or enticing a child.\n—\n\n(1) \nAs used in this section, the term:\n(a) \n“Structure” means a building of any kind, either temporary or permanent, which has a roof over it, together with the curtilage thereof.\n\n(b) \n“Dwelling” means a building or conveyance of any kind, either temporary or permanent, mobile or immobile, which has a roof over it and is designed to be occupied by people lodging together therein at night, together with the curtilage thereof.\n\n(c) \n“Conveyance” means any motor vehicle, ship, vessel, railroad car, trailer, aircraft, or sleeping car.\n\n(d) \n“Convicted” means a determination of guilt which is the result of a trial or the entry of a plea of guilty or nolo contendere, regardless of whether adjudication is withheld.\n\n(2)(a) \nA person 18 years of age or older who intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person 18 years of age or older who, having been previously convicted of a violation of paragraph (a), intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person 18 years of age or older who, having been previously convicted of a violation of chapter 794, s. 800.04, or s. 847.0135(5), or a violation of a similar law of another jurisdiction, intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nIt is an affirmative defense to a prosecution under this section that:\n(a) \nThe person reasonably believed that his or her action was necessary to prevent the child from being seriously injured.\n\n(b) \nThe person lured or enticed, or attempted to lure or entice, the child under the age of 14 into or out of a structure, dwelling, or conveyance for a lawful purpose.\n\n(c) \nThe person’s actions were reasonable under the circumstances and the defendant did not have any intent to harm the health, safety, or welfare of the child.\n\nHistory.\n—\ns. 1, ch. 95-228; s. 8, ch. 99-201; s. 3, ch. 2000-246; s. 1, ch. 2006-299; s. 20, ch. 2008-172; s. 2, ch. 2025-132.",
+        "contentHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+        "retrievedAt": "2026-11-13T04:37:05.696Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)(a)",
+            "start": 761,
+            "end": 1086
+          }
+        ]
+      },
+      "fl:statute:787.025": {
+        "sourceKey": "fl:statute:787.025",
+        "section": "787.025",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 787.025",
+        "title": "Luring or enticing a child",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.025.html",
+        "text": "787.025 \nLuring or enticing a child.\n—\n\n(1) \nAs used in this section, the term:\n(a) \n“Structure” means a building of any kind, either temporary or permanent, which has a roof over it, together with the curtilage thereof.\n\n(b) \n“Dwelling” means a building or conveyance of any kind, either temporary or permanent, mobile or immobile, which has a roof over it and is designed to be occupied by people lodging together therein at night, together with the curtilage thereof.\n\n(c) \n“Conveyance” means any motor vehicle, ship, vessel, railroad car, trailer, aircraft, or sleeping car.\n\n(d) \n“Convicted” means a determination of guilt which is the result of a trial or the entry of a plea of guilty or nolo contendere, regardless of whether adjudication is withheld.\n\n(2)(a) \nA person 18 years of age or older who intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person 18 years of age or older who, having been previously convicted of a violation of paragraph (a), intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person 18 years of age or older who, having been previously convicted of a violation of chapter 794, s. 800.04, or s. 847.0135(5), or a violation of a similar law of another jurisdiction, intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nIt is an affirmative defense to a prosecution under this section that:\n(a) \nThe person reasonably believed that his or her action was necessary to prevent the child from being seriously injured.\n\n(b) \nThe person lured or enticed, or attempted to lure or entice, the child under the age of 14 into or out of a structure, dwelling, or conveyance for a lawful purpose.\n\n(c) \nThe person’s actions were reasonable under the circumstances and the defendant did not have any intent to harm the health, safety, or welfare of the child.\n\nHistory.\n—\ns. 1, ch. 95-228; s. 8, ch. 99-201; s. 3, ch. 2000-246; s. 1, ch. 2006-299; s. 20, ch. 2008-172; s. 2, ch. 2025-132.",
+        "contentHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+        "retrievedAt": "2026-11-13T04:37:05.696Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:787.025:2_b": {
+        "sourceKey": "fl:statute:787.025:2_b",
+        "section": "787.025",
+        "subdivision": "(2)(b)",
+        "citation": "Fla. Stat. § 787.025(2)(b)",
+        "title": "Luring or enticing a child",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.025.html",
+        "text": "787.025 \nLuring or enticing a child.\n—\n\n(1) \nAs used in this section, the term:\n(a) \n“Structure” means a building of any kind, either temporary or permanent, which has a roof over it, together with the curtilage thereof.\n\n(b) \n“Dwelling” means a building or conveyance of any kind, either temporary or permanent, mobile or immobile, which has a roof over it and is designed to be occupied by people lodging together therein at night, together with the curtilage thereof.\n\n(c) \n“Conveyance” means any motor vehicle, ship, vessel, railroad car, trailer, aircraft, or sleeping car.\n\n(d) \n“Convicted” means a determination of guilt which is the result of a trial or the entry of a plea of guilty or nolo contendere, regardless of whether adjudication is withheld.\n\n(2)(a) \nA person 18 years of age or older who intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person 18 years of age or older who, having been previously convicted of a violation of paragraph (a), intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person 18 years of age or older who, having been previously convicted of a violation of chapter 794, s. 800.04, or s. 847.0135(5), or a violation of a similar law of another jurisdiction, intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nIt is an affirmative defense to a prosecution under this section that:\n(a) \nThe person reasonably believed that his or her action was necessary to prevent the child from being seriously injured.\n\n(b) \nThe person lured or enticed, or attempted to lure or entice, the child under the age of 14 into or out of a structure, dwelling, or conveyance for a lawful purpose.\n\n(c) \nThe person’s actions were reasonable under the circumstances and the defendant did not have any intent to harm the health, safety, or welfare of the child.\n\nHistory.\n—\ns. 1, ch. 95-228; s. 8, ch. 99-201; s. 3, ch. 2000-246; s. 1, ch. 2006-299; s. 20, ch. 2008-172; s. 2, ch. 2025-132.",
+        "contentHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+        "retrievedAt": "2026-11-13T04:37:05.696Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)(b)",
+            "start": 1086,
+            "end": 1476
+          }
+        ]
+      },
+      "fl:statute:787.025:2_c": {
+        "sourceKey": "fl:statute:787.025:2_c",
+        "section": "787.025",
+        "subdivision": "(2)(c)",
+        "citation": "Fla. Stat. § 787.025(2)(c)",
+        "title": "Luring or enticing a child",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.025.html",
+        "text": "787.025 \nLuring or enticing a child.\n—\n\n(1) \nAs used in this section, the term:\n(a) \n“Structure” means a building of any kind, either temporary or permanent, which has a roof over it, together with the curtilage thereof.\n\n(b) \n“Dwelling” means a building or conveyance of any kind, either temporary or permanent, mobile or immobile, which has a roof over it and is designed to be occupied by people lodging together therein at night, together with the curtilage thereof.\n\n(c) \n“Conveyance” means any motor vehicle, ship, vessel, railroad car, trailer, aircraft, or sleeping car.\n\n(d) \n“Convicted” means a determination of guilt which is the result of a trial or the entry of a plea of guilty or nolo contendere, regardless of whether adjudication is withheld.\n\n(2)(a) \nA person 18 years of age or older who intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person 18 years of age or older who, having been previously convicted of a violation of paragraph (a), intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person 18 years of age or older who, having been previously convicted of a violation of chapter 794, s. 800.04, or s. 847.0135(5), or a violation of a similar law of another jurisdiction, intentionally lures or entices, or attempts to lure or entice, a child under the age of 14 into or out of a structure, dwelling, or conveyance for other than a lawful purpose commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nIt is an affirmative defense to a prosecution under this section that:\n(a) \nThe person reasonably believed that his or her action was necessary to prevent the child from being seriously injured.\n\n(b) \nThe person lured or enticed, or attempted to lure or entice, the child under the age of 14 into or out of a structure, dwelling, or conveyance for a lawful purpose.\n\n(c) \nThe person’s actions were reasonable under the circumstances and the defendant did not have any intent to harm the health, safety, or welfare of the child.\n\nHistory.\n—\ns. 1, ch. 95-228; s. 8, ch. 99-201; s. 3, ch. 2000-246; s. 1, ch. 2006-299; s. 20, ch. 2008-172; s. 2, ch. 2025-132.",
+        "contentHash": "6a38b5c29d29845b5a45476f3a5b0a5bf1dcde4553da49e561e5fcd9871a3de9",
+        "retrievedAt": "2026-11-13T04:37:05.696Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)(c)",
+            "start": 1476,
+            "end": 1951
+          }
+        ]
+      },
+      "fl:statute:787.03:1": {
+        "sourceKey": "fl:statute:787.03:1",
+        "section": "787.03",
+        "subdivision": "(1)",
+        "citation": "Fla. Stat. § 787.03(1)",
+        "title": "Interference with custody",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.03.html",
+        "text": "787.03 \nInterference with custody.\n—\n\n(1) \nWhoever, without lawful authority, knowingly or recklessly takes or entices, or aids, abets, hires, or otherwise procures another to take or entice, any minor or any incompetent person from the custody of the minor’s or incompetent person’s parent, his or her guardian, a public agency having the lawful charge of the minor or incompetent person, or any other lawful custodian commits the offense of interference with custody and commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nIn the absence of a court order determining rights to custody or visitation with any minor or with any incompetent person, any parent of the minor or incompetent person, whether natural or adoptive, stepparent, legal guardian, or relative of the minor or incompetent person who has custody thereof and who takes, detains, conceals, or entices away that minor or incompetent person within or without the state with malicious intent to deprive another person of his or her right to custody of the minor or incompetent person commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA subsequently obtained court order for custody or visitation does not affect application of this section.\n\n(4) \nIt is a defense that:\n(a) \nThe defendant had reasonable cause to believe that his or her action was necessary to preserve the minor or the incompetent person from danger to his or her welfare.\n\n(b) \nThe defendant was the victim of an act of domestic violence or had reasonable cause to believe that he or she was about to become the victim of an act of domestic violence as defined in s. 741.28, and the defendant had reasonable cause to believe that the action was necessary in order for the defendant to escape from, or protect himself or herself from, the domestic violence or to preserve the minor or incompetent person from exposure to the domestic violence.\n\n(c) \nThe minor or incompetent person was taken away at his or her own instigation without enticement and without purpose to commit a criminal offense with or against the minor or incompetent person, and the defendant establishes that it was reasonable to rely on the instigating acts of the minor or incompetent person.\n\n(5) \nProof that a person has not attained the age of 18 years creates the presumption that the defendant knew the minor’s age or acted in reckless disregard thereof.\n\n(6)(a) \nThe offenses prescribed in subsections (1) and (2) do not apply in cases in which a person having a legal right to custody of a minor or incompetent person is the victim of any act of domestic violence, has reasonable cause to believe he or she is about to become the victim of any act of domestic violence, as defined in s. 741.28, or believes that his or her action was necessary to preserve the minor or the incompetent person from danger to his or her welfare and seeks shelter from such acts or possible acts and takes with him or her the minor or incompetent person.\n\n(b) \nIn order to gain the exception conferred by paragraph (a), a person who takes a minor or incompetent person under this subsection must:\n1. \nWithin 10 days after taking the minor or incompetent person, make a report to the sheriff’s office or state attorney’s office for the county in which the minor or incompetent person resided at the time he or she was taken, which report must include the name of the person taking the minor or incompetent person, the current address and telephone number of the person and minor or incompetent person, and the reasons the minor or incompetent person was taken.\n\n2. \nWithin a reasonable time after taking a minor, commence a custody proceeding that is consistent with the federal Parental Kidnapping Prevention Act, 28 U.S.C. s. 1738A, or the Uniform Child Custody Jurisdiction and Enforcement Act, ss. 61.501-61.542.\n\n3. \nInform the sheriff’s office or state attorney’s office for the county in which the minor or incompetent person resided at the time he or she was taken of any change of address or telephone number of the person and the minor or incompetent person.\n\n(c)1. \nThe current address and telephone number of the person and the minor or incompetent person which are contained in the report made to a sheriff or state attorney under paragraph (b) are confidential and exempt from s. 119.07(1) and s. 24(a), Art. I of the State Constitution.\n\n2. \nA sheriff or state attorney may allow an agency, as defined in s. 119.011, to inspect and copy records made confidential and exempt under this paragraph in the furtherance of that agency’s duties and responsibilities.\n\nHistory.\n—\ns. 24, ch. 74-383; s. 14, ch. 75-298; s. 1, ch. 77-174; s. 1, ch. 88-244; s. 25, ch. 94-134; s. 25, ch. 94-135; s. 1201, ch. 97-102; s. 1, ch. 2000-231; s. 1, ch. 2000-357; s. 157, ch. 2004-5; s. 1, ch. 2005-89; s. 1, ch. 2006-114; s. 1, ch. 2006-115; s. 1, ch. 2011-99.",
+        "contentHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+        "retrievedAt": "2026-11-13T04:37:06.639Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(1)",
+            "start": 38,
+            "end": 577
+          }
+        ]
+      },
+      "fl:statute:787.03": {
+        "sourceKey": "fl:statute:787.03",
+        "section": "787.03",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 787.03",
+        "title": "Interference with custody",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.03.html",
+        "text": "787.03 \nInterference with custody.\n—\n\n(1) \nWhoever, without lawful authority, knowingly or recklessly takes or entices, or aids, abets, hires, or otherwise procures another to take or entice, any minor or any incompetent person from the custody of the minor’s or incompetent person’s parent, his or her guardian, a public agency having the lawful charge of the minor or incompetent person, or any other lawful custodian commits the offense of interference with custody and commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nIn the absence of a court order determining rights to custody or visitation with any minor or with any incompetent person, any parent of the minor or incompetent person, whether natural or adoptive, stepparent, legal guardian, or relative of the minor or incompetent person who has custody thereof and who takes, detains, conceals, or entices away that minor or incompetent person within or without the state with malicious intent to deprive another person of his or her right to custody of the minor or incompetent person commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA subsequently obtained court order for custody or visitation does not affect application of this section.\n\n(4) \nIt is a defense that:\n(a) \nThe defendant had reasonable cause to believe that his or her action was necessary to preserve the minor or the incompetent person from danger to his or her welfare.\n\n(b) \nThe defendant was the victim of an act of domestic violence or had reasonable cause to believe that he or she was about to become the victim of an act of domestic violence as defined in s. 741.28, and the defendant had reasonable cause to believe that the action was necessary in order for the defendant to escape from, or protect himself or herself from, the domestic violence or to preserve the minor or incompetent person from exposure to the domestic violence.\n\n(c) \nThe minor or incompetent person was taken away at his or her own instigation without enticement and without purpose to commit a criminal offense with or against the minor or incompetent person, and the defendant establishes that it was reasonable to rely on the instigating acts of the minor or incompetent person.\n\n(5) \nProof that a person has not attained the age of 18 years creates the presumption that the defendant knew the minor’s age or acted in reckless disregard thereof.\n\n(6)(a) \nThe offenses prescribed in subsections (1) and (2) do not apply in cases in which a person having a legal right to custody of a minor or incompetent person is the victim of any act of domestic violence, has reasonable cause to believe he or she is about to become the victim of any act of domestic violence, as defined in s. 741.28, or believes that his or her action was necessary to preserve the minor or the incompetent person from danger to his or her welfare and seeks shelter from such acts or possible acts and takes with him or her the minor or incompetent person.\n\n(b) \nIn order to gain the exception conferred by paragraph (a), a person who takes a minor or incompetent person under this subsection must:\n1. \nWithin 10 days after taking the minor or incompetent person, make a report to the sheriff’s office or state attorney’s office for the county in which the minor or incompetent person resided at the time he or she was taken, which report must include the name of the person taking the minor or incompetent person, the current address and telephone number of the person and minor or incompetent person, and the reasons the minor or incompetent person was taken.\n\n2. \nWithin a reasonable time after taking a minor, commence a custody proceeding that is consistent with the federal Parental Kidnapping Prevention Act, 28 U.S.C. s. 1738A, or the Uniform Child Custody Jurisdiction and Enforcement Act, ss. 61.501-61.542.\n\n3. \nInform the sheriff’s office or state attorney’s office for the county in which the minor or incompetent person resided at the time he or she was taken of any change of address or telephone number of the person and the minor or incompetent person.\n\n(c)1. \nThe current address and telephone number of the person and the minor or incompetent person which are contained in the report made to a sheriff or state attorney under paragraph (b) are confidential and exempt from s. 119.07(1) and s. 24(a), Art. I of the State Constitution.\n\n2. \nA sheriff or state attorney may allow an agency, as defined in s. 119.011, to inspect and copy records made confidential and exempt under this paragraph in the furtherance of that agency’s duties and responsibilities.\n\nHistory.\n—\ns. 24, ch. 74-383; s. 14, ch. 75-298; s. 1, ch. 77-174; s. 1, ch. 88-244; s. 25, ch. 94-134; s. 25, ch. 94-135; s. 1201, ch. 97-102; s. 1, ch. 2000-231; s. 1, ch. 2000-357; s. 157, ch. 2004-5; s. 1, ch. 2005-89; s. 1, ch. 2006-114; s. 1, ch. 2006-115; s. 1, ch. 2011-99.",
+        "contentHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+        "retrievedAt": "2026-11-13T04:37:06.639Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:787.03:2": {
+        "sourceKey": "fl:statute:787.03:2",
+        "section": "787.03",
+        "subdivision": "(2)",
+        "citation": "Fla. Stat. § 787.03(2)",
+        "title": "Interference with custody",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.03.html",
+        "text": "787.03 \nInterference with custody.\n—\n\n(1) \nWhoever, without lawful authority, knowingly or recklessly takes or entices, or aids, abets, hires, or otherwise procures another to take or entice, any minor or any incompetent person from the custody of the minor’s or incompetent person’s parent, his or her guardian, a public agency having the lawful charge of the minor or incompetent person, or any other lawful custodian commits the offense of interference with custody and commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nIn the absence of a court order determining rights to custody or visitation with any minor or with any incompetent person, any parent of the minor or incompetent person, whether natural or adoptive, stepparent, legal guardian, or relative of the minor or incompetent person who has custody thereof and who takes, detains, conceals, or entices away that minor or incompetent person within or without the state with malicious intent to deprive another person of his or her right to custody of the minor or incompetent person commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA subsequently obtained court order for custody or visitation does not affect application of this section.\n\n(4) \nIt is a defense that:\n(a) \nThe defendant had reasonable cause to believe that his or her action was necessary to preserve the minor or the incompetent person from danger to his or her welfare.\n\n(b) \nThe defendant was the victim of an act of domestic violence or had reasonable cause to believe that he or she was about to become the victim of an act of domestic violence as defined in s. 741.28, and the defendant had reasonable cause to believe that the action was necessary in order for the defendant to escape from, or protect himself or herself from, the domestic violence or to preserve the minor or incompetent person from exposure to the domestic violence.\n\n(c) \nThe minor or incompetent person was taken away at his or her own instigation without enticement and without purpose to commit a criminal offense with or against the minor or incompetent person, and the defendant establishes that it was reasonable to rely on the instigating acts of the minor or incompetent person.\n\n(5) \nProof that a person has not attained the age of 18 years creates the presumption that the defendant knew the minor’s age or acted in reckless disregard thereof.\n\n(6)(a) \nThe offenses prescribed in subsections (1) and (2) do not apply in cases in which a person having a legal right to custody of a minor or incompetent person is the victim of any act of domestic violence, has reasonable cause to believe he or she is about to become the victim of any act of domestic violence, as defined in s. 741.28, or believes that his or her action was necessary to preserve the minor or the incompetent person from danger to his or her welfare and seeks shelter from such acts or possible acts and takes with him or her the minor or incompetent person.\n\n(b) \nIn order to gain the exception conferred by paragraph (a), a person who takes a minor or incompetent person under this subsection must:\n1. \nWithin 10 days after taking the minor or incompetent person, make a report to the sheriff’s office or state attorney’s office for the county in which the minor or incompetent person resided at the time he or she was taken, which report must include the name of the person taking the minor or incompetent person, the current address and telephone number of the person and minor or incompetent person, and the reasons the minor or incompetent person was taken.\n\n2. \nWithin a reasonable time after taking a minor, commence a custody proceeding that is consistent with the federal Parental Kidnapping Prevention Act, 28 U.S.C. s. 1738A, or the Uniform Child Custody Jurisdiction and Enforcement Act, ss. 61.501-61.542.\n\n3. \nInform the sheriff’s office or state attorney’s office for the county in which the minor or incompetent person resided at the time he or she was taken of any change of address or telephone number of the person and the minor or incompetent person.\n\n(c)1. \nThe current address and telephone number of the person and the minor or incompetent person which are contained in the report made to a sheriff or state attorney under paragraph (b) are confidential and exempt from s. 119.07(1) and s. 24(a), Art. I of the State Constitution.\n\n2. \nA sheriff or state attorney may allow an agency, as defined in s. 119.011, to inspect and copy records made confidential and exempt under this paragraph in the furtherance of that agency’s duties and responsibilities.\n\nHistory.\n—\ns. 24, ch. 74-383; s. 14, ch. 75-298; s. 1, ch. 77-174; s. 1, ch. 88-244; s. 25, ch. 94-134; s. 25, ch. 94-135; s. 1201, ch. 97-102; s. 1, ch. 2000-231; s. 1, ch. 2000-357; s. 157, ch. 2004-5; s. 1, ch. 2005-89; s. 1, ch. 2006-114; s. 1, ch. 2006-115; s. 1, ch. 2011-99.",
+        "contentHash": "bca95c50cd212a04f0d5bafe80be081ee9d362d601f066432175a016913766dc",
+        "retrievedAt": "2026-11-13T04:37:06.639Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)",
+            "start": 577,
+            "end": 1209
+          }
+        ]
+      },
+      "fl:statute:787.04:1": {
+        "sourceKey": "fl:statute:787.04:1",
+        "section": "787.04",
+        "subdivision": "(1)",
+        "citation": "Fla. Stat. § 787.04(1)",
+        "title": "Removing minors from state or concealing minors contrary to state agency order or court order",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html",
+        "text": "787.04 \nRemoving minors from state or concealing minors contrary to state agency order or court order.\n—\n\n(1) \nIt is unlawful for any person, in violation of a court order, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, with personal knowledge of the order.\n\n(2) \nIt is unlawful for any person, with criminal intent, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, during the pendency of any action or proceeding affecting custody of the minor, after having received notice as required by law of the pendency of the action or proceeding, without the permission of the court in which the action or proceeding is pending.\n\n(3) \nIt is unlawful for any person to knowingly and willfully lead, take, entice, or remove a minor beyond the limits of this state, or to knowingly and willfully conceal the location of a minor, during the pendency of a dependency proceeding affecting such minor or during the pendency of any investigation, action, or proceeding concerning the alleged abuse or neglect of such minor, after having received actual or constructive notice of the pendency of such investigation, action, or proceeding and without the permission of the state agency or court in which the investigation, action, or proceeding is pending.\n\n(4) \nIt is unlawful for any person, who has carried beyond the limits of this state any minor whose custody is involved in any action or proceeding pending in this state pursuant to the order of the court in which the action or proceeding is pending or pursuant to the permission of the court, thereafter, to fail to produce the minor in the court or deliver the minor to the person designated by the court.\n\n(5) \nIt is a defense under this section that a person who leads, takes, entices, or removes a minor beyond the limits of the state reasonably believes that his or her action was necessary to protect the minor from child abuse as defined in s. 827.03.\n\n(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+        "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+        "retrievedAt": "2026-11-13T04:37:07.573Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(1)",
+            "start": 106,
+            "end": 325
+          }
+        ]
+      },
+      "fl:statute:787.04": {
+        "sourceKey": "fl:statute:787.04",
+        "section": "787.04",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 787.04",
+        "title": "Removing minors from state or concealing minors contrary to state agency order or court order",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html",
+        "text": "787.04 \nRemoving minors from state or concealing minors contrary to state agency order or court order.\n—\n\n(1) \nIt is unlawful for any person, in violation of a court order, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, with personal knowledge of the order.\n\n(2) \nIt is unlawful for any person, with criminal intent, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, during the pendency of any action or proceeding affecting custody of the minor, after having received notice as required by law of the pendency of the action or proceeding, without the permission of the court in which the action or proceeding is pending.\n\n(3) \nIt is unlawful for any person to knowingly and willfully lead, take, entice, or remove a minor beyond the limits of this state, or to knowingly and willfully conceal the location of a minor, during the pendency of a dependency proceeding affecting such minor or during the pendency of any investigation, action, or proceeding concerning the alleged abuse or neglect of such minor, after having received actual or constructive notice of the pendency of such investigation, action, or proceeding and without the permission of the state agency or court in which the investigation, action, or proceeding is pending.\n\n(4) \nIt is unlawful for any person, who has carried beyond the limits of this state any minor whose custody is involved in any action or proceeding pending in this state pursuant to the order of the court in which the action or proceeding is pending or pursuant to the permission of the court, thereafter, to fail to produce the minor in the court or deliver the minor to the person designated by the court.\n\n(5) \nIt is a defense under this section that a person who leads, takes, entices, or removes a minor beyond the limits of the state reasonably believes that his or her action was necessary to protect the minor from child abuse as defined in s. 827.03.\n\n(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+        "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+        "retrievedAt": "2026-11-13T04:37:07.573Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:827.03": {
+        "sourceKey": "fl:statute:827.03",
+        "section": "827.03",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 827.03",
+        "title": "Abuse, aggravated abuse, and neglect of a child; penalties",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+        "text": "827.03 \nAbuse, aggravated abuse, and neglect of a child; penalties.\n—\n\n(1) \nDEFINITIONS.—\nAs used in this section, the term:\n(a) \n“Aggravated child abuse” occurs when a person:\n1. \nCommits aggravated battery on a child;\n\n2. \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages a child; or\n\n3. \nKnowingly or willfully abuses a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child.\n\n(b) \n“Child abuse” means:\n1. \nIntentional infliction of physical or mental injury upon a child;\n\n2. \nAn intentional act that could reasonably be expected to result in physical or mental injury to a child; or\n\n3. \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or mental injury to a child.\n\n(c) \n“Maliciously” means wrongfully, intentionally, and without legal justification or excuse. Maliciousness may be established by circumstances from which one could conclude that a reasonable parent would not have engaged in the damaging acts toward the child for any valid reason and that the primary purpose of the acts was to cause the victim unjustifiable pain or injury.\n\n(d) \n“Mental injury” means injury to the intellectual or psychological capacity of a child as evidenced by a discernible and substantial impairment in the ability of the child to function within the normal range of performance and behavior as supported by expert testimony.\n\n(e) \n“Neglect of a child” means:\n1. \nA caregiver’s willful failure or omission to provide a child with the care, supervision, and services necessary to maintain the child’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the child. The term does not include a caregiver allowing a child to engage in independent and unsupervised activities unless allowing such activities constitutes willful and wanton conduct that endangers the health or safety of the child. Such independent and unsupervised activities include, but are not limited to, traveling to or from school or nearby locations by bicycle or on foot, playing outdoors, or remaining at home or any other location for a reasonable period of time; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect a child from abuse, neglect, or exploitation by another person.\n\nExcept as otherwise provided in this section, neglect of a child may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or mental injury, or a substantial risk of death, to a child.\n\n(2) \nOFFENSES.—\n\n(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nEXPERT TESTIMONY.—\n\n(a) \nExcept as provided in paragraph (b), a physician may not provide expert testimony in a criminal child abuse case unless the physician is a physician licensed under chapter 458 or chapter 459 or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(b) \nA physician may not provide expert testimony in a criminal child abuse case regarding mental injury unless the physician is a physician licensed under chapter 458 or chapter 459 who has completed an accredited residency in psychiatry or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(c) \nA psychologist may not give expert testimony in a criminal child abuse case regarding mental injury unless the psychologist is licensed under chapter 490.\n\n(d) \nThe expert testimony requirements of this subsection apply only to criminal child abuse and neglect cases pursuant to this chapter, dependency cases pursuant to chapter 39, and cases involving sexual battery of a child pursuant to chapter 794 and not to family court cases.\n\nHistory.\n—\ns. 1, ch. 4721, 1899; s. 1, ch. 4971, 1901; GS 3236, 3238; RGS 5069, 5071; s. 1, ch. 9331, 1923; CGL 7171, 7173; s. 1, ch. 65-113; s. 1, ch. 70-8; s. 940, ch. 71-136; s. 49, ch. 74-383; s. 30, ch. 75-298; s. 1, ch. 84-238; s. 8, ch. 96-322; s. 16, ch. 99-168; s. 1, ch. 2003-130; s. 9, ch. 2012-155; s. 6, ch. 2015-177; s. 5, ch. 2017-153; s. 2, ch. 2025-167.\n\nNote.\n—\nFormer s. 828.04.",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+        "retrievedAt": "2026-11-13T04:38:00.854Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:787.04:2": {
+        "sourceKey": "fl:statute:787.04:2",
+        "section": "787.04",
+        "subdivision": "(2)",
+        "citation": "Fla. Stat. § 787.04(2)",
+        "title": "Removing minors from state or concealing minors contrary to state agency order or court order",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html",
+        "text": "787.04 \nRemoving minors from state or concealing minors contrary to state agency order or court order.\n—\n\n(1) \nIt is unlawful for any person, in violation of a court order, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, with personal knowledge of the order.\n\n(2) \nIt is unlawful for any person, with criminal intent, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, during the pendency of any action or proceeding affecting custody of the minor, after having received notice as required by law of the pendency of the action or proceeding, without the permission of the court in which the action or proceeding is pending.\n\n(3) \nIt is unlawful for any person to knowingly and willfully lead, take, entice, or remove a minor beyond the limits of this state, or to knowingly and willfully conceal the location of a minor, during the pendency of a dependency proceeding affecting such minor or during the pendency of any investigation, action, or proceeding concerning the alleged abuse or neglect of such minor, after having received actual or constructive notice of the pendency of such investigation, action, or proceeding and without the permission of the state agency or court in which the investigation, action, or proceeding is pending.\n\n(4) \nIt is unlawful for any person, who has carried beyond the limits of this state any minor whose custody is involved in any action or proceeding pending in this state pursuant to the order of the court in which the action or proceeding is pending or pursuant to the permission of the court, thereafter, to fail to produce the minor in the court or deliver the minor to the person designated by the court.\n\n(5) \nIt is a defense under this section that a person who leads, takes, entices, or removes a minor beyond the limits of the state reasonably believes that his or her action was necessary to protect the minor from child abuse as defined in s. 827.03.\n\n(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+        "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+        "retrievedAt": "2026-11-13T04:37:07.573Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)",
+            "start": 325,
+            "end": 752
+          }
+        ]
+      },
+      "fl:statute:787.04:3": {
+        "sourceKey": "fl:statute:787.04:3",
+        "section": "787.04",
+        "subdivision": "(3)",
+        "citation": "Fla. Stat. § 787.04(3)",
+        "title": "Removing minors from state or concealing minors contrary to state agency order or court order",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html",
+        "text": "787.04 \nRemoving minors from state or concealing minors contrary to state agency order or court order.\n—\n\n(1) \nIt is unlawful for any person, in violation of a court order, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, with personal knowledge of the order.\n\n(2) \nIt is unlawful for any person, with criminal intent, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, during the pendency of any action or proceeding affecting custody of the minor, after having received notice as required by law of the pendency of the action or proceeding, without the permission of the court in which the action or proceeding is pending.\n\n(3) \nIt is unlawful for any person to knowingly and willfully lead, take, entice, or remove a minor beyond the limits of this state, or to knowingly and willfully conceal the location of a minor, during the pendency of a dependency proceeding affecting such minor or during the pendency of any investigation, action, or proceeding concerning the alleged abuse or neglect of such minor, after having received actual or constructive notice of the pendency of such investigation, action, or proceeding and without the permission of the state agency or court in which the investigation, action, or proceeding is pending.\n\n(4) \nIt is unlawful for any person, who has carried beyond the limits of this state any minor whose custody is involved in any action or proceeding pending in this state pursuant to the order of the court in which the action or proceeding is pending or pursuant to the permission of the court, thereafter, to fail to produce the minor in the court or deliver the minor to the person designated by the court.\n\n(5) \nIt is a defense under this section that a person who leads, takes, entices, or removes a minor beyond the limits of the state reasonably believes that his or her action was necessary to protect the minor from child abuse as defined in s. 827.03.\n\n(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+        "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+        "retrievedAt": "2026-11-13T04:37:07.573Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(3)",
+            "start": 752,
+            "end": 1370
+          }
+        ]
+      },
+      "fl:statute:787.04:4": {
+        "sourceKey": "fl:statute:787.04:4",
+        "section": "787.04",
+        "subdivision": "(4)",
+        "citation": "Fla. Stat. § 787.04(4)",
+        "title": "Removing minors from state or concealing minors contrary to state agency order or court order",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html",
+        "text": "787.04 \nRemoving minors from state or concealing minors contrary to state agency order or court order.\n—\n\n(1) \nIt is unlawful for any person, in violation of a court order, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, with personal knowledge of the order.\n\n(2) \nIt is unlawful for any person, with criminal intent, to lead, take, entice, or remove a minor beyond the limits of this state, or to conceal the location of a minor, during the pendency of any action or proceeding affecting custody of the minor, after having received notice as required by law of the pendency of the action or proceeding, without the permission of the court in which the action or proceeding is pending.\n\n(3) \nIt is unlawful for any person to knowingly and willfully lead, take, entice, or remove a minor beyond the limits of this state, or to knowingly and willfully conceal the location of a minor, during the pendency of a dependency proceeding affecting such minor or during the pendency of any investigation, action, or proceeding concerning the alleged abuse or neglect of such minor, after having received actual or constructive notice of the pendency of such investigation, action, or proceeding and without the permission of the state agency or court in which the investigation, action, or proceeding is pending.\n\n(4) \nIt is unlawful for any person, who has carried beyond the limits of this state any minor whose custody is involved in any action or proceeding pending in this state pursuant to the order of the court in which the action or proceeding is pending or pursuant to the permission of the court, thereafter, to fail to produce the minor in the court or deliver the minor to the person designated by the court.\n\n(5) \nIt is a defense under this section that a person who leads, takes, entices, or removes a minor beyond the limits of the state reasonably believes that his or her action was necessary to protect the minor from child abuse as defined in s. 827.03.\n\n(6) \nAny person who violates this section is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 29654, 1955; s. 1, ch. 57-337; s. 47, ch. 67-254; s. 785, ch. 71-136; s. 25, ch. 74-383; s. 15, ch. 75-298; s. 1, ch. 80-102; s. 3, ch. 88-151; s. 3, ch. 96-215; s. 23, ch. 96-322; s. 1815, ch. 97-102; s. 21, ch. 2008-245.\n\nNote.\n—\nFormer ss. 65.141, 805.03.",
+        "contentHash": "0f0b566565b2e4664ef3e19a6f9450ec5c775dd3da1f1ca47053e2beca3f1e06",
+        "retrievedAt": "2026-11-13T04:37:07.573Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(4)",
+            "start": 1370,
+            "end": 1779
+          }
+        ]
+      }
+    }
+  },
+  "eligibility": {
+    "schemaVersion": 1,
+    "reportHash": "7b2b46edcc35fed80a57af4f5f34d29ea72f44c6c71a0290f34eb84631d783d5",
+    "decisions": [
+      {
+        "id": "fl-fs-787-01-2-restraint",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "6f7c3aac9e7b442c1671869aa4ba4d937167eb471f7583730f28348d78ad6264",
+        "definitionHash": "1d3bfdd66bde39b305a304f2aef3c9f6170c0489c7761668890c8a8de12a4870",
+        "approvalHash": "06568fc8acea556c4425a84b9967123d054a6a90aebeadae0482cf2fbc9edcd0"
+      },
+      {
+        "id": "fl-fs-787-02-2-restraint",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "22a2ddeaadfeb4fbfa0d36193d977aad1bd5566ff53709d19893a83912ca43cf",
+        "definitionHash": "7485b3dca71403c3557a1ac54754aa522a125df4fdde00b4ab6668946b44f2cc",
+        "approvalHash": "387659c0ee6272e71c3c666efea73ca4afaaff6286c920b6a2b9e01a72871c4e"
+      },
+      {
+        "id": "fl-fs-787-025-2-a-restraint",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "16c660f9172914f1045f07432ccaab7a2e46acae9aff4af3eee68d712545c5da",
+        "definitionHash": "1bf1120ab3708b4b3870f9ef0635447371b552f604763633ccbd5ed8d5735788",
+        "approvalHash": "048d96a35bed0eb6d08de7e35806aafb61354ab3828d70710118069795a9fe53"
+      },
+      {
+        "id": "fl-fs-787-025-2-b-restraint",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "0e933e2da55e4ae93b3408581b48b764cfebaa9957c901be65678a4b1093d3f9",
+        "definitionHash": "e2c2fea77d90b238f1149404a059749518a733567d278e6a536f63646d22f7ab",
+        "approvalHash": "64bb69f4a8717af60b50075718ea662825d7b318d082183435e2109e6bbc9201"
+      },
+      {
+        "id": "fl-fs-787-025-2-c-restraint",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "37b703b80cb46867bdccf3936948ccaa74531873b5a82cb9554bc21fdacb080f",
+        "definitionHash": "460fdc53e0c13a8a2c1cb4cf3cec9518d21d2a311ae82fd08ef10b9ece5dabbf",
+        "approvalHash": "bfa8bdfe0dfa0dccfaa70e673bde0deb7fbaf30bfc7e24edb5e6dc929f6d8b5e"
+      },
+      {
+        "id": "fl-fs-787-03-1-restraint",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "0534d0401312d79a864b8d3ab88ed4f46b1f8e47b5b51b01b79c2d7d2308bf83",
+        "definitionHash": "8ca8009813f98e8ff57ee4eaedff3fce1b51928a94a1cdd3848465beba1c8051",
+        "approvalHash": "93d3b82faeb692ce293c134e842fedb815307d3d1da7f44eaa869dfa6a61cf5e"
+      },
+      {
+        "id": "fl-fs-787-03-2-restraint",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "d4c578ff68726d028f56178a346cdcc12e830e2065d782ca2f0022c309872386",
+        "definitionHash": "1e6578428da311be490f95fbf6de599b1ae97e80a13ce633b8c82705a5f73e95",
+        "approvalHash": "1eac1a43d14b0e8f3617b339f0fe4a4db3ec731b5de22569d431507a46c4410c"
+      },
+      {
+        "id": "fl-fs-787-04-1-restraint",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "f25fb55f25db1210c1066244aa9a886f1e816d2a24fa5c6e1e8924d161c5c093",
+        "definitionHash": "031d7904b6846193833fbcdf15ba6e3f7d6821892033648e1b55c07163ede562",
+        "approvalHash": "ad8192042b7fe13eb6c02f65c3cb0f4fa1a08167eba91ca580e1e61dad2c66f0"
+      },
+      {
+        "id": "fl-fs-787-04-2-restraint",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "ed57b8c69a20e13fd45f4251ae88ad21e8672df2a1b70fa331644fdfe5f7c90a",
+        "definitionHash": "c9831d61e3764bdae11d07e0190f93699b78078f4fcfa4773d5d6efd586e3795",
+        "approvalHash": "16eed9d939ab7668f9347d7133890bd57163323026b399be4a0dd511e3f38ad5"
+      },
+      {
+        "id": "fl-fs-787-04-3-restraint",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "7cd8f78cf658bcc24eeff441be225e53572b52d1604d568ce37e9a74077f4109",
+        "definitionHash": "379a8602cefe5bcc5f35d8496010d092c9be674ab6d169baac560fa71347bc18",
+        "approvalHash": "9e9d1f604548f5cf55cd1fc5f0c3c0dca7eebfbfb1f40506e4f6ba9a394ecee5"
+      },
+      {
+        "id": "fl-fs-787-04-4-restraint",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "596a85b489fe63db2dda2bdeab391bc6d177eb87559cb429e534edaca1631422",
+        "definitionHash": "33eba1f9fd6073779b62be894efc02916da8f12e2c7d96e2882ad0828d2e22aa",
+        "approvalHash": "778043260231e34240e79ad0274b3249bc5d05bbd9e85e8826fd074d1877a297"
+      }
+    ]
+  }
+}

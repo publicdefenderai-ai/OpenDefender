@@ -1,0 +1,827 @@
+[
+  {
+    "id": "oh-orc-2915-02-bookmaking",
+    "section": "2915.02",
+    "scope": "A(1)",
+    "code": "2915.02(A)(1)",
+    "statutoryName": "Gambling",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "K"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Engaging in bookmaking or knowingly facilitating it. Division (B) includes knowingly aiding illegal bookmaking. Section 2915.02(C) excludes gambling expressly permitted by law. Division (D) provides conditional exceptions for certain charitable games, permitted tag fishing and licensed charitable bingo. Division (E) limits transfer of charitable gaming rights.",
+    "gradeSummary": "M1 ordinarily. A previous conviction for any gambling offense makes this F5.",
+    "dependencies": [
+      "2915.01",
+      "1533.92",
+      "2915.08",
+      "2915.09",
+      "2915.12"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.02",
+          "quote": "gambling, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-02-game-or-scheme",
+    "section": "2915.02",
+    "scope": "A(2)",
+    "code": "2915.02(A)(2)",
+    "statutoryName": "Gambling",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "K"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Establishing, promoting, operating or knowingly facilitating a game of chance conducted for profit or a scheme of chance. Section 2915.02(C) excludes gambling expressly permitted by law. Division (D) provides conditional exceptions for certain charitable games, permitted tag fishing and licensed charitable bingo. Division (E) limits transfer of charitable gaming rights.",
+    "gradeSummary": "M1 ordinarily. A previous conviction for any gambling offense makes this F5.",
+    "dependencies": [
+      "2915.01",
+      "1533.92",
+      "2915.08",
+      "2915.09",
+      "2915.12"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.02",
+          "quote": "gambling, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-02-odds-information",
+    "section": "2915.02",
+    "scope": "A(3)",
+    "code": "2915.02(A)(3)",
+    "statutoryName": "Gambling",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "K"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Knowingly procuring, transmitting or exchanging information, or facilitating that activity, for establishing odds or determining winners in connection with bookmaking, a game of chance for profit or a scheme of chance. Section 2915.02(C) excludes gambling expressly permitted by law. Division (D) provides conditional exceptions for certain charitable games, permitted tag fishing and licensed charitable bingo. Division (E) limits transfer of charitable gaming rights.",
+    "gradeSummary": "M1 ordinarily. A previous conviction for any gambling offense makes this F5.",
+    "dependencies": [
+      "2915.01",
+      "1533.92",
+      "2915.08",
+      "2915.09",
+      "2915.12"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.02",
+          "quote": "gambling, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-02-substantial-income",
+    "section": "2915.02",
+    "scope": "A(4)",
+    "code": "2915.02(A)(4)",
+    "statutoryName": "Gambling",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(4)"
+    ],
+    "gradingPaths": [
+      "K"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Betting or playing a scheme or game of chance as a substantial source of income or livelihood. Section 2915.02(C) excludes gambling expressly permitted by law. Division (D) provides conditional exceptions for certain charitable games, permitted tag fishing and licensed charitable bingo. Division (E) limits transfer of charitable gaming rights.",
+    "gradeSummary": "M1 ordinarily. A previous conviction for any gambling offense makes this F5.",
+    "dependencies": [
+      "2915.01",
+      "1533.92",
+      "2915.08",
+      "2915.09",
+      "2915.12"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.02",
+          "quote": "gambling, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-02-sweepstakes-prize",
+    "section": "2915.02",
+    "scope": "A(5)",
+    "code": "2915.02(A)(5)",
+    "statutoryName": "Gambling",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(5)"
+    ],
+    "gradingPaths": [
+      "K"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Conducting or participating in a terminal-device sweepstakes at a terminal-device facility and awarding an item covered by §2915.01(VV)(1) through (4), or awarding a single-entry merchandise prize or voucher above the $10 wholesale limit. Section 2915.02(C) excludes gambling expressly permitted by law. Division (D) provides conditional exceptions for certain charitable games, permitted tag fishing and licensed charitable bingo. Division (E) limits transfer of charitable gaming rights.",
+    "gradeSummary": "M1 ordinarily. A previous conviction for any gambling offense makes this F5.",
+    "dependencies": [
+      "2915.01",
+      "1533.92",
+      "2915.08",
+      "2915.09",
+      "2915.12"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.02",
+          "quote": "gambling, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-02-sweepstakes-registration",
+    "section": "2915.02",
+    "scope": "A(6)",
+    "code": "2915.02(A)(6)",
+    "statutoryName": "Gambling",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(6)"
+    ],
+    "gradingPaths": [
+      "K"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Conducting or participating in a terminal-device sweepstakes at a terminal-device facility without first obtaining the annual registration certificate required by (F). Section 2915.02(C) excludes gambling expressly permitted by law. Division (D) provides conditional exceptions for certain charitable games, permitted tag fishing and licensed charitable bingo. Division (E) limits transfer of charitable gaming rights.",
+    "gradeSummary": "M1 ordinarily. A previous conviction for any gambling offense makes this F5.",
+    "dependencies": [
+      "2915.01",
+      "1533.92",
+      "2915.08",
+      "2915.09",
+      "2915.12"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.02",
+          "quote": "gambling, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-02-device-purpose",
+    "section": "2915.02",
+    "scope": "A(7)",
+    "code": "2915.02(A)(7)",
+    "statutoryName": "Gambling",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(7)"
+    ],
+    "gradingPaths": [
+      "K"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Acquiring, possessing, controlling or operating a gambling device with the purpose of violating one of (A)(1) through (6). Device possession alone does not establish that purpose. Section 2915.02(C) excludes gambling expressly permitted by law. Division (D) provides conditional exceptions for certain charitable games, permitted tag fishing and licensed charitable bingo. Division (E) limits transfer of charitable gaming rights.",
+    "gradeSummary": "M1 ordinarily. A previous conviction for any gambling offense makes this F5.",
+    "dependencies": [
+      "2915.01",
+      "1533.92",
+      "2915.08",
+      "2915.09",
+      "2915.12"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.02",
+          "quote": "gambling, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-02-monthly-report",
+    "section": "2915.02",
+    "scope": "F",
+    "code": "2915.02(F)",
+    "statutoryName": "Gambling",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "F"
+    ],
+    "gradingPaths": [
+      "K"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "A sweepstakes terminal device operator failing to file the required monthly report with the attorney general by the tenth day of the month.",
+    "gradeSummary": "M1. The last sentence of (K) expressly excepts this reporting failure from the prior-gambling-offense increase.",
+    "dependencies": [
+      "2915.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2915-02-semiannual-report",
+    "section": "2915.02",
+    "scope": "G",
+    "code": "2915.02(G)",
+    "statutoryName": "Gambling",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "G"
+    ],
+    "gradingPaths": [
+      "K"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "The holder of a compliance certificate failing to file the semiannual report required by (G) concerning devices and prize value.",
+    "gradeSummary": "M1. The last sentence of (K) expressly excepts this reporting failure from the prior-gambling-offense increase.",
+    "dependencies": [
+      "2915.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2915-03-use-of-premises",
+    "section": "2915.03",
+    "scope": "A(1)",
+    "code": "2915.03(A)(1)",
+    "statutoryName": "Operating a gambling house",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Using or occupying premises for gambling that violates §2915.02 as the owner, lessee or person with custody, control or supervision of the premises.",
+    "gradeSummary": "M1 ordinarily. A previous conviction for any gambling offense makes this F5. The premises constitute a nuisance subject to abatement under (C).",
+    "dependencies": [
+      "2915.01",
+      "2915.02",
+      "3767.01"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.03",
+          "quote": "operating a gambling house, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-03-recklessly-permitting",
+    "section": "2915.03",
+    "scope": "A(2)",
+    "code": "2915.03(A)(2)",
+    "statutoryName": "Operating a gambling house",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Recklessly permitting premises to be used or occupied for gambling that violates §2915.02 as the owner, lessee or person with custody, control or supervision of the premises.",
+    "gradeSummary": "M1 ordinarily. A previous conviction for any gambling offense makes this F5. The premises constitute a nuisance subject to abatement under (C).",
+    "dependencies": [
+      "2915.01",
+      "2915.02",
+      "3767.01"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.03",
+          "quote": "operating a gambling house, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-04-public-play",
+    "section": "2915.04",
+    "scope": "A",
+    "code": "2915.04(A)",
+    "statutoryName": "Public gaming",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "MM",
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Making a bet or playing a game or scheme of chance at the public accommodation, business, amusement or resort locations specified in (A). Division (C) excludes gambling expressly permitted by law.",
+    "gradeSummary": "Minor misdemeanor; a previous conviction for any gambling offense makes it M4.",
+    "dependencies": [
+      "2915.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2915-04-reckless-permission",
+    "section": "2915.04",
+    "scope": "B",
+    "code": "2915.04(B)",
+    "statutoryName": "Public gaming",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "C",
+      "E"
+    ],
+    "degrees": [
+      "MM",
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Recklessly permitting those premises to be used in violation of (A), as their owner, lessee or person with custody, control or supervision. Division (C) excludes gambling expressly permitted by law.",
+    "gradeSummary": "Minor misdemeanor; a previous conviction for any gambling offense makes it M4. The (B) violation makes the premises a nuisance subject to abatement.",
+    "dependencies": [
+      "2915.01",
+      "3767.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2915-05-bet",
+    "section": "2915.05",
+    "scope": "A(1)",
+    "code": "2915.05(A)(1)",
+    "statutoryName": "Cheating",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "C(1)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Engaging in conduct designed to corrupt the outcome of the subject of a bet with purpose to defraud or knowledge that one is facilitating a fraud.",
+    "gradeSummary": "M1 ordinarily; potential gain of $1,000 or more, or a previous gambling or theft offense conviction, makes it F5. The threshold concerns potential gain.",
+    "dependencies": [
+      "2915.01",
+      "2913.01"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.05",
+          "quote": "cheating is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-05-nonsport-contest",
+    "section": "2915.05",
+    "scope": "A(2)",
+    "code": "2915.05(A)(2)",
+    "statutoryName": "Cheating",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "C(1)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Engaging in conduct designed to corrupt the outcome of a nonathletic, nonsporting contest of knowledge, skill or endurance with purpose to defraud or knowledge that one is facilitating a fraud.",
+    "gradeSummary": "M1 ordinarily; potential gain of $1,000 or more, or a previous gambling or theft offense conviction, makes it F5. The threshold concerns potential gain.",
+    "dependencies": [
+      "2915.01",
+      "2913.01"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.05",
+          "quote": "cheating is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-05-game-or-scheme",
+    "section": "2915.05",
+    "scope": "A(3)",
+    "code": "2915.05(A)(3)",
+    "statutoryName": "Cheating",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "C(1)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Engaging in conduct designed to corrupt the outcome of a scheme or game of chance with purpose to defraud or knowledge that one is facilitating a fraud.",
+    "gradeSummary": "M1 ordinarily; potential gain of $1,000 or more, or a previous gambling or theft offense conviction, makes it F5. The threshold concerns potential gain.",
+    "dependencies": [
+      "2915.01",
+      "2913.01"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.05",
+          "quote": "cheating is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-05-bingo",
+    "section": "2915.05",
+    "scope": "A(4)",
+    "code": "2915.05(A)(4)",
+    "statutoryName": "Cheating",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(4)"
+    ],
+    "gradingPaths": [
+      "C(1)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Engaging in conduct designed to corrupt the outcome of bingo with purpose to defraud or knowledge that one is facilitating a fraud.",
+    "gradeSummary": "M1 ordinarily; potential gain of $1,000 or more, or a previous gambling or theft offense conviction, makes it F5. The threshold concerns potential gain.",
+    "dependencies": [
+      "2915.01",
+      "2913.01"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2915.05",
+          "quote": "cheating is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2915-05-thing-of-value",
+    "section": "2915.05",
+    "scope": "B(1)",
+    "code": "2915.05(B)(1)",
+    "statutoryName": "Corrupting sports",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [
+      "C(2)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly offering, giving, soliciting or accepting anything of value to corrupt an athletic or sporting event’s outcome.",
+    "gradeSummary": "F5 on a first offense and F4 on each subsequent offense. The $1,000 cheating threshold belongs only to (A).",
+    "dependencies": [
+      "2915.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2915-05-corrupt-outcome",
+    "section": "2915.05",
+    "scope": "B(2)",
+    "code": "2915.05(B)(2)",
+    "statutoryName": "Corrupting sports",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(2)"
+    ],
+    "gradingPaths": [
+      "C(2)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly engaging in conduct designed to corrupt the outcome of an athletic or sporting event.",
+    "gradeSummary": "F5 on a first offense and F4 on each subsequent offense. The $1,000 cheating threshold belongs only to (A).",
+    "dependencies": [
+      "2915.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2915-07-conduct-advertise",
+    "section": "2915.07",
+    "scope": "A",
+    "code": "2915.07(A)",
+    "statutoryName": "Conducting illegal bingo",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Conducting or advertising bingo except as a charitable organization licensed under §2915.08. Division (A) excludes a raffle conducted or advertised by a charitable organization. This choice does not determine compliance with the separate raffle statute.",
+    "gradeSummary": "F4.",
+    "dependencies": [
+      "2915.01",
+      "2915.08"
+    ],
+    "extraGrading": []
+  }
+]
