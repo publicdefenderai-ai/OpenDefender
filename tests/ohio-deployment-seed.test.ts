@@ -10,8 +10,8 @@ describe("committed Ohio deployment seed", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest, ohioEvidenceTestTime);
 
     expect(manifest.source).toBe("Ohio Laws: codes.ohio.gov");
-    expect(manifest.catalogRecords).toHaveLength(601);
-    expect(seed.selectableChargeIds).toHaveLength(492);
+    expect(manifest.catalogRecords).toHaveLength(611);
+    expect(seed.selectableChargeIds).toHaveLength(502);
     expect(seed.selectableChargeIds).not.toContain("oh-vandalism");
     expect(seed.selectableChargeIds).not.toContain("oh-insurance-fraud");
     expect(seed.selectableChargeIds).not.toContain("oh-domestic-violence");
