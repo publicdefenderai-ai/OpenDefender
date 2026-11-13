@@ -8651,6 +8651,19 @@ export default {
     }
   },
   "courtDateGuide": {
+    "design": {
+      "heading": "Lleve el control de",
+      "accent": "su fecha de audiencia.",
+      "navigation": "Secciones de la guía",
+      "confirm": "Confirme los detalles",
+      "reminders": "Programe recordatorios",
+      "transport": "Organice el transporte",
+      "day": "Revise su lista",
+      "missed": "¿Ya faltó a una audiencia?",
+      "week": "Una semana antes",
+      "days": "Dos días antes",
+      "morning": "Esa mañana"
+    },
     "badge": "Guía Práctica",
     "title": "Guía de Fechas de Tribunal: Cómo Seguir y No Perder su Fecha",
     "subtitle": "Perder una fecha en el tribunal generalmente resulta en una orden de arresto. Esta guía cubre cómo confirmar su fecha, establecer recordatorios, encontrar transporte y qué hacer si ya ha perdido una fecha.",
