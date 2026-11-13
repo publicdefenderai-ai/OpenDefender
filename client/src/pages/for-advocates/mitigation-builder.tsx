@@ -26,8 +26,8 @@ import {
   WidthType,
 } from "docx";
 import { Link } from "wouter";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
+import "./mitigation-builder.css";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 import {
@@ -245,11 +245,13 @@ function Input({
 }
 
 function Textarea({
+  id,
   value,
   onChange,
   placeholder,
   rows = 3,
 }: {
+  id: string;
   value: string;
   onChange: (v: string) => void;
   placeholder?: string;
@@ -257,6 +259,7 @@ function Textarea({
 }) {
   return (
     <textarea
+      id={id}
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
@@ -267,11 +270,13 @@ function Textarea({
 }
 
 function Select({
+  id,
   value,
   onChange,
   options,
   placeholder,
 }: {
+  id: string;
   value: string;
   onChange: (v: string) => void;
   options: string[];
@@ -279,6 +284,7 @@ function Select({
 }) {
   return (
     <select
+      id={id}
       value={value}
       onChange={(e) => onChange(e.target.value)}
       className="w-full min-h-[44px] rounded-md border border-border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
@@ -309,16 +315,17 @@ function Domain({
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="editorial-card overflow-hidden">
+    <div className="mitigation-domain">
       <button
         type="button"
+        aria-expanded={open}
         onClick={() => setOpen((o) => !o)}
-        className="w-full flex items-center justify-between px-5 py-4 bg-muted/30 hover:bg-muted/50 transition-colors text-left"
+        className="mitigation-toggle"
       >
         <div className="flex min-w-0 flex-wrap items-center gap-2 sm:gap-3">
           <span className="font-semibold text-sm text-foreground">{title}</span>
           {filled > 0 && (
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[var(--editorial-signal-soft)] text-[var(--editorial-signal)]">
+            <span className="text-xs text-muted-foreground">
               {filled} {filled === 1 ? "field" : "fields"} filled
             </span>
           )}
@@ -329,7 +336,7 @@ function Domain({
           <ChevronDown className="h-4 w-4 text-muted-foreground flex-shrink-0" />
         )}
       </button>
-       {open && <div className="px-4 sm:px-5 py-5 space-y-4 bg-background">{children}</div>}
+       {open && <div className="mitigation-fields">{children}</div>}
     </div>
   );
 }
@@ -1218,7 +1225,7 @@ function PolishPanel({ form }: { form: FormState }) {
   };
 
   return (
-    <div className="editorial-card mt-4 overflow-hidden">
+    <div className="mitigation-polish">
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 bg-[var(--editorial-signal-soft)] border-b border-[var(--editorial-signal)]/30">
         <div className="flex min-w-0 items-center gap-2">
@@ -1239,7 +1246,7 @@ function PolishPanel({ form }: { form: FormState }) {
               polishCooldown ||
               polishDailyCount >= POLISH_DAILY_LIMIT
             }
-            className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md bg-[var(--editorial-signal)] hover:opacity-90 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md bg-primary hover:opacity-90 text-primary-foreground transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Sparkles className="h-3.5 w-3.5" />
             {polishDailyCount >= POLISH_DAILY_LIMIT
@@ -1709,11 +1716,11 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
   const empty = !output;
 
   return (
-    <div className="editorial-card overflow-hidden">
+    <div className="mitigation-output">
       <div className="flex items-center justify-between px-4 py-3 bg-muted/30 border-b border-border">
         <div className="flex items-center gap-2">
           <FileText className="h-4 w-4 text-muted-foreground" />
-          <span className="text-sm font-semibold text-foreground">Summary output</span>
+          <h2>Summary output</h2>
         </div>
       </div>
       {!empty && (
@@ -1758,7 +1765,7 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
 
       {empty ? (
         <div className="px-5 py-10 text-center text-sm text-muted-foreground">
-          Fill in fields on the left and your summary will appear here.
+          Fill in the fields above and your summary will appear here.
         </div>
       ) : (
         <>
@@ -1804,62 +1811,29 @@ export default function MitigationBuilder() {
 
   const output = generateOutput(form);
 
-  const hasAnyInput = Object.values(form).some((v) => v.trim() !== "");
+  const fieldCount = Object.values(form).filter(value => value.trim()).length;
+  const formSize = Object.keys(EMPTY).length;
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-
-      {/* Page header */}
-      <section className="border-b border-border/60 bg-[var(--editorial-paper-deep)] py-12 md:py-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <Link
-            href="/for-advocates"
-            className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground text-xs font-semibold mb-5 transition-colors"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" /> Advocate Hub
-          </Link>
-          <p className="editorial-kicker mb-2">
-            Advocate tool
-          </p>
-          <h1 className="text-3xl md:text-4xl text-foreground mb-3 leading-tight">
-            Mitigation Builder
-          </h1>
-          <p className="text-sm md:text-base text-muted-foreground max-w-2xl leading-relaxed">
-            A structured intake form covering the social history domains courts respond to. Fill in what you know and your formatted summary appears on the right, ready to copy or print.
-          </p>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <span className="text-xs font-semibold px-3 py-1.5 rounded-full border border-border bg-[var(--editorial-paper)] text-muted-foreground">
-              Nothing is saved or sent anywhere
-            </span>
-            <span className="text-xs font-semibold px-3 py-1.5 rounded-full border border-border bg-[var(--editorial-paper)] text-muted-foreground">
-              For use at bail, diversion, and sentencing hearings
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* Disclaimer */}
-      <div className="max-w-5xl mx-auto px-4 pt-6">
-        <div className="flex items-start gap-3 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 px-4 py-3">
-          <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
-          <p className="text-xs text-amber-800 dark:text-amber-300 leading-relaxed">
-            <span className="font-semibold">For attorney use or use under direct attorney supervision.</span> This tool does not create legal advice, and documents it produces are not automatically privileged. If you are the attorney of record, printed output may constitute attorney work product. If you are not an attorney, this document is not privileged and may be subject to disclosure. Review any output with supervising counsel before retaining or sharing it.
-          </p>
-        </div>
-      </div>
-
-      {/* Main layout */}
-      <div className="editorial-workspace max-w-5xl mx-auto px-4 py-10">
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-
-          {/* Left: form */}
-          <div className="space-y-3">
-            {/* Header fields */}
-            <div className="editorial-card px-5 py-5 space-y-4 bg-background">
-              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">
-                Header information
-              </p>
+    <ScanFirstPageFrame mainClassName="mitigation-page">
+      <div className="mitigation-workspace" lang="en">
+        <header>
+          <Link href="/for-advocates">Advocate Hub</Link>
+          <h1>Mitigation <span>Builder</span></h1>
+          <p>Organize community ties, housing, employment, treatment and family responsibilities into a structured summary for attorney review at bail, diversion or sentencing hearings.</p>
+        </header>
+        <aside className="mitigation-notice">
+          <p><span className="font-semibold">For attorney use or use under direct attorney supervision.</span> This tool does not create legal advice, and documents it produces are not automatically privileged. If you are the attorney of record, printed output may constitute attorney work product. If you are not an attorney, this document is not privileged and may be subject to disclosure. Review any output with supervising counsel before retaining or sharing it.</p>
+          <p>The structured summary is prepared in this browser. Choosing “Generate narrative” sends the information you entered for AI processing.</p>
+        </aside>
+        <nav className="mitigation-progress" aria-label="Intake progress">
+          <span role="status">7 social history sections · {fieldCount} of {formSize} fields filled</span>
+          <a href="#mitigation-summary">View structured summary</a>
+        </nav>
+        <div>
+            <section aria-label="Header information" className="mitigation-identifiers">
+              <h2>Header information</h2>
+              <div className="mitigation-fields">
               <div>
                 <Label htmlFor="mitigation-client-name" hint="optional">Client name or identifier</Label>
                 <Input
@@ -1870,22 +1844,26 @@ export default function MitigationBuilder() {
                 />
               </div>
               <div>
-                <Label hint="optional">Case / docket number</Label>
+                <Label htmlFor="mitigation-caseNumber" hint="optional">Case / docket number</Label>
                 <Input
+                  id="mitigation-caseNumber"
                   value={form.caseNumber}
                   onChange={set("caseNumber")}
                   placeholder="e.g. 2024-CR-00512"
                 />
               </div>
               <div>
-                <Label hint="optional">Proceeding context</Label>
+                <Label htmlFor="mitigation-caseContext" hint="optional">Proceeding context</Label>
                 <Input
+                  id="mitigation-caseContext"
                   value={form.caseContext}
                   onChange={set("caseContext")}
                   placeholder="e.g. Bail hearing, diversion application, sentencing memo"
                 />
               </div>
             </div>
+
+            </section>
 
             {/* Domain 1 — Community Ties */}
             <Domain
@@ -1903,16 +1881,18 @@ export default function MitigationBuilder() {
                 />
               </div>
               <div>
-                <Label hint="optional">Family members in the area</Label>
+                <Label htmlFor="mitigation-familyNearby" hint="optional">Family members in the area</Label>
                 <Input
+                  id="mitigation-familyNearby"
                   value={form.familyNearby}
                   onChange={set("familyNearby")}
                   placeholder="e.g. Mother, two siblings, spouse"
                 />
               </div>
               <div>
-                <Label hint="optional">Civic, religious, or community involvement</Label>
+                <Label htmlFor="mitigation-communityInvolvement" hint="optional">Civic, religious, or community involvement</Label>
                 <Textarea
+                  id="mitigation-communityInvolvement"
                   value={form.communityInvolvement}
                   onChange={set("communityInvolvement")}
                   placeholder="e.g. Volunteer at local food pantry, active member of church, coaches youth soccer"
@@ -1927,8 +1907,9 @@ export default function MitigationBuilder() {
               filled={countFilled("housingStatus", "housingDuration", "dependentsAtHome")}
             >
               <div>
-                <Label>Current housing status</Label>
+                <Label htmlFor="mitigation-housingStatus">Current housing status</Label>
                 <Select
+                  id="mitigation-housingStatus"
                   value={form.housingStatus}
                   onChange={set("housingStatus")}
                   placeholder="Select status…"
@@ -1944,16 +1925,18 @@ export default function MitigationBuilder() {
                 />
               </div>
               <div>
-                <Label hint="optional">Duration at current address</Label>
+                <Label htmlFor="mitigation-housingDuration" hint="optional">Duration at current address</Label>
                 <Input
+                  id="mitigation-housingDuration"
                   value={form.housingDuration}
                   onChange={set("housingDuration")}
                   placeholder="e.g. 3 years, 8 months"
                 />
               </div>
               <div>
-                <Label hint="optional">Dependents living at home</Label>
+                <Label htmlFor="mitigation-dependentsAtHome" hint="optional">Dependents living at home</Label>
                 <Input
+                  id="mitigation-dependentsAtHome"
                   value={form.dependentsAtHome}
                   onChange={set("dependentsAtHome")}
                   placeholder="e.g. Two minor children, ages 4 and 7"
@@ -1967,8 +1950,9 @@ export default function MitigationBuilder() {
               filled={countFilled("employmentStatus", "employer", "employmentDuration", "employerNote")}
             >
               <div>
-                <Label>Employment status</Label>
+                <Label htmlFor="mitigation-employmentStatus">Employment status</Label>
                 <Select
+                  id="mitigation-employmentStatus"
                   value={form.employmentStatus}
                   onChange={set("employmentStatus")}
                   placeholder="Select status…"
@@ -1984,24 +1968,27 @@ export default function MitigationBuilder() {
                 />
               </div>
               <div>
-                <Label hint="optional">Employer (only if client consents to disclosure)</Label>
+                <Label htmlFor="mitigation-employer" hint="optional">Employer (only if client consents to disclosure)</Label>
                 <Input
+                  id="mitigation-employer"
                   value={form.employer}
                   onChange={set("employer")}
                   placeholder="Employer name or industry"
                 />
               </div>
               <div>
-                <Label hint="optional">Duration of employment</Label>
+                <Label htmlFor="mitigation-employmentDuration" hint="optional">Duration of employment</Label>
                 <Input
+                  id="mitigation-employmentDuration"
                   value={form.employmentDuration}
                   onChange={set("employmentDuration")}
                   placeholder="e.g. 4 years, 6 months"
                 />
               </div>
               <div>
-                <Label hint="optional">Employer relationship or willingness to retain</Label>
+                <Label htmlFor="mitigation-employerNote" hint="optional">Employer relationship or willingness to retain</Label>
                 <Textarea
+                  id="mitigation-employerNote"
                   value={form.employerNote}
                   onChange={set("employerNote")}
                   placeholder="e.g. Supervisor has expressed willingness to hold position pending resolution"
@@ -2016,8 +2003,9 @@ export default function MitigationBuilder() {
               filled={countFilled("mentalHealthTreatment", "substanceTreatment", "treatmentDocumentation")}
             >
               <div>
-                <Label hint="optional">Mental health treatment</Label>
+                <Label htmlFor="mitigation-mentalHealthTreatment" hint="optional">Mental health treatment</Label>
                 <Textarea
+                  id="mitigation-mentalHealthTreatment"
                   value={form.mentalHealthTreatment}
                   onChange={set("mentalHealthTreatment")}
                   placeholder="e.g. Engaged in weekly outpatient therapy since [date]; diagnosis not required"
@@ -2025,8 +2013,9 @@ export default function MitigationBuilder() {
                 />
               </div>
               <div>
-                <Label hint="optional">Substance use treatment</Label>
+                <Label htmlFor="mitigation-substanceTreatment" hint="optional">Substance use treatment</Label>
                 <Textarea
+                  id="mitigation-substanceTreatment"
                   value={form.substanceTreatment}
                   onChange={set("substanceTreatment")}
                   placeholder="e.g. Completed 6-month outpatient program at [program]; currently attending weekly meetings"
@@ -2034,8 +2023,9 @@ export default function MitigationBuilder() {
                 />
               </div>
               <div>
-                <Label hint="optional">Documentation available</Label>
+                <Label htmlFor="mitigation-treatmentDocumentation" hint="optional">Documentation available</Label>
                 <Input
+                  id="mitigation-treatmentDocumentation"
                   value={form.treatmentDocumentation}
                   onChange={set("treatmentDocumentation")}
                   placeholder="e.g. Attendance records, provider letter, program certificate"
@@ -2049,8 +2039,9 @@ export default function MitigationBuilder() {
               filled={countFilled("caregiverStatus", "numberOfDependents", "providerStatus", "familyContext")}
             >
               <div>
-                <Label>Primary caregiver role</Label>
+                <Label htmlFor="mitigation-caregiverStatus">Primary caregiver role</Label>
                 <Select
+                  id="mitigation-caregiverStatus"
                   value={form.caregiverStatus}
                   onChange={set("caregiverStatus")}
                   placeholder="Select…"
@@ -2062,16 +2053,18 @@ export default function MitigationBuilder() {
                 />
               </div>
               <div>
-                <Label hint="optional">Number and ages of dependents</Label>
+                <Label htmlFor="mitigation-numberOfDependents" hint="optional">Number and ages of dependents</Label>
                 <Input
+                  id="mitigation-numberOfDependents"
                   value={form.numberOfDependents}
                   onChange={set("numberOfDependents")}
                   placeholder="e.g. 3 children (ages 2, 5, 9); elderly parent"
                 />
               </div>
               <div>
-                <Label>Financial provider role</Label>
+                <Label htmlFor="mitigation-providerStatus">Financial provider role</Label>
                 <Select
+                  id="mitigation-providerStatus"
                   value={form.providerStatus}
                   onChange={set("providerStatus")}
                   placeholder="Select…"
@@ -2084,8 +2077,9 @@ export default function MitigationBuilder() {
                 />
               </div>
               <div>
-                <Label hint="optional">Additional family context</Label>
+                <Label htmlFor="mitigation-familyContext" hint="optional">Additional family context</Label>
                 <Textarea
+                  id="mitigation-familyContext"
                   value={form.familyContext}
                   onChange={set("familyContext")}
                   placeholder="e.g. Caring for parent with dementia; only licensed driver in household"
@@ -2100,10 +2094,11 @@ export default function MitigationBuilder() {
               filled={countFilled("references")}
             >
               <div>
-                <Label hint="list one per line">
+                <Label htmlFor="mitigation-references" hint="list one per line">
                   References — name, relationship, capacity to speak
                 </Label>
                 <Textarea
+                  id="mitigation-references"
                   value={form.references}
                   onChange={set("references")}
                   placeholder={
@@ -2122,10 +2117,11 @@ export default function MitigationBuilder() {
               filled={countFilled("additionalContext")}
             >
               <div>
-                <Label hint="advocate's discretion">
+                <Label htmlFor="mitigation-additionalContext" hint="advocate's discretion">
                   Trauma history, health context, or other relevant background
                 </Label>
                 <Textarea
+                  id="mitigation-additionalContext"
                   value={form.additionalContext}
                   onChange={set("additionalContext")}
                   placeholder="Include only what the advocate has determined is appropriate to disclose and has been discussed with the client. This section is free-form."
@@ -2135,7 +2131,7 @@ export default function MitigationBuilder() {
             </Domain>
 
             {/* Clear button */}
-            {hasAnyInput && (
+            {fieldCount > 0 && (
               <button
                 type="button"
                 onClick={() => {
@@ -2150,13 +2146,12 @@ export default function MitigationBuilder() {
             )}
           </div>
 
-          {/* Right: output (sticky on desktop) */}
-          <div className="lg:sticky lg:top-6">
+          <div id="mitigation-summary" tabIndex={-1}>
             <OutputWithPolish output={output} form={form} />
 
             {/* Cross-links to reputation page */}
-            <div className="editorial-card mt-4 px-5 py-4 bg-muted/20">
-              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">
+            <div className="mitigation-related">
+              <p className="font-semibold mb-3">
                 After the case resolves
               </p>
               <div className="space-y-2">
@@ -2179,10 +2174,7 @@ export default function MitigationBuilder() {
               </div>
             </div>
           </div>
-        </div>
       </div>
-
-      <Footer />
-    </div>
+    </ScanFirstPageFrame>
   );
 }

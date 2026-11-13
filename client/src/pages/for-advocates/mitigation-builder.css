@@ -1,0 +1,24 @@
+.mitigation-workspace { max-width: 65rem; margin: auto; padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 3rem); }
+.mitigation-workspace header { max-width: 46rem; }
+.mitigation-workspace header a,.mitigation-progress a { color: var(--primary); font-weight: 600; }
+.mitigation-workspace header a:hover,.mitigation-progress a:hover { text-decoration: underline; }
+.mitigation-workspace h1 { font-size: clamp(2.6rem, 6vw, 4rem); letter-spacing: -.04em; line-height: 1.05; margin: 1.25rem 0; }
+.mitigation-workspace h1 span { display: block; color: var(--primary); }
+.mitigation-workspace header p,.mitigation-notice p { line-height: 1.65; }
+.mitigation-notice { max-width: 52rem; padding: .4rem 1rem; margin: 1.5rem 0; border-inline-start: 3px solid var(--primary); }
+.mitigation-notice p + p { margin-top: .6rem; color: var(--muted-foreground); }
+.mitigation-progress { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .3rem 1.5rem; background: var(--muted); padding: .65rem 1rem; }
+.mitigation-progress a { display: inline-flex; align-items: center; min-height: 44px; }
+.mitigation-identifiers { padding: 1.5rem 0; }
+.mitigation-identifiers h2,.mitigation-output h2 { font-weight: 600; font-size: 1.2rem; }
+.mitigation-domain { border-block-start: 1px solid var(--border); }
+.mitigation-toggle { display: flex; align-items: center; justify-content: space-between; width: 100%; text-align: start; min-height: 52px; padding: .75rem .3rem; }
+.mitigation-toggle:hover { background: var(--muted); }
+.mitigation-fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; padding-block: 1rem; }
+.mitigation-fields > div:has(textarea) { grid-column: 1 / -1; }
+.mitigation-fields select { min-width: 0; }
+#mitigation-summary { margin-top: 2rem; scroll-margin-top: 6rem; }
+.mitigation-output,.mitigation-polish { border-block: 1px solid var(--border); margin-block: 1.25rem; }
+.mitigation-output pre { overflow-wrap: anywhere; }
+.mitigation-related { margin: 2rem 0; border-top: 1px solid var(--border); padding-top: 1.25rem; }
+@media (max-width: 640px) { .mitigation-fields { grid-template-columns: minmax(0,1fr); } }
