@@ -1,9 +1,10 @@
+import { lawyerQuestions, guidanceReaderCopy, counselCopyKey } from "../locales/guidance-reader";
 import { fetchChargeCatalog } from "./charge-catalog";
 import { translationUnavailableNotice, translationSupplementNotice } from "@shared/translation-unavailable-notice";
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
-import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
+import { getDocumentsForPhase, knownCasePhase, type LegalDocument } from "@shared/legal-documents";
 import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
 import { resolveGuidanceCharge } from "@shared/guidance-charge-resolution";
 
@@ -270,7 +271,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     charges: 'Not specified',
     caseStage: 'Not specified',
     custodyStatus: 'Not specified',
-    hasAttorney: false,
+    hasAttorney: null,
   };
 
   // Localized labels
@@ -328,7 +329,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     misdemeanorFallback: 'Este es un cargo de delito menor, que generalmente es menos grave que un delito mayor. Los delitos menores aún pueden resultar en tiempo en la cárcel, multas y antecedentes penales. Su abogado puede explicar lo que la fiscalía necesita probar.',
     howDegreesDiffer: 'Cómo difieren los grados:',
     example: 'Ejemplo:',
-    documentsYouNeed: 'Documentos que Debería Tener',
+    documentsYouNeed: 'Documentos que podría recibir',
     documentsSubtitle: 'Estos documentos son importantes para su etapa actual del proceso legal.',
     documentName: 'Documento',
     documentDescription: 'Para Qué Sirve',
@@ -392,7 +393,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     misdemeanorFallback: 'This is a misdemeanor charge, which is generally less serious than a felony. Misdemeanors can still result in jail time, fines, and a criminal record. Your attorney can explain what the prosecution needs to prove.',
     howDegreesDiffer: 'How degrees differ:',
     example: 'Example:',
-    documentsYouNeed: 'Documents You Should Have',
+    documentsYouNeed: 'Documents you may receive',
     documentsSubtitle: 'These documents are important for your current stage in the legal process.',
     documentName: 'Document',
     documentDescription: 'What It\'s For',
@@ -463,9 +464,16 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
 
   // Helper function to add text with word wrap
   const addText = (text: string, x: number, y: number, options?: any) => {
-    const lines = doc.splitTextToSize(pdfText(text), pageWidth - 2 * margin);
-    doc.text(lines, x, y, options);
-    return y + (lines.length * 7);
+    const lines: string[] = doc.splitTextToSize(pdfText(text), pageWidth - margin - x);
+    for (const line of lines) {
+      if (y > doc.internal.pageSize.getHeight() - 22) {
+        doc.addPage();
+        y = 20;
+      }
+      doc.text(line, x, y, options);
+      y += 7;
+    }
+    return y;
   };
 
   // Helper function to check if we need a new page
@@ -514,7 +522,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     [labels.yourState, (caseData.jurisdiction || 'Unknown').toUpperCase()],
     [labels.processStage, caseData.caseStage || 'Not specified'],
     [labels.inJail, caseData.custodyStatus || 'Not specified'],
-    [labels.hasLawyer, caseData.hasAttorney ? labels.yes : labels.no],
+    [labels.hasLawyer, caseData.hasAttorney == null ? (isChinese ? "未提供" : isSpanish ? "Sin especificar" : "Not specified") : caseData.hasAttorney ? labels.yes : labels.no],
   ];
 
   if (guidance.chargeClassifications && guidance.chargeClassifications.length > 0) {
@@ -541,6 +549,11 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
   });
 
   yPosition = (doc as any).lastAutoTable.finalY + 10;
+
+  const reader = guidanceReaderCopy(language);
+  checkPageBreak(24);
+  yPosition = addText(reader.readerAppearance + ": " + reader.readerDateNote, margin, yPosition);
+  yPosition = addText(reader[counselCopyKey(caseData.hasAttorney)], margin, yPosition) + 4;
 
   // Urgent Takeaways — appears before overview, matching the web dashboard
   if (safe.criticalAlerts.length > 0) {
@@ -577,247 +590,6 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
 
       yPosition = addText(guidance.overview, margin + 5, yPosition);
     yPosition += 10;
-  }
-
-  // Understanding Your Charges Section
-  if (guidance.chargeClassifications && guidance.chargeClassifications.length > 0) {
-    checkPageBreak(40);
-    doc.setFontSize(14);
-    doc.setFont(FONT_NAME, 'bold');
-    doc.setTextColor(0, 100, 200);
-    doc.text(labels.understandingCharges, margin, yPosition);
-    yPosition += 6;
-
-    doc.setFontSize(9);
-    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
-    doc.setTextColor(100, 100, 100);
-    yPosition = addText(labels.chargesSubtitle, margin, yPosition);
-    yPosition += 8;
-
-    guidance.chargeClassifications.forEach((charge, chargeIdx) => {
-      checkPageBreak(50);
-      
-      // Charge header with classification
-      doc.setFontSize(11);
-      doc.setFont(FONT_NAME, 'bold');
-      doc.setTextColor(0, 0, 0);
-      const chargeHeader = `${formatChargeName(charge.name)} - ${charge.classification.toUpperCase()}`;
-      doc.text(chargeHeader, margin, yPosition);
-      yPosition += 8;
-
-      const resolvedCharge = resolveGuidanceCharge(charge, caseData.jurisdiction);
-      const isCalifornia = caseData.jurisdiction?.toUpperCase() === 'CA';
-      const explanation = isCalifornia && !resolvedCharge
-        ? undefined
-        : getChargeExplanation(
-            resolvedCharge?.name ?? charge.name,
-            caseData.jurisdiction,
-            language,
-            resolvedCharge?.id ?? charge.id,
-          );
-
-      if (caseData.jurisdiction?.toUpperCase() === 'CA' && !resolvedCharge) {
-        checkPageBreak(20);
-        doc.setFontSize(9);
-        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
-        doc.setTextColor(180, 100, 0);
-        yPosition = addText(chargeReselectionWarningLocalized, margin + 5, yPosition);
-        doc.setTextColor(0, 0, 0);
-        yPosition += 6;
-      }
-      
-      doc.setFontSize(10);
-      doc.setFont(FONT_NAME, 'normal');
-      doc.setTextColor(0, 0, 0);
-
-      // Pending-review notice — driven by explanation.pendingAttorneyReview, an explicit
-      // per-entry flag. Distinct from dataConfidence: a sourced entry can have
-      // dataConfidence: 'high' and still be pending attorney review, so gating on
-      // dataConfidence alone would silently omit the warning for those three entries.
-      if (explanation?.pendingAttorneyReview === true) {
-        checkPageBreak(15);
-        doc.setFontSize(9);
-        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
-        doc.setTextColor(180, 100, 0); // amber
-        yPosition = addText(
-          pendingReviewWarningLocalized,
-          margin + 5,
-          yPosition
-        );
-        doc.setTextColor(0, 0, 0);
-        yPosition += 6;
-      }
-
-      // Translation-draft notice — shown when the explanation was machine-translated
-      // and has not yet been reviewed by a fluent-speaker legal professional.
-      if (explanation?.untranslated === true || explanation?.translationDraft === true) {
-        checkPageBreak(15);
-        doc.setFontSize(9);
-        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
-        doc.setTextColor(30, 80, 160); // blue to distinguish from amber attorney-review warning
-        yPosition = addText(
-          explanation.untranslated ? translationUnavailableNotice(language) : translationDraftWarningLocalized,
-          margin + 5,
-          yPosition
-        );
-        doc.setTextColor(0, 0, 0);
-        yPosition += 6;
-      }
-
-      if (explanation?.jurisdictionDetailMissing === true) {
-        checkPageBreak(18);
-        doc.setFontSize(9);
-        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
-        doc.setTextColor(90, 90, 90);
-        yPosition = addText(jurisdictionCoverageWarningLocalized, margin + 5, yPosition);
-        doc.setTextColor(0, 0, 0);
-        yPosition += 6;
-      }
-
-      if (explanation?.plainSummary) {
-        yPosition = addText(explanation.plainSummary, margin + 5, yPosition);
-        if (explanation.untranslatedSupplement) {
-          yPosition += 4;
-          checkPageBreak(20);
-          doc.setFont(FONT_NAME, 'bold');
-          yPosition = addText(translationSupplementNotice(language), margin + 5, yPosition);
-          doc.setFont(FONT_NAME, 'normal');
-          yPosition += 3;
-          yPosition = addText(explanation.untranslatedSupplement.text, margin + 5, yPosition);
-        }
-        yPosition += 6;
-      } else {
-        // Fallback description based on classification
-        const fallback = charge.classification === 'felony'
-          ? labels.felonyFallback
-          : labels.misdemeanorFallback;
-        yPosition = addText(fallback, margin + 5, yPosition);
-        yPosition += 6;
-      }
-
-      // Jurisdiction-specific detail takes priority over the generic degree context when a
-      // shared/charge-explanation-jurisdiction-overlay.ts entry exists for this state.
-      if (explanation?.jurisdictionDetail) {
-        checkPageBreak(25);
-        doc.setFontSize(9);
-        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
-        doc.setTextColor(80, 80, 80);
-        const jd = explanation.jurisdictionDetail;
-        const stateLabel = caseData.jurisdiction ? `In ${caseData.jurisdiction}:` : 'For this jurisdiction:';
-        yPosition = addText(`${stateLabel} ${jd.keyRule}`, margin + 5, yPosition);
-        yPosition += 4;
-        doc.setFontSize(8);
-        yPosition = addText(`Source: ${jd.citation}${jd.penaltyClass ? ` (${jd.penaltyClass})` : ''}`, margin + 5, yPosition);
-        yPosition += 6;
-        doc.setTextColor(0, 0, 0);
-      } else if (explanation?.degreeContext) {
-        checkPageBreak(25);
-        doc.setFontSize(9);
-        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
-        doc.setTextColor(80, 80, 80);
-        yPosition = addText(`${labels.howDegreesDiffer} ${explanation.degreeContext}`, margin + 5, yPosition);
-        yPosition += 6;
-        doc.setTextColor(0, 0, 0);
-      }
-
-      // Key legal terms - cleaner formatting
-      if (explanation?.keyTerms && explanation.keyTerms.length > 0) {
-        checkPageBreak(30);
-        doc.setFontSize(10);
-        doc.setFont(FONT_NAME, 'bold');
-        doc.setTextColor(0, 0, 0);
-        doc.text(labels.keyTerms, margin + 5, yPosition);
-        yPosition += 8;
-
-        explanation.keyTerms.forEach((term) => {
-          checkPageBreak(25);
-          
-          // Term name on its own line
-          doc.setFontSize(10);
-          doc.setFont(FONT_NAME, 'bold');
-          doc.setTextColor(0, 0, 0);
-          doc.text(`${term.term}`, margin + 10, yPosition);
-          yPosition += 6;
-          
-          // Definition on next line, indented
-          doc.setFont(FONT_NAME, 'normal');
-          yPosition = addText(term.plainMeaning, margin + 15, yPosition);
-          yPosition += 4;
-
-          // Example on its own line
-          if (term.example) {
-            doc.setFontSize(9);
-            doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
-            doc.setTextColor(100, 100, 100);
-            yPosition = addText(`${labels.example} ${term.example}`, margin + 15, yPosition);
-            doc.setTextColor(0, 0, 0);
-            yPosition += 4;
-          }
-          yPosition += 2;
-        });
-      }
-
-      // Separator between charges
-      if (chargeIdx < guidance.chargeClassifications.length - 1) {
-        yPosition += 3;
-        doc.setDrawColor(200, 200, 200);
-        doc.line(margin, yPosition, pageWidth - margin, yPosition);
-        yPosition += 8;
-      }
-    });
-
-    // Disclaimer
-    checkPageBreak(25);
-    yPosition += 5;
-    doc.setFontSize(9);
-    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
-    doc.setTextColor(100, 100, 100);
-    yPosition = addText(
-      labels.chargeDisclaimer,
-      margin,
-      yPosition
-    );
-    doc.setTextColor(0, 0, 0);
-    yPosition += 10;
-  }
-
-  // Documents You Should Have — appears before What Matters Now, matching the web dashboard
-  const phase = mapCaseStageToPhase(caseData.caseStage);
-  const legalDocuments = getDocumentsForPhase(phase, 'criminal');
-  if (legalDocuments.length > 0) {
-    checkPageBreak(40);
-    doc.setFontSize(14);
-    doc.setFont(FONT_NAME, 'bold');
-    doc.setTextColor(0, 100, 200);
-    doc.text(labels.documentsYouNeed, margin, yPosition);
-    yPosition += 6;
-
-    doc.setFontSize(9);
-    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
-    doc.setTextColor(100, 100, 100);
-    yPosition = addText(labels.documentsSubtitle, margin, yPosition);
-    yPosition += 8;
-
-    const documentData = legalDocuments.map(legalDoc => [
-      getDocumentTitle(legalDoc.id, isSpanish),
-      getDocumentDescription(legalDoc.id, isSpanish)
-    ]);
-
-    autoTable(doc, {
-      startY: yPosition,
-      head: [[labels.documentName, labels.documentDescription]],
-      body: documentData,
-      theme: 'striped',
-      headStyles: { fillColor: [41, 128, 185] },
-      margin: { left: margin, right: margin },
-      styles: { fontSize: 9, font: FONT_NAME },
-      columnStyles: {
-        0: { cellWidth: 50 },
-        1: { cellWidth: 'auto' }
-      }
-    });
-
-    yPosition = (doc as any).lastAutoTable.finalY + 10;
   }
 
   // The shared practical plan is always available, even when there are no
@@ -986,6 +758,273 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     yPosition = (doc as any).lastAutoTable.finalY + 10;
   }
 
+  // Actions to Avoid — matches dashboard position (after Practice Q&A)
+  if (safe.avoidActions.length > 0) {
+    checkPageBreak(30);
+    doc.setFontSize(14);
+    doc.setFont(FONT_NAME, 'bold');
+    doc.setTextColor(200, 0, 0);
+    doc.text(actionLabels.avoidTitle, margin, yPosition);
+    yPosition += 8;
+
+    doc.setFontSize(10);
+    doc.setFont(FONT_NAME, 'normal');
+    doc.setTextColor(80, 80, 80);
+    yPosition = addText(actionLabels.avoidIntro, margin, yPosition);
+    yPosition += 4;
+    doc.setTextColor(0, 0, 0);
+
+    safe.avoidActions.forEach((action) => {
+      checkPageBreak();
+       yPosition = addText(`   - ${typeof action === 'string' ? action : String(action)}`, margin + 5, yPosition);
+      yPosition += 3;
+    });
+    yPosition += 5;
+  }
+
+  // Understanding Your Charges Section
+  if (guidance.chargeClassifications && guidance.chargeClassifications.length > 0) {
+    checkPageBreak(40);
+    doc.setFontSize(14);
+    doc.setFont(FONT_NAME, 'bold');
+    doc.setTextColor(0, 100, 200);
+    doc.text(labels.understandingCharges, margin, yPosition);
+    yPosition += 6;
+
+    doc.setFontSize(9);
+    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+    doc.setTextColor(100, 100, 100);
+    yPosition = addText(labels.chargesSubtitle, margin, yPosition);
+    yPosition += 8;
+
+    guidance.chargeClassifications.forEach((charge, chargeIdx) => {
+      checkPageBreak(50);
+      
+      // Charge header with classification
+      doc.setFontSize(11);
+      doc.setFont(FONT_NAME, 'bold');
+      doc.setTextColor(0, 0, 0);
+      const chargeHeader = `${formatChargeName(charge.name)} - ${charge.classification.toUpperCase()}`;
+      doc.text(chargeHeader, margin, yPosition);
+      yPosition += 8;
+
+      const resolvedCharge = resolveGuidanceCharge(charge, caseData.jurisdiction);
+      const isCalifornia = caseData.jurisdiction?.toUpperCase() === 'CA';
+      const explanation = isCalifornia && !resolvedCharge
+        ? undefined
+        : getChargeExplanation(
+            resolvedCharge?.name ?? charge.name,
+            caseData.jurisdiction,
+            language,
+            resolvedCharge?.id ?? charge.id,
+          );
+
+      if (caseData.jurisdiction?.toUpperCase() === 'CA' && !resolvedCharge) {
+        checkPageBreak(20);
+        doc.setFontSize(9);
+        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+        doc.setTextColor(180, 100, 0);
+        yPosition = addText(chargeReselectionWarningLocalized, margin + 5, yPosition);
+        doc.setTextColor(0, 0, 0);
+        yPosition += 6;
+      }
+      
+      doc.setFontSize(10);
+      doc.setFont(FONT_NAME, 'normal');
+      doc.setTextColor(0, 0, 0);
+
+      // Pending-review notice — driven by explanation.pendingAttorneyReview, an explicit
+      // per-entry flag. Distinct from dataConfidence: a sourced entry can have
+      // dataConfidence: 'high' and still be pending attorney review, so gating on
+      // dataConfidence alone would silently omit the warning for those three entries.
+      if (explanation?.pendingAttorneyReview === true) {
+        checkPageBreak(15);
+        doc.setFontSize(9);
+        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+        doc.setTextColor(180, 100, 0); // amber
+        yPosition = addText(
+          pendingReviewWarningLocalized,
+          margin + 5,
+          yPosition
+        );
+        doc.setTextColor(0, 0, 0);
+        yPosition += 6;
+      }
+
+      // Translation-draft notice — shown when the explanation was machine-translated
+      // and has not yet been reviewed by a fluent-speaker legal professional.
+      if (explanation?.untranslated === true || explanation?.translationDraft === true) {
+        checkPageBreak(15);
+        doc.setFontSize(9);
+        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+        doc.setTextColor(30, 80, 160); // blue to distinguish from amber attorney-review warning
+        yPosition = addText(
+          explanation.untranslated ? translationUnavailableNotice(language) : translationDraftWarningLocalized,
+          margin + 5,
+          yPosition
+        );
+        doc.setTextColor(0, 0, 0);
+        yPosition += 6;
+      }
+
+      if (explanation?.jurisdictionDetailMissing === true) {
+        checkPageBreak(18);
+        doc.setFontSize(9);
+        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+        doc.setTextColor(90, 90, 90);
+        yPosition = addText(jurisdictionCoverageWarningLocalized, margin + 5, yPosition);
+        doc.setTextColor(0, 0, 0);
+        yPosition += 6;
+      }
+
+      if (explanation?.plainSummary) {
+        yPosition = addText(explanation.plainSummary, margin + 5, yPosition);
+        if (explanation.untranslatedSupplement) {
+          yPosition += 4;
+          checkPageBreak(20);
+          doc.setFont(FONT_NAME, 'bold');
+          yPosition = addText(translationSupplementNotice(language), margin + 5, yPosition);
+          doc.setFont(FONT_NAME, 'normal');
+          yPosition += 3;
+          yPosition = addText(explanation.untranslatedSupplement.text, margin + 5, yPosition);
+        }
+        yPosition += 6;
+      } else {
+        // Fallback description based on classification
+        const fallback = isChinese ? '请与律师核实起诉文件中的指控类别和处罚。' : isSpanish
+          ? 'Confirme la clasificación y las sanciones en el documento de cargos con un abogado.'
+          : 'Confirm the classification and applicable penalties in the charging document with counsel.';
+        yPosition = addText(fallback, margin + 5, yPosition);
+        yPosition += 6;
+      }
+
+      // Jurisdiction-specific detail takes priority over the generic degree context when a
+      // shared/charge-explanation-jurisdiction-overlay.ts entry exists for this state.
+      if (explanation?.jurisdictionDetail) {
+        checkPageBreak(25);
+        doc.setFontSize(9);
+        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+        doc.setTextColor(80, 80, 80);
+        const jd = explanation.jurisdictionDetail;
+        const stateLabel = caseData.jurisdiction ? `In ${caseData.jurisdiction}:` : 'For this jurisdiction:';
+        if (jd.keyRule.trim() !== explanation.plainSummary?.trim()) {
+          yPosition = addText(`${stateLabel} ${jd.keyRule}`, margin + 5, yPosition);
+        }
+        yPosition += 4;
+        doc.setFontSize(8);
+        yPosition = addText(`Source: ${jd.citation}${jd.penaltyClass ? ` (${jd.penaltyClass})` : ''}`, margin + 5, yPosition);
+        yPosition += 6;
+        doc.setTextColor(0, 0, 0);
+      } else if (explanation?.degreeContext) {
+        checkPageBreak(25);
+        doc.setFontSize(9);
+        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+        doc.setTextColor(80, 80, 80);
+        yPosition = addText(`${labels.howDegreesDiffer} ${explanation.degreeContext}`, margin + 5, yPosition);
+        yPosition += 6;
+        doc.setTextColor(0, 0, 0);
+      }
+
+      // Key legal terms - cleaner formatting
+      if (explanation?.keyTerms && explanation.keyTerms.length > 0) {
+        checkPageBreak(30);
+        doc.setFontSize(10);
+        doc.setFont(FONT_NAME, 'bold');
+        doc.setTextColor(0, 0, 0);
+        doc.text(labels.keyTerms, margin + 5, yPosition);
+        yPosition += 8;
+
+        explanation.keyTerms.forEach((term) => {
+          checkPageBreak(25);
+          
+          // Term name on its own line
+          doc.setFontSize(10);
+          doc.setFont(FONT_NAME, 'bold');
+          doc.setTextColor(0, 0, 0);
+          doc.text(`${term.term}`, margin + 10, yPosition);
+          yPosition += 6;
+          
+          // Definition on next line, indented
+          doc.setFont(FONT_NAME, 'normal');
+          yPosition = addText(term.plainMeaning, margin + 15, yPosition);
+          yPosition += 4;
+
+          // Example on its own line
+          if (term.example) {
+            doc.setFontSize(9);
+            doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+            doc.setTextColor(100, 100, 100);
+            yPosition = addText(`${labels.example} ${term.example}`, margin + 15, yPosition);
+            doc.setTextColor(0, 0, 0);
+            yPosition += 4;
+          }
+          yPosition += 2;
+        });
+      }
+
+      // Separator between charges
+      if (chargeIdx < guidance.chargeClassifications.length - 1) {
+        yPosition += 3;
+        doc.setDrawColor(200, 200, 200);
+        doc.line(margin, yPosition, pageWidth - margin, yPosition);
+        yPosition += 8;
+      }
+    });
+
+    // Disclaimer
+    checkPageBreak(25);
+    yPosition += 5;
+    doc.setFontSize(9);
+    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+    doc.setTextColor(100, 100, 100);
+    yPosition = addText(
+      labels.chargeDisclaimer,
+      margin,
+      yPosition
+    );
+    doc.setTextColor(0, 0, 0);
+    yPosition += 10;
+  }
+
+  // Documents You Should Have — appears before What Matters Now, matching the web dashboard
+  const phase = knownCasePhase(caseData.caseStage);
+  const legalDocuments = phase ? getDocumentsForPhase(phase, 'criminal') : [];
+  if (legalDocuments.length > 0) {
+    checkPageBreak(40);
+    doc.setFontSize(14);
+    doc.setFont(FONT_NAME, 'bold');
+    doc.setTextColor(0, 100, 200);
+    doc.text(labels.documentsYouNeed, margin, yPosition);
+    yPosition += 6;
+
+    doc.setFontSize(9);
+    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+    doc.setTextColor(100, 100, 100);
+    yPosition = addText(labels.documentsSubtitle, margin, yPosition);
+    yPosition += 8;
+
+    const documentData = legalDocuments.map(legalDoc => [
+      getDocumentTitle(legalDoc.id, isSpanish),
+      getDocumentDescription(legalDoc.id, isSpanish)
+    ]);
+
+    autoTable(doc, {
+      startY: yPosition,
+      head: [[labels.documentName, labels.documentDescription]],
+      body: documentData,
+      theme: 'striped',
+      headStyles: { fillColor: [41, 128, 185] },
+      margin: { left: margin, right: margin },
+      styles: { fontSize: 9, font: FONT_NAME },
+      columnStyles: {
+        0: { cellWidth: 50 },
+        1: { cellWidth: 'auto' }
+      }
+    });
+
+    yPosition = (doc as any).lastAutoTable.finalY + 10;
+  }
+
   // Your Rights
   if (safe.rights.length > 0) {
     checkPageBreak(30);
@@ -1051,7 +1090,8 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
   }
 
   // Court Preparation & Warnings — combined section mirrors the dashboard UI
-  const hasCourt = safe.courtPreparation.length > 0;
+  const courtItems = safe.courtPreparation.length ? safe.courtPreparation : [reader.readerPrepareFallback];
+  const hasCourt = courtItems.length > 0;
   const hasWarn  = safe.warnings.length > 0;
   if (hasCourt || hasWarn) {
     checkPageBreak(30);
@@ -1085,12 +1125,22 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       yPosition += 3;
       doc.setFontSize(10);
       doc.setTextColor(0, 0, 0);
-      safe.courtPreparation.forEach((item) => {
+      courtItems.forEach((item) => {
         checkPageBreak();
          yPosition = addText(`   • ${typeof item === 'string' ? item : String(item)}`, margin + 5, yPosition);
         yPosition += 3;
       });
     }
+    yPosition += 5;
+  }
+
+  const questions = lawyerQuestions(language, !!guidance.chargeClassifications?.length, caseData.custodyStatus || '', caseData.selectedConcerns);
+  if (questions.length) {
+    checkPageBreak(24);
+    doc.setFont(FONT_NAME, 'bold');
+    yPosition = addText(reader.readerLawyerQuestions, margin, yPosition);
+    doc.setFont(FONT_NAME, 'normal');
+    for (const question of questions) yPosition = addText(question, margin + 5, yPosition);
     yPosition += 5;
   }
 
@@ -1141,8 +1191,8 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     doc.setTextColor(100, 100, 100);
     yPosition = addText(
       isSpanish
-        ? 'Estas consecuencias van más allá de la sentencia y a veces entran en vigor automáticamente. Informe a su abogado antes de cualquier declaración de culpabilidad.'
-        : 'These consequences go beyond the sentence itself and often take effect automatically, sometimes upon a guilty plea. Raise each one with your attorney before any plea decision.',
+        ? 'El momento y las circunstancias importan. Consulte estos posibles efectos con su abogado antes de declararse culpable.'
+        : 'Timing and circumstances matter. Discuss possible effects with counsel before a plea.',
       margin, yPosition
     );
     yPosition += 8;
@@ -1234,30 +1284,6 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       doc.setTextColor(0, 0, 0);
     });
     
-    yPosition += 5;
-  }
-
-  // Actions to Avoid — matches dashboard position (after Practice Q&A)
-  if (safe.avoidActions.length > 0) {
-    checkPageBreak(30);
-    doc.setFontSize(14);
-    doc.setFont(FONT_NAME, 'bold');
-    doc.setTextColor(200, 0, 0);
-    doc.text(actionLabels.avoidTitle, margin, yPosition);
-    yPosition += 8;
-
-    doc.setFontSize(10);
-    doc.setFont(FONT_NAME, 'normal');
-    doc.setTextColor(80, 80, 80);
-    yPosition = addText(actionLabels.avoidIntro, margin, yPosition);
-    yPosition += 4;
-    doc.setTextColor(0, 0, 0);
-
-    safe.avoidActions.forEach((action) => {
-      checkPageBreak();
-       yPosition = addText(`   - ${typeof action === 'string' ? action : String(action)}`, margin + 5, yPosition);
-      yPosition += 3;
-    });
     yPosition += 5;
   }
 

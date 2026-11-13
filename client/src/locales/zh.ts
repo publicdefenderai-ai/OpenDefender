@@ -1,3 +1,4 @@
+import { readerCopy } from "./guidance-reader";
 // Shared reviewed wording: compact summaries for cards/lists, full text for detailed sections.
 const reviewedRightsCopy = {
   "phoneDetail": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。",
@@ -38,6 +39,7 @@ export default {
     guidanceUrgencyGeneral: "优先级",
 
     guidanceRoadmapTitle: "案件路线图：{{jurisdiction}}",
+    ...readerCopy.zh,
     guidanceChargeTitle: "案件指引：{{name}}（{{jurisdiction}}）",
 
     guidanceSections: "指南章节",

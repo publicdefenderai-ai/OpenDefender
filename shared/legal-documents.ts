@@ -361,7 +361,7 @@ export function getDocumentBySlug(slug: string): LegalDocument | undefined {
   return LEGAL_DOCUMENTS.find(doc => doc.slug === slug);
 }
 
-export function mapCaseStageToPhase(caseStage: string): CasePhase {
+export function knownCasePhase(caseStage: string): CasePhase | undefined {
   const stageMap: Record<string, CasePhase> = {
     'just_arrested': 'just_arrested',
     'arrest': 'just_arrested',
@@ -375,7 +375,11 @@ export function mapCaseStageToPhase(caseStage: string): CasePhase {
     'appeal': 'post_conviction',
     'appeals': 'post_conviction',
   };
-  return stageMap[caseStage.toLowerCase()] || 'just_arrested';
+  return stageMap[caseStage.toLowerCase()];
+}
+
+export function mapCaseStageToPhase(caseStage: string): CasePhase {
+  return knownCasePhase(caseStage) ?? 'just_arrested';
 }
 
 export const PHASE_LABELS: Record<CasePhase, { en: string; es: string; zh: string }> = {

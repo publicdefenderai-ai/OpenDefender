@@ -13,9 +13,9 @@ export type GuidanceSectionId =
   | 'mockQA' | 'uncertainties' | 'resources';
 
 export const GUIDANCE_SECTION_ORDER: readonly GuidanceSectionId[] = [
-  'criticalAlerts', 'overview', 'charges', 'immediateActions', 'timeline',
-  'deadlines', 'rights', 'nextSteps', 'evidenceToGather', 'warnings',
-  'courtPreparation', 'collateralConsequences', 'mockQA', 'avoidActions',
+  'overview', 'criticalAlerts', 'immediateActions', 'timeline', 'deadlines',
+  'avoidActions', 'evidenceToGather', 'courtPreparation', 'charges', 'rights',
+  'warnings', 'collateralConsequences', 'mockQA', 'nextSteps',
   'uncertainties', 'resources',
 ] as const;
 
@@ -121,42 +121,16 @@ export interface GuidanceViewModel {
 const strings = (value: unknown): string[] => Array.isArray(value) ? value.filter((item): item is string => typeof item === 'string') : [];
 const items = <T>(value: unknown): T[] => Array.isArray(value) ? value as T[] : [];
 
-function comparisonText(value: string): string {
-  return value
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-    .replace(/[*_`#]/g, '')
-    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .toLocaleLowerCase();
-}
-
-function comparisonTokens(value: string): Set<string> {
-  return new Set(comparisonText(value).split(/\s+/).filter(token => token.length > 2));
-}
-
-function nearDuplicate(left: string, right: string): boolean {
-  const leftText = comparisonText(left);
-  const rightText = comparisonText(right);
-  if (!leftText || !rightText) return false;
-  if (leftText === rightText) return true;
-  if (leftText.length < 35 || rightText.length < 35) return false;
-
-  const leftTokens = comparisonTokens(left);
-  const rightTokens = comparisonTokens(right);
-  if (leftTokens.size < 5 || rightTokens.size < 5) return false;
-  const overlap = [...leftTokens].filter(token => rightTokens.has(token)).length;
-  const union = new Set([...leftTokens, ...rightTokens]).size;
-  const containment = overlap / Math.min(leftTokens.size, rightTokens.size);
-  const jaccard = overlap / union;
-  return overlap >= 5 && (containment >= 0.85 || jaccard >= 0.75);
+function sameText(left: string, right: string): boolean {
+  const normalize = (value: string) => value.trim().replace(/\s+/g, ' ');
+  return normalize(left) === normalize(right);
 }
 
 function uniqueStrings(values: string[]): string[] {
   const result: string[] = [];
   for (const value of values) {
     if (!value.trim()) continue;
-    if (!result.some(existing => nearDuplicate(existing, value))) {
+    if (!result.some(existing => sameText(existing, value))) {
       result.push(value);
     }
   }
@@ -164,7 +138,7 @@ function uniqueStrings(values: string[]): string[] {
 }
 
 /**
- * Remove only exact/near duplicates. Warnings and uncertainties can share a
+ * Remove only repeated text. Warnings and uncertainties can share a
  * broad subject while still describing different legal propositions, so both
  * surfaces must remain visible unless the text is materially the same.
  */
@@ -178,14 +152,14 @@ function dedupeWarningsAndUncertainties(
   for (const item of uncertainties) {
     if (!item.area.trim() && !item.note.trim()) continue;
     const duplicate = uniqueUncertainties.some(existing =>
-      nearDuplicate(`${existing.area}: ${existing.note}`, `${item.area}: ${item.note}`),
+      sameText(`${existing.area}: ${existing.note}`, `${item.area}: ${item.note}`),
     );
     if (!duplicate) uniqueUncertainties.push(item);
   }
 
   const retainedWarnings = uniqueWarnings.filter(warning => !uniqueUncertainties.some(item => {
     const uncertaintyText = `${item.area}: ${item.note}`;
-    return nearDuplicate(warning, uncertaintyText);
+    return sameText(warning, uncertaintyText);
   }));
 
   return { warnings: retainedWarnings, uncertainties: uniqueUncertainties };

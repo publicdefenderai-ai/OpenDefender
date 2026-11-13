@@ -20,7 +20,7 @@ export function summarizeIntakeStep(step: number, data: QAFormData, t: TFunction
     return [
       `${t(`${prefix}.status.caseStageLabel`)}: ${t(`${prefix}.status.stages.${data.caseStage}`)}`,
       `${t(`${prefix}.status.custodyLabel`)}: ${t(`${prefix}.status.custodyOptions.${custody[data.custodyStatus]}`)}`,
-      ...(data.hasAttorney === null ? [] : [`${t('chat.casePanel.attorney', 'Attorney')}: ${t(data.hasAttorney ? 'chat.casePanel.hasAttorney' : 'chat.casePanel.noAttorney')}`]),
+      ...(typeof data.hasAttorney !== 'boolean' ? [] : [`${t('chat.casePanel.attorney', 'Attorney')}: ${t(data.hasAttorney ? 'chat.casePanel.hasAttorney' : 'chat.casePanel.noAttorney')}`]),
     ];
   }
   if (step === 4) {

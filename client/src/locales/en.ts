@@ -1,3 +1,4 @@
+import { readerCopy } from "./guidance-reader";
 // Shared reviewed wording: compact summaries for cards/lists, full text for detailed sections.
 const reviewedRightsCopy = {
   "phoneDetail": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
@@ -38,6 +39,7 @@ export default {
     guidanceUrgencyGeneral: "Priority",
 
     guidanceRoadmapTitle: "Case Roadmap: {{jurisdiction}}",
+    ...readerCopy.en,
     guidanceChargeTitle: "Guidance: {{name}} in {{jurisdiction}}",
 
     guidanceSections: "Guide sections",

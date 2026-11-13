@@ -1,3 +1,4 @@
+import { lawyerQuestions, guidanceReaderCopy, counselCopyKey } from "../../locales/guidance-reader";
 import React from "react";
 import {
   GUIDANCE_SECTION_ORDER,
@@ -186,11 +187,11 @@ function sectionContent(section: GuidanceSectionId, guidance: GuidanceViewModel,
     case "warnings":
       return guidance.warnings.length ? list(guidance.warnings) : null;
     case "courtPreparation":
-      return guidance.courtPreparation.length ? <><p>{immediateActionLabels(language).courtNote}</p>{list(guidance.courtPreparation)}</> : null;
+      return guidance.courtPreparation.length ? <><p>{immediateActionLabels(language).courtNote}</p>{list(guidance.courtPreparation)}</> : <p>{guidanceReaderCopy(language).readerPrepareFallback}</p>;
     case "collateralConsequences":
       return guidance.collateralConsequences.length ? (
         <ul>{guidance.collateralConsequences.map((item, index) => (
-           <li key={index}><strong>{renderGuidanceRichText(item.consequence)}</strong> ({renderGuidanceRichText(item.timing)}): {renderGuidanceRichText(item.actionNote)}</li>
+           <li key={index}><strong>{item.category}: {renderGuidanceRichText(item.consequence)}</strong> ({renderGuidanceRichText(item.timing)}): {renderGuidanceRichText(item.actionNote)}</li>
         ))}</ul>
       ) : null;
     case "mockQA":
@@ -226,15 +227,19 @@ function sectionContent(section: GuidanceSectionId, guidance: GuidanceViewModel,
  * Print does not depend on interactive accordion state. It renders a fresh,
  * complete plan from the normalized model in the canonical section order.
  */
-export function GuidancePrintPlan({ guidance: raw, language = "en" }: { guidance: GuidanceViewModel; language?: string }) {
+export function GuidancePrintPlan({ guidance: raw, language = "en", chargeDetails }: { guidance: GuidanceViewModel; language?: string; chargeDetails?: React.ReactNode }) {
   const guidance = normalizeGuidance(raw);
-  const labels = sectionLabels(language);
+  const reader = guidanceReaderCopy(language);
+  const labels = { ...sectionLabels(language), courtPreparation: reader.readerPrepare, collateralConsequences: reader.readerConsequences };
+  const questions = lawyerQuestions(language, guidance.chargeClassifications.length > 0, guidance.caseData.custodyStatus, guidance.caseData.selectedConcerns);
   const printLabels = immediateActionLabels(language);
   return (
     <article className="hidden print:block guidance-print-plan" data-testid="print-guidance-plan">
       <header>
         <h1>{printLabels.title}</h1>
         <p>{guidance.caseData.jurisdiction}: {guidance.caseData.caseStage}</p>
+        <p><strong>{reader.readerAppearance}</strong> {reader.readerDateNote}</p>
+        <p>{reader[counselCopyKey(guidance.caseData.hasAttorney)]}</p>
       </header>
       {GUIDANCE_SECTION_ORDER.map(section => {
         const content = sectionContent(section, guidance, language);
@@ -242,10 +247,11 @@ export function GuidancePrintPlan({ guidance: raw, language = "en" }: { guidance
         return (
           <section key={section} data-guidance-section={section}>
             <h2>{labels[section]}</h2>
-            {content}
+            {section === "charges" && chargeDetails ? chargeDetails : content}
           </section>
         );
       })}
+      {questions.length > 0 && <section><h2>{reader.readerLawyerQuestions}</h2>{list(questions)}</section>}
       <footer>{printLabels.footer}</footer>
     </article>
   );

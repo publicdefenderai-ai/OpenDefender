@@ -154,3 +154,64 @@ for (const [language, title] of Object.entries({ en: 'Guidance: Example charge i
     await expect(page.getByTestId('guidance-dashboard').getByRole('heading', { level: 1 })).toHaveText(title);
   });
 }
+
+for (const hasAttorney of [true, false, null]) {
+  test(`reader preserves qualifications across web, printed pages and downloaded PDF (counsel: ${hasAttorney})`, async ({ page }, testInfo) => {
+    const { PDFParse } = await import('pdf-parse');
+    const known = hasAttorney !== null;
+    const charge = { id: 'ca-petty-theft', code: '484', name: 'Petty Theft', classification: 'misdemeanor' };
+    const plan = {
+      ...guidance,
+      caseData: { jurisdiction: 'CA', caseStage: known ? 'arrest' : 'unsure', custodyStatus: known ? 'released' : 'unsure', hasAttorney },
+      chargeClassifications: known ? [charge] : [],
+      mockQA: [{ question: 'Practice question fixture', suggestedResponse: 'Nested answer fixture', explanation: 'Attached qualification fixture' }],
+      collateralConsequences: [{ category: 'housing', consequence: 'Housing possibility fixture', timing: 'Only if condition applies', actionNote: 'Housing detail fixture' }],
+    };
+    await setup(page);
+    await page.route('**/api/criminal-charges?**', route => route.fulfill({ json: {
+      success: true, charges: [charge], count: 1, totalAvailable: 1,
+      pagination: { offset: 0, limit: 500, totalMatches: 1, snapshot: 'a'.repeat(64), nextOffset: null },
+    } }));
+    await page.route('**/api/legal-guidance/design-results', route => route.fulfill({ json: { success: true, guidance: plan } }));
+    await page.goto('/case-guidance?session=design-results');
+    const screen = page.getByTestId('guidance-dashboard');
+    const counsel = hasAttorney === null ? 'If you have a lawyer' : hasAttorney ? 'Your lawyer can go over' : 'Before court, you can ask';
+    const fragments = [plan.overview, ...plan.criticalAlerts, plan.deadlines[0].description, ...plan.avoidActions,
+      ...plan.courtPreparation, ...plan.evidenceToGather, ...plan.rights, ...plan.warnings, ...plan.nextSteps,
+      plan.uncertainties[0].note, ...Object.values(plan.mockQA[0]), plan.collateralConsequences[0].timing,
+      plan.collateralConsequences[0].actionNote, plan.resources[0].description, 'No confirmed hearing date', counsel];
+    if (known) fragments.push('Theft by trick', 'repeat-theft', 'Which release conditions apply', 'Which statute and classification');
+    await expect(screen.getByRole('heading', { name: 'Prepare for Court', exact: true })).toBeVisible();
+    if (!known) {
+      await expect(screen.getByText('Current', { exact: true })).toHaveCount(0);
+      await expect(screen.getByText('Documents you may receive', { exact: true })).toHaveCount(0);
+    }
+    await screen.getByTestId('button-toggle-dynamic-response-0').click();
+    for (const fragment of fragments) await expect(screen).toContainText(fragment);
+    await screen.getByTestId('button-toggle-dynamic-response-0').click();
+    await screen.getByTestId('collapsible-uncertainties').click();
+
+    async function verifyDocument(bytes: Buffer) {
+      const parser = new PDFParse({ data: new Uint8Array(bytes) });
+      try {
+        const document = (await parser.getText()).text.replace(/\s+/g, ' ');
+        for (const fragment of fragments) expect(document).toContain(fragment);
+      } finally {
+        await parser.destroy();
+      }
+    }
+
+    await page.emulateMedia({ media: 'print' });
+    await expect(screen).toBeHidden();
+    await verifyDocument(await page.pdf({ path: testInfo.outputPath('browser-print.pdf'), format: 'Letter' }));
+    await page.emulateMedia({ media: 'screen' });
+    await page.getByTestId('button-export-pdf').click();
+    const pending = page.waitForEvent('download');
+    await page.getByTestId('button-confirm-export').click();
+    const download = await pending;
+    const path = testInfo.outputPath('export.pdf');
+    await download.saveAs(path);
+    const { readFile } = await import('node:fs/promises');
+    await verifyDocument(await readFile(path));
+  });
+}

@@ -38,7 +38,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
 import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
-import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
+import { getDocumentsForPhase, knownCasePhase, type LegalDocument } from "@shared/legal-documents";
 import { normalizeGuidance } from "@shared/guidance-view-model";
 import { buildGuidanceChatSummary } from "@shared/guidance-chat-summary";
 
@@ -1029,17 +1029,17 @@ function ChatConversation() {
   const handleViewGuidance = useCallback(() => {
     if (!state.guidanceData) return;
     const data = normalizeGuidance(state.guidanceData, {
-      jurisdiction: state.caseInfo.stateName || state.caseInfo.state || 'Unknown',
-      charges: state.caseInfo.chargeNames?.join(', ') || 'Not specified',
-      caseStage: state.caseInfo.courtStage || 'Not specified',
-      custodyStatus: state.caseInfo.custodyStatus || 'Not specified',
-      hasAttorney: state.caseInfo.hasAttorney || false,
+      jurisdiction: state.caseInfo.stateName || state.caseInfo.state || undefined,
+      charges: state.caseInfo.chargeNames?.join(', ') || undefined,
+      caseStage: state.caseInfo.courtStage || undefined,
+      custodyStatus: state.caseInfo.custodyStatus || undefined,
+      ...(typeof state.caseInfo.hasAttorney === 'boolean' ? { hasAttorney: state.caseInfo.hasAttorney } : {}),
     });
     let formattedContent = buildGuidanceChatSummary(data, i18n.language);
     
     // Add Documents You Should Have section based on case stage
-    const casePhase = mapCaseStageToPhase(state.caseInfo.courtStage || 'just_arrested');
-    const relevantDocuments = getDocumentsForPhase(casePhase, 'criminal');
+    const casePhase = knownCasePhase(data.caseData.caseStage);
+    const relevantDocuments = casePhase ? getDocumentsForPhase(casePhase, 'criminal') : [];
     if (relevantDocuments.length > 0) {
       formattedContent += `\n\n**${t('documents.guidance.documentsSection.title', 'Documents You Should Have')}**\n`;
       formattedContent += `${t('documents.guidance.documentsSection.description', 'Based on your case stage, you should have received these important documents.')}\n`;
@@ -1122,11 +1122,11 @@ function ChatConversation() {
       
       // Format guidance data for the full PDF generator
       const enhancedGuidance = normalizeGuidance(state.guidanceData, {
-        jurisdiction: state.caseInfo.stateName || state.caseInfo.state || 'Unknown',
-        charges: state.caseInfo.chargeNames?.join(', ') || 'Not specified',
-        caseStage: state.caseInfo.courtStage || 'Not specified',
-        custodyStatus: state.caseInfo.custodyStatus || 'Not specified',
-        hasAttorney: state.caseInfo.hasAttorney || false,
+        jurisdiction: state.caseInfo.stateName || state.caseInfo.state || undefined,
+        charges: state.caseInfo.chargeNames?.join(', ') || undefined,
+        caseStage: state.caseInfo.courtStage || undefined,
+        custodyStatus: state.caseInfo.custodyStatus || undefined,
+        ...(typeof state.caseInfo.hasAttorney === 'boolean' ? { hasAttorney: state.caseInfo.hasAttorney } : {}),
       });
       
       await generateGuidancePDF(enhancedGuidance, i18n.language);
@@ -1159,7 +1159,7 @@ function ChatConversation() {
         charges: state.caseInfo.charges,
         caseStage: state.caseInfo.courtStage,
         custodyStatus: state.caseInfo.custodyStatus,
-        hasAttorney: false,
+        hasAttorney: state.caseInfo.hasAttorney,
         incidentDescription: '',
         selectedConcerns: state.caseInfo.selectedConcerns || [],
         language: i18n.language,

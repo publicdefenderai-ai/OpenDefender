@@ -71,7 +71,7 @@ vi.mock('@shared/charge-explanations', () => ({
 
 vi.mock('@shared/legal-documents', () => ({
   getDocumentsForPhase: vi.fn().mockReturnValue([]),
-  mapCaseStageToPhase: vi.fn().mockReturnValue('arrest'),
+  knownCasePhase: vi.fn().mockReturnValue('arrest'),
 }));
 
 // ── DOM globals required by the PDF download path ────────────────────────────
