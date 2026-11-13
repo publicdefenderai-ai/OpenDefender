@@ -1,3 +1,4 @@
+import { answeredBoolean } from "../shared/guidance-answers";
 import { parseChargePagination, paginateCharges } from "./charge-pagination";
 import type { Express, Request, Response, NextFunction } from "express";
 import { CLAUDE_MODEL_SONNET_DISPLAY_NAME } from "./config/ai-model";
@@ -77,7 +78,7 @@ function guidanceCaseData(caseData: any) {
     charges: Array.isArray(caseData.charges) ? caseData.charges.join(', ') : String(caseData.charges ?? ''),
     caseStage: String(caseData.caseStage ?? ''),
     custodyStatus: String(caseData.custodyStatus ?? ''),
-    hasAttorney: Boolean(caseData.hasAttorney),
+    hasAttorney: answeredBoolean(caseData.hasAttorney),
     selectedConcerns: Array.isArray(caseData.selectedConcerns) ? caseData.selectedConcerns : undefined,
     schoolZoneStatus: caseData.schoolZoneStatus,
   };
@@ -1907,12 +1908,7 @@ export async function registerRoutes(
       const guidanceInput = {
         ...validatedData,
         charges: resolvedChargeInput.ids,
-        // Normalise blank caseStage (screener export before stage selection) to a safe
-        // default so neither the rules engine nor Claude receives an empty string.
-        caseStage: validatedData.caseStage || 'arrest',
-        // Signal to buildUserPrompt that the stage was not explicitly chosen — lets
-        // Claude avoid fabricating stage-specific deadlines.
-        caseStageWasBlank: !validatedData.caseStage,
+        caseStage: validatedData.caseStage.trim() || 'unsure',
         chargesUnknown: req.body.chargesUnknown === true || resolvedChargeInput.hasUnresolved,
         ...extractBackgroundFlags(req.body),
       };
@@ -2015,12 +2011,7 @@ export async function registerRoutes(
       const caseDataWithFlags = {
         ...validatedData,
         charges: resolvedChargeInput.ids,
-        // Normalise blank caseStage (screener export before stage selection) to a safe
-        // default so neither the rules engine nor Claude receives an empty string.
-        caseStage: validatedData.caseStage || 'arrest',
-        // Signal to buildUserPrompt that the stage was not explicitly chosen — lets
-        // Claude avoid fabricating stage-specific deadlines.
-        caseStageWasBlank: !validatedData.caseStage,
+        caseStage: validatedData.caseStage.trim() || 'unsure',
         chargesUnknown: req.body.chargesUnknown === true || resolvedChargeInput.hasUnresolved,
         ...extractBackgroundFlags(req.body),
       };
@@ -2155,12 +2146,7 @@ export async function registerRoutes(
       const caseDataWithFlags = {
         ...validatedData,
         charges: resolvedChargeInput.ids,
-        // Normalise blank caseStage (screener export before stage selection) to a safe
-        // default so neither the rules engine nor Claude receives an empty string.
-        caseStage: validatedData.caseStage || 'arrest',
-        // Signal to buildUserPrompt that the stage was not explicitly chosen — lets
-        // Claude avoid fabricating stage-specific deadlines.
-        caseStageWasBlank: !validatedData.caseStage,
+        caseStage: validatedData.caseStage.trim() || 'unsure',
         chargesUnknown: req.body.chargesUnknown === true || resolvedChargeInput.hasUnresolved,
         ...extractBackgroundFlags(req.body),
       };

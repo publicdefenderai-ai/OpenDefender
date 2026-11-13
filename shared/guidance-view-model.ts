@@ -1,3 +1,4 @@
+import { answeredBoolean } from "./guidance-answers";
 /**
  * The portable case-plan contract.  Every surface that shows a case plan
  * (roadmap, chat, PDF, and browser print) receives this normalized shape.
@@ -93,7 +94,7 @@ export interface GuidanceViewModel {
   mockQA: MockQAItem[];
   collateralConsequences: CollateralConsequence[];
   uncertainties: GuidanceUncertainty[];
-  caseData: { jurisdiction: string; charges: string; caseStage: string; custodyStatus: string; hasAttorney: boolean; selectedConcerns?: string[] };
+  caseData: { jurisdiction: string; charges: string; caseStage: string; custodyStatus: string; hasAttorney: boolean | null; selectedConcerns?: string[] };
   // Retain optional renderer metadata without allowing the core plan to drift.
   validation?: {
     confidenceScore: number;
@@ -241,7 +242,7 @@ export function normalizeGuidance(raw: unknown, caseDataOverride?: Partial<Guida
       charges: String(caseDataOverride?.charges ?? sourceCase.charges ?? ''),
       caseStage: String(caseDataOverride?.caseStage ?? sourceCase.caseStage ?? ''),
       custodyStatus: String(caseDataOverride?.custodyStatus ?? sourceCase.custodyStatus ?? ''),
-      hasAttorney: Boolean(caseDataOverride?.hasAttorney ?? sourceCase.hasAttorney),
+      hasAttorney: answeredBoolean(caseDataOverride && 'hasAttorney' in caseDataOverride ? caseDataOverride.hasAttorney : sourceCase.hasAttorney),
       selectedConcerns: caseDataOverride?.selectedConcerns ?? sourceCase.selectedConcerns,
     },
     validation: value.validation,

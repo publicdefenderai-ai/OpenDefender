@@ -1,3 +1,4 @@
+import { isUnknownStage } from "../../shared/guidance-answers";
 // Claude AI-Powered Legal Guidance Service
 // Using direct Anthropic API with user-provided API key
 import Anthropic from '@anthropic-ai/sdk';
@@ -96,7 +97,7 @@ interface CaseDetails {
    *  by the user, preventing it from fabricating stage-specific deadlines. */
   caseStageWasBlank?: boolean;
   custodyStatus: string;
-  hasAttorney: boolean;
+  hasAttorney?: boolean | null;
   selectedConcerns?: string[];
   civilUrgency?: Record<string, 'none' | 'active' | 'emergency'>;
   language?: string;
@@ -648,13 +649,9 @@ function buildUserPrompt(caseDetails: CaseDetails, locusContext?: string | null)
   // Detect drug-related charges to surface treatment enrollment guidance
   const isDrugCase = !chargesUnknown && /drug|narcotic|controlled.?substance|marijuana|cannabis|cocaine|methamphetamine|heroin|fentanyl|opioid|possession.{0,20}substance/i.test(chargesText);
 
-  // caseStageWasBlank is set by the route handler when the incoming request had a
-  // blank/missing caseStage (screener export before the user selected a stage).
-  // The route normalises the value to 'arrest' before passing it here, so we cannot
-  // detect the blank from caseStage alone — the flag is the authoritative signal.
-  const caseStageWasBlank = caseDetails.caseStageWasBlank === true;
-  const caseStageDisplay = caseStageWasBlank
-    ? 'Not specified (defaulted to arrest stage for rules-engine purposes)'
+  const stageUnknown = caseDetails.caseStageWasBlank === true || isUnknownStage(caseDetails.caseStage);
+  const caseStageDisplay = stageUnknown
+    ? 'Not specified'
     : sanitizeInput(caseDetails.caseStage, 100);
 
   let prompt = `Provide general legal information for someone in this situation. Do not treat this as a case analysis — treat it as orientation for a person at this charge type, jurisdiction, and case stage:
@@ -663,8 +660,9 @@ BASIC CASE INFORMATION:
 - Jurisdiction: ${sanitizeInput(caseDetails.jurisdiction, 100)}
 - Charges: ${chargesText}
 - Case Stage: ${caseStageDisplay}
-- In Custody: ${sanitizeInput(caseDetails.custodyStatus, 100)}
-- Has Attorney: ${caseDetails.hasAttorney ? 'Yes' : 'No'}${caseStageWasBlank ? `
+- In Custody: ${sanitizeInput(caseDetails.custodyStatus, 100) || 'Not specified'}
+- Has Attorney: ${caseDetails.hasAttorney === true ? 'Yes' : caseDetails.hasAttorney === false ? 'No' : 'Not specified'}
+Treat unanswered fields as unknown; do not infer representation, stage, or urgency from another selection.${stageUnknown ? `
 
 CASE STAGE UNKNOWN — DEADLINES OVERRIDE:
 The user exported guidance before selecting a case stage. Despite the system prompt's general instruction to populate the deadlines array, you MUST follow this override instead:
@@ -677,23 +675,23 @@ The user exported guidance before selecting a case stage. Despite the system pro
 
   // Background context for collateral consequences
   const backgroundLines: string[] = [];
-  if (caseDetails.supervisionStatus && caseDetails.supervisionStatus !== 'none') {
+  if (['probation', 'parole', 'both'].includes(caseDetails.supervisionStatus ?? '')) {
     backgroundLines.push(`Supervision status: ${caseDetails.supervisionStatus}`);
   }
-  if (caseDetails.priorConvictions === true) {
-    backgroundLines.push('Prior convictions: Yes');
+  if (typeof caseDetails.priorConvictions === 'boolean') {
+    backgroundLines.push(`Prior convictions: ${caseDetails.priorConvictions ? 'Yes' : 'No'}`);
   }
-  if (caseDetails.citizenshipStatus && caseDetails.citizenshipStatus !== 'prefer_not') {
+  if (caseDetails.citizenshipStatus === 'citizen' || caseDetails.citizenshipStatus === 'non_citizen') {
     backgroundLines.push(`Citizenship/immigration status: ${caseDetails.citizenshipStatus === 'non_citizen' ? 'Non-citizen (has immigration status to protect)' : 'U.S. citizen'}`);
   }
-  if (caseDetails.hasMinorChildren === true) {
-    backgroundLines.push('Has minor children in care: Yes');
+  if (typeof caseDetails.hasMinorChildren === 'boolean') {
+    backgroundLines.push(`Has minor children in care: ${caseDetails.hasMinorChildren ? 'Yes' : 'No'}`);
   }
-  if (caseDetails.hasProfessionalLicense === true) {
-    backgroundLines.push('Holds a professional license: Yes');
+  if (typeof caseDetails.hasProfessionalLicense === 'boolean') {
+    backgroundLines.push(`Holds a professional license: ${caseDetails.hasProfessionalLicense ? 'Yes' : 'No'}`);
   }
-  if (caseDetails.hasHousingAssistance === true) {
-    backgroundLines.push('In public or subsidized housing: Yes');
+  if (typeof caseDetails.hasHousingAssistance === 'boolean') {
+    backgroundLines.push(`In public or subsidized housing: ${caseDetails.hasHousingAssistance ? 'Yes' : 'No'}`);
   }
   if (backgroundLines.length > 0) {
     prompt += `\n\nBACKGROUND / COLLATERAL RISK CONTEXT (use to populate collateralConsequences field — only flag risks that are genuinely likely given these background facts and the charges above):\n${backgroundLines.join('\n')}`;
@@ -797,6 +795,8 @@ function generateCacheKey(caseDetails: CaseDetails): string {
     jurisdiction: caseDetails.jurisdiction,
     charges: caseDetails.charges,
     caseStage: caseDetails.caseStage,
+    caseStageWasBlank: caseDetails.caseStageWasBlank,
+    chargesUnknown: caseDetails.chargesUnknown,
     custodyStatus: caseDetails.custodyStatus,
     hasAttorney: caseDetails.hasAttorney,
     selectedConcerns: caseDetails.selectedConcerns,

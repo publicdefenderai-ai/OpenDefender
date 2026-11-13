@@ -111,7 +111,7 @@ describe('normalized guidance surface parity', () => {
     }
     expect(normalized.caseData).toEqual({
       jurisdiction: '', charges: '', caseStage: '', custodyStatus: '',
-      hasAttorney: false, selectedConcerns: undefined,
+      hasAttorney: null, selectedConcerns: undefined,
     });
   });
 

@@ -50,7 +50,7 @@ interface CaseDetails {
    *  can inject the unknown-stage deadlines override for Claude. Not PII — pass through. */
   caseStageWasBlank?: boolean;
   custodyStatus: string;
-  hasAttorney: boolean;
+  hasAttorney?: boolean | null;
   arrestDate?: string;
   arrestLocation?: string;
   incidentDescription?: string;
