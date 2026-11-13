@@ -1,0 +1,266 @@
+[
+  {
+    "id": "oh-orc-2927-01-family-sensibilities",
+    "section": "2927.01",
+    "scope": "A",
+    "code": "2927.01(A)",
+    "statutoryName": "Abuse of a corpse",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Except as authorized by law, treating a human corpse in a way the person knows would outrage reasonable family sensibilities.",
+    "gradeSummary": "M2.",
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2927-01-community-sensibilities",
+    "section": "2927.01",
+    "scope": "B",
+    "code": "2927.01(B)",
+    "statutoryName": "Gross abuse of a corpse",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Except as authorized by law, treating a human corpse in a way that would outrage reasonable community sensibilities.",
+    "gradeSummary": "F5.",
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2927-03-housing-participant",
+    "section": "2927.03",
+    "scope": "A(1)",
+    "code": "2927.03(A)(1)",
+    "statutoryName": "Injure, intimidate, or interfere with fair housing rights",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Willfully using force or a threat of force to injure, intimidate or interfere with someone, or attempting to do so, because of the person’s race, color, religion, sex, familial status, national origin, military status, disability or ancestry and because the person engaged in a housing activity or related service listed in (A)(1). The provision applies whether or not the person acts under color of law.",
+    "gradeSummary": "M1.",
+    "dependencies": [
+      "4112.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2927-03-equal-housing-opportunity",
+    "section": "2927.03",
+    "scope": "A(2)",
+    "code": "2927.03(A)(2)",
+    "statutoryName": "Injure, intimidate, or interfere with fair housing rights",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [
+      "A(1)"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Willfully using force or a threat of force to injure, intimidate or interfere with someone, or attempting to do so, because someone participated without the listed forms of discrimination in a covered housing activity or afforded others that opportunity or protection, or to intimidate people from doing so. The provision applies whether or not the person acts under color of law.",
+    "gradeSummary": "M1.",
+    "dependencies": [
+      "4112.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2927-03-assistance-or-peaceful-advocacy",
+    "section": "2927.03",
+    "scope": "A(3)",
+    "code": "2927.03(A)(3)",
+    "statutoryName": "Injure, intimidate, or interfere with fair housing rights",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [
+      "A(1)"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Willfully using force or a threat of force to injure, intimidate or interfere with someone, or attempting to do so, because someone lawfully aided or encouraged nondiscriminatory participation in a covered housing activity, or lawfully used speech or peaceful assembly to oppose denial of that opportunity, or to discourage anyone from doing so. The provision applies whether or not the person acts under color of law.",
+    "gradeSummary": "M1.",
+    "dependencies": [
+      "4112.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2927-11-public-monument",
+    "section": "2927.11",
+    "scope": "A(2)",
+    "code": "2927.11(A)(2)",
+    "statutoryName": "Desecration",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Purposely defacing, damaging, polluting or otherwise physically mistreating a public monument without privilege to do so.",
+    "gradeSummary": "M2.",
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2927-11-historical-property",
+    "section": "2927.11",
+    "scope": "A(3)",
+    "code": "2927.11(A)(3)",
+    "statutoryName": "Desecration",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Purposely defacing, damaging, polluting or otherwise physically mistreating a historical or commemorative marker, or a structure, Indian mound or earthwork, cemetery, thing or site of great historical or archaeological interest without privilege to do so.",
+    "gradeSummary": "M2.",
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2927-11-place-of-worship",
+    "section": "2927.11",
+    "scope": "A(4)",
+    "code": "2927.11(A)(4)",
+    "statutoryName": "Desecration",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(4)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F5",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Purposely defacing, damaging, polluting or otherwise physically mistreating a place of worship, its furnishings, or religious artifacts or sacred texts in that place or on its grounds without privilege to do so.",
+    "gradeSummary": "F5 ordinarily, with a fine of up to $2,500 in addition to the ordinary F5 penalties. If the value of the property or the amount of physical harm is at least $5,000 but below $100,000, the grade is F4; at $100,000 or more it is F3.",
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2927-11-art-or-museum-piece",
+    "section": "2927.11",
+    "scope": "A(5)",
+    "code": "2927.11(A)(5)",
+    "statutoryName": "Desecration",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(5)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Purposely defacing, damaging, polluting or otherwise physically mistreating a work of art or museum piece without privilege to do so.",
+    "gradeSummary": "M2.",
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2927-11-object-of-reverence",
+    "section": "2927.11",
+    "scope": "A(6)",
+    "code": "2927.11(A)(6)",
+    "statutoryName": "Desecration",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(6)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Purposely defacing, damaging, polluting or otherwise physically mistreating another object of reverence or sacred devotion without privilege to do so.",
+    "gradeSummary": "M2.",
+    "dependencies": [],
+    "extraGrading": []
+  }
+]

@@ -2,6 +2,7 @@ import { FLORIDA_LEGACY_REMAINING } from "./florida-legacy-remaining";
 import { FLORIDA_LEGACY_SEXUAL } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
 import { OHIO_LIQUOR_ID_BATCH } from "./ohio-liquor-id-batch";
+import { OHIO_CIVIL_RIGHTS_BATCH } from "./ohio-civil-rights-batch";
 import { OHIO_ANIMAL_PROTECTION_BATCH } from "./ohio-animal-protection-batch";
 import { OHIO_TOOLS_TRANSACTIONS_BATCH } from "./ohio-tools-transactions-batch";
 import { OHIO_DANGEROUS_DRIVING_BATCH } from "./ohio-dangerous-driving-batch";
@@ -25,6 +26,7 @@ import { OHIO_RESIDUAL_BATCH } from "./ohio-residual-batch";
 import { FLORIDA_PERSONS_BATCH } from "./florida-persons-batch";
 import { FLORIDA_ROBBERY_BATCH } from "./florida-robbery-batch";
 import { FLORIDA_FALSE_REPORTS_BATCH } from "./florida-false-reports-batch";
+import { FLORIDA_FORGED_INSTRUMENTS_BATCH } from "./florida-forged-instruments-batch";
 import { FLORIDA_ROAD_RACING_BATCH } from "./florida-road-racing-batch";
 import { FLORIDA_COURT_OFFICIALS_BATCH } from "./florida-court-officials-batch";
 import { FLORIDA_JUSTICE_BATCH } from "./florida-justice-batch";
@@ -69,7 +71,7 @@ export interface ChargeTranslationEntry {
 
 export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEntry> = {
   ...FLORIDA_REVIEWED_BATCH.translations,
-  ...FLORIDA_PERSONS_BATCH.translations, ...FLORIDA_ROBBERY_BATCH.translations, ...FLORIDA_FALSE_REPORTS_BATCH.translations, ...FLORIDA_ROAD_RACING_BATCH.translations, ...FLORIDA_COURT_OFFICIALS_BATCH.translations, ...FLORIDA_JUSTICE_BATCH.translations, ...FLORIDA_CREDIT_CARD_BATCH.translations, ...FLORIDA_RESTRAINT_BATCH.translations, ...FLORIDA_CRASH_FLIGHT_BATCH.translations,
+  ...FLORIDA_PERSONS_BATCH.translations, ...FLORIDA_ROBBERY_BATCH.translations, ...FLORIDA_FALSE_REPORTS_BATCH.translations, ...FLORIDA_FORGED_INSTRUMENTS_BATCH.translations, ...FLORIDA_ROAD_RACING_BATCH.translations, ...FLORIDA_COURT_OFFICIALS_BATCH.translations, ...FLORIDA_JUSTICE_BATCH.translations, ...FLORIDA_CREDIT_CARD_BATCH.translations, ...FLORIDA_RESTRAINT_BATCH.translations, ...FLORIDA_CRASH_FLIGHT_BATCH.translations,
   ...FLORIDA_LEGACY_PROPERTY.translations,
   ...FLORIDA_LEGACY_SEXUAL.translations,
   ...FLORIDA_LEGACY_REMAINING.translations,
@@ -83,6 +85,7 @@ export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEn
   ...OHIO_BENEFITS_FRAUD_BATCH.translations,
   ...OHIO_JUSTICE_BATCH.translations,
   ...OHIO_LIQUOR_ID_BATCH.translations,
+  ...OHIO_CIVIL_RIGHTS_BATCH.translations,
   ...OHIO_ANIMAL_PROTECTION_BATCH.translations,
   ...OHIO_TOOLS_TRANSACTIONS_BATCH.translations,
   ...OHIO_DANGEROUS_DRIVING_BATCH.translations,
