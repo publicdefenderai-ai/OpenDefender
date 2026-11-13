@@ -5,12 +5,12 @@ import { readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const REQUIRED = ["ohio-tools-transactions-refresh-receipt.json", "ohio-dangerous-driving-refresh-receipt.json", "ohio-crash-identity-refresh-receipt.json", "ohio-driving-license-refresh-receipt.json", "ohio-gambling-refresh-receipt.json", "ohio-weapons-location-refresh-receipt.json", "ohio-drug-remainder-refresh-receipt.json", "ohio-drug-conduct-refresh-receipt.json", "ohio-commercial-sex-refresh-receipt.json", "ohio-priority-gaps-refresh-receipt.json", "ohio-privacy-refresh-receipt.json", "ohio-protection-refresh-receipt.json", "ohio-family-refresh-receipt.json", "ohio-public-peace-refresh-receipt.json", "ohio-custody-refresh-receipt.json", "ohio-justice-refresh-receipt.json", "ohio-benefits-fraud-refresh-receipt.json", "ohio-theft-fraud-refresh-receipt.json", "florida-road-racing-refresh-receipt.json", "florida-court-officials-refresh-receipt.json", "florida-justice-refresh-receipt.json", "florida-persons-refresh-receipt.json", "florida-robbery-refresh-receipt.json", "florida-credit-card-refresh-receipt.json", "florida-restraint-refresh-receipt.json", "florida-crash-flight-refresh-receipt.json", "ohio-residual-refresh-receipt.json", "ohio-major-refresh-receipt.json", "california-archive-refresh-receipt.json", "ohio-chapter-2903-refresh-receipt.json", "ohio-reviewed-refresh-receipt.json", "florida-reviewed-refresh-receipt.json"];
+import { requiredReceipts } from "./data-review/publication-batches.mjs";
 export function checkStatutoryReceipts(root = process.cwd(), now = new Date()) {
   if (!Number.isFinite(now.getTime())) throw new Error("Invalid check time");
   const directory = resolve(root, "scripts/data-review/output");
   // Explicit required receipts catch deletion; discovery covers future receipts too.
-  const names = [...new Set([...REQUIRED, ...readdirSync(directory).filter(name => name.endsWith("-refresh-receipt.json"))])].sort();
+  const names = [...new Set([...requiredReceipts, ...readdirSync(directory).filter(name => name.endsWith("-refresh-receipt.json"))])].sort();
   const receipts = names.map(name => {
     try {
       const receipt = JSON.parse(readFileSync(resolve(directory, name), "utf8"));

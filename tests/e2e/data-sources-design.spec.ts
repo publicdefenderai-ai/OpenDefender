@@ -1,7 +1,10 @@
 import { test, expect } from '@playwright/test';
 // Captured from the published page at 51914041, before this layout change.
 import published from '../fixtures/data-sources-published';
-import { DATA_SOURCE_FACTS as F } from '../../shared/data-source-facts';
+import { tsImport } from 'tsx/esm/api';
+// The catalog contains TypeScript and JSON imports. Load it with the same
+// Node loader used for the build-time counts, outside the browser bundle.
+const { DATA_SOURCE_FACTS: F } = await tsImport('../../shared/data-source-facts.ts', import.meta.url) as typeof import('../../shared/data-source-facts');
 // Expected coverage comes from maintained facts, not a historical publication count.
 const coverageFacts = {
   federalStatutes: ['federal-statutes', [F.federalStatutes]],
