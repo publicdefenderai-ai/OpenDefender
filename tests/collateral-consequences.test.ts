@@ -50,16 +50,11 @@ const US_JURISDICTIONS = [
 function computeChargeRiskIds(
   chargeType: string | null,
   chargeTypeSelected: boolean,
-): Array<'driverLicense' | 'sexOffender'> {
+): Array<'driverLicense' | 'driverLicenseCheck' | 'sexOffender'> {
   if (!chargeTypeSelected) return [];
-  const result: Array<'driverLicense' | 'sexOffender'> = [];
-  if (
-    chargeType === 'dui' ||
-    chargeType === 'drug_possession' ||
-    chargeType === 'drug_trafficking'
-  ) {
-    result.push('driverLicense');
-  }
+  const result: Array<'driverLicense' | 'driverLicenseCheck' | 'sexOffender'> = [];
+  if (chargeType === 'dui') result.push('driverLicense');
+  if (chargeType === 'drug_possession' || chargeType === 'drug_trafficking') result.push('driverLicenseCheck');
   if (chargeType === 'sex_offense') {
     result.push('sexOffender');
   }
@@ -303,14 +298,14 @@ describe('chargeRisks filter logic (screener)', () => {
     expect(ids).toEqual(['driverLicense']);
   });
 
-  it('drug_possession → driverLicense card only', () => {
+  it('drug_possession → driverLicenseCheck card only', () => {
     const ids = computeChargeRiskIds('drug_possession', true);
-    expect(ids).toEqual(['driverLicense']);
+    expect(ids).toEqual(['driverLicenseCheck']);
   });
 
-  it('drug_trafficking → driverLicense card only', () => {
+  it('drug_trafficking → driverLicenseCheck card only', () => {
     const ids = computeChargeRiskIds('drug_trafficking', true);
-    expect(ids).toEqual(['driverLicense']);
+    expect(ids).toEqual(['driverLicenseCheck']);
   });
 
   it('sex_offense → sexOffender card only', () => {

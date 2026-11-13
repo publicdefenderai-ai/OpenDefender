@@ -70,7 +70,7 @@ const COURT_LOOKUPS: Record<string, { url: string; name: string; note?: string }
   WI: { url: "https://wcca.wicourts.gov/", name: "Wisconsin Circuit Court Access" },
   WY: { url: "https://www.courts.state.wy.us/", name: "Wyoming Courts" },
   DC: { url: "https://www.dccourts.gov/", name: "DC Courts" },
-  FED: { url: "https://www.courtlistener.com/", name: "Federal Courts via CourtListener (free)", note: "PACER (pacer.gov) has full federal records but charges per page. CourtListener is free for most documents." },
+  FED: { url: "https://www.courtlistener.com/", name: "Federal Courts via CourtListener (free)", note: "CourtListener’s RECAP archive has free copies of some federal filings. PACER provides access to public federal court records and may charge fees. A missing search result does not rule out a case." },
 };
 
 const US_STATES_LOOKUP = [
@@ -175,20 +175,20 @@ export default function FamilyToolkit() {
   // Certified mail items
   const mailItems = {
     thisWeek: [
-      { id: "usps", label: "USPS Mail Forwarding", detail: "Submit a change-of-address request at usps.com or your local post office so that mail is forwarded to a caretaker address." },
+      { id: "usps", label: "USPS Mail Forwarding", detail: "The addressee or an authorized representative can request forwarding. USPS may require identification and proof of authority." },
       { id: "ssa", label: "Social Security Administration", detail: "Notify SSA of the change in circumstances if the person receives SSI, SSDI, or other SSA benefits. Benefits may be suspended but can be reinstated." },
-      { id: "snap", label: "SNAP/Food Assistance Office", detail: "Notify your local SNAP office. Benefits are typically suspended during incarceration and can be reinstated after release." },
-      { id: "bank", label: "Bank or Credit Union", detail: "Notify the bank of a change-of-address for statements and correspondence. Confirm direct deposit arrangements." },
+      { id: "snap", label: "SNAP/Food Assistance Office", detail: "Notify your local SNAP office. Report changes in household membership. Other eligible household members may continue receiving SNAP; ask how to update the case after release." },
+      { id: "bank", label: "Bank or Credit Union", detail: "The account holder or a representative authorized by the bank can update the mailing address. Confirm who may make changes before acting." },
     ],
     beforeCourt: [
-      { id: "bail_receipt", label: "Bail or Bond Documentation", detail: "Keep certified copies of any bail payment receipts, bond agreements, or release conditions. File one copy with the attorney." },
-      { id: "attorney_confirm", label: "Attorney Retainer Confirmation", detail: "If you hired a private attorney, keep a certified copy of the retainer agreement and confirmation of representation." },
-      { id: "employer", label: "Employer Notification (if needed)", detail: "If the person will miss work, written notification of the situation (without oversharing legal details) should be sent via certified mail to HR or a supervisor." },
+      { id: "bail_receipt", label: "Bail or Bond Documentation", detail: "Keep copies of bail receipts, bond agreements and release conditions. Ask the recipient if a certified copy is needed." },
+      { id: "attorney_confirm", label: "Attorney Retainer Confirmation", detail: "If you hired a private attorney, keep a copy of the signed retainer agreement and confirmation of representation." },
+      { id: "employer", label: "Employer Notification (if needed)", detail: "If the person will miss work, written notification of the situation (without oversharing legal details) can be provided through the employer’s usual reporting channel. Keep confirmation." },
     ],
     ongoing: [
-      { id: "probation", label: "Probation or Parole Officer", detail: "Any written correspondence with a probation or parole officer should be sent certified mail to create a record of receipt." },
-      { id: "court_notices", label: "Court Notices and Filings", detail: "Keep certified copies of all documents filed with the court, especially motions, orders, and hearing notices." },
-      { id: "benefits_renewal", label: "Benefits Renewal Notices", detail: "SNAP, Medicaid, and other benefits require periodic renewal. Send renewal notices certified mail to ensure they are received." },
+      { id: "probation", label: "Probation or Parole Officer", detail: "Follow the reporting method and deadline in the supervision conditions. If mail is accepted, certified mail with a return receipt can help document delivery." },
+      { id: "court_notices", label: "Court Notices and Filings", detail: "Keep your filed copies and filing confirmations. If a recipient requires a certified court order, request it from the clerk." },
+      { id: "benefits_renewal", label: "Benefits Renewal Notices", detail: "SNAP, Medicaid, and other benefits require periodic renewal. Use the agency’s accepted renewal method and save confirmation." },
     ],
   };
 
@@ -198,26 +198,26 @@ export default function FamilyToolkit() {
       category: "Mail & Identity",
       icon: Mail,
       items: [
-        { label: "USPS Mail Forwarding", url: "https://moversguide.usps.com/", timeline: "Immediately", detail: "Submit a change-of-address online or at your local post office. The forwarding takes 1–2 weeks to activate." },
-        { label: "State Driver's License / ID", url: "https://www.usa.gov/motor-vehicle-services", timeline: "Within 30 days", detail: "Contact your state DMV. Address updates are often possible online or by mail. Bring proof of new address." },
+        { label: "USPS Mail Forwarding", url: "https://moversguide.usps.com/", timeline: "Immediately", detail: "Submit a change-of-address online or at your local post office. Only the addressee or an authorized representative should submit the request. Forwarding duration varies by mail class; notify senders directly." },
+        { label: "State Driver's License / ID", url: "https://www.usa.gov/motor-vehicle-services", timeline: "Check your state deadline", detail: "Contact your state DMV. Address updates are often possible online or by mail. Bring proof of new address." },
       ],
     },
     {
       category: "Benefits",
       icon: FileText,
       items: [
-        { label: "Social Security (SSA)", url: "https://www.ssa.gov/", timeline: "Immediately", detail: "Call 1-800-772-1213 or visit ssa.gov to report the change. SSA will suspend benefits during incarceration and reinstate after release — notify proactively to avoid overpayments." },
-        { label: "SNAP / Food Assistance", url: "https://www.fns.usda.gov/snap/state-directory", timeline: "Immediately", detail: "Contact your state SNAP office. Benefits suspend during incarceration; reinstatement window varies by state." },
-        { label: "Medicaid", url: "https://www.medicaid.gov/", timeline: "Within 30 days of release", detail: "Medicaid suspends during incarceration but does not automatically terminate. Contact your state Medicaid office within 30 days of release to reinstate." },
+        { label: "Social Security (SSA)", url: "https://www.ssa.gov/", timeline: "Immediately", detail: "Call 1-800-772-1213 or visit ssa.gov to report the change. For SSI, report changes promptly and by the tenth day after the end of the month of the change. Ask SSA about release documentation and restarting payments." },
+        { label: "SNAP / Food Assistance", url: "https://www.fns.usda.gov/snap/state-directory", timeline: "Immediately", detail: "Contact your state SNAP office. Report household changes. Eligible household members may keep receiving SNAP. Ask whether the returning person should rejoin the household case or apply." },
+        { label: "Medicaid", url: "https://www.medicaid.gov/", timeline: "Before or soon after release", detail: "Incarceration alone does not terminate eligibility. Ask your state Medicaid office about enrollment, renewal and restoring services." },
       ],
     },
     {
       category: "Financial",
       icon: Hash,
       items: [
-        { label: "Bank / Credit Union", url: "", timeline: "This week", detail: "Update the address on the account to ensure statements, tax documents, and important notices go to the right place." },
+        { label: "Bank / Credit Union", url: "", timeline: "This week", detail: "The account holder, joint owner or representative may have different permissions. Ask the bank what authority and documents it requires for this change." },
         { label: "Direct Deposit Paychecks", url: "", timeline: "Before next pay period", detail: "Confirm direct deposit routing with the employer's payroll department to ensure pay continues to the correct account." },
-        { label: "IRS / Tax Correspondence", url: "https://www.irs.gov/", timeline: "As needed", detail: "File IRS Form 8822 to update your address with the IRS. Important for tax refunds and any correspondence." },
+        { label: "IRS / Tax Correspondence", url: "https://www.irs.gov/", timeline: "As needed", detail: "File IRS Form 8822 to update your address with the IRS. The IRS generally takes four to six weeks after receipt to process an address change." },
       ],
     },
     {
@@ -455,7 +455,7 @@ export default function FamilyToolkit() {
 
             <div className="rounded-xl border border-border p-3 flex items-start gap-2.5 bg-background">
               <Info className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5" />
-              <p className="text-xs text-muted-foreground leading-relaxed">If the person was arrested by federal agents (FBI, DEA, ICE, or other federal agencies), use <a href="https://www.courtlistener.com/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">CourtListener</a> or <a href="https://pacer.gov" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">PACER.gov</a> for federal records. The state court portal above will not show federal cases.</p>
+              <p className="text-xs text-muted-foreground leading-relaxed">For a federal court case, search the free RECAP archive on <a href="https://www.courtlistener.com/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">CourtListener</a> or <a href="https://pacer.gov" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">PACER.gov</a> for the public federal docket. RECAP coverage is incomplete. Immigration court proceedings use a separate system.</p>
             </div>
           </div>
         </section>
@@ -467,12 +467,12 @@ export default function FamilyToolkit() {
 
               <h2 tabIndex={-1} className="text-xl font-bold text-foreground">Certified Mail Checklist</h2>
             </div>
-            <p className="text-sm text-muted-foreground mb-2">Certified mail creates a legal record that the letter was received. Use it for anything that matters legally or financially.</p>
+            <p className="text-sm text-muted-foreground mb-2">Certified mail can document mailing and delivery. Follow the recipient’s rules for filing or notice; a mailing receipt does not certify a document.</p>
 
 
           <Alert className="border-blue-200 bg-blue-50/60 dark:bg-blue-900/10 dark:border-blue-800/60 mb-5">
             <AlertDescription className="text-sm text-blue-800 dark:text-blue-200">
-              <strong>How to send certified mail:</strong> At any USPS post office, ask for "certified mail with return receipt." You'll get a tracking number and a signed card when it's delivered. Keep both. Cost is approximately $5–8 per item.
+              <strong>How to send certified mail:</strong> At any USPS post office, ask for "certified mail with return receipt." Keep the mailing receipt and any delivery confirmation. Postage, certified mail and an optional paper or electronic return receipt have separate fees. Check current USPS prices.
             </AlertDescription>
           </Alert>
 

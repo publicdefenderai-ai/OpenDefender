@@ -464,15 +464,15 @@ export default function FinancesSupport() {
                 </div>
                 <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/40 rounded-lg p-3">
                   <p className="text-xs font-semibold text-foreground mb-1">SSI / Social Security Disability</p>
-                  <p className="text-xs text-muted-foreground">SSI payments are suspended during incarceration of 30 days or more. They are not terminated — but they must be reinstated, which takes time after release. Planning ahead helps avoid a payment gap.</p>
+                  <p className="text-xs text-muted-foreground">SSI and SSDI have different confinement rules. After 12 consecutive months of SSI suspension, a new application is generally required. Contact SSA about release documentation.</p>
                 </div>
                 <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/40 rounded-lg p-3">
                   <p className="text-xs font-semibold text-foreground mb-1">Public housing / Section 8</p>
-                  <p className="text-xs text-muted-foreground">Certain convictions — especially drug or violent felonies — can trigger mandatory eviction from public housing or disqualification from the Section 8 voucher program. This can affect all household members.</p>
+                  <p className="text-xs text-muted-foreground">Housing admission and ending an existing tenancy have different rules. Evidence of qualifying conduct can lead to action; an arrest record alone does not establish that conduct.</p>
                 </div>
                 <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/40 rounded-lg p-3">
                   <p className="text-xs font-semibold text-foreground mb-1">Student financial aid (Pell Grants / loans)</p>
-                  <p className="text-xs text-muted-foreground">Drug convictions while receiving federal student aid can result in temporary ineligibility for Pell Grants and federal student loans. Completing a drug treatment program can restore eligibility in some cases.</p>
+                  <p className="text-xs text-muted-foreground">The former automatic federal student aid restriction for drug convictions has been removed. A separate court order denying federal benefits can still affect eligibility.</p>
                 </div>
               </div>
               <p className="text-xs text-muted-foreground">

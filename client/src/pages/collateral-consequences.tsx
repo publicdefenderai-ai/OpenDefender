@@ -14,7 +14,6 @@ import { Footer } from "@/components/layout/footer";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { buildPlainText } from "@/lib/build-plain-text";
 import {
-  DRIVERS_LICENSE_RULES,
   getCollateralConsequenceRule,
   getCollateralConsequenceDeadlineData,
   COLLATERAL_CONSEQUENCE_DEADLINE_OPTIONS,
@@ -26,7 +25,7 @@ import { useJurisdiction } from "@/hooks/use-jurisdiction";
 /* Types                                                                */
 /* ------------------------------------------------------------------ */
 
-type Answer = "yes" | "no" | null;
+type Answer = "yes" | "no" | "unknown" | null;
 type QuestionId =
   | "housing"
   | "employment"
@@ -101,6 +100,17 @@ const RISKS: RiskMeta[] = [
     linkHref: "/legal-aid",
   },
 ];
+
+const drivingSources: Record<string, string> = {
+  "GA": "https://dds.georgia.gov/sites/dds.georgia.gov/files/related_files/document/CUSTOMER%20INFORMATION%20SHEET%206-30-17.pdf",
+  "AZ": "https://www.azleg.gov/ars/28/01385.htm",
+  "CO": "https://dmv.colorado.gov/sites/dmv/files/documents/Basic_Case_Lifespan_of_an_Express_Consent_Per_Se_or_Refusal_2022.pdf",
+  "CA": "https://www.dmv.ca.gov/portal/file/aps-fact-sheet-2022-pdf/",
+  "TX": "https://www.dps.texas.gov/section/driver-license/faq/section-19-administrative-license-revocation-alr",
+  "FL": "https://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.2615.html",
+  "NC": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_20/GS_20-16.5.html",
+  "OH": "https://codes.ohio.gov/ohio-revised-code/section-4511.197"
+};
 
 const QUESTION_ORDER: QuestionId[] = [
   "housing", "employment", "immigration", "benefits", "children", "supervision", "license",
@@ -211,14 +221,6 @@ function btbLevel(rule: ReturnType<typeof getCollateralConsequenceRule>): RuleLe
   return "moderate";
 }
 
-function snapLevel(rule: ReturnType<typeof getCollateralConsequenceRule>): RuleLevel {
-  if (!rule) return "moderate";
-  const snap = rule.benefits.snapDrugFelonyBan;
-  if (snap === "no_ban") return "good";
-  if (snap === "full_ban") return "restrictive";
-  return "moderate";
-}
-
 function housingLevel(rule: ReturnType<typeof getCollateralConsequenceRule>): RuleLevel {
   if (!rule) return "moderate";
   return rule.housing.fairChanceHousingLaw ? "good" : "moderate";
@@ -257,8 +259,8 @@ function StateRulesCard({ stateAbbr }: { stateAbbr: string }) {
     {
       Icon: Leaf,
       labelKey: "collateralConsequences.stateRules.benefits",
-      statusKey: `collateralConsequences.stateRules.snapStatus.${rule.benefits.snapDrugFelonyBan}`,
-      level: snapLevel(rule),
+      statusKey: stateAbbr === "SC" ? "collateralConsequences.scSnap" : "collateralConsequences.checkSnap",
+      level: "moderate",
     },
     {
       Icon: Building2,
@@ -286,7 +288,7 @@ function StateRulesCard({ stateAbbr }: { stateAbbr: string }) {
               <Icon className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0" strokeWidth={1.75} aria-hidden="true" />
               <span className="text-xs text-foreground">{t(labelKey)}</span>
             </div>
-            <span className={`text-xs font-medium px-2 py-0.5 rounded-full flex-shrink-0 ${LEVEL_CLASSES[level]}`}>
+            <span className={`text-xs font-medium px-2 py-0.5 rounded-full min-w-0 text-right ${LEVEL_CLASSES[level]}`}>
               {t(statusKey)}
             </span>
           </div>
@@ -359,27 +361,10 @@ export default function CollateralConsequences() {
   const chargeRisks: ChargeRiskMeta[] = CHARGE_TYPE_RISKS.filter(r => {
     if (!chargeTypeSelected) return false;
 
-    if (r.id === "driverLicense") {
-      if (chargeType === "dui") return true;
-      if (chargeType === "drug_possession" || chargeType === "drug_trafficking") {
-        // Only show the full warning when the user's state has an explicit drug-conviction suspension law.
-        // jurisdiction is stored as a lowercase full name (e.g. "california") by useJurisdiction.
-        const abbr = jurisdiction ? STATE_NAME_TO_ABBR[jurisdiction.toLowerCase()] : undefined;
-        if (!abbr) return false; // no/unknown jurisdiction → show soft check card instead
-        return DRIVERS_LICENSE_RULES[abbr]?.drugConvictionSuspension === true;
-      }
-      return false;
-    }
-
+    if (r.id === "driverLicense") return chargeType === "dui";
     if (r.id === "driverLicenseCheck") {
-      // Soft "check your state" variant — only for drug charges with no recognisable jurisdiction entered
-      if (chargeType === "drug_possession" || chargeType === "drug_trafficking") {
-        const abbr = jurisdiction ? STATE_NAME_TO_ABBR[jurisdiction.toLowerCase()] : undefined;
-        return !abbr; // show only when state is unknown or not in map
-      }
-      return false;
+      return chargeType === "drug_possession" || chargeType === "drug_trafficking";
     }
-
     if (r.id === "sexOffender") return chargeType === "sex_offense";
     return false;
   });
@@ -389,12 +374,20 @@ export default function CollateralConsequences() {
     ...RISKS.filter(r => answers[r.id] === "yes"),
   ].sort((a, b) => a.urgency - b.urgency);
 
+  const unresolved = QUESTION_ORDER.filter(id => answers[id] === "unknown");
+  const drivingSource = chargeType === "dui" ? drivingSources[screenerState] : undefined;
+  const drivingDetail = drivingSource ? t("collateralConsequences.drivingDeadlines." + screenerState) : "";
+  const summaryNotes = [
+    ...(!chargeType ? [t("collateralConsequences.skippedCharge")] : []),
+    ...(unresolved.length ? [t("collateralConsequences.unresolved"), ...unresolved.map(id => t(`collateralConsequences.questions.${id}.question`))] : []),
+  ];
+
   /* Plain-text export — delegates to the exported pure helper */
   function buildPlainTextForExport(): string {
-    return buildPlainText(t, activeRisks, i18n.language);
+    return buildPlainText(t, activeRisks, i18n.language, undefined, drivingSource ? [...summaryNotes, drivingDetail, drivingSource] : summaryNotes);
   }
 
-  function handleAnswer(ans: "yes" | "no") {
+  function handleAnswer(ans: Exclude<Answer, null>) {
     setAnswers(prev => ({ ...prev, [currentId]: ans }));
   }
 
@@ -558,6 +551,9 @@ export default function CollateralConsequences() {
                     >
                       {t("collateralConsequences.no")}
                     </button>
+                    <button type="button" className="col-span-2" data-answer="unknown" aria-pressed={answers[currentId] === "unknown"} onClick={() => handleAnswer("unknown")}>
+                      {t("collateralConsequences.unsure")}
+                    </button>
                   </div>
 
                   <div className="collateral-actions">
@@ -676,6 +672,10 @@ export default function CollateralConsequences() {
                             </p>
                           </div>
 
+                          {risk.id === "driverLicense" && drivingSource && <p>
+                            <a className="underline" href={drivingSource} target="_blank" rel="noopener noreferrer">{drivingDetail}</a>
+                          </p>}
+
                           {/* ── State-specific deadline callout ── */}
                           {deadlineCategory && selectedStateDeadlines && (
                             <div className="rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/40 p-3">
@@ -719,6 +719,10 @@ export default function CollateralConsequences() {
                   </div>
                 </>
               )}
+
+              {summaryNotes.length > 0 && <div className="mb-5 space-y-2" data-summary-notes>
+                {summaryNotes.map(note => <p key={note}>{note}</p>)}
+              </div>}
 
               {/* State-specific rules panel */}
               {(() => {
