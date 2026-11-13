@@ -18,6 +18,7 @@ import { OHIO_THEFT_FRAUD_SOURCES, isOhioTheftFraudSourceFresh } from "../data/o
 import { OHIO_RESIDUAL_SOURCES, isOhioResidualSourceFresh } from "../data/ohio-residual-source";
 import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "../data/florida-persons-source";
 import { FLORIDA_ROBBERY_SOURCES, isFloridaRobberySourceFresh } from "../data/florida-robbery-source";
+import { FLORIDA_COURT_OFFICIALS_SOURCES, isFloridaCourtOfficialsSourceFresh } from "../data/florida-court-officials-source";
 import { FLORIDA_JUSTICE_SOURCES, isFloridaJusticeSourceFresh } from "../data/florida-justice-source";
 import { FLORIDA_CREDIT_CARD_SOURCES, isFloridaCreditCardSourceFresh } from "../data/florida-credit-card-source";
 import { FLORIDA_RESTRAINT_SOURCES, isFloridaRestraintSourceFresh } from "../data/florida-restraint-source";
@@ -340,6 +341,9 @@ export async function getCurrentAuthoritySelectableChargeIds(
   }
   if (jurisdiction === "FL" && !isFloridaRobberySourceFresh()) {
     for (const source of FLORIDA_ROBBERY_SOURCES) selectable.delete(source.chargeId);
+  }
+  if (jurisdiction === "FL" && !isFloridaCourtOfficialsSourceFresh()) {
+    for (const source of FLORIDA_COURT_OFFICIALS_SOURCES) selectable.delete(source.chargeId);
   }
   if (jurisdiction === "FL" && !isFloridaJusticeSourceFresh()) {
     for (const source of FLORIDA_JUSTICE_SOURCES) selectable.delete(source.chargeId);
