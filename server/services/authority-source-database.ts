@@ -23,6 +23,7 @@ import { OHIO_RESIDUAL_SOURCES, isOhioResidualSourceFresh } from "../data/ohio-r
 import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "../data/florida-persons-source";
 import { FLORIDA_ROBBERY_SOURCES, isFloridaRobberySourceFresh } from "../data/florida-robbery-source";
 import { FLORIDA_FALSE_REPORTS_SOURCES, isFloridaFalseReportsSourceFresh } from "../data/florida-false-reports-source";
+import { FLORIDA_PROPERTY_DAMAGE_SOURCES, isFloridaPropertyDamageSourceFresh } from "../data/florida-property-damage-source";
 import { FLORIDA_FORGED_INSTRUMENTS_SOURCES, isFloridaForgedInstrumentsSourceFresh } from "../data/florida-forged-instruments-source";
 import { FLORIDA_CORRUPTION_SOURCES, isFloridaCorruptionSourceFresh } from "../data/florida-corruption-source";
 import { FLORIDA_ROAD_RACING_SOURCES, isFloridaRoadRacingSourceFresh } from "../data/florida-road-racing-source";
@@ -364,6 +365,9 @@ export async function getCurrentAuthoritySelectableChargeIds(
   }
   if (jurisdiction === "FL" && !isFloridaFalseReportsSourceFresh()) {
     for (const source of FLORIDA_FALSE_REPORTS_SOURCES) selectable.delete(source.chargeId);
+  }
+  if (jurisdiction === "FL" && !isFloridaPropertyDamageSourceFresh()) {
+    for (const source of FLORIDA_PROPERTY_DAMAGE_SOURCES) selectable.delete(source.chargeId);
   }
   if (jurisdiction === "FL" && !isFloridaForgedInstrumentsSourceFresh()) {
     for (const source of FLORIDA_FORGED_INSTRUMENTS_SOURCES) selectable.delete(source.chargeId);
