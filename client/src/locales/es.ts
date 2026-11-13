@@ -8372,6 +8372,12 @@ export default {
     }
   },
   "bailPrep": {
+    "design": {
+      "start": "Empezar con la lista",
+      "choose": "Elija una carta",
+      "copyManually": "Texto seleccionado. Use la opción Copiar de su dispositivo.",
+      "checklist": "Lista de preparación para la audiencia de fianza"
+    },
     "breadcrumb": "Preparacion para la Fianza",
     "heroTagline": "Kit de Herramientas para la Audiencia de Fianza",
     "heroTitle": "Prepare su Audiencia de Fianza",

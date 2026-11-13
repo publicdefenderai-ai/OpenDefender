@@ -8366,6 +8366,12 @@ export default {
     }
   },
   "bailPrep": {
+    "design": {
+      "start": "Start with the checklist",
+      "choose": "Choose a letter",
+      "copyManually": "Text selected. Use your device’s Copy command.",
+      "checklist": "Bail Preparation Checklist"
+    },
     "breadcrumb": "Bail Preparation",
     "heroTagline": "Pretrial Release Advocacy Toolkit",
     "heroTitle": "Prepare for Your Bail Hearing",

@@ -8372,6 +8372,12 @@ export default {
     }
   },
   "bailPrep": {
+    "design": {
+      "start": "从清单开始",
+      "choose": "选择一封信",
+      "copyManually": "已选中文本。请使用设备的复制功能。",
+      "checklist": "保释听证准备清单"
+    },
     "breadcrumb": "保释准备",
     "heroTagline": "审前释放倡导工具包",
     "heroTitle": "为您的保释听证做准备",

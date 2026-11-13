@@ -657,3 +657,7 @@ The court-date guide follows the approved court-date-guide-content.html layout. 
 ### Public Defender Intake Form
 
 The approved pd-intake-content.html groups the seven existing sections into four sheets. The on-screen index links to each section and the print action opens the browser print dialog. All answers are handwritten. The page has no answer fields, storage or submission. The release browser checks verify the published field labels, answer options, advisories, keyboard navigation, print trigger and four-page output on Letter and A4 paper in English, Spanish and Chinese.
+
+### Bail Preparation
+
+The approved bail-preparation-content.html layout leads with the documentation checklist and letter templates. The page retains the seven section anchors, published guidance, support destinations and attorney note. Its 16 checklist items and three editable letter drafts stay in memory. Copy and print use the selected letter's current text. The checklist printout includes the current marks and disclaimer.
