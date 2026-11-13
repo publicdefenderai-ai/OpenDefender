@@ -1,0 +1,133 @@
+[
+  {
+    "section": "2925.041",
+    "sourceHash": "a6063a50d3bd9c764ff12076ecdc2ff9559db7c744ee5b88ab7f646c679050bb",
+    "disposition": "published",
+    "explanation": "Offense branches represented by the listed IDs.",
+    "publishedIds": [
+      "oh-orc-2925-041-intent-to-manufacture"
+    ]
+  },
+  {
+    "section": "2925.06",
+    "sourceHash": "34e19d9a52fe992b8cf3032181e35440b8f7c546810d0ad40f19803b2e98e7c3",
+    "disposition": "published",
+    "explanation": "Offense branches represented by the listed IDs.",
+    "publishedIds": [
+      "oh-orc-2925-06-unapproved-steroids"
+    ]
+  },
+  {
+    "section": "2925.09",
+    "sourceHash": "4b0703b4e9e6880fc3b3718ad8472a7d012c4ab8e7fff4678c648e2cd2c443b3",
+    "disposition": "published",
+    "explanation": "Offense branches represented by the listed IDs.",
+    "publishedIds": [
+      "oh-orc-2925-09-unapproved-noncontrolled",
+      "oh-orc-2925-09-food-animals"
+    ]
+  },
+  {
+    "section": "2925.141",
+    "sourceHash": "406f98ae314a205a1b9afaa83210aa6580e9f869823ce3b8dedcfb72d4c1ec14",
+    "disposition": "held_applicability",
+    "explanation": "C and F(1): current medical, adult-use, homegrown and transport provisions in Chapter 3796 may permit conduct or define a separate transport offense. Applicable accessory rules remain to be reconciled. F(2) also limits criminal-record reporting.",
+    "publishedIds": []
+  },
+  {
+    "section": "2925.31",
+    "sourceHash": "762de69358e1a128605cc3867e780c08ec3f75d1664728000317ff4bfa512175",
+    "disposition": "published",
+    "explanation": "Offense branches represented by the listed IDs.",
+    "publishedIds": [
+      "oh-orc-2925-31-purpose-of-intoxication"
+    ]
+  },
+  {
+    "section": "2925.32",
+    "sourceHash": "86eff076233e480db8f048bb2b3c0248987f80b9aab94682345d277fb12b3284",
+    "disposition": "published",
+    "explanation": "Offense branches represented by the listed IDs.",
+    "publishedIds": [
+      "oh-orc-2925-32-adult-harmful-intoxicant",
+      "oh-orc-2925-32-minor-harmful-intoxicant",
+      "oh-orc-2925-32-adult-nitrous",
+      "oh-orc-2925-32-under-twenty-one-nitrous",
+      "oh-orc-2925-32-sale-with-device",
+      "oh-orc-2925-32-cartridge-compliance"
+    ]
+  },
+  {
+    "section": "2925.33",
+    "sourceHash": "fb30cdb22aba7c3d64e8de903cebb0fab976757856682a4348f3bbbef9366922",
+    "disposition": "published",
+    "explanation": "Offense branches represented by the listed IDs.",
+    "publishedIds": [
+      "oh-orc-2925-33-operator-passenger",
+      "oh-orc-2925-33-stationary-vehicle"
+    ]
+  },
+  {
+    "section": "2925.34",
+    "sourceHash": "12dd1600d3e5e544fa4c498e48166ad2a59d07b7d0705c9c7d6f648a70fa4ea6",
+    "disposition": "published",
+    "explanation": "Offense branches represented by the listed IDs.",
+    "publishedIds": [
+      "oh-orc-2925-34-sale"
+    ]
+  },
+  {
+    "section": "2925.36",
+    "sourceHash": "1b0cea71f71a6d5f93854563a5ecdecf2b502e99e7ec2b46c718486a91028e2b",
+    "disposition": "published",
+    "explanation": "Offense branches represented by the listed IDs.",
+    "publishedIds": [
+      "oh-orc-2925-36-schedule-i-ii",
+      "oh-orc-2925-36-other-dangerous-drug"
+    ]
+  },
+  {
+    "section": "2925.55",
+    "sourceHash": "771d33b92516ed5c63648bb8a919303db9920a868a39a771a42cdfafa8af5ace",
+    "disposition": "published_adult_branches",
+    "explanation": "C(1)/G and D/H expressly create juvenile delinquent acts with hypothetical adult degrees. No adult roadmap record assigned.",
+    "publishedIds": [
+      "oh-orc-2925-55-purchase-limit",
+      "oh-orc-2925-55-improper-purchase"
+    ]
+  },
+  {
+    "section": "2925.56",
+    "sourceHash": "f5d8f4c850a95229bd60ccbeb29c5adda3f898bb132ced604fc85bc65d8e8f43",
+    "disposition": "published_graded_branches",
+    "explanation": "D/H designates a misdemeanor and an express fine of up to $1,000 per violation without a stated degree. No generic jail range or degree assigned.",
+    "publishedIds": [
+      "oh-orc-2925-56-over-limit",
+      "oh-orc-2925-56-minor",
+      "oh-orc-2925-56-records"
+    ]
+  },
+  {
+    "section": "2925.57",
+    "sourceHash": "7de938a607b89d4802393dd06cbdffaa3bb65d7f5db8ef1993e9a8dc4996488f",
+    "disposition": "civil_only",
+    "explanation": "F specifies a civil penalty up to $1,000 for violations of B(2) or D. No standalone criminal selection.",
+    "publishedIds": []
+  },
+  {
+    "section": "2925.58",
+    "sourceHash": "ead1818ccc01ba351ed770ecb2fb8d35886c84c9c2e60278ddb971c16b4224bc",
+    "disposition": "affirmative_defense_only",
+    "explanation": "Proof conditions for a defense to a seller’s §2925.56 age-related charge. Included as a dependency, not a new offense.",
+    "publishedIds": []
+  },
+  {
+    "section": "2925.62",
+    "sourceHash": "b7de40e0d098461c1884f4865bf6e5d835ebe8573ce7efd9247bf3befc6e0156",
+    "disposition": "published",
+    "explanation": "Offense branches represented by the listed IDs.",
+    "publishedIds": [
+      "oh-orc-2925-62-sale-to-minor"
+    ]
+  }
+]

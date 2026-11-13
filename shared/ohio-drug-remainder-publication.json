@@ -1,0 +1,766 @@
+[
+  {
+    "id": "oh-orc-2925-041-intent-to-manufacture",
+    "section": "2925.041",
+    "scope": "A",
+    "code": "2925.041(A)",
+    "statutoryName": "Illegal assembly or possession of chemicals for the manufacture of drugs",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B",
+      "D"
+    ],
+    "degrees": [
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly assembling or possessing one or more chemicals that may be used to manufacture a Schedule I or II controlled substance, with intent to manufacture such a substance in violation of §2925.04. Division (B) does not require proof that all chemicals were present.",
+    "gradeSummary": "Ordinarily F3, or F2 in the vicinity of a school or juvenile. Section 2929.13(C) generally governs prison. For the methamphetamine F3 branch, prison is presumed; two or more prior felony drug abuse convictions or pleas require a mandatory term of at least two years. With two or more such priors including §2925.041(A), §2919.22(B)(6) or §2925.04(A), (C)(1) requires a term of at least five years. State v. Pribble, 2019-Ohio-4808, upheld a mandatory five-year term despite the general F3 range. For the methamphetamine F2 branch, the mandatory minimum is three years, rising to five with one specified prior. Section 2929.18(B)(1) requires a fine of at least half the usual maximum unless the statutory indigency requirements are met. Where applicable, §2925.38 requires notice to the licensing authority. Section 2929.33 allows a driving suspension for using a vehicle to further the offense and requires it for a qualifying same-circumstances impaired-driving conviction or plea; the maximum is five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "2925.04",
+      "2919.22",
+      "3719.41",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-06-unapproved-steroids",
+    "section": "2925.06",
+    "scope": "A",
+    "code": "2925.06(A)",
+    "statutoryName": "Illegal administration or distribution of anabolic steroids",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly administering to a human, or prescribing or dispensing for human administration, an anabolic steroid that the FDA has not approved for human administration. Division (B) incorporates the limited §2925.03(B)(1) through (3) exclusions. No individual product’s approval is inferred.",
+    "gradeSummary": "F4, with §2929.13(C) governing prison. Where applicable, §2925.38 requires notice to the licensing authority. Section 2929.33 allows a driving suspension for using a vehicle to further the offense and requires it for a qualifying same-circumstances impaired-driving conviction or plea; the maximum is five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "2925.03",
+      "2935.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-09-unapproved-noncontrolled",
+    "section": "2925.09",
+    "scope": "A",
+    "code": "2925.09(A)",
+    "statutoryName": "Unapproved drugs - dangerous drug offenses involving livestock",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Administering, dispensing, distributing, manufacturing, possessing, selling or using a noncontrolled drug without FDA or USDA approval. Division (A) excludes the specified approved investigational uses, nonveterinarian prescriber combinations and pharmacist compounding under prescription. Individual federal approval status must be checked.",
+    "gradeSummary": "F5 on a first offense; F4 on each subsequent offense under this section.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-09-food-animals",
+    "section": "2925.09",
+    "scope": "B(2)",
+    "code": "2925.09(B)(2)",
+    "statutoryName": "Unapproved drugs - dangerous drug offenses involving livestock",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "B(2)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B(1)",
+      "B(3)"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "The specified administration, dispensing, distribution, manufacture, possession, sale or use of a dangerous drug to or for livestock or food animals without the required veterinary prescription or written order and compliance with it. Division (B)(3) excludes specified licensed or lawful actors.",
+    "gradeSummary": "F5 on a first offense; F4 on each subsequent offense under this section.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-31-purpose-of-intoxication",
+    "section": "2925.31",
+    "scope": "A",
+    "code": "2925.31(A)",
+    "statutoryName": "Abusing harmful intoxicants",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Obtaining, possessing or using a harmful intoxicant with the purpose of inducing intoxication or similar physiological effects, except for lawful research, clinical, medical, dental or veterinary purposes. A substance’s mere presence is insufficient.",
+    "gradeSummary": "M1 ordinarily; a prior drug abuse offense conviction makes F5. Where applicable, §2925.38 requires notice to the licensing authority. Section 2929.33 allows a driving suspension for using a vehicle to further the offense and requires it for a qualifying same-circumstances impaired-driving conviction or plea; the maximum is five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2925.31",
+          "quote": "abusing harmful intoxicants, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2925-32-adult-harmful-intoxicant",
+    "section": "2925.32",
+    "scope": "A(1)",
+    "code": "2925.32(A)(1)",
+    "statutoryName": "Trafficking in harmful intoxicants",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "D(1)"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly dispensing or distributing a harmful intoxicant other than nitrous oxide to someone 18 or older, knowing or having reason to believe it will be used to violate §2925.31. Division (C) excludes specified industrial products and mineral operations.",
+    "gradeSummary": "F5; a previous drug abuse offense conviction makes F4. For applicable licenses or permits the statute refers to §2929.33.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.31",
+      "4511.19",
+      "2929.33"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-32-minor-harmful-intoxicant",
+    "section": "2925.32",
+    "scope": "A(2)",
+    "code": "2925.32(A)(2)",
+    "statutoryName": "Trafficking in harmful intoxicants",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "D(1)"
+    ],
+    "contextPaths": [
+      "C",
+      "E"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly dispensing or distributing a harmful intoxicant other than nitrous oxide to someone under 18, knowing or having reason to believe it will be used to violate §2925.31. Division (A)(2) separately addresses a written parent/guardian order and fuel sales. Division (C) excludes specified industrial products and mineral operations. Division (E) supplies a limited affirmative defense based on documentation and reasonable reliance for the age element.",
+    "gradeSummary": "F5; a previous drug abuse offense conviction makes F4. For applicable licenses or permits the statute refers to §2929.33.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.31",
+      "4511.19",
+      "2929.33",
+      "4507.50"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-32-adult-nitrous",
+    "section": "2925.32",
+    "scope": "B(1)",
+    "code": "2925.32(B)(1)",
+    "statutoryName": "Trafficking in harmful intoxicants",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [
+      "D(1)"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly dispensing or distributing nitrous oxide to someone 21 or older, knowing or having reason to believe it will be used to violate §2925.31. Division (C) excludes specified industrial products and mineral operations.",
+    "gradeSummary": "F5; a previous drug abuse offense conviction makes F4. For applicable licenses or permits the statute refers to §2929.33.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.31",
+      "4511.19",
+      "2929.33"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-32-under-twenty-one-nitrous",
+    "section": "2925.32",
+    "scope": "B(2)",
+    "code": "2925.32(B)(2)",
+    "statutoryName": "Trafficking in harmful intoxicants",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(2)"
+    ],
+    "gradingPaths": [
+      "D(1)"
+    ],
+    "contextPaths": [
+      "C",
+      "E"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly dispensing or distributing nitrous oxide to someone under 21, except for lawful medical, dental or clinical purposes. Division (C) excludes specified industrial products and mineral operations. Division (E) supplies a limited affirmative defense based on documentation and reasonable reliance for the age element.",
+    "gradeSummary": "F5; a previous drug abuse offense conviction makes F4. For applicable licenses or permits the statute refers to §2929.33.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.31",
+      "4511.19",
+      "2929.33",
+      "4507.50"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-32-sale-with-device",
+    "section": "2925.32",
+    "scope": "B(3)",
+    "code": "2925.32(B)(3)",
+    "statutoryName": "Trafficking in harmful intoxicants",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(3)"
+    ],
+    "gradingPaths": [
+      "D(1)"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Selling a device described in (B)(3) at the time of a nitrous oxide cartridge sale. The simultaneous sale creates the statutory rebuttable presumption concerning knowledge of intended abuse. Division (C) excludes specified industrial products and mineral operations.",
+    "gradeSummary": "F5; a previous drug abuse offense conviction makes F4. For applicable licenses or permits the statute refers to §2929.33.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.31",
+      "4511.19",
+      "2929.33"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-32-cartridge-compliance",
+    "section": "2925.32",
+    "scope": "B(4)",
+    "code": "2925.32(B)(4)",
+    "statutoryName": "Improperly dispensing or distributing nitrous oxide",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(4)"
+    ],
+    "gradingPaths": [
+      "D(2)"
+    ],
+    "contextPaths": [
+      "C",
+      "F",
+      "G"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Dispensing or distributing nitrous oxide in cartridges without complying with the (F) recordkeeping or (G) labeling and transaction-identification requirements. Division (C) excludes specified industrial products and mineral operations.",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.31",
+      "4511.19",
+      "2929.33"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-33-operator-passenger",
+    "section": "2925.33",
+    "scope": "B(1)",
+    "code": "2925.33(B)(1)",
+    "statutoryName": "Possessing nitrous oxide in a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A",
+      "D"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Possessing an open nitrous oxide cartridge while operating or riding as a passenger in or on a motor vehicle on a street, highway, or other public or private property open to public vehicular traffic or parking, unless authorized under the chapters named in (B).",
+    "gradeSummary": "M4. Division (D) permits suspension of a driver’s or commercial driver’s license or permit for up to five years.",
+    "dependencies": [
+      "4511.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-33-stationary-vehicle",
+    "section": "2925.33",
+    "scope": "B(2)",
+    "code": "2925.33(B)(2)",
+    "statutoryName": "Possessing nitrous oxide in a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(2)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A",
+      "D"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Possessing an open nitrous oxide cartridge while in or on a stationary motor vehicle on a street, highway, or other public or private property open to public vehicular traffic or parking, unless authorized under the chapters named in (B).",
+    "gradeSummary": "M4. Division (D) permits suspension of a driver’s or commercial driver’s license or permit for up to five years.",
+    "dependencies": [
+      "4511.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-34-sale",
+    "section": "2925.34",
+    "scope": "B",
+    "code": "2925.34(B)",
+    "statutoryName": "Illegal sale of pure caffeine",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "A",
+      "C",
+      "D"
+    ],
+    "degrees": [
+      "MM",
+      "M3"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly selling or offering a pure caffeine product as defined in (A). Division (A) excludes specified FDA-compliant beverages and energy products. Division (C) exempts unit doses of no more than 250 mg each. Division (D) addresses permitted possession.",
+    "gradeSummary": "Minor misdemeanor for the first offense; M3 for each subsequent offense.",
+    "dependencies": [
+      "3715.021"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-36-schedule-i-ii",
+    "section": "2925.36",
+    "scope": "C(2)",
+    "code": "2925.36(C)(2)",
+    "statutoryName": "Illegal dispensing of drug samples",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C(1)",
+      "C(2)"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly furnishing another person a sample drug as defined by §2925.01. The (B) exception applies to the specified lawful professional conduct. This grading branch covers Schedule I or II except marihuana.",
+    "gradeSummary": "F5, or F4 in the vicinity of a school or juvenile. Section 2929.13(C) ordinarily governs the prison decision. Division (E) substitutes a mandatory term where the specified conduct, court finding of major-drug-offender status and §2941.1410(A) specification are established. Its citation to §2929.14(B)(3)(a) differs from the retained sentencing text, which numbers the relevant paragraph (B)(3); an exact special term requires separate review. Where applicable, §2925.38 requires notice to the licensing authority. Section 2929.33 allows a driving suspension for using a vehicle to further the offense and requires it for a qualifying same-circumstances impaired-driving conviction or plea; the maximum is five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "3719.41",
+      "2941.1410",
+      "2929.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-36-other-dangerous-drug",
+    "section": "2925.36",
+    "scope": "C(3)",
+    "code": "2925.36(C)(3)",
+    "statutoryName": "Illegal dispensing of drug samples",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C(1)",
+      "C(3)"
+    ],
+    "contextPaths": [
+      "B",
+      "D"
+    ],
+    "degrees": [
+      "M2",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly furnishing another person a sample drug as defined by §2925.01. The (B) exception applies to the specified lawful professional conduct. This grading branch covers a dangerous drug under the remaining branch, Schedule III/IV/V, or marihuana.",
+    "gradeSummary": "M2 ordinarily, or M1 in the vicinity of a school or juvenile. Where applicable, §2925.38 requires notice to the licensing authority. Section 2929.33 allows a driving suspension for using a vehicle to further the offense and requires it for a qualifying same-circumstances impaired-driving conviction or plea; the maximum is five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "3719.41"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-55-purchase-limit",
+    "section": "2925.55",
+    "scope": "B(1)",
+    "code": "2925.55(B)(1)",
+    "statutoryName": "Unlawful purchase of a pseudoephedrine product or ephedrine product",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "A",
+      "B(2)"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly purchasing, receiving or otherwise acquiring more than 3.6 grams in one day or more than nine grams in 30 consecutive days, measured by the base pseudoephedrine or ephedrine rather than the weight of the product. Division (B) specifies prescription and employee exceptions.",
+    "gradeSummary": "M1.",
+    "dependencies": [
+      "4729.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-55-improper-purchase",
+    "section": "2925.55",
+    "scope": "E",
+    "code": "2925.55(E)",
+    "statutoryName": "Improper purchase of a pseudoephedrine product or ephedrine product",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "E"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly failing to comply with the government-issued identification and logbook name-printing and signature obligations of §3715.051(B) for a purchase without a valid prescription.",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "3715.051",
+      "4729.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-56-over-limit",
+    "section": "2925.56",
+    "scope": "A(1)",
+    "code": "2925.56(A)(1)",
+    "statutoryName": "Unlawfully selling a pseudoephedrine product or ephedrine product",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "A(2)"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "A retailer, terminal distributor or employee knowingly providing an individual, or offering or holding for sale, more than 3.6 grams in one day or more than nine grams in 30 consecutive days, measured by the base pseudoephedrine or ephedrine rather than the weight of the product. Division (A)(2) specifies exceptions.",
+    "gradeSummary": "M1.",
+    "dependencies": [
+      "2925.55",
+      "4729.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-56-minor",
+    "section": "2925.56",
+    "scope": "B(1)",
+    "code": "2925.56(B)(1)",
+    "statutoryName": "Unlawfully selling a pseudoephedrine product or ephedrine product to a minor",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "B(2)"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "A retailer, terminal distributor or employee selling, offering, holding for sale, delivering or otherwise providing the product to a person under 18, subject to (B)(2). Section 2925.58 supplies a limited affirmative defense requiring proof of all its conditions.",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "2925.55",
+      "2925.58",
+      "2925.57",
+      "4729.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-56-records",
+    "section": "2925.56",
+    "scope": "C",
+    "code": "2925.56(C)",
+    "statutoryName": "Improper sale of a pseudoephedrine product or ephedrine product",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "G"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "A retailer or terminal distributor failing to comply with the logbook requirements in §3715.051(A) or the exchange-outage record requirements in §3715.052(A)(2). Division (D) defines a separate reporting violation.",
+    "gradeSummary": "M2.",
+    "dependencies": [
+      "3715.051",
+      "3715.052",
+      "2925.55",
+      "4729.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-62-sale-to-minor",
+    "section": "2925.62",
+    "scope": "B",
+    "code": "2925.62(B)",
+    "statutoryName": "Illegally selling dextromethorphan",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "A",
+      "C",
+      "D"
+    ],
+    "degrees": [
+      "MM"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "A retailer or employee knowingly providing a dextromethorphan-containing product through a sale to a person under 18 without the required prescription. Division (C) addresses evidence of age and identity, apparent age 25 or older, and the reasonable-reliance defense.",
+    "gradeSummary": "Minor misdemeanor.",
+    "dependencies": [
+      "4507.50",
+      "4507.51",
+      "4507.52"
+    ],
+    "extraGrading": []
+  }
+]

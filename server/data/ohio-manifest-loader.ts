@@ -1,3 +1,4 @@
+import { OHIO_DRUG_REMAINDER_SOURCES, isOhioDrugRemainderSourceFresh } from "./ohio-drug-remainder-source";
 import { OHIO_DRUG_CONDUCT_SOURCES, isOhioDrugConductSourceFresh } from "./ohio-drug-conduct-source";
 import { OHIO_COMMERCIAL_SEX_SOURCES, isOhioCommercialSexSourceFresh } from "./ohio-commercial-sex-source";
 import { OHIO_PRIORITY_GAPS_SOURCES, isOhioPriorityGapsSourceFresh } from "./ohio-priority-gaps-source";
@@ -65,6 +66,7 @@ export function loadOhioAuthorityManifest(
       ...OHIO_THEFT_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_BENEFITS_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_JUSTICE_SOURCES.map(record => record.chargeId),
+      ...OHIO_DRUG_REMAINDER_SOURCES.map(record => record.chargeId),
       ...OHIO_DRUG_CONDUCT_SOURCES.map(record => record.chargeId),
       ...OHIO_COMMERCIAL_SEX_SOURCES.map(record => record.chargeId),
       ...OHIO_PRIORITY_GAPS_SOURCES.map(record => record.chargeId),
@@ -88,7 +90,7 @@ export function loadOhioAuthorityManifest(
       ...(record.additionalEvidence ?? []).map(document => document.retrievedAt.getTime()),
       ...(record.additionalPenalties ?? []).map(document => document.retrievedAt.getTime()),
     ]),
-    ...[...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES].flatMap(record => [
+    ...[...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES, ...OHIO_DRUG_REMAINDER_SOURCES].flatMap(record => [
       Date.parse(record.offense.retrievedAt),
       ...record.dependencies.map(document => Date.parse(document.retrievedAt)),
     ]),
@@ -103,6 +105,7 @@ export function loadOhioAuthorityManifest(
   const reviewedFresh = isOhioReviewedSourceFresh(now);
   const majorFresh = isOhioMajorSourceFresh(now);
   const justiceFresh = isOhioJusticeSourceFresh(now);
+  const drugRemainderFresh = isOhioDrugRemainderSourceFresh(now);
   const drugConductFresh = isOhioDrugConductSourceFresh(now);
   const commercialSexFresh = isOhioCommercialSexSourceFresh(now);
   const priorityGapsFresh = isOhioPriorityGapsSourceFresh(now);
@@ -140,6 +143,7 @@ export function loadOhioAuthorityManifest(
     ...(majorFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_MAJOR_SOURCES) : []),
     ...(residualFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_RESIDUAL_SOURCES) : []),
     ...(justiceFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_JUSTICE_SOURCES) : []),
+    ...(drugRemainderFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_DRUG_REMAINDER_SOURCES) : []),
     ...(drugConductFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_DRUG_CONDUCT_SOURCES) : []),
     ...(commercialSexFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_COMMERCIAL_SEX_SOURCES) : []),
     ...(priorityGapsFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_PRIORITY_GAPS_SOURCES) : []),
@@ -156,6 +160,7 @@ export function loadOhioAuthorityManifest(
       charge.jurisdiction === "OH" &&
       (residualFresh || !OHIO_RESIDUAL_SOURCES.some(record => record.chargeId === charge.id)) &&
       (justiceFresh || !OHIO_JUSTICE_SOURCES.some(record => record.chargeId === charge.id)) &&
+      (drugRemainderFresh || !OHIO_DRUG_REMAINDER_SOURCES.some(record => record.chargeId === charge.id)) &&
       (drugConductFresh || !OHIO_DRUG_CONDUCT_SOURCES.some(record => record.chargeId === charge.id)) &&
       (commercialSexFresh || !OHIO_COMMERCIAL_SEX_SOURCES.some(record => record.chargeId === charge.id)) &&
       (priorityGapsFresh || !OHIO_PRIORITY_GAPS_SOURCES.some(record => record.chargeId === charge.id)) &&
