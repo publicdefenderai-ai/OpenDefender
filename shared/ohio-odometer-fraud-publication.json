@@ -1,0 +1,334 @@
+[
+  {
+    "id": "oh-orc-4549-42-mileage-alteration",
+    "section": "4549.42",
+    "scope": "A",
+    "code": "4549.42(A)",
+    "statutoryName": "Tampering with an odometer",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "E"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Altering, disconnecting or failing to connect a motor vehicle odometer, or causing a covered act, with intent to alter the registered mileage. Manufacturer testing of a new vehicle before delivery to a franchise dealer has a limited disconnection exception. Service is subject to the statutory repair-notice and mileage requirements.",
+    "gradeSummary": "F5 ordinarily; F4 after a prior conviction or guilty plea for this section or one of the other specified Ohio odometer offenses in §§ 4549.42 through 4549.46. For a covered dealer, wholesaler, distributor or auction owner, the violation is grounds for license revocation or denial. Section 4549.50 requires a $25,000 surety bond upon the specified licensing notice; this is separate from the criminal fine.",
+    "dependencies": [
+      "4549.41",
+      "4549.43",
+      "4549.44",
+      "4549.45",
+      "4549.451",
+      "4549.46",
+      "4549.49",
+      "4549.50"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-42-repair-notice",
+    "section": "4549.42",
+    "scope": "D",
+    "code": "4549.42(D)",
+    "statutoryName": "Tampering with an odometer",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Intentionally removing or altering the required odometer repair notice. The notice and its required contents are described in (C).",
+    "gradeSummary": "F5 ordinarily; F4 after a prior conviction or guilty plea for this section or one of the other specified Ohio odometer offenses in §§ 4549.42 through 4549.46. For a covered dealer, wholesaler, distributor or auction owner, the violation is grounds for license revocation or denial. Section 4549.50 requires a $25,000 surety bond upon the specified licensing notice; this is separate from the criminal fine.",
+    "dependencies": [
+      "4549.41",
+      "4549.43",
+      "4549.44",
+      "4549.45",
+      "4549.451",
+      "4549.46",
+      "4549.49",
+      "4549.50"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-42-post-service-reading",
+    "section": "4549.42",
+    "scope": "E",
+    "code": "4549.42(E)",
+    "statutoryName": "Tampering with an odometer",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "E"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "After odometer service the reading must be restored to its prior mileage if possible; otherwise the statute requires a zero reading. The service and notice rules in (C) also apply.",
+    "gradeSummary": "F5 ordinarily; F4 after a prior conviction or guilty plea for this section or one of the other specified Ohio odometer offenses in §§ 4549.42 through 4549.46. For a covered dealer, wholesaler, distributor or auction owner, the violation is grounds for license revocation or denial. Section 4549.50 requires a $25,000 surety bond upon the specified licensing notice; this is separate from the criminal fine.",
+    "dependencies": [
+      "4549.41",
+      "4549.43",
+      "4549.44",
+      "4549.45",
+      "4549.451",
+      "4549.46",
+      "4549.49",
+      "4549.50"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-43-device",
+    "section": "4549.43",
+    "scope": "A",
+    "code": "4549.43(A)",
+    "statutoryName": "Selling or installing an odometer tampering device",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "With intent to defraud, advertising for sale, selling, using or installing a device that causes a vehicle odometer to report mileage other than actual mileage within the manufacturer’s designed tolerance.",
+    "gradeSummary": "F4 ordinarily; F3 after a prior conviction or guilty plea for this section or one of the other specified Ohio odometer offenses in §§ 4549.42 through 4549.46. For a covered dealer, wholesaler, distributor or auction owner, the violation is grounds for license revocation or denial. Section 4549.50 requires a $25,000 surety bond upon the specified licensing notice; this is separate from the criminal fine.",
+    "dependencies": [
+      "4549.41",
+      "4549.42",
+      "4549.44",
+      "4549.45",
+      "4549.451",
+      "4549.46",
+      "4549.49",
+      "4549.50"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-44-operating",
+    "section": "4549.44",
+    "scope": "A",
+    "code": "4549.44(A)",
+    "statutoryName": "Fraudulent driving without a functional odometer",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "With intent to defraud, operating a vehicle on an Ohio public street, road or highway knowing the odometer is disconnected or nonfunctional. Circumstances including duration, distance and a subsequent undisclosed transfer may support an inference of intent.",
+    "gradeSummary": "F4 ordinarily; F3 after a prior conviction or guilty plea for this section or one of the other specified Ohio odometer offenses in §§ 4549.42 through 4549.46. For a covered dealer, wholesaler, distributor or auction owner, the violation is grounds for license revocation or denial. Section 4549.50 requires a $25,000 surety bond upon the specified licensing notice; this is separate from the criminal fine.",
+    "dependencies": [
+      "4549.41",
+      "4549.42",
+      "4549.43",
+      "4549.45",
+      "4549.451",
+      "4549.46",
+      "4549.49",
+      "4549.50"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-45-transfer-without-notice",
+    "section": "4549.45",
+    "scope": "A",
+    "code": "4549.45(A)",
+    "statutoryName": "Transferring a motor vehicle that has a tampered or nonfunctional odometer",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Transferring a vehicle despite knowing or recklessly disregarding facts indicating odometer tampering or nonfunction that reflects lesser mileage or use, without clear, unequivocal written notice to the transferee before transfer. Evidence that the transferor or agent altered or disconnected the instrument as described can constitute prima-facie evidence of knowledge.",
+    "gradeSummary": "F4 ordinarily; F3 after a prior conviction or guilty plea for this section or one of the other specified Ohio odometer offenses in §§ 4549.42 through 4549.46. For a covered dealer, wholesaler, distributor or auction owner, the violation is grounds for license revocation or denial. Section 4549.50 requires a $25,000 surety bond upon the specified licensing notice; this is separate from the criminal fine.",
+    "dependencies": [
+      "4549.41",
+      "4549.42",
+      "4549.43",
+      "4549.44",
+      "4549.451",
+      "4549.46",
+      "4549.49",
+      "4549.50"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-451-written-auction-listing",
+    "section": "4549.451",
+    "scope": "A",
+    "code": "4549.451(A)",
+    "statutoryName": "Auctioneer's statement of disconnected or nonfunctional odometer",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "A licensed auctioneer advertises a vehicle in writing knowing or having reason to believe its odometer has been altered or nonfunctional, without one of the two required statements. The disclosure must appear in the listing itself, in type the same size as the listing text, rather than as a footnote.",
+    "gradeSummary": "F4 ordinarily; F3 after a prior conviction or guilty plea for this section or one of the other specified Ohio odometer offenses in §§ 4549.42 through 4549.46. For a covered dealer, wholesaler, distributor or auction owner, the violation is grounds for license revocation or denial. Section 4549.50 requires a $25,000 surety bond upon the specified licensing notice; this is separate from the criminal fine.",
+    "dependencies": [
+      "4549.41",
+      "4549.42",
+      "4549.43",
+      "4549.44",
+      "4549.45",
+      "4549.46",
+      "4549.49",
+      "4549.50",
+      "4707.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-46-transferor-disclosure",
+    "section": "4549.46",
+    "scope": "A",
+    "code": "4549.46(A)",
+    "statutoryName": "Odometer disclosure violation",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "A transferor fails to give the true and complete odometer disclosures required by § 4505.06. An incorrect reading caused by a previous owner’s statutory violation is excepted unless the transferor knew or recklessly disregarded facts indicating that violation. The disclosure duty comes from § 4505.06 and includes exceptions for specified estate or survivor transfers, creation of a security interest and vehicles with a gross vehicle weight rating over 16,000 pounds. Other applicable disclosure rules must be assessed for the transfer.",
+    "gradeSummary": "F4 ordinarily; F3 after a prior conviction or guilty plea for this section or one of the other specified Ohio odometer offenses in §§ 4549.42 through 4549.46. For a covered dealer, wholesaler, distributor or auction owner, the violation is grounds for license revocation or denial. Section 4549.50 requires a $25,000 surety bond upon the specified licensing notice; this is separate from the criminal fine.",
+    "dependencies": [
+      "4549.41",
+      "4549.42",
+      "4549.43",
+      "4549.44",
+      "4549.45",
+      "4549.451",
+      "4549.49",
+      "4549.50",
+      "4505.06"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-46-dealer-acceptance",
+    "section": "4549.46",
+    "scope": "B",
+    "code": "4549.46(B)",
+    "statutoryName": "Odometer disclosure violation",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "A dealer or wholesaler acquiring ownership accepts a written odometer disclosure that is incomplete under § 4505.06. The disclosure duty comes from § 4505.06 and includes exceptions for specified estate or survivor transfers, creation of a security interest and vehicles with a gross vehicle weight rating over 16,000 pounds. Other applicable disclosure rules must be assessed for the transfer.",
+    "gradeSummary": "F4 ordinarily; F3 after a prior conviction or guilty plea for this section or one of the other specified Ohio odometer offenses in §§ 4549.42 through 4549.46. For a covered dealer, wholesaler, distributor or auction owner, the violation is grounds for license revocation or denial. Section 4549.50 requires a $25,000 surety bond upon the specified licensing notice; this is separate from the criminal fine.",
+    "dependencies": [
+      "4549.41",
+      "4549.42",
+      "4549.43",
+      "4549.44",
+      "4549.45",
+      "4549.451",
+      "4549.49",
+      "4549.50",
+      "4505.06"
+    ],
+    "extraGrading": []
+  }
+]
