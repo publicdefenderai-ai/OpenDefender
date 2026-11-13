@@ -1,3 +1,4 @@
+import { OHIO_WEAPONS_LOCATION_SOURCES, isOhioWeaponsLocationSourceFresh } from "../data/ohio-weapons-location-source";
 import { OHIO_DRUG_REMAINDER_SOURCES, isOhioDrugRemainderSourceFresh } from "../data/ohio-drug-remainder-source";
 import { OHIO_DRUG_CONDUCT_SOURCES, isOhioDrugConductSourceFresh } from "../data/ohio-drug-conduct-source";
 import { OHIO_COMMERCIAL_SEX_SOURCES, isOhioCommercialSexSourceFresh } from "../data/ohio-commercial-sex-source";
@@ -14,6 +15,8 @@ import { OHIO_THEFT_FRAUD_SOURCES, isOhioTheftFraudSourceFresh } from "../data/o
 import { OHIO_RESIDUAL_SOURCES, isOhioResidualSourceFresh } from "../data/ohio-residual-source";
 import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "../data/florida-persons-source";
 import { FLORIDA_ROBBERY_SOURCES, isFloridaRobberySourceFresh } from "../data/florida-robbery-source";
+import { FLORIDA_RESTRAINT_SOURCES, isFloridaRestraintSourceFresh } from "../data/florida-restraint-source";
+import { FLORIDA_CRASH_FLIGHT_SOURCES, isFloridaCrashFlightSourceFresh } from "../data/florida-crash-flight-source";
 import { OHIO_MAJOR_SOURCES, isOhioMajorSourceFresh } from "../data/ohio-major-source";
 import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import { randomUUID } from "node:crypto";
@@ -273,6 +276,9 @@ export async function getCurrentAuthoritySelectableChargeIds(
   if (jurisdiction === "OH" && !isOhioResidualSourceFresh()) {
     for (const source of OHIO_RESIDUAL_SOURCES) selectable.delete(source.chargeId);
   }
+  if (jurisdiction === "OH" && !isOhioWeaponsLocationSourceFresh()) {
+    for (const source of OHIO_WEAPONS_LOCATION_SOURCES) selectable.delete(source.chargeId);
+  }
   if (jurisdiction === "OH" && !isOhioDrugRemainderSourceFresh()) {
     for (const source of OHIO_DRUG_REMAINDER_SOURCES) selectable.delete(source.chargeId);
   }
@@ -321,6 +327,12 @@ export async function getCurrentAuthoritySelectableChargeIds(
   if (jurisdiction === "FL" && !isFloridaRobberySourceFresh()) {
     for (const source of FLORIDA_ROBBERY_SOURCES) selectable.delete(source.chargeId);
   }
+  if (jurisdiction === "FL" && !isFloridaRestraintSourceFresh()) {
+    for (const source of FLORIDA_RESTRAINT_SOURCES) selectable.delete(source.chargeId);
+  }
+  if (jurisdiction === "FL" && !isFloridaCrashFlightSourceFresh()) {
+    for (const source of FLORIDA_CRASH_FLIGHT_SOURCES) selectable.delete(source.chargeId);
+  }
   if (jurisdiction === "FL" && !isFloridaReviewedSourceFresh()) {
     for (const source of FLORIDA_REVIEWED_SOURCE_RECORDS) selectable.delete(source.chargeId);
   }
@@ -359,8 +371,8 @@ export async function getCurrentAuthoritySelectableChargeIds(
   // Old completed ingestion runs must not serve corrected summaries until
   // the newly required sentencing/definition evidence has actually been seeded.
   if (jurisdiction === "OH") {
-    for (const update of [...commonUpdates, ...[...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES, ...OHIO_DRUG_REMAINDER_SOURCES].map(source => ({id: source.chargeId}))]) {
-      const source = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES, ...OHIO_DRUG_REMAINDER_SOURCES].find(row => row.chargeId === update.id);
+    for (const update of [...commonUpdates, ...[...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES, ...OHIO_DRUG_REMAINDER_SOURCES, ...OHIO_WEAPONS_LOCATION_SOURCES].map(source => ({id: source.chargeId}))]) {
+      const source = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES, ...OHIO_DRUG_REMAINDER_SOURCES, ...OHIO_WEAPONS_LOCATION_SOURCES].find(row => row.chargeId === update.id);
       if (!source) {
         selectable.delete(update.id);
         continue;

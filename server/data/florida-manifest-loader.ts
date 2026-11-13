@@ -1,5 +1,7 @@
 import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "./florida-persons-source";
 import { FLORIDA_ROBBERY_SOURCES, isFloridaRobberySourceFresh } from "./florida-robbery-source";
+import { FLORIDA_RESTRAINT_SOURCES, isFloridaRestraintSourceFresh } from "./florida-restraint-source";
+import { FLORIDA_CRASH_FLIGHT_SOURCES, isFloridaCrashFlightSourceFresh } from "./florida-crash-flight-source";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { criminalCharges } from "@shared/criminal-charges";
@@ -42,7 +44,7 @@ export function loadFloridaAuthorityManifest(
     throw new Error("The committed Florida manifest has an invalid generation timestamp");
   }
 
-  const sourceFirstIds = new Set([...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES].map(row => row.chargeId));
+  const sourceFirstIds = new Set([...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES, ...FLORIDA_RESTRAINT_SOURCES, ...FLORIDA_CRASH_FLIGHT_SOURCES].map(row => row.chargeId));
   if (raw.catalogRecords.some(record => sourceFirstIds.has(record.chargeId))) {
     throw new Error("The legacy Florida manifest must not shadow a reviewed source-first record");
   }
@@ -63,9 +65,11 @@ export function loadFloridaAuthorityManifest(
 
   const reviewedFresh = isFloridaReviewedSourceFresh(now);
   const robberyFresh = isFloridaRobberySourceFresh(now);
+  const restraintFresh = isFloridaRestraintSourceFresh(now);
+  const crashFlightFresh = isFloridaCrashFlightSourceFresh(now);
   const personsFresh = isFloridaPersonsSourceFresh(now);
-  const publishableReviewedIds = new Set([...(reviewedFresh ? FLORIDA_REVIEWED_SOURCE_RECORDS : []), ...(personsFresh ? FLORIDA_PERSONS_SOURCES : []), ...(robberyFresh ? FLORIDA_ROBBERY_SOURCES : [])].map(row => row.chargeId));
-  const reviewedRetrievals = [...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES].flatMap(record =>
+  const publishableReviewedIds = new Set([...(reviewedFresh ? FLORIDA_REVIEWED_SOURCE_RECORDS : []), ...(personsFresh ? FLORIDA_PERSONS_SOURCES : []), ...(robberyFresh ? FLORIDA_ROBBERY_SOURCES : []), ...(restraintFresh ? FLORIDA_RESTRAINT_SOURCES : []), ...(crashFlightFresh ? FLORIDA_CRASH_FLIGHT_SOURCES : [])].map(row => row.chargeId));
+  const reviewedRetrievals = [...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES, ...FLORIDA_RESTRAINT_SOURCES, ...FLORIDA_CRASH_FLIGHT_SOURCES].flatMap(record =>
     record.dependencies.map(document => Date.parse(document.retrievedAt)));
   const manifestGeneratedAt = reviewedRetrievals.length
     ? new Date(Math.max(generatedAt.getTime(), ...reviewedRetrievals))
@@ -75,6 +79,8 @@ export function loadFloridaAuthorityManifest(
     ...(reviewedFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt) : []),
     ...(personsFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt, FLORIDA_PERSONS_SOURCES) : []),
     ...(robberyFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt, FLORIDA_ROBBERY_SOURCES) : []),
+    ...(restraintFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt, FLORIDA_RESTRAINT_SOURCES) : []),
+    ...(crashFlightFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt, FLORIDA_CRASH_FLIGHT_SOURCES) : []),
   ];
   const expectedIds = criminalCharges
     .filter(charge => charge.jurisdiction === "FL" &&

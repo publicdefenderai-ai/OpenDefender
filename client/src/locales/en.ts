@@ -3886,6 +3886,15 @@ export default {
     }
   },
   "courtRecords": {
+    "design": {
+      "viewDocket": "View docket",
+      "searching": "Searching court records…",
+      "fullAccess": "Results from the RECAP Archive and case law database.",
+      "limitedAccess": "Full RECAP access is unavailable. Results may be limited.",
+      "about": "About RECAP",
+      "locator": "Find a courthouse",
+      "sources": "Data sources"
+    },
     "hero": {
       "title": "Court Records Search",
       "subtitle": "Search free court records from the RECAP Archive and case law database"

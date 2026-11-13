@@ -3,6 +3,8 @@ import { FLORIDA_LEGACY_SEXUAL_DEFINITIONS } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY_DEFINITIONS } from "./florida-legacy-property";
 import { FLORIDA_PERSONS_DEFINITIONS } from "./florida-persons-batch";
 import { FLORIDA_ROBBERY_DEFINITIONS } from "./florida-robbery-batch";
+import { FLORIDA_RESTRAINT_DEFINITIONS } from "./florida-restraint-batch";
+import { FLORIDA_CRASH_FLIGHT_DEFINITIONS } from "./florida-crash-flight-batch";
 import { FLORIDA_REVIEWED_DEFINITIONS } from "./florida-reviewed-batch";
 
 /**
@@ -19478,7 +19480,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   },
 };
 
-for (const definition of [...FLORIDA_REVIEWED_DEFINITIONS, ...FLORIDA_PERSONS_DEFINITIONS, ...FLORIDA_ROBBERY_DEFINITIONS, ...FLORIDA_LEGACY_PROPERTY_DEFINITIONS, ...FLORIDA_LEGACY_SEXUAL_DEFINITIONS, ...FLORIDA_LEGACY_REMAINING_DEFINITIONS]) {
+for (const definition of [...FLORIDA_REVIEWED_DEFINITIONS, ...FLORIDA_PERSONS_DEFINITIONS, ...FLORIDA_ROBBERY_DEFINITIONS, ...FLORIDA_RESTRAINT_DEFINITIONS, ...FLORIDA_CRASH_FLIGHT_DEFINITIONS, ...FLORIDA_LEGACY_PROPERTY_DEFINITIONS, ...FLORIDA_LEGACY_SEXUAL_DEFINITIONS, ...FLORIDA_LEGACY_REMAINING_DEFINITIONS]) {
   const primary = definition.citations[0];
   const existing = CHARGE_CITATIONS[definition.id];
   CHARGE_CITATIONS[definition.id] = {

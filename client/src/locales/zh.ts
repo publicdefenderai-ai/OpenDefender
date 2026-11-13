@@ -3887,6 +3887,15 @@ export default {
     }
   },
   "courtRecords": {
+    "design": {
+      "viewDocket": "查看案卷",
+      "searching": "正在搜索法院记录…",
+      "fullAccess": "结果来自 RECAP 档案库和判例数据库。",
+      "limitedAccess": "目前无法完整访问 RECAP，搜索结果可能有限。",
+      "about": "关于 RECAP",
+      "locator": "查找法院",
+      "sources": "数据来源"
+    },
     "hero": {
       "title": "法庭记录搜索",
       "subtitle": "从 RECAP Archive 和判例法数据库中搜索免费的法庭记录"

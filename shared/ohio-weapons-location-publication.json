@@ -1,0 +1,448 @@
+[
+  {
+    "id": "oh-orc-2923-121-liquor-permit-premises",
+    "section": "2923.121",
+    "scope": "A",
+    "code": "2923.121(A)",
+    "statutoryName": "Illegal possession of a firearm in a liquor permit premises",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "D"
+    ],
+    "degrees": [
+      "F5",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Possessing a firearm in a room where someone is consuming beer or intoxicating liquor on D-permit premises, or in an open-air arena with such a permit. Division (B) lists exemptions, including a conditional handgun-license exemption; division (C) provides a separate, limited affirmative defense for a firearm other than a handgun.",
+    "gradeSummary": "F5 ordinarily. Knowingly carrying or having the firearm concealed on the person or concealed ready at hand makes it F3. Division (D) bars requiring a concealed handgun license as a condition of dismissal.",
+    "dependencies": [
+      "2923.11",
+      "4301.01",
+      "2923.111",
+      "2923.125",
+      "2923.126",
+      "2935.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-122-school-conveyance",
+    "section": "2923.122",
+    "scope": "A",
+    "code": "2923.122(A)",
+    "statutoryName": "Illegal conveyance or possession of a deadly weapon or dangerous ordnance in a school safety zone",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "E(1)"
+    ],
+    "contextPaths": [
+      "D",
+      "F"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly conveying or attempting to convey a deadly weapon or dangerous ordnance into a school safety zone. Division (D) contains separate exemptions with specified actors and conditions; exemption eligibility depends on the facts. Section 2901.01 includes the school, school building, school premises, school activity and school bus in the zone.",
+    "gradeSummary": "F5 ordinarily; a prior conviction under this section makes it F4. For an offender under 19, (F) generally requires a class four license or operating-privilege suspension (one to five years under §4510.02) and applicable denial of issuance. For good cause the court can decline it and may substitute community service.",
+    "dependencies": [
+      "2923.11",
+      "4510.02",
+      "3301.07",
+      "2923.111",
+      "2923.125",
+      "5502.703",
+      "109.801"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-122-school-possession",
+    "section": "2923.122",
+    "scope": "B",
+    "code": "2923.122(B)",
+    "statutoryName": "Illegal conveyance or possession of a deadly weapon or dangerous ordnance in a school safety zone",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "E(1)"
+    ],
+    "contextPaths": [
+      "D",
+      "F"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly possessing a deadly weapon or dangerous ordnance in a school safety zone. Division (D) contains separate exemptions with specified actors and conditions; exemption eligibility depends on the facts. Section 2901.01 includes the school, school building, school premises, school activity and school bus in the zone.",
+    "gradeSummary": "F5 ordinarily; a prior conviction under this section makes it F4. For an offender under 19, (F) generally requires a class four license or operating-privilege suspension (one to five years under §4510.02) and applicable denial of issuance. For good cause the court can decline it and may substitute community service.",
+    "dependencies": [
+      "2923.11",
+      "4510.02",
+      "3301.07",
+      "2923.111",
+      "2923.125",
+      "5502.703",
+      "109.801"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-122-school-replica",
+    "section": "2923.122",
+    "scope": "C",
+    "code": "2923.122(C)",
+    "statutoryName": "Illegal possession of an object indistinguishable from a firearm in a school safety zone",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "E(2)"
+    ],
+    "contextPaths": [
+      "D",
+      "F",
+      "G"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Knowingly possessing an object indistinguishable from a firearm in a school safety zone and indicating possession and that it is a firearm, or knowingly displaying or brandishing it and indicating that it is a firearm. The reasonable untrained observer standard in (G) applies regardless of whether the object can fire. Division (D) contains separate exemptions with specified actors and conditions; exemption eligibility depends on the facts. Section 2901.01 includes the school, school building, school premises, school activity and school bus in the zone.",
+    "gradeSummary": "M1 ordinarily; a prior conviction under this section makes it F5. For an offender under 19, (F) generally requires a class four license or operating-privilege suspension (one to five years under §4510.02) and applicable denial of issuance. For good cause the court can decline it and may substitute community service.",
+    "dependencies": [
+      "2923.11",
+      "4510.02",
+      "3301.07",
+      "2923.111",
+      "2923.125",
+      "5502.703",
+      "109.801"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2923.122",
+          "quote": "illegal possession of an object indistinguishable from a firearm in a school safety zone is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2923-123-courthouse-conveyance",
+    "section": "2923.123",
+    "scope": "A",
+    "code": "2923.123(A)",
+    "statutoryName": "Illegal conveyance of a deadly weapon or dangerous ordnance into a courthouse",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "D(1)"
+    ],
+    "contextPaths": [
+      "C",
+      "E",
+      "F"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly conveying or attempting to convey a deadly weapon or dangerous ordnance into a courthouse or another building or structure containing a courtroom. Division (C) lists exemptions. Division (E) limits the listed exemptions where applicable court rules prohibit the conduct for all persons.",
+    "gradeSummary": "F5 ordinarily. A previous conviction under either (A) or (B) makes it F4.",
+    "dependencies": [
+      "2923.11",
+      "2935.01",
+      "2923.125",
+      "2923.126"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-123-courthouse-possession",
+    "section": "2923.123",
+    "scope": "B",
+    "code": "2923.123(B)",
+    "statutoryName": "Illegal possession or control of a deadly weapon or dangerous ordnance in a courthouse",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "D(2)"
+    ],
+    "contextPaths": [
+      "C",
+      "E",
+      "F"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly possessing or having control of a deadly weapon or dangerous ordnance in a courthouse or another building or structure containing a courtroom. Division (C) lists exemptions. Division (E) limits the listed exemptions where applicable court rules prohibit the conduct for all persons.",
+    "gradeSummary": "F5 ordinarily. A previous conviction under either (A) or (B) makes it F4.",
+    "dependencies": [
+      "2923.11",
+      "2935.01",
+      "2923.125",
+      "2923.126"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-131-adult-detention",
+    "section": "2923.131",
+    "scope": "B",
+    "code": "2923.131(B)",
+    "statutoryName": "Possession of a deadly weapon while under detention",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(2)"
+    ],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Possessing a deadly weapon while under detention at a detention facility as defined in §2921.01. This choice covers adults and the modern predicate-offense grades; juvenile detention and older classified predicates require separate review.",
+    "gradeSummary": "The most serious offense underlying detention sets the degree. Aggravated murder or murder gives F1. For predicates committed on or after July 1, 1996, F1 gives F2, F2 gives F3, F3 gives F4 and F4/F5 give F5. An unclassified felony or misdemeanor also gives F5. The M1 in (C)(1) is specific to qualifying juvenile detention. Under §2929.14(C)(2), any prison term imposed for this felony must run consecutively to the term being served and any other previously or subsequently imposed prison term.",
+    "dependencies": [
+      "2923.11",
+      "2921.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-132-violent-career-criminal",
+    "section": "2923.132",
+    "scope": "B",
+    "code": "2923.132(B)",
+    "statutoryName": "Unlawful use of a weapon by a violent career criminal",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "F1"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly using a firearm or dangerous ordnance as a violent career criminal. The defined status requires at least two qualifying violent felony convictions or pleas within the statutory eight-year period, separated by intervening sentences and outside one course of conduct. Division (A) defines eligible predicates, confinement extensions and exceptions. No prior conviction is assumed to qualify.",
+    "gradeSummary": "F1 with mandatory imprisonment. For an offense on or after March 22, 2019, the mandatory minimum is a whole number of years from two through eleven with an indefinite maximum. An earlier offense carries a mandatory definite term from two through eleven years.",
+    "dependencies": [
+      "2923.11",
+      "2929.01",
+      "2967.01",
+      "2950.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-1211-license-falsification",
+    "section": "2923.1211",
+    "scope": "A",
+    "code": "2923.1211(A)",
+    "statutoryName": "Falsification of a concealed handgun license",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Altering a concealed handgun license or creating a fictitious document purporting to be one.",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "2923.11",
+      "2923.124",
+      "2923.128"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-1211-suspended-revoked-license",
+    "section": "2923.1211",
+    "scope": "B",
+    "code": "2923.1211(B)",
+    "statutoryName": "Possessing a revoked or suspended concealed handgun license",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M3"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Possessing a previously issued concealed handgun license that was revoked or suspended, except in the performance of official duties.",
+    "gradeSummary": "M3.",
+    "dependencies": [
+      "2923.11",
+      "2923.124",
+      "2923.128"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-201-defacing-identification",
+    "section": "2923.201",
+    "scope": "A(1)",
+    "code": "2923.201(A)(1)",
+    "statutoryName": "Defacing identification marks of a firearm",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "B(1)"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "M1",
+      "F4"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Changing, altering, removing or obliterating identification marks specified by (A)(1) on a firearm. Division (C) excludes firearms manufactured without an inscribed manufacturer’s serial number.",
+    "gradeSummary": "M1 ordinarily. A prior conviction or guilty plea for this same subdivision makes it F4.",
+    "dependencies": [
+      "2923.11"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2923.201",
+          "quote": "defacing identification marks of a firearm is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2923-201-possession-defaced",
+    "section": "2923.201",
+    "scope": "A(2)",
+    "code": "2923.201(A)(2)",
+    "statutoryName": "Possessing a defaced firearm",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "B(2)"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "M1",
+      "F4"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Possessing a firearm knowing or having reasonable cause to believe that a specified identification mark has been changed, altered, removed or obliterated. Division (C) excludes firearms manufactured without an inscribed manufacturer’s serial number.",
+    "gradeSummary": "M1 ordinarily. A prior conviction or guilty plea for this same subdivision makes it F4.",
+    "dependencies": [
+      "2923.11"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2923.201",
+          "quote": "possessing a defaced firearm is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  }
+]

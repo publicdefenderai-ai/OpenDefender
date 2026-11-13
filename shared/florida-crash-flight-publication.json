@@ -1,0 +1,986 @@
+[
+  {
+    "id": "fl-fs-316-027-2-a-crash-flight",
+    "section": "316.027",
+    "scope": "(2)(a)",
+    "officialTitle": "Crash involving death or personal injuries",
+    "dependencies": [
+      "316.027",
+      "316.062",
+      "322.0261",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.027": [
+        "(1)",
+        "(2)(a)",
+        "(2)(d)",
+        "(2)(e)",
+        "(2)(f)",
+        "(5)"
+      ],
+      "316.062": [
+        "(1)",
+        "(2)"
+      ],
+      "322.0261": [
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-027-2-a-crash-flight",
+      "name": "Leaving a crash involving injury",
+      "names": {
+        "es": "Abandono del lugar de un choque con lesiones",
+        "zh": "逃离造成伤害的事故现场"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.027(2)(a)",
+      "slug": "fl-fs-316-027-2-a-crash-flight",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.027(2)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.027.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.027",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.027.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.062",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.062.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.0261",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.0261.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Crash involving death or personal injuries",
+          "Leaving a crash involving injury",
+          "FS 316.027(2)(a)",
+          "F.S. 316.027(2)(a)"
+        ],
+        "es": [
+          "Abandono del lugar de un choque con lesiones",
+          "FS 316.027(2)(a)",
+          "F.S. 316.027(2)(a)"
+        ],
+        "zh": [
+          "逃离造成伤害的事故现场",
+          "FS 316.027(2)(a)",
+          "F.S. 316.027(2)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The crash resulted in injury other than serious bodily injury. The driver involved in a crash on public or private property must immediately stop at or near the scene and remain to provide the required identifying information and reasonable assistance under §316.062. This charge requires a willful violation. Section 316.027 excludes qualifying motorsports events and closed-course facilities.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years and a $5,000 fine. License revocation is at least three years. Reinstatement requires a victim-impact session or, if unavailable, an approved course. Restitution is required unless the court finds clear and compelling reasons. A vulnerable road user raises the sentencing ranking one level."
+        },
+        "es": {
+          "plainSummary": "El choque causó lesiones que no alcanzan el umbral de lesiones corporales graves. Quien conduce y participa en un choque en propiedad pública o privada debe detenerse de inmediato en el lugar o cerca de él y permanecer allí para dar la información requerida y prestar ayuda razonable según §316.062. Se requiere un incumplimiento voluntario. Se excluyen determinados eventos y circuitos cerrados de deportes de motor.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años y una multa de $5,000. Se revoca la licencia por al menos tres años. Para recuperarla se exige una sesión sobre el impacto en las víctimas o, si no existe, un curso aprobado. Se exige restitución salvo motivos claros y convincentes. Una víctima que sea usuario vulnerable de la vía eleva un nivel la clasificación para sentencia."
+        },
+        "zh": {
+          "plainSummary": "事故造成伤害，但未达到严重人身伤害的标准。 在公共或私人场所发生碰撞，涉事驾驶人须立即在现场或附近停车并留在现场，按第316.062条提供必要身份信息和合理援助。本罪要求故意违反义务。特定赛车活动和封闭赛车场除外。",
+          "degreeContext": "三级重罪：通常最高五年监禁和5,000美元罚金。 驾照至少吊销三年；恢复须参加受害人影响课程，若当地无此课程则须参加获准的替代课程。除非法院认定有明确且充分的理由，否则须赔偿。若受害人属易受伤害的道路使用者，量刑排序提高一级。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-027-2-b-crash-flight",
+    "section": "316.027",
+    "scope": "(2)(b)",
+    "officialTitle": "Crash involving death or personal injuries",
+    "dependencies": [
+      "316.027",
+      "316.062",
+      "322.0261",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.027": [
+        "(1)",
+        "(2)(b)",
+        "(2)(d)",
+        "(2)(e)",
+        "(2)(f)",
+        "(5)"
+      ],
+      "316.062": [
+        "(1)",
+        "(2)"
+      ],
+      "322.0261": [
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-027-2-b-crash-flight",
+      "name": "Leaving a crash involving serious bodily injury",
+      "names": {
+        "es": "Abandono del lugar de un choque con lesiones corporales graves",
+        "zh": "逃离造成严重人身伤害的事故现场"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.027(2)(b)",
+      "slug": "fl-fs-316-027-2-b-crash-flight",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.027(2)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.027.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.027",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.027.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.062",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.062.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.0261",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.0261.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Crash involving death or personal injuries",
+          "Leaving a crash involving serious bodily injury",
+          "FS 316.027(2)(b)",
+          "F.S. 316.027(2)(b)"
+        ],
+        "es": [
+          "Abandono del lugar de un choque con lesiones corporales graves",
+          "FS 316.027(2)(b)",
+          "F.S. 316.027(2)(b)"
+        ],
+        "zh": [
+          "逃离造成严重人身伤害的事故现场",
+          "FS 316.027(2)(b)",
+          "F.S. 316.027(2)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The crash caused an injury creating a substantial risk of death, serious disfigurement, or prolonged loss or impairment of a bodily member or organ. The driver involved in a crash on public or private property must immediately stop at or near the scene and remain to provide the required identifying information and reasonable assistance under §316.062. This charge requires a willful violation. Section 316.027 excludes qualifying motorsports events and closed-course facilities.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years and a $10,000 fine. License revocation is at least three years. Reinstatement requires a victim-impact session or, if unavailable, an approved course. Restitution is required unless the court finds clear and compelling reasons. A vulnerable road user raises the sentencing ranking one level."
+        },
+        "es": {
+          "plainSummary": "El choque causó una lesión con riesgo considerable de muerte, desfiguración grave o pérdida o deterioro prolongados de una extremidad u órgano. Quien conduce y participa en un choque en propiedad pública o privada debe detenerse de inmediato en el lugar o cerca de él y permanecer allí para dar la información requerida y prestar ayuda razonable según §316.062. Se requiere un incumplimiento voluntario. Se excluyen determinados eventos y circuitos cerrados de deportes de motor.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años y una multa de $10,000. Se revoca la licencia por al menos tres años. Para recuperarla se exige una sesión sobre el impacto en las víctimas o, si no existe, un curso aprobado. Se exige restitución salvo motivos claros y convincentes. Una víctima que sea usuario vulnerable de la vía eleva un nivel la clasificación para sentencia."
+        },
+        "zh": {
+          "plainSummary": "事故造成的伤害具有重大死亡风险、严重毁容，或使肢体或器官长期丧失或损害功能。 在公共或私人场所发生碰撞，涉事驾驶人须立即在现场或附近停车并留在现场，按第316.062条提供必要身份信息和合理援助。本罪要求故意违反义务。特定赛车活动和封闭赛车场除外。",
+          "degreeContext": "二级重罪：通常最高15年监禁和10,000美元罚金。 驾照至少吊销三年；恢复须参加受害人影响课程，若当地无此课程则须参加获准的替代课程。除非法院认定有明确且充分的理由，否则须赔偿。若受害人属易受伤害的道路使用者，量刑排序提高一级。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-027-2-c-crash-flight",
+    "section": "316.027",
+    "scope": "(2)(c)",
+    "officialTitle": "Crash involving death or personal injuries",
+    "dependencies": [
+      "316.027",
+      "316.062",
+      "322.0261",
+      "316.193",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.027": [
+        "(1)",
+        "(2)(c)",
+        "(2)(d)",
+        "(2)(e)",
+        "(2)(f)",
+        "(5)",
+        "(2)(g)"
+      ],
+      "316.062": [
+        "(1)",
+        "(2)"
+      ],
+      "322.0261": [
+        "(2)"
+      ],
+      "316.193": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-027-2-c-crash-flight",
+      "name": "Leaving a crash involving death",
+      "names": {
+        "es": "Abandono del lugar de un choque mortal",
+        "zh": "逃离致人死亡的事故现场"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.027(2)(c)",
+      "slug": "fl-fs-316-027-2-c-crash-flight",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.027(2)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.027.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.027",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.027.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.062",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.062.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.0261",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.0261.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.193",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.193.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Crash involving death or personal injuries",
+          "Leaving a crash involving death",
+          "FS 316.027(2)(c)",
+          "F.S. 316.027(2)(c)"
+        ],
+        "es": [
+          "Abandono del lugar de un choque mortal",
+          "FS 316.027(2)(c)",
+          "F.S. 316.027(2)(c)"
+        ],
+        "zh": [
+          "逃离致人死亡的事故现场",
+          "FS 316.027(2)(c)",
+          "F.S. 316.027(2)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The crash resulted in a person’s death. The driver involved in a crash on public or private property must immediately stop at or near the scene and remain to provide the required identifying information and reasonable assistance under §316.062. This charge requires a willful violation. Section 316.027 excludes qualifying motorsports events and closed-course facilities.",
+          "degreeContext": "First-degree felony: ordinarily up to 30 years and a $10,000 fine. The four-year minimum applies even without DUI. Unless driving under the influence, a defendant may move for a departure; the court must find imposition would cause injustice and state its basis. Certain prior convictions require custody pending bail review. License revocation is at least three years. Reinstatement requires a victim-impact session or, if unavailable, an approved course. Restitution is required unless the court finds clear and compelling reasons. A vulnerable road user raises the sentencing ranking one level."
+        },
+        "es": {
+          "plainSummary": "Una persona murió como consecuencia del choque. Quien conduce y participa en un choque en propiedad pública o privada debe detenerse de inmediato en el lugar o cerca de él y permanecer allí para dar la información requerida y prestar ayuda razonable según §316.062. Se requiere un incumplimiento voluntario. Se excluyen determinados eventos y circuitos cerrados de deportes de motor.",
+          "degreeContext": "Delito grave de primer grado: normalmente hasta 30 años y una multa de $10,000. El mínimo de cuatro años se aplica aun sin conducir bajo la influencia. Salvo en casos de conducción bajo la influencia, se puede pedir una pena inferior; el tribunal debe determinar que el mínimo sería injusto y explicar su decisión. Ciertas condenas anteriores requieren detención hasta que el tribunal examine la fianza. Se revoca la licencia por al menos tres años. Para recuperarla se exige una sesión sobre el impacto en las víctimas o, si no existe, un curso aprobado. Se exige restitución salvo motivos claros y convincentes. Una víctima que sea usuario vulnerable de la vía eleva un nivel la clasificación para sentencia."
+        },
+        "zh": {
+          "plainSummary": "事故导致人员死亡。 在公共或私人场所发生碰撞，涉事驾驶人须立即在现场或附近停车并留在现场，按第316.062条提供必要身份信息和合理援助。本罪要求故意违反义务。特定赛车活动和封闭赛车场除外。",
+          "degreeContext": "一级重罪：通常最高30年监禁和10,000美元罚金。 即使未酒驾或药驾，通常也须至少监禁四年。除受酒精或药物影响驾驶外，可申请低于最低刑；法院须认定执行最低刑将造成不公，并说明理由。有某些前科者须羁押至法院审查保释。 驾照至少吊销三年；恢复须参加受害人影响课程，若当地无此课程则须参加获准的替代课程。除非法院认定有明确且充分的理由，否则须赔偿。若受害人属易受伤害的道路使用者，量刑排序提高一级。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-1935-1-crash-flight",
+    "section": "316.1935",
+    "scope": "(1)",
+    "officialTitle": "Fleeing or attempting to elude a law enforcement officer; aggravated fleeing or eluding",
+    "dependencies": [
+      "316.1935",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.1935": [
+        "(1)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-1935-1-crash-flight",
+      "name": "Fleeing or attempting to elude after an order to stop",
+      "names": {
+        "es": "Huida o intento de evasión tras una orden de detenerse",
+        "zh": "明知停车命令而逃离或企图逃避"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.1935(1)",
+      "slug": "fl-fs-316-1935-1-crash-flight",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.1935(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1935.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.1935",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1935.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Fleeing or attempting to elude a law enforcement officer; aggravated fleeing or eluding",
+          "Fleeing or attempting to elude after an order to stop",
+          "FS 316.1935(1)",
+          "F.S. 316.1935(1)"
+        ],
+        "es": [
+          "Huida o intento de evasión tras una orden de detenerse",
+          "FS 316.1935(1)",
+          "F.S. 316.1935(1)"
+        ],
+        "zh": [
+          "明知停车命令而逃离或企图逃避",
+          "FS 316.1935(1)",
+          "F.S. 316.1935(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A vehicle operator knows that an authorized officer ordered a stop and willfully refuses or fails to stop, or stops knowing of the order and then willfully flees to elude the officer.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years and a $5,000 fine. For motor-vehicle operators the court revokes the license for one to five years. The court cannot suspend, defer or withhold adjudication or sentence. The vehicle may be seized and forfeited."
+        },
+        "es": {
+          "plainSummary": "Quien conduce sabe que un agente autorizado ordenó detenerse y deliberadamente se niega o no se detiene, o se detiene con conocimiento de la orden y luego huye deliberadamente para evadir al agente.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años y una multa de $5,000. Para conductores de vehículos motorizados, se revoca la licencia de uno a cinco años. El tribunal no puede suspender, aplazar ni reservar la declaración de culpabilidad ni la imposición de la pena. El vehículo puede ser incautado y decomisado."
+        },
+        "zh": {
+          "plainSummary": "驾驶人明知获授权警员命令停车，仍故意拒绝或不停车，或依令停车后故意逃离以躲避警员。",
+          "degreeContext": "三级重罪：通常最高五年监禁和5,000美元罚金。 机动车驾驶人的驾照须吊销一至五年。法院不得暂停、延后或暂缓定罪或判刑。涉案车辆可能被扣押并没收。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-1935-2-crash-flight",
+    "section": "316.1935",
+    "scope": "(2)",
+    "officialTitle": "Fleeing or attempting to elude a law enforcement officer; aggravated fleeing or eluding",
+    "dependencies": [
+      "316.1935",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.1935": [
+        "(2)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-1935-2-crash-flight",
+      "name": "Fleeing or attempting to elude a marked patrol vehicle",
+      "names": {
+        "es": "Huida o intento de evasión ante una patrulla identificada",
+        "zh": "逃离或企图逃避有标志的巡逻车"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.1935(2)",
+      "slug": "fl-fs-316-1935-2-crash-flight",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.1935(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1935.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.1935",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1935.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Fleeing or attempting to elude a law enforcement officer; aggravated fleeing or eluding",
+          "Fleeing or attempting to elude a marked patrol vehicle",
+          "FS 316.1935(2)",
+          "F.S. 316.1935(2)"
+        ],
+        "es": [
+          "Huida o intento de evasión ante una patrulla identificada",
+          "FS 316.1935(2)",
+          "F.S. 316.1935(2)"
+        ],
+        "zh": [
+          "逃离或企图逃避有标志的巡逻车",
+          "FS 316.1935(2)",
+          "F.S. 316.1935(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully fleeing or trying to elude an officer in an authorized patrol vehicle displaying prominent agency markings with both lights and siren on.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years and a $5,000 fine. For motor-vehicle operators the court revokes the license for one to five years. The court cannot suspend, defer or withhold adjudication or sentence. The vehicle may be seized and forfeited."
+        },
+        "es": {
+          "plainSummary": "Huir o tratar de evadir deliberadamente a un agente en un vehículo policial autorizado con distintivos visibles de su agencia, luces y sirena activadas.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años y una multa de $5,000. Para conductores de vehículos motorizados, se revoca la licencia de uno a cinco años. El tribunal no puede suspender, aplazar ni reservar la declaración de culpabilidad ni la imposición de la pena. El vehículo puede ser incautado y decomisado."
+        },
+        "zh": {
+          "plainSummary": "故意逃离或企图逃避警员；其获准执勤的巡逻车清楚标有所属机构的辖区标志，警灯和警笛均已开启。",
+          "degreeContext": "三级重罪：通常最高五年监禁和5,000美元罚金。 机动车驾驶人的驾照须吊销一至五年。法院不得暂停、延后或暂缓定罪或判刑。涉案车辆可能被扣押并没收。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-1935-3-a-crash-flight",
+    "section": "316.1935",
+    "scope": "(3)(a)",
+    "officialTitle": "Fleeing or attempting to elude a law enforcement officer; aggravated fleeing or eluding",
+    "dependencies": [
+      "316.1935",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.1935": [
+        "(3)(a)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-1935-3-a-crash-flight",
+      "name": "Fleeing or attempting to elude at high speed or with wanton disregard",
+      "names": {
+        "es": "Huida a alta velocidad o con desprecio temerario por la seguridad",
+        "zh": "高速逃离或肆意漠视安全而逃离"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.1935(3)(a)",
+      "slug": "fl-fs-316-1935-3-a-crash-flight",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.1935(3)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1935.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.1935",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1935.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Fleeing or attempting to elude a law enforcement officer; aggravated fleeing or eluding",
+          "Fleeing or attempting to elude at high speed or with wanton disregard",
+          "FS 316.1935(3)(a)",
+          "F.S. 316.1935(3)(a)"
+        ],
+        "es": [
+          "Huida a alta velocidad o con desprecio temerario por la seguridad",
+          "FS 316.1935(3)(a)",
+          "F.S. 316.1935(3)(a)"
+        ],
+        "zh": [
+          "高速逃离或肆意漠视安全而逃离",
+          "FS 316.1935(3)(a)",
+          "F.S. 316.1935(3)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully fleeing or trying to elude an officer in an authorized patrol vehicle displaying prominent agency markings with both lights and siren on. The driver travels at high speed or shows wanton disregard for the safety of people or property.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years and a $10,000 fine. For motor-vehicle operators the court revokes the license for one to five years. The court cannot suspend, defer or withhold adjudication or sentence. The vehicle may be seized and forfeited."
+        },
+        "es": {
+          "plainSummary": "Huir o tratar de evadir deliberadamente a un agente en un vehículo policial autorizado con distintivos visibles de su agencia, luces y sirena activadas. Se conduce a alta velocidad o con desprecio temerario por la seguridad de personas o bienes.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años y una multa de $10,000. Para conductores de vehículos motorizados, se revoca la licencia de uno a cinco años. El tribunal no puede suspender, aplazar ni reservar la declaración de culpabilidad ni la imposición de la pena. El vehículo puede ser incautado y decomisado."
+        },
+        "zh": {
+          "plainSummary": "故意逃离或企图逃避警员；其获准执勤的巡逻车清楚标有所属机构的辖区标志，警灯和警笛均已开启。 驾驶人高速行驶或肆意漠视人员或财产安全。",
+          "degreeContext": "二级重罪：通常最高15年监禁和10,000美元罚金。 机动车驾驶人的驾照须吊销一至五年。法院不得暂停、延后或暂缓定罪或判刑。涉案车辆可能被扣押并没收。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-1935-3-b-crash-flight",
+    "section": "316.1935",
+    "scope": "(3)(b)",
+    "officialTitle": "Fleeing or attempting to elude a law enforcement officer; aggravated fleeing or eluding",
+    "dependencies": [
+      "316.1935",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.1935": [
+        "(3)(b)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-1935-3-b-crash-flight",
+      "name": "Fleeing or attempting to elude at high speed or with wanton disregard, causing serious injury or death",
+      "names": {
+        "es": "Huida a alta velocidad o con desprecio temerario que causa lesiones graves o muerte",
+        "zh": "高速或肆意漠视安全而逃离，致他人重伤或死亡"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.1935(3)(b)",
+      "slug": "fl-fs-316-1935-3-b-crash-flight",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.1935(3)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1935.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.1935",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1935.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Fleeing or attempting to elude a law enforcement officer; aggravated fleeing or eluding",
+          "Fleeing or attempting to elude at high speed or with wanton disregard, causing serious injury or death",
+          "FS 316.1935(3)(b)",
+          "F.S. 316.1935(3)(b)"
+        ],
+        "es": [
+          "Huida a alta velocidad o con desprecio temerario que causa lesiones graves o muerte",
+          "FS 316.1935(3)(b)",
+          "F.S. 316.1935(3)(b)"
+        ],
+        "zh": [
+          "高速或肆意漠视安全而逃离，致他人重伤或死亡",
+          "FS 316.1935(3)(b)",
+          "F.S. 316.1935(3)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully fleeing or trying to elude an officer in an authorized patrol vehicle displaying prominent agency markings with both lights and siren on. The driver travels at high speed or shows wanton disregard for the safety of people or property. The flight causes serious bodily injury or death to another person, including a pursuing officer.",
+          "degreeContext": "First-degree felony: ordinarily up to 30 years and a $10,000 fine. A three-year prison minimum applies. Before serving it, gain-time and discretionary early release are barred except pardon, executive clemency or conditional medical release. For motor-vehicle operators the court revokes the license for one to five years. The court cannot suspend, defer or withhold adjudication or sentence. The vehicle may be seized and forfeited."
+        },
+        "es": {
+          "plainSummary": "Huir o tratar de evadir deliberadamente a un agente en un vehículo policial autorizado con distintivos visibles de su agencia, luces y sirena activadas. Se conduce a alta velocidad o con desprecio temerario por la seguridad de personas o bienes. La huida causa lesiones corporales graves o la muerte a otra persona, incluido un agente que persigue al conductor.",
+          "degreeContext": "Delito grave de primer grado: normalmente hasta 30 años y una multa de $10,000. Se exige un mínimo de tres años de prisión. Antes de cumplirlo no hay reducción por buena conducta ni liberación anticipada discrecional salvo indulto, clemencia ejecutiva o liberación médica condicional. Para conductores de vehículos motorizados, se revoca la licencia de uno a cinco años. El tribunal no puede suspender, aplazar ni reservar la declaración de culpabilidad ni la imposición de la pena. El vehículo puede ser incautado y decomisado."
+        },
+        "zh": {
+          "plainSummary": "故意逃离或企图逃避警员；其获准执勤的巡逻车清楚标有所属机构的辖区标志，警灯和警笛均已开启。 驾驶人高速行驶或肆意漠视人员或财产安全。 逃跑导致他人严重受伤或死亡，受害者可包括追赶的警员。",
+          "degreeContext": "一级重罪：通常最高30年监禁和10,000美元罚金。 最低监禁三年。在服满前不得凭减刑积分或酌情提前获释，赦免、行政宽赦或有条件医疗释放除外。 机动车驾驶人的驾照须吊销一至五年。法院不得暂停、延后或暂缓定罪或判刑。涉案车辆可能被扣押并没收。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-1935-4-a-crash-flight",
+    "section": "316.1935",
+    "scope": "(4)(a)",
+    "officialTitle": "Fleeing or attempting to elude a law enforcement officer; aggravated fleeing or eluding",
+    "dependencies": [
+      "316.1935",
+      "316.027",
+      "316.061",
+      "316.062",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.1935": [
+        "(4)(a)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(4)"
+      ],
+      "316.027": [
+        "(2)"
+      ],
+      "316.061": [
+        "(1)"
+      ],
+      "316.062": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-1935-4-a-crash-flight",
+      "name": "Aggravated fleeing or eluding after leaving a crash, causing injury or property damage",
+      "names": {
+        "es": "Huida o evasión agravada tras abandonar un choque, con lesiones o daños a bienes",
+        "zh": "逃离事故现场后加重逃避警员，造成人身伤害或财产损失"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.1935(4)(a)",
+      "slug": "fl-fs-316-1935-4-a-crash-flight",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.1935(4)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1935.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.1935",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1935.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.027",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.027.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.061",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.061.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.062",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.062.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Fleeing or attempting to elude a law enforcement officer; aggravated fleeing or eluding",
+          "Aggravated fleeing or eluding after leaving a crash, causing injury or property damage",
+          "FS 316.1935(4)(a)",
+          "F.S. 316.1935(4)(a)"
+        ],
+        "es": [
+          "Huida o evasión agravada tras abandonar un choque, con lesiones o daños a bienes",
+          "FS 316.1935(4)(a)",
+          "F.S. 316.1935(4)(a)"
+        ],
+        "zh": [
+          "逃离事故现场后加重逃避警员，造成人身伤害或财产损失",
+          "FS 316.1935(4)(a)",
+          "F.S. 316.1935(4)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "While unlawfully leaving or trying to leave a crash scene under §316.027 or §316.061, knowing of an authorized officer’s order to stop, the driver willfully refuses or fails to stop, or stops and then willfully flees. The harm must result from the flight. The original crash-scene charge can also be filed separately. The flight injures someone else or damages property belonging to someone else.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years and a $10,000 fine. For motor-vehicle operators the court revokes the license for one to five years. The court cannot suspend, defer or withhold adjudication or sentence. The vehicle may be seized and forfeited."
+        },
+        "es": {
+          "plainSummary": "Al abandonar o intentar abandonar ilegalmente un choque conforme a §316.027 o §316.061, con conocimiento de una orden policial autorizada de detenerse, el conductor se niega deliberadamente a parar, no se detiene deliberadamente, o se detiene y huye deliberadamente. El daño debe resultar de la huida. El cargo original por abandonar el lugar puede presentarse por separado. La huida lesiona a otra persona o daña bienes ajenos.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años y una multa de $10,000. Para conductores de vehículos motorizados, se revoca la licencia de uno a cinco años. El tribunal no puede suspender, aplazar ni reservar la declaración de culpabilidad ni la imposición de la pena. El vehículo puede ser incautado y decomisado."
+        },
+        "zh": {
+          "plainSummary": "在违反第316.027或316.061条离开或企图离开事故现场期间，驾驶人明知获授权警员命令停车，仍故意拒绝或不停车，或停车后故意逃走。伤害或损失必须因逃跑而产生。原有的逃离事故现场罪可另行起诉。 逃跑造成他人受伤或他人财物受损。",
+          "degreeContext": "二级重罪：通常最高15年监禁和10,000美元罚金。 机动车驾驶人的驾照须吊销一至五年。法院不得暂停、延后或暂缓定罪或判刑。涉案车辆可能被扣押并没收。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-1935-4-b-crash-flight",
+    "section": "316.1935",
+    "scope": "(4)(b)",
+    "officialTitle": "Fleeing or attempting to elude a law enforcement officer; aggravated fleeing or eluding",
+    "dependencies": [
+      "316.1935",
+      "316.027",
+      "316.061",
+      "316.062",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.1935": [
+        "(4)(b)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(4)"
+      ],
+      "316.027": [
+        "(2)"
+      ],
+      "316.061": [
+        "(1)"
+      ],
+      "316.062": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-1935-4-b-crash-flight",
+      "name": "Aggravated fleeing or eluding after leaving a crash, causing serious bodily injury or death",
+      "names": {
+        "es": "Huida o evasión agravada tras abandonar un choque, con lesiones graves o muerte",
+        "zh": "逃离事故现场后加重逃避警员，致他人重伤或死亡"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.1935(4)(b)",
+      "slug": "fl-fs-316-1935-4-b-crash-flight",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.1935(4)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1935.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.1935",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1935.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.027",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.027.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.061",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.061.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.062",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.062.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Fleeing or attempting to elude a law enforcement officer; aggravated fleeing or eluding",
+          "Aggravated fleeing or eluding after leaving a crash, causing serious bodily injury or death",
+          "FS 316.1935(4)(b)",
+          "F.S. 316.1935(4)(b)"
+        ],
+        "es": [
+          "Huida o evasión agravada tras abandonar un choque, con lesiones graves o muerte",
+          "FS 316.1935(4)(b)",
+          "F.S. 316.1935(4)(b)"
+        ],
+        "zh": [
+          "逃离事故现场后加重逃避警员，致他人重伤或死亡",
+          "FS 316.1935(4)(b)",
+          "F.S. 316.1935(4)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "While unlawfully leaving or trying to leave a crash scene under §316.027 or §316.061, knowing of an authorized officer’s order to stop, the driver willfully refuses or fails to stop, or stops and then willfully flees. The harm must result from the flight. The original crash-scene charge can also be filed separately. The flight causes serious bodily injury or death to another person, including a pursuing officer.",
+          "degreeContext": "First-degree felony: ordinarily up to 30 years and a $10,000 fine. A three-year prison minimum applies. Before serving it, gain-time and discretionary early release are barred except pardon, executive clemency or conditional medical release. For motor-vehicle operators the court revokes the license for one to five years. The court cannot suspend, defer or withhold adjudication or sentence. The vehicle may be seized and forfeited."
+        },
+        "es": {
+          "plainSummary": "Al abandonar o intentar abandonar ilegalmente un choque conforme a §316.027 o §316.061, con conocimiento de una orden policial autorizada de detenerse, el conductor se niega deliberadamente a parar, no se detiene deliberadamente, o se detiene y huye deliberadamente. El daño debe resultar de la huida. El cargo original por abandonar el lugar puede presentarse por separado. La huida causa lesiones corporales graves o la muerte a otra persona, incluido un agente que persigue al conductor.",
+          "degreeContext": "Delito grave de primer grado: normalmente hasta 30 años y una multa de $10,000. Se exige un mínimo de tres años de prisión. Antes de cumplirlo no hay reducción por buena conducta ni liberación anticipada discrecional salvo indulto, clemencia ejecutiva o liberación médica condicional. Para conductores de vehículos motorizados, se revoca la licencia de uno a cinco años. El tribunal no puede suspender, aplazar ni reservar la declaración de culpabilidad ni la imposición de la pena. El vehículo puede ser incautado y decomisado."
+        },
+        "zh": {
+          "plainSummary": "在违反第316.027或316.061条离开或企图离开事故现场期间，驾驶人明知获授权警员命令停车，仍故意拒绝或不停车，或停车后故意逃走。伤害或损失必须因逃跑而产生。原有的逃离事故现场罪可另行起诉。 逃跑导致他人严重受伤或死亡，受害者可包括追赶的警员。",
+          "degreeContext": "一级重罪：通常最高30年监禁和10,000美元罚金。 最低监禁三年。在服满前不得凭减刑积分或酌情提前获释，赦免、行政宽赦或有条件医疗释放除外。 机动车驾驶人的驾照须吊销一至五年。法院不得暂停、延后或暂缓定罪或判刑。涉案车辆可能被扣押并没收。"
+        }
+      }
+    }
+  }
+]

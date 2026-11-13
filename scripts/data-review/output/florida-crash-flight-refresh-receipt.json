@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "verificationPolicy": "quarterly-v1",
+  "reportHash": "4d146a7e9785527553f95e45bd3ab0383f41b3cd7d7161eeeaad64ef033e97f2",
+  "eligibilityHash": "04804fc3169b1f42ec0689f1bcca0d64fb32e21754d82dfb11ff127eebf97cdd",
+  "checkedAt": "2026-11-13T04:01:28.400Z",
+  "expiresAt": "2027-02-13T04:01:19.322Z",
+  "documents": [
+    {
+      "sourceKey": "fl:statute:316.027:2_a",
+      "contentHash": "76a3b06a9bc04a59d08e44712d10fb7c4975be8be11258fcd6740592ef6d2ca9",
+      "retrievedAt": "2026-11-13T04:01:19.322Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.027",
+      "contentHash": "76a3b06a9bc04a59d08e44712d10fb7c4975be8be11258fcd6740592ef6d2ca9",
+      "retrievedAt": "2026-11-13T04:01:19.322Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.062",
+      "contentHash": "3aba09ad1688305730bb8a35ff246e2ed0955f5ffdebf575899ce5fd6176e2fa",
+      "retrievedAt": "2026-11-13T04:01:21.214Z"
+    },
+    {
+      "sourceKey": "fl:statute:322.0261",
+      "contentHash": "7f580185b96b6d5dd268639a48bc96ab7dbd0617661da41376cbafe7905a3559",
+      "retrievedAt": "2026-11-13T04:01:25.274Z"
+    },
+    {
+      "sourceKey": "fl:statute:775.082",
+      "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+      "retrievedAt": "2026-11-13T04:01:26.407Z"
+    },
+    {
+      "sourceKey": "fl:statute:775.083",
+      "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+      "retrievedAt": "2026-11-13T04:01:27.272Z"
+    },
+    {
+      "sourceKey": "fl:statute:775.084",
+      "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+      "retrievedAt": "2026-11-13T04:01:28.400Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.027:2_b",
+      "contentHash": "76a3b06a9bc04a59d08e44712d10fb7c4975be8be11258fcd6740592ef6d2ca9",
+      "retrievedAt": "2026-11-13T04:01:19.322Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.027:2_c",
+      "contentHash": "76a3b06a9bc04a59d08e44712d10fb7c4975be8be11258fcd6740592ef6d2ca9",
+      "retrievedAt": "2026-11-13T04:01:19.322Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.193",
+      "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f",
+      "retrievedAt": "2026-11-13T04:01:24.333Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.1935:1",
+      "contentHash": "cdbe6e8db70603e041a9adeb2ee75b46c0d0989b4d482622a3d458fb0f12216c",
+      "retrievedAt": "2026-11-13T04:01:20.266Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.1935",
+      "contentHash": "cdbe6e8db70603e041a9adeb2ee75b46c0d0989b4d482622a3d458fb0f12216c",
+      "retrievedAt": "2026-11-13T04:01:20.266Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.1935:2",
+      "contentHash": "cdbe6e8db70603e041a9adeb2ee75b46c0d0989b4d482622a3d458fb0f12216c",
+      "retrievedAt": "2026-11-13T04:01:20.266Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.1935:3_a",
+      "contentHash": "cdbe6e8db70603e041a9adeb2ee75b46c0d0989b4d482622a3d458fb0f12216c",
+      "retrievedAt": "2026-11-13T04:01:20.266Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.1935:3_b",
+      "contentHash": "cdbe6e8db70603e041a9adeb2ee75b46c0d0989b4d482622a3d458fb0f12216c",
+      "retrievedAt": "2026-11-13T04:01:20.266Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.1935:4_a",
+      "contentHash": "cdbe6e8db70603e041a9adeb2ee75b46c0d0989b4d482622a3d458fb0f12216c",
+      "retrievedAt": "2026-11-13T04:01:20.266Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.061",
+      "contentHash": "5738ff75d998af32ab1026a843e15292b98d19b5b5d0dd73ac3b03e61a4bdfa4",
+      "retrievedAt": "2026-11-13T04:01:22.165Z"
+    },
+    {
+      "sourceKey": "fl:statute:316.1935:4_b",
+      "contentHash": "cdbe6e8db70603e041a9adeb2ee75b46c0d0989b4d482622a3d458fb0f12216c",
+      "retrievedAt": "2026-11-13T04:01:20.266Z"
+    }
+  ]
+}

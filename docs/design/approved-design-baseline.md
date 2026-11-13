@@ -644,6 +644,12 @@ The approved `court-locator-content.html` reference has SHA-256 `93746e7d75704dc
 
 Nearby results use mapped courthouse coordinates. The previous federal supplement attached invented distances, coordinates, opening hours and address text to the first three records of a nationwide list. The locator now shows geographically located courthouses, uses their coordinates for directions and links separately to the federal judiciary’s official finder. Court contact fields and hours display when supplied by the map source. The release test exercises populated, empty, failed and retried searches with controlled responses across the three languages and both themes.
 
+### Court Records search
+
+The approved `court-records-content.html` reference has SHA-256 `3bad111103fe0802bc88dc60df7ff5d685270321a2497c0d4bb3b6480247c2a5`. The page keeps the published RECAP notice, search term, case name, docket number and semantic-search switch. All three fields have associated labels and submit through the existing court-records endpoint. Dockets and opinions appear in separate lists with filing metadata, source links and provider availability notices.
+
+“View docket” describes the actual docket destination. An empty successful search has its own message. A partial outage keeps the available results and names the affected source. The release browser test checks keyword and semantic requests, record destinations, keyboard submission, successful, partial, failed and empty responses, reset and translated layouts with controlled API responses.
+
 ### Court Date Guide
 
 The court-date guide follows the approved court-date-guide-content.html layout. Four section links organize preparation by task, with a separate shortcut to the existing missed-date guidance. Six day-of checklist selections live only on the open page. The browser checks cover all seven published sections, localized content, keyboard interaction, checklist reset and navigation in three languages and both themes.
