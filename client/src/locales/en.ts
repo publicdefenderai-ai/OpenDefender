@@ -5078,13 +5078,23 @@ export default {
     }
   },
   "courtLocator": {
+    "design": {
+      "zip": "ZIP code",
+      "before": "Before you go",
+      "notice": "A nearby courthouse may not be the court handling your case. Confirm the address, courtroom, date and time on your court notice or by contacting the court.",
+      "federal": "Find a federal court",
+      "prepare": "Prepare for your court date",
+      "unavailable": "The courthouse search is unavailable. Try again or use the federal court finder.",
+      "nearby": "Nearby court locations",
+      "website": "Court website"
+    },
     "hero": {
-      "title": "Find Your Local Court",
-      "subtitle": "Locate nearby courthouses using free government data sources and OpenStreetMap. Get contact information, hours of operation, and available services in your area."
+      "title": "Find a courthouse.",
+      "subtitle": "Search by ZIP code for nearby courthouses and location details."
     },
     "search": {
       "inputPlaceholder": "Enter ZIP code",
-      "searchButton": "Search",
+      "searchButton": "Find courthouses",
       "searching": "Searching...",
       "error": "Please enter a valid 5-digit ZIP code",
       "errorGeneral": "Unable to search for offices. Please try again or contact your local court for information."
@@ -5160,7 +5170,7 @@ export default {
       },
       "dataSourcesCard": {
         "title": "Data Sources",
-        "description": "Court locations from OpenStreetMap and CourtListener (Free Law Project). Always call ahead to confirm hours and procedures as data may vary."
+        "description": "Local results come from OpenStreetMap. Coverage and contact details vary. Call ahead to confirm hours and procedures."
       }
     }
   },

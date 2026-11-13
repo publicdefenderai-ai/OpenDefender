@@ -1,0 +1,704 @@
+[
+  {
+    "id": "fl-fs-812-13-2-b-robbery",
+    "section": "812.13",
+    "scope": "(2)(b)",
+    "officialTitle": "Robbery",
+    "dependencies": [
+      "812.13",
+      "775.082",
+      "775.083",
+      "775.084",
+      "741.28",
+      "741.2801"
+    ],
+    "subdivisions": {
+      "812.13": [
+        "(1)",
+        "(2)(b)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-13-2-b-robbery",
+      "name": "Robbery (weapon)",
+      "names": {
+        "es": "Robo (arma)",
+        "zh": "抢劫 (武器)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.13(2)(b)",
+      "slug": "fl-fs-812-13-2-b-robbery",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.13(2)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Robbery",
+          "FS 812.13(2)(b)",
+          "F.S. 812.13(2)(b)"
+        ],
+        "es": [
+          "Robbery",
+          "FS 812.13(2)(b)",
+          "F.S. 812.13(2)(b)"
+        ],
+        "zh": [
+          "Robbery",
+          "FS 812.13(2)(b)",
+          "F.S. 812.13(2)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Taking property from a person or their custody with intent to deprive them or its owner temporarily or permanently, using force, violence, assault or putting them in fear during the taking. Subparagraph (2)(b) addresses carrying a weapon. The separate firearm or deadly-weapon branch has a different maximum.",
+          "degreeContext": "First-degree felony: ordinarily up to 30 years and $10,000. If the offense results in physical injury or death of a qualifying family or household member, §741.2801 can reclassify it where a qualifying domestic-violence conviction already existed at the time and the new conduct occurred on or after July 1, 2026."
+        },
+        "es": {
+          "plainSummary": "Tomar bienes de una persona o de su custodia con intención de privar temporal o permanentemente a esa persona o al dueño, mediante fuerza, violencia, agresión o intimidación durante la sustracción. El apartado (2)(b) se refiere a portar un arma. La modalidad de arma de fuego u otra arma mortal tiene otro máximo.",
+          "degreeContext": "Delito grave de primer grado: normalmente hasta 30 años y $10,000. Si causa lesiones físicas o muerte a un familiar o integrante del hogar comprendido y ya existía una condena válida por violencia doméstica al cometerse el nuevo delito desde el 1 de julio de 2026, §741.2801 puede elevar el grado."
+        },
+        "zh": {
+          "plainSummary": "以强力、暴力、攻击或使人恐惧的方式，从他人身上或保管中取走财物，意图暂时或永久剥夺该人或所有人的权利。 第(2)(b)款针对携带武器；携带枪支或其他致命武器的另一分支最高刑不同。",
+          "degreeContext": "一级重罪，通常最高30年及10,000美元。 若导致符合法定条件的家庭或同住成员受伤或死亡，且实施时已有符合条件的家庭暴力定罪，对2026年7月1日及以后的行为，第741.2801条可提高罪级。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-131-2-a-robbery",
+    "section": "812.131",
+    "scope": "(2)(a)",
+    "officialTitle": "Robbery by sudden snatching",
+    "dependencies": [
+      "812.131",
+      "775.082",
+      "775.083",
+      "775.084",
+      "741.28",
+      "741.2801"
+    ],
+    "subdivisions": {
+      "812.131": [
+        "(1)",
+        "(2)(a)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-131-2-a-robbery",
+      "name": "Robbery by sudden snatching (firearm or other deadly weapon)",
+      "names": {
+        "es": "Robo por arrebato repentino (arma de fuego u otra arma mortal)",
+        "zh": "突然抢夺 (枪支或其他致命武器)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.131(2)(a)",
+      "slug": "fl-fs-812-131-2-a-robbery",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.131(2)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.131.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.131",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.131.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Robbery by sudden snatching",
+          "FS 812.131(2)(a)",
+          "F.S. 812.131(2)(a)"
+        ],
+        "es": [
+          "Robbery by sudden snatching",
+          "FS 812.131(2)(a)",
+          "F.S. 812.131(2)(a)"
+        ],
+        "zh": [
+          "Robbery by sudden snatching",
+          "FS 812.131(2)(a)",
+          "F.S. 812.131(2)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Taking money or property from the victim’s person intending temporary or permanent deprivation, when the victim was or became aware of the taking in its course. Resistance, injury or force beyond what is needed to take the property is unnecessary. This branch requires carrying a firearm or another deadly weapon during the offense.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years and $10,000. If the offense results in physical injury or death of a qualifying family or household member, §741.2801 can reclassify it where a qualifying domestic-violence conviction already existed at the time and the new conduct occurred on or after July 1, 2026."
+        },
+        "es": {
+          "plainSummary": "Tomar dinero o bienes directamente de la persona con intención de privación temporal o permanente, cuando la víctima sabía o advirtió la sustracción mientras ocurría. No exige resistencia, lesión ni fuerza superior a la necesaria para tomar el bien. Esta modalidad exige portar un arma de fuego u otra arma mortal durante el delito.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años y $10,000. Si causa lesiones físicas o muerte a un familiar o integrante del hogar comprendido y ya existía una condena válida por violencia doméstica al cometerse el nuevo delito desde el 1 de julio de 2026, §741.2801 puede elevar el grado."
+        },
+        "zh": {
+          "plainSummary": "意图暂时或永久剥夺财物，从受害者身上取走钱财，且受害者在取财过程中已经知情或察觉。无需反抗、受伤或超出取走财物所需的力量。 本分支要求犯罪期间携带枪支或其他致命武器。",
+          "degreeContext": "二级重罪，通常最高15年及10,000美元。 若导致符合法定条件的家庭或同住成员受伤或死亡，且实施时已有符合条件的家庭暴力定罪，对2026年7月1日及以后的行为，第741.2801条可提高罪级。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-131-2-b-robbery",
+    "section": "812.131",
+    "scope": "(2)(b)",
+    "officialTitle": "Robbery by sudden snatching",
+    "dependencies": [
+      "812.131",
+      "775.082",
+      "775.083",
+      "775.084",
+      "741.28",
+      "741.2801"
+    ],
+    "subdivisions": {
+      "812.131": [
+        "(1)",
+        "(2)(b)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-131-2-b-robbery",
+      "name": "Robbery by sudden snatching (no firearm or other deadly weapon)",
+      "names": {
+        "es": "Robo por arrebato repentino (sin arma de fuego ni otra arma mortal)",
+        "zh": "突然抢夺 (未携带枪支或其他致命武器)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.131(2)(b)",
+      "slug": "fl-fs-812-131-2-b-robbery",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.131(2)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.131.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.131",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.131.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Robbery by sudden snatching",
+          "FS 812.131(2)(b)",
+          "F.S. 812.131(2)(b)"
+        ],
+        "es": [
+          "Robbery by sudden snatching",
+          "FS 812.131(2)(b)",
+          "F.S. 812.131(2)(b)"
+        ],
+        "zh": [
+          "Robbery by sudden snatching",
+          "FS 812.131(2)(b)",
+          "F.S. 812.131(2)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Taking money or property from the victim’s person intending temporary or permanent deprivation, when the victim was or became aware of the taking in its course. Resistance, injury or force beyond what is needed to take the property is unnecessary. No firearm or other deadly weapon was carried.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years and $5,000. If the offense results in physical injury or death of a qualifying family or household member, §741.2801 can reclassify it where a qualifying domestic-violence conviction already existed at the time and the new conduct occurred on or after July 1, 2026."
+        },
+        "es": {
+          "plainSummary": "Tomar dinero o bienes directamente de la persona con intención de privación temporal o permanente, cuando la víctima sabía o advirtió la sustracción mientras ocurría. No exige resistencia, lesión ni fuerza superior a la necesaria para tomar el bien. No se portó arma de fuego ni otra arma mortal.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años y $5,000. Si causa lesiones físicas o muerte a un familiar o integrante del hogar comprendido y ya existía una condena válida por violencia doméstica al cometerse el nuevo delito desde el 1 de julio de 2026, §741.2801 puede elevar el grado."
+        },
+        "zh": {
+          "plainSummary": "意图暂时或永久剥夺财物，从受害者身上取走钱财，且受害者在取财过程中已经知情或察觉。无需反抗、受伤或超出取走财物所需的力量。 未携带枪支或其他致命武器。",
+          "degreeContext": "三级重罪，通常最高五年及5,000美元。 若导致符合法定条件的家庭或同住成员受伤或死亡，且实施时已有符合条件的家庭暴力定罪，对2026年7月1日及以后的行为，第741.2801条可提高罪级。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-135-2-a-robbery",
+    "section": "812.135",
+    "scope": "(2)(a)",
+    "officialTitle": "Home-invasion robbery",
+    "dependencies": [
+      "812.135",
+      "775.082",
+      "775.083",
+      "775.084",
+      "741.28",
+      "741.2801",
+      "812.13",
+      "775.087"
+    ],
+    "subdivisions": {
+      "812.135": [
+        "(1)",
+        "(2)(a)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "812.13": [
+        "(1)"
+      ],
+      "775.087": [
+        "(2)",
+        "(3)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-135-2-a-robbery",
+      "name": "Home-invasion robbery (firearm or other deadly weapon)",
+      "names": {
+        "es": "Robo con invasión de vivienda (arma de fuego u otra arma mortal)",
+        "zh": "入宅抢劫 (枪支或其他致命武器)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.135(2)(a)",
+      "slug": "fl-fs-812-135-2-a-robbery",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.135(2)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.135.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.135",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.135.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.087",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.087.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Home-invasion robbery",
+          "FS 812.135(2)(a)",
+          "F.S. 812.135(2)(a)"
+        ],
+        "es": [
+          "Home-invasion robbery",
+          "FS 812.135(2)(a)",
+          "F.S. 812.135(2)(a)"
+        ],
+        "zh": [
+          "Home-invasion robbery",
+          "FS 812.135(2)(a)",
+          "F.S. 812.135(2)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Entering a dwelling with intent to rob and actually robbing the occupants there. Robbery requires taking property by force, violence, assault or putting another in fear, with intent to deprive temporarily or permanently. This branch requires carrying a firearm or another deadly weapon during the offense.",
+          "degreeContext": "First-degree felony punishable by imprisonment up to life and an ordinary fine up to $10,000. If the offense results in physical injury or death of a qualifying family or household member, §741.2801 can reclassify it where a qualifying domestic-violence conviction already existed at the time and the new conduct occurred on or after July 1, 2026. For home-invasion robbery, actual firearm possession generally carries a 10-year minimum under §775.087; discharge, 20 years; discharge causing death or great bodily harm, 25 years to life. A qualifying machine gun or semiautomatic firearm and high-capacity magazine can trigger a 15-year possession minimum. Carrying another deadly weapon alone does not trigger these firearm minimums."
+        },
+        "es": {
+          "plainSummary": "Entrar en una vivienda con intención de robar y efectivamente robar allí a sus ocupantes. El robo requiere tomar bienes mediante fuerza, violencia, agresión o intimidación, con intención de privación temporal o permanente. Esta modalidad exige portar un arma de fuego u otra arma mortal durante el delito.",
+          "degreeContext": "Delito grave de primer grado castigable con hasta prisión perpetua y multa ordinaria de hasta $10,000. Si causa lesiones físicas o muerte a un familiar o integrante del hogar comprendido y ya existía una condena válida por violencia doméstica al cometerse el nuevo delito desde el 1 de julio de 2026, §741.2801 puede elevar el grado. En el robo con invasión de vivienda, §775.087 normalmente exige por posesión efectiva de arma de fuego al menos 10 años; por disparo, 20; por disparo que cause muerte o lesiones graves, de 25 años a perpetua. Una ametralladora o arma semiautomática y cargador de alta capacidad comprendidos pueden exigir al menos 15 años por posesión. Portar otra arma mortal por sí solo no activa estos mínimos."
+        },
+        "zh": {
+          "plainSummary": "意图抢劫而进入住宅，并在其中实际抢劫居住者。抢劫要求暂时或永久剥夺财物的意图，并使用强力、暴力、攻击或使人恐惧来取财。 本分支要求犯罪期间携带枪支或其他致命武器。",
+          "degreeContext": "一级重罪，最高可判终身监禁，通常罚款最高10,000美元。 若导致符合法定条件的家庭或同住成员受伤或死亡，且实施时已有符合条件的家庭暴力定罪，对2026年7月1日及以后的行为，第741.2801条可提高罪级。 对入宅抢劫，第775.087条规定实际持枪通常最低10年，开枪最低20年，开枪致死或重伤为25年至终身。持有特定机枪或符合法定条件的半自动枪及大容量弹匣，可最低15年。仅携带其他致命武器不触发这些枪支最低刑。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-135-2-b-robbery",
+    "section": "812.135",
+    "scope": "(2)(b)",
+    "officialTitle": "Home-invasion robbery",
+    "dependencies": [
+      "812.135",
+      "775.082",
+      "775.083",
+      "775.084",
+      "741.28",
+      "741.2801",
+      "812.13"
+    ],
+    "subdivisions": {
+      "812.135": [
+        "(1)",
+        "(2)(b)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "812.13": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-135-2-b-robbery",
+      "name": "Home-invasion robbery (weapon)",
+      "names": {
+        "es": "Robo con invasión de vivienda (arma)",
+        "zh": "入宅抢劫 (武器)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.135(2)(b)",
+      "slug": "fl-fs-812-135-2-b-robbery",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.135(2)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.135.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.135",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.135.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.13.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Home-invasion robbery",
+          "FS 812.135(2)(b)",
+          "F.S. 812.135(2)(b)"
+        ],
+        "es": [
+          "Home-invasion robbery",
+          "FS 812.135(2)(b)",
+          "F.S. 812.135(2)(b)"
+        ],
+        "zh": [
+          "Home-invasion robbery",
+          "FS 812.135(2)(b)",
+          "F.S. 812.135(2)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Entering a dwelling with intent to rob and actually robbing the occupants there. Robbery requires taking property by force, violence, assault or putting another in fear, with intent to deprive temporarily or permanently. Subparagraph (2)(b) addresses carrying a weapon. The separate firearm or deadly-weapon branch has a different maximum.",
+          "degreeContext": "First-degree felony: ordinarily up to 30 years and $10,000. If the offense results in physical injury or death of a qualifying family or household member, §741.2801 can reclassify it where a qualifying domestic-violence conviction already existed at the time and the new conduct occurred on or after July 1, 2026."
+        },
+        "es": {
+          "plainSummary": "Entrar en una vivienda con intención de robar y efectivamente robar allí a sus ocupantes. El robo requiere tomar bienes mediante fuerza, violencia, agresión o intimidación, con intención de privación temporal o permanente. El apartado (2)(b) se refiere a portar un arma. La modalidad de arma de fuego u otra arma mortal tiene otro máximo.",
+          "degreeContext": "Delito grave de primer grado: normalmente hasta 30 años y $10,000. Si causa lesiones físicas o muerte a un familiar o integrante del hogar comprendido y ya existía una condena válida por violencia doméstica al cometerse el nuevo delito desde el 1 de julio de 2026, §741.2801 puede elevar el grado."
+        },
+        "zh": {
+          "plainSummary": "意图抢劫而进入住宅，并在其中实际抢劫居住者。抢劫要求暂时或永久剥夺财物的意图，并使用强力、暴力、攻击或使人恐惧来取财。 第(2)(b)款针对携带武器；携带枪支或其他致命武器的另一分支最高刑不同。",
+          "degreeContext": "一级重罪，通常最高30年及10,000美元。 若导致符合法定条件的家庭或同住成员受伤或死亡，且实施时已有符合条件的家庭暴力定罪，对2026年7月1日及以后的行为，第741.2801条可提高罪级。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-135-2-c-robbery",
+    "section": "812.135",
+    "scope": "(2)(c)",
+    "officialTitle": "Home-invasion robbery",
+    "dependencies": [
+      "812.135",
+      "775.082",
+      "775.083",
+      "775.084",
+      "741.28",
+      "741.2801",
+      "812.13"
+    ],
+    "subdivisions": {
+      "812.135": [
+        "(1)",
+        "(2)(c)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "812.13": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-135-2-c-robbery",
+      "name": "Home-invasion robbery (no weapon)",
+      "names": {
+        "es": "Robo con invasión de vivienda (sin armas)",
+        "zh": "入宅抢劫 (无武器)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.135(2)(c)",
+      "slug": "fl-fs-812-135-2-c-robbery",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.135(2)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.135.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.135",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.135.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.13.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Home-invasion robbery",
+          "FS 812.135(2)(c)",
+          "F.S. 812.135(2)(c)"
+        ],
+        "es": [
+          "Home-invasion robbery",
+          "FS 812.135(2)(c)",
+          "F.S. 812.135(2)(c)"
+        ],
+        "zh": [
+          "Home-invasion robbery",
+          "FS 812.135(2)(c)",
+          "F.S. 812.135(2)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Entering a dwelling with intent to rob and actually robbing the occupants there. Robbery requires taking property by force, violence, assault or putting another in fear, with intent to deprive temporarily or permanently. No firearm, deadly weapon or other weapon was carried.",
+          "degreeContext": "First-degree felony: ordinarily up to 30 years and $10,000. If the offense results in physical injury or death of a qualifying family or household member, §741.2801 can reclassify it where a qualifying domestic-violence conviction already existed at the time and the new conduct occurred on or after July 1, 2026."
+        },
+        "es": {
+          "plainSummary": "Entrar en una vivienda con intención de robar y efectivamente robar allí a sus ocupantes. El robo requiere tomar bienes mediante fuerza, violencia, agresión o intimidación, con intención de privación temporal o permanente. No se portó arma de fuego, arma mortal ni otra arma.",
+          "degreeContext": "Delito grave de primer grado: normalmente hasta 30 años y $10,000. Si causa lesiones físicas o muerte a un familiar o integrante del hogar comprendido y ya existía una condena válida por violencia doméstica al cometerse el nuevo delito desde el 1 de julio de 2026, §741.2801 puede elevar el grado."
+        },
+        "zh": {
+          "plainSummary": "意图抢劫而进入住宅，并在其中实际抢劫居住者。抢劫要求暂时或永久剥夺财物的意图，并使用强力、暴力、攻击或使人恐惧来取财。 未携带枪支、致命武器或其他武器。",
+          "degreeContext": "一级重罪，通常最高30年及10,000美元。 若导致符合法定条件的家庭或同住成员受伤或死亡，且实施时已有符合条件的家庭暴力定罪，对2026年7月1日及以后的行为，第741.2801条可提高罪级。"
+        }
+      }
+    }
+  }
+]

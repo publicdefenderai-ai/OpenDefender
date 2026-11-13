@@ -3571,6 +3571,28 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
   .court-logistics-hero img { display: none; }
 }
 
+.locator-page { width: 100%; max-width: 1060px; margin: auto; padding: 46px clamp(20px, 5vw, 56px) 64px; }
+.locator-page h1 { font-size: clamp(38px, 5vw, 58px); letter-spacing: -.045em; line-height: 1.08; font-weight: 500; }
+.locator-intro { max-width: 62ch; margin: 16px 0 28px; color: var(--muted-foreground); }
+.locator-search { background: var(--muted); padding: clamp(16px, 3vw, 30px); }
+.locator-search label, .locator-result h4 { display: block; font-weight: 600; margin-bottom: 6px; }
+.locator-search > div { display: flex; flex-wrap: wrap; gap: 12px; }
+.locator-search input { flex: 1 1 12rem; min-width: 0; padding: 10px 14px; border: 1px solid var(--input); background: var(--background); border-radius: 4px; }
+.locator-search button, .locator-search input { min-height: 46px; }
+.locator-notice { margin: 16px 0 20px; padding-left: 16px; border-left: 3px solid var(--primary); line-height: 1.6; }
+.locator-section { margin-top: 32px; }
+.locator-section h2 { font-size: 26px; font-weight: 500; margin-bottom: 20px; }
+.locator-section h3 { margin: 20px 0 8px; font-weight: 600; }
+.locator-section details, .locator-result { border-top: 1px solid var(--border); }
+.locator-section summary { padding: 14px 0; cursor: pointer; font-weight: 600; }
+.locator-section details p { max-width: 68ch; padding-bottom: 14px; color: var(--muted-foreground); }
+.locator-result { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px 28px; padding: 18px 0; overflow-wrap: anywhere; }
+.locator-links { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 24px; margin-top: 12px; }
+.locator-links a, .locator-credit { display: inline-flex; align-items: center; min-height: 44px; color: var(--primary); font-weight: 600; }
+.locator-credit { font-size: 13px; font-weight: 400; }
+.locator-links a:hover, .locator-credit:hover { text-decoration: underline; }
+@media (max-width: 600px) { .locator-result { grid-template-columns: minmax(0, 1fr); } }
+
 .records-page { width: 100%; max-width: 1160px; margin: auto; padding: 48px clamp(20px,5vw,60px) 64px; }
 .records-opening h1 { font-size: clamp(36px,4.8vw,58px); letter-spacing: -.04em; font-weight: 500; line-height: 1.1; }
 .records-opening p, .records-free { max-width: 80ch; line-height: 1.8; color: var(--muted-foreground); }
