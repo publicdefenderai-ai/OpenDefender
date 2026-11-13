@@ -3886,6 +3886,15 @@ export default {
     }
   },
   "courtRecords": {
+    "design": {
+      "viewDocket": "View docket",
+      "searching": "Searching court records…",
+      "fullAccess": "Results from the RECAP Archive and case law database.",
+      "limitedAccess": "Full RECAP access is unavailable. Results may be limited.",
+      "about": "About RECAP",
+      "locator": "Find a courthouse",
+      "sources": "Data sources"
+    },
     "hero": {
       "title": "Court Records Search",
       "subtitle": "Search free court records from the RECAP Archive and case law database"
@@ -8636,6 +8645,19 @@ export default {
     }
   },
   "courtDateGuide": {
+    "design": {
+      "heading": "Keep track of",
+      "accent": "your court date.",
+      "navigation": "Guide sections",
+      "confirm": "Confirm the details",
+      "reminders": "Set reminders",
+      "transport": "Arrange transportation",
+      "day": "Review your checklist",
+      "missed": "Already missed a court date?",
+      "week": "One week before",
+      "days": "Two days before",
+      "morning": "That morning"
+    },
     "badge": "Practical Guide",
     "title": "Court Date Guide: How to Track and Not Miss Your Court Date",
     "subtitle": "Missing a court date typically results in a bench warrant. This guide covers how to confirm your date, set reminders, find transportation, and what to do if you have already missed a date.",
