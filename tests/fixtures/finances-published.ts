@@ -85,16 +85,16 @@ export default {
       },
       "benefits": {
         "sectionTitle": "If you receive government benefits",
-        "sectionSubtitle": "An arrest can suspend or end certain benefits. Acting quickly after release can often preserve or restore them. If you don't currently receive these benefits, you may become eligible depending on your income after your case.",
+        "sectionSubtitle": "Confinement, a conviction or a household change can affect benefits differently. Check each program separately.",
         "snap": {
           "name": "SNAP (Food Assistance)",
-          "what": "SNAP is typically suspended during incarceration and restored after release — it is not automatically terminated. You must re-apply or request reinstatement.",
-          "action": "Contact your local SNAP office as soon as possible after release. The reinstatement window varies by state. Call 211 if you're unsure who to call."
+          "what": "A person receiving most meals in custody generally cannot participate in SNAP. Other eligible household members can still receive benefits.",
+          "action": "Report household changes as your state requires. After release, ask whether to update the household case or apply again."
         },
         "medicaid": {
           "name": "Medicaid",
-          "what": "Medicaid is suspended during incarceration but can be reinstated after release. Many people miss the reinstatement window and lose coverage permanently — this is one of the most common avoidable post-release losses.",
-          "action": "Contact your state Medicaid office or marketplace within 30 days of release. If your state expanded Medicaid under the ACA, you may be able to re-enroll at any time."
+          "what": "Incarceration alone does not end Medicaid eligibility. Services payable during custody are limited, with exceptions.",
+          "action": "Contact your state Medicaid office before or after release to check enrollment and restore access to care."
         },
         "tanf": {
           "name": "TANF (Cash Assistance)",
@@ -103,7 +103,7 @@ export default {
         },
         "socialSecurity": {
           "name": "Social Security, SSI, and SSDI",
-          "what": "Benefits are suspended after 30 consecutive days of incarceration but can be reinstated after release. SSA will eventually find out through databases — proactive notification avoids overpayments you will owe back.",
+          "what": "SSI payments stop for each full calendar month in custody, including pretrial detention. After 12 consecutive months of suspension, a new application is generally required. SSDI payments stop after conviction and more than 30 consecutive days of confinement; eligible family members can continue receiving their own payments.",
           "action": "Notify your local Social Security office before or immediately after release. Bring your release documents. Reinstatement can take several weeks, so start early."
         },
         "banking": {
@@ -212,7 +212,7 @@ export default {
       "Back to Support",
       "On this page",
       "If you receive government benefits",
-      "An arrest can suspend or end certain benefits. Acting quickly after release can often preserve or restore them. If you don't currently receive these benefits, you may become eligible depending on your income after your case.",
+      "Confinement, a conviction or a household change can affect benefits differently. Check each program separately.",
       "Court Fees & Fines",
       "Look up fees for your state",
       "Select a state",
@@ -243,11 +243,11 @@ export default {
       "SNAP (food stamps)",
       "Federal law restricts SNAP for people with certain drug felony convictions. Some states have opted out of this restriction — check your state's rules. A drug felony plea without checking the SNAP impact first can affect your family's food access.",
       "SSI / Social Security Disability",
-      "SSI payments are suspended during incarceration of 30 days or more. They are not terminated — but they must be reinstated, which takes time after release. Planning ahead helps avoid a payment gap.",
+      "SSI and SSDI have different confinement rules. After 12 consecutive months of SSI suspension, a new application is generally required. Contact SSA about release documentation.",
       "Public housing / Section 8",
-      "Certain convictions — especially drug or violent felonies — can trigger mandatory eviction from public housing or disqualification from the Section 8 voucher program. This can affect all household members.",
+      "Housing admission and ending an existing tenancy have different rules. Evidence of qualifying conduct can lead to action; an arrest record alone does not establish that conduct.",
       "Student financial aid (Pell Grants / loans)",
-      "Drug convictions while receiving federal student aid can result in temporary ineligibility for Pell Grants and federal student loans. Completing a drug treatment program can restore eligibility in some cases.",
+      "The former automatic federal student aid restriction for drug convictions has been removed. A separate court order denying federal benefits can still affect eligibility.",
       "Ask your attorney specifically about how any plea will affect your benefits before signing anything.",
       "Learn more about collateral consequences.",
       "This page provides general legal information, not legal advice. Financial and legal situations vary by jurisdiction. Always consult a licensed attorney or accredited financial counselor about your specific situation."
@@ -349,16 +349,16 @@ export default {
       },
       "benefits": {
         "sectionTitle": "Qué pasa con sus beneficios cuando es arrestado",
-        "sectionSubtitle": "Un arresto puede suspender o terminar los beneficios de los que depende. Actuar rápidamente después de su liberación a menudo puede preservarlos o restaurarlos.",
+        "sectionSubtitle": "La reclusión, una condena o un cambio en el hogar pueden afectar cada prestación de manera distinta. Consulte cada programa.",
         "snap": {
           "name": "SNAP (Asistencia Alimentaria)",
-          "what": "El SNAP generalmente se suspende durante el encarcelamiento y se restaura al salir — no se termina automáticamente. Debe volver a solicitar o pedir la reactivación.",
-          "action": "Contacte su oficina local de SNAP tan pronto como sea posible después de su liberación. El período de reactivación varía según el estado. Llame al 211 si no sabe a quién llamar."
+          "what": "Quien recibe la mayoría de sus comidas en custodia generalmente no puede participar en SNAP. Los demás miembros elegibles del hogar pueden seguir recibiendo beneficios.",
+          "action": "Informe los cambios del hogar según las reglas estatales. Al salir, consulte si debe actualizar el caso o presentar una nueva solicitud."
         },
         "medicaid": {
           "name": "Medicaid",
-          "what": "Medicaid se suspende durante el encarcelamiento pero puede reactivarse después. Muchas personas pierden el período de reactivación y pierden la cobertura permanentemente — esta es una de las pérdidas postliberación más comunes y evitables.",
-          "action": "Contacte la oficina de Medicaid de su estado o el mercado de seguros dentro de los 30 días de su liberación. Si su estado amplió Medicaid bajo la ACA, puede volver a inscribirse en cualquier momento."
+          "what": "La reclusión por sí sola no termina la elegibilidad para Medicaid. Los servicios cubiertos en custodia son limitados, con excepciones.",
+          "action": "Consulte a Medicaid estatal antes o después de salir para verificar su inscripción y restablecer el acceso a la atención."
         },
         "tanf": {
           "name": "TANF (Asistencia en Efectivo)",
@@ -367,7 +367,7 @@ export default {
         },
         "socialSecurity": {
           "name": "Seguro Social, SSI y SSDI",
-          "what": "Los beneficios se suspenden después de 30 días consecutivos de encarcelamiento pero pueden reactivarse al salir. La SSA eventualmente se enterará a través de bases de datos — la notificación proactiva evita pagos en exceso que deberá devolver.",
+          "what": "SSI deja de pagar por cada mes calendario completo en custodia, incluso antes del juicio. Tras 12 meses consecutivos de suspensión, generalmente se necesita una nueva solicitud. SSDI deja de pagar después de una condena y más de 30 días consecutivos de reclusión; los familiares elegibles pueden seguir cobrando sus propias prestaciones.",
           "action": "Notifique a su oficina local del Seguro Social antes o inmediatamente después de su liberación. Lleve sus documentos de liberación. La reactivación puede tardar varias semanas, así que empiece temprano."
         },
         "banking": {
@@ -476,7 +476,7 @@ export default {
       "Volver a Apoyo",
       "En esta página",
       "Qué pasa con sus beneficios cuando es arrestado",
-      "Un arresto puede suspender o terminar los beneficios de los que depende. Actuar rápidamente después de su liberación a menudo puede preservarlos o restaurarlos.",
+      "La reclusión, una condena o un cambio en el hogar pueden afectar cada prestación de manera distinta. Consulte cada programa.",
       "Tarifas y Multas de la Corte",
       "Busque las tarifas para su estado",
       "Seleccione un estado",
@@ -507,11 +507,11 @@ export default {
       "SNAP (food stamps)",
       "Federal law restricts SNAP for people with certain drug felony convictions. Some states have opted out of this restriction — check your state's rules. A drug felony plea without checking the SNAP impact first can affect your family's food access.",
       "SSI / Social Security Disability",
-      "SSI payments are suspended during incarceration of 30 days or more. They are not terminated — but they must be reinstated, which takes time after release. Planning ahead helps avoid a payment gap.",
+      "SSI and SSDI have different confinement rules. After 12 consecutive months of SSI suspension, a new application is generally required. Contact SSA about release documentation.",
       "Public housing / Section 8",
-      "Certain convictions — especially drug or violent felonies — can trigger mandatory eviction from public housing or disqualification from the Section 8 voucher program. This can affect all household members.",
+      "Housing admission and ending an existing tenancy have different rules. Evidence of qualifying conduct can lead to action; an arrest record alone does not establish that conduct.",
       "Student financial aid (Pell Grants / loans)",
-      "Drug convictions while receiving federal student aid can result in temporary ineligibility for Pell Grants and federal student loans. Completing a drug treatment program can restore eligibility in some cases.",
+      "The former automatic federal student aid restriction for drug convictions has been removed. A separate court order denying federal benefits can still affect eligibility.",
       "Ask your attorney specifically about how any plea will affect your benefits before signing anything.",
       "Learn more about collateral consequences.",
       "This page provides general legal information, not legal advice. Financial and legal situations vary by jurisdiction. Always consult a licensed attorney or accredited financial counselor about your specific situation."
@@ -613,16 +613,16 @@ export default {
       },
       "benefits": {
         "sectionTitle": "被捕后您的福利会发生什么",
-        "sectionSubtitle": "被捕可能暂停或终止您依赖的福利。释放后迅速采取行动通常可以保留或恢复这些福利。",
+        "sectionSubtitle": "监禁、定罪或家庭变动对各项福利的影响不同。请分别查询。",
         "snap": {
           "name": "SNAP（食品援助）",
-          "what": "SNAP在羁押期间通常会被暂停，释放后可以恢复——不会自动终止。您必须重新申请或请求恢复。",
-          "action": "释放后尽快联系当地SNAP办公室。恢复窗口因州而异。如果不知道该打给谁，请拨打211。"
+          "what": "被羁押且大部分膳食由机构提供的人通常不能领取 SNAP。其他符合条件的家庭成员仍可领取。",
+          "action": "按州要求报告家庭变动。获释后请询问应更新家庭档案还是重新申请。"
         },
         "medicaid": {
           "name": "Medicaid（医疗补助）",
-          "what": "Medicaid在羁押期间暂停，但释放后可以恢复。许多人错过了恢复窗口，永久失去了保险——这是释放后最常见且可以避免的损失之一。",
-          "action": "在释放后30天内联系您所在州的Medicaid办公室或保险市场。如果您的州在ACA下扩展了Medicaid，您可以随时重新注册。"
+          "what": "监禁本身不会终止 Medicaid 资格。羁押期间可支付的服务有限，但存在例外。",
+          "action": "获释前后请联系州 Medicaid 办事处确认参保状态，恢复就医。"
         },
         "tanf": {
           "name": "TANF（现金援助）",
@@ -631,7 +631,7 @@ export default {
         },
         "socialSecurity": {
           "name": "社会保障、SSI和SSDI",
-          "what": "连续羁押30天后福利将被暂停，但释放后可以恢复。SSA最终会通过数据库得知情况——主动通知可避免您需要归还的多付款。",
+          "what": "羁押（包括候审）满整个日历月，该月 SSI 停付。连续暂停12个月后通常须重新申请。定罪后连续监禁超过30天，SSDI 会停付；符合资格的家属可继续领取自己的福利。",
           "action": "在释放前或释放后立即通知当地社会保障局办公室。携带您的释放文件。恢复可能需要几周时间，请尽早开始。"
         },
         "banking": {
@@ -740,7 +740,7 @@ export default {
       "返回支持资源",
       "本页内容",
       "被捕后您的福利会发生什么",
-      "被捕可能暂停或终止您依赖的福利。释放后迅速采取行动通常可以保留或恢复这些福利。",
+      "监禁、定罪或家庭变动对各项福利的影响不同。请分别查询。",
       "法庭费用与罚款",
       "查询你所在州的费用",
       "选择州",
@@ -771,11 +771,11 @@ export default {
       "SNAP (food stamps)",
       "Federal law restricts SNAP for people with certain drug felony convictions. Some states have opted out of this restriction — check your state's rules. A drug felony plea without checking the SNAP impact first can affect your family's food access.",
       "SSI / Social Security Disability",
-      "SSI payments are suspended during incarceration of 30 days or more. They are not terminated — but they must be reinstated, which takes time after release. Planning ahead helps avoid a payment gap.",
+      "SSI and SSDI have different confinement rules. After 12 consecutive months of SSI suspension, a new application is generally required. Contact SSA about release documentation.",
       "Public housing / Section 8",
-      "Certain convictions — especially drug or violent felonies — can trigger mandatory eviction from public housing or disqualification from the Section 8 voucher program. This can affect all household members.",
+      "Housing admission and ending an existing tenancy have different rules. Evidence of qualifying conduct can lead to action; an arrest record alone does not establish that conduct.",
       "Student financial aid (Pell Grants / loans)",
-      "Drug convictions while receiving federal student aid can result in temporary ineligibility for Pell Grants and federal student loans. Completing a drug treatment program can restore eligibility in some cases.",
+      "The former automatic federal student aid restriction for drug convictions has been removed. A separate court order denying federal benefits can still affect eligibility.",
       "Ask your attorney specifically about how any plea will affect your benefits before signing anything.",
       "Learn more about collateral consequences.",
       "This page provides general legal information, not legal advice. Financial and legal situations vary by jurisdiction. Always consult a licensed attorney or accredited financial counselor about your specific situation."

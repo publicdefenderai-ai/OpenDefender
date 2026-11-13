@@ -1040,16 +1040,16 @@ export default {
       },
       "benefits": {
         "sectionTitle": "Qué pasa con sus beneficios cuando es arrestado",
-        "sectionSubtitle": "Un arresto puede suspender o terminar los beneficios de los que depende. Actuar rápidamente después de su liberación a menudo puede preservarlos o restaurarlos.",
+        "sectionSubtitle": "La reclusión, una condena o un cambio en el hogar pueden afectar cada prestación de manera distinta. Consulte cada programa.",
         "snap": {
           "name": "SNAP (Asistencia Alimentaria)",
-          "what": "El SNAP generalmente se suspende durante el encarcelamiento y se restaura al salir — no se termina automáticamente. Debe volver a solicitar o pedir la reactivación.",
-          "action": "Contacte su oficina local de SNAP tan pronto como sea posible después de su liberación. El período de reactivación varía según el estado. Llame al 211 si no sabe a quién llamar."
+          "what": "Quien recibe la mayoría de sus comidas en custodia generalmente no puede participar en SNAP. Los demás miembros elegibles del hogar pueden seguir recibiendo beneficios.",
+          "action": "Informe los cambios del hogar según las reglas estatales. Al salir, consulte si debe actualizar el caso o presentar una nueva solicitud."
         },
         "medicaid": {
           "name": "Medicaid",
-          "what": "Medicaid se suspende durante el encarcelamiento pero puede reactivarse después. Muchas personas pierden el período de reactivación y pierden la cobertura permanentemente — esta es una de las pérdidas postliberación más comunes y evitables.",
-          "action": "Contacte la oficina de Medicaid de su estado o el mercado de seguros dentro de los 30 días de su liberación. Si su estado amplió Medicaid bajo la ACA, puede volver a inscribirse en cualquier momento."
+          "what": "La reclusión por sí sola no termina la elegibilidad para Medicaid. Los servicios cubiertos en custodia son limitados, con excepciones.",
+          "action": "Consulte a Medicaid estatal antes o después de salir para verificar su inscripción y restablecer el acceso a la atención."
         },
         "tanf": {
           "name": "TANF (Asistencia en Efectivo)",
@@ -1058,7 +1058,7 @@ export default {
         },
         "socialSecurity": {
           "name": "Seguro Social, SSI y SSDI",
-          "what": "Los beneficios se suspenden después de 30 días consecutivos de encarcelamiento pero pueden reactivarse al salir. La SSA eventualmente se enterará a través de bases de datos — la notificación proactiva evita pagos en exceso que deberá devolver.",
+          "what": "SSI deja de pagar por cada mes calendario completo en custodia, incluso antes del juicio. Tras 12 meses consecutivos de suspensión, generalmente se necesita una nueva solicitud. SSDI deja de pagar después de una condena y más de 30 días consecutivos de reclusión; los familiares elegibles pueden seguir cobrando sus propias prestaciones.",
           "action": "Notifique a su oficina local del Seguro Social antes o inmediatamente después de su liberación. Lleve sus documentos de liberación. La reactivación puede tardar varias semanas, así que empiece temprano."
         },
         "banking": {
@@ -1930,7 +1930,7 @@ export default {
         },
         "notifyProviders": {
           "title": "Notifique a los proveedores de salud de su dependiente sobre los cambios",
-          "description": "Los médicos, auxiliares de salud a domicilio, fisioterapeutas, coordinadores de programas diurnos y el personal de farmacia necesitan saber quién es ahora el punto de contacto y quién está autorizado para tomar decisiones de atención. No necesita compartir su situación legal — una simple actualización indicando un cambio temporal de cuidador es suficiente.",
+          "description": "Pregunte a cada proveedor cómo autorizar al cuidador suplente a recibir información médica. Nombrar un contacto no otorga autoridad para consentir tratamientos. Revise el poder médico, la tutela o la autorización para cuidar a un menor. Medicare tiene su propia autorización de divulgación.",
           "priority": "high"
         },
         "contactAAA": {
@@ -5016,11 +5016,11 @@ export default {
       },
       "housing": {
         "title": "Vivienda pública y subsidiada",
-        "text": "Muchas autoridades de vivienda pública exigen la rescisión del contrato de arrendamiento tras ciertas condenas. Esto puede afectar a todo el hogar, no solo a la persona condenada. Los arrendadores privados también pueden negarse legalmente a alquilar a alguien con antecedentes penales."
+        "text": "Las pruebas de ciertas conductas pueden afectar una vivienda con ayuda federal. Un arresto por sí solo no demuestra la conducta. La admisión y la terminación del arrendamiento tienen reglas distintas."
       },
       "benefits": {
         "title": "Beneficios gubernamentales (SNAP, SSI, Medicaid)",
-        "text": "Algunos programas federales de beneficios restringen la elegibilidad tras ciertas condenas por delitos graves relacionados con drogas. El impacto varía según el estado y el tipo de beneficio, pero puede afectar el acceso de todo el hogar a asistencia alimentaria y atención médica."
+        "text": "Ciertas condenas por delitos graves de drogas afectan la elegibilidad individual para SNAP o TANF según el estado. Otros familiares pueden seguir siendo elegibles. La reclusión puede afectar SSI, SSDI y Medicaid bajo otras reglas."
       },
       "immigration": {
         "title": "Estatus migratorio",
@@ -5052,7 +5052,7 @@ export default {
         "title": "Apoyo económico durante la custodia",
         "item1": "La mayoría de los establecimientos tienen un sistema de cuenta de comisaría. Generalmente puede depositar dinero en línea, por teléfono o mediante giro postal. La persona puede usar estos fondos para llamadas, alimentos e higiene.",
         "item2": "Los costos de las llamadas desde la cárcel suelen ser elevados. Servicios como Securus e ICSolutions son proveedores comunes — puede configurar una cuenta prepagada para reducir el costo por llamada.",
-        "item3": "Si está administrando sus finanzas o propiedades mientras está bajo custodia, un poder notarial preparado con la ayuda de una organización de asistencia legal puede autorizarle a actuar en su nombre."
+        "item3": "Depositar en la cuenta de la cárcel no da acceso a cuentas externas. El parentesco no basta. Antes de administrar fondos o cambiar una dirección, compruebe la titularidad conjunta, la firma autorizada, el poder financiero o el nombramiento judicial."
       },
       "caseSupport": {
         "title": "Apoyar su caso desde el exterior",
@@ -6738,17 +6738,32 @@ export default {
     }
   },
   "collateralConsequences": {
+    "drivingDeadlines": {
+      "GA": "Georgia: el DDS-1205 da 30 días calendario desde su entrega para elegir una opción disponible, incluida una audiencia.",
+      "AZ": "Arizona: conforme al § 28-1385, el departamento debe recibir la solicitud dentro de los 30 días posteriores a la fecha del aviso.",
+      "CO": "Colorado: si un agente entrega el aviso de consentimiento expreso, solicite audiencia en siete días. Si llega por correo, consulte la fecha de respuesta en la carta.",
+      "CA": "California: solicite la audiencia administrativa dentro de los 10 días de recibir la orden de suspensión.",
+      "TX": "Texas: solicite la audiencia ALR dentro de los 15 días de recibir el aviso DIC-25.",
+      "FL": "Florida: solicite revisión formal o informal dentro de los 10 días posteriores a la emisión del aviso de suspensión.",
+      "NC": "Carolina del Norte: puede impugnar la revocación civil en la primera comparecencia o dentro de los 10 días desde que surta efecto.",
+      "OH": "Ohio: apele una suspensión por consentimiento implícito en la primera comparecencia o dentro de los 30 días posteriores a esa comparecencia."
+    },
+    "checkSnap": "Consulte las reglas vigentes de SNAP estatal sobre delitos graves de drogas",
+    "scSnap": "Delito grave de drogas cometido después del 22 de agosto de 1996; consulte a DSS sobre indulto o cancelación",
+    "unsure": "No estoy seguro/a",
+    "unresolved": "Temas sobre los que tenía dudas",
+    "skippedCharge": "Omitió el tipo de cargo, por lo que este resumen no cubre las consecuencias específicas de su cargo.",
     "badge": "Etapa de arresto",
     "pageTitle": "Verificador de Riesgos al Momento del Arresto",
-    "pageDesc": "Un arresto puede poner en riesgo inmediatamente la vivienda, el empleo y otros sistemas vitales, incluso antes de una condena. Responda 7 preguntas rápidas para ver qué puede necesitar atención ahora mismo.",
+    "pageDesc": "Responda siete preguntas sobre su situación para ver qué temas podrían requerir atención. Puede elegir «No estoy seguro/a» en cualquier pregunta.",
     "qOf": "Pregunta {{n}} de {{total}}",
     "yes": "Sí",
     "no": "No",
     "back": "Volver",
     "resultsTitle": "Su Resumen de Riesgos",
     "resultsDesc": "Estos sistemas pueden estar en riesgo inmediato según sus respuestas. Los elementos más urgentes aparecen primero.",
-    "noRiskTitle": "Estas respuestas no seleccionaron ningún tema",
-    "noRiskDesc": "Este breve cuestionario no cubre todas las consecuencias posibles. Consulte con su abogado sobre su situación específica.",
+    "noRiskTitle": "Sus respuestas no señalaron ningún tema",
+    "noRiskDesc": "Podría haber otras consecuencias. Este cuestionario solo cubre algunos temas.",
     "whatLabel": "Qué está en riesgo",
     "timelineLabel": "Plazo",
     "actionLabel": "Mejores prácticas",
@@ -6762,7 +6777,7 @@ export default {
     "privacyStrip": "Esta herramienta no almacena ninguna de sus respuestas. Todo el procesamiento ocurre localmente en su dispositivo.",
     "printHeading": "RESUMEN DE RIESGOS AL MOMENTO DEL ARRESTO",
     "printDate": "Generado: {{date}}",
-    "printNoRisk": "No se identificaron riesgos activos según sus respuestas.",
+    "printNoRisk": "Sus respuestas no señalaron ningún tema",
     "printTimeline": "Plazo:",
     "printAction": "Mejores prácticas:",
     "printDisclaimer": "Estos resultados son señales de riesgo preliminares únicamente, no determinaciones legales. Si una consecuencia aplica realmente depende de los cargos específicos, la jurisdicción y el resultado del caso. Solo información general. No es asesoramiento legal. Consulte a un abogado calificado para asesoramiento específico a su situación.",
@@ -6776,8 +6791,8 @@ export default {
         "sub": "Incluye trabajo a tiempo completo, parcial, por cuenta propia o cualquier trabajo remunerado."
       },
       "immigration": {
-        "question": "¿Hay alguien en su hogar que no sea ciudadano estadounidense o residente permanente?",
-        "sub": "Incluye titulares de visas, beneficiarios de DACA, personas indocumentadas y otros con estatus temporal.",
+        "question": "¿La persona que enfrenta los cargos carece de ciudadanía estadounidense?",
+        "sub": "Elija Sí si esa persona tiene residencia permanente legal (tarjeta verde) o si por otra razón no es ciudadana estadounidense. Si responde por otra persona, conteste sobre ella.",
         "privacyNote": "Esta respuesta nunca se almacena ni se transmite. Solo se procesa en su navegador."
       },
       "benefits": {
@@ -6814,9 +6829,9 @@ export default {
     "risks": {
       "supervision": {
         "title": "Riesgo de Violación de Supervisión",
-        "what": "Un nuevo arresto desencadena automáticamente una violación de la supervisión, sin importar cómo termine este caso. Se puede imponer una retención antes de que usted vea a un juez, y se puede programar una audiencia de revocación separada antes de que su caso penal se resuelva.",
-        "clock": "Su oficial de supervisión suele ser notificado dentro de las 24 horas del registro. Se puede imponer una retención antes de cualquier audiencia de fianza.",
-        "action": "Informar a su abogado defensor sobre su situación de supervisión lo antes posible es una prioridad. La mayoría de los abogados aconsejan no contactar al oficial de supervisión antes de hablar primero con el abogado defensor.",
+        "what": "Algunas condenas u otras resoluciones aplicables pueden exigir inscripción en el registro de delitos sexuales. Importan el delito, la resolución, la jurisdicción y cualquier orden judicial requerida. Un cargo por sí solo no crea esa obligación.",
+        "clock": "En Florida, § 322.055 cubre ciertas condenas por drogas de adultos, con excepciones. En Texas, § 521.372 distingue las condenas aplicables y ciertas suspensiones ordenadas por el tribunal. Importan el estado y la resolución.",
+        "action": "Su abogado puede explicarle las condiciones de notificación, la audiencia y los posibles resultados.",
         "linkLabel": "Obtener orientación del caso"
       },
       "immigration": {
@@ -6835,8 +6850,8 @@ export default {
       },
       "housing": {
         "title": "Riesgo de Vivienda y Desalojo",
-        "what": "Las autoridades de vivienda pública y los programas de la Sección 8 pueden iniciar procedimientos de desalojo basándose únicamente en un arresto, antes de cualquier condena. Las reglas federales de un solo incidente dan a las autoridades de vivienda una amplia autoridad para actuar. Los arrendadores privados también pueden tener cláusulas en el contrato que tratan un arresto como una violación.",
-        "clock": "Las autoridades de vivienda pública pueden iniciar procedimientos en pocos días después del arresto. Revise su contrato de arrendamiento de inmediato.",
+        "what": "En la vivienda con asistencia federal, un arresto por sí solo no demuestra actividad delictiva. Las pruebas de la conducta pueden dar lugar a medidas incluso sin condena. Los alquileres privados tienen otras reglas.",
+        "clock": "El aviso de terminación y el plazo para solicitar una audiencia son distintos. Revise el motivo, la fecha de recepción y las instrucciones del aviso.",
         "action": "Revise su contrato para ver las cláusulas de arresto o actividad criminal. Si vive en vivienda pública o usa un vale de la Sección 8, contacte a un abogado de vivienda antes de que la autoridad de vivienda se comunique con usted.",
         "linkLabel": "Apoyo de vivienda"
       },
@@ -6849,28 +6864,28 @@ export default {
       },
       "benefits": {
         "title": "Riesgo de Beneficios Federales",
-        "what": "Algunos programas de beneficios federales requieren que reporte un arresto. Una condena por ciertos delitos, en particular de drogas, puede resultar en descalificación automática de programas como SNAP y la ayuda federal para estudiantes. Una condena por delito grave puede desencadenar una prohibición de por vida de SNAP en algunos estados.",
-        "clock": "Los requisitos de notificación varían según el programa. Algunos requieren notificación dentro de los 10 días posteriores al arresto. Contacte a su trabajador social para comprender sus obligaciones.",
+        "what": "Una condena por ciertos delitos graves de drogas puede afectar SNAP o TANF según el estado. Otros miembros del hogar pueden seguir siendo elegibles. Se eliminó la antigua restricción de ayuda federal estudiantil por condenas de drogas.",
+        "clock": "Los pagos de SSI cesan por cada mes calendario completo en reclusión. Los de SSDI pueden cesar tras una condena y más de 30 días consecutivos de reclusión. Medicaid puede limitar servicios en custodia. Consulte a SNAP sobre los plazos para informar cambios del hogar.",
         "action": "Contacte a su trabajador social de beneficios para comprender sus obligaciones de notificación. Pregúntele a su abogado si los cargos que enfrenta conllevan consecuencias automáticas en los beneficios.",
         "linkLabel": "Apoyo financiero"
       },
       "license": {
         "title": "Riesgo de Licencia Profesional",
-        "what": "Muchas juntas de licencias requieren que los titulares reporten los arrestos dentro de los 30 días y pueden suspender una licencia mientras se conoce el resultado del caso. Los campos con mayor riesgo incluyen enfermería, docencia, derecho, bienes raíces, contratación y cualquier profesión que requiera verificación de antecedentes para la renovación.",
-        "clock": "La mayoría de las juntas de licencias requieren notificación dentro de los 30 días posteriores al arresto. Algunas juntas actúan de inmediato al recibir la notificación. Verifique las reglas específicas de su junta.",
+        "what": "Consulte las reglas de su profesión y licencia. Según la junta, un arresto, una acusación formal por delito grave, una condena o una sanción pueden requerir notificación.",
+        "clock": "El plazo comienza con el hecho que indique su junta. Revise el formulario antes de suponer que comienza con el arresto.",
         "action": "Consulte las reglas de su junta de licencias sobre la notificación de arrestos. Contacte a un abogado que maneje asuntos de licencias profesionales antes de reportar a su junta.",
         "linkLabel": "Encontrar ayuda legal"
       },
       "driverLicense": {
         "title": "Riesgo de Suspensión de Licencia de Conducir",
-        "what": "El DUI y muchas condenas por drogas activan automáticamente la suspensión de la licencia de conducir a través de dos vías separadas: una suspensión administrativa (DMV) vinculada a su arresto y una suspensión del tribunal penal vinculada a la condena. Ambas pueden ocurrir al mismo tiempo. La mayoría de los estados permiten una licencia restringida o de emergencia para el trabajo y viajes médicos durante la suspensión, pero debe actuar rápidamente — el plazo de la suspensión administrativa puede cerrarse en días después del arresto.",
-        "clock": "En la mayoría de los estados, la suspensión administrativa de la licencia comienza automáticamente 30–60 días después del arresto, a menos que solicite una audiencia ante el DMV, generalmente dentro de los 5–30 días a partir del aviso de arresto. No solicitar la audiencia dentro del plazo renuncia a su derecho de impugnar la suspensión administrativa.",
+        "what": "Tras un arresto por DUI, un resultado de prueba que supere el límite aplicable o negarse a la prueba puede iniciar una suspensión administrativa. Una condena puede causar otra suspensión. Los resultados pueden ser distintos.",
+        "clock": "Revise el aviso de inmediato. La fecha de inicio de la suspensión y el plazo para pedir audiencia son distintos. Ambos dependen de la ley estatal y del aviso.",
         "action": "Pida a su abogado que presente una solicitud de audiencia ante el DMV de inmediato — no espere la fecha de su tribunal. También pregunte sobre opciones de licencia restringida o de emergencia y si un dispositivo de bloqueo de encendido puede permitirle conducir durante el período de suspensión.",
         "linkLabel": "Ayuda con transporte y licencia"
       },
       "driverLicenseCheck": {
         "title": "Licencia de Conducir — Verifique Su Estado",
-        "what": "Algunos estados (incluyendo CA, FL, IL, MA y TX) suspenden automáticamente la licencia de conducir por una condena por drogas, incluso cuando no hubo vehículo involucrado. Otros estados no lo hacen. Si esto aplica depende del estado donde fue condenado.",
+        "what": "En algunos estados, una condena por ciertos delitos de drogas puede afectar la licencia aunque no haya intervenido un vehículo. Un cargo pendiente por sí solo no activa una suspensión basada en una condena.",
         "clock": "Si su estado exige la suspensión, generalmente entra en vigencia en la sentencia o poco después de la condena. Actuar antes de que se dicte una condena le da más opciones.",
         "action": "Pregúntele específicamente a su abogado si su estado suspende las licencias de conducir por este tipo de condena por drogas y si hay disponible una licencia restringida o de emergencia. No asuma que su licencia está segura — ni que está en riesgo — sin confirmar la ley de su estado.",
         "linkLabel": "Ayuda con transporte y licencia"
@@ -6893,8 +6908,8 @@ export default {
         "federal": {
           "stateName": "Federal (reglas del HUD / reglas federales)",
           "housing": {
-            "headline": "Las PHA deben dar aviso por escrito y la oportunidad de una audiencia de queja",
-            "detail": "Las reglas federales del HUD exigen la terminación obligatoria para un grupo reducido de delitos (condenas relacionadas con drogas en viviendas con asistencia federal, producción de metanfetamina en el lugar, registro de por vida como delincuente sexual). Para cualquier otra actividad delictiva, las autoridades de vivienda tienen discreción. En cualquier caso, la PHA debe entregar aviso por escrito y permitirle solicitar una audiencia de queja antes de que proceda el desalojo.",
+            "headline": "Revise el aviso de terminación y el plazo separado de audiencia",
+            "detail": "Por falta de pago en vivienda pública federal, el aviso escrito de terminación debe dar al menos 30 días. Para ciertas amenazas, actividades delictivas o condenas por delito grave, el plazo debe ser razonable y no superar 30 días. La solicitud de audiencia tiene su propio plazo según la autoridad. La admisión tiene otras reglas.",
             "source": "24 C.F.R. § 966.4(l)(3); 42 U.S.C. § 1437d"
           },
           "license": {
@@ -6957,14 +6972,14 @@ export default {
         "CA": {
           "stateName": "California",
           "housing": {
-            "headline": "La PHA debe dar aviso por escrito con 14 días de anticipación; puede solicitar una audiencia de queja",
-            "detail": "Las autoridades de vivienda de California deben entregar un aviso por escrito de terminación del contrato de arrendamiento y las razones específicas. Usted tiene derecho a solicitar una audiencia de queja, generalmente dentro de 10 a 14 días desde el aviso. Los Ángeles y San Francisco cuentan con protecciones adicionales locales de vivienda de oportunidad justa que exigen una evaluación individualizada antes de cualquier acción de vivienda relacionada con antecedentes penales.",
+            "headline": "Revise el aviso de terminación y el plazo separado de audiencia",
+            "detail": "Por falta de pago en vivienda pública federal, el aviso escrito de terminación debe dar al menos 30 días. Para ciertas amenazas, actividades delictivas o condenas por delito grave, el plazo debe ser razonable y no superar 30 días. La solicitud de audiencia tiene su propio plazo según la autoridad. La admisión tiene otras reglas.",
             "source": "HUD 24 C.F.R. § 966.4; Cal. Gov. Code § 12955"
           },
           "license": {
-            "headline": "La mayoría de las juntas exigen autoinformar dentro de 30 días de una condena — no de un arresto",
-            "detail": "El Código de Negocios y Profesiones de California § 490 prohíbe denegar una licencia únicamente por una condena previa; las juntas deben realizar una evaluación individualizada. La mayoría de las juntas de CA (enfermería: Cal. B&P § 2762; docencia: Ed. Code § 44009; contratistas: Cal. B&P § 7069) exigen informar una condena o declaración de culpabilidad dentro de 30 días. Un arresto por sí solo generalmente no activa un informe obligatorio, salvo que las regulaciones específicas de la junta lo exijan.",
-            "source": "Cal. Bus. & Prof. Code §§ 490, 2762; Ed. Code § 44009"
+            "headline": "El hecho que debe notificarse depende de la junta",
+            "detail": "En California, los médicos deben comunicar una acusación formal por delito grave o una condena por delito menor o grave en 30 días. Los profesionales de Ciencias del Comportamiento informan las condenas por delitos menores y graves en 30 días. El personal de enfermería registrado informa condenas y sanciones a la licencia en 30 días, con excepciones para ciertas infracciones. Consulte el formulario de su junta.",
+            "source": "Cal. Bus. & Prof. Code § 802.1"
           }
         },
         "CO": {

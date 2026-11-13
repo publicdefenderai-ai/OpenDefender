@@ -18,7 +18,7 @@ export default {
         },
         "notifyProviders": {
           "title": "Notify your dependent's healthcare providers of any changes",
-          "description": "Doctors, home health aides, physical therapists, day program coordinators, and pharmacy staff need to know who is now the point of contact and who is authorized to make care decisions. You don't need to share your legal situation — a simple update noting a temporary caregiver change is sufficient.",
+          "description": "Ask each provider how to authorize a backup caregiver to receive health information. Naming a contact does not grant authority to consent to treatment. Check the applicable health-care proxy, guardianship or minor-caregiver authorization. Medicare has a separate disclosure authorization.",
           "priority": "high"
         },
         "contactAAA": {
@@ -150,7 +150,7 @@ export default {
       "Think through who in your life — a sibling, other family member, close friend, or neighbor — could take on a temporary caregiving role. Have a direct conversation with them about what the role involves and whether they're willing and able. Be specific. Identify a second person as a backup. People often want to help but need to be asked clearly.",
       "This week",
       "Notify your dependent's healthcare providers of any changes",
-      "Doctors, home health aides, physical therapists, day program coordinators, and pharmacy staff need to know who is now the point of contact and who is authorized to make care decisions. You don't need to share your legal situation — a simple update noting a temporary caregiver change is sufficient.",
+      "Ask each provider how to authorize a backup caregiver to receive health information. Naming a contact does not grant authority to consent to treatment. Check the applicable health-care proxy, guardianship or minor-caregiver authorization. Medicare has a separate disclosure authorization.",
       "Contact your local Area Agency on Aging",
       "Area Agencies on Aging (AAAs) are local organizations funded to connect families with home health aides, meal delivery, transportation, adult day programs, respite care, and more. They are specifically designed for situations like yours. Call 211 or the Eldercare Locator (1-800-677-1116) to find your local AAA.",
       "Ask about respite care programs",
@@ -229,7 +229,7 @@ export default {
         },
         "notifyProviders": {
           "title": "Notifique a los proveedores de salud de su dependiente sobre los cambios",
-          "description": "Los médicos, auxiliares de salud a domicilio, fisioterapeutas, coordinadores de programas diurnos y el personal de farmacia necesitan saber quién es ahora el punto de contacto y quién está autorizado para tomar decisiones de atención. No necesita compartir su situación legal — una simple actualización indicando un cambio temporal de cuidador es suficiente.",
+          "description": "Pregunte a cada proveedor cómo autorizar al cuidador suplente a recibir información médica. Nombrar un contacto no otorga autoridad para consentir tratamientos. Revise el poder médico, la tutela o la autorización para cuidar a un menor. Medicare tiene su propia autorización de divulgación.",
           "priority": "high"
         },
         "contactAAA": {
@@ -361,7 +361,7 @@ export default {
       "Piense en quién en su vida — un hermano/a, otro familiar, un amigo cercano o vecino — podría asumir un papel temporal de cuidador. Tenga una conversación directa con ellos sobre lo que implica el papel y si están dispuestos y disponibles. Sea específico. Identifique una segunda persona como respaldo. Las personas a menudo quieren ayudar pero necesitan que se les pida claramente.",
       "Esta semana",
       "Notifique a los proveedores de salud de su dependiente sobre los cambios",
-      "Los médicos, auxiliares de salud a domicilio, fisioterapeutas, coordinadores de programas diurnos y el personal de farmacia necesitan saber quién es ahora el punto de contacto y quién está autorizado para tomar decisiones de atención. No necesita compartir su situación legal — una simple actualización indicando un cambio temporal de cuidador es suficiente.",
+      "Pregunte a cada proveedor cómo autorizar al cuidador suplente a recibir información médica. Nombrar un contacto no otorga autoridad para consentir tratamientos. Revise el poder médico, la tutela o la autorización para cuidar a un menor. Medicare tiene su propia autorización de divulgación.",
       "Contacte a su Agencia Local de Área en Envejecimiento",
       "Las Agencias de Área en Envejecimiento (AAA) son organizaciones locales financiadas para conectar a las familias con auxiliares de salud a domicilio, entrega de comidas, transporte, programas de día para adultos, cuidado de relevo y más. Están diseñadas específicamente para situaciones como la suya. Llame al 211 o al Localizador de Cuidado para Adultos Mayores (1-800-677-1116) para encontrar su AAA local.",
       "Pregunte sobre programas de cuidado de relevo",
@@ -440,7 +440,7 @@ export default {
         },
         "notifyProviders": {
           "title": "通知被赡养人的医疗服务提供者任何变化",
-          "description": "医生、家庭健康助理、物理治疗师、日间项目协调员和药房工作人员需要知道谁现在是联系人，谁被授权做出护理决定。你不需要分享你的法律状况——一封简单的信息说明临时照顾者变更就足够了。",
+          "description": "向各医疗机构询问如何授权后备照护者获取医疗信息。登记联系人不会授予治疗同意权。请核查医疗代理、监护或未成年人照护授权。Medicare 有单独的信息披露授权。",
           "priority": "high"
         },
         "contactAAA": {
@@ -572,7 +572,7 @@ export default {
       "想想你生命中谁——兄弟姐妹、其他家庭成员、亲密朋友或邻居——可以承担临时照顾角色。与他们直接交谈，了解这个角色的要求以及他们是否愿意且能够承担。具体说明。确定第二个人作为备用。人们通常想帮忙，但需要被明确请求。",
       "本周",
       "通知被赡养人的医疗服务提供者任何变化",
-      "医生、家庭健康助理、物理治疗师、日间项目协调员和药房工作人员需要知道谁现在是联系人，谁被授权做出护理决定。你不需要分享你的法律状况——一封简单的信息说明临时照顾者变更就足够了。",
+      "向各医疗机构询问如何授权后备照护者获取医疗信息。登记联系人不会授予治疗同意权。请核查医疗代理、监护或未成年人照护授权。Medicare 有单独的信息披露授权。",
       "联系当地老龄服务区域机构",
       "老龄服务区域机构（AAA）是专门为家庭连接家庭健康助理、送餐、交通、成人日间项目、临时护理等资源的地方组织。它们专门为你这样的情况而设计。致电211或老年人照护定位服务（1-800-677-1116）找到你当地的AAA。",
       "询问临时护理计划",

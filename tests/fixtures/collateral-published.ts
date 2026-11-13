@@ -3,15 +3,15 @@ export default {
   "en": {
     "badge": "Arrest stage",
     "pageTitle": "Arrest-Stage Risk Screener",
-    "pageDesc": "An arrest can immediately put housing, employment, and other vital systems at risk, even before any conviction. Answer 7 quick yes-or-no questions to see what may need attention right now.",
+    "pageDesc": "Answer seven questions about your circumstances to see what may need attention. You can choose “I’m not sure” for any question.",
     "qOf": "Question {{n}} of {{total}}",
     "yes": "Yes",
     "no": "No",
     "back": "Back",
     "resultsTitle": "Your Risk Summary",
     "resultsDesc": "These systems may be at immediate risk based on your answers. The most urgent items appear first.",
-    "noRiskTitle": "No Active Risks Identified",
-    "noRiskDesc": "Based on your answers, none of the civil systems we screen for appear to be at immediate risk from this arrest. This does not cover every possible consequence. Speak with your attorney about your specific situation.",
+    "noRiskTitle": "No topics flagged by your answers",
+    "noRiskDesc": "Other consequences may still apply. This screener covers only some topics.",
     "whatLabel": "What's at risk",
     "timelineLabel": "Timeline",
     "actionLabel": "Best practices",
@@ -25,7 +25,7 @@ export default {
     "privacyStrip": "This tool stores none of your answers. All processing happens locally on your device.",
     "printHeading": "ARREST-STAGE RISK SUMMARY",
     "printDate": "Generated: {{date}}",
-    "printNoRisk": "No active risks identified based on your answers.",
+    "printNoRisk": "No topics flagged by your answers",
     "printTimeline": "Timeline:",
     "printAction": "Best practices:",
     "printDisclaimer": "These results are preliminary risk flags only — not legal determinations. Whether a consequence actually applies depends on your specific charges, jurisdiction, and case outcome. General information only. Not legal advice. Consult a qualified attorney for advice specific to your situation.",
@@ -39,8 +39,8 @@ export default {
         "sub": "Includes full-time, part-time, gig work, or any paying job."
       },
       "immigration": {
-        "question": "Is anyone in your household not a U.S. citizen or permanent resident?",
-        "sub": "Includes visa holders, DACA recipients, undocumented individuals, and others with temporary status.",
+        "question": "Is the person facing charges a noncitizen of the United States?",
+        "sub": "Choose Yes if that person is a lawful permanent resident (green-card holder) or otherwise is not a U.S. citizen. If you’re filling this out for someone else, answer about them.",
         "privacyNote": "This answer is never stored or transmitted. It runs only in your browser."
       },
       "benefits": {
@@ -77,9 +77,9 @@ export default {
     "risks": {
       "supervision": {
         "title": "Probation or Parole Violation Risk",
-        "what": "A new arrest triggers an automatic supervision violation regardless of how this case ends. A hold may be placed before you see a judge, and a separate revocation hearing can be scheduled before your criminal case is resolved.",
-        "clock": "Your supervision officer is typically notified within 24 hours of booking. A hold can be placed before any bail hearing.",
-        "action": "Informing your defense attorney about your supervision status as early as possible is a priority. Most attorneys advise against contacting your supervision officer before speaking with defense counsel first.",
+        "what": "Some convictions or other qualifying adjudications can require sex-offender registration. The exact offense, disposition, jurisdiction and any required court order matter. A charge alone does not establish a duty.",
+        "clock": "Florida § 322.055 covers certain drug convictions for adults, with statutory exceptions. Texas § 521.372 distinguishes qualifying convictions and certain court-ordered suspensions. The state and disposition matter.",
+        "action": "Your lawyer can explain reporting conditions, hearing procedures and possible outcomes.",
         "linkLabel": "Get case guidance"
       },
       "immigration": {
@@ -98,8 +98,8 @@ export default {
       },
       "housing": {
         "title": "Housing and Eviction Risk",
-        "what": "Public housing authorities and Section 8 programs can begin eviction proceedings based on an arrest alone, before any conviction. Federal one-strike rules give housing authorities broad authority to act. Private landlords may also have lease clauses that treat an arrest as a violation.",
-        "clock": "Public housing authorities can begin proceedings within days of an arrest. Review your lease immediately.",
+        "what": "In federally assisted housing, an arrest record alone does not establish criminal activity. Evidence of the underlying conduct may lead to action even without a conviction. Private rental rules differ.",
+        "clock": "A termination notice and a deadline to request a hearing are separate. Check the reason, date of receipt and hearing instructions on the notice.",
         "action": "Review your lease for arrest or criminal activity clauses. If you live in public housing or use a Section 8 voucher, contact a housing attorney before the housing authority contacts you.",
         "linkLabel": "Housing support"
       },
@@ -112,28 +112,28 @@ export default {
       },
       "benefits": {
         "title": "Federal Benefits Risk",
-        "what": "Some federal benefit programs require you to report an arrest. A conviction for certain offenses, particularly drug offenses, can result in automatic disqualification from programs like SNAP and federal student aid. A felony conviction triggers a lifetime SNAP ban in some states.",
-        "clock": "Reporting requirements vary by program. Some require notification within 10 days of an arrest. Contact your caseworker to understand your obligations.",
+        "what": "A qualifying drug felony conviction can affect SNAP or TANF under state rules. Other household members may remain eligible. The former federal student aid drug-conviction restriction has been removed.",
+        "clock": "SSI payments stop for a full calendar month in jail or prison. SSDI payments can stop after conviction and more than 30 consecutive days of confinement. Medicaid services can be limited in custody. Ask the SNAP office about household reporting deadlines.",
         "action": "Contact your benefits caseworker to understand your reporting obligations. Ask your attorney whether the charges you face carry automatic benefits consequences.",
         "linkLabel": "Financial support"
       },
       "license": {
         "title": "Professional License Risk",
-        "what": "Many licensing boards require license holders to report arrests within 30 days and can suspend a license pending the outcome of a case. Fields with the highest risk include nursing, teaching, law, real estate, contracting, security work, and any profession requiring a background check for renewal.",
-        "clock": "Most licensing boards require reporting within 30 days of an arrest. Some boards act immediately upon notification. Check your board's specific rules.",
+        "what": "Check the rules for your profession and license. Depending on the board, an arrest, formal felony charge, conviction or disciplinary order may require a report.",
+        "clock": "The deadline runs from the event specified by your board. Check its reporting form before assuming an arrest starts the clock.",
         "action": "Look up your licensing board's rules on arrest reporting. Contact an attorney who handles professional licensing matters before you report to your board.",
         "linkLabel": "Find legal help"
       },
       "driverLicense": {
         "title": "Driver's License Suspension Risk",
-        "what": "DUI and many drug convictions automatically trigger driver's license suspension through two separate tracks: an administrative (DMV) suspension tied to your arrest, and a criminal court suspension tied to conviction. Both can run at the same time. Most states allow a restricted or hardship license for work and medical travel during suspension, but you must act quickly — the administrative suspension window can close within days of arrest.",
-        "clock": "In most states, the administrative license suspension begins automatically 30–60 days after arrest unless you request a DMV hearing, usually within 5–30 days of your arrest notice. Failing to request the hearing within the deadline waives your right to contest the administrative suspension.",
+        "what": "After a DUI arrest, a qualifying test result or test refusal may trigger an administrative license suspension. A criminal conviction can lead to a separate suspension. The two proceedings can have different outcomes.",
+        "clock": "Check the suspension notice promptly. The effective date and the deadline to request a hearing are separate. Both depend on state law and the notice.",
         "action": "Ask your attorney to file a DMV hearing request on your behalf immediately — do not wait for your court date. Also ask about hardship or restricted license options and whether an ignition interlock device can allow you to drive during the suspension period.",
         "linkLabel": "Transportation and license help"
       },
       "driverLicenseCheck": {
         "title": "Driver's License — Check Your State",
-        "what": "Some states (including CA, FL, IL, MA, and TX) automatically suspend your driver's license for a drug conviction even when no vehicle was involved. Other states do not. Whether this applies to you depends on the state where you were convicted.",
+        "what": "In some states, a conviction for a qualifying drug offense can affect a license even when no vehicle was involved. A pending drug charge alone does not trigger a conviction-based suspension.",
         "clock": "If your state does require suspension, it typically takes effect at sentencing or shortly after conviction. Acting before a conviction is entered gives you the most options.",
         "action": "Ask your attorney specifically whether your state suspends driver's licenses for this type of drug conviction and whether any hardship or restricted license is available. Do not assume your license is safe — and do not assume it is at risk — without confirming your state's rule.",
         "linkLabel": "Transportation and license help"
@@ -156,8 +156,8 @@ export default {
         "federal": {
           "stateName": "Federal (HUD / Federal Rules)",
           "housing": {
-            "headline": "PHAs must give written notice and a grievance opportunity",
-            "detail": "Federal HUD rules require mandatory termination for a narrow set of crimes (drug-related convictions in federally assisted housing, meth production on the premises, lifetime sex offender registrants). For all other criminal activity, housing authorities have discretion. In either case, the PHA must provide written notice and allow you to request a grievance hearing before eviction proceeds.",
+            "headline": "Check the termination notice and the separate hearing deadline",
+            "detail": "For nonpayment of rent in federal public housing, the written termination notice must give at least 30 days. For specified safety threats, criminal activity or a felony conviction, the period must be reasonable and no more than 30 days. A grievance request has its own deadline under the housing authority’s procedure. Admission rules are separate.",
             "source": "24 C.F.R. § 966.4(l)(3); 42 U.S.C. § 1437d"
           },
           "license": {
@@ -220,14 +220,14 @@ export default {
         "CA": {
           "stateName": "California",
           "housing": {
-            "headline": "PHA must give 14-day written notice; you may request a grievance hearing",
-            "detail": "California housing authorities must provide a written notice of lease termination and the specific reasons. You have the right to request a grievance hearing, typically within 10–14 days of the notice. Los Angeles and San Francisco have additional local fair-chance housing protections requiring individualized assessment before any housing action tied to criminal history.",
+            "headline": "Check the termination notice and the separate hearing deadline",
+            "detail": "For nonpayment of rent in federal public housing, the written termination notice must give at least 30 days. For specified safety threats, criminal activity or a felony conviction, the period must be reasonable and no more than 30 days. A grievance request has its own deadline under the housing authority’s procedure. Admission rules are separate.",
             "source": "HUD 24 C.F.R. § 966.4; Cal. Gov. Code § 12955"
           },
           "license": {
-            "headline": "Most boards require self-reporting within 30 days of a conviction — not an arrest",
-            "detail": "California Business & Professions Code § 490 prohibits denying a license solely based on a prior conviction; boards must conduct an individualized assessment. Most CA boards (nursing: Cal. B&P § 2762; teaching: Ed. Code § 44009; contractors: Cal. B&P § 7069) require reporting a conviction or guilty plea within 30 days. An arrest alone generally does not trigger a mandatory report unless the board's specific regulations require it.",
-            "source": "Cal. Bus. & Prof. Code §§ 490, 2762; Ed. Code § 44009"
+            "headline": "The reporting event depends on the licensing board",
+            "detail": "California physicians must report a formal felony indictment or information, or a misdemeanor or felony conviction, within 30 days. Behavioral Sciences licensees report misdemeanor and felony convictions within 30 days. Registered nurses report convictions and license discipline within 30 days, with limited infraction exceptions. Check your board’s form.",
+            "source": "Cal. Bus. & Prof. Code § 802.1"
           }
         },
         "CO": {
@@ -868,15 +868,15 @@ export default {
   "es": {
     "badge": "Etapa de arresto",
     "pageTitle": "Verificador de Riesgos al Momento del Arresto",
-    "pageDesc": "Un arresto puede poner en riesgo inmediatamente la vivienda, el empleo y otros sistemas vitales, incluso antes de una condena. Responda 7 preguntas rápidas para ver qué puede necesitar atención ahora mismo.",
+    "pageDesc": "Responda siete preguntas sobre su situación para ver qué temas podrían requerir atención. Puede elegir «No estoy seguro/a» en cualquier pregunta.",
     "qOf": "Pregunta {{n}} de {{total}}",
     "yes": "Sí",
     "no": "No",
     "back": "Volver",
     "resultsTitle": "Su Resumen de Riesgos",
     "resultsDesc": "Estos sistemas pueden estar en riesgo inmediato según sus respuestas. Los elementos más urgentes aparecen primero.",
-    "noRiskTitle": "No Se Identificaron Riesgos Activos",
-    "noRiskDesc": "Según sus respuestas, ninguno de los sistemas civiles que evaluamos parece estar en riesgo inmediato por este arresto. Esto no cubre todas las posibles consecuencias. Hable con su abogado sobre su situación específica.",
+    "noRiskTitle": "Sus respuestas no señalaron ningún tema",
+    "noRiskDesc": "Podría haber otras consecuencias. Este cuestionario solo cubre algunos temas.",
     "whatLabel": "Qué está en riesgo",
     "timelineLabel": "Plazo",
     "actionLabel": "Mejores prácticas",
@@ -890,7 +890,7 @@ export default {
     "privacyStrip": "Esta herramienta no almacena ninguna de sus respuestas. Todo el procesamiento ocurre localmente en su dispositivo.",
     "printHeading": "RESUMEN DE RIESGOS AL MOMENTO DEL ARRESTO",
     "printDate": "Generado: {{date}}",
-    "printNoRisk": "No se identificaron riesgos activos según sus respuestas.",
+    "printNoRisk": "Sus respuestas no señalaron ningún tema",
     "printTimeline": "Plazo:",
     "printAction": "Mejores prácticas:",
     "printDisclaimer": "Estos resultados son señales de riesgo preliminares únicamente, no determinaciones legales. Si una consecuencia aplica realmente depende de los cargos específicos, la jurisdicción y el resultado del caso. Solo información general. No es asesoramiento legal. Consulte a un abogado calificado para asesoramiento específico a su situación.",
@@ -904,8 +904,8 @@ export default {
         "sub": "Incluye trabajo a tiempo completo, parcial, por cuenta propia o cualquier trabajo remunerado."
       },
       "immigration": {
-        "question": "¿Hay alguien en su hogar que no sea ciudadano estadounidense o residente permanente?",
-        "sub": "Incluye titulares de visas, beneficiarios de DACA, personas indocumentadas y otros con estatus temporal.",
+        "question": "¿La persona que enfrenta los cargos carece de ciudadanía estadounidense?",
+        "sub": "Elija Sí si esa persona tiene residencia permanente legal (tarjeta verde) o si por otra razón no es ciudadana estadounidense. Si responde por otra persona, conteste sobre ella.",
         "privacyNote": "Esta respuesta nunca se almacena ni se transmite. Solo se procesa en su navegador."
       },
       "benefits": {
@@ -942,9 +942,9 @@ export default {
     "risks": {
       "supervision": {
         "title": "Riesgo de Violación de Supervisión",
-        "what": "Un nuevo arresto desencadena automáticamente una violación de la supervisión, sin importar cómo termine este caso. Se puede imponer una retención antes de que usted vea a un juez, y se puede programar una audiencia de revocación separada antes de que su caso penal se resuelva.",
-        "clock": "Su oficial de supervisión suele ser notificado dentro de las 24 horas del registro. Se puede imponer una retención antes de cualquier audiencia de fianza.",
-        "action": "Informar a su abogado defensor sobre su situación de supervisión lo antes posible es una prioridad. La mayoría de los abogados aconsejan no contactar al oficial de supervisión antes de hablar primero con el abogado defensor.",
+        "what": "Algunas condenas u otras resoluciones aplicables pueden exigir inscripción en el registro de delitos sexuales. Importan el delito, la resolución, la jurisdicción y cualquier orden judicial requerida. Un cargo por sí solo no crea esa obligación.",
+        "clock": "En Florida, § 322.055 cubre ciertas condenas por drogas de adultos, con excepciones. En Texas, § 521.372 distingue las condenas aplicables y ciertas suspensiones ordenadas por el tribunal. Importan el estado y la resolución.",
+        "action": "Su abogado puede explicarle las condiciones de notificación, la audiencia y los posibles resultados.",
         "linkLabel": "Obtener orientación del caso"
       },
       "immigration": {
@@ -963,8 +963,8 @@ export default {
       },
       "housing": {
         "title": "Riesgo de Vivienda y Desalojo",
-        "what": "Las autoridades de vivienda pública y los programas de la Sección 8 pueden iniciar procedimientos de desalojo basándose únicamente en un arresto, antes de cualquier condena. Las reglas federales de un solo incidente dan a las autoridades de vivienda una amplia autoridad para actuar. Los arrendadores privados también pueden tener cláusulas en el contrato que tratan un arresto como una violación.",
-        "clock": "Las autoridades de vivienda pública pueden iniciar procedimientos en pocos días después del arresto. Revise su contrato de arrendamiento de inmediato.",
+        "what": "En la vivienda con asistencia federal, un arresto por sí solo no demuestra actividad delictiva. Las pruebas de la conducta pueden dar lugar a medidas incluso sin condena. Los alquileres privados tienen otras reglas.",
+        "clock": "El aviso de terminación y el plazo para solicitar una audiencia son distintos. Revise el motivo, la fecha de recepción y las instrucciones del aviso.",
         "action": "Revise su contrato para ver las cláusulas de arresto o actividad criminal. Si vive en vivienda pública o usa un vale de la Sección 8, contacte a un abogado de vivienda antes de que la autoridad de vivienda se comunique con usted.",
         "linkLabel": "Apoyo de vivienda"
       },
@@ -977,28 +977,28 @@ export default {
       },
       "benefits": {
         "title": "Riesgo de Beneficios Federales",
-        "what": "Algunos programas de beneficios federales requieren que reporte un arresto. Una condena por ciertos delitos, en particular de drogas, puede resultar en descalificación automática de programas como SNAP y la ayuda federal para estudiantes. Una condena por delito grave puede desencadenar una prohibición de por vida de SNAP en algunos estados.",
-        "clock": "Los requisitos de notificación varían según el programa. Algunos requieren notificación dentro de los 10 días posteriores al arresto. Contacte a su trabajador social para comprender sus obligaciones.",
+        "what": "Una condena por ciertos delitos graves de drogas puede afectar SNAP o TANF según el estado. Otros miembros del hogar pueden seguir siendo elegibles. Se eliminó la antigua restricción de ayuda federal estudiantil por condenas de drogas.",
+        "clock": "Los pagos de SSI cesan por cada mes calendario completo en reclusión. Los de SSDI pueden cesar tras una condena y más de 30 días consecutivos de reclusión. Medicaid puede limitar servicios en custodia. Consulte a SNAP sobre los plazos para informar cambios del hogar.",
         "action": "Contacte a su trabajador social de beneficios para comprender sus obligaciones de notificación. Pregúntele a su abogado si los cargos que enfrenta conllevan consecuencias automáticas en los beneficios.",
         "linkLabel": "Apoyo financiero"
       },
       "license": {
         "title": "Riesgo de Licencia Profesional",
-        "what": "Muchas juntas de licencias requieren que los titulares reporten los arrestos dentro de los 30 días y pueden suspender una licencia mientras se conoce el resultado del caso. Los campos con mayor riesgo incluyen enfermería, docencia, derecho, bienes raíces, contratación y cualquier profesión que requiera verificación de antecedentes para la renovación.",
-        "clock": "La mayoría de las juntas de licencias requieren notificación dentro de los 30 días posteriores al arresto. Algunas juntas actúan de inmediato al recibir la notificación. Verifique las reglas específicas de su junta.",
+        "what": "Consulte las reglas de su profesión y licencia. Según la junta, un arresto, una acusación formal por delito grave, una condena o una sanción pueden requerir notificación.",
+        "clock": "El plazo comienza con el hecho que indique su junta. Revise el formulario antes de suponer que comienza con el arresto.",
         "action": "Consulte las reglas de su junta de licencias sobre la notificación de arrestos. Contacte a un abogado que maneje asuntos de licencias profesionales antes de reportar a su junta.",
         "linkLabel": "Encontrar ayuda legal"
       },
       "driverLicense": {
         "title": "Riesgo de Suspensión de Licencia de Conducir",
-        "what": "El DUI y muchas condenas por drogas activan automáticamente la suspensión de la licencia de conducir a través de dos vías separadas: una suspensión administrativa (DMV) vinculada a su arresto y una suspensión del tribunal penal vinculada a la condena. Ambas pueden ocurrir al mismo tiempo. La mayoría de los estados permiten una licencia restringida o de emergencia para el trabajo y viajes médicos durante la suspensión, pero debe actuar rápidamente — el plazo de la suspensión administrativa puede cerrarse en días después del arresto.",
-        "clock": "En la mayoría de los estados, la suspensión administrativa de la licencia comienza automáticamente 30–60 días después del arresto, a menos que solicite una audiencia ante el DMV, generalmente dentro de los 5–30 días a partir del aviso de arresto. No solicitar la audiencia dentro del plazo renuncia a su derecho de impugnar la suspensión administrativa.",
+        "what": "Tras un arresto por DUI, un resultado de prueba que supere el límite aplicable o negarse a la prueba puede iniciar una suspensión administrativa. Una condena puede causar otra suspensión. Los resultados pueden ser distintos.",
+        "clock": "Revise el aviso de inmediato. La fecha de inicio de la suspensión y el plazo para pedir audiencia son distintos. Ambos dependen de la ley estatal y del aviso.",
         "action": "Pida a su abogado que presente una solicitud de audiencia ante el DMV de inmediato — no espere la fecha de su tribunal. También pregunte sobre opciones de licencia restringida o de emergencia y si un dispositivo de bloqueo de encendido puede permitirle conducir durante el período de suspensión.",
         "linkLabel": "Ayuda con transporte y licencia"
       },
       "driverLicenseCheck": {
         "title": "Licencia de Conducir — Verifique Su Estado",
-        "what": "Algunos estados (incluyendo CA, FL, IL, MA y TX) suspenden automáticamente la licencia de conducir por una condena por drogas, incluso cuando no hubo vehículo involucrado. Otros estados no lo hacen. Si esto aplica depende del estado donde fue condenado.",
+        "what": "En algunos estados, una condena por ciertos delitos de drogas puede afectar la licencia aunque no haya intervenido un vehículo. Un cargo pendiente por sí solo no activa una suspensión basada en una condena.",
         "clock": "Si su estado exige la suspensión, generalmente entra en vigencia en la sentencia o poco después de la condena. Actuar antes de que se dicte una condena le da más opciones.",
         "action": "Pregúntele específicamente a su abogado si su estado suspende las licencias de conducir por este tipo de condena por drogas y si hay disponible una licencia restringida o de emergencia. No asuma que su licencia está segura — ni que está en riesgo — sin confirmar la ley de su estado.",
         "linkLabel": "Ayuda con transporte y licencia"
@@ -1021,8 +1021,8 @@ export default {
         "federal": {
           "stateName": "Federal (reglas del HUD / reglas federales)",
           "housing": {
-            "headline": "Las PHA deben dar aviso por escrito y la oportunidad de una audiencia de queja",
-            "detail": "Las reglas federales del HUD exigen la terminación obligatoria para un grupo reducido de delitos (condenas relacionadas con drogas en viviendas con asistencia federal, producción de metanfetamina en el lugar, registro de por vida como delincuente sexual). Para cualquier otra actividad delictiva, las autoridades de vivienda tienen discreción. En cualquier caso, la PHA debe entregar aviso por escrito y permitirle solicitar una audiencia de queja antes de que proceda el desalojo.",
+            "headline": "Revise el aviso de terminación y el plazo separado de audiencia",
+            "detail": "Por falta de pago en vivienda pública federal, el aviso escrito de terminación debe dar al menos 30 días. Para ciertas amenazas, actividades delictivas o condenas por delito grave, el plazo debe ser razonable y no superar 30 días. La solicitud de audiencia tiene su propio plazo según la autoridad. La admisión tiene otras reglas.",
             "source": "24 C.F.R. § 966.4(l)(3); 42 U.S.C. § 1437d"
           },
           "license": {
@@ -1085,14 +1085,14 @@ export default {
         "CA": {
           "stateName": "California",
           "housing": {
-            "headline": "La PHA debe dar aviso por escrito con 14 días de anticipación; puede solicitar una audiencia de queja",
-            "detail": "Las autoridades de vivienda de California deben entregar un aviso por escrito de terminación del contrato de arrendamiento y las razones específicas. Usted tiene derecho a solicitar una audiencia de queja, generalmente dentro de 10 a 14 días desde el aviso. Los Ángeles y San Francisco cuentan con protecciones adicionales locales de vivienda de oportunidad justa que exigen una evaluación individualizada antes de cualquier acción de vivienda relacionada con antecedentes penales.",
+            "headline": "Revise el aviso de terminación y el plazo separado de audiencia",
+            "detail": "Por falta de pago en vivienda pública federal, el aviso escrito de terminación debe dar al menos 30 días. Para ciertas amenazas, actividades delictivas o condenas por delito grave, el plazo debe ser razonable y no superar 30 días. La solicitud de audiencia tiene su propio plazo según la autoridad. La admisión tiene otras reglas.",
             "source": "HUD 24 C.F.R. § 966.4; Cal. Gov. Code § 12955"
           },
           "license": {
-            "headline": "La mayoría de las juntas exigen autoinformar dentro de 30 días de una condena — no de un arresto",
-            "detail": "El Código de Negocios y Profesiones de California § 490 prohíbe denegar una licencia únicamente por una condena previa; las juntas deben realizar una evaluación individualizada. La mayoría de las juntas de CA (enfermería: Cal. B&P § 2762; docencia: Ed. Code § 44009; contratistas: Cal. B&P § 7069) exigen informar una condena o declaración de culpabilidad dentro de 30 días. Un arresto por sí solo generalmente no activa un informe obligatorio, salvo que las regulaciones específicas de la junta lo exijan.",
-            "source": "Cal. Bus. & Prof. Code §§ 490, 2762; Ed. Code § 44009"
+            "headline": "El hecho que debe notificarse depende de la junta",
+            "detail": "En California, los médicos deben comunicar una acusación formal por delito grave o una condena por delito menor o grave en 30 días. Los profesionales de Ciencias del Comportamiento informan las condenas por delitos menores y graves en 30 días. El personal de enfermería registrado informa condenas y sanciones a la licencia en 30 días, con excepciones para ciertas infracciones. Consulte el formulario de su junta.",
+            "source": "Cal. Bus. & Prof. Code § 802.1"
           }
         },
         "CO": {
@@ -1733,15 +1733,15 @@ export default {
   "zh": {
     "badge": "逮捕阶段",
     "pageTitle": "逮捕阶段风险筛查",
-    "pageDesc": "逮捕可能立即对住房、就业和其他重要方面产生影响，甚至在定罪之前。回答7个简短的是否问题，了解现在需要关注什么。",
+    "pageDesc": "回答七个有关您情况的问题，了解可能需要关注的事项。每个问题都可以选择“不确定”。",
     "qOf": "第 {{n}} 题，共 {{total}} 题",
     "yes": "是",
     "no": "否",
     "back": "返回",
     "resultsTitle": "您的风险摘要",
     "resultsDesc": "根据您的回答，这些方面可能面临直接风险。最紧急的事项排在最前面。",
-    "noRiskTitle": "未发现活跃风险",
-    "noRiskDesc": "根据您的回答，我们筛查的民事系统中没有一项因本次逮捕而面临直接风险。这并不涵盖所有可能的后果。请与您的律师讨论您的具体情况。",
+    "noRiskTitle": "您的回答没有标出需要关注的事项",
+    "noRiskDesc": "仍可能有其他后果。本问卷只涵盖部分事项。",
     "whatLabel": "什么处于风险中",
     "timelineLabel": "时间表",
     "actionLabel": "最佳做法",
@@ -1755,7 +1755,7 @@ export default {
     "privacyStrip": "此工具不存储您的任何回答。所有处理仅在您的设备上本地完成。",
     "printHeading": "逮捕阶段风险摘要",
     "printDate": "生成日期: {{date}}",
-    "printNoRisk": "根据您的回答，未发现活跃风险。",
+    "printNoRisk": "您的回答没有标出需要关注的事项",
     "printTimeline": "时间：",
     "printAction": "最佳做法：",
     "printDisclaimer": "这些结果仅为初步风险提示，不构成法律认定。实际后果是否适用取决于您的具体指控、司法管辖区及案件结果。仅为一般信息，不构成法律建议。如需针对您具体情况的建议，请咨询合格律师。",
@@ -1769,8 +1769,8 @@ export default {
         "sub": "包括全职、兼职、零工或任何有报酬的工作。"
       },
       "immigration": {
-        "question": "您家中是否有人不是美国公民或永久居民？",
-        "sub": "包括持签证者、DACA受益人、无证件者以及其他持临时身份者。",
+        "question": "面临指控的人是否不具有美国公民身份？",
+        "sub": "如果当事人是合法永久居民（绿卡持有人）或因其他原因不具有美国公民身份，请选“是”。如果您代他人填写，请按当事人的情况回答。",
         "privacyNote": "此答案从不存储或传输，仅在您的浏览器中运行。"
       },
       "benefits": {
@@ -1807,9 +1807,9 @@ export default {
     "risks": {
       "supervision": {
         "title": "缓刑或假释违规风险",
-        "what": "无论本案结果如何，新的逮捕都会自动触发监督违规。在您见到法官之前就可能被拘留，且可能在刑事案件解决之前安排单独的撤销听证会。",
-        "clock": "您的监督官员通常在登记后24小时内收到通知，在保释听证会之前就可能被拘留。",
-        "action": "尽早告知辩护律师您的监督状态是首要任务。大多数律师建议，在先与辩护律师沟通之前，不要联系监督官员。",
+        "what": "某些定罪或其他符合法律条件的裁决可能产生性犯罪登记义务。具体罪名、裁决、司法管辖区及所需的法院命令均有影响。单凭指控不会产生该义务。",
+        "clock": "佛州第322.055条适用于成年人某些毒品定罪，并有例外。得州第521.372条区分特定定罪和某些法院下令的吊扣。适用州和案件结果很重要。",
+        "action": "律师可以解释报告条件、听证程序和可能的结果。",
         "linkLabel": "获取案件指导"
       },
       "immigration": {
@@ -1828,8 +1828,8 @@ export default {
       },
       "housing": {
         "title": "住房和驱逐风险",
-        "what": "公共住房管理机构和第八章计划可以仅凭逮捕（在任何定罪之前）开始驱逐程序。联邦一次违规即驱逐规则赋予住房管理机构广泛权力。私人房东的租约中也可能有将逮捕视为违约的条款。",
-        "clock": "公共住房管理机构可以在逮捕后几天内开始程序。请立即查看您的租约。",
+        "what": "在联邦补助住房中，仅有逮捕记录不能证明犯罪活动。即使没有定罪，有关实际行为的证据也可能导致住房机构采取行动。私人租赁适用不同规则。",
+        "clock": "终止通知期和申请听证的期限是两回事。请查看通知理由、收件日期和听证说明。",
         "action": "查看您的租约中关于逮捕或犯罪活动的条款。如果您住在公共住房或使用第八章住房券，请在住房管理机构联系您之前咨询住房律师。",
         "linkLabel": "住房支持"
       },
@@ -1842,28 +1842,28 @@ export default {
       },
       "benefits": {
         "title": "联邦福利风险",
-        "what": "某些联邦福利计划要求您报告逮捕情况。对某些罪行（特别是毒品罪行）的定罪可能导致自动取消SNAP和联邦学生援助等项目的资格。在某些州，重罪定罪可能触发终身禁止SNAP的规定。",
-        "clock": "报告要求因计划而异。某些计划要求在逮捕后10天内通知。联系您的案例工作者了解您的具体义务。",
+        "what": "符合条件的毒品重罪定罪可能按州规则影响 SNAP 或 TANF。其他家庭成员可能仍有资格。联邦学生资助原有的毒品定罪限制已取消。",
+        "clock": "在监禁中度过整个日历月会停止该月的 SSI 付款。定罪后连续监禁超过30天可能停止 SSDI 付款。羁押期间 Medicaid 服务可能受限。请向 SNAP 办事处查询家庭变动申报期限。",
         "action": "联系您的福利案例工作者了解报告义务。询问您的律师，您面临的指控是否会自动产生福利后果。",
         "linkLabel": "财务支持"
       },
       "license": {
         "title": "职业许可证风险",
-        "what": "许多许可委员会要求持证人在30天内报告逮捕情况，并可在案件结果出来之前暂停许可证。风险最高的领域包括护理、教学、法律、房地产、承包、安保工作以及任何需要背景调查才能续证的职业。",
-        "clock": "大多数许可委员会要求在逮捕后30天内报告。某些委员会在收到通知后立即采取行动。查看您委员会的具体规定。",
+        "what": "请查看职业和执照的具体规定。依监管机构而定，逮捕、正式重罪指控、定罪或纪律处分可能需要报告。",
+        "clock": "期限从监管机构规定的事件起算。请查看申报表，确认逮捕是否会启动期限。",
         "action": "查阅您的许可委员会关于逮捕报告的规定。在向委员会报告之前，联系处理职业许可事务的律师。",
         "linkLabel": "寻找法律帮助"
       },
       "driverLicense": {
         "title": "驾驶执照吊销风险",
-        "what": "DUI（醉驾）和许多毒品相关定罪会通过两个独立途径自动触发驾驶执照吊销：一是与逮捕挂钩的行政（DMV）吊销，二是与定罪挂钩的刑事法庭吊销。两者可以同时进行。大多数州允许在吊销期间申请限制性或困难豁免驾照用于工作和就医，但您必须迅速行动——行政吊销的申请窗口可能在逮捕后数天内关闭。",
-        "clock": "在大多数州，行政执照吊销在逮捕后30至60天内自动生效，除非您申请DMV听证，通常须在收到逮捕通知后5至30天内提出。未能在截止日期内申请听证意味着您放弃了对行政吊销提出异议的权利。",
+        "what": "酒驾被捕后，检测结果达到适用标准或拒绝检测可能引发行政吊扣驾照。刑事定罪可能另行导致吊扣，两项程序的结果可能不同。",
+        "clock": "请尽快查看吊扣通知。吊扣生效日期和申请听证期限不同，两者均取决于州法律及通知。",
         "action": "请立即要求您的律师代您提交DMV听证申请——不要等待庭审日期。同时询问关于限制性或困难豁免驾照的选项，以及点火锁定装置是否可以让您在吊销期间继续驾车。",
         "linkLabel": "交通与驾照帮助"
       },
       "driverLicenseCheck": {
         "title": "驾驶执照——请核实您所在的州",
-        "what": "部分州（包括CA、FL、IL、MA和TX）即使在毒品定罪中未涉及车辆，也会自动吊销驾驶执照。其他州则不会。是否适用取决于您被定罪所在的州。",
+        "what": "有些州的特定毒品犯罪定罪即使与车辆无关也可能影响驾照。仅有待决指控不会触发以定罪为条件的吊扣。",
         "clock": "如果您所在的州确实要求吊销，通常在宣判时或定罪后不久生效。在判决作出前采取行动可以为您争取更多选择。",
         "action": "请明确向您的律师询问：您所在的州是否会因此类毒品定罪吊销驾驶执照，以及是否有限制性驾照或困难豁免驾照可供申请。在未确认所在州规定之前，请勿假设您的驾照安全，也请勿假设其处于风险之中。",
         "linkLabel": "交通与驾照帮助"
@@ -1886,8 +1886,8 @@ export default {
         "federal": {
           "stateName": "联邦（HUD／联邦规定）",
           "housing": {
-            "headline": "公共住房管理机构（PHA）必须提供书面通知并给予申诉听证的机会",
-            "detail": "联邦HUD规定要求对少数几类犯罪（在联邦资助住房中与毒品相关的定罪、在房产内制造甲基苯丙胺、终身性犯罪登记者）强制终止租约。对于其他所有犯罪行为，住房管理机构拥有自由裁量权。无论哪种情况，PHA在驱逐程序进行之前都必须提供书面通知，并允许您申请申诉听证。",
+            "headline": "分别查看终止通知及申请听证的期限",
+            "detail": "联邦公共住房因欠租终止租约，书面通知期至少为30天。对于特定安全威胁、犯罪活动或重罪定罪，通知期须合理且不超过30天。申请申诉听证的期限由住房机构程序另行规定。入住审核另有规则。",
             "source": "24 C.F.R. § 966.4(l)(3); 42 U.S.C. § 1437d"
           },
           "license": {
@@ -1950,14 +1950,14 @@ export default {
         "CA": {
           "stateName": "加利福尼亚州",
           "housing": {
-            "headline": "PHA必须提前14天发出书面通知；您可以申请申诉听证",
-            "detail": "加利福尼亚州的住房管理机构必须提供租约终止的书面通知及具体理由。您有权申请申诉听证，通常须在收到通知后10至14天内提出。洛杉矶和旧金山还设有额外的地方公平机会住房保护规定，要求在采取任何与犯罪记录相关的住房行动前进行个案评估。",
+            "headline": "分别查看终止通知及申请听证的期限",
+            "detail": "联邦公共住房因欠租终止租约，书面通知期至少为30天。对于特定安全威胁、犯罪活动或重罪定罪，通知期须合理且不超过30天。申请申诉听证的期限由住房机构程序另行规定。入住审核另有规则。",
             "source": "HUD 24 C.F.R. § 966.4; Cal. Gov. Code § 12955"
           },
           "license": {
-            "headline": "大多数委员会要求在定罪后30天内自行报告——被捕本身通常不需要",
-            "detail": "《加州商业与职业法典》第490条禁止仅因既往定罪而拒绝发放执照；相关委员会必须进行个案评估。大多数加州委员会（护理：Cal. B&P § 2762；教育：Ed. Code § 44009；承包商：Cal. B&P § 7069）要求在定罪或认罪后30天内报告。仅被捕通常不会触发强制报告，除非该委员会的具体规定另有要求。",
-            "source": "Cal. Bus. & Prof. Code §§ 490, 2762; Ed. Code § 44009"
+            "headline": "须报告的事件因执照监管机构而异",
+            "detail": "加州医生须在被正式控以重罪或被判轻罪或重罪后30天内报告。行为科学委员会的持证人须在轻罪或重罪定罪后30天内报告。注册护士须在定罪或执照受处分后30天内报告，某些轻微违法除外。请查看所属委员会的表格。",
+            "source": "Cal. Bus. & Prof. Code § 802.1"
           }
         },
         "CO": {

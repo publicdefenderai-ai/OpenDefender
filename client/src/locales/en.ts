@@ -1038,16 +1038,16 @@ export default {
       },
       "benefits": {
         "sectionTitle": "If you receive government benefits",
-        "sectionSubtitle": "An arrest can suspend or end certain benefits. Acting quickly after release can often preserve or restore them. If you don't currently receive these benefits, you may become eligible depending on your income after your case.",
+        "sectionSubtitle": "Confinement, a conviction or a household change can affect benefits differently. Check each program separately.",
         "snap": {
           "name": "SNAP (Food Assistance)",
-          "what": "SNAP is typically suspended during incarceration and restored after release — it is not automatically terminated. You must re-apply or request reinstatement.",
-          "action": "Contact your local SNAP office as soon as possible after release. The reinstatement window varies by state. Call 211 if you're unsure who to call."
+          "what": "A person receiving most meals in custody generally cannot participate in SNAP. Other eligible household members can still receive benefits.",
+          "action": "Report household changes as your state requires. After release, ask whether to update the household case or apply again."
         },
         "medicaid": {
           "name": "Medicaid",
-          "what": "Medicaid is suspended during incarceration but can be reinstated after release. Many people miss the reinstatement window and lose coverage permanently — this is one of the most common avoidable post-release losses.",
-          "action": "Contact your state Medicaid office or marketplace within 30 days of release. If your state expanded Medicaid under the ACA, you may be able to re-enroll at any time."
+          "what": "Incarceration alone does not end Medicaid eligibility. Services payable during custody are limited, with exceptions.",
+          "action": "Contact your state Medicaid office before or after release to check enrollment and restore access to care."
         },
         "tanf": {
           "name": "TANF (Cash Assistance)",
@@ -1056,7 +1056,7 @@ export default {
         },
         "socialSecurity": {
           "name": "Social Security, SSI, and SSDI",
-          "what": "Benefits are suspended after 30 consecutive days of incarceration but can be reinstated after release. SSA will eventually find out through databases — proactive notification avoids overpayments you will owe back.",
+          "what": "SSI payments stop for each full calendar month in custody, including pretrial detention. After 12 consecutive months of suspension, a new application is generally required. SSDI payments stop after conviction and more than 30 consecutive days of confinement; eligible family members can continue receiving their own payments.",
           "action": "Notify your local Social Security office before or immediately after release. Bring your release documents. Reinstatement can take several weeks, so start early."
         },
         "banking": {
@@ -1928,7 +1928,7 @@ export default {
         },
         "notifyProviders": {
           "title": "Notify your dependent's healthcare providers of any changes",
-          "description": "Doctors, home health aides, physical therapists, day program coordinators, and pharmacy staff need to know who is now the point of contact and who is authorized to make care decisions. You don't need to share your legal situation — a simple update noting a temporary caregiver change is sufficient.",
+          "description": "Ask each provider how to authorize a backup caregiver to receive health information. Naming a contact does not grant authority to consent to treatment. Check the applicable health-care proxy, guardianship or minor-caregiver authorization. Medicare has a separate disclosure authorization.",
           "priority": "high"
         },
         "contactAAA": {
@@ -5014,11 +5014,11 @@ export default {
       },
       "housing": {
         "title": "Public and subsidized housing",
-        "text": "Many public housing authorities require lease termination after certain convictions. This can affect the entire household, not just the person convicted. Private landlords may also legally refuse to rent to someone with a criminal record."
+        "text": "Evidence of qualifying conduct can affect a federally assisted tenancy. An arrest record alone does not establish that conduct. Admission screening and terminating a tenancy have different rules."
       },
       "benefits": {
         "title": "Government benefits (SNAP, SSI, Medicaid)",
-        "text": "Some federal benefit programs restrict eligibility after certain drug felony convictions. The impact varies by state and benefit type, but can affect the whole household's access to food assistance and healthcare."
+        "text": "Some drug felony convictions affect the individual’s SNAP or TANF eligibility under state rules. Other household members may remain eligible. Incarceration can affect SSI, SSDI and Medicaid under separate rules."
       },
       "immigration": {
         "title": "Immigration status",
@@ -5050,7 +5050,7 @@ export default {
         "title": "Financial support while in custody",
         "item1": "Most facilities have a commissary account system. You can typically deposit money online, by phone, or by money order. The person can use these funds for phone calls, food items, and hygiene products.",
         "item2": "Phone call costs from jail are often high. Services like Securus and ICSolutions are common providers — you can set up a prepaid account to reduce per-call costs.",
-        "item3": "If you are managing their finances or property while they are in custody, a power of attorney document prepared with the help of a legal aid organization can authorize you to act on their behalf."
+        "item3": "A commissary deposit does not give access to outside accounts. Family relationship alone is insufficient. Check joint ownership, the bank’s authorized-signer rules, a financial power of attorney or a court appointment before managing money or changing an address."
       },
       "caseSupport": {
         "title": "Supporting their case from the outside",
@@ -6732,17 +6732,32 @@ export default {
     }
   },
   "collateralConsequences": {
+    "drivingDeadlines": {
+      "GA": "Georgia: the DDS-1205 gives 30 calendar days from service to choose an available option, including a hearing request.",
+      "AZ": "Arizona: under § 28-1385, the department must receive a hearing or review request within 30 days after the date of the notice.",
+      "CO": "Colorado: for an express-consent notice served by an officer, request a hearing within seven days. For a mailed notice, check the response date on the letter.",
+      "CA": "California: request an administrative hearing within 10 days of receiving the suspension order.",
+      "TX": "Texas: request an ALR hearing within 15 days of receiving the DIC-25 notice.",
+      "FL": "Florida: request formal or informal review within 10 days after issuance of the suspension notice.",
+      "NC": "North Carolina: contest a civil revocation at the initial appearance or within 10 days of its effective date.",
+      "OH": "Ohio: appeal an implied-consent suspension at the initial court appearance or within 30 days after that appearance."
+    },
+    "checkSnap": "Check the state SNAP agency’s current drug felony rules",
+    "scSnap": "Qualifying drug felony after Aug. 22, 1996; ask DSS about pardon or expungement",
+    "unsure": "I’m not sure",
+    "unresolved": "Topics you were unsure about",
+    "skippedCharge": "You skipped the charge type, so this summary does not cover consequences specific to your charge.",
     "badge": "Arrest stage",
     "pageTitle": "Arrest-Stage Risk Screener",
-    "pageDesc": "An arrest can immediately put housing, employment, and other vital systems at risk, even before any conviction. Answer 7 quick yes-or-no questions to see what may need attention right now.",
+    "pageDesc": "Answer seven questions about your circumstances to see what may need attention. You can choose “I’m not sure” for any question.",
     "qOf": "Question {{n}} of {{total}}",
     "yes": "Yes",
     "no": "No",
     "back": "Back",
     "resultsTitle": "Your Risk Summary",
     "resultsDesc": "These systems may be at immediate risk based on your answers. The most urgent items appear first.",
-    "noRiskTitle": "No topics selected by these answers",
-    "noRiskDesc": "This short screener does not cover every possible consequence. Speak with your attorney about your specific situation.",
+    "noRiskTitle": "No topics flagged by your answers",
+    "noRiskDesc": "Other consequences may still apply. This screener covers only some topics.",
     "whatLabel": "What's at risk",
     "timelineLabel": "Timeline",
     "actionLabel": "Best practices",
@@ -6756,7 +6771,7 @@ export default {
     "privacyStrip": "This tool stores none of your answers. All processing happens locally on your device.",
     "printHeading": "ARREST-STAGE RISK SUMMARY",
     "printDate": "Generated: {{date}}",
-    "printNoRisk": "No active risks identified based on your answers.",
+    "printNoRisk": "No topics flagged by your answers",
     "printTimeline": "Timeline:",
     "printAction": "Best practices:",
     "printDisclaimer": "These results are preliminary risk flags only — not legal determinations. Whether a consequence actually applies depends on your specific charges, jurisdiction, and case outcome. General information only. Not legal advice. Consult a qualified attorney for advice specific to your situation.",
@@ -6770,8 +6785,8 @@ export default {
         "sub": "Includes full-time, part-time, gig work, or any paying job."
       },
       "immigration": {
-        "question": "Is anyone in your household not a U.S. citizen or permanent resident?",
-        "sub": "Includes visa holders, DACA recipients, undocumented individuals, and others with temporary status.",
+        "question": "Is the person facing charges a noncitizen of the United States?",
+        "sub": "Choose Yes if that person is a lawful permanent resident (green-card holder) or otherwise is not a U.S. citizen. If you’re filling this out for someone else, answer about them.",
         "privacyNote": "This answer is never stored or transmitted. It runs only in your browser."
       },
       "benefits": {
@@ -6808,9 +6823,9 @@ export default {
     "risks": {
       "supervision": {
         "title": "Probation or Parole Violation Risk",
-        "what": "A new arrest triggers an automatic supervision violation regardless of how this case ends. A hold may be placed before you see a judge, and a separate revocation hearing can be scheduled before your criminal case is resolved.",
-        "clock": "Your supervision officer is typically notified within 24 hours of booking. A hold can be placed before any bail hearing.",
-        "action": "Informing your defense attorney about your supervision status as early as possible is a priority. Most attorneys advise against contacting your supervision officer before speaking with defense counsel first.",
+        "what": "Some convictions or other qualifying adjudications can require sex-offender registration. The exact offense, disposition, jurisdiction and any required court order matter. A charge alone does not establish a duty.",
+        "clock": "Florida § 322.055 covers certain drug convictions for adults, with statutory exceptions. Texas § 521.372 distinguishes qualifying convictions and certain court-ordered suspensions. The state and disposition matter.",
+        "action": "Your lawyer can explain reporting conditions, hearing procedures and possible outcomes.",
         "linkLabel": "Get case guidance"
       },
       "immigration": {
@@ -6829,8 +6844,8 @@ export default {
       },
       "housing": {
         "title": "Housing and Eviction Risk",
-        "what": "Public housing authorities and Section 8 programs can begin eviction proceedings based on an arrest alone, before any conviction. Federal one-strike rules give housing authorities broad authority to act. Private landlords may also have lease clauses that treat an arrest as a violation.",
-        "clock": "Public housing authorities can begin proceedings within days of an arrest. Review your lease immediately.",
+        "what": "In federally assisted housing, an arrest record alone does not establish criminal activity. Evidence of the underlying conduct may lead to action even without a conviction. Private rental rules differ.",
+        "clock": "A termination notice and a deadline to request a hearing are separate. Check the reason, date of receipt and hearing instructions on the notice.",
         "action": "Review your lease for arrest or criminal activity clauses. If you live in public housing or use a Section 8 voucher, contact a housing attorney before the housing authority contacts you.",
         "linkLabel": "Housing support"
       },
@@ -6843,28 +6858,28 @@ export default {
       },
       "benefits": {
         "title": "Federal Benefits Risk",
-        "what": "Some federal benefit programs require you to report an arrest. A conviction for certain offenses, particularly drug offenses, can result in automatic disqualification from programs like SNAP and federal student aid. A felony conviction triggers a lifetime SNAP ban in some states.",
-        "clock": "Reporting requirements vary by program. Some require notification within 10 days of an arrest. Contact your caseworker to understand your obligations.",
+        "what": "A qualifying drug felony conviction can affect SNAP or TANF under state rules. Other household members may remain eligible. The former federal student aid drug-conviction restriction has been removed.",
+        "clock": "SSI payments stop for a full calendar month in jail or prison. SSDI payments can stop after conviction and more than 30 consecutive days of confinement. Medicaid services can be limited in custody. Ask the SNAP office about household reporting deadlines.",
         "action": "Contact your benefits caseworker to understand your reporting obligations. Ask your attorney whether the charges you face carry automatic benefits consequences.",
         "linkLabel": "Financial support"
       },
       "license": {
         "title": "Professional License Risk",
-        "what": "Many licensing boards require license holders to report arrests within 30 days and can suspend a license pending the outcome of a case. Fields with the highest risk include nursing, teaching, law, real estate, contracting, security work, and any profession requiring a background check for renewal.",
-        "clock": "Most licensing boards require reporting within 30 days of an arrest. Some boards act immediately upon notification. Check your board's specific rules.",
+        "what": "Check the rules for your profession and license. Depending on the board, an arrest, formal felony charge, conviction or disciplinary order may require a report.",
+        "clock": "The deadline runs from the event specified by your board. Check its reporting form before assuming an arrest starts the clock.",
         "action": "Look up your licensing board's rules on arrest reporting. Contact an attorney who handles professional licensing matters before you report to your board.",
         "linkLabel": "Find legal help"
       },
       "driverLicense": {
         "title": "Driver's License Suspension Risk",
-        "what": "DUI and many drug convictions automatically trigger driver's license suspension through two separate tracks: an administrative (DMV) suspension tied to your arrest, and a criminal court suspension tied to conviction. Both can run at the same time. Most states allow a restricted or hardship license for work and medical travel during suspension, but you must act quickly — the administrative suspension window can close within days of arrest.",
-        "clock": "In most states, the administrative license suspension begins automatically 30–60 days after arrest unless you request a DMV hearing, usually within 5–30 days of your arrest notice. Failing to request the hearing within the deadline waives your right to contest the administrative suspension.",
+        "what": "After a DUI arrest, a qualifying test result or test refusal may trigger an administrative license suspension. A criminal conviction can lead to a separate suspension. The two proceedings can have different outcomes.",
+        "clock": "Check the suspension notice promptly. The effective date and the deadline to request a hearing are separate. Both depend on state law and the notice.",
         "action": "Ask your attorney to file a DMV hearing request on your behalf immediately — do not wait for your court date. Also ask about hardship or restricted license options and whether an ignition interlock device can allow you to drive during the suspension period.",
         "linkLabel": "Transportation and license help"
       },
       "driverLicenseCheck": {
         "title": "Driver's License — Check Your State",
-        "what": "Some states (including CA, FL, IL, MA, and TX) automatically suspend your driver's license for a drug conviction even when no vehicle was involved. Other states do not. Whether this applies to you depends on the state where you were convicted.",
+        "what": "In some states, a conviction for a qualifying drug offense can affect a license even when no vehicle was involved. A pending drug charge alone does not trigger a conviction-based suspension.",
         "clock": "If your state does require suspension, it typically takes effect at sentencing or shortly after conviction. Acting before a conviction is entered gives you the most options.",
         "action": "Ask your attorney specifically whether your state suspends driver's licenses for this type of drug conviction and whether any hardship or restricted license is available. Do not assume your license is safe — and do not assume it is at risk — without confirming your state's rule.",
         "linkLabel": "Transportation and license help"
@@ -6887,8 +6902,8 @@ export default {
         "federal": {
           "stateName": "Federal (HUD / Federal Rules)",
           "housing": {
-            "headline": "PHAs must give written notice and a grievance opportunity",
-            "detail": "Federal HUD rules require mandatory termination for a narrow set of crimes (drug-related convictions in federally assisted housing, meth production on the premises, lifetime sex offender registrants). For all other criminal activity, housing authorities have discretion. In either case, the PHA must provide written notice and allow you to request a grievance hearing before eviction proceeds.",
+            "headline": "Check the termination notice and the separate hearing deadline",
+            "detail": "For nonpayment of rent in federal public housing, the written termination notice must give at least 30 days. For specified safety threats, criminal activity or a felony conviction, the period must be reasonable and no more than 30 days. A grievance request has its own deadline under the housing authority’s procedure. Admission rules are separate.",
             "source": "24 C.F.R. § 966.4(l)(3); 42 U.S.C. § 1437d"
           },
           "license": {
@@ -6951,14 +6966,14 @@ export default {
         "CA": {
           "stateName": "California",
           "housing": {
-            "headline": "PHA must give 14-day written notice; you may request a grievance hearing",
-            "detail": "California housing authorities must provide a written notice of lease termination and the specific reasons. You have the right to request a grievance hearing, typically within 10–14 days of the notice. Los Angeles and San Francisco have additional local fair-chance housing protections requiring individualized assessment before any housing action tied to criminal history.",
+            "headline": "Check the termination notice and the separate hearing deadline",
+            "detail": "For nonpayment of rent in federal public housing, the written termination notice must give at least 30 days. For specified safety threats, criminal activity or a felony conviction, the period must be reasonable and no more than 30 days. A grievance request has its own deadline under the housing authority’s procedure. Admission rules are separate.",
             "source": "HUD 24 C.F.R. § 966.4; Cal. Gov. Code § 12955"
           },
           "license": {
-            "headline": "Most boards require self-reporting within 30 days of a conviction — not an arrest",
-            "detail": "California Business & Professions Code § 490 prohibits denying a license solely based on a prior conviction; boards must conduct an individualized assessment. Most CA boards (nursing: Cal. B&P § 2762; teaching: Ed. Code § 44009; contractors: Cal. B&P § 7069) require reporting a conviction or guilty plea within 30 days. An arrest alone generally does not trigger a mandatory report unless the board's specific regulations require it.",
-            "source": "Cal. Bus. & Prof. Code §§ 490, 2762; Ed. Code § 44009"
+            "headline": "The reporting event depends on the licensing board",
+            "detail": "California physicians must report a formal felony indictment or information, or a misdemeanor or felony conviction, within 30 days. Behavioral Sciences licensees report misdemeanor and felony convictions within 30 days. Registered nurses report convictions and license discipline within 30 days, with limited infraction exceptions. Check your board’s form.",
+            "source": "Cal. Bus. & Prof. Code § 802.1"
           }
         },
         "CO": {

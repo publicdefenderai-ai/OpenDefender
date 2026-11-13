@@ -44,6 +44,11 @@ for (const language of ['en','es','zh'] as const) for (const theme of ['light','
   const select=main.locator('select');
   for (const option of await select.locator('option').evaluateAll(es=>es.map(e=>(e as HTMLOptionElement).value).filter(Boolean))) {
    await select.selectOption(option);
+   if (['CA','CO','TX','FL','OH','NC','AZ','GA'].includes(option)) {
+    const source=main.locator('[data-risk="driverLicense"] a[href^="https://"]');
+    await expect(source).toBeVisible();
+    await expect(source).not.toContainText('collateralConsequences.');
+   }
    const entry=(old.stateDeadlines.entries as any)[option];
    for (const id of ['housing','license']) if(entry[id]) {
     await expect(main.locator(`[data-risk="${id}"]`)).toContainText(entry[id].headline);
@@ -63,13 +68,25 @@ for (const language of ['en','es','zh'] as const) for (const theme of ['light','
   await main.getByRole('button',{name:copy.review,exact:true}).click();await expect(main.locator('[data-answer=yes]')).toHaveAttribute('aria-pressed','true');
   await main.getByRole('button',{name:old.back,exact:true}).click();await expect(main.locator('[data-charge=dui]')).toHaveAttribute('aria-pressed','true');
   await main.getByRole('button',{name:old.chargeType.skip,exact:true}).click();
-  for(const id of order){await main.locator('[data-answer=no]').click();await main.locator('.collateral-continue').click();}
-  await expect(main.locator('.collateral-result')).toHaveCount(0);await expect(main).toContainText(old.disclaimer);
+  for(const id of order){await main.locator(id === 'housing' ? '[data-answer=unknown]' : '[data-answer=no]').click();await main.locator('.collateral-continue').click();}
+  await expect(main.locator('.collateral-result')).toHaveCount(0);
+  await expect(main).toContainText(old.noRiskTitle);
+  const notes=main.locator('[data-summary-notes]');
+  await expect(notes).toContainText(old.questions.housing.question);
+  await main.getByRole('button',{name:old.copyBtn,exact:true}).click();
+  const exported=await page.evaluate(()=>(window as any).__copied);
+  for(const paragraph of await notes.locator('p').allTextContents()) expect(exported).toContain(paragraph);
+  expect(exported).toContain(old.noRiskDesc);
+  const printWait=page.waitForEvent('popup');
+  await main.getByRole('button',{name:old.printBtn,exact:true}).click();
+  const emptyPrint=await printWait;
+  await expect(emptyPrint.locator('pre')).toHaveText(exported);
+  await emptyPrint.close();
   await main.getByRole('button',{name:old.restart,exact:true}).click();await expect(main.locator('.collateral-continue')).toBeDisabled();
   await page.reload();await expect(main.locator('.collateral-continue')).toBeDisabled();
  });
 }
-for (const [charge,state,expected] of [['drug_possession','','driverLicenseCheck'],['drug_possession','new york',''],['drug_trafficking','texas','driverLicense'],['sex_offense','','sexOffender']] as const) {
+for (const [charge,state,expected] of [['drug_possession','','driverLicenseCheck'],['drug_possession','new york','driverLicenseCheck'],['drug_trafficking','texas','driverLicenseCheck'],['sex_offense','','sexOffender']] as const) {
  test(`State-conditioned charge result: ${charge}/${state}`,async({page})=>{
   await page.addInitScript(state=>{localStorage.setItem('i18nextLng','en');if(state)localStorage.setItem('od_selected_jurisdiction',state);},state);
   await page.goto('/collateral-consequences');const main=page.locator('.collateral-body');

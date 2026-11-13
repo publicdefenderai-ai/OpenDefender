@@ -14,6 +14,7 @@ export function buildPlainText(
   activeRisks: { id: string }[],
   lang: string,
   now: Date = new Date(),
+  summaryNotes: string[] = [],
 ): string {
   const locale = lang.startsWith("zh")
     ? "zh-CN"
@@ -34,7 +35,7 @@ export function buildPlainText(
   ];
 
   if (activeRisks.length === 0) {
-    lines.push(t("collateralConsequences.printNoRisk"));
+    lines.push(t("collateralConsequences.printNoRisk"), t("collateralConsequences.noRiskDesc"));
   } else {
     for (const r of activeRisks) {
       lines.push(`** ${t(`collateralConsequences.risks.${r.id}.title`)} **`);
@@ -50,6 +51,7 @@ export function buildPlainText(
     }
   }
 
+  lines.push(...summaryNotes);
   lines.push("---");
   lines.push(t("collateralConsequences.printDisclaimer"));
   return lines.join("\n");
