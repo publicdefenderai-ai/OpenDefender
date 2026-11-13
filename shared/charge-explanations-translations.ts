@@ -25,6 +25,7 @@ import { OHIO_RESIDUAL_BATCH } from "./ohio-residual-batch";
 import { FLORIDA_PERSONS_BATCH } from "./florida-persons-batch";
 import { FLORIDA_ROBBERY_BATCH } from "./florida-robbery-batch";
 import { FLORIDA_FALSE_REPORTS_BATCH } from "./florida-false-reports-batch";
+import { FLORIDA_FORGED_INSTRUMENTS_BATCH } from "./florida-forged-instruments-batch";
 import { FLORIDA_ROAD_RACING_BATCH } from "./florida-road-racing-batch";
 import { FLORIDA_COURT_OFFICIALS_BATCH } from "./florida-court-officials-batch";
 import { FLORIDA_JUSTICE_BATCH } from "./florida-justice-batch";
@@ -69,7 +70,7 @@ export interface ChargeTranslationEntry {
 
 export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEntry> = {
   ...FLORIDA_REVIEWED_BATCH.translations,
-  ...FLORIDA_PERSONS_BATCH.translations, ...FLORIDA_ROBBERY_BATCH.translations, ...FLORIDA_FALSE_REPORTS_BATCH.translations, ...FLORIDA_ROAD_RACING_BATCH.translations, ...FLORIDA_COURT_OFFICIALS_BATCH.translations, ...FLORIDA_JUSTICE_BATCH.translations, ...FLORIDA_CREDIT_CARD_BATCH.translations, ...FLORIDA_RESTRAINT_BATCH.translations, ...FLORIDA_CRASH_FLIGHT_BATCH.translations,
+  ...FLORIDA_PERSONS_BATCH.translations, ...FLORIDA_ROBBERY_BATCH.translations, ...FLORIDA_FALSE_REPORTS_BATCH.translations, ...FLORIDA_FORGED_INSTRUMENTS_BATCH.translations, ...FLORIDA_ROAD_RACING_BATCH.translations, ...FLORIDA_COURT_OFFICIALS_BATCH.translations, ...FLORIDA_JUSTICE_BATCH.translations, ...FLORIDA_CREDIT_CARD_BATCH.translations, ...FLORIDA_RESTRAINT_BATCH.translations, ...FLORIDA_CRASH_FLIGHT_BATCH.translations,
   ...FLORIDA_LEGACY_PROPERTY.translations,
   ...FLORIDA_LEGACY_SEXUAL.translations,
   ...FLORIDA_LEGACY_REMAINING.translations,

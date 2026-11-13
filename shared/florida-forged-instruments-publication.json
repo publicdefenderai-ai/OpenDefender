@@ -1,0 +1,789 @@
+[
+  {
+    "id": "fl-fs-831-02-forged-instrument",
+    "section": "831.02",
+    "scope": "",
+    "officialTitle": "Uttering forged instruments",
+    "dependencies": [
+      "831.01",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "831.02": [
+        ""
+      ],
+      "831.01": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-831-02-forged-instrument",
+      "name": "Uttering forged instruments",
+      "names": {
+        "es": "Presentación de instrumentos falsificados",
+        "zh": "行使伪造文书"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "831.02",
+      "slug": "fl-fs-831-02-forged-instrument",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 831.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 831.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Uttering forged instruments",
+          "FS 831.02",
+          "F.S. 831.02"
+        ],
+        "es": [
+          "Uttering forged instruments",
+          "FS 831.02",
+          "F.S. 831.02"
+        ],
+        "zh": [
+          "Uttering forged instruments",
+          "FS 831.02",
+          "F.S. 831.02"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Presenting as genuine a false, forged or altered writing listed in §831.01, knowing its condition and intending to injure or defraud someone. The list includes deeds, wills and specified financial, transport and official documents.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Presentar como auténtico un escrito falso, falsificado o alterado de los enumerados en §831.01, con conocimiento de ello e intención de perjudicar o defraudar. La lista incluye escrituras, testamentos y determinados documentos financieros, de transporte y oficiales.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "明知属于第831.01条所列的虚假、伪造或篡改文书，仍将其作为真实文书出示，意图损害或欺诈他人。所列文书包括契据、遗嘱及特定金融、运输和官方文件。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-831-04-1-forged-instrument",
+    "section": "831.04",
+    "scope": "(1)",
+    "officialTitle": "Penalty for changing or forging certain instruments of writing",
+    "dependencies": [
+      "831.04",
+      "92.28",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "831.04": [
+        "(1)"
+      ],
+      "92.28": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-831-04-1-forged-instrument",
+      "name": "Forgery by changing an existing land-evidence instrument",
+      "names": {
+        "es": "Falsificación al alterar un escrito probatorio sobre tierras",
+        "zh": "篡改既有土地权属证据文书"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "831.04(1)",
+      "slug": "fl-fs-831-04-1-forged-instrument",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 831.04(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 831.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 92.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0092/Sections/0092.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Penalty for changing or forging certain instruments of writing",
+          "FS 831.04(1)",
+          "F.S. 831.04(1)"
+        ],
+        "es": [
+          "Penalty for changing or forging certain instruments of writing",
+          "FS 831.04(1)",
+          "F.S. 831.04(1)"
+        ],
+        "zh": [
+          "Penalty for changing or forging certain instruments of writing",
+          "FS 831.04(1)",
+          "F.S. 831.04(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Making an erasure, alteration or insertion in an already-made writing covered by §92.28 and made admissible in evidence, with fraudulent intent to change it substantially. Section 92.28 addresses land proceedings where the original is unavailable and its record was destroyed by fire.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Borrar, alterar o insertar contenido en un escrito ya hecho, comprendido en §92.28 y admitido como prueba, con intención fraudulenta de modificarlo sustancialmente. La norma se refiere a procesos sobre tierras cuando el original no está disponible y su registro fue destruido por incendio.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "在第92.28条涵盖且准予作为证据的既有文书上涂改或增写，意图以欺诈手段实质性改变其内容。该条涉及原件无法取得且登记记录因火灾毁损的土地案件。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-831-04-2-forged-instrument",
+    "section": "831.04",
+    "scope": "(2)",
+    "officialTitle": "Penalty for changing or forging certain instruments of writing",
+    "dependencies": [
+      "831.04",
+      "92.28",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "831.04": [
+        "(2)",
+        "(1)"
+      ],
+      "92.28": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-831-04-2-forged-instrument",
+      "name": "Forgery in making land records or abstracts for compensation",
+      "names": {
+        "es": "Falsificación al elaborar registros o extractos de tierras por remuneración",
+        "zh": "有偿制作土地记录或摘要时伪造"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "831.04(2)",
+      "slug": "fl-fs-831-04-2-forged-instrument",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 831.04(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 831.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 92.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0092/Sections/0092.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Penalty for changing or forging certain instruments of writing",
+          "FS 831.04(2)",
+          "F.S. 831.04(2)"
+        ],
+        "es": [
+          "Penalty for changing or forging certain instruments of writing",
+          "FS 831.04(2)",
+          "F.S. 831.04(2)"
+        ],
+        "zh": [
+          "Penalty for changing or forging certain instruments of writing",
+          "FS 831.04(2)",
+          "F.S. 831.04(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "In an applicable Florida county, a person in the business of making land writings, entries, maps or plats and supplying abstracts or copies for compensation makes one with a substantive alteration or insertion and fraudulent intent to change it materially.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "En un condado de Florida donde se aplica la ley, quien se dedica a preparar escritos, asientos, mapas o planos sobre tierras y suministrar extractos o copias por remuneración elabora uno con alteración o inserción sustancial e intención fraudulenta de modificarlo materialmente.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "在该法适用的佛州县，从事编制土地文书、记录或图册并有偿提供摘要或副本的业务者，在制作时实质性改动或增写，意图以欺诈方式改变重要内容。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-831-07-forged-instrument",
+    "section": "831.07",
+    "scope": "",
+    "officialTitle": "Forging bank bills, checks, drafts, or promissory notes",
+    "dependencies": [
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "831.07": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-831-07-forged-instrument",
+      "name": "Forging bank bills, checks, drafts, or promissory notes",
+      "names": {
+        "es": "Falsificación de billetes bancarios, cheques, giros o pagarés",
+        "zh": "伪造银行券、支票、汇票或本票"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "831.07",
+      "slug": "fl-fs-831-07-forged-instrument",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 831.07",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Forging bank bills, checks, drafts, or promissory notes",
+          "FS 831.07",
+          "F.S. 831.07"
+        ],
+        "es": [
+          "Forging bank bills, checks, drafts, or promissory notes",
+          "FS 831.07",
+          "F.S. 831.07"
+        ],
+        "zh": [
+          "Forging bank bills, checks, drafts, or promissory notes",
+          "FS 831.07",
+          "F.S. 831.07"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Falsely making, altering, forging or counterfeiting a bank bill, check, draft or promissory note issued by an incorporated bank and payable to bearer or to order, with intent to injure someone. The issuing bank may be domestic or foreign.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Crear falsamente, alterar o falsificar un billete bancario, cheque, giro o pagaré emitido por una entidad bancaria constituida, pagadero al portador o a la orden, con intención de perjudicar a alguien. El banco puede ser nacional o extranjero.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "意图损害他人而虚造、篡改或伪造由公司制银行签发、凭票即付或按指示支付的银行券、支票、汇票或本票。签发银行可为国内或外国银行。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-831-08-forged-instrument",
+    "section": "831.08",
+    "scope": "",
+    "officialTitle": "Possessing certain forged notes, bills, checks, or drafts",
+    "dependencies": [
+      "831.01",
+      "831.07",
+      "831.06",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "831.08": [
+        ""
+      ],
+      "831.01": [
+        ""
+      ],
+      "831.07": [
+        ""
+      ],
+      "831.06": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-831-08-forged-instrument",
+      "name": "Possessing ten or more similar forged notes, bills, checks, or drafts",
+      "names": {
+        "es": "Posesión de diez o más billetes, cheques, giros o pagarés falsificados semejantes",
+        "zh": "持有十份或更多同类伪造票据"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "831.08",
+      "slug": "fl-fs-831-08-forged-instrument",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 831.08",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.08.html"
+        },
+        {
+          "citation": "Fla. Stat. § 831.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 831.07",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 831.06",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.06.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Possessing certain forged notes, bills, checks, or drafts",
+          "FS 831.08",
+          "F.S. 831.08"
+        ],
+        "es": [
+          "Possessing certain forged notes, bills, checks, or drafts",
+          "FS 831.08",
+          "F.S. 831.08"
+        ],
+        "zh": [
+          "Possessing certain forged notes, bills, checks, or drafts",
+          "FS 831.08",
+          "F.S. 831.08"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Possession of ten or more similar false, altered, forged or counterfeit instruments of the kinds specified in the preceding chapter provisions, payable to bearer or to order. The person must know they are false and intend to pass them as true and thereby injure or defraud someone.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Poseer diez o más instrumentos semejantes, falsos, alterados o falsificados, de los tipos descritos en las disposiciones anteriores del capítulo, pagaderos al portador o a la orden. Se exige conocer la falsedad y tener intención de hacerlos pasar por auténticos para perjudicar o defraudar.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "持有十份或更多同类虚假、篡改或伪造票据，属于本章前文所指种类，凭票即付或按指示支付。须明知为假且意图作为真实票据流通，借此损害或欺诈他人。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-831-09-forged-instrument",
+    "section": "831.09",
+    "scope": "",
+    "officialTitle": "Uttering forged bills, checks, drafts, or notes",
+    "dependencies": [
+      "831.07",
+      "831.10",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "831.09": [
+        ""
+      ],
+      "831.07": [
+        ""
+      ],
+      "831.10": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-831-09-forged-instrument",
+      "name": "Uttering forged bills, checks, drafts, or notes",
+      "names": {
+        "es": "Uso de billetes, cheques, giros o pagarés falsificados",
+        "zh": "行使伪造银行券、支票、汇票或本票"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "831.09",
+      "slug": "fl-fs-831-09-forged-instrument",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 831.09",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.09.html"
+        },
+        {
+          "citation": "Fla. Stat. § 831.07",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 831.10",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Uttering forged bills, checks, drafts, or notes",
+          "FS 831.09",
+          "F.S. 831.09"
+        ],
+        "es": [
+          "Uttering forged bills, checks, drafts, or notes",
+          "FS 831.09",
+          "F.S. 831.09"
+        ],
+        "zh": [
+          "Uttering forged bills, checks, drafts, or notes",
+          "FS 831.09",
+          "F.S. 831.09"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly passing or tendering as genuine a false, altered, forged or counterfeit note or qualifying bank bill, check, draft or promissory note payable to bearer or to order, with intent to injure or defraud someone.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Section 831.10 refers to §775.084 if a prior §831.09 conviction is followed by convictions on three distinct charges for offenses committed after it within six months."
+        },
+        "es": {
+          "plainSummary": "Entregar o presentar en pago como auténtico, a sabiendas y con intención de perjudicar o defraudar, un pagaré falso, alterado o falsificado, u otro billete bancario, cheque, giro o pagaré comprendido en la ley, pagadero al portador o a la orden.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. La sección 831.10 remite a §775.084 si, tras una condena por §831.09, hay condenas por tres cargos distintos por hechos posteriores cometidos en un período de seis meses."
+        },
+        "zh": {
+          "plainSummary": "明知票据为虚假、篡改或伪造，仍作为真实票据流通或支付，意图损害或欺诈他人。包括符合本条规定的凭票即付或按指示支付的银行券、支票、汇票或本票。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 按第831.10条，曾因第831.09条被定罪，此后在六个月内又犯三项不同的同类罪行并被定罪的，依第775.084条处罚。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-831-11-forged-instrument",
+    "section": "831.11",
+    "scope": "",
+    "officialTitle": "Bringing into the state forged bank bills, checks, drafts, or notes",
+    "dependencies": [
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "831.11": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-831-11-forged-instrument",
+      "name": "Bringing into Florida or possessing forged bank instruments",
+      "names": {
+        "es": "Introducción en Florida o posesión de instrumentos bancarios falsificados",
+        "zh": "带入佛州或持有伪造银行票据"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "831.11",
+      "slug": "fl-fs-831-11-forged-instrument",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 831.11",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.11.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Bringing into the state forged bank bills, checks, drafts, or notes",
+          "FS 831.11",
+          "F.S. 831.11"
+        ],
+        "es": [
+          "Bringing into the state forged bank bills, checks, drafts, or notes",
+          "FS 831.11",
+          "F.S. 831.11"
+        ],
+        "zh": [
+          "Bringing into the state forged bank bills, checks, drafts, or notes",
+          "FS 831.11",
+          "F.S. 831.11"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Bringing into Florida or possessing a false, forged or counterfeit bill, check, draft or note resembling qualifying bearer or order bank instruments. The person must know it is false and intend to pass it, or have it circulate, as genuine.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Introducir en Florida o poseer un billete, cheque, giro o pagaré falso o falsificado semejante a instrumentos bancarios pagaderos al portador o a la orden. Se exige conocer la falsedad e intentar hacerlo pasar o circular como auténtico.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "明知银行券、支票、汇票或本票为伪造且外观近似符合规定的无记名或指示付款银行票据，仍带入佛州或持有，意图将其作为真票使用或流通。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-831-28-2-a-forged-instrument",
+    "section": "831.28",
+    "scope": "(2)(a)",
+    "officialTitle": "Counterfeiting a payment instrument; possessing a counterfeit payment instrument; penalties",
+    "dependencies": [
+      "831.28",
+      "560.103",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "831.28": [
+        "(1)",
+        "(2)(a)",
+        "(2)(b)",
+        "(3)"
+      ],
+      "560.103": [
+        "(32)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-831-28-2-a-forged-instrument",
+      "name": "Counterfeiting or possessing a counterfeit payment instrument",
+      "names": {
+        "es": "Falsificación o posesión de un instrumento de pago falsificado",
+        "zh": "伪造支付凭证或持有伪造支付凭证"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "831.28(2)(a)",
+      "slug": "fl-fs-831-28-2-a-forged-instrument",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 831.28(2)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 831.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 560.103",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0560/Sections/0560.103.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Counterfeiting a payment instrument; possessing a counterfeit payment instrument; penalties",
+          "FS 831.28(2)(a)",
+          "F.S. 831.28(2)(a)"
+        ],
+        "es": [
+          "Counterfeiting a payment instrument; possessing a counterfeit payment instrument; penalties",
+          "FS 831.28(2)(a)",
+          "F.S. 831.28(2)(a)"
+        ],
+        "zh": [
+          "Counterfeiting a payment instrument; possessing a counterfeit payment instrument; penalties",
+          "FS 831.28(2)(a)",
+          "F.S. 831.28(2)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Counterfeiting a payment instrument or possessing a counterfeit payment instrument with intent to defraud. The statutory definition covers unauthorized manufacture or arrangements for manufacture, or manufacture with fictitious identifying details. Qualifying instruments include electronic instruments; credit-card vouchers and letters of credit are excluded. The law exempts law enforcement production or display for investigative or educational purposes.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Falsificar un instrumento de pago o poseer uno falsificado con intención de defraudar. La definición comprende su fabricación o encargo sin autorización, o su fabricación con datos identificativos ficticios. Incluye instrumentos electrónicos y excluye los comprobantes de tarjeta de crédito y cartas de crédito. Se exceptúa su producción o exhibición por la policía con fines de investigación o educación.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "意图欺诈而伪造支付凭证或持有伪造的支付凭证。定义包括未经许可制造或安排制造，或使用虚构身份或账户信息制造。符合条件的电子支付凭证也涵盖在内，但信用卡签购单和信用证除外。执法机构为调查或教育制作或展示的情形豁免。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  }
+]
