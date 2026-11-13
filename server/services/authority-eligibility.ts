@@ -1,3 +1,4 @@
+import { OHIO_GAMBLING_IDS } from "@shared/ohio-gambling-batch";
 import { OHIO_WEAPONS_LOCATION_IDS } from "@shared/ohio-weapons-location-batch";
 import { OHIO_DRUG_REMAINDER_IDS } from "@shared/ohio-drug-remainder-batch";
 import { OHIO_DRUG_CONDUCT_IDS } from "@shared/ohio-drug-conduct-batch";
@@ -13,6 +14,7 @@ import { OHIO_JUSTICE_IDS } from "@shared/ohio-justice-batch";
 import { OHIO_BENEFITS_FRAUD_IDS } from "@shared/ohio-benefits-fraud-batch";
 import { OHIO_THEFT_FRAUD_IDS } from "@shared/ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_IDS } from "@shared/ohio-residual-batch";
+import { isOhioGamblingSourceFresh } from "../data/ohio-gambling-source";
 import { isOhioWeaponsLocationSourceFresh } from "../data/ohio-weapons-location-source";
 import { isOhioDrugRemainderSourceFresh } from "../data/ohio-drug-remainder-source";
 import { isOhioDrugConductSourceFresh } from "../data/ohio-drug-conduct-source";
@@ -72,6 +74,7 @@ function createAuthorityChargeGate() {
     if (charge.jurisdiction === "CA" && (!fresh(isCaliforniaEvidenceFresh) || getCaliforniaCanonicalRecord(charge.id)?.currentness.status !== "current")) return false;
     if (charge.jurisdiction === "OH" && OHIO_RESIDUAL_IDS.has(charge.id) && !fresh(isOhioResidualSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_THEFT_FRAUD_IDS.has(charge.id) && !fresh(isOhioTheftFraudSourceFresh)) return false;
+    if (charge.jurisdiction === "OH" && OHIO_GAMBLING_IDS.has(charge.id) && !fresh(isOhioGamblingSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_WEAPONS_LOCATION_IDS.has(charge.id) && !fresh(isOhioWeaponsLocationSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_DRUG_REMAINDER_IDS.has(charge.id) && !fresh(isOhioDrugRemainderSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_DRUG_CONDUCT_IDS.has(charge.id) && !fresh(isOhioDrugConductSourceFresh)) return false;
