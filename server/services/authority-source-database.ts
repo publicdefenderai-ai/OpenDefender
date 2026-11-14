@@ -1,5 +1,5 @@
-import { texasDwiById, texasDwiRecords, texasDwiCitation } from "@shared/texas-dwi";
-import { TEXAS_DWI_SNAPSHOT_HASHES } from "../data/texas-dwi-snapshot-hashes";
+import { texasReviewedById, texasReviewedRecords, texasReviewedCitation } from "@shared/texas-reviewed";
+import { texasReviewedSnapshotHashes } from "../data/texas-reviewed-hashes";
 import { OHIO_ODOMETER_FRAUD_SOURCES, isOhioOdometerFraudSourceFresh } from "../data/ohio-odometer-fraud-source";
 import { OHIO_TRANSIT_VENUES_SOURCES, isOhioTransitVenuesSourceFresh } from "../data/ohio-transit-venues-source";
 import { OHIO_LIQUOR_ID_SOURCES, isOhioLiquorIdSourceFresh } from "../data/ohio-liquor-id-source";
@@ -459,12 +459,12 @@ export async function getCurrentAuthoritySelectableChargeIds(
   }
 
   if (jurisdiction === "TX") {
-    for (const row of texasDwiRecords) {
+    for (const row of texasReviewedRecords) {
       const required = expected.get(row.id);
       if (!required) continue;
       for (const ref of row.references) {
         required.add(linkKey(row.id, `tx:${ref.code}:${ref.section}`, ref.supportRole,
-          texasDwiCitation({ ...ref, subdivision: null }), ref.subdivision));
+          texasReviewedCitation({ ...ref, subdivision: null }), ref.subdivision));
       }
     }
   }
@@ -512,8 +512,8 @@ export async function getCurrentAuthoritySelectableChargeIds(
     ));
   const actual = new Map<string, Set<string>>();
   for (const link of currentLinks) {
-    if (jurisdiction === "TX" && texasDwiById.has(link.chargeId)
-        && link.contentHash !== TEXAS_DWI_SNAPSHOT_HASHES[link.sourceKey]) continue;
+    if (jurisdiction === "TX" && texasReviewedById.has(link.chargeId)
+        && link.contentHash !== texasReviewedSnapshotHashes[link.sourceKey]) continue;
     const values = actual.get(link.chargeId) ?? new Set<string>();
     values.add(linkKey(
       link.chargeId,
@@ -1357,7 +1357,8 @@ export async function getAuthorityChargeProvenance(
   // "offense" support role. Use the reviewed pilot's exact primary citation.
   const expectedCitation = jurisdiction === "OH"
     ? OHIO_CHAPTER_2903_PILOT_CHARGES.find(charge => charge.id === chargeId)?.statuteCitations?.[0]
-    : jurisdiction === "TX" && texasDwiById.has(chargeId) ? "Tex. Penal Code § 49.04" : undefined;
+    : jurisdiction === "TX" && texasReviewedById.has(chargeId)
+      ? texasReviewedCitation({ ...texasReviewedById.get(chargeId)!.references[0], subdivision: null }) : undefined;
   const primary = selectPrimaryAuthoritySource(rows, expectedCitation);
   if (!primary) return null;
   return {

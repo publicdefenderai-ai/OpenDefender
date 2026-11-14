@@ -113,7 +113,7 @@ describe("public-source coverage gate", () => {
     expect(report.nextHighestValueCoverageTargets.map((target) => target.rows)).toEqual(
       // Ohio includes retired manslaughter, aggravated-assault, vandalism, insurance-fraud and domestic-violence
       // identities requiring explicit reselection.
-      [129, 69, 109, 94, 93, 92, 78, 60, 27, 21],
+      [129, 69, 109, 94, 93, 92, 77, 60, 27, 21],
     );
     for (const target of report.nextHighestValueCoverageTargets) {
       expect(target.coveragePercentage).toBeGreaterThanOrEqual(0);

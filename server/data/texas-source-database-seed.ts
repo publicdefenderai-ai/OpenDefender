@@ -1,4 +1,5 @@
-import { texasDwiById, texasDwiHashes, texasDwiUrl } from "@shared/texas-dwi";
+import { texasReviewedById, texasReviewedUrl } from "@shared/texas-reviewed";
+import { texasReviewedTextHashes } from "./texas-reviewed-hashes";
 import { createHash } from "node:crypto";
 import { criminalCharges, type CriminalCharge } from "@shared/criminal-charges";
 import { CHARGE_CITATIONS } from "@shared/criminal-charge-citations";
@@ -222,7 +223,7 @@ function provisionFromDocument(
 }
 
 export function texasReferencesForCharge(charge: CriminalCharge) {
-  const reviewed = texasDwiById.get(charge.id);
+  const reviewed = texasReviewedById.get(charge.id);
   if (reviewed) return reviewed.references;
   return parseTexasCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "").map((ref, i) => ({
     ...ref, supportRole: i === 0 ? "offense" : "grading",
@@ -235,7 +236,7 @@ export function buildTexasManifestRecord(
   importedAt: Date,
   error?: string,
 ): AuthorityCatalogRecord {
-  const reviewed = texasDwiById.get(charge.id);
+  const reviewed = texasReviewedById.get(charge.id);
   const references = texasReferencesForCharge(charge);
   if (references.length === 0) {
     return {
@@ -254,10 +255,10 @@ export function buildTexasManifestRecord(
   }
   if (documents.length !== references.length || documents.some((doc, index) => {
     const ref = references[index];
-    if (doc.code !== ref.code || doc.section !== ref.section || doc.sourceUrl !== texasDwiUrl(ref)) return true;
+    if (doc.code !== ref.code || doc.section !== ref.section || doc.sourceUrl !== texasReviewedUrl(ref)) return true;
     if (!reviewed) return false;
     const digest = createHash("sha256").update(doc.text).digest("hex");
-    return digest !== texasDwiHashes[`${ref.code}:${ref.section}`]
+    return digest !== texasReviewedTextHashes[`${ref.code}:${ref.section}`]
       || !doc.text.startsWith(`Sec. ${ref.section}. ${doc.title} `)
       || !Number.isFinite(doc.retrievedAt.getTime()) || doc.effectiveDateStart === null
       || (doc.effectiveDateStart !== null && !(Date.parse(doc.effectiveDateStart) <= doc.retrievedAt.getTime()));
@@ -277,7 +278,7 @@ export function buildTexasManifestRecord(
     };
   }
   const mismatched = documents.find((document, i) => reviewed
-    ? references[i].supportRole === "offense" && normalizeTitle(document.title) !== "driving while intoxicated"
+    ? references[i].supportRole === "offense" && normalizeTitle(document.title) !== normalizeTitle(reviewed.officialTitle)
     : !titleMatches(charge, document.title));
   if (mismatched) {
     return {
@@ -333,7 +334,7 @@ export function buildTexasSourceDatabaseSeed(
   manifest: TexasAuthorityManifest,
 ): AuthoritySourceDatabaseSeed {
   for (const record of manifest.catalogRecords) {
-    const reviewed = texasDwiById.get(record.chargeId);
+    const reviewed = texasReviewedById.get(record.chargeId);
     if (!reviewed || !["retain", "exact_alias_rename"].includes(record.disposition)) continue;
     const charge = criminalCharges.find(row => row.id === record.chargeId);
     const documents = record.provisions.map(p => ({
@@ -346,7 +347,7 @@ export function buildTexasSourceDatabaseSeed(
       return p.sourceKey !== supplied.sourceKey || p.contentHash !== supplied.contentHash ||
         p.supportRole !== supplied.supportRole || p.subdivision !== supplied.subdivision ||
         p.citation !== supplied.citation || supplied.hashBasis !== "source_content" || supplied.effectiveDateEnd !== null;
-    })) throw new Error(`Incomplete or unreviewed Texas DWI evidence for ${record.chargeId}`);
+    })) throw new Error(`Incomplete or unreviewed Texas evidence for ${record.chargeId}`);
   }
   const sources = new Map<string, AuthoritySourceSeed>();
   const snapshots: AuthoritySnapshotSeed[] = [];
