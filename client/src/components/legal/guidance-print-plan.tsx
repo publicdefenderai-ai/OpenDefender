@@ -1,4 +1,5 @@
 import React from "react";
+import { isOhioPlan, ohioReselectionNotice } from "../../lib/ohio-guidance-output";
 import {
   GUIDANCE_SECTION_ORDER,
   normalizeGuidance,
@@ -226,8 +227,19 @@ function sectionContent(section: GuidanceSectionId, guidance: GuidanceViewModel,
  * Print does not depend on interactive accordion state. It renders a fresh,
  * complete plan from the normalized model in the canonical section order.
  */
-export function GuidancePrintPlan({ guidance: raw, language = "en" }: { guidance: GuidanceViewModel; language?: string }) {
+export function GuidancePrintPlan({ guidance: raw, language = "en", ohioVerified = false }: { guidance: GuidanceViewModel; language?: string; ohioVerified?: boolean }) {
   const guidance = normalizeGuidance(raw);
+  if (isOhioPlan(guidance) && !ohioVerified) {
+    const printHint = language.startsWith("es") ? "Use el botón Imprimir de la hoja de ruta para comprobar el cargo."
+      : language.startsWith("zh") ? "请使用路线图中的打印按钮核实罪名。"
+      : "Use the Print button on the roadmap to check the charge.";
+    return (
+      <article className="hidden print:block guidance-print-plan" data-testid="print-guidance-plan">
+        <p>{ohioReselectionNotice(language)}</p>
+        <p>{printHint}</p>
+      </article>
+    );
+  }
   const labels = sectionLabels(language);
   const printLabels = immediateActionLabels(language);
   return (

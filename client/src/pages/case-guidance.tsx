@@ -33,6 +33,7 @@ import { GuidanceDashboard } from "@/components/legal/guidance-dashboard";
 import { useLegalGuidance, useAIAvailability } from "@/hooks/use-legal-data";
 import { legalDataApi } from "@/lib/legal-data";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { OhioChargeConfirmationError, ohioReselectionNotice } from "@/lib/ohio-guidance-output";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
 import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
@@ -524,7 +525,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
         console.error('[PDF export error]', error);
         toast({
           title: t('case.export.errorTitle', 'Export failed'),
-          description: t('case.export.errorMessage', 'PDF export failed. Please try again or use your browser\'s print function (Ctrl+P / Cmd+P).'),
+          description: error instanceof OhioChargeConfirmationError ? ohioReselectionNotice(i18n.language) : t('case.export.errorMessage', 'PDF export failed. Please try again or use your browser\'s print function (Ctrl+P / Cmd+P).'),
           variant: "destructive",
         });
       }

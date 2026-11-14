@@ -1,3 +1,5 @@
+import { flushSync } from "react-dom";
+import { isOhioPlan, canOutputOhioPlan, ohioReselectionNotice, OhioChargeConfirmationError } from "@/lib/ohio-guidance-output";
 import { ChargeTranslationSupplement } from "./charge-translation-supplement";
 import { fetchChargeCatalog } from "@/lib/charge-catalog";
 import { translationUnavailableNotice } from "@shared/translation-unavailable-notice";
@@ -980,8 +982,9 @@ function DocumentsSection({ caseStage, guardedNavigate }: { caseStage: string; g
   );
 }
 
-export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPublicDefender, onShowLegalAid, onExport, guidanceMode = 'ai' }: GuidanceDashboardProps) {
-  guidance = normalizeGuidance(guidance);
+export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, onShowPublicDefender, onShowLegalAid, onExport, guidanceMode = 'ai' }: GuidanceDashboardProps) {
+  const guidance = normalizeGuidance(savedPlan);
+  const [verifiedPrintPlan, setVerifiedPrintPlan] = useState<GuidanceViewModel | null>(null);
   const { t, i18n } = useTranslation();
   const [, setLocation] = useLocation();
   const { attemptNavigation } = useNavigationGuard();
@@ -1053,6 +1056,26 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
     );
   };
 
+  async function handlePrint() {
+    if (!isOhioPlan(guidance)) {
+      window.print();
+      return;
+    }
+    // Browser-menu print cannot await verification. Only expose the saved
+    // narrative during this print call, after checking the complete catalog.
+    const verified = await canOutputOhioPlan(guidance);
+    if (!verified) {
+      alert(ohioReselectionNotice(i18n.language));
+      return;
+    }
+    flushSync(() => setVerifiedPrintPlan(savedPlan));
+    try {
+      window.print();
+    } finally {
+      flushSync(() => setVerifiedPrintPlan(null));
+    }
+  }
+
   const handleExportClick = () => {
     setShowExportWarning(true);
   };
@@ -1080,7 +1103,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
       console.error('[PDF export error]', err);
       // Surface the failure — previously this threw silently and the dialog
       // just closed, leaving the user wondering why nothing happened.
-      alert(t('exportWarning.exportFailed', 'PDF export failed. Please try again or use your browser\'s print function (Ctrl+P / Cmd+P).'));
+      alert(err instanceof OhioChargeConfirmationError ? ohioReselectionNotice(i18n.language) : t('exportWarning.exportFailed', 'PDF export failed. Please try again or use your browser\'s print function (Ctrl+P / Cmd+P).'));
     } finally {
       setIsExporting(false);
     }
@@ -1094,7 +1117,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
 
   return (
     <>
-      <GuidancePrintPlan guidance={guidance} language={i18n.language} />
+      <GuidancePrintPlan guidance={guidance} language={i18n.language} ohioVerified={verifiedPrintPlan === savedPlan} />
       <div
         className="guidance-results w-full min-w-0 mx-auto space-y-6 print:hidden"
         data-testid="guidance-dashboard"
@@ -1150,7 +1173,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
               </Button>
               <Button
                 variant="outline"
-                onClick={() => window.print()}
+                onClick={handlePrint}
                 className="gap-2 flex-1 md:flex-none print:hidden"
                 data-testid="button-print-guidance"
               >
