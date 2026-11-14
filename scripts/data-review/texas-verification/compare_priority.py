@@ -11,7 +11,7 @@ SELECTABLE = {"retain", "exact_alias_rename"}
 
 def compare():
     ranking = json.loads((OUTPUT / "texas-2025-arrest-priorities.json").read_text())
-    manifest = json.loads((OUTPUT / "tx-source-manifest.json").read_text())["catalogRecords"]
+    manifest = json.loads((OUTPUT / "texas-2025-benchmark-manifest-index.json").read_text())
     public = json.loads((OUTPUT / "texas-priority-public-selector.json").read_text())
     live = {c["id"]: c for c in public["charges"]}
     eligible = {r["chargeId"]: r for r in manifest if r["disposition"] in SELECTABLE}

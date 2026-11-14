@@ -7,11 +7,10 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { criminalCharges } from "../../shared/criminal-charges";
-import { CHARGE_CITATIONS } from "../../shared/criminal-charge-citations";
 import {
   buildTexasManifestRecord,
   buildTexasSourceUrl,
-  parseTexasCitation,
+  texasReferencesForCharge,
   type TexasAuthorityManifest,
   type TexasSourceDocument,
 } from "../../server/data/texas-source-database-seed";
@@ -97,7 +96,7 @@ export function extractLatestEffectiveDate(text: string): string | null {
   return dates[0]?.value ?? null;
 }
 
-function extractDocument(
+export function extractDocument(
   html: string,
   code: string,
   section: string,
@@ -139,7 +138,7 @@ export async function main(): Promise<void> {
   let requests = 0;
 
   for (const charge of txCharges) {
-    const references = parseTexasCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
+    const references = texasReferencesForCharge(charge);
     for (const reference of references) {
       const chapter = reference.section.split(".")[0];
       const chapterKey = `${reference.code}.${chapter}`;
@@ -160,7 +159,7 @@ export async function main(): Promise<void> {
   }
 
   const catalogRecords = txCharges.map((charge) => {
-    const references = parseTexasCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
+    const references = texasReferencesForCharge(charge);
     const documents: TexasSourceDocument[] = [];
     for (const reference of references) {
       const chapter = reference.section.split(".")[0];

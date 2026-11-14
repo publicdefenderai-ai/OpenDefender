@@ -1,3 +1,4 @@
+import { texasDwiRecords, texasDwiCitation, texasDwiConduct, texasDwiQualifications } from "./texas-dwi";
 import { floridaRemainingChargeText, floridaRemainingDisplayName } from "./florida-legacy-remaining";
 import { floridaSexualChargeText, floridaSexualDisplayName } from "./florida-legacy-sexual";
 import { floridaLegacyPropertyText } from "./florida-legacy-property";
@@ -40554,32 +40555,12 @@ export const criminalCharges: CriminalCharge[] = [
     specificRights: ['Constitutional rights apply to all criminal cases'],
     urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
-  {
-    id: 'tx-dui-first-offense',
-    name: 'DUI First Offense',
-    code: '49.04',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Driving under influence, first offense under Texas law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
-  },
-  {
-    id: 'tx-dui-second-offense',
-    name: 'DUI Second Offense',
-    code: '49.04',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Driving under influence, repeat offense under Texas law',
-    maxPenalty: 'Up to 1 year jail and/or fines',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
-  },
+  ...texasDwiRecords.map((row): CriminalCharge => ({
+    id: row.id, name: row.name, code: row.code, jurisdiction: "TX", category: "misdemeanor",
+    description: texasDwiConduct, maxPenalty: `${row.summary} ${texasDwiQualifications}`,
+    searchAliases: [`DWI ${row.code}`, row.dpsCode, texasDwiCitation(row.references[1])],
+    commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: [],
+  })),
   {
     id: 'tx-dui-third-offense',
     name: 'DUI Third Offense',
@@ -94917,8 +94898,6 @@ export const TEXAS_CANONICAL_TITLES: Record<string, string> = {
   "tx-auto-burglary": "Burglary of Vehicles",
   "tx-unlawful-carrying-of-weapon": "Unlawful Carrying Weapons",
   "tx-possession-of-prohibited-weapon": "Prohibited Weapons",
-  "tx-dui-first-offense": "Driving While Intoxicated",
-  "tx-dui-second-offense": "Driving While Intoxicated",
   "tx-criminal-mischief": "Criminal Mischief",
   "tx-trespass-after-warning": "Criminal Trespass",
   "tx-aiding-and-abetting": "Criminal Responsibility for Conduct of Another",
@@ -95116,6 +95095,9 @@ for (const [group, sections] of [['Violent Crimes', californiaPeopleSections], [
 // boundary used below. The canonical source-first records are additive and
 // the historical degree labels remain visible only to persisted-case
 // reselection handling.
+for (const group of ["TX", "DUI & Traffic", "DUI/Traffic Crimes"]) {
+  chargeCategories[group] = [...new Set([...chargeCategories[group], ...texasDwiRecords.map(row => row.id)])];
+}
 chargeCategories['OH'] = Array.from(new Set([
   ...chargeCategories['OH'].filter((id) =>
     !OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(id),

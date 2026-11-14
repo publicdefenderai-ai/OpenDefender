@@ -1,3 +1,4 @@
+import { texasDwiRecords, texasDwiCitation, texasDwiUrl } from "./texas-dwi";
 import { FLORIDA_LEGACY_REMAINING_DEFINITIONS } from "./florida-legacy-remaining";
 import { FLORIDA_LEGACY_SEXUAL_DEFINITIONS } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY_DEFINITIONS } from "./florida-legacy-property";
@@ -79,6 +80,13 @@ export interface CitationRecord {
  * e.g. 'al-murder-in-the-first-degree'
  */
 export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
+  ...Object.fromEntries(texasDwiRecords.map(row => [row.id, {
+    citation: texasDwiCitation(row.references[1]),
+    alternateCitations: row.references.map(texasDwiCitation),
+    confidence: "high", lastVerified: "2026-11", source: "Texas Legislative Council TCSS",
+    sourceUrl: texasDwiUrl(row.references[1]),
+    instructionRef: "TPJC 49.04",
+  } satisfies CitationRecord])),
 
   // ── BATCH 1: AL, AR, DC, DE, FL, GA, MD, MS, NC, SC, VA ─────────────────
   // Source: Justia, state legislature sites, DC Council Law Library
@@ -3593,14 +3601,6 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 38.10",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.10",
     instructionRef: "TPJC 38.10",
-  },
-  "tx-dui-first-offense": {
-    citation: "Tex. Penal Code § 49.04",
-    confidence: "high",
-    lastVerified: "2026-04",
-    source: "OpenLaws verified 2026-04",
-    sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm",
-    instructionRef: "TPJC 49.04",
   },
   "tx-driving-while-suspended": {
     citation: "Tex. Transp. Code § 521.457",
@@ -13707,7 +13707,6 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "sc-dui-second-offense": { citation: "S.C. Code Ann. § 56-5-2933(b)", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Carolina DUI second offense; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/south-carolina/section-56-5-2933/", instructionRef: "SC Req. to Charge Crim. § 28-1" },
   "sd-dui-second-offense": { citation: "S.D. Codified Laws § 32-23-2.1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-dakota/section-32-23-2-1/" },
   "tn-dui-second-offense": { citation: "Tenn. Code Ann. § 55-10-403(a)(1)(B)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/tennessee/section-55-10-403/", instructionRef: "TPI-Crim. 34.01" },
-  "tx-dui-second-offense": { citation: "Tex. Penal Code § 49.04(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm", instructionRef: "TPJC 49.04" },
   "ut-dui-second-offense": { citation: "Utah Code Ann. § 41-6a-503(2)(a)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Utah DUI second offense; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/utah/section-41-6a-503/", instructionRef: "UMJI-CR 2103", instructionUrl: "https://www.utcourts.gov/",},
   "vt-dui-second-offense": { citation: "Vt. Stat. Ann. tit. 23, § 1210(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/vermont/section-1210/" },
   "va-dui-second-offense": { citation: "Va. Code Ann. § 18.2-270(B)", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-270/", instructionRef: "VMJI § 27.100" },

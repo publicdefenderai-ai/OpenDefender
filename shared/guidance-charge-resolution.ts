@@ -40,6 +40,9 @@ export function resolveGuidanceCharge(
     return resolved ?? criminalCharges.find((charge) => charge.id === classification.id);
   }
 
+  // Older ID-less Texas DWI answers can describe different branches under the same section.
+  if (["TX", "TEXAS"].includes(jurisdiction?.toUpperCase() ?? "") && /^49\.(04|09)(?:$|\()/.test(classification.code)) return undefined;
+
   const legacyCharge = criminalCharges.find((charge) => charge.code === classification.code);
   if (!legacyCharge || legacyCharge.jurisdiction === "OH") return undefined;
 
