@@ -1,0 +1,1185 @@
+[
+  {
+    "id": "fl-fs-812-014-2-d-1-theft",
+    "section": "812.014",
+    "scope": "(2)(d)1.",
+    "officialTitle": "Theft",
+    "dependencies": [
+      "812.014",
+      "812.012",
+      "741.2801",
+      "741.28",
+      "810.011",
+      "810.09",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "812.014": [
+        "(2)(d)1.",
+        "(1)"
+      ],
+      "812.012": [
+        "(4)",
+        "(10)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "810.011": [
+        "(2)"
+      ],
+      "810.09": [
+        "(1)(b)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-014-2-d-1-theft",
+      "name": "Grand theft from dwelling or unenclosed curtilage, $40–<$750",
+      "names": {
+        "es": "Hurto mayor en vivienda o terrenos adyacentes no cercados, $40–<$750",
+        "zh": "从住宅或未围封附属范围实施重大盗窃，$40–<$750"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.014(2)(d)1.",
+      "slug": "fl-fs-812-014-2-d-1-theft",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.014(2)(d)1.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 810.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 810.09",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.09.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft",
+          "FS 812.014(2)(d)1.",
+          "F.S. 812.014(2)(d)1."
+        ],
+        "es": [
+          "Theft",
+          "FS 812.014(2)(d)1.",
+          "F.S. 812.014(2)(d)1."
+        ],
+        "zh": [
+          "Theft",
+          "FS 812.014(2)(d)1.",
+          "F.S. 812.014(2)(d)1."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly obtaining or using another person’s property, or trying to do so, intending even temporarily to deprive the person of rights or benefits in it or to appropriate it for an unauthorized use. Property worth at least $40 but less than $750 must be taken from a dwelling or its unenclosed curtilage.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For conduct from July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this theft causes injury or death to a qualifying family or household member. Age, theft or a prior alone does not establish these conditions."
+        },
+        "es": {
+          "plainSummary": "Obtener o utilizar a sabiendas bienes ajenos, o intentarlo, con intención de privar a la persona de derechos o beneficios sobre ellos, aunque sea temporalmente, o de apropiárselos para un uso no autorizado. Bienes de al menos $40 pero menos de $750 sustraídos de una vivienda o sus terrenos adyacentes no cercados.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este hurto causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. La edad, el hurto o un antecedente por sí solos no bastan."
+        },
+        "zh": {
+          "plainSummary": "明知而获取或使用他人财产，或试图这样做，意图哪怕暂时剥夺他人对财产的权利或利益，或将财产用于未经授权的用途。 价值至少40美元但低于750美元的财产须取自住宅或其未围封的紧邻附属范围。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对2026年7月1日起的行为，若本次盗窃导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。单有年龄、盗窃或前科均不足以适用。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-2-d-2-theft",
+    "section": "812.014",
+    "scope": "(2)(d)2.",
+    "officialTitle": "Theft",
+    "dependencies": [
+      "812.014",
+      "812.012",
+      "741.2801",
+      "741.28",
+      "810.011",
+      "810.09",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "812.014": [
+        "(2)(d)2.",
+        "(1)"
+      ],
+      "812.012": [
+        "(4)",
+        "(10)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "810.011": [
+        "(2)"
+      ],
+      "810.09": [
+        "(1)(b)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-014-2-d-2-theft",
+      "name": "Grand theft from dwelling or unenclosed curtilage, ≥$750",
+      "names": {
+        "es": "Hurto mayor en vivienda o terrenos adyacentes no cercados, ≥$750",
+        "zh": "从住宅或未围封附属范围实施重大盗窃，≥$750"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.014(2)(d)2.",
+      "slug": "fl-fs-812-014-2-d-2-theft",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.014(2)(d)2.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 810.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 810.09",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.09.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft",
+          "FS 812.014(2)(d)2.",
+          "F.S. 812.014(2)(d)2."
+        ],
+        "es": [
+          "Theft",
+          "FS 812.014(2)(d)2.",
+          "F.S. 812.014(2)(d)2."
+        ],
+        "zh": [
+          "Theft",
+          "FS 812.014(2)(d)2.",
+          "F.S. 812.014(2)(d)2."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly obtaining or using another person’s property, or trying to do so, intending even temporarily to deprive the person of rights or benefits in it or to appropriate it for an unauthorized use. Property worth at least $750 must be taken from a dwelling or its unenclosed curtilage.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For conduct from July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this theft causes injury or death to a qualifying family or household member. Age, theft or a prior alone does not establish these conditions."
+        },
+        "es": {
+          "plainSummary": "Obtener o utilizar a sabiendas bienes ajenos, o intentarlo, con intención de privar a la persona de derechos o beneficios sobre ellos, aunque sea temporalmente, o de apropiárselos para un uso no autorizado. Bienes de al menos $750 sustraídos de una vivienda o sus terrenos adyacentes no cercados.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este hurto causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. La edad, el hurto o un antecedente por sí solos no bastan."
+        },
+        "zh": {
+          "plainSummary": "明知而获取或使用他人财产，或试图这样做，意图哪怕暂时剥夺他人对财产的权利或利益，或将财产用于未经授权的用途。 价值至少750美元的财产须取自住宅或其未围封的紧邻附属范围。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对2026年7月1日起的行为，若本次盗窃导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。单有年龄、盗窃或前科均不足以适用。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-2-d-3-theft",
+    "section": "812.014",
+    "scope": "(2)(d)3.",
+    "officialTitle": "Theft",
+    "dependencies": [
+      "812.014",
+      "812.012",
+      "741.2801",
+      "741.28",
+      "810.011",
+      "810.09",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "812.014": [
+        "(2)(d)3.",
+        "(1)"
+      ],
+      "812.012": [
+        "(4)",
+        "(10)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "810.011": [
+        "(2)"
+      ],
+      "810.09": [
+        "(1)(b)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-014-2-d-3-theft",
+      "name": "Grand theft from more than 20 dwellings or unenclosed curtilages",
+      "names": {
+        "es": "Hurto mayor en más de 20 viviendas o terrenos adyacentes no cercados",
+        "zh": "从超过20处住宅或未围封附属范围实施重大盗窃"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.014(2)(d)3.",
+      "slug": "fl-fs-812-014-2-d-3-theft",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.014(2)(d)3.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 810.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 810.09",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.09.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft",
+          "FS 812.014(2)(d)3.",
+          "F.S. 812.014(2)(d)3."
+        ],
+        "es": [
+          "Theft",
+          "FS 812.014(2)(d)3.",
+          "F.S. 812.014(2)(d)3."
+        ],
+        "zh": [
+          "Theft",
+          "FS 812.014(2)(d)3.",
+          "F.S. 812.014(2)(d)3."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly obtaining or using another person’s property, or trying to do so, intending even temporarily to deprive the person of rights or benefits in it or to appropriate it for an unauthorized use. Property taken from more than 20 dwellings, their unenclosed curtilages, or any combination totaling more than 20.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. For conduct from July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this theft causes injury or death to a qualifying family or household member. Age, theft or a prior alone does not establish these conditions."
+        },
+        "es": {
+          "plainSummary": "Obtener o utilizar a sabiendas bienes ajenos, o intentarlo, con intención de privar a la persona de derechos o beneficios sobre ellos, aunque sea temporalmente, o de apropiárselos para un uso no autorizado. Bienes sustraídos de más de 20 viviendas, de sus terrenos adyacentes no cercados o de una combinación que supere 20.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este hurto causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. La edad, el hurto o un antecedente por sí solos no bastan."
+        },
+        "zh": {
+          "plainSummary": "明知而获取或使用他人财产，或试图这样做，意图哪怕暂时剥夺他人对财产的权利或利益，或将财产用于未经授权的用途。 从超过20处住宅、其未围封的紧邻附属范围或合计超过20处的两者盗取。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 对2026年7月1日起的行为，若本次盗窃导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。单有年龄、盗窃或前科均不足以适用。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-2-c-5-theft",
+    "section": "812.014",
+    "scope": "(2)(c)5.",
+    "officialTitle": "Theft",
+    "dependencies": [
+      "812.014",
+      "812.012",
+      "741.2801",
+      "741.28",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "812.014": [
+        "(2)(c)5.",
+        "(1)",
+        "(2)(c)",
+        "(2)(g)"
+      ],
+      "812.012": [
+        "(4)",
+        "(10)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-014-2-c-5-theft",
+      "name": "Grand theft of a firearm",
+      "names": {
+        "es": "Hurto mayor de arma de fuego",
+        "zh": "枪支重大盗窃"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.014(2)(c)5.",
+      "slug": "fl-fs-812-014-2-c-5-theft",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.014(2)(c)5.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft",
+          "FS 812.014(2)(c)5.",
+          "F.S. 812.014(2)(c)5."
+        ],
+        "es": [
+          "Theft",
+          "FS 812.014(2)(c)5.",
+          "F.S. 812.014(2)(c)5."
+        ],
+        "zh": [
+          "Theft",
+          "FS 812.014(2)(c)5.",
+          "F.S. 812.014(2)(c)5."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly obtaining or using another person’s property, or trying to do so, intending even temporarily to deprive the person of rights or benefits in it or to appropriate it for an unauthorized use. The property is a firearm. There is no minimum firearm value. A prior conviction under this particular firearm-theft provision leads to (2)(g).",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For conduct from July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this theft causes injury or death to a qualifying family or household member. Age, theft or a prior alone does not establish these conditions."
+        },
+        "es": {
+          "plainSummary": "Obtener o utilizar a sabiendas bienes ajenos, o intentarlo, con intención de privar a la persona de derechos o beneficios sobre ellos, aunque sea temporalmente, o de apropiárselos para un uso no autorizado. El bien es un arma de fuego sin valor mínimo. Una condena previa bajo esta disposición concreta conduce a (2)(g).",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este hurto causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. La edad, el hurto o un antecedente por sí solos no bastan."
+        },
+        "zh": {
+          "plainSummary": "明知而获取或使用他人财产，或试图这样做，意图哪怕暂时剥夺他人对财产的权利或利益，或将财产用于未经授权的用途。 财物是枪支，无最低价值门槛。此前已按本项因盗窃枪支定罪的，适用第(2)(g)项。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对2026年7月1日起的行为，若本次盗窃导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。单有年龄、盗窃或前科均不足以适用。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-2-g-theft",
+    "section": "812.014",
+    "scope": "(2)(g)",
+    "officialTitle": "Theft",
+    "dependencies": [
+      "812.014",
+      "812.012",
+      "741.2801",
+      "741.28",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "812.014": [
+        "(2)(g)",
+        "(1)",
+        "(2)(c)5."
+      ],
+      "812.012": [
+        "(4)",
+        "(10)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-014-2-g-theft",
+      "name": "Grand theft of a firearm after a firearm-theft conviction",
+      "names": {
+        "es": "Hurto mayor de arma de fuego tras condena por hurto de arma",
+        "zh": "已有枪支盗窃定罪后再次实施枪支重大盗窃"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.014(2)(g)",
+      "slug": "fl-fs-812-014-2-g-theft",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.014(2)(g)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft",
+          "FS 812.014(2)(g)",
+          "F.S. 812.014(2)(g)"
+        ],
+        "es": [
+          "Theft",
+          "FS 812.014(2)(g)",
+          "F.S. 812.014(2)(g)"
+        ],
+        "zh": [
+          "Theft",
+          "FS 812.014(2)(g)",
+          "F.S. 812.014(2)(g)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly obtaining or using another person’s property, or trying to do so, intending even temporarily to deprive the person of rights or benefits in it or to appropriate it for an unauthorized use. The property is a firearm, and the person has a prior grand-theft-of-a-firearm conviction under (2)(c)5. An unrelated theft conviction does not meet this predicate.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. For conduct from July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this theft causes injury or death to a qualifying family or household member. Age, theft or a prior alone does not establish these conditions."
+        },
+        "es": {
+          "plainSummary": "Obtener o utilizar a sabiendas bienes ajenos, o intentarlo, con intención de privar a la persona de derechos o beneficios sobre ellos, aunque sea temporalmente, o de apropiárselos para un uso no autorizado. El bien es un arma y existe una condena previa por hurto mayor de arma conforme a (2)(c)5. Una condena por otro hurto no basta.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este hurto causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. La edad, el hurto o un antecedente por sí solos no bastan."
+        },
+        "zh": {
+          "plainSummary": "明知而获取或使用他人财产，或试图这样做，意图哪怕暂时剥夺他人对财产的权利或利益，或将财产用于未经授权的用途。 财物是枪支，且被告此前已按第(2)(c)5项被判枪支重大盗窃罪。其他盗窃前科不符合条件。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 对2026年7月1日起的行为，若本次盗窃导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。单有年龄、盗窃或前科均不足以适用。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-2-b-4-theft",
+    "section": "812.014",
+    "scope": "(2)(b)4.",
+    "officialTitle": "Theft",
+    "dependencies": [
+      "812.014",
+      "812.012",
+      "741.2801",
+      "741.28",
+      "316.003",
+      "943.10",
+      "870.01",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "812.014": [
+        "(2)(b)4.",
+        "(1)"
+      ],
+      "812.012": [
+        "(4)",
+        "(10)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "316.003": [
+        "(1)"
+      ],
+      "943.10": [
+        "(1)"
+      ],
+      "870.01": [
+        "(2)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-014-2-b-4-theft",
+      "name": "Grand theft of law enforcement equipment from an authorized emergency vehicle",
+      "names": {
+        "es": "Hurto mayor de equipo policial de vehículo de emergencia autorizado",
+        "zh": "从获准的应急车辆盗窃执法设备"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.014(2)(b)4.",
+      "slug": "fl-fs-812-014-2-b-4-theft",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.014(2)(b)4.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.003",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.003.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.10",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 870.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft",
+          "FS 812.014(2)(b)4.",
+          "F.S. 812.014(2)(b)4."
+        ],
+        "es": [
+          "Theft",
+          "FS 812.014(2)(b)4.",
+          "F.S. 812.014(2)(b)4."
+        ],
+        "zh": [
+          "Theft",
+          "FS 812.014(2)(b)4.",
+          "F.S. 812.014(2)(b)4."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly obtaining or using another person’s property, or trying to do so, intending even temporarily to deprive the person of rights or benefits in it or to appropriate it for an unauthorized use. Equipment worth at least $300, used by a qualifying officer in official business, is taken from a statutorily authorized emergency vehicle.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. If riot conditions facilitate the theft during a riot or aggravated riot, or emergency conditions facilitate it in the affected county after the Governor’s declaration, first-degree felony: ordinarily up to 30 years and $10,000. For conduct from July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this theft causes injury or death to a qualifying family or household member. Age, theft or a prior alone does not establish these conditions."
+        },
+        "es": {
+          "plainSummary": "Obtener o utilizar a sabiendas bienes ajenos, o intentarlo, con intención de privar a la persona de derechos o beneficios sobre ellos, aunque sea temporalmente, o de apropiárselos para un uso no autorizado. Se sustrae de un vehículo de emergencia autorizado equipo de al menos $300 usado por un agente habilitado en sus funciones oficiales.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. Si condiciones de disturbios facilitan el hurto durante disturbios simples o agravados, o las condiciones de emergencia lo facilitan en el condado afectado después de la declaración del gobernador, es delito grave de primer grado: normalmente hasta 30 años y $10,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este hurto causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. La edad, el hurto o un antecedente por sí solos no bastan."
+        },
+        "zh": {
+          "plainSummary": "明知而获取或使用他人财产，或试图这样做，意图哪怕暂时剥夺他人对财产的权利或利益，或将财产用于未经授权的用途。 从法定获准的应急车辆取走合资格警员用于公务且价值至少300美元的设备。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 若在暴乱或加重暴乱期间，暴乱产生的条件促成盗窃，或州长宣布紧急状态后在受影响县因紧急状态条件而得以盗窃，则属一级重罪，通常最高30年及10,000美元罚金。 对2026年7月1日起的行为，若本次盗窃导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。单有年龄、盗窃或前科均不足以适用。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-0145-2-a-theft",
+    "section": "812.0145",
+    "scope": "(2)(a)",
+    "officialTitle": "Theft from persons 65 years of age or older; reclassification of offenses",
+    "dependencies": [
+      "812.014",
+      "812.012",
+      "741.2801",
+      "741.28",
+      "812.0145",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "812.014": [
+        "(1)"
+      ],
+      "812.012": [
+        "(4)",
+        "(10)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "812.0145": [
+        "(2)(a)",
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-0145-2-a-theft",
+      "name": "Theft from a person age 65 or older, $50,000 or more",
+      "names": {
+        "es": "Hurto a persona de 65 años o más, $50,000 o más",
+        "zh": "盗窃65岁或以上者财产，50,000美元或以上"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.0145(2)(a)",
+      "slug": "fl-fs-812-0145-2-a-theft",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.0145(2)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.0145.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.0145",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.0145.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft from persons 65 years of age or older; reclassification of offenses",
+          "FS 812.0145(2)(a)",
+          "F.S. 812.0145(2)(a)"
+        ],
+        "es": [
+          "Theft from persons 65 years of age or older; reclassification of offenses",
+          "FS 812.0145(2)(a)",
+          "F.S. 812.0145(2)(a)"
+        ],
+        "zh": [
+          "Theft from persons 65 years of age or older; reclassification of offenses",
+          "FS 812.0145(2)(a)",
+          "F.S. 812.0145(2)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly obtaining or using another person’s property, or trying to do so, intending even temporarily to deprive the person of rights or benefits in it or to appropriate it for an unauthorized use. The property is valued at $50,000 or more. The victim was at least 65, and the accused knew or had reason to believe that.",
+          "degreeContext": "First-degree felony: ordinarily up to 30 years in prison and a $10,000 fine. When the theft exceeds $1,000, restitution and up to 500 hours of community service are required in addition to other penalties. For conduct from July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this theft causes injury or death to a qualifying family or household member. Age, theft or a prior alone does not establish these conditions."
+        },
+        "es": {
+          "plainSummary": "Obtener o utilizar a sabiendas bienes ajenos, o intentarlo, con intención de privar a la persona de derechos o beneficios sobre ellos, aunque sea temporalmente, o de apropiárselos para un uso no autorizado. El valor es $50,000 o más. La víctima tenía al menos 65 años y el acusado lo sabía o tenía razones para creerlo.",
+          "degreeContext": "Delito grave de primer grado: normalmente hasta 30 años de prisión y multa de $10,000. Si el hurto supera $1,000, se exige además restitución y hasta 500 horas de servicio comunitario. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este hurto causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. La edad, el hurto o un antecedente por sí solos no bastan."
+        },
+        "zh": {
+          "plainSummary": "明知而获取或使用他人财产，或试图这样做，意图哪怕暂时剥夺他人对财产的权利或利益，或将财产用于未经授权的用途。 价值50,000美元或以上。受害者年满65岁，被告知情或有理由相信其达到该年龄。",
+          "degreeContext": "一级重罪：通常最高30年监禁及10,000美元罚金。 盗窃金额超过1,000美元时，除其他处罚外还须赔偿并承担最多500小时社区服务。 对2026年7月1日起的行为，若本次盗窃导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。单有年龄、盗窃或前科均不足以适用。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-0145-2-b-theft",
+    "section": "812.0145",
+    "scope": "(2)(b)",
+    "officialTitle": "Theft from persons 65 years of age or older; reclassification of offenses",
+    "dependencies": [
+      "812.014",
+      "812.012",
+      "741.2801",
+      "741.28",
+      "812.0145",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "812.014": [
+        "(1)"
+      ],
+      "812.012": [
+        "(4)",
+        "(10)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "812.0145": [
+        "(2)(b)",
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-0145-2-b-theft",
+      "name": "Theft from a person age 65 or older, $10,000 to under $50,000",
+      "names": {
+        "es": "Hurto a persona de 65 años o más, $10,000 a menos de $50,000",
+        "zh": "盗窃65岁或以上者财产，10,000美元至不足50,000美元"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.0145(2)(b)",
+      "slug": "fl-fs-812-0145-2-b-theft",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.0145(2)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.0145.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.0145",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.0145.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft from persons 65 years of age or older; reclassification of offenses",
+          "FS 812.0145(2)(b)",
+          "F.S. 812.0145(2)(b)"
+        ],
+        "es": [
+          "Theft from persons 65 years of age or older; reclassification of offenses",
+          "FS 812.0145(2)(b)",
+          "F.S. 812.0145(2)(b)"
+        ],
+        "zh": [
+          "Theft from persons 65 years of age or older; reclassification of offenses",
+          "FS 812.0145(2)(b)",
+          "F.S. 812.0145(2)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly obtaining or using another person’s property, or trying to do so, intending even temporarily to deprive the person of rights or benefits in it or to appropriate it for an unauthorized use. The property is valued at $10,000 to under $50,000. The victim was at least 65, and the accused knew or had reason to believe that.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. When the theft exceeds $1,000, restitution and up to 500 hours of community service are required in addition to other penalties. For conduct from July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this theft causes injury or death to a qualifying family or household member. Age, theft or a prior alone does not establish these conditions."
+        },
+        "es": {
+          "plainSummary": "Obtener o utilizar a sabiendas bienes ajenos, o intentarlo, con intención de privar a la persona de derechos o beneficios sobre ellos, aunque sea temporalmente, o de apropiárselos para un uso no autorizado. El valor es $10,000 a menos de $50,000. La víctima tenía al menos 65 años y el acusado lo sabía o tenía razones para creerlo.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. Si el hurto supera $1,000, se exige además restitución y hasta 500 horas de servicio comunitario. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este hurto causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. La edad, el hurto o un antecedente por sí solos no bastan."
+        },
+        "zh": {
+          "plainSummary": "明知而获取或使用他人财产，或试图这样做，意图哪怕暂时剥夺他人对财产的权利或利益，或将财产用于未经授权的用途。 价值10,000美元至不足50,000美元。受害者年满65岁，被告知情或有理由相信其达到该年龄。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 盗窃金额超过1,000美元时，除其他处罚外还须赔偿并承担最多500小时社区服务。 对2026年7月1日起的行为，若本次盗窃导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。单有年龄、盗窃或前科均不足以适用。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-0145-2-c-theft",
+    "section": "812.0145",
+    "scope": "(2)(c)",
+    "officialTitle": "Theft from persons 65 years of age or older; reclassification of offenses",
+    "dependencies": [
+      "812.014",
+      "812.012",
+      "741.2801",
+      "741.28",
+      "812.0145",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "812.014": [
+        "(1)"
+      ],
+      "812.012": [
+        "(4)",
+        "(10)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "812.0145": [
+        "(2)(c)",
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-812-0145-2-c-theft",
+      "name": "Theft from a person age 65 or older, $300 to under $10,000",
+      "names": {
+        "es": "Hurto a persona de 65 años o más, $300 a menos de $10,000",
+        "zh": "盗窃65岁或以上者财产，300美元至不足10,000美元"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "812.0145(2)(c)",
+      "slug": "fl-fs-812-0145-2-c-theft",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 812.0145(2)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.0145.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.0145",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.0145.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft from persons 65 years of age or older; reclassification of offenses",
+          "FS 812.0145(2)(c)",
+          "F.S. 812.0145(2)(c)"
+        ],
+        "es": [
+          "Theft from persons 65 years of age or older; reclassification of offenses",
+          "FS 812.0145(2)(c)",
+          "F.S. 812.0145(2)(c)"
+        ],
+        "zh": [
+          "Theft from persons 65 years of age or older; reclassification of offenses",
+          "FS 812.0145(2)(c)",
+          "F.S. 812.0145(2)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly obtaining or using another person’s property, or trying to do so, intending even temporarily to deprive the person of rights or benefits in it or to appropriate it for an unauthorized use. The property is valued at $300 to under $10,000. The victim was at least 65, and the accused knew or had reason to believe that.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. When the theft exceeds $1,000, restitution and up to 500 hours of community service are required in addition to other penalties. For conduct from July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this theft causes injury or death to a qualifying family or household member. Age, theft or a prior alone does not establish these conditions."
+        },
+        "es": {
+          "plainSummary": "Obtener o utilizar a sabiendas bienes ajenos, o intentarlo, con intención de privar a la persona de derechos o beneficios sobre ellos, aunque sea temporalmente, o de apropiárselos para un uso no autorizado. El valor es $300 a menos de $10,000. La víctima tenía al menos 65 años y el acusado lo sabía o tenía razones para creerlo.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si el hurto supera $1,000, se exige además restitución y hasta 500 horas de servicio comunitario. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este hurto causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. La edad, el hurto o un antecedente por sí solos no bastan."
+        },
+        "zh": {
+          "plainSummary": "明知而获取或使用他人财产，或试图这样做，意图哪怕暂时剥夺他人对财产的权利或利益，或将财产用于未经授权的用途。 价值300美元至不足10,000美元。受害者年满65岁，被告知情或有理由相信其达到该年龄。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 盗窃金额超过1,000美元时，除其他处罚外还须赔偿并承担最多500小时社区服务。 对2026年7月1日起的行为，若本次盗窃导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。单有年龄、盗窃或前科均不足以适用。"
+        }
+      }
+    }
+  }
+]
