@@ -12,6 +12,8 @@ test("Texas selector distinguishes all four DWI scopes with their reviewed penal
   for (const row of reviewed.records) {
     const charge = charges.find((value: { id: string }) => value.id === row.id);
     expect(charge?.name).toBe(row.name);
+    expect(charge.instructionRef).toContain("CPJC 49.16");
+    expect(charge.instructionUrl).toContain("CPJC49-16.htm");
     expect(charge.maxPenalty).toContain(row.summary);
     expect(charge.maxPenalty).toContain("§709.001");
   }

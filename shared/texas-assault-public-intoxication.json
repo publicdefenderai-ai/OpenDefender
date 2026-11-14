@@ -1,0 +1,332 @@
+[
+  {
+    "id": "tx-pc-22-01-bodily-injury",
+    "name": "Assault (bodily injury)",
+    "officialTitle": "ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.01(a)(1)",
+    "citation": "Tex. Penal Code § 22.01(a)(1)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another person, including a spouse. Bodily injury includes physical pain, illness or impairment of physical condition.",
+    "penalty": "Ordinarily a Class A misdemeanor: up to one year in jail, a fine up to $4,000, or both. If §12.43(a) applies and confinement is imposed, the minimum is 90 days. Other victim, relationship, conduct or prior-conviction circumstances can change the grade.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13990001"
+  },
+  {
+    "id": "tx-assault-bodily-injury-family",
+    "name": "Assault (bodily injury involving a dating partner, family or household member)",
+    "officialTitle": "ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.01(a)(1)",
+    "citation": "Tex. Penal Code § 22.01(a)(1)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another person, including a spouse. Bodily injury includes physical pain, illness or impairment of physical condition. The relationship must fall within the statutory dating, family or household definitions. A casual acquaintance alone is insufficient.",
+    "penalty": "Ordinarily a Class A misdemeanor: up to one year in jail, a fine up to $4,000, or both. If §12.43(a) applies and confinement is imposed, the minimum is 90 days. Other victim, relationship, conduct or prior-conviction circumstances can change the grade. The relationship alone does not make bodily-injury assault a felony.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": "(b)-(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": "13990031"
+  },
+  {
+    "id": "tx-pc-22-01-family-prior",
+    "name": "Assault (qualifying relationship and prior conviction)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b)(2)(A)",
+    "citation": "Tex. Penal Code § 22.01(b)(2)(A)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another person, including a spouse. Bodily injury includes physical pain, illness or impairment of physical condition. The relationship must fall within the statutory dating, family or household definitions. A casual acquaintance alone is insufficient. A qualifying prior must involve a relationship and offense listed in §22.01(b)(2)(A). Under §22.01(f), specified deferred adjudications and substantially similar out-of-state convictions can count.",
+    "penalty": "Third-degree felony: two to ten years in prison and a possible fine up to $10,000. If the specified breathing or circulation conduct is also proved, §22.01(b-3) provides second-degree punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": "(b)-(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-family-breath",
+    "name": "Assault (impeding breathing or circulation in a qualifying relationship)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b)(2)(B)",
+    "citation": "Tex. Penal Code § 22.01(b)(2)(B)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another person, including a spouse. Bodily injury includes physical pain, illness or impairment of physical condition. The relationship must fall within the statutory dating, family or household definitions. A casual acquaintance alone is insufficient. The alleged conduct must intentionally, knowingly or recklessly impede normal breathing or blood circulation by pressure on the throat or neck or by blocking the nose or mouth.",
+    "penalty": "Third-degree felony: two to ten years in prison and a possible fine up to $10,000. A qualifying prior and the specified conduct together can make this a second-degree felony under §22.01(b-3).",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": "(b)-(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13990076"
+  },
+  {
+    "id": "tx-pc-22-01-family-breath-prior",
+    "name": "Assault (impeding breathing or circulation with a qualifying prior)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b-3)",
+    "citation": "Tex. Penal Code § 22.01(b-3)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another person, including a spouse. Bodily injury includes physical pain, illness or impairment of physical condition. The relationship must fall within the statutory dating, family or household definitions. A casual acquaintance alone is insufficient. The alleged conduct must intentionally, knowingly or recklessly impede normal breathing or blood circulation by pressure on the throat or neck or by blocking the nose or mouth. A qualifying prior must involve a relationship and offense listed in §22.01(b)(2)(A). Under §22.01(f), specified deferred adjudications and substantially similar out-of-state convictions can count.",
+    "penalty": "Second-degree felony: two to twenty years in prison and a possible fine up to $10,000. The qualifying relationship, qualifying prior and specified conduct must all be shown.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": "(b)-(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-public-intoxication",
+    "name": "Public Intoxication",
+    "officialTitle": "PUBLIC INTOXICATION.",
+    "category": "misdemeanor",
+    "code": "49.02",
+    "citation": "Tex. Penal Code § 49.02",
+    "conduct": "Appearing in a public place while intoxicated to a degree that may endanger you or another person. Licensed or permitted alcohol premises count as public places. Section 49.02(b) provides a defense for a substance administered for therapeutic purposes as part of professional medical treatment by a licensed physician.",
+    "penalty": "For an adult age 21 or older the ordinary Class C penalty is a fine up to $500. Under §12.43(c), three prior convictions for disorderly conduct or public intoxication, in any combination, with all three prior offenses committed in the preceding 24 months, can allow up to 180 days in jail, a fine up to $2,000, or both. For people under 21, §49.02(e) directs the court to Alcoholic Beverage Code §106.071. Community service, license consequences and qualifying repeat penalties depend on age and history; the adult fine alone does not describe that branch.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.02",
+        "subdivision": "(c), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": "(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "AL",
+        "section": "106.071",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]

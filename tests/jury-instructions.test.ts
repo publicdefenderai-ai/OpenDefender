@@ -1,3 +1,4 @@
+import { texasVerifiedInstructions } from "../shared/texas-jury-instructions";
 import { describe, it, expect } from 'vitest';
 import { getInstructionRef, getInstructionUrl } from '../shared/criminal-charges';
 import type { CriminalCharge } from '../shared/criminal-charges';
@@ -198,17 +199,8 @@ describe('CO — COLJI ref only, no public .gov per-section URL', () => {
   });
 });
 
-/**
- * FL / TX / NY coverage guards — mirror of the CA CALCRIM pattern.
- *
- * Every FL entry must have EITHER an instructionRef (FSJI number) OR a
- * "no FSJI (<reason>)" note in its source field.  Same rule for TX (TPJC)
- * and NY (CJI2d).  If a new charge is added to CHARGE_CITATIONS without one
- * of those two markers, the zero-missing assertion fails immediately.
- *
- * 246 entries that had no instructionRef were annotated with the appropriate
- * "no FSJI / no TPJC / no CJI2d (no per-charge instruction identified)" note
- * so these guards start clean.
+/** Florida and New York record a reference or an explicit review note.
+ * Texas publishes only exact linked entries from its reviewed publisher registry.
  */
 
 describe('FL FSJI coverage — regression guard', () => {
@@ -252,33 +244,25 @@ describe('FL FSJI coverage — regression guard', () => {
   });
 });
 
-describe('TX TPJC coverage — regression guard', () => {
-  const txEntries = Object.entries(CHARGE_CITATIONS).filter(([key]) =>
-    key.startsWith('tx-'),
-  );
-
-  const txMissing = txEntries
-    .filter(([, record]) => {
-      const hasRef = Boolean(record.instructionRef);
-      const hasExemption = Boolean(record.source?.includes('no TPJC'));
-      return !hasRef && !hasExemption;
-    })
-    .map(([key]) => key);
-
-  it('has zero TX entries missing both instructionRef and a "no TPJC" source note', () => {
-    expect(txMissing).toEqual([]);
+describe('Texas publisher-verified instructions', () => {
+  it('exposes only specifically verified conduct mappings across all Texas citation records', () => {
+    for (const [id, citation] of Object.entries(CHARGE_CITATIONS).filter(([id]) => id.startsWith('tx-'))) {
+      const verified = texasVerifiedInstructions[id];
+      expect(citation.instructionRef, id).toBe(verified?.instructionRef);
+      expect(citation.instructionUrl, id).toBe(verified?.instructionUrl);
+      expect(getInstructionRef(makeCharge(id, 'TX')), id).toBe(verified?.instructionRef ?? null);
+      expect(getInstructionUrl(makeCharge(id, 'TX')), id).toBe(verified?.instructionUrl ?? null);
+    }
   });
-
-  it('finds at least one TX entry with an instructionRef (sanity check)', () => {
-    const hasAny = txEntries.some(([, record]) => Boolean(record.instructionRef));
-    expect(hasAny).toBe(true);
-  });
-
-  it('finds at least one TX entry with a "no TPJC" exemption (sanity check)', () => {
-    const hasAny = txEntries.some(([, record]) =>
-      Boolean(record.source?.includes('no TPJC')),
-    );
-    expect(hasAny).toBe(true);
+  it('keeps DWI and assault items distinct and public intoxication unmapped', () => {
+    for (const [id, ref] of Object.entries(texasVerifiedInstructions)) {
+      expect(CHARGE_CITATIONS[id]).toBeDefined();
+      expect(ref?.instructionUrl).toMatch(/^https:\/\/bookviewer\.texasbarpractice\.com\//);
+      expect(ref?.instructionRef).toContain('underlying conduct only');
+    }
+    expect(getInstructionRef(makeCharge('tx-dui-first-offense','TX'))).toContain('CPJC 49.16');
+    expect(getInstructionRef(makeCharge('tx-pc-22-01-family-prior','TX'))).toContain('CPJC 22.1');
+    expect(getInstructionRef(makeCharge('tx-public-intoxication','TX'))).toBeNull();
   });
 });
 
