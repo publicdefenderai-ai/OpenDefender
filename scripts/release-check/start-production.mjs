@@ -195,6 +195,7 @@ function getReleaseCheckAuthoritySelectableChargeIds() {
     ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-persons-publication.json"), "utf8")).map(row => row.id),
     ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-robbery-publication.json"), "utf8")).map(row => row.id),
     ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-false-reports-publication.json"), "utf8")).map(row => row.id),
+    ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-theft-thresholds-publication.json"), "utf8")).map(row => row.id),
     ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-boating-publication.json"), "utf8")).map(row => row.id),
     ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-protected-persons-publication.json"), "utf8")).map(row => row.id),
     ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-license-documents-publication.json"), "utf8")).map(row => row.id),

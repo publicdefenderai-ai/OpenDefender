@@ -55,6 +55,13 @@ for (const definition of FLORIDA_REVIEWED_DEFINITIONS) {
 export const FLORIDA_REVIEWED_BATCH = projectEvidenceBackedChargeBatch(
   FLORIDA_REVIEWED_DEFINITIONS.filter(row => decisions.get(row.id)?.status === "eligible"),
 );
+// The sentencing chart cites both the parent offense and individual weight tiers.
+const amphetamineCharge = FLORIDA_REVIEWED_BATCH.charges.find(row =>
+  row.id === "fl-fs-893-135-1-f-1-trafficking-in-amphetamine");
+if (amphetamineCharge) {
+  const tierCodes = ["a.", "b.", "c."].map(tier => amphetamineCharge.code + tier);
+  amphetamineCharge.searchAliases = [...(amphetamineCharge.searchAliases ?? []), ...tierCodes];
+}
 // Judicial holdings supplement the explanation's statutory sources. They are not
 // statute snapshots or a freshness receipt, and never make a charge selectable.
 for (const authority of judicialAuthorities) {

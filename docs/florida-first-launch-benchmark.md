@@ -33,3 +33,18 @@ The four §784.07(2) rows above report the historical finding on the benchmark r
 Sections 4 and 7 of [chapter 2026-144](https://laws.flrules.org/2026/144) changed the officer definition and duty wording effective June 16, 2026, when the act became law. Earlier offenses need their earlier version. Subsection (2) mentions public transit personnel in its duty clause and omits them from its opening victim list; this batch does not rely on transit employment alone to establish eligibility. The separate repeat-domestic-violence provisions effective July 1 require independently qualifying facts. Boating under the influence remains open.
 
 For a newly downloaded benchmark page, `--verify-source` distinguishes byte-identical HTML from identical sampled rows and positions in changed HTML. A changed sampled row or position fails verification; equality of the sample does not verify the rest of the statute.
+
+### Theft and amphetamine follow-up
+
+| Sample row | Result after subdivision review |
+|---|---|
+| §812.014(2)(d)2. | Exact new dwelling or unenclosed-curtilage choice for property worth at least $750. Siblings distinguish $40 to under $750 and theft from more than 20 dwellings or their curtilages. |
+| §812.014(2)(c)5. | Exact new firearm-theft choice and separate (2)(g) repeat-firearm-theft branch. A prior conviction for a different theft does not meet (g). |
+| §812.014(2)(b)4. | Exact new authorized-emergency-vehicle equipment choice, including the $300 minimum omitted in the chart description and the statutory definition of official equipment. |
+| §812.0145(2)(b) | Exact new $10,000 to under $50,000 second-degree choice, including knowledge or reason to believe the victim was at least 65. Both neighboring amount ranges are covered. Restitution and community service under (1) depend on value strictly exceeding $1,000. |
+| §893.135(1)(f)1., chart level seven | The existing parent ID accurately describes the (1)(f)1.a. branch at 14 to under 28 grams, three years minimum and $50,000. The chart uses the parent citation for this narrower row. |
+| §893.135(1)(f)1.b., chart level eight | The same ID also accurately describes 28 to under 200 grams, seven years minimum and $100,000. All three operative weight citations now serve as search aliases for that ID. Its original family eligibility and receipt still apply. |
+
+The nine new theft choices use independently bound conduct, grades and penalties from thirteen sections in the official 2026 edition. An exact acquisition of §893.135 produced the same legal text hash as the retained trafficking review. Its existing English, Spanish and Chinese explanations preserve all three tiers. This comparison does not renew the trafficking receipt. The original 30-row sample remains frozen.
+
+The current dwelling subdivisions apply to conduct from October 1, 2024. For earlier conduct, consult the version in effect on the offense date. [Laws of Florida, chapter 2024-69, §§1, 5](https://laws.flrules.org/2024/69)
