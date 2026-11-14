@@ -133,7 +133,7 @@ for (const viewport of VIEWPORTS) {
       await page.goto("/for-advocates");
       await expect(
         page.getByRole("heading", {
-          name: "Tools for Public Defenders, Social Workers & Case Advocates",
+          name: "Tools for your practice",
         }),
       ).toBeVisible();
 
