@@ -673,3 +673,7 @@ The approved advocate-intake-content.html reference (SHA-256 ae87d9dc7eb9f2e2522
 ### Advocate Hub
 
 The approved opendefender-advocate-hub-preview.html (SHA-256 865db40eaed5b3d5911076632688be0dc8f13db82006be5257a1452d970de110) features First Contact Intake and Mitigation Builder. The subsequent heading decision was “Tools for your practice.” Five categories keep the original fragment IDs and 18 resource entries, including three links into the reputation guide. Short descriptions identify each destination. Two planned tools remain in a disclosure. The English resource area declares its language in every interface locale.
+
+### Mission page
+
+The approved mission-content.html reference (SHA-256 5a03865b77324027f2b47076b068f4a0b0ae18104bdae71cb7424d9bfbd830c5) opens with “Legal information. Open to everyone.” and an open book on desktop. The mobile layout opens directly on the introduction. All four goals, the founding statement, philosophy, public-good statement, principles and role limitation use the published localized text. The page links to privacy, sources, disclaimers and the directory.

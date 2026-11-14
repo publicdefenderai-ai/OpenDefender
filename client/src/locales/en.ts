@@ -5381,6 +5381,18 @@ export default {
     }
   },
   "missionStatement": {
+    "reader": {
+      "title": "Legal information.",
+      "accent": "Open to everyone.",
+      "intro": "Free, accessible information and practical support for people facing the U.S. criminal justice or immigration enforcement systems, and the people beside them.",
+      "technology": "Technology as a public resource",
+      "role": "Our role",
+      "privacy": "How we handle information",
+      "sources": "Sources and transparency",
+      "notice": "Notice & Disclaimers",
+      "explore": "Explore what’s here for you",
+      "directory": "Browse the resource directory"
+    },
     "hero": {
       "title": "Mission Statement",
       "subtitle1": "Public defense in America is underfunded and overstretched. Public defenders and their allies are asked to do the impossible with almost nothing. The gap between what people need and what the system provides is structural, and has gone unaddressed for too long. If you can afford a private attorney or advisors, you already know how the system works differently for you. If, like most people, you can't, you've been left to figure it out on your own. OpenDefender was built to change that.",
