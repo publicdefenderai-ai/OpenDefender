@@ -1,5 +1,8 @@
 import { expect, test } from "@playwright/test";
-import reviewed from "../../shared/texas-dwi-reviewed.json";
+import { readFileSync } from "node:fs";
+const reviewed = JSON.parse(readFileSync("shared/texas-dwi-reviewed.json", "utf8")) as {
+  records: Array<{id: string; name: string; summary: string}>;
+};
 
 test("Texas selector distinguishes all four DWI scopes with their reviewed penalties", async ({ request }) => {
   const result = await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");
