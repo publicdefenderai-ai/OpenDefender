@@ -5383,6 +5383,18 @@ export default {
     }
   },
   "missionStatement": {
+    "reader": {
+      "title": "Información legal.",
+      "accent": "Al alcance de todos.",
+      "intro": "Información gratuita y accesible y apoyo práctico para quienes afrontan el sistema de justicia penal o de control migratorio de Estados Unidos y para quienes les acompañan.",
+      "technology": "La tecnología como recurso público",
+      "role": "Nuestro papel",
+      "privacy": "Cómo manejamos la información",
+      "sources": "Fuentes y transparencia",
+      "notice": "Aviso y descargos de responsabilidad",
+      "explore": "Encuentre apoyo y orientación",
+      "directory": "Explorar el directorio de recursos"
+    },
     "hero": {
       "title": "Declaración de Misión",
       "subtitle1": "La defensa pública en Estados Unidos está subfinanciada y sobrecargada. Los defensores públicos y sus aliados son llamados a hacer lo imposible con casi nada. La brecha entre lo que las personas necesitan y lo que el sistema ofrece es estructural, y ha quedado sin resolver por demasiado tiempo. Si puede pagar a un abogado privado o asesores, ya sabe cómo el sistema funciona diferente para usted. Si, como la mayoría de las personas, no puede, se ha visto obligado a resolverlo solo. OpenDefender fue creado para cambiar eso.",

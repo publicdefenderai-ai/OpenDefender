@@ -1,0 +1,31 @@
+.mission-page { max-width: 70rem; margin: auto; padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 5vw, 3.75rem); }
+.mission-page p { line-height: 1.8; color: var(--muted-foreground); }
+.mission-page p + p { margin-top: 1rem; }
+.mission-page h1 { font-size: clamp(2.35rem, 5vw, 3.6rem); letter-spacing: -.04em; line-height: 1.08; margin: 1rem 0 1.4rem; }
+.mission-page h1 span { display: block; color: var(--primary); }
+.mission-page h2 { font-size: clamp(1.4rem, 3vw, 1.85rem); line-height: 1.25; letter-spacing: -.025em; }
+.mission-page h3 { font-size: 1.2rem; font-weight: 550; }
+.mission-page a { display: inline-flex; align-items: center; min-height: 44px; color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
+.mission-hero { display: grid; grid-template-columns: minmax(0,1fr) 240px; align-items: center; gap: 3rem; padding-bottom: 2rem; }
+.mission-hero p:last-child { font-size: 1.1rem; max-width: 60ch; }
+.mission-book { position: relative; height: 230px; --leaf: #aa8b9f; --paper: #e0c4a8; --inset: #e1bace; --lines: #947589; }
+.dark .mission-book { --leaf: #9d7c93; --paper: #cbb49b; --inset: #ddbad0; --lines: #71596c; }
+.mission-book::before, .mission-book::after { content: ""; position: absolute; top: 35px; height: 165px; width: 112px; }
+.mission-book::before { left: 7px; background: var(--leaf); transform: skewY(10deg); border-radius: 8px 30px 4px 5px; }
+.mission-book::after { left: 123px; background: var(--paper); transform: skewY(-10deg); border-radius: 30px 8px 5px 4px; }
+.mission-book span { position: absolute; z-index: 1; left: 24px; top: 64px; width: 77px; height: 111px; border-radius: 3px 20px 2px 3px; background: var(--inset); transform: skewY(10deg); }
+.mission-book span::after { content: ""; position: absolute; left: 119px; top: -9px; width: 59px; height: 4px; background: var(--lines); box-shadow: 0 17px var(--lines), 0 34px var(--lines); transform: skewY(-20deg); }
+.mission-page .mission-promise { border-block: 1px solid var(--border); padding-block: 1rem; color: var(--primary); font-weight: 550; }
+.mission-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 2.5rem; padding-block: 2rem; }
+.mission-section ol { list-style: decimal-leading-zero; padding-inline-start: 2rem; }
+.mission-section li { padding: 1rem .3rem; border-block-start: 1px solid var(--border); }
+.mission-section li:first-child { border: 0; padding-top: 0; }
+.mission-section li::marker { color: var(--muted-foreground); font-size: .85rem; }
+.mission-page .mission-statement { margin: .5rem 0; background: var(--editorial-signal-soft); color: var(--foreground); padding: clamp(1.25rem, 3vw, 2rem); font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.45; }
+.mission-links, .mission-close { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.5rem; }
+.mission-role { border-inline-start: 3px solid var(--primary); padding-inline-start: 1rem; }
+.mission-close { justify-content: space-between; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+@media (max-width: 700px) {
+  .mission-hero, .mission-section { grid-template-columns: minmax(0, 1fr); gap: .8rem; }
+  .mission-book { display: none; }
+}
