@@ -665,3 +665,7 @@ The approved bail-preparation-content.html layout leads with the documentation c
 ### Mitigation Builder
 
 The approved mitigation-builder-content.html design places the seven social-history sections before the structured summary, with a completed-field count and a direct summary link. All 22 existing fields retain their original options and output mapping. The English intake is marked for assistive technology. The opening distinguishes local summary preparation from the optional AI submission and keeps the attorney-supervision notice visible. Existing draft labels, edit and verification controls, rate limits and export handlers are retained.
+
+### First Contact Intake Checklist
+
+The approved advocate-intake-content.html reference (SHA-256 ae87d9dc7eb9f2e25220e33225ee77e86e143f2026804ca754ef7ad99f6dd175) places the seven screening sections above the draft record. All 32 fields use the existing screening and record-generation rules. Answers stay in component memory. The page retains the supervision notice, resource destinations and four ways to take a copy. Browser print uses the same draft text as the text download. The English intake is marked for screen readers in all interface languages.

@@ -1,0 +1,25 @@
+.intake-workspace { max-width: 65rem; margin: auto; padding: clamp(2rem,5vw,4rem) clamp(1rem,5vw,3rem); }
+.intake-workspace header, .intake-notice { max-width: 47rem; line-height: 1.65; }
+.intake-workspace h1 { font-size: clamp(2.5rem,5vw,3.6rem); letter-spacing: -.04em; line-height: 1.08; margin: 1.2rem 0; }
+.intake-workspace h1 span { display: block; color: var(--primary); }
+.intake-workspace header a, .intake-bar a { color: var(--primary); font-weight: 600; }
+.intake-workspace a:hover { text-decoration: underline; }
+.intake-notice { border-inline-start: 3px solid var(--primary); padding-inline-start: 1rem; margin: 1.6rem 0; }
+.intake-notice p + p { margin-top: .5rem; color: var(--muted-foreground); }
+.intake-bar, .intake-toggle { display: flex; justify-content: space-between; gap: 1rem; align-items: center; }
+.intake-bar { flex-wrap: wrap; border-block: 1px solid var(--border); padding-block: .5rem; font-size: .9rem; }
+.intake-bar a { display: inline-flex; align-items: center; min-height: 44px; }
+.intake-domain { border-bottom: 1px solid var(--border); }
+.intake-toggle { width: 100%; padding: 1rem .15rem; min-height: 52px; text-align: start; font-size: 1.2rem; }
+.intake-toggle small { font-size: .8rem; color: var(--muted-foreground); }
+.intake-toggle svg { flex-shrink: 0; color: var(--primary); }
+.intake-fields { padding: .5rem 0 1.5rem; }
+.intake-fields > * + * { margin-top: 1rem; }
+.intake-options { display: flex; max-width: 17rem; gap: .35rem; }
+.intake-options button { flex: 1; min-height: 44px; border: 1px solid var(--border); border-radius: .25rem; font-size: .9rem; }
+.intake-options button:hover, .intake-toggle:hover { background: var(--muted); }
+.intake-options button[aria-pressed="true"] { background: var(--primary); color: var(--primary-foreground); }
+.intake-output { margin-block: 2rem; padding: .75rem; background: var(--muted); scroll-margin-top: 5rem; }
+.intake-output button:disabled { opacity: .5; }
+.intake-output pre { overflow-wrap: anywhere; background: var(--background); }
+.intake-workspace :focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
