@@ -1,4 +1,4 @@
-import { fetchChargeCatalog } from "./charge-catalog";
+import { isOhioPlan, canOutputOhioPlan, OhioChargeConfirmationError } from "./ohio-guidance-output";
 import { translationUnavailableNotice, translationSupplementNotice } from "@shared/translation-unavailable-notice";
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
@@ -221,15 +221,8 @@ function formatSentenceLength(months: number): string {
  */
 export async function generateGuidancePDF(guidance: EnhancedGuidanceData, language: string = 'en') {
   guidance = normalizeGuidance(guidance) as EnhancedGuidanceData;
-  const classifications = guidance.chargeClassifications ?? [];
-  const savedJurisdiction = guidance.caseData?.jurisdiction?.trim().toUpperCase();
-  if (classifications.length && (savedJurisdiction === 'OH' || savedJurisdiction === 'OHIO' ||
-      classifications.some(charge => charge.id?.startsWith('oh-')))) {
-    const current = await fetchChargeCatalog({ jurisdiction: 'OH' });
-    const allowed = new Set(current.charges.map(charge => charge.id));
-    if (classifications.some(charge => !charge.id || !allowed.has(charge.id))) {
-      throw new Error('Select a currently available Ohio charge before exporting.');
-    }
+  if (isOhioPlan(guidance) && !await canOutputOhioPlan(guidance)) {
+    throw new OhioChargeConfirmationError();
   }
   const doc = new jsPDF();
   const pageWidth = doc.internal.pageSize.getWidth();

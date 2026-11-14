@@ -3384,7 +3384,7 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
 .family-care-hero p { margin-top: 24px; line-height: 1.75; color: var(--muted-foreground); }
 .family-care-hero img { width: 100%; height: auto; border-radius: 8px; }
 .family-care-paths { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: 14px; }
-.family-care-paths a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+.family-care-paths a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; font-size: 14px; }
 .family-care-back:hover, .family-care-paths a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .family-care-page .editorial-section-heading > span { font-size: 24px; font-weight: 500; letter-spacing: -.025em; text-transform: none; white-space: normal; }
 .family-care-page .editorial-card-interactive { border: 0; border-top: 1px solid var(--border); border-radius: 0; box-shadow: none; background: transparent; }
