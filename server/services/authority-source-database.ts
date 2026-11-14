@@ -26,6 +26,7 @@ import { OHIO_RESIDUAL_SOURCES, isOhioResidualSourceFresh } from "../data/ohio-r
 import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "../data/florida-persons-source";
 import { FLORIDA_ROBBERY_SOURCES, isFloridaRobberySourceFresh } from "../data/florida-robbery-source";
 import { FLORIDA_FALSE_REPORTS_SOURCES, isFloridaFalseReportsSourceFresh } from "../data/florida-false-reports-source";
+import { FLORIDA_BOATING_SOURCES, isFloridaBoatingSourceFresh } from "../data/florida-boating-source";
 import { FLORIDA_PROTECTED_PERSONS_SOURCES, isFloridaProtectedPersonsSourceFresh } from "../data/florida-protected-persons-source";
 import { FLORIDA_LICENSE_DOCUMENTS_SOURCES, isFloridaLicenseDocumentsSourceFresh } from "../data/florida-license-documents-source";
 import { FLORIDA_PROPERTY_DAMAGE_SOURCES, isFloridaPropertyDamageSourceFresh } from "../data/florida-property-damage-source";
@@ -380,6 +381,9 @@ export async function getCurrentAuthoritySelectableChargeIds(
   }
   if (jurisdiction === "FL" && !isFloridaFalseReportsSourceFresh()) {
     for (const source of FLORIDA_FALSE_REPORTS_SOURCES) selectable.delete(source.chargeId);
+  }
+  if (jurisdiction === "FL" && !isFloridaBoatingSourceFresh()) {
+    for (const source of FLORIDA_BOATING_SOURCES) selectable.delete(source.chargeId);
   }
   if (jurisdiction === "FL" && !isFloridaProtectedPersonsSourceFresh()) {
     for (const source of FLORIDA_PROTECTED_PERSONS_SOURCES) selectable.delete(source.chargeId);
