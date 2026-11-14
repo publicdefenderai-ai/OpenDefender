@@ -1,5 +1,5 @@
 import React from "react";
-import { isOhioPlan, ohioReselectionNotice } from "../../lib/ohio-guidance-output";
+import { requiresOhioChargeConfirmation, ohioReselectionNotice } from "../../lib/ohio-guidance-output";
 import {
   GUIDANCE_SECTION_ORDER,
   normalizeGuidance,
@@ -229,7 +229,7 @@ function sectionContent(section: GuidanceSectionId, guidance: GuidanceViewModel,
  */
 export function GuidancePrintPlan({ guidance: raw, language = "en", ohioVerified = false }: { guidance: GuidanceViewModel; language?: string; ohioVerified?: boolean }) {
   const guidance = normalizeGuidance(raw);
-  if (isOhioPlan(guidance) && !ohioVerified) {
+  if (requiresOhioChargeConfirmation(guidance) && !ohioVerified) {
     const printHint = language.startsWith("es") ? "Use el botón Imprimir de la hoja de ruta para comprobar el cargo."
       : language.startsWith("zh") ? "请使用路线图中的打印按钮核实罪名。"
       : "Use the Print button on the roadmap to check the charge.";

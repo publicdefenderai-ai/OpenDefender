@@ -156,16 +156,16 @@ for (const [language, title] of Object.entries({ en: 'Guidance: Example charge i
   });
 }
 
-for (const scenario of ['legacy', 'code-only', 'mixed', 'withheld', 'offline', 'current'] as const) {
+for (const scenario of ['legacy', 'code-only', 'saved-text-only', 'mixed', 'withheld', 'offline', 'current'] as const) {
   test(`Ohio saved roadmap print boundary: ${scenario}`, async ({ page }) => {
     await setup(page);
     const reviewed = 'oh-orc-2903-01-aggravated-murder';
     const legacy = 'oh-robbery-in-the-first-degree';
-    const ids = scenario === 'mixed' ? [reviewed, legacy]
+    const ids = scenario === 'saved-text-only' ? [] : scenario === 'mixed' ? [reviewed, legacy]
       : [scenario === 'legacy' ? legacy : scenario === 'code-only' ? undefined : reviewed];
     const overview = 'Historical penalty and citation from a saved session.';
     await page.route('**/api/legal-guidance/design-results', route => route.fulfill({ json: {
-      success: true, guidance: { ...guidance, overview, caseData: { ...guidance.caseData, jurisdiction: 'Ohio' },
+      success: true, guidance: { ...guidance, overview, caseData: { ...guidance.caseData, jurisdiction: 'Ohio', charges: scenario === 'saved-text-only' ? 'Former Ohio charge' : '' },
         chargeClassifications: ids.map(id => ({ id, name: 'Saved charge', code: '2911.01', classification: 'felony' })) },
     } }));
     let available = scenario === 'current' || scenario === 'mixed';
@@ -219,3 +219,27 @@ for (const scenario of ['legacy', 'code-only', 'mixed', 'withheld', 'offline', '
     await expect(plan).not.toContainText(overview);
   });
 }
+
+test('Ohio roadmap without selected charges supports browser print, roadmap print and PDF export', async ({ page }) => {
+  await setup(page);
+  await page.route('**/api/legal-guidance/design-results', route => route.fulfill({ json: {
+    success: true, guidance: { ...guidance, chargeClassifications: [], caseData: { ...guidance.caseData, jurisdiction: 'OH' } },
+  } }));
+  await page.route('**/api/criminal-charges?**', route => route.abort());
+  await page.goto('/case-guidance?session=design-results');
+  const plan = page.getByTestId('print-guidance-plan');
+  await page.emulateMedia({ media: 'print' });
+  await expect(plan).toBeVisible();
+  await expect(plan).toContainText(guidance.overview);
+  await page.emulateMedia({ media: 'screen' });
+  await page.evaluate(() => {
+    window.print = () => { document.body.dataset.printedPlan =
+      document.querySelector('[data-testid="print-guidance-plan"]')?.textContent ?? ''; };
+  });
+  await page.getByTestId('button-print-guidance').click();
+  await expect(page.locator('body')).toHaveAttribute('data-printed-plan', /a complete roadmap/);
+  await page.getByTestId('button-export-pdf').click();
+  const download = page.waitForEvent('download');
+  await page.getByTestId('button-confirm-export').click();
+  expect(await (await download).failure()).toBeNull();
+});

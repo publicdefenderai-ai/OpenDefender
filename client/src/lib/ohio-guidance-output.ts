@@ -10,6 +10,10 @@ export function isOhioPlan(plan: SavedPlan) {
     plan.chargeClassifications.some(charge => charge.id?.startsWith("oh-"));
 }
 
+export function requiresOhioChargeConfirmation(plan: SavedPlan) {
+  return isOhioPlan(plan) && (plan.chargeClassifications.length > 0 || plan.caseData.charges.trim() !== "");
+}
+
 export function ohioReselectionNotice(language: string) {
   if (language.startsWith("es")) return "Se necesita volver a seleccionar el cargo. Confirme el cargo en la lista actual de Ohio antes de imprimir o exportar la hoja de ruta.";
   if (language.startsWith("zh")) return "需要重新选择罪名。请先在俄亥俄州当前罪名列表中确认罪名，再打印或导出案件路线图。";
@@ -24,6 +28,7 @@ export class OhioChargeConfirmationError extends Error {
 
 export async function canOutputOhioPlan(plan: SavedPlan) {
   const charges = plan.chargeClassifications;
+  if (!requiresOhioChargeConfirmation(plan)) return true;
   if (!charges.length || charges.some(charge => !charge.id || !isReviewedOhioChargeId(charge.id))) return false;
   const catalog = await fetchChargeCatalog({ jurisdiction: "OH" }).catch(() => null);
   if (!catalog) return false;
