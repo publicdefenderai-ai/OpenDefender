@@ -1,6 +1,6 @@
 {
   "jurisdiction": "TX",
-  "generatedAt": "2026-09-15T05:06:49.968Z",
+  "generatedAt": "2026-11-14T05:41:42.000Z",
   "source": "Texas Legislative Council TCSS static HTML (tcss.legis.texas.gov/resources)",
   "catalogRecords": [
     {
@@ -1271,8 +1271,8 @@
     },
     {
       "chargeId": "tx-dui-first-offense",
-      "catalogLabel": "DUI First Offense",
-      "catalogCode": "49.04",
+      "catalogLabel": "Driving While Intoxicated (ordinary Class B)",
+      "catalogCode": "49.04(b)",
       "catalogCategory": "misdemeanor",
       "disposition": "exact_alias_rename",
       "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
@@ -1288,15 +1288,15 @@
           "content": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits an offense if the person is intoxicated while operating a motor vehicle in a public place. (b) Except as provided by Subsections (c), (d), and (e) and Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours. (c) If it is shown on the trial of an offense under this section that at the time of the offense the person operating the motor vehicle had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor, with a minimum term of confinement of six days. (d) If it is shown on the trial of an offense under this section that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed, the offense is a Class A misdemeanor. (e) If it is shown on the trial of an offense under this section that at the time of the offense the person was operating the motor vehicle in a school crossing zone during the time the reduced speed limit applies to the zone, the offense is a state jail felony. In this subsection, \"school crossing zone\" has the meaning assigned by Section 541.302, Transportation Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.55, eff. Sept. 1, 1995. Amended by: Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 2, eff. September 1, 2011. Acts 2025, 89th Leg., R.S., Ch. 991 (S.B. 826), Sec. 1, eff. September 1, 2025.",
           "contentHash": "78a7351ae4c1512e2cf5c159ea77e4bcda9f8049d8f010cb6f0ec2f5085b0118",
           "hashBasis": "source_content",
-          "retrievedAt": "2026-09-15T05:06:49.968Z",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
           "effectiveDateStart": "September 1, 2025",
           "effectiveDateEnd": null,
           "supportRole": "offense",
-          "subdivision": null,
+          "subdivision": "(a)",
           "metadata": {
             "chargeId": "tx-dui-first-offense",
-            "catalogLabel": "DUI First Offense",
-            "catalogCode": "49.04",
+            "catalogLabel": "Driving While Intoxicated (ordinary Class B)",
+            "catalogCode": "49.04(b)",
             "catalogClassification": "misdemeanor",
             "elements": {
               "basis": "verbatim_official_text",
@@ -1315,7 +1315,327 @@
             },
             "attorneyReview": "pending",
             "fingerprint": "c4c020f730d53f9894c288a02d2f8cc3f2efa8d2cf4ebdb1cbf69d3096975efe",
-            "manifestImportedAt": "2026-09-15T05:06:49.968Z"
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.04",
+          "lawId": "PE",
+          "section": "49.04",
+          "citation": "Tex. Penal Code § 49.04",
+          "officialTitle": "DRIVING WHILE INTOXICATED.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.04",
+          "content": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits an offense if the person is intoxicated while operating a motor vehicle in a public place. (b) Except as provided by Subsections (c), (d), and (e) and Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours. (c) If it is shown on the trial of an offense under this section that at the time of the offense the person operating the motor vehicle had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor, with a minimum term of confinement of six days. (d) If it is shown on the trial of an offense under this section that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed, the offense is a Class A misdemeanor. (e) If it is shown on the trial of an offense under this section that at the time of the offense the person was operating the motor vehicle in a school crossing zone during the time the reduced speed limit applies to the zone, the offense is a state jail felony. In this subsection, \"school crossing zone\" has the meaning assigned by Section 541.302, Transportation Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.55, eff. Sept. 1, 1995. Amended by: Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 2, eff. September 1, 2011. Acts 2025, 89th Leg., R.S., Ch. 991 (S.B. 826), Sec. 1, eff. September 1, 2025.",
+          "contentHash": "78a7351ae4c1512e2cf5c159ea77e4bcda9f8049d8f010cb6f0ec2f5085b0118",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(b)",
+          "metadata": {
+            "chargeId": "tx-dui-first-offense",
+            "catalogLabel": "Driving While Intoxicated (ordinary Class B)",
+            "catalogCode": "49.04(b)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "c4c020f730d53f9894c288a02d2f8cc3f2efa8d2cf4ebdb1cbf69d3096975efe",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.01",
+          "lawId": "PE",
+          "section": "49.01",
+          "citation": "Tex. Penal Code § 49.01",
+          "officialTitle": "DEFINITIONS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.01",
+          "content": "Sec. 49.01. DEFINITIONS. In this chapter: (1) \"Alcohol concentration\" means the number of grams of alcohol per: (A) 210 liters of breath; (B) 100 milliliters of blood; or (C) 67 milliliters of urine. (2) \"Intoxicated\" means: (A) not having the normal use of mental or physical faculties by reason of the introduction of alcohol, a controlled substance, a drug, a dangerous drug, a combination of two or more of those substances, or any other substance into the body; or (B) having an alcohol concentration of 0.08 or more. (3) \"Motor vehicle\" has the meaning assigned by Section 32.34(a). (4) \"Watercraft\" means a vessel, one or more water skis, an aquaplane, or another device used for transporting or carrying a person on water, other than a device propelled only by the current of water. (5) \"Amusement ride\" has the meaning assigned by Section 2151.002, Occupations Code. (6) \"Mobile amusement ride\" has the meaning assigned by Section 2151.002, Occupations Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1999, 76th Leg., ch. 234, Sec. 1, eff. Sept. 1, 1999; Acts 1999, 76th Leg., ch. 1364, Sec. 8, eff. Jan. 1, 2000; Acts 2001, 77th Leg., ch. 1420, Sec. 14.707, eff. Sept. 1, 2001.",
+          "contentHash": "e2d0df4ed4cd7ad1105903c09dd28cc141173327656b2dd460ca2055d43788f0",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2001",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dui-first-offense",
+            "catalogLabel": "Driving While Intoxicated (ordinary Class B)",
+            "catalogCode": "49.04(b)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2001"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "78d9cd0b498b571707eed9a4ebc0a4f4ac9a4fd8b5997a72cf0199b845986b5f",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.22",
+          "lawId": "PE",
+          "section": "12.22",
+          "citation": "Tex. Penal Code § 12.22",
+          "officialTitle": "CLASS B MISDEMEANOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.22",
+          "content": "Sec. 12.22. CLASS B MISDEMEANOR. An individual adjudged guilty of a Class B misdemeanor shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for a term not to exceed 180 days; or (3) both such fine and confinement. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1991, 72nd Leg., ch. 108, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "450184b5e5fc88750f6cf9623888a22c92797b995ce67e4fa45f575cbe31d21b",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dui-first-offense",
+            "catalogLabel": "Driving While Intoxicated (ordinary Class B)",
+            "catalogCode": "49.04(b)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "05183e453580afd0bf7d0f018f492ab689186c702be194c8008e5e6fed66224e",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:TN:709.001",
+          "lawId": "TN",
+          "section": "709.001",
+          "citation": "Tex. Transp. Code § 709.001",
+          "officialTitle": "TRAFFIC FINE FOR CONVICTION OF CERTAIN INTOXICATED DRIVER OFFENSES.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/TN/htm/TN.709.htm#709.001",
+          "content": "Sec. 709.001. TRAFFIC FINE FOR CONVICTION OF CERTAIN INTOXICATED DRIVER OFFENSES. (a) In this section, \"offense relating to the operating of a motor vehicle while intoxicated\" has the meaning assigned by Section 49.09, Penal Code. (b) Except as provided by Subsection (c), in addition to the fine prescribed for the specific offense, a person who has been finally convicted of an offense relating to the operating of a motor vehicle while intoxicated shall pay a fine of: (1) $3,000 for the first conviction within a 36-month period; (2) $4,500 for a second or subsequent conviction within a 36-month period; and (3) $6,000 for a first or subsequent conviction if it is shown on the trial of the offense that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed. (c) If the court having jurisdiction over an offense that is the basis for a fine imposed under this section makes a finding that the person is indigent, the court shall waive all fines and costs imposed on the person under this section. (d) A person must provide information to the court in which the person is convicted of the offense that is the basis for the fine to establish that the person is indigent. The following documentation may be used as proof: (1) a copy of the person's most recent federal income tax return that shows that the person's income or the person's household income does not exceed 125 percent of the applicable income level established by the federal poverty guidelines; (2) a copy of the person's most recent statement of wages that shows that the person's income or the person's household income does not exceed 125 percent of the applicable income level established by the federal poverty guidelines; or (3) documentation from a federal agency, state agency, or school district that indicates that the person or, if the person is a dependent as defined by Section 152, Internal Revenue Code of 1986, the taxpayer claiming the person as a dependent, receives assistance from: (A) the food stamp program or the financial assistance program established under Chapter 31, Human Resources Code; (B) the federal special supplemental nutrition program for women, infants, and children authorized by 42 U.S.C. Section 1786; (C) the medical assistance program under Chapter 32, Human Resources Code; (D) the child health plan program under Chapter 62, Health and Safety Code; or (E) the national free or reduced-price lunch program established under 42 U.S.C. Section 1751 et seq. Added by Acts 2019, 86th Leg., R.S., Ch. 1094 (H.B. 2048), Sec. 14, eff. September 1, 2019.",
+          "contentHash": "d4ce246293037a71e409fde8fdecadf2368d97559919be447f8457911a25f28d",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 2019",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dui-first-offense",
+            "catalogLabel": "Driving While Intoxicated (ordinary Class B)",
+            "catalogCode": "49.04(b)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2019"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "ec334a80ab345f6833e0a2938a390bdeb79d02464756d048f30eede7d1d41f72",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.04",
+          "lawId": "PE",
+          "section": "49.04",
+          "citation": "Tex. Penal Code § 49.04",
+          "officialTitle": "DRIVING WHILE INTOXICATED.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.04",
+          "content": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits an offense if the person is intoxicated while operating a motor vehicle in a public place. (b) Except as provided by Subsections (c), (d), and (e) and Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours. (c) If it is shown on the trial of an offense under this section that at the time of the offense the person operating the motor vehicle had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor, with a minimum term of confinement of six days. (d) If it is shown on the trial of an offense under this section that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed, the offense is a Class A misdemeanor. (e) If it is shown on the trial of an offense under this section that at the time of the offense the person was operating the motor vehicle in a school crossing zone during the time the reduced speed limit applies to the zone, the offense is a state jail felony. In this subsection, \"school crossing zone\" has the meaning assigned by Section 541.302, Transportation Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.55, eff. Sept. 1, 1995. Amended by: Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 2, eff. September 1, 2011. Acts 2025, 89th Leg., R.S., Ch. 991 (S.B. 826), Sec. 1, eff. September 1, 2025.",
+          "contentHash": "78a7351ae4c1512e2cf5c159ea77e4bcda9f8049d8f010cb6f0ec2f5085b0118",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": "(e)",
+          "metadata": {
+            "chargeId": "tx-dui-first-offense",
+            "catalogLabel": "Driving While Intoxicated (ordinary Class B)",
+            "catalogCode": "49.04(b)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "c4c020f730d53f9894c288a02d2f8cc3f2efa8d2cf4ebdb1cbf69d3096975efe",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:TN:541.302",
+          "lawId": "TN",
+          "section": "541.302",
+          "citation": "Tex. Transp. Code § 541.302",
+          "officialTitle": "TRAFFIC AREAS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/TN/htm/TN.541.htm#541.302",
+          "content": "Sec. 541.302. TRAFFIC AREAS. In this subtitle: (1) \"Alley\" means a street that: (A) is not used primarily for through traffic; and (B) provides access to rear entrances of buildings or lots along a street. (2) \"Crosswalk\" means: (A) the portion of a roadway, including an intersection, designated as a pedestrian crossing by surface markings, including lines; or (B) the portion of a roadway at an intersection that is within the connections of the lateral lines of the sidewalks on opposite sides of the highway measured from the curbs or, in the absence of curbs, from the edges of the traversable roadway. (3) \"Freeway\" means a divided, controlled-access highway for through traffic. (4) \"Freeway main lane\" means a freeway lane having an uninterrupted flow of through traffic. (5) \"Highway or street\" means the width between the boundary lines of a publicly maintained way any part of which is open to the public for vehicular travel. (6) \"Improved shoulder\" means a paved shoulder. (7) \"Laned roadway\" means a roadway that is divided into at least two clearly marked lanes for vehicular travel. (8) \"Limited-access or controlled-access highway\" means a highway or roadway to which: (A) persons, including owners or occupants of abutting real property, have no right of access; and (B) access by persons to enter or exit the highway or roadway is restricted under law except at a place and in the manner determined by the authority that has jurisdiction over the highway or roadway. (9) \"Private road or driveway\" means a privately owned way or place used for vehicular travel and used only by the owner and persons who have the owner's express or implied permission. (10) \"Ramp\" means an interconnecting roadway of a traffic interchange, or a connecting roadway between highways at different levels or between parallel highways, that allows a vehicle to enter or exit a roadway. (11) \"Roadway\" means the portion of a highway, other than the berm or shoulder, that is improved, designed, or ordinarily used for vehicular travel. If a highway includes at least two separate roadways, the term applies to each roadway separately. (12) \"Safety zone\" means the area in a roadway officially designated for exclusive pedestrian use and that is protected or so marked or indicated by adequate signs as to be plainly visible at all times while so designated. (13) \"School crossing zone\" means a reduced-speed zone designated on a street by a local authority to facilitate safe crossing of the street by children going to or leaving a public or private elementary or secondary school during the time the reduced speed limit applies. (14) \"School crosswalk\" means a crosswalk designated on a street by a local authority to facilitate safe crossing of the street by children going to or leaving a public or private elementary or secondary school. (15) \"Shoulder\" means the portion of a highway that is: (A) adjacent to the roadway; (B) designed or ordinarily used for parking; (C) distinguished from the roadway by different design, construction, or marking; and (D) not intended for normal vehicular travel. (16) \"Sidewalk\" means the portion of a street that is: (A) between a curb or lateral line of a roadway and the adjacent property line; and (B) intended for pedestrian use. Acts 1995, 74th Leg., ch. 165, Sec. 1, eff. Sept. 1, 1995.",
+          "contentHash": "d0fc7cbc7c97f88cddbcd4d0603e8fd60a607b6dd3d32315ab820d7b4be9bbae",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 1995",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dui-first-offense",
+            "catalogLabel": "Driving While Intoxicated (ordinary Class B)",
+            "catalogCode": "49.04(b)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1995"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "dd53c7a176c6b3a9ff786253758d42a7b8ab911d3fec2a67659f446b415a5887",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.35",
+          "lawId": "PE",
+          "section": "12.35",
+          "citation": "Tex. Penal Code § 12.35",
+          "officialTitle": "STATE JAIL FELONY PUNISHMENT.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.35",
+          "content": "Sec. 12.35. STATE JAIL FELONY PUNISHMENT. (a) Except as provided by Subsection (c), an individual adjudged guilty of a state jail felony shall be punished by confinement in a state jail for any term of not more than two years or less than 180 days. (b) In addition to confinement, an individual adjudged guilty of a state jail felony may be punished by a fine not to exceed $10,000. (c) An individual adjudged guilty of a state jail felony shall be punished for a third degree felony if it is shown on the trial of the offense that: (1) a deadly weapon as defined by Section 1.07 was used or exhibited during the commission of the offense or during immediate flight following the commission of the offense, and that the individual used or exhibited the deadly weapon or was a party to the offense and knew that a deadly weapon would be used or exhibited; or (2) the individual has previously been finally convicted of any felony: (A) under Section 21.02 or 21.03 or listed in Article 42A.054(a), Code of Criminal Procedure; or (B) for which the judgment contains an affirmative finding under Article 42A.054(c) or (d), Code of Criminal Procedure. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by: Acts 2007, 80th Leg., R.S., Ch. 593 (H.B. 8), Sec. 3.48, eff. September 1, 2007. Acts 2011, 82nd Leg., R.S., Ch. 122 (H.B. 3000), Sec. 13, eff. September 1, 2011. Acts 2015, 84th Leg., R.S., Ch. 770 (H.B. 2299), Sec. 2.81, eff. January 1, 2017. Acts 2023, 88th Leg., R.S., Ch. 768 (H.B. 4595), Sec. 17.001, eff. September 1, 2023. Acts 2025, 89th Leg., R.S., Ch. 557 (H.B. 1422), Sec. 13, eff. September 1, 2025.",
+          "contentHash": "53dacc4399276a3edbb002d233f4e4a2fd174d509e433e10989d96d91f9f7d87",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dui-first-offense",
+            "catalogLabel": "Driving While Intoxicated (ordinary Class B)",
+            "catalogCode": "49.04(b)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "9fe792f2d5eca942e908c5d1edd264b5feccfe0368747fd73c193f731890c4b8",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.09",
+          "lawId": "PE",
+          "section": "49.09",
+          "citation": "Tex. Penal Code § 49.09",
+          "officialTitle": "ENHANCED OFFENSES AND PENALTIES.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.09",
+          "content": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES. (a) Except as provided by Subsection (b), an offense under Section 49.04, 49.05, 49.06, or 49.065 is a Class A misdemeanor, with a minimum term of confinement of 30 days, if it is shown on the trial of the offense that the person has previously been convicted one time of an offense relating to the operating of a motor vehicle while intoxicated, an offense of operating an aircraft while intoxicated, an offense of operating a watercraft while intoxicated, or an offense of operating or assembling an amusement ride while intoxicated. (b) An offense under Section 49.04, 49.045, 49.05, 49.06, 49.061, or 49.065 is a felony of the third degree if it is shown on the trial of the offense that the person has previously been convicted: (1) one time of an offense under Section 49.08 or an offense under the laws of another state if the offense contains elements that are substantially similar to the elements of an offense under Section 49.08; or (2) two times of any other offense relating to the operating of a motor vehicle while intoxicated, operating an aircraft while intoxicated, operating a watercraft while intoxicated, or operating or assembling an amusement ride while intoxicated. (b-1) An offense under Section 49.07 is: (1) a felony of the second degree if it is shown on the trial of the offense that the person caused serious bodily injury to a firefighter or emergency medical services personnel while in the actual discharge of an official duty; or (2) a felony of the first degree if it is shown on the trial of the offense that the person caused serious bodily injury to a peace officer or judge while the officer or judge was in the actual discharge of an official duty. Text of subsection as amended by Acts 2025, 89th Leg., R.S., Ch. 307 (S.B. 745), Sec. 1 (b-2) An offense under Section 49.08 is a felony of the first degree if it is shown on the trial of the offense that the person caused the death of: (1) a person described by Subsection (b-1); or (2) more than one person during the same criminal transaction. Text of subsection as amended by Acts 2025, 89th Leg., R.S., Ch. 939 (H.B. 2017), Sec. 2 (b-2) An offense under Section 49.08 is a felony of the first degree if it is shown on the trial of the offense that the person: (1) caused the death of a person described by Subsection (b-1); or (2) has previously been convicted of an offense relating to the operating of a motor vehicle while intoxicated, operating an aircraft while intoxicated, operating a watercraft while intoxicated, or operating or assembling an amusement ride while intoxicated, and at the time of the commission of the instant offense was in violation of Chapter 51. (b-3) For the purposes of Subsection (b-1): (1) \"Emergency medical services personnel\" has the meaning assigned by Section 773.003, Health and Safety Code. (2) \"Firefighter\" means: (A) an individual employed by this state or by a political or legal subdivision of this state who is subject to certification by the Texas Commission on Fire Protection; or (B) a member of an organized volunteer fire-fighting unit that: (i) renders fire-fighting services without remuneration; and (ii) conducts a minimum of two drills each month, each at least two hours long. (b-4) An offense under Section 49.07 is a felony of the second degree if it is shown on the trial of the offense that the person caused serious bodily injury to another in the nature of a traumatic brain injury that results in a persistent vegetative state. (c) For the purposes of this section: (1) \"Offense relating to the operating of a motor vehicle while intoxicated\" means: (A) an offense under Section 49.04 or 49.045; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was a motor vehicle; (C) an offense under Article 6701l-1, Revised Statutes, as that law existed before September 1, 1994; (D) an offense under Article 6701l-2, Revised Statutes, as that law existed before January 1, 1984; (E) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was a motor vehicle; or (F) an offense under the laws of another state that prohibit the operation of a motor vehicle while intoxicated. (2) \"Offense of operating an aircraft while intoxicated\" means: (A) an offense under Section 49.05; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was an aircraft; (C) an offense under Section 1, Chapter 46, Acts of the 58th Legislature, Regular Session, 1963 (Article 46f-3, Vernon's Texas Civil Statutes), as that law existed before September 1, 1994; (D) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was an aircraft; or (E) an offense under the laws of another state that prohibit the operation of an aircraft while intoxicated. (3) \"Offense of operating a watercraft while intoxicated\" means: (A) an offense under Section 49.06 or 49.061; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was a watercraft; (C) an offense under Section 31.097, Parks and Wildlife Code, as that law existed before September 1, 1994; (D) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was a watercraft; or (E) an offense under the laws of another state that prohibit the operation of a watercraft while intoxicated. (4) \"Offense of operating or assembling an amusement ride while intoxicated\" means: (A) an offense under Section 49.065; (B) an offense under Section 49.07 or 49.08, if the offense involved the operation or assembly of an amusement ride; or (C) an offense under the law of another state that prohibits the operation of an amusement ride while intoxicated or the assembly of a mobile amusement ride while intoxicated. (d) For the purposes of this section, a conviction for an offense under Section 49.04, 49.045, 49.05, 49.06, 49.061, 49.065, 49.07, or 49.08 that occurs on or after September 1, 1994, is a final conviction, whether the sentence for the conviction is imposed or probated. (e) Repealed by Acts 2005, 79th Leg., Ch. 996, Sec. 3, eff. September 1, 2005. (f) Repealed by Acts 2005, 79th Leg., Ch. 996, Sec. 3, eff. September 1, 2005. (g) A conviction may be used for purposes of enhancement under this section or enhancement under Subchapter D, Chapter 12, but not under both this section and Subchapter D. For purposes of this section, a person is considered to have been convicted of an offense under Section 49.04 or 49.06 if the person was placed on deferred adjudication community supervision for the offense under Article 42A.102, Code of Criminal Procedure. (h) This subsection applies only to a person convicted of a second or subsequent offense relating to the operating of a motor vehicle while intoxicated committed within five years of the date on which the most recent preceding offense was committed. The court shall enter an order that requires the defendant to have a device installed, on each motor vehicle owned or operated by the defendant, that uses a deep-lung breath analysis mechanism to make impractical the operation of the motor vehicle if ethyl alcohol is detected in the breath of the operator, and that requires that before the first anniversary of the ending date of the period of license suspension under Section 521.344, Transportation Code, the defendant not operate any motor vehicle that is not equipped with that device. The court shall require the defendant to obtain the device at the defendant's own cost on or before that ending date, require the defendant to provide evidence to the court on or before that ending date that the device has been installed on each appropriate vehicle, and order the device to remain installed on each vehicle until the first anniversary of that ending date. If the court determines the offender is unable to pay for the device, the court may impose a reasonable payment schedule not to extend beyond the first anniversary of the date of installation. The Department of Public Safety shall approve devices for use under this subsection. Section 521.247, Transportation Code, applies to the approval of a device under this subsection and the consequences of that approval. Failure to comply with an order entered under this subsection is punishable by contempt. For the purpose of enforcing this subsection, the court that enters an order under this subsection retains jurisdiction over the defendant until the date on which the device is no longer required to remain installed. To the extent of a conflict between this subsection and Subchapter I, Chapter 42A, Code of Criminal Procedure, this subsection controls. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.56, eff. Sept. 1, 1995; Acts 1995, 74th Leg., ch. 318, Sec. 21, eff. Sept. 1, 1995; Acts 1999, 76th Leg., ch. 1364, Sec. 12, 13, eff. Jan. 1, 2000; Acts 2001, 77th Leg., ch. 648, Sec. 1, 2, eff, Sept. 1, 2001; Acts 2001, 77th Leg., ch. 969, Sec. 3, eff. Sept. 1, 2001; Acts 2003, 78th Leg., ch. 787, Sec. 2, eff. Sept. 1, 2003; Acts 2003, 78th Leg., ch. 1275, Sec. 2(117), eff. Sept. 1, 2003. Amended by: Acts 2005, 79th Leg., Ch. 996 (H.B. 51), Sec. 1, eff. September 1, 2005. Acts 2005, 79th Leg., Ch. 996 (H.B. 51), Sec. 3, eff. September 1, 2005. Acts 2007, 80th Leg., R.S., Ch. 662 (H.B. 1212), Sec. 4, eff. September 1, 2007. Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 3, eff. September 1, 2011. Acts 2015, 84th Leg., R.S., Ch. 770 (H.B. 2299), Sec. 2.84, eff. January 1, 2017. Acts 2015, 84th Leg., R.S., Ch. 1067 (H.B. 2246), Sec. 2, eff. September 1, 2015. Acts 2017, 85th Leg., R.S., Ch. 324 (S.B. 1488), Sec. 23.010, eff. September 1, 2017. Acts 2017, 85th Leg., R.S., Ch. 440 (H.B. 2908), Sec. 5, eff. September 1, 2017. Acts 2019, 86th Leg., R.S., Ch. 1298 (H.B. 3582), Sec. 7, eff. September 1, 2019. Acts 2023, 88th Leg., R.S., Ch. 813 (H.B. 1163), Sec. 2, eff. September 1, 2023. Acts 2023, 88th Leg., R.S., Ch. 813 (H.B. 1163), Sec. 3, eff. September 1, 2023. Acts 2025, 89th Leg., R.S., Ch. 307 (S.B. 745), Sec. 1, eff. September 1, 2025. Acts 2025, 89th Leg., R.S., Ch. 939 (H.B. 2017), Sec. 2, eff. September 1, 2025.",
+          "contentHash": "f26efa6b643e432ffa52d56fd520650b8b76ff7d34085060eabe8fa51bd948f4",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dui-first-offense",
+            "catalogLabel": "Driving While Intoxicated (ordinary Class B)",
+            "catalogCode": "49.04(b)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "a83ad63ee7c850dfa25d11986c06c4853e72469c2740d183686a6637d231a9cd",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
           }
         }
       ],
@@ -1323,8 +1643,8 @@
     },
     {
       "chargeId": "tx-dui-second-offense",
-      "catalogLabel": "DUI Second Offense",
-      "catalogCode": "49.04",
+      "catalogLabel": "Driving While Intoxicated (one qualifying prior)",
+      "catalogCode": "49.09(a)",
       "catalogCategory": "misdemeanor",
       "disposition": "exact_alias_rename",
       "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
@@ -1340,15 +1660,15 @@
           "content": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits an offense if the person is intoxicated while operating a motor vehicle in a public place. (b) Except as provided by Subsections (c), (d), and (e) and Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours. (c) If it is shown on the trial of an offense under this section that at the time of the offense the person operating the motor vehicle had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor, with a minimum term of confinement of six days. (d) If it is shown on the trial of an offense under this section that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed, the offense is a Class A misdemeanor. (e) If it is shown on the trial of an offense under this section that at the time of the offense the person was operating the motor vehicle in a school crossing zone during the time the reduced speed limit applies to the zone, the offense is a state jail felony. In this subsection, \"school crossing zone\" has the meaning assigned by Section 541.302, Transportation Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.55, eff. Sept. 1, 1995. Amended by: Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 2, eff. September 1, 2011. Acts 2025, 89th Leg., R.S., Ch. 991 (S.B. 826), Sec. 1, eff. September 1, 2025.",
           "contentHash": "78a7351ae4c1512e2cf5c159ea77e4bcda9f8049d8f010cb6f0ec2f5085b0118",
           "hashBasis": "source_content",
-          "retrievedAt": "2026-09-15T05:06:49.968Z",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
           "effectiveDateStart": "September 1, 2025",
           "effectiveDateEnd": null,
           "supportRole": "offense",
-          "subdivision": "(b)",
+          "subdivision": "(a)",
           "metadata": {
             "chargeId": "tx-dui-second-offense",
-            "catalogLabel": "DUI Second Offense",
-            "catalogCode": "49.04",
+            "catalogLabel": "Driving While Intoxicated (one qualifying prior)",
+            "catalogCode": "49.09(a)",
             "catalogClassification": "misdemeanor",
             "elements": {
               "basis": "verbatim_official_text",
@@ -1367,7 +1687,327 @@
             },
             "attorneyReview": "pending",
             "fingerprint": "c4c020f730d53f9894c288a02d2f8cc3f2efa8d2cf4ebdb1cbf69d3096975efe",
-            "manifestImportedAt": "2026-09-15T05:06:49.968Z"
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.09",
+          "lawId": "PE",
+          "section": "49.09",
+          "citation": "Tex. Penal Code § 49.09",
+          "officialTitle": "ENHANCED OFFENSES AND PENALTIES.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.09",
+          "content": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES. (a) Except as provided by Subsection (b), an offense under Section 49.04, 49.05, 49.06, or 49.065 is a Class A misdemeanor, with a minimum term of confinement of 30 days, if it is shown on the trial of the offense that the person has previously been convicted one time of an offense relating to the operating of a motor vehicle while intoxicated, an offense of operating an aircraft while intoxicated, an offense of operating a watercraft while intoxicated, or an offense of operating or assembling an amusement ride while intoxicated. (b) An offense under Section 49.04, 49.045, 49.05, 49.06, 49.061, or 49.065 is a felony of the third degree if it is shown on the trial of the offense that the person has previously been convicted: (1) one time of an offense under Section 49.08 or an offense under the laws of another state if the offense contains elements that are substantially similar to the elements of an offense under Section 49.08; or (2) two times of any other offense relating to the operating of a motor vehicle while intoxicated, operating an aircraft while intoxicated, operating a watercraft while intoxicated, or operating or assembling an amusement ride while intoxicated. (b-1) An offense under Section 49.07 is: (1) a felony of the second degree if it is shown on the trial of the offense that the person caused serious bodily injury to a firefighter or emergency medical services personnel while in the actual discharge of an official duty; or (2) a felony of the first degree if it is shown on the trial of the offense that the person caused serious bodily injury to a peace officer or judge while the officer or judge was in the actual discharge of an official duty. Text of subsection as amended by Acts 2025, 89th Leg., R.S., Ch. 307 (S.B. 745), Sec. 1 (b-2) An offense under Section 49.08 is a felony of the first degree if it is shown on the trial of the offense that the person caused the death of: (1) a person described by Subsection (b-1); or (2) more than one person during the same criminal transaction. Text of subsection as amended by Acts 2025, 89th Leg., R.S., Ch. 939 (H.B. 2017), Sec. 2 (b-2) An offense under Section 49.08 is a felony of the first degree if it is shown on the trial of the offense that the person: (1) caused the death of a person described by Subsection (b-1); or (2) has previously been convicted of an offense relating to the operating of a motor vehicle while intoxicated, operating an aircraft while intoxicated, operating a watercraft while intoxicated, or operating or assembling an amusement ride while intoxicated, and at the time of the commission of the instant offense was in violation of Chapter 51. (b-3) For the purposes of Subsection (b-1): (1) \"Emergency medical services personnel\" has the meaning assigned by Section 773.003, Health and Safety Code. (2) \"Firefighter\" means: (A) an individual employed by this state or by a political or legal subdivision of this state who is subject to certification by the Texas Commission on Fire Protection; or (B) a member of an organized volunteer fire-fighting unit that: (i) renders fire-fighting services without remuneration; and (ii) conducts a minimum of two drills each month, each at least two hours long. (b-4) An offense under Section 49.07 is a felony of the second degree if it is shown on the trial of the offense that the person caused serious bodily injury to another in the nature of a traumatic brain injury that results in a persistent vegetative state. (c) For the purposes of this section: (1) \"Offense relating to the operating of a motor vehicle while intoxicated\" means: (A) an offense under Section 49.04 or 49.045; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was a motor vehicle; (C) an offense under Article 6701l-1, Revised Statutes, as that law existed before September 1, 1994; (D) an offense under Article 6701l-2, Revised Statutes, as that law existed before January 1, 1984; (E) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was a motor vehicle; or (F) an offense under the laws of another state that prohibit the operation of a motor vehicle while intoxicated. (2) \"Offense of operating an aircraft while intoxicated\" means: (A) an offense under Section 49.05; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was an aircraft; (C) an offense under Section 1, Chapter 46, Acts of the 58th Legislature, Regular Session, 1963 (Article 46f-3, Vernon's Texas Civil Statutes), as that law existed before September 1, 1994; (D) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was an aircraft; or (E) an offense under the laws of another state that prohibit the operation of an aircraft while intoxicated. (3) \"Offense of operating a watercraft while intoxicated\" means: (A) an offense under Section 49.06 or 49.061; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was a watercraft; (C) an offense under Section 31.097, Parks and Wildlife Code, as that law existed before September 1, 1994; (D) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was a watercraft; or (E) an offense under the laws of another state that prohibit the operation of a watercraft while intoxicated. (4) \"Offense of operating or assembling an amusement ride while intoxicated\" means: (A) an offense under Section 49.065; (B) an offense under Section 49.07 or 49.08, if the offense involved the operation or assembly of an amusement ride; or (C) an offense under the law of another state that prohibits the operation of an amusement ride while intoxicated or the assembly of a mobile amusement ride while intoxicated. (d) For the purposes of this section, a conviction for an offense under Section 49.04, 49.045, 49.05, 49.06, 49.061, 49.065, 49.07, or 49.08 that occurs on or after September 1, 1994, is a final conviction, whether the sentence for the conviction is imposed or probated. (e) Repealed by Acts 2005, 79th Leg., Ch. 996, Sec. 3, eff. September 1, 2005. (f) Repealed by Acts 2005, 79th Leg., Ch. 996, Sec. 3, eff. September 1, 2005. (g) A conviction may be used for purposes of enhancement under this section or enhancement under Subchapter D, Chapter 12, but not under both this section and Subchapter D. For purposes of this section, a person is considered to have been convicted of an offense under Section 49.04 or 49.06 if the person was placed on deferred adjudication community supervision for the offense under Article 42A.102, Code of Criminal Procedure. (h) This subsection applies only to a person convicted of a second or subsequent offense relating to the operating of a motor vehicle while intoxicated committed within five years of the date on which the most recent preceding offense was committed. The court shall enter an order that requires the defendant to have a device installed, on each motor vehicle owned or operated by the defendant, that uses a deep-lung breath analysis mechanism to make impractical the operation of the motor vehicle if ethyl alcohol is detected in the breath of the operator, and that requires that before the first anniversary of the ending date of the period of license suspension under Section 521.344, Transportation Code, the defendant not operate any motor vehicle that is not equipped with that device. The court shall require the defendant to obtain the device at the defendant's own cost on or before that ending date, require the defendant to provide evidence to the court on or before that ending date that the device has been installed on each appropriate vehicle, and order the device to remain installed on each vehicle until the first anniversary of that ending date. If the court determines the offender is unable to pay for the device, the court may impose a reasonable payment schedule not to extend beyond the first anniversary of the date of installation. The Department of Public Safety shall approve devices for use under this subsection. Section 521.247, Transportation Code, applies to the approval of a device under this subsection and the consequences of that approval. Failure to comply with an order entered under this subsection is punishable by contempt. For the purpose of enforcing this subsection, the court that enters an order under this subsection retains jurisdiction over the defendant until the date on which the device is no longer required to remain installed. To the extent of a conflict between this subsection and Subchapter I, Chapter 42A, Code of Criminal Procedure, this subsection controls. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.56, eff. Sept. 1, 1995; Acts 1995, 74th Leg., ch. 318, Sec. 21, eff. Sept. 1, 1995; Acts 1999, 76th Leg., ch. 1364, Sec. 12, 13, eff. Jan. 1, 2000; Acts 2001, 77th Leg., ch. 648, Sec. 1, 2, eff, Sept. 1, 2001; Acts 2001, 77th Leg., ch. 969, Sec. 3, eff. Sept. 1, 2001; Acts 2003, 78th Leg., ch. 787, Sec. 2, eff. Sept. 1, 2003; Acts 2003, 78th Leg., ch. 1275, Sec. 2(117), eff. Sept. 1, 2003. Amended by: Acts 2005, 79th Leg., Ch. 996 (H.B. 51), Sec. 1, eff. September 1, 2005. Acts 2005, 79th Leg., Ch. 996 (H.B. 51), Sec. 3, eff. September 1, 2005. Acts 2007, 80th Leg., R.S., Ch. 662 (H.B. 1212), Sec. 4, eff. September 1, 2007. Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 3, eff. September 1, 2011. Acts 2015, 84th Leg., R.S., Ch. 770 (H.B. 2299), Sec. 2.84, eff. January 1, 2017. Acts 2015, 84th Leg., R.S., Ch. 1067 (H.B. 2246), Sec. 2, eff. September 1, 2015. Acts 2017, 85th Leg., R.S., Ch. 324 (S.B. 1488), Sec. 23.010, eff. September 1, 2017. Acts 2017, 85th Leg., R.S., Ch. 440 (H.B. 2908), Sec. 5, eff. September 1, 2017. Acts 2019, 86th Leg., R.S., Ch. 1298 (H.B. 3582), Sec. 7, eff. September 1, 2019. Acts 2023, 88th Leg., R.S., Ch. 813 (H.B. 1163), Sec. 2, eff. September 1, 2023. Acts 2023, 88th Leg., R.S., Ch. 813 (H.B. 1163), Sec. 3, eff. September 1, 2023. Acts 2025, 89th Leg., R.S., Ch. 307 (S.B. 745), Sec. 1, eff. September 1, 2025. Acts 2025, 89th Leg., R.S., Ch. 939 (H.B. 2017), Sec. 2, eff. September 1, 2025.",
+          "contentHash": "f26efa6b643e432ffa52d56fd520650b8b76ff7d34085060eabe8fa51bd948f4",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(a)",
+          "metadata": {
+            "chargeId": "tx-dui-second-offense",
+            "catalogLabel": "Driving While Intoxicated (one qualifying prior)",
+            "catalogCode": "49.09(a)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "a83ad63ee7c850dfa25d11986c06c4853e72469c2740d183686a6637d231a9cd",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.01",
+          "lawId": "PE",
+          "section": "49.01",
+          "citation": "Tex. Penal Code § 49.01",
+          "officialTitle": "DEFINITIONS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.01",
+          "content": "Sec. 49.01. DEFINITIONS. In this chapter: (1) \"Alcohol concentration\" means the number of grams of alcohol per: (A) 210 liters of breath; (B) 100 milliliters of blood; or (C) 67 milliliters of urine. (2) \"Intoxicated\" means: (A) not having the normal use of mental or physical faculties by reason of the introduction of alcohol, a controlled substance, a drug, a dangerous drug, a combination of two or more of those substances, or any other substance into the body; or (B) having an alcohol concentration of 0.08 or more. (3) \"Motor vehicle\" has the meaning assigned by Section 32.34(a). (4) \"Watercraft\" means a vessel, one or more water skis, an aquaplane, or another device used for transporting or carrying a person on water, other than a device propelled only by the current of water. (5) \"Amusement ride\" has the meaning assigned by Section 2151.002, Occupations Code. (6) \"Mobile amusement ride\" has the meaning assigned by Section 2151.002, Occupations Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1999, 76th Leg., ch. 234, Sec. 1, eff. Sept. 1, 1999; Acts 1999, 76th Leg., ch. 1364, Sec. 8, eff. Jan. 1, 2000; Acts 2001, 77th Leg., ch. 1420, Sec. 14.707, eff. Sept. 1, 2001.",
+          "contentHash": "e2d0df4ed4cd7ad1105903c09dd28cc141173327656b2dd460ca2055d43788f0",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2001",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dui-second-offense",
+            "catalogLabel": "Driving While Intoxicated (one qualifying prior)",
+            "catalogCode": "49.09(a)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2001"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "78d9cd0b498b571707eed9a4ebc0a4f4ac9a4fd8b5997a72cf0199b845986b5f",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.21",
+          "lawId": "PE",
+          "section": "12.21",
+          "citation": "Tex. Penal Code § 12.21",
+          "officialTitle": "CLASS A MISDEMEANOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.21",
+          "content": "Sec. 12.21. CLASS A MISDEMEANOR. An individual adjudged guilty of a Class A misdemeanor shall be punished by: (1) a fine not to exceed $4,000; (2) confinement in jail for a term not to exceed one year; or (3) both such fine and confinement. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1991, 72nd Leg., ch. 108, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "91fc4df78563d6cee6fc8f4d13af032ff88714a8a6d90fc2e71f74011fe6f9b5",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dui-second-offense",
+            "catalogLabel": "Driving While Intoxicated (one qualifying prior)",
+            "catalogCode": "49.09(a)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "04189e5d90bf9395bb72a039ba436134a2c461bfea999e13e496169fd4271be9",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:TN:709.001",
+          "lawId": "TN",
+          "section": "709.001",
+          "citation": "Tex. Transp. Code § 709.001",
+          "officialTitle": "TRAFFIC FINE FOR CONVICTION OF CERTAIN INTOXICATED DRIVER OFFENSES.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/TN/htm/TN.709.htm#709.001",
+          "content": "Sec. 709.001. TRAFFIC FINE FOR CONVICTION OF CERTAIN INTOXICATED DRIVER OFFENSES. (a) In this section, \"offense relating to the operating of a motor vehicle while intoxicated\" has the meaning assigned by Section 49.09, Penal Code. (b) Except as provided by Subsection (c), in addition to the fine prescribed for the specific offense, a person who has been finally convicted of an offense relating to the operating of a motor vehicle while intoxicated shall pay a fine of: (1) $3,000 for the first conviction within a 36-month period; (2) $4,500 for a second or subsequent conviction within a 36-month period; and (3) $6,000 for a first or subsequent conviction if it is shown on the trial of the offense that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed. (c) If the court having jurisdiction over an offense that is the basis for a fine imposed under this section makes a finding that the person is indigent, the court shall waive all fines and costs imposed on the person under this section. (d) A person must provide information to the court in which the person is convicted of the offense that is the basis for the fine to establish that the person is indigent. The following documentation may be used as proof: (1) a copy of the person's most recent federal income tax return that shows that the person's income or the person's household income does not exceed 125 percent of the applicable income level established by the federal poverty guidelines; (2) a copy of the person's most recent statement of wages that shows that the person's income or the person's household income does not exceed 125 percent of the applicable income level established by the federal poverty guidelines; or (3) documentation from a federal agency, state agency, or school district that indicates that the person or, if the person is a dependent as defined by Section 152, Internal Revenue Code of 1986, the taxpayer claiming the person as a dependent, receives assistance from: (A) the food stamp program or the financial assistance program established under Chapter 31, Human Resources Code; (B) the federal special supplemental nutrition program for women, infants, and children authorized by 42 U.S.C. Section 1786; (C) the medical assistance program under Chapter 32, Human Resources Code; (D) the child health plan program under Chapter 62, Health and Safety Code; or (E) the national free or reduced-price lunch program established under 42 U.S.C. Section 1751 et seq. Added by Acts 2019, 86th Leg., R.S., Ch. 1094 (H.B. 2048), Sec. 14, eff. September 1, 2019.",
+          "contentHash": "d4ce246293037a71e409fde8fdecadf2368d97559919be447f8457911a25f28d",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 2019",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dui-second-offense",
+            "catalogLabel": "Driving While Intoxicated (one qualifying prior)",
+            "catalogCode": "49.09(a)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2019"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "ec334a80ab345f6833e0a2938a390bdeb79d02464756d048f30eede7d1d41f72",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.04",
+          "lawId": "PE",
+          "section": "49.04",
+          "citation": "Tex. Penal Code § 49.04",
+          "officialTitle": "DRIVING WHILE INTOXICATED.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.04",
+          "content": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits an offense if the person is intoxicated while operating a motor vehicle in a public place. (b) Except as provided by Subsections (c), (d), and (e) and Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours. (c) If it is shown on the trial of an offense under this section that at the time of the offense the person operating the motor vehicle had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor, with a minimum term of confinement of six days. (d) If it is shown on the trial of an offense under this section that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed, the offense is a Class A misdemeanor. (e) If it is shown on the trial of an offense under this section that at the time of the offense the person was operating the motor vehicle in a school crossing zone during the time the reduced speed limit applies to the zone, the offense is a state jail felony. In this subsection, \"school crossing zone\" has the meaning assigned by Section 541.302, Transportation Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.55, eff. Sept. 1, 1995. Amended by: Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 2, eff. September 1, 2011. Acts 2025, 89th Leg., R.S., Ch. 991 (S.B. 826), Sec. 1, eff. September 1, 2025.",
+          "contentHash": "78a7351ae4c1512e2cf5c159ea77e4bcda9f8049d8f010cb6f0ec2f5085b0118",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": "(e)",
+          "metadata": {
+            "chargeId": "tx-dui-second-offense",
+            "catalogLabel": "Driving While Intoxicated (one qualifying prior)",
+            "catalogCode": "49.09(a)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "c4c020f730d53f9894c288a02d2f8cc3f2efa8d2cf4ebdb1cbf69d3096975efe",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:TN:541.302",
+          "lawId": "TN",
+          "section": "541.302",
+          "citation": "Tex. Transp. Code § 541.302",
+          "officialTitle": "TRAFFIC AREAS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/TN/htm/TN.541.htm#541.302",
+          "content": "Sec. 541.302. TRAFFIC AREAS. In this subtitle: (1) \"Alley\" means a street that: (A) is not used primarily for through traffic; and (B) provides access to rear entrances of buildings or lots along a street. (2) \"Crosswalk\" means: (A) the portion of a roadway, including an intersection, designated as a pedestrian crossing by surface markings, including lines; or (B) the portion of a roadway at an intersection that is within the connections of the lateral lines of the sidewalks on opposite sides of the highway measured from the curbs or, in the absence of curbs, from the edges of the traversable roadway. (3) \"Freeway\" means a divided, controlled-access highway for through traffic. (4) \"Freeway main lane\" means a freeway lane having an uninterrupted flow of through traffic. (5) \"Highway or street\" means the width between the boundary lines of a publicly maintained way any part of which is open to the public for vehicular travel. (6) \"Improved shoulder\" means a paved shoulder. (7) \"Laned roadway\" means a roadway that is divided into at least two clearly marked lanes for vehicular travel. (8) \"Limited-access or controlled-access highway\" means a highway or roadway to which: (A) persons, including owners or occupants of abutting real property, have no right of access; and (B) access by persons to enter or exit the highway or roadway is restricted under law except at a place and in the manner determined by the authority that has jurisdiction over the highway or roadway. (9) \"Private road or driveway\" means a privately owned way or place used for vehicular travel and used only by the owner and persons who have the owner's express or implied permission. (10) \"Ramp\" means an interconnecting roadway of a traffic interchange, or a connecting roadway between highways at different levels or between parallel highways, that allows a vehicle to enter or exit a roadway. (11) \"Roadway\" means the portion of a highway, other than the berm or shoulder, that is improved, designed, or ordinarily used for vehicular travel. If a highway includes at least two separate roadways, the term applies to each roadway separately. (12) \"Safety zone\" means the area in a roadway officially designated for exclusive pedestrian use and that is protected or so marked or indicated by adequate signs as to be plainly visible at all times while so designated. (13) \"School crossing zone\" means a reduced-speed zone designated on a street by a local authority to facilitate safe crossing of the street by children going to or leaving a public or private elementary or secondary school during the time the reduced speed limit applies. (14) \"School crosswalk\" means a crosswalk designated on a street by a local authority to facilitate safe crossing of the street by children going to or leaving a public or private elementary or secondary school. (15) \"Shoulder\" means the portion of a highway that is: (A) adjacent to the roadway; (B) designed or ordinarily used for parking; (C) distinguished from the roadway by different design, construction, or marking; and (D) not intended for normal vehicular travel. (16) \"Sidewalk\" means the portion of a street that is: (A) between a curb or lateral line of a roadway and the adjacent property line; and (B) intended for pedestrian use. Acts 1995, 74th Leg., ch. 165, Sec. 1, eff. Sept. 1, 1995.",
+          "contentHash": "d0fc7cbc7c97f88cddbcd4d0603e8fd60a607b6dd3d32315ab820d7b4be9bbae",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 1995",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dui-second-offense",
+            "catalogLabel": "Driving While Intoxicated (one qualifying prior)",
+            "catalogCode": "49.09(a)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1995"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "dd53c7a176c6b3a9ff786253758d42a7b8ab911d3fec2a67659f446b415a5887",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.35",
+          "lawId": "PE",
+          "section": "12.35",
+          "citation": "Tex. Penal Code § 12.35",
+          "officialTitle": "STATE JAIL FELONY PUNISHMENT.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.35",
+          "content": "Sec. 12.35. STATE JAIL FELONY PUNISHMENT. (a) Except as provided by Subsection (c), an individual adjudged guilty of a state jail felony shall be punished by confinement in a state jail for any term of not more than two years or less than 180 days. (b) In addition to confinement, an individual adjudged guilty of a state jail felony may be punished by a fine not to exceed $10,000. (c) An individual adjudged guilty of a state jail felony shall be punished for a third degree felony if it is shown on the trial of the offense that: (1) a deadly weapon as defined by Section 1.07 was used or exhibited during the commission of the offense or during immediate flight following the commission of the offense, and that the individual used or exhibited the deadly weapon or was a party to the offense and knew that a deadly weapon would be used or exhibited; or (2) the individual has previously been finally convicted of any felony: (A) under Section 21.02 or 21.03 or listed in Article 42A.054(a), Code of Criminal Procedure; or (B) for which the judgment contains an affirmative finding under Article 42A.054(c) or (d), Code of Criminal Procedure. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by: Acts 2007, 80th Leg., R.S., Ch. 593 (H.B. 8), Sec. 3.48, eff. September 1, 2007. Acts 2011, 82nd Leg., R.S., Ch. 122 (H.B. 3000), Sec. 13, eff. September 1, 2011. Acts 2015, 84th Leg., R.S., Ch. 770 (H.B. 2299), Sec. 2.81, eff. January 1, 2017. Acts 2023, 88th Leg., R.S., Ch. 768 (H.B. 4595), Sec. 17.001, eff. September 1, 2023. Acts 2025, 89th Leg., R.S., Ch. 557 (H.B. 1422), Sec. 13, eff. September 1, 2025.",
+          "contentHash": "53dacc4399276a3edbb002d233f4e4a2fd174d509e433e10989d96d91f9f7d87",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dui-second-offense",
+            "catalogLabel": "Driving While Intoxicated (one qualifying prior)",
+            "catalogCode": "49.09(a)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "9fe792f2d5eca942e908c5d1edd264b5feccfe0368747fd73c193f731890c4b8",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.34",
+          "lawId": "PE",
+          "section": "12.34",
+          "citation": "Tex. Penal Code § 12.34",
+          "officialTitle": "THIRD DEGREE FELONY PUNISHMENT.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.34",
+          "content": "Sec. 12.34. THIRD DEGREE FELONY PUNISHMENT. (a) An individual adjudged guilty of a felony of the third degree shall be punished by imprisonment in the Texas Department of Criminal Justice for any term of not more than 10 years or less than 2 years. (b) In addition to imprisonment, an individual adjudged guilty of a felony of the third degree may be punished by a fine not to exceed $10,000. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Renumbered from Penal Code Sec. 12.33 by Acts 1973, 63rd Leg., p. 1124, ch. 426, art. 2, Sec. 2, eff. Jan. 1,1974. Amended by Acts 1989, 71st Leg., ch. 785, Sec. 4.01, eff. Sept. 1, 1989; Acts 1990, 71st Leg., 6th C.S., ch. 25, Sec. 7, eff. June 18, 1990; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by: Acts 2009, 81st Leg., R.S., Ch. 87 (S.B. 1969), Sec. 25.148, eff. September 1, 2009.",
+          "contentHash": "7c842e178170bf3846088cba1bb0911a3b78ad857be64b411a9141ed031fc879",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 2009",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dui-second-offense",
+            "catalogLabel": "Driving While Intoxicated (one qualifying prior)",
+            "catalogCode": "49.09(a)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2009"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "bf08cec564036de34be806d6e5fbd3ea496050dfe91ad5cbe6c36b89ad2290b5",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
           }
         }
       ],
@@ -2576,6 +3216,750 @@
       "dispositionReason": "TCSS section exists, but its official title \"MAKING A FIREARM ACCESSIBLE TO A CHILD.\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "canonicalTitle": "MAKING A FIREARM ACCESSIBLE TO A CHILD.",
       "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "tx-dwi-bac-015",
+      "catalogLabel": "Driving While Intoxicated (alcohol concentration of 0.15 or more)",
+      "catalogCode": "49.04(d)",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
+      "canonicalTitle": "DRIVING WHILE INTOXICATED.",
+      "provisions": [
+        {
+          "sourceKey": "tx:PE:49.04",
+          "lawId": "PE",
+          "section": "49.04",
+          "citation": "Tex. Penal Code § 49.04",
+          "officialTitle": "DRIVING WHILE INTOXICATED.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.04",
+          "content": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits an offense if the person is intoxicated while operating a motor vehicle in a public place. (b) Except as provided by Subsections (c), (d), and (e) and Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours. (c) If it is shown on the trial of an offense under this section that at the time of the offense the person operating the motor vehicle had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor, with a minimum term of confinement of six days. (d) If it is shown on the trial of an offense under this section that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed, the offense is a Class A misdemeanor. (e) If it is shown on the trial of an offense under this section that at the time of the offense the person was operating the motor vehicle in a school crossing zone during the time the reduced speed limit applies to the zone, the offense is a state jail felony. In this subsection, \"school crossing zone\" has the meaning assigned by Section 541.302, Transportation Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.55, eff. Sept. 1, 1995. Amended by: Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 2, eff. September 1, 2011. Acts 2025, 89th Leg., R.S., Ch. 991 (S.B. 826), Sec. 1, eff. September 1, 2025.",
+          "contentHash": "78a7351ae4c1512e2cf5c159ea77e4bcda9f8049d8f010cb6f0ec2f5085b0118",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": "(a)",
+          "metadata": {
+            "chargeId": "tx-dwi-bac-015",
+            "catalogLabel": "Driving While Intoxicated (alcohol concentration of 0.15 or more)",
+            "catalogCode": "49.04(d)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "c4c020f730d53f9894c288a02d2f8cc3f2efa8d2cf4ebdb1cbf69d3096975efe",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.04",
+          "lawId": "PE",
+          "section": "49.04",
+          "citation": "Tex. Penal Code § 49.04",
+          "officialTitle": "DRIVING WHILE INTOXICATED.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.04",
+          "content": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits an offense if the person is intoxicated while operating a motor vehicle in a public place. (b) Except as provided by Subsections (c), (d), and (e) and Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours. (c) If it is shown on the trial of an offense under this section that at the time of the offense the person operating the motor vehicle had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor, with a minimum term of confinement of six days. (d) If it is shown on the trial of an offense under this section that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed, the offense is a Class A misdemeanor. (e) If it is shown on the trial of an offense under this section that at the time of the offense the person was operating the motor vehicle in a school crossing zone during the time the reduced speed limit applies to the zone, the offense is a state jail felony. In this subsection, \"school crossing zone\" has the meaning assigned by Section 541.302, Transportation Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.55, eff. Sept. 1, 1995. Amended by: Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 2, eff. September 1, 2011. Acts 2025, 89th Leg., R.S., Ch. 991 (S.B. 826), Sec. 1, eff. September 1, 2025.",
+          "contentHash": "78a7351ae4c1512e2cf5c159ea77e4bcda9f8049d8f010cb6f0ec2f5085b0118",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(d)",
+          "metadata": {
+            "chargeId": "tx-dwi-bac-015",
+            "catalogLabel": "Driving While Intoxicated (alcohol concentration of 0.15 or more)",
+            "catalogCode": "49.04(d)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "c4c020f730d53f9894c288a02d2f8cc3f2efa8d2cf4ebdb1cbf69d3096975efe",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.01",
+          "lawId": "PE",
+          "section": "49.01",
+          "citation": "Tex. Penal Code § 49.01",
+          "officialTitle": "DEFINITIONS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.01",
+          "content": "Sec. 49.01. DEFINITIONS. In this chapter: (1) \"Alcohol concentration\" means the number of grams of alcohol per: (A) 210 liters of breath; (B) 100 milliliters of blood; or (C) 67 milliliters of urine. (2) \"Intoxicated\" means: (A) not having the normal use of mental or physical faculties by reason of the introduction of alcohol, a controlled substance, a drug, a dangerous drug, a combination of two or more of those substances, or any other substance into the body; or (B) having an alcohol concentration of 0.08 or more. (3) \"Motor vehicle\" has the meaning assigned by Section 32.34(a). (4) \"Watercraft\" means a vessel, one or more water skis, an aquaplane, or another device used for transporting or carrying a person on water, other than a device propelled only by the current of water. (5) \"Amusement ride\" has the meaning assigned by Section 2151.002, Occupations Code. (6) \"Mobile amusement ride\" has the meaning assigned by Section 2151.002, Occupations Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1999, 76th Leg., ch. 234, Sec. 1, eff. Sept. 1, 1999; Acts 1999, 76th Leg., ch. 1364, Sec. 8, eff. Jan. 1, 2000; Acts 2001, 77th Leg., ch. 1420, Sec. 14.707, eff. Sept. 1, 2001.",
+          "contentHash": "e2d0df4ed4cd7ad1105903c09dd28cc141173327656b2dd460ca2055d43788f0",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2001",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dwi-bac-015",
+            "catalogLabel": "Driving While Intoxicated (alcohol concentration of 0.15 or more)",
+            "catalogCode": "49.04(d)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2001"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "78d9cd0b498b571707eed9a4ebc0a4f4ac9a4fd8b5997a72cf0199b845986b5f",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.21",
+          "lawId": "PE",
+          "section": "12.21",
+          "citation": "Tex. Penal Code § 12.21",
+          "officialTitle": "CLASS A MISDEMEANOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.21",
+          "content": "Sec. 12.21. CLASS A MISDEMEANOR. An individual adjudged guilty of a Class A misdemeanor shall be punished by: (1) a fine not to exceed $4,000; (2) confinement in jail for a term not to exceed one year; or (3) both such fine and confinement. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1991, 72nd Leg., ch. 108, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "91fc4df78563d6cee6fc8f4d13af032ff88714a8a6d90fc2e71f74011fe6f9b5",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dwi-bac-015",
+            "catalogLabel": "Driving While Intoxicated (alcohol concentration of 0.15 or more)",
+            "catalogCode": "49.04(d)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "04189e5d90bf9395bb72a039ba436134a2c461bfea999e13e496169fd4271be9",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:TN:709.001",
+          "lawId": "TN",
+          "section": "709.001",
+          "citation": "Tex. Transp. Code § 709.001",
+          "officialTitle": "TRAFFIC FINE FOR CONVICTION OF CERTAIN INTOXICATED DRIVER OFFENSES.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/TN/htm/TN.709.htm#709.001",
+          "content": "Sec. 709.001. TRAFFIC FINE FOR CONVICTION OF CERTAIN INTOXICATED DRIVER OFFENSES. (a) In this section, \"offense relating to the operating of a motor vehicle while intoxicated\" has the meaning assigned by Section 49.09, Penal Code. (b) Except as provided by Subsection (c), in addition to the fine prescribed for the specific offense, a person who has been finally convicted of an offense relating to the operating of a motor vehicle while intoxicated shall pay a fine of: (1) $3,000 for the first conviction within a 36-month period; (2) $4,500 for a second or subsequent conviction within a 36-month period; and (3) $6,000 for a first or subsequent conviction if it is shown on the trial of the offense that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed. (c) If the court having jurisdiction over an offense that is the basis for a fine imposed under this section makes a finding that the person is indigent, the court shall waive all fines and costs imposed on the person under this section. (d) A person must provide information to the court in which the person is convicted of the offense that is the basis for the fine to establish that the person is indigent. The following documentation may be used as proof: (1) a copy of the person's most recent federal income tax return that shows that the person's income or the person's household income does not exceed 125 percent of the applicable income level established by the federal poverty guidelines; (2) a copy of the person's most recent statement of wages that shows that the person's income or the person's household income does not exceed 125 percent of the applicable income level established by the federal poverty guidelines; or (3) documentation from a federal agency, state agency, or school district that indicates that the person or, if the person is a dependent as defined by Section 152, Internal Revenue Code of 1986, the taxpayer claiming the person as a dependent, receives assistance from: (A) the food stamp program or the financial assistance program established under Chapter 31, Human Resources Code; (B) the federal special supplemental nutrition program for women, infants, and children authorized by 42 U.S.C. Section 1786; (C) the medical assistance program under Chapter 32, Human Resources Code; (D) the child health plan program under Chapter 62, Health and Safety Code; or (E) the national free or reduced-price lunch program established under 42 U.S.C. Section 1751 et seq. Added by Acts 2019, 86th Leg., R.S., Ch. 1094 (H.B. 2048), Sec. 14, eff. September 1, 2019.",
+          "contentHash": "d4ce246293037a71e409fde8fdecadf2368d97559919be447f8457911a25f28d",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 2019",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dwi-bac-015",
+            "catalogLabel": "Driving While Intoxicated (alcohol concentration of 0.15 or more)",
+            "catalogCode": "49.04(d)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2019"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "ec334a80ab345f6833e0a2938a390bdeb79d02464756d048f30eede7d1d41f72",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.04",
+          "lawId": "PE",
+          "section": "49.04",
+          "citation": "Tex. Penal Code § 49.04",
+          "officialTitle": "DRIVING WHILE INTOXICATED.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.04",
+          "content": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits an offense if the person is intoxicated while operating a motor vehicle in a public place. (b) Except as provided by Subsections (c), (d), and (e) and Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours. (c) If it is shown on the trial of an offense under this section that at the time of the offense the person operating the motor vehicle had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor, with a minimum term of confinement of six days. (d) If it is shown on the trial of an offense under this section that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed, the offense is a Class A misdemeanor. (e) If it is shown on the trial of an offense under this section that at the time of the offense the person was operating the motor vehicle in a school crossing zone during the time the reduced speed limit applies to the zone, the offense is a state jail felony. In this subsection, \"school crossing zone\" has the meaning assigned by Section 541.302, Transportation Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.55, eff. Sept. 1, 1995. Amended by: Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 2, eff. September 1, 2011. Acts 2025, 89th Leg., R.S., Ch. 991 (S.B. 826), Sec. 1, eff. September 1, 2025.",
+          "contentHash": "78a7351ae4c1512e2cf5c159ea77e4bcda9f8049d8f010cb6f0ec2f5085b0118",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": "(e)",
+          "metadata": {
+            "chargeId": "tx-dwi-bac-015",
+            "catalogLabel": "Driving While Intoxicated (alcohol concentration of 0.15 or more)",
+            "catalogCode": "49.04(d)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "c4c020f730d53f9894c288a02d2f8cc3f2efa8d2cf4ebdb1cbf69d3096975efe",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:TN:541.302",
+          "lawId": "TN",
+          "section": "541.302",
+          "citation": "Tex. Transp. Code § 541.302",
+          "officialTitle": "TRAFFIC AREAS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/TN/htm/TN.541.htm#541.302",
+          "content": "Sec. 541.302. TRAFFIC AREAS. In this subtitle: (1) \"Alley\" means a street that: (A) is not used primarily for through traffic; and (B) provides access to rear entrances of buildings or lots along a street. (2) \"Crosswalk\" means: (A) the portion of a roadway, including an intersection, designated as a pedestrian crossing by surface markings, including lines; or (B) the portion of a roadway at an intersection that is within the connections of the lateral lines of the sidewalks on opposite sides of the highway measured from the curbs or, in the absence of curbs, from the edges of the traversable roadway. (3) \"Freeway\" means a divided, controlled-access highway for through traffic. (4) \"Freeway main lane\" means a freeway lane having an uninterrupted flow of through traffic. (5) \"Highway or street\" means the width between the boundary lines of a publicly maintained way any part of which is open to the public for vehicular travel. (6) \"Improved shoulder\" means a paved shoulder. (7) \"Laned roadway\" means a roadway that is divided into at least two clearly marked lanes for vehicular travel. (8) \"Limited-access or controlled-access highway\" means a highway or roadway to which: (A) persons, including owners or occupants of abutting real property, have no right of access; and (B) access by persons to enter or exit the highway or roadway is restricted under law except at a place and in the manner determined by the authority that has jurisdiction over the highway or roadway. (9) \"Private road or driveway\" means a privately owned way or place used for vehicular travel and used only by the owner and persons who have the owner's express or implied permission. (10) \"Ramp\" means an interconnecting roadway of a traffic interchange, or a connecting roadway between highways at different levels or between parallel highways, that allows a vehicle to enter or exit a roadway. (11) \"Roadway\" means the portion of a highway, other than the berm or shoulder, that is improved, designed, or ordinarily used for vehicular travel. If a highway includes at least two separate roadways, the term applies to each roadway separately. (12) \"Safety zone\" means the area in a roadway officially designated for exclusive pedestrian use and that is protected or so marked or indicated by adequate signs as to be plainly visible at all times while so designated. (13) \"School crossing zone\" means a reduced-speed zone designated on a street by a local authority to facilitate safe crossing of the street by children going to or leaving a public or private elementary or secondary school during the time the reduced speed limit applies. (14) \"School crosswalk\" means a crosswalk designated on a street by a local authority to facilitate safe crossing of the street by children going to or leaving a public or private elementary or secondary school. (15) \"Shoulder\" means the portion of a highway that is: (A) adjacent to the roadway; (B) designed or ordinarily used for parking; (C) distinguished from the roadway by different design, construction, or marking; and (D) not intended for normal vehicular travel. (16) \"Sidewalk\" means the portion of a street that is: (A) between a curb or lateral line of a roadway and the adjacent property line; and (B) intended for pedestrian use. Acts 1995, 74th Leg., ch. 165, Sec. 1, eff. Sept. 1, 1995.",
+          "contentHash": "d0fc7cbc7c97f88cddbcd4d0603e8fd60a607b6dd3d32315ab820d7b4be9bbae",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 1995",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dwi-bac-015",
+            "catalogLabel": "Driving While Intoxicated (alcohol concentration of 0.15 or more)",
+            "catalogCode": "49.04(d)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1995"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "dd53c7a176c6b3a9ff786253758d42a7b8ab911d3fec2a67659f446b415a5887",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.35",
+          "lawId": "PE",
+          "section": "12.35",
+          "citation": "Tex. Penal Code § 12.35",
+          "officialTitle": "STATE JAIL FELONY PUNISHMENT.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.35",
+          "content": "Sec. 12.35. STATE JAIL FELONY PUNISHMENT. (a) Except as provided by Subsection (c), an individual adjudged guilty of a state jail felony shall be punished by confinement in a state jail for any term of not more than two years or less than 180 days. (b) In addition to confinement, an individual adjudged guilty of a state jail felony may be punished by a fine not to exceed $10,000. (c) An individual adjudged guilty of a state jail felony shall be punished for a third degree felony if it is shown on the trial of the offense that: (1) a deadly weapon as defined by Section 1.07 was used or exhibited during the commission of the offense or during immediate flight following the commission of the offense, and that the individual used or exhibited the deadly weapon or was a party to the offense and knew that a deadly weapon would be used or exhibited; or (2) the individual has previously been finally convicted of any felony: (A) under Section 21.02 or 21.03 or listed in Article 42A.054(a), Code of Criminal Procedure; or (B) for which the judgment contains an affirmative finding under Article 42A.054(c) or (d), Code of Criminal Procedure. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by: Acts 2007, 80th Leg., R.S., Ch. 593 (H.B. 8), Sec. 3.48, eff. September 1, 2007. Acts 2011, 82nd Leg., R.S., Ch. 122 (H.B. 3000), Sec. 13, eff. September 1, 2011. Acts 2015, 84th Leg., R.S., Ch. 770 (H.B. 2299), Sec. 2.81, eff. January 1, 2017. Acts 2023, 88th Leg., R.S., Ch. 768 (H.B. 4595), Sec. 17.001, eff. September 1, 2023. Acts 2025, 89th Leg., R.S., Ch. 557 (H.B. 1422), Sec. 13, eff. September 1, 2025.",
+          "contentHash": "53dacc4399276a3edbb002d233f4e4a2fd174d509e433e10989d96d91f9f7d87",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dwi-bac-015",
+            "catalogLabel": "Driving While Intoxicated (alcohol concentration of 0.15 or more)",
+            "catalogCode": "49.04(d)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "9fe792f2d5eca942e908c5d1edd264b5feccfe0368747fd73c193f731890c4b8",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.09",
+          "lawId": "PE",
+          "section": "49.09",
+          "citation": "Tex. Penal Code § 49.09",
+          "officialTitle": "ENHANCED OFFENSES AND PENALTIES.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.09",
+          "content": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES. (a) Except as provided by Subsection (b), an offense under Section 49.04, 49.05, 49.06, or 49.065 is a Class A misdemeanor, with a minimum term of confinement of 30 days, if it is shown on the trial of the offense that the person has previously been convicted one time of an offense relating to the operating of a motor vehicle while intoxicated, an offense of operating an aircraft while intoxicated, an offense of operating a watercraft while intoxicated, or an offense of operating or assembling an amusement ride while intoxicated. (b) An offense under Section 49.04, 49.045, 49.05, 49.06, 49.061, or 49.065 is a felony of the third degree if it is shown on the trial of the offense that the person has previously been convicted: (1) one time of an offense under Section 49.08 or an offense under the laws of another state if the offense contains elements that are substantially similar to the elements of an offense under Section 49.08; or (2) two times of any other offense relating to the operating of a motor vehicle while intoxicated, operating an aircraft while intoxicated, operating a watercraft while intoxicated, or operating or assembling an amusement ride while intoxicated. (b-1) An offense under Section 49.07 is: (1) a felony of the second degree if it is shown on the trial of the offense that the person caused serious bodily injury to a firefighter or emergency medical services personnel while in the actual discharge of an official duty; or (2) a felony of the first degree if it is shown on the trial of the offense that the person caused serious bodily injury to a peace officer or judge while the officer or judge was in the actual discharge of an official duty. Text of subsection as amended by Acts 2025, 89th Leg., R.S., Ch. 307 (S.B. 745), Sec. 1 (b-2) An offense under Section 49.08 is a felony of the first degree if it is shown on the trial of the offense that the person caused the death of: (1) a person described by Subsection (b-1); or (2) more than one person during the same criminal transaction. Text of subsection as amended by Acts 2025, 89th Leg., R.S., Ch. 939 (H.B. 2017), Sec. 2 (b-2) An offense under Section 49.08 is a felony of the first degree if it is shown on the trial of the offense that the person: (1) caused the death of a person described by Subsection (b-1); or (2) has previously been convicted of an offense relating to the operating of a motor vehicle while intoxicated, operating an aircraft while intoxicated, operating a watercraft while intoxicated, or operating or assembling an amusement ride while intoxicated, and at the time of the commission of the instant offense was in violation of Chapter 51. (b-3) For the purposes of Subsection (b-1): (1) \"Emergency medical services personnel\" has the meaning assigned by Section 773.003, Health and Safety Code. (2) \"Firefighter\" means: (A) an individual employed by this state or by a political or legal subdivision of this state who is subject to certification by the Texas Commission on Fire Protection; or (B) a member of an organized volunteer fire-fighting unit that: (i) renders fire-fighting services without remuneration; and (ii) conducts a minimum of two drills each month, each at least two hours long. (b-4) An offense under Section 49.07 is a felony of the second degree if it is shown on the trial of the offense that the person caused serious bodily injury to another in the nature of a traumatic brain injury that results in a persistent vegetative state. (c) For the purposes of this section: (1) \"Offense relating to the operating of a motor vehicle while intoxicated\" means: (A) an offense under Section 49.04 or 49.045; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was a motor vehicle; (C) an offense under Article 6701l-1, Revised Statutes, as that law existed before September 1, 1994; (D) an offense under Article 6701l-2, Revised Statutes, as that law existed before January 1, 1984; (E) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was a motor vehicle; or (F) an offense under the laws of another state that prohibit the operation of a motor vehicle while intoxicated. (2) \"Offense of operating an aircraft while intoxicated\" means: (A) an offense under Section 49.05; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was an aircraft; (C) an offense under Section 1, Chapter 46, Acts of the 58th Legislature, Regular Session, 1963 (Article 46f-3, Vernon's Texas Civil Statutes), as that law existed before September 1, 1994; (D) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was an aircraft; or (E) an offense under the laws of another state that prohibit the operation of an aircraft while intoxicated. (3) \"Offense of operating a watercraft while intoxicated\" means: (A) an offense under Section 49.06 or 49.061; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was a watercraft; (C) an offense under Section 31.097, Parks and Wildlife Code, as that law existed before September 1, 1994; (D) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was a watercraft; or (E) an offense under the laws of another state that prohibit the operation of a watercraft while intoxicated. (4) \"Offense of operating or assembling an amusement ride while intoxicated\" means: (A) an offense under Section 49.065; (B) an offense under Section 49.07 or 49.08, if the offense involved the operation or assembly of an amusement ride; or (C) an offense under the law of another state that prohibits the operation of an amusement ride while intoxicated or the assembly of a mobile amusement ride while intoxicated. (d) For the purposes of this section, a conviction for an offense under Section 49.04, 49.045, 49.05, 49.06, 49.061, 49.065, 49.07, or 49.08 that occurs on or after September 1, 1994, is a final conviction, whether the sentence for the conviction is imposed or probated. (e) Repealed by Acts 2005, 79th Leg., Ch. 996, Sec. 3, eff. September 1, 2005. (f) Repealed by Acts 2005, 79th Leg., Ch. 996, Sec. 3, eff. September 1, 2005. (g) A conviction may be used for purposes of enhancement under this section or enhancement under Subchapter D, Chapter 12, but not under both this section and Subchapter D. For purposes of this section, a person is considered to have been convicted of an offense under Section 49.04 or 49.06 if the person was placed on deferred adjudication community supervision for the offense under Article 42A.102, Code of Criminal Procedure. (h) This subsection applies only to a person convicted of a second or subsequent offense relating to the operating of a motor vehicle while intoxicated committed within five years of the date on which the most recent preceding offense was committed. The court shall enter an order that requires the defendant to have a device installed, on each motor vehicle owned or operated by the defendant, that uses a deep-lung breath analysis mechanism to make impractical the operation of the motor vehicle if ethyl alcohol is detected in the breath of the operator, and that requires that before the first anniversary of the ending date of the period of license suspension under Section 521.344, Transportation Code, the defendant not operate any motor vehicle that is not equipped with that device. The court shall require the defendant to obtain the device at the defendant's own cost on or before that ending date, require the defendant to provide evidence to the court on or before that ending date that the device has been installed on each appropriate vehicle, and order the device to remain installed on each vehicle until the first anniversary of that ending date. If the court determines the offender is unable to pay for the device, the court may impose a reasonable payment schedule not to extend beyond the first anniversary of the date of installation. The Department of Public Safety shall approve devices for use under this subsection. Section 521.247, Transportation Code, applies to the approval of a device under this subsection and the consequences of that approval. Failure to comply with an order entered under this subsection is punishable by contempt. For the purpose of enforcing this subsection, the court that enters an order under this subsection retains jurisdiction over the defendant until the date on which the device is no longer required to remain installed. To the extent of a conflict between this subsection and Subchapter I, Chapter 42A, Code of Criminal Procedure, this subsection controls. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.56, eff. Sept. 1, 1995; Acts 1995, 74th Leg., ch. 318, Sec. 21, eff. Sept. 1, 1995; Acts 1999, 76th Leg., ch. 1364, Sec. 12, 13, eff. Jan. 1, 2000; Acts 2001, 77th Leg., ch. 648, Sec. 1, 2, eff, Sept. 1, 2001; Acts 2001, 77th Leg., ch. 969, Sec. 3, eff. Sept. 1, 2001; Acts 2003, 78th Leg., ch. 787, Sec. 2, eff. Sept. 1, 2003; Acts 2003, 78th Leg., ch. 1275, Sec. 2(117), eff. Sept. 1, 2003. Amended by: Acts 2005, 79th Leg., Ch. 996 (H.B. 51), Sec. 1, eff. September 1, 2005. Acts 2005, 79th Leg., Ch. 996 (H.B. 51), Sec. 3, eff. September 1, 2005. Acts 2007, 80th Leg., R.S., Ch. 662 (H.B. 1212), Sec. 4, eff. September 1, 2007. Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 3, eff. September 1, 2011. Acts 2015, 84th Leg., R.S., Ch. 770 (H.B. 2299), Sec. 2.84, eff. January 1, 2017. Acts 2015, 84th Leg., R.S., Ch. 1067 (H.B. 2246), Sec. 2, eff. September 1, 2015. Acts 2017, 85th Leg., R.S., Ch. 324 (S.B. 1488), Sec. 23.010, eff. September 1, 2017. Acts 2017, 85th Leg., R.S., Ch. 440 (H.B. 2908), Sec. 5, eff. September 1, 2017. Acts 2019, 86th Leg., R.S., Ch. 1298 (H.B. 3582), Sec. 7, eff. September 1, 2019. Acts 2023, 88th Leg., R.S., Ch. 813 (H.B. 1163), Sec. 2, eff. September 1, 2023. Acts 2023, 88th Leg., R.S., Ch. 813 (H.B. 1163), Sec. 3, eff. September 1, 2023. Acts 2025, 89th Leg., R.S., Ch. 307 (S.B. 745), Sec. 1, eff. September 1, 2025. Acts 2025, 89th Leg., R.S., Ch. 939 (H.B. 2017), Sec. 2, eff. September 1, 2025.",
+          "contentHash": "f26efa6b643e432ffa52d56fd520650b8b76ff7d34085060eabe8fa51bd948f4",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dwi-bac-015",
+            "catalogLabel": "Driving While Intoxicated (alcohol concentration of 0.15 or more)",
+            "catalogCode": "49.04(d)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "a83ad63ee7c850dfa25d11986c06c4853e72469c2740d183686a6637d231a9cd",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "tx-dwi-open-container",
+      "catalogLabel": "Driving While Intoxicated (open alcohol container)",
+      "catalogCode": "49.04(c)",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
+      "canonicalTitle": "DRIVING WHILE INTOXICATED.",
+      "provisions": [
+        {
+          "sourceKey": "tx:PE:49.04",
+          "lawId": "PE",
+          "section": "49.04",
+          "citation": "Tex. Penal Code § 49.04",
+          "officialTitle": "DRIVING WHILE INTOXICATED.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.04",
+          "content": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits an offense if the person is intoxicated while operating a motor vehicle in a public place. (b) Except as provided by Subsections (c), (d), and (e) and Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours. (c) If it is shown on the trial of an offense under this section that at the time of the offense the person operating the motor vehicle had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor, with a minimum term of confinement of six days. (d) If it is shown on the trial of an offense under this section that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed, the offense is a Class A misdemeanor. (e) If it is shown on the trial of an offense under this section that at the time of the offense the person was operating the motor vehicle in a school crossing zone during the time the reduced speed limit applies to the zone, the offense is a state jail felony. In this subsection, \"school crossing zone\" has the meaning assigned by Section 541.302, Transportation Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.55, eff. Sept. 1, 1995. Amended by: Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 2, eff. September 1, 2011. Acts 2025, 89th Leg., R.S., Ch. 991 (S.B. 826), Sec. 1, eff. September 1, 2025.",
+          "contentHash": "78a7351ae4c1512e2cf5c159ea77e4bcda9f8049d8f010cb6f0ec2f5085b0118",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": "(a)",
+          "metadata": {
+            "chargeId": "tx-dwi-open-container",
+            "catalogLabel": "Driving While Intoxicated (open alcohol container)",
+            "catalogCode": "49.04(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "c4c020f730d53f9894c288a02d2f8cc3f2efa8d2cf4ebdb1cbf69d3096975efe",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.04",
+          "lawId": "PE",
+          "section": "49.04",
+          "citation": "Tex. Penal Code § 49.04",
+          "officialTitle": "DRIVING WHILE INTOXICATED.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.04",
+          "content": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits an offense if the person is intoxicated while operating a motor vehicle in a public place. (b) Except as provided by Subsections (c), (d), and (e) and Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours. (c) If it is shown on the trial of an offense under this section that at the time of the offense the person operating the motor vehicle had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor, with a minimum term of confinement of six days. (d) If it is shown on the trial of an offense under this section that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed, the offense is a Class A misdemeanor. (e) If it is shown on the trial of an offense under this section that at the time of the offense the person was operating the motor vehicle in a school crossing zone during the time the reduced speed limit applies to the zone, the offense is a state jail felony. In this subsection, \"school crossing zone\" has the meaning assigned by Section 541.302, Transportation Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.55, eff. Sept. 1, 1995. Amended by: Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 2, eff. September 1, 2011. Acts 2025, 89th Leg., R.S., Ch. 991 (S.B. 826), Sec. 1, eff. September 1, 2025.",
+          "contentHash": "78a7351ae4c1512e2cf5c159ea77e4bcda9f8049d8f010cb6f0ec2f5085b0118",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(c)",
+          "metadata": {
+            "chargeId": "tx-dwi-open-container",
+            "catalogLabel": "Driving While Intoxicated (open alcohol container)",
+            "catalogCode": "49.04(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "c4c020f730d53f9894c288a02d2f8cc3f2efa8d2cf4ebdb1cbf69d3096975efe",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.01",
+          "lawId": "PE",
+          "section": "49.01",
+          "citation": "Tex. Penal Code § 49.01",
+          "officialTitle": "DEFINITIONS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.01",
+          "content": "Sec. 49.01. DEFINITIONS. In this chapter: (1) \"Alcohol concentration\" means the number of grams of alcohol per: (A) 210 liters of breath; (B) 100 milliliters of blood; or (C) 67 milliliters of urine. (2) \"Intoxicated\" means: (A) not having the normal use of mental or physical faculties by reason of the introduction of alcohol, a controlled substance, a drug, a dangerous drug, a combination of two or more of those substances, or any other substance into the body; or (B) having an alcohol concentration of 0.08 or more. (3) \"Motor vehicle\" has the meaning assigned by Section 32.34(a). (4) \"Watercraft\" means a vessel, one or more water skis, an aquaplane, or another device used for transporting or carrying a person on water, other than a device propelled only by the current of water. (5) \"Amusement ride\" has the meaning assigned by Section 2151.002, Occupations Code. (6) \"Mobile amusement ride\" has the meaning assigned by Section 2151.002, Occupations Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1999, 76th Leg., ch. 234, Sec. 1, eff. Sept. 1, 1999; Acts 1999, 76th Leg., ch. 1364, Sec. 8, eff. Jan. 1, 2000; Acts 2001, 77th Leg., ch. 1420, Sec. 14.707, eff. Sept. 1, 2001.",
+          "contentHash": "e2d0df4ed4cd7ad1105903c09dd28cc141173327656b2dd460ca2055d43788f0",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2001",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dwi-open-container",
+            "catalogLabel": "Driving While Intoxicated (open alcohol container)",
+            "catalogCode": "49.04(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2001"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "78d9cd0b498b571707eed9a4ebc0a4f4ac9a4fd8b5997a72cf0199b845986b5f",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.22",
+          "lawId": "PE",
+          "section": "12.22",
+          "citation": "Tex. Penal Code § 12.22",
+          "officialTitle": "CLASS B MISDEMEANOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.22",
+          "content": "Sec. 12.22. CLASS B MISDEMEANOR. An individual adjudged guilty of a Class B misdemeanor shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for a term not to exceed 180 days; or (3) both such fine and confinement. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1991, 72nd Leg., ch. 108, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "450184b5e5fc88750f6cf9623888a22c92797b995ce67e4fa45f575cbe31d21b",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dwi-open-container",
+            "catalogLabel": "Driving While Intoxicated (open alcohol container)",
+            "catalogCode": "49.04(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "05183e453580afd0bf7d0f018f492ab689186c702be194c8008e5e6fed66224e",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:TN:709.001",
+          "lawId": "TN",
+          "section": "709.001",
+          "citation": "Tex. Transp. Code § 709.001",
+          "officialTitle": "TRAFFIC FINE FOR CONVICTION OF CERTAIN INTOXICATED DRIVER OFFENSES.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/TN/htm/TN.709.htm#709.001",
+          "content": "Sec. 709.001. TRAFFIC FINE FOR CONVICTION OF CERTAIN INTOXICATED DRIVER OFFENSES. (a) In this section, \"offense relating to the operating of a motor vehicle while intoxicated\" has the meaning assigned by Section 49.09, Penal Code. (b) Except as provided by Subsection (c), in addition to the fine prescribed for the specific offense, a person who has been finally convicted of an offense relating to the operating of a motor vehicle while intoxicated shall pay a fine of: (1) $3,000 for the first conviction within a 36-month period; (2) $4,500 for a second or subsequent conviction within a 36-month period; and (3) $6,000 for a first or subsequent conviction if it is shown on the trial of the offense that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed. (c) If the court having jurisdiction over an offense that is the basis for a fine imposed under this section makes a finding that the person is indigent, the court shall waive all fines and costs imposed on the person under this section. (d) A person must provide information to the court in which the person is convicted of the offense that is the basis for the fine to establish that the person is indigent. The following documentation may be used as proof: (1) a copy of the person's most recent federal income tax return that shows that the person's income or the person's household income does not exceed 125 percent of the applicable income level established by the federal poverty guidelines; (2) a copy of the person's most recent statement of wages that shows that the person's income or the person's household income does not exceed 125 percent of the applicable income level established by the federal poverty guidelines; or (3) documentation from a federal agency, state agency, or school district that indicates that the person or, if the person is a dependent as defined by Section 152, Internal Revenue Code of 1986, the taxpayer claiming the person as a dependent, receives assistance from: (A) the food stamp program or the financial assistance program established under Chapter 31, Human Resources Code; (B) the federal special supplemental nutrition program for women, infants, and children authorized by 42 U.S.C. Section 1786; (C) the medical assistance program under Chapter 32, Human Resources Code; (D) the child health plan program under Chapter 62, Health and Safety Code; or (E) the national free or reduced-price lunch program established under 42 U.S.C. Section 1751 et seq. Added by Acts 2019, 86th Leg., R.S., Ch. 1094 (H.B. 2048), Sec. 14, eff. September 1, 2019.",
+          "contentHash": "d4ce246293037a71e409fde8fdecadf2368d97559919be447f8457911a25f28d",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 2019",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dwi-open-container",
+            "catalogLabel": "Driving While Intoxicated (open alcohol container)",
+            "catalogCode": "49.04(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2019"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "ec334a80ab345f6833e0a2938a390bdeb79d02464756d048f30eede7d1d41f72",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.04",
+          "lawId": "PE",
+          "section": "49.04",
+          "citation": "Tex. Penal Code § 49.04",
+          "officialTitle": "DRIVING WHILE INTOXICATED.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.04",
+          "content": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits an offense if the person is intoxicated while operating a motor vehicle in a public place. (b) Except as provided by Subsections (c), (d), and (e) and Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours. (c) If it is shown on the trial of an offense under this section that at the time of the offense the person operating the motor vehicle had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor, with a minimum term of confinement of six days. (d) If it is shown on the trial of an offense under this section that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed, the offense is a Class A misdemeanor. (e) If it is shown on the trial of an offense under this section that at the time of the offense the person was operating the motor vehicle in a school crossing zone during the time the reduced speed limit applies to the zone, the offense is a state jail felony. In this subsection, \"school crossing zone\" has the meaning assigned by Section 541.302, Transportation Code. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.55, eff. Sept. 1, 1995. Amended by: Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 2, eff. September 1, 2011. Acts 2025, 89th Leg., R.S., Ch. 991 (S.B. 826), Sec. 1, eff. September 1, 2025.",
+          "contentHash": "78a7351ae4c1512e2cf5c159ea77e4bcda9f8049d8f010cb6f0ec2f5085b0118",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": "(e)",
+          "metadata": {
+            "chargeId": "tx-dwi-open-container",
+            "catalogLabel": "Driving While Intoxicated (open alcohol container)",
+            "catalogCode": "49.04(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "c4c020f730d53f9894c288a02d2f8cc3f2efa8d2cf4ebdb1cbf69d3096975efe",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:TN:541.302",
+          "lawId": "TN",
+          "section": "541.302",
+          "citation": "Tex. Transp. Code § 541.302",
+          "officialTitle": "TRAFFIC AREAS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/TN/htm/TN.541.htm#541.302",
+          "content": "Sec. 541.302. TRAFFIC AREAS. In this subtitle: (1) \"Alley\" means a street that: (A) is not used primarily for through traffic; and (B) provides access to rear entrances of buildings or lots along a street. (2) \"Crosswalk\" means: (A) the portion of a roadway, including an intersection, designated as a pedestrian crossing by surface markings, including lines; or (B) the portion of a roadway at an intersection that is within the connections of the lateral lines of the sidewalks on opposite sides of the highway measured from the curbs or, in the absence of curbs, from the edges of the traversable roadway. (3) \"Freeway\" means a divided, controlled-access highway for through traffic. (4) \"Freeway main lane\" means a freeway lane having an uninterrupted flow of through traffic. (5) \"Highway or street\" means the width between the boundary lines of a publicly maintained way any part of which is open to the public for vehicular travel. (6) \"Improved shoulder\" means a paved shoulder. (7) \"Laned roadway\" means a roadway that is divided into at least two clearly marked lanes for vehicular travel. (8) \"Limited-access or controlled-access highway\" means a highway or roadway to which: (A) persons, including owners or occupants of abutting real property, have no right of access; and (B) access by persons to enter or exit the highway or roadway is restricted under law except at a place and in the manner determined by the authority that has jurisdiction over the highway or roadway. (9) \"Private road or driveway\" means a privately owned way or place used for vehicular travel and used only by the owner and persons who have the owner's express or implied permission. (10) \"Ramp\" means an interconnecting roadway of a traffic interchange, or a connecting roadway between highways at different levels or between parallel highways, that allows a vehicle to enter or exit a roadway. (11) \"Roadway\" means the portion of a highway, other than the berm or shoulder, that is improved, designed, or ordinarily used for vehicular travel. If a highway includes at least two separate roadways, the term applies to each roadway separately. (12) \"Safety zone\" means the area in a roadway officially designated for exclusive pedestrian use and that is protected or so marked or indicated by adequate signs as to be plainly visible at all times while so designated. (13) \"School crossing zone\" means a reduced-speed zone designated on a street by a local authority to facilitate safe crossing of the street by children going to or leaving a public or private elementary or secondary school during the time the reduced speed limit applies. (14) \"School crosswalk\" means a crosswalk designated on a street by a local authority to facilitate safe crossing of the street by children going to or leaving a public or private elementary or secondary school. (15) \"Shoulder\" means the portion of a highway that is: (A) adjacent to the roadway; (B) designed or ordinarily used for parking; (C) distinguished from the roadway by different design, construction, or marking; and (D) not intended for normal vehicular travel. (16) \"Sidewalk\" means the portion of a street that is: (A) between a curb or lateral line of a roadway and the adjacent property line; and (B) intended for pedestrian use. Acts 1995, 74th Leg., ch. 165, Sec. 1, eff. Sept. 1, 1995.",
+          "contentHash": "d0fc7cbc7c97f88cddbcd4d0603e8fd60a607b6dd3d32315ab820d7b4be9bbae",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 1995",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dwi-open-container",
+            "catalogLabel": "Driving While Intoxicated (open alcohol container)",
+            "catalogCode": "49.04(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1995"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "dd53c7a176c6b3a9ff786253758d42a7b8ab911d3fec2a67659f446b415a5887",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.35",
+          "lawId": "PE",
+          "section": "12.35",
+          "citation": "Tex. Penal Code § 12.35",
+          "officialTitle": "STATE JAIL FELONY PUNISHMENT.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.35",
+          "content": "Sec. 12.35. STATE JAIL FELONY PUNISHMENT. (a) Except as provided by Subsection (c), an individual adjudged guilty of a state jail felony shall be punished by confinement in a state jail for any term of not more than two years or less than 180 days. (b) In addition to confinement, an individual adjudged guilty of a state jail felony may be punished by a fine not to exceed $10,000. (c) An individual adjudged guilty of a state jail felony shall be punished for a third degree felony if it is shown on the trial of the offense that: (1) a deadly weapon as defined by Section 1.07 was used or exhibited during the commission of the offense or during immediate flight following the commission of the offense, and that the individual used or exhibited the deadly weapon or was a party to the offense and knew that a deadly weapon would be used or exhibited; or (2) the individual has previously been finally convicted of any felony: (A) under Section 21.02 or 21.03 or listed in Article 42A.054(a), Code of Criminal Procedure; or (B) for which the judgment contains an affirmative finding under Article 42A.054(c) or (d), Code of Criminal Procedure. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by: Acts 2007, 80th Leg., R.S., Ch. 593 (H.B. 8), Sec. 3.48, eff. September 1, 2007. Acts 2011, 82nd Leg., R.S., Ch. 122 (H.B. 3000), Sec. 13, eff. September 1, 2011. Acts 2015, 84th Leg., R.S., Ch. 770 (H.B. 2299), Sec. 2.81, eff. January 1, 2017. Acts 2023, 88th Leg., R.S., Ch. 768 (H.B. 4595), Sec. 17.001, eff. September 1, 2023. Acts 2025, 89th Leg., R.S., Ch. 557 (H.B. 1422), Sec. 13, eff. September 1, 2025.",
+          "contentHash": "53dacc4399276a3edbb002d233f4e4a2fd174d509e433e10989d96d91f9f7d87",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:42.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dwi-open-container",
+            "catalogLabel": "Driving While Intoxicated (open alcohol container)",
+            "catalogCode": "49.04(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "9fe792f2d5eca942e908c5d1edd264b5feccfe0368747fd73c193f731890c4b8",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:49.09",
+          "lawId": "PE",
+          "section": "49.09",
+          "citation": "Tex. Penal Code § 49.09",
+          "officialTitle": "ENHANCED OFFENSES AND PENALTIES.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.09",
+          "content": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES. (a) Except as provided by Subsection (b), an offense under Section 49.04, 49.05, 49.06, or 49.065 is a Class A misdemeanor, with a minimum term of confinement of 30 days, if it is shown on the trial of the offense that the person has previously been convicted one time of an offense relating to the operating of a motor vehicle while intoxicated, an offense of operating an aircraft while intoxicated, an offense of operating a watercraft while intoxicated, or an offense of operating or assembling an amusement ride while intoxicated. (b) An offense under Section 49.04, 49.045, 49.05, 49.06, 49.061, or 49.065 is a felony of the third degree if it is shown on the trial of the offense that the person has previously been convicted: (1) one time of an offense under Section 49.08 or an offense under the laws of another state if the offense contains elements that are substantially similar to the elements of an offense under Section 49.08; or (2) two times of any other offense relating to the operating of a motor vehicle while intoxicated, operating an aircraft while intoxicated, operating a watercraft while intoxicated, or operating or assembling an amusement ride while intoxicated. (b-1) An offense under Section 49.07 is: (1) a felony of the second degree if it is shown on the trial of the offense that the person caused serious bodily injury to a firefighter or emergency medical services personnel while in the actual discharge of an official duty; or (2) a felony of the first degree if it is shown on the trial of the offense that the person caused serious bodily injury to a peace officer or judge while the officer or judge was in the actual discharge of an official duty. Text of subsection as amended by Acts 2025, 89th Leg., R.S., Ch. 307 (S.B. 745), Sec. 1 (b-2) An offense under Section 49.08 is a felony of the first degree if it is shown on the trial of the offense that the person caused the death of: (1) a person described by Subsection (b-1); or (2) more than one person during the same criminal transaction. Text of subsection as amended by Acts 2025, 89th Leg., R.S., Ch. 939 (H.B. 2017), Sec. 2 (b-2) An offense under Section 49.08 is a felony of the first degree if it is shown on the trial of the offense that the person: (1) caused the death of a person described by Subsection (b-1); or (2) has previously been convicted of an offense relating to the operating of a motor vehicle while intoxicated, operating an aircraft while intoxicated, operating a watercraft while intoxicated, or operating or assembling an amusement ride while intoxicated, and at the time of the commission of the instant offense was in violation of Chapter 51. (b-3) For the purposes of Subsection (b-1): (1) \"Emergency medical services personnel\" has the meaning assigned by Section 773.003, Health and Safety Code. (2) \"Firefighter\" means: (A) an individual employed by this state or by a political or legal subdivision of this state who is subject to certification by the Texas Commission on Fire Protection; or (B) a member of an organized volunteer fire-fighting unit that: (i) renders fire-fighting services without remuneration; and (ii) conducts a minimum of two drills each month, each at least two hours long. (b-4) An offense under Section 49.07 is a felony of the second degree if it is shown on the trial of the offense that the person caused serious bodily injury to another in the nature of a traumatic brain injury that results in a persistent vegetative state. (c) For the purposes of this section: (1) \"Offense relating to the operating of a motor vehicle while intoxicated\" means: (A) an offense under Section 49.04 or 49.045; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was a motor vehicle; (C) an offense under Article 6701l-1, Revised Statutes, as that law existed before September 1, 1994; (D) an offense under Article 6701l-2, Revised Statutes, as that law existed before January 1, 1984; (E) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was a motor vehicle; or (F) an offense under the laws of another state that prohibit the operation of a motor vehicle while intoxicated. (2) \"Offense of operating an aircraft while intoxicated\" means: (A) an offense under Section 49.05; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was an aircraft; (C) an offense under Section 1, Chapter 46, Acts of the 58th Legislature, Regular Session, 1963 (Article 46f-3, Vernon's Texas Civil Statutes), as that law existed before September 1, 1994; (D) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was an aircraft; or (E) an offense under the laws of another state that prohibit the operation of an aircraft while intoxicated. (3) \"Offense of operating a watercraft while intoxicated\" means: (A) an offense under Section 49.06 or 49.061; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was a watercraft; (C) an offense under Section 31.097, Parks and Wildlife Code, as that law existed before September 1, 1994; (D) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was a watercraft; or (E) an offense under the laws of another state that prohibit the operation of a watercraft while intoxicated. (4) \"Offense of operating or assembling an amusement ride while intoxicated\" means: (A) an offense under Section 49.065; (B) an offense under Section 49.07 or 49.08, if the offense involved the operation or assembly of an amusement ride; or (C) an offense under the law of another state that prohibits the operation of an amusement ride while intoxicated or the assembly of a mobile amusement ride while intoxicated. (d) For the purposes of this section, a conviction for an offense under Section 49.04, 49.045, 49.05, 49.06, 49.061, 49.065, 49.07, or 49.08 that occurs on or after September 1, 1994, is a final conviction, whether the sentence for the conviction is imposed or probated. (e) Repealed by Acts 2005, 79th Leg., Ch. 996, Sec. 3, eff. September 1, 2005. (f) Repealed by Acts 2005, 79th Leg., Ch. 996, Sec. 3, eff. September 1, 2005. (g) A conviction may be used for purposes of enhancement under this section or enhancement under Subchapter D, Chapter 12, but not under both this section and Subchapter D. For purposes of this section, a person is considered to have been convicted of an offense under Section 49.04 or 49.06 if the person was placed on deferred adjudication community supervision for the offense under Article 42A.102, Code of Criminal Procedure. (h) This subsection applies only to a person convicted of a second or subsequent offense relating to the operating of a motor vehicle while intoxicated committed within five years of the date on which the most recent preceding offense was committed. The court shall enter an order that requires the defendant to have a device installed, on each motor vehicle owned or operated by the defendant, that uses a deep-lung breath analysis mechanism to make impractical the operation of the motor vehicle if ethyl alcohol is detected in the breath of the operator, and that requires that before the first anniversary of the ending date of the period of license suspension under Section 521.344, Transportation Code, the defendant not operate any motor vehicle that is not equipped with that device. The court shall require the defendant to obtain the device at the defendant's own cost on or before that ending date, require the defendant to provide evidence to the court on or before that ending date that the device has been installed on each appropriate vehicle, and order the device to remain installed on each vehicle until the first anniversary of that ending date. If the court determines the offender is unable to pay for the device, the court may impose a reasonable payment schedule not to extend beyond the first anniversary of the date of installation. The Department of Public Safety shall approve devices for use under this subsection. Section 521.247, Transportation Code, applies to the approval of a device under this subsection and the consequences of that approval. Failure to comply with an order entered under this subsection is punishable by contempt. For the purpose of enforcing this subsection, the court that enters an order under this subsection retains jurisdiction over the defendant until the date on which the device is no longer required to remain installed. To the extent of a conflict between this subsection and Subchapter I, Chapter 42A, Code of Criminal Procedure, this subsection controls. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by Acts 1995, 74th Leg., ch. 76, Sec. 14.56, eff. Sept. 1, 1995; Acts 1995, 74th Leg., ch. 318, Sec. 21, eff. Sept. 1, 1995; Acts 1999, 76th Leg., ch. 1364, Sec. 12, 13, eff. Jan. 1, 2000; Acts 2001, 77th Leg., ch. 648, Sec. 1, 2, eff, Sept. 1, 2001; Acts 2001, 77th Leg., ch. 969, Sec. 3, eff. Sept. 1, 2001; Acts 2003, 78th Leg., ch. 787, Sec. 2, eff. Sept. 1, 2003; Acts 2003, 78th Leg., ch. 1275, Sec. 2(117), eff. Sept. 1, 2003. Amended by: Acts 2005, 79th Leg., Ch. 996 (H.B. 51), Sec. 1, eff. September 1, 2005. Acts 2005, 79th Leg., Ch. 996 (H.B. 51), Sec. 3, eff. September 1, 2005. Acts 2007, 80th Leg., R.S., Ch. 662 (H.B. 1212), Sec. 4, eff. September 1, 2007. Acts 2011, 82nd Leg., R.S., Ch. 960 (H.B. 1199), Sec. 3, eff. September 1, 2011. Acts 2015, 84th Leg., R.S., Ch. 770 (H.B. 2299), Sec. 2.84, eff. January 1, 2017. Acts 2015, 84th Leg., R.S., Ch. 1067 (H.B. 2246), Sec. 2, eff. September 1, 2015. Acts 2017, 85th Leg., R.S., Ch. 324 (S.B. 1488), Sec. 23.010, eff. September 1, 2017. Acts 2017, 85th Leg., R.S., Ch. 440 (H.B. 2908), Sec. 5, eff. September 1, 2017. Acts 2019, 86th Leg., R.S., Ch. 1298 (H.B. 3582), Sec. 7, eff. September 1, 2019. Acts 2023, 88th Leg., R.S., Ch. 813 (H.B. 1163), Sec. 2, eff. September 1, 2023. Acts 2023, 88th Leg., R.S., Ch. 813 (H.B. 1163), Sec. 3, eff. September 1, 2023. Acts 2025, 89th Leg., R.S., Ch. 307 (S.B. 745), Sec. 1, eff. September 1, 2025. Acts 2025, 89th Leg., R.S., Ch. 939 (H.B. 2017), Sec. 2, eff. September 1, 2025.",
+          "contentHash": "f26efa6b643e432ffa52d56fd520650b8b76ff7d34085060eabe8fa51bd948f4",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-14T05:41:41.000Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-dwi-open-container",
+            "catalogLabel": "Driving While Intoxicated (open alcohol container)",
+            "catalogCode": "49.04(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "a83ad63ee7c850dfa25d11986c06c4853e72469c2740d183686a6637d231a9cd",
+            "manifestImportedAt": "2026-11-14T05:41:42.000Z"
+          }
+        }
+      ],
       "apiStatus": "verified"
     }
   ]

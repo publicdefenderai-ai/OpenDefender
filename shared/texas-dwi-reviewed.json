@@ -1,0 +1,271 @@
+{
+  "records": [
+    {
+      "id": "tx-dui-first-offense",
+      "name": "Driving While Intoxicated (ordinary Class B)",
+      "code": "49.04(b)",
+      "dpsCode": "54040009",
+      "summary": "Operating a motor vehicle in a public place while intoxicated ordinarily carries Class B misdemeanor punishment. If confinement is imposed, §49.04(b) specifies at least 72 hours. Section 12.22 allows up to 180 days and a fine up to $2,000. Open-container, testing, qualifying prior and school-crossing-zone provisions must be checked separately.",
+      "references": [
+        {
+          "code": "PE",
+          "section": "49.04",
+          "subdivision": "(a)",
+          "supportRole": "offense"
+        },
+        {
+          "code": "PE",
+          "section": "49.04",
+          "subdivision": "(b)",
+          "supportRole": "grading"
+        },
+        {
+          "code": "PE",
+          "section": "49.01",
+          "subdivision": null,
+          "supportRole": "grading"
+        },
+        {
+          "code": "PE",
+          "section": "12.22",
+          "subdivision": null,
+          "supportRole": "penalty"
+        },
+        {
+          "code": "TN",
+          "section": "709.001",
+          "subdivision": null,
+          "supportRole": "penalty"
+        },
+        {
+          "code": "PE",
+          "section": "49.04",
+          "subdivision": "(e)",
+          "supportRole": "penalty"
+        },
+        {
+          "code": "TN",
+          "section": "541.302",
+          "subdivision": null,
+          "supportRole": "grading"
+        },
+        {
+          "code": "PE",
+          "section": "12.35",
+          "subdivision": null,
+          "supportRole": "penalty"
+        },
+        {
+          "code": "PE",
+          "section": "49.09",
+          "subdivision": null,
+          "supportRole": "grading"
+        }
+      ]
+    },
+    {
+      "id": "tx-dwi-bac-015",
+      "name": "Driving While Intoxicated (alcohol concentration of 0.15 or more)",
+      "code": "49.04(d)",
+      "dpsCode": "54040014",
+      "summary": "A trial showing that the blood, breath or urine specimen tested at 0.15 or more at the time of analysis changes the grade to Class A. Section 12.21 allows up to one year and a fine up to $4,000.",
+      "references": [
+        {
+          "code": "PE",
+          "section": "49.04",
+          "subdivision": "(a)",
+          "supportRole": "offense"
+        },
+        {
+          "code": "PE",
+          "section": "49.04",
+          "subdivision": "(d)",
+          "supportRole": "grading"
+        },
+        {
+          "code": "PE",
+          "section": "49.01",
+          "subdivision": null,
+          "supportRole": "grading"
+        },
+        {
+          "code": "PE",
+          "section": "12.21",
+          "subdivision": null,
+          "supportRole": "penalty"
+        },
+        {
+          "code": "TN",
+          "section": "709.001",
+          "subdivision": null,
+          "supportRole": "penalty"
+        },
+        {
+          "code": "PE",
+          "section": "49.04",
+          "subdivision": "(e)",
+          "supportRole": "penalty"
+        },
+        {
+          "code": "TN",
+          "section": "541.302",
+          "subdivision": null,
+          "supportRole": "grading"
+        },
+        {
+          "code": "PE",
+          "section": "12.35",
+          "subdivision": null,
+          "supportRole": "penalty"
+        },
+        {
+          "code": "PE",
+          "section": "49.09",
+          "subdivision": null,
+          "supportRole": "grading"
+        }
+      ]
+    },
+    {
+      "id": "tx-dwi-open-container",
+      "name": "Driving While Intoxicated (open alcohol container)",
+      "code": "49.04(c)",
+      "dpsCode": "54040012",
+      "summary": "An open alcohol container in the operator’s immediate possession at the time of the offense makes the Class B minimum term six days. Section 12.22 allows up to 180 days and a fine up to $2,000.",
+      "references": [
+        {
+          "code": "PE",
+          "section": "49.04",
+          "subdivision": "(a)",
+          "supportRole": "offense"
+        },
+        {
+          "code": "PE",
+          "section": "49.04",
+          "subdivision": "(c)",
+          "supportRole": "grading"
+        },
+        {
+          "code": "PE",
+          "section": "49.01",
+          "subdivision": null,
+          "supportRole": "grading"
+        },
+        {
+          "code": "PE",
+          "section": "12.22",
+          "subdivision": null,
+          "supportRole": "penalty"
+        },
+        {
+          "code": "TN",
+          "section": "709.001",
+          "subdivision": null,
+          "supportRole": "penalty"
+        },
+        {
+          "code": "PE",
+          "section": "49.04",
+          "subdivision": "(e)",
+          "supportRole": "penalty"
+        },
+        {
+          "code": "TN",
+          "section": "541.302",
+          "subdivision": null,
+          "supportRole": "grading"
+        },
+        {
+          "code": "PE",
+          "section": "12.35",
+          "subdivision": null,
+          "supportRole": "penalty"
+        },
+        {
+          "code": "PE",
+          "section": "49.09",
+          "subdivision": null,
+          "supportRole": "grading"
+        }
+      ]
+    },
+    {
+      "id": "tx-dui-second-offense",
+      "name": "Driving While Intoxicated (one qualifying prior)",
+      "code": "49.09(a)",
+      "dpsCode": "54040010",
+      "summary": "With one qualifying intoxication-offense conviction shown at trial, §49.09(a) ordinarily makes DWI Class A with a minimum confinement term of 30 days. Section 12.21 allows up to one year and a $4,000 fine. One qualifying intoxication-manslaughter prior or two qualifying other priors can instead trigger §49.09(b), a third-degree felony. Check the prior offense and its statutory qualifications.",
+      "references": [
+        {
+          "code": "PE",
+          "section": "49.04",
+          "subdivision": "(a)",
+          "supportRole": "offense"
+        },
+        {
+          "code": "PE",
+          "section": "49.09",
+          "subdivision": "(a)",
+          "supportRole": "grading"
+        },
+        {
+          "code": "PE",
+          "section": "49.01",
+          "subdivision": null,
+          "supportRole": "grading"
+        },
+        {
+          "code": "PE",
+          "section": "12.21",
+          "subdivision": null,
+          "supportRole": "penalty"
+        },
+        {
+          "code": "TN",
+          "section": "709.001",
+          "subdivision": null,
+          "supportRole": "penalty"
+        },
+        {
+          "code": "PE",
+          "section": "49.04",
+          "subdivision": "(e)",
+          "supportRole": "penalty"
+        },
+        {
+          "code": "TN",
+          "section": "541.302",
+          "subdivision": null,
+          "supportRole": "grading"
+        },
+        {
+          "code": "PE",
+          "section": "12.35",
+          "subdivision": null,
+          "supportRole": "penalty"
+        },
+        {
+          "code": "PE",
+          "section": "12.34",
+          "subdivision": null,
+          "supportRole": "penalty"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    "For qualifying final convictions Transportation Code §709.001 adds a traffic fine of $3,000 for a first conviction within 36 months, $4,500 for a second or subsequent conviction within that period, or $6,000 on the specified 0.15-or-higher trial showing. A judicial indigency finding requires waiver of all fines and costs imposed under §709.001.",
+    "Effective September 1, 2025, §49.04(e) provides a state jail felony if the operator was in a school crossing zone at the time the reduced speed limit applied. Compare offense date, zone and time; the annual arrest count spans dates before and after this amendment."
+  ],
+  "sourceHashes": {
+    "PE:49.01": "030451e87121af7e6232adfeaa5bec75db9e59e2a57a5a8a2305e61723879107",
+    "PE:49.04": "ae5b58764bceed3235c66ea395a4e65d3d3458c67d07ee35ef243fcff9d7a918",
+    "PE:49.09": "eb4ffeef7c611a38b2659581f997795a6f60d795d2313d02d7d96359c807328a",
+    "PE:12.21": "a2a447bb561d104e7c1179aace670dbdc9dd149d1fea04dfb1df6410532f73b7",
+    "PE:12.22": "2fa767a8d45633ad23a219dc88fe4f5062d727211e30daa669cda18167c9a645",
+    "PE:12.34": "89b416ee03ce94492a136fad127b94a3a9df33b69958383ffe40e87f707f9dee",
+    "PE:12.35": "ca59c8b1bc9f8863a24dff9c1451e64e0ad17bed58279f13e707ee0b26abac01",
+    "TN:709.001": "e5b1d1a4c47e23659c89484f3ade583d6a4699fb2b09b84eb0e36953e38f2bf8",
+    "TN:541.302": "29a1ec7f6451c3e77cb3dc7fdd5f2175d4fae219523643bcf9ea1411d825913c"
+  }
+}

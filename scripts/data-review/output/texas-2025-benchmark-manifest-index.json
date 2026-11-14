@@ -1,0 +1,755 @@
+[
+  {
+    "chargeId": "tx-involuntary-manslaughter",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "19.04",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-criminally-negligent-homicide",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "19.05",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-vehicular-homicide",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "49.08",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-felony-murder",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-aggravated-assault",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "22.02",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-domestic-violence-assault",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-assault-on-peace-officer",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-menacing",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-sexual-assault-in-the-first-degree",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "22.021",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-sexual-assault-in-the-second-degree",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "22.011",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-statutory-rape",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "22.011",
+        "subdivision": "(a)(2)"
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-child-sexual-abuse",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-sexual-exploitation-of-minor",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "43.25",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-petty-theft",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-theft-by-receiving",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-identity-theft",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "32.51",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-credit-card-fraud",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-embezzlement",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-shoplifting",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-burglary-in-the-first-degree",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-burglary-in-the-second-degree",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-residential-burglary",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-commercial-burglary",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-auto-burglary",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "30.04",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-robbery-in-the-first-degree",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "29.03",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-robbery-in-the-second-degree",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "29.02",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-bank-robbery",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-possession-of-controlled-substance",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-possession-with-intent-to-distribute",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-distribution-of-controlled-substance",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-manufacturing-controlled-substance",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-drug-trafficking",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-possession-of-drug-paraphernalia",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-maintaining-drug-house",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-unlawful-carrying-of-weapon",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "46.02",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-felon-in-possession-of-firearm",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-discharge-of-firearm-in-city",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-possession-of-prohibited-weapon",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "46.05",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-wire-fraud",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-mail-fraud",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-check-fraud",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-insurance-fraud",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "35.02",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-tax-fraud",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-forgery",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "32.21",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-computer-fraud",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-disorderly-conduct",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "42.01",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-public-intoxication",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "49.02",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-loitering",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-dui-first-offense",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "49.04",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-dui-second-offense",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "49.04",
+        "subdivision": "(b)"
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-dui-third-offense",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-reckless-driving",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-hit-and-run",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-theft-under-2500",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-assault-bodily-injury-family",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-driving-while-license-invalid",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-possession-of-marijuana",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-criminal-trespass",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "30.05",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-evading-arrest",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "38.04",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-failure-to-identify",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "38.02",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-criminal-mischief",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "28.03",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-terroristic-threat",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "22.07",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-failure-to-appear",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-probation-violation",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-resisting-arrest",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-protective-order-violation",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-open-container",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-minor-in-possession",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-false-info-to-police",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-harassment",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-contempt-of-court",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-solicitation",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-driving-without-insurance",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-expired-registration",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-expired-inspection",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-failure-to-pay-child-support",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-noise-violation",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-indecent-exposure",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-fake-id",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-animal-at-large",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-animal-cruelty-misdemeanor",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-illegal-camping",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-panhandling",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-unregistered-vehicle",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-curfew-violation",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-trespass-after-warning",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "30.05",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-defective-vehicle-equipment",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-truancy",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-littering",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-illegal-fireworks",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-alcohol-in-park",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-hunting-fishing-no-license",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-criminal-attempt",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "15.01",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-conspiracy",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "15.02",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-aiding-and-abetting",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "7.02",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-accessory-after-the-fact",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "38.05",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-attempted-murder",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-attempted-robbery",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-attempted-sexual-assault",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-criminal-solicitation",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "15.03",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-gang-enhancement",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-hate-crime-enhancement",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-recidivist-enhancement",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-firearm-in-felony-enhancement",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-drug-school-zone-enhancement",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-rico-organized-crime",
+    "disposition": "exact_alias_rename",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "71.02",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-money-laundering",
+    "disposition": "retain",
+    "provisions": [
+      {
+        "lawId": "PE",
+        "section": "34.02",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "chargeId": "tx-juvenile-delinquency-felony",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-juvenile-delinquency-misdemeanor",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-juvenile-transfer-adult-court",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  },
+  {
+    "chargeId": "tx-juvenile-firearm-possession",
+    "disposition": "require_exact_reselection",
+    "provisions": []
+  }
+]
