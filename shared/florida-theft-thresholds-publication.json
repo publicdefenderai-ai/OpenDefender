@@ -419,14 +419,18 @@
       "741.28",
       "775.082",
       "775.083",
-      "775.084"
+      "775.084",
+      "870.01"
     ],
     "subdivisions": {
       "812.014": [
         "(2)(c)5.",
         "(1)",
         "(2)(c)",
-        "(2)(g)"
+        "(2)(g)",
+        "(2)(c)2.",
+        "(2)(c)3.",
+        "(2)(b)"
       ],
       "812.012": [
         "(4)",
@@ -448,6 +452,10 @@
       ],
       "775.084": [
         "(4)"
+      ],
+      "870.01": [
+        "(2)",
+        "(3)"
       ]
     },
     "definition": {
@@ -494,6 +502,10 @@
         {
           "citation": "Fla. Stat. § 775.084",
           "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 870.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
         }
       ],
       "aliases": {
@@ -516,15 +528,15 @@
       "text": {
         "en": {
           "plainSummary": "Knowingly obtaining or using another person’s property, or trying to do so, intending even temporarily to deprive the person of rights or benefits in it or to appropriate it for an unauthorized use. The property is a firearm. There is no minimum firearm value. A prior conviction under this particular firearm-theft provision leads to (2)(g).",
-          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For conduct from July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this theft causes injury or death to a qualifying family or household member. Age, theft or a prior alone does not establish these conditions."
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If the stolen property is worth at least $5,000 but less than $20,000 under (2)(c)2. or 3., the offense becomes a second-degree felony when conditions arising from a riot or aggravated riot facilitate the theft during that riot, or when emergency conditions facilitate the theft in an affected county after the Governor declares the emergency. The ordinary maximum then rises to 15 years and a $10,000 fine. For conduct from July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this theft causes injury or death to a qualifying family or household member. Age, theft or a prior alone does not establish these conditions."
         },
         "es": {
           "plainSummary": "Obtener o utilizar a sabiendas bienes ajenos, o intentarlo, con intención de privar a la persona de derechos o beneficios sobre ellos, aunque sea temporalmente, o de apropiárselos para un uso no autorizado. El bien es un arma de fuego sin valor mínimo. Una condena previa bajo esta disposición concreta conduce a (2)(g).",
-          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este hurto causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. La edad, el hurto o un antecedente por sí solos no bastan."
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si el valor de los bienes sustraídos es de al menos $5,000 pero inferior a $20,000 conforme a (2)(c)2. o 3., el delito pasa a ser grave de segundo grado cuando las condiciones surgidas de un disturbio simple o agravado facilitan el hurto durante ese disturbio, o cuando las condiciones de emergencia facilitan el hurto en un condado afectado después de la declaración del gobernador. El máximo ordinario pasa a 15 años y una multa de $10,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este hurto causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. La edad, el hurto o un antecedente por sí solos no bastan."
         },
         "zh": {
           "plainSummary": "明知而获取或使用他人财产，或试图这样做，意图哪怕暂时剥夺他人对财产的权利或利益，或将财产用于未经授权的用途。 财物是枪支，无最低价值门槛。此前已按本项因盗窃枪支定罪的，适用第(2)(g)项。",
-          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对2026年7月1日起的行为，若本次盗窃导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。单有年龄、盗窃或前科均不足以适用。"
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 如果被盗财物按第(2)(c)2或3项计值至少5,000美元但低于20,000美元，且暴乱或加重暴乱造成的条件促成在其期间发生的盗窃，或州长宣布紧急状态后，紧急状态造成的条件促成受影响县内的盗窃，则升为二级重罪。通常最高可判15年监禁及10,000美元罚金。 对2026年7月1日起的行为，若本次盗窃导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。单有年龄、盗窃或前科均不足以适用。"
         }
       }
     }

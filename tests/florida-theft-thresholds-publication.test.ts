@@ -29,6 +29,18 @@ describe('Florida theft-thresholds subdivisions', () => {
     expect(older.text.en.plainSummary).toContain('$10,000 to under $50,000');
     expect(older.text.en.degreeContext).toContain('exceeds $1,000');
   });
+  it('requires the separate value tier and riot or emergency facilitation for the firearm enhancement', () => {
+    const firearm = rows.find(row => row.scope === '(2)(c)5.')!;
+    expect(firearm.subdivisions['812.014']).toEqual(expect.arrayContaining(['(2)(c)', '(2)(c)2.', '(2)(c)3.']));
+    for (const [language, markers] of Object.entries({
+      en: ['at least $5,000 but less than $20,000', 'facilitate the theft during that riot', 'after the Governor declares', '15 years'],
+      es: ['al menos $5,000 pero inferior a $20,000', 'facilitan el hurto durante ese disturbio', 'después de la declaración', '15 años'],
+      zh: ['至少5,000美元但低于20,000美元', '促成在其期间发生的盗窃', '州长宣布紧急状态后', '15年'],
+    })) {
+      const penalty = firearm.definition.text[language as 'en' | 'es' | 'zh'].degreeContext;
+      for (const marker of markers) expect(penalty).toContain(marker);
+    }
+  });
   it('resolves both sampled amphetamine thresholds to the existing charge with all three retained statutory tiers', () => {
     const id = 'fl-fs-893-135-1-f-1-trafficking-in-amphetamine';
     const charge = getChargeById(id)!;
