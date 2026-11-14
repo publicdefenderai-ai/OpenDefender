@@ -1,0 +1,1258 @@
+[
+  {
+    "id": "fl-fs-806-031-1-property-damage",
+    "section": "806.031",
+    "scope": "(1)",
+    "officialTitle": "Arson resulting in injury to another; penalty",
+    "dependencies": [
+      "806.031",
+      "806.01",
+      "775.021",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "806.031": [
+        "(1)",
+        "(3)"
+      ],
+      "806.01": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "775.021": [
+        "(4)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-031-1-property-damage",
+      "name": "Arson resulting in bodily harm",
+      "names": {
+        "es": "Incendio provocado que causa daño corporal",
+        "zh": "纵火造成身体伤害"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "806.031(1)",
+      "slug": "fl-fs-806-031-1-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.031(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.031.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.031",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.031.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Arson resulting in injury to another; penalty",
+          "FS 806.031(1)",
+          "F.S. 806.031(1)"
+        ],
+        "es": [
+          "Arson resulting in injury to another; penalty",
+          "FS 806.031(1)",
+          "F.S. 806.031(1)"
+        ],
+        "zh": [
+          "Arson resulting in injury to another; penalty",
+          "FS 806.031(1)",
+          "F.S. 806.031(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Committing arson that results in bodily harm to a firefighter or any other person. Intent to cause injury is not required.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine. A separate sentence is possible for arson committed in the same episode; an arson conviction is unnecessary for this injury charge."
+        },
+        "es": {
+          "plainSummary": "Cometer un incendio provocado que causa daño corporal a un bombero u otra persona. No se exige intención de causar lesiones.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000. Puede imponerse otra pena por el incendio provocado en el mismo episodio; no se exige condena por incendio para este cargo por lesiones."
+        },
+        "zh": {
+          "plainSummary": "实施纵火并造成消防员或其他人身体伤害。无须有造成伤害的意图。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。 同一事件的纵火罪可另行判刑；本伤害罪无需先就纵火罪定罪。"
+        }
+      }
+    },
+    "conductScope": "(1)"
+  },
+  {
+    "id": "fl-fs-806-031-2-property-damage",
+    "section": "806.031",
+    "scope": "(2)",
+    "officialTitle": "Arson resulting in injury to another; penalty",
+    "dependencies": [
+      "806.031",
+      "806.01",
+      "775.021",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "806.031": [
+        "(2)",
+        "(3)"
+      ],
+      "806.01": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "775.021": [
+        "(4)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-031-2-property-damage",
+      "name": "Arson resulting in great bodily harm, permanent disability or disfigurement",
+      "names": {
+        "es": "Incendio provocado que causa daño grave, discapacidad o desfiguración permanente",
+        "zh": "纵火造成严重伤害、永久残疾或永久毁容"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "806.031(2)",
+      "slug": "fl-fs-806-031-2-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.031(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.031.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.031",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.031.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Arson resulting in injury to another; penalty",
+          "FS 806.031(2)",
+          "F.S. 806.031(2)"
+        ],
+        "es": [
+          "Arson resulting in injury to another; penalty",
+          "FS 806.031(2)",
+          "F.S. 806.031(2)"
+        ],
+        "zh": [
+          "Arson resulting in injury to another; penalty",
+          "FS 806.031(2)",
+          "F.S. 806.031(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Committing arson that results in great bodily harm, permanent disability or permanent disfigurement to a firefighter or another person. Intent to cause injury is not required.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. A separate sentence is possible for arson committed in the same episode; an arson conviction is unnecessary for this injury charge."
+        },
+        "es": {
+          "plainSummary": "Cometer un incendio provocado que causa daño corporal grave, discapacidad permanente o desfiguración permanente a un bombero u otra persona. No se exige intención de causar lesiones.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. Puede imponerse otra pena por el incendio provocado en el mismo episodio; no se exige condena por incendio para este cargo por lesiones."
+        },
+        "zh": {
+          "plainSummary": "实施纵火导致消防员或其他人严重身体伤害、永久残疾或永久毁容。无须有造成伤害的意图。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 同一事件的纵火罪可另行判刑；本伤害罪无需先就纵火罪定罪。"
+        }
+      }
+    },
+    "conductScope": "(2)"
+  },
+  {
+    "id": "fl-fs-806-10-1-property-damage",
+    "section": "806.10",
+    "scope": "(1)",
+    "officialTitle": "Preventing or obstructing extinguishment of fire",
+    "dependencies": [
+      "806.10",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "806.10": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-10-1-property-damage",
+      "name": "Preventing or obstructing extinguishment of fire: equipment or facilities",
+      "names": {
+        "es": "Obstrucción de la extinción de incendios: equipos o instalaciones",
+        "zh": "妨碍灭火：设备或设施"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "806.10(1)",
+      "slug": "fl-fs-806-10-1-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.10(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.10",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Preventing or obstructing extinguishment of fire",
+          "FS 806.10(1)",
+          "F.S. 806.10(1)"
+        ],
+        "es": [
+          "Preventing or obstructing extinguishment of fire",
+          "FS 806.10(1)",
+          "F.S. 806.10(1)"
+        ],
+        "zh": [
+          "Preventing or obstructing extinguishment of fire",
+          "FS 806.10(1)",
+          "F.S. 806.10(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully and maliciously injuring, destroying, removing or otherwise interfering with the use of instruments or facilities used to detect, report, suppress or extinguish fire.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Dañar, destruir o retirar deliberadamente y con malicia medios o instalaciones para detectar, comunicar, controlar o extinguir incendios, o interferir con su uso.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "故意且恶意损坏、破坏、移走或以其他方式妨碍用于探测、报告、控制或扑灭火灾的器材或设施的使用。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    },
+    "conductScope": "(1)"
+  },
+  {
+    "id": "fl-fs-806-10-2-property-damage",
+    "section": "806.10",
+    "scope": "(2)",
+    "officialTitle": "Preventing or obstructing extinguishment of fire",
+    "dependencies": [
+      "806.10",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "806.10": [
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-10-2-property-damage",
+      "name": "Preventing or obstructing extinguishment of fire: interference with a firefighter",
+      "names": {
+        "es": "Obstrucción de la extinción de incendios: interferencia con un bombero",
+        "zh": "妨碍灭火：妨碍消防员"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "806.10(2)",
+      "slug": "fl-fs-806-10-2-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.10(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.10",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Preventing or obstructing extinguishment of fire",
+          "FS 806.10(2)",
+          "F.S. 806.10(2)"
+        ],
+        "es": [
+          "Preventing or obstructing extinguishment of fire",
+          "FS 806.10(2)",
+          "F.S. 806.10(2)"
+        ],
+        "zh": [
+          "Preventing or obstructing extinguishment of fire",
+          "FS 806.10(2)",
+          "F.S. 806.10(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully or unreasonably interfering with, hindering or assaulting a firefighter on duty, or attempting to interfere with or hinder the firefighter.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Interferir deliberadamente o de forma irrazonable con un bombero en servicio, obstaculizarlo o agredirlo, o intentar interferir u obstaculizarlo.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "故意或不合理地妨碍、阻挠或袭击执行职务的消防员，或试图妨碍或阻挠消防员。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    },
+    "conductScope": "(2)"
+  },
+  {
+    "id": "fl-fs-806-101-property-damage",
+    "section": "806.101",
+    "scope": "",
+    "officialTitle": "False alarms of fires",
+    "dependencies": [
+      "775.084",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "806.101": [
+        ""
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "775.082": [
+        "(4)",
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-101-property-damage",
+      "name": "False alarms of fires",
+      "names": {
+        "es": "Falsas alarmas de incendio",
+        "zh": "谎报火警"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "806.101",
+      "slug": "fl-fs-806-101-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.101",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.101.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False alarms of fires",
+          "FS 806.101",
+          "F.S. 806.101"
+        ],
+        "es": [
+          "False alarms of fires",
+          "FS 806.101",
+          "F.S. 806.101"
+        ],
+        "zh": [
+          "False alarms of fires",
+          "FS 806.101",
+          "F.S. 806.101"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Making or circulating a false fire alarm, or causing it to be made or circulated, without reasonable cause.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine. The misdemeanor applies to the first conviction. A second or subsequent conviction under this section is a third-degree felony, ordinarily up to five years and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Emitir o difundir una falsa alarma de incendio, o hacer que se emita o difunda, sin causa razonable.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000. El delito menor corresponde a la primera condena. Una segunda condena o posterior por esta sección es delito grave de tercer grado, normalmente hasta cinco años y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "无合理理由发出或传播虚假火警，或促使他人发出或传播。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。 初次定罪为轻罪。依本条第二次或之后定罪为三级重罪，通常最高五年监禁及5,000美元罚金。"
+        }
+      },
+      "categories": [
+        "misdemeanor",
+        "felony"
+      ]
+    },
+    "conductScope": ""
+  },
+  {
+    "id": "fl-fs-806-13-2-property-damage",
+    "section": "806.13",
+    "scope": "(2)",
+    "officialTitle": "Criminal mischief; penalties; penalty for minor",
+    "dependencies": [
+      "806.13",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "806.13": [
+        "(2)",
+        "(8)",
+        "(9)",
+        "(10)",
+        "(11)",
+        "(12)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-13-2-property-damage",
+      "name": "Criminal mischief at a place of worship",
+      "names": {
+        "es": "Daño malicioso a un lugar de culto",
+        "zh": "恶意损毁礼拜场所"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "806.13(2)",
+      "slug": "fl-fs-806-13-2-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.13(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Criminal mischief; penalties; penalty for minor",
+          "FS 806.13(2)",
+          "F.S. 806.13(2)"
+        ],
+        "es": [
+          "Criminal mischief; penalties; penalty for minor",
+          "FS 806.13(2)",
+          "F.S. 806.13(2)"
+        ],
+        "zh": [
+          "Criminal mischief; penalties; penalty for minor",
+          "FS 806.13(2)",
+          "F.S. 806.13(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully and maliciously defacing, injuring or damaging a place of worship or a religious article inside it, causing more than $200 in damage.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. The court may order payment for damage. If graffiti is involved, additional fine minimums are $250, $500 and $1,000 for first, second and later convictions, subject to inability to pay. At least 40 community-service hours are required and, if possible, at least 100 hours of graffiti removal; special juvenile rules may apply."
+        },
+        "es": {
+          "plainSummary": "Desfigurar, lesionar o dañar deliberadamente y con malicia un lugar de culto o artículo religioso en su interior, causando daños superiores a $200.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. El tribunal puede exigir el pago del daño. Si hubo grafitis, las multas adicionales mínimas son $250, $500 y $1,000 en la primera, segunda y posteriores condenas, salvo incapacidad de pago. Se exigen al menos 40 horas de servicio comunitario y, si es posible, al menos 100 de eliminación de grafitis; existen reglas para menores."
+        },
+        "zh": {
+          "plainSummary": "故意且恶意污损或损坏礼拜场所或其内宗教物品，造成超过200美元的损失。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 法院可判令赔偿损失。涉及涂鸦时，首犯、再次及之后定罪的附加罚金下限分别为250、500和1,000美元，无力支付时可免。须至少40小时社区服务，并在可能时至少100小时清除涂鸦；未成年人另有规定。"
+        }
+      }
+    },
+    "conductScope": "(2)"
+  },
+  {
+    "id": "fl-fs-806-13-3-property-damage",
+    "section": "806.13",
+    "scope": "(3)",
+    "officialTitle": "Criminal mischief; penalties; penalty for minor",
+    "dependencies": [
+      "806.13",
+      "806.135",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "806.13": [
+        "(3)",
+        "(8)",
+        "(9)",
+        "(10)",
+        "(11)",
+        "(12)"
+      ],
+      "806.135": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-13-3-property-damage",
+      "name": "Criminal mischief against a memorial or historic property",
+      "names": {
+        "es": "Daño malicioso a un monumento conmemorativo o bien histórico",
+        "zh": "恶意损毁纪念物或历史财产"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "806.13(3)",
+      "slug": "fl-fs-806-13-3-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.13(3)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.135",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.135.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Criminal mischief; penalties; penalty for minor",
+          "FS 806.13(3)",
+          "F.S. 806.13(3)"
+        ],
+        "es": [
+          "Criminal mischief; penalties; penalty for minor",
+          "FS 806.13(3)",
+          "F.S. 806.13(3)"
+        ],
+        "zh": [
+          "Criminal mischief; penalties; penalty for minor",
+          "FS 806.13(3)",
+          "F.S. 806.13(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Without owner consent, willfully and maliciously defacing, injuring or damaging a memorial or officially designated historic property as defined in §806.135(1), with damage exceeding $200.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. The court must order restitution including the full repair or replacement cost. If graffiti is involved, additional fine minimums are $250, $500 and $1,000 for first, second and later convictions, subject to inability to pay. At least 40 community-service hours are required and, if possible, at least 100 hours of graffiti removal; special juvenile rules may apply."
+        },
+        "es": {
+          "plainSummary": "Sin consentimiento del propietario, desfigurar o dañar deliberadamente y con malicia un monumento conmemorativo definido por ley o bien oficialmente designado histórico, con daños superiores a $200.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. El tribunal debe ordenar restitución que incluya el costo total de reparación o reemplazo. Si hubo grafitis, las multas adicionales mínimas son $250, $500 y $1,000 en la primera, segunda y posteriores condenas, salvo incapacidad de pago. Se exigen al menos 40 horas de servicio comunitario y, si es posible, al menos 100 de eliminación de grafitis; existen reglas para menores."
+        },
+        "zh": {
+          "plainSummary": "未经所有者同意，故意且恶意污损或破坏第806.135(1)条定义的纪念物或正式指定的历史财产，造成超过200美元的损失。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 法院须判令赔偿，包括全部修理或更换费用。 涉及涂鸦时，首犯、再次及之后定罪的附加罚金下限分别为250、500和1,000美元，无力支付时可免。须至少40小时社区服务，并在可能时至少100小时清除涂鸦；未成年人另有规定。"
+        }
+      }
+    },
+    "conductScope": "(3)"
+  },
+  {
+    "id": "fl-fs-806-13-4-property-damage",
+    "section": "806.13",
+    "scope": "(4)",
+    "officialTitle": "Criminal mischief; penalties; penalty for minor",
+    "dependencies": [
+      "806.13",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "806.13": [
+        "(4)",
+        "(8)",
+        "(9)",
+        "(10)",
+        "(11)",
+        "(12)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-13-4-property-damage",
+      "name": "Intentional property damage during unlawful occupancy or trespass",
+      "names": {
+        "es": "Daño intencional durante ocupación ilícita o entrada sin derecho",
+        "zh": "非法占用或擅入期间故意损坏财产"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "806.13(4)",
+      "slug": "fl-fs-806-13-4-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.13(4)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Criminal mischief; penalties; penalty for minor",
+          "FS 806.13(4)",
+          "F.S. 806.13(4)"
+        ],
+        "es": [
+          "Criminal mischief; penalties; penalty for minor",
+          "FS 806.13(4)",
+          "F.S. 806.13(4)"
+        ],
+        "zh": [
+          "Criminal mischief; penalties; penalty for minor",
+          "FS 806.13(4)",
+          "F.S. 806.13(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Unlawfully detaining, occupying or trespassing upon a residential dwelling or commercial real property and intentionally damaging that property, causing at least $1,000 in damage.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. The court may order payment for damage. If graffiti is involved, additional fine minimums are $250, $500 and $1,000 for first, second and later convictions, subject to inability to pay. At least 40 community-service hours are required and, if possible, at least 100 hours of graffiti removal; special juvenile rules may apply."
+        },
+        "es": {
+          "plainSummary": "Retener, ocupar o invadir ilícitamente una vivienda o inmueble comercial y causarle intencionalmente daños de al menos $1,000.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. El tribunal puede exigir el pago del daño. Si hubo grafitis, las multas adicionales mínimas son $250, $500 y $1,000 en la primera, segunda y posteriores condenas, salvo incapacidad de pago. Se exigen al menos 40 horas de servicio comunitario y, si es posible, al menos 100 de eliminación de grafitis; existen reglas para menores."
+        },
+        "zh": {
+          "plainSummary": "非法扣占、占用或擅自进入住宅或商业不动产，并故意损坏该处，造成至少1,000美元损失。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 法院可判令赔偿损失。涉及涂鸦时，首犯、再次及之后定罪的附加罚金下限分别为250、500和1,000美元，无力支付时可免。须至少40小时社区服务，并在可能时至少100小时清除涂鸦；未成年人另有规定。"
+        }
+      }
+    },
+    "conductScope": "(4)"
+  },
+  {
+    "id": "fl-fs-806-13-5-property-damage",
+    "section": "806.13",
+    "scope": "(5)",
+    "officialTitle": "Criminal mischief; penalties; penalty for minor",
+    "dependencies": [
+      "806.13",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "806.13": [
+        "(5)",
+        "(8)",
+        "(9)",
+        "(10)",
+        "(11)",
+        "(12)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-13-5-property-damage",
+      "name": "Criminal mischief involving a public telephone",
+      "names": {
+        "es": "Daños a un teléfono público",
+        "zh": "损毁公共电话"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "806.13(5)",
+      "slug": "fl-fs-806-13-5-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.13(5)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Criminal mischief; penalties; penalty for minor",
+          "FS 806.13(5)",
+          "F.S. 806.13(5)"
+        ],
+        "es": [
+          "Criminal mischief; penalties; penalty for minor",
+          "FS 806.13(5)",
+          "F.S. 806.13(5)"
+        ],
+        "zh": [
+          "Criminal mischief; penalties; penalty for minor",
+          "FS 806.13(5)",
+          "F.S. 806.13(5)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Without owner consent, willfully destroying or substantially damaging a public telephone or its apparatus, rendering the telephone inoperative or opening its body. A conspicuous notice of this law and its penalties must be posted on or near the instrument and visible to the public at the time.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. The court may order payment for damage. If graffiti is involved, additional fine minimums are $250, $500 and $1,000 for first, second and later convictions, subject to inability to pay. At least 40 community-service hours are required and, if possible, at least 100 hours of graffiti removal; special juvenile rules may apply."
+        },
+        "es": {
+          "plainSummary": "Sin consentimiento del propietario, destruir deliberadamente o dañar sustancialmente un teléfono público o su equipo, dejándolo inoperante o abriendo su carcasa. Debe haber en el aparato o cerca un aviso destacado de la norma y sus sanciones, visible al público en ese momento.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. El tribunal puede exigir el pago del daño. Si hubo grafitis, las multas adicionales mínimas son $250, $500 y $1,000 en la primera, segunda y posteriores condenas, salvo incapacidad de pago. Se exigen al menos 40 horas de servicio comunitario y, si es posible, al menos 100 de eliminación de grafitis; existen reglas para menores."
+        },
+        "zh": {
+          "plainSummary": "未经所有者同意，故意破坏或严重损坏公共电话或其设备，使电话无法使用或导致机壳打开。当时须在电话上或附近张贴公众可见的醒目法律及处罚告示。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 法院可判令赔偿损失。涉及涂鸦时，首犯、再次及之后定罪的附加罚金下限分别为250、500和1,000美元，无力支付时可免。须至少40小时社区服务，并在可能时至少100小时清除涂鸦；未成年人另有规定。"
+        }
+      }
+    },
+    "conductScope": "(5)"
+  },
+  {
+    "id": "fl-fs-806-135-2-property-damage",
+    "section": "806.135",
+    "scope": "(2)",
+    "officialTitle": "Destroying or demolishing a memorial or historic property",
+    "dependencies": [
+      "806.135",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "806.135": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-135-2-property-damage",
+      "name": "Destroying or demolishing a memorial or historic property",
+      "names": {
+        "es": "Destrucción o demolición de un monumento conmemorativo o bien histórico",
+        "zh": "毁坏或拆毁纪念物或历史财产"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "806.135(2)",
+      "slug": "fl-fs-806-135-2-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.135(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.135.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.135",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.135.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Destroying or demolishing a memorial or historic property",
+          "FS 806.135(2)",
+          "F.S. 806.135(2)"
+        ],
+        "es": [
+          "Destroying or demolishing a memorial or historic property",
+          "FS 806.135(2)",
+          "F.S. 806.135(2)"
+        ],
+        "zh": [
+          "Destroying or demolishing a memorial or historic property",
+          "FS 806.135(2)",
+          "F.S. 806.135(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully and maliciously destroying, demolishing or pulling down a statutorily defined memorial or officially designated historic property without owner authorization. This branch does not specify a dollar threshold.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. The court must order restitution including the full repair or replacement cost."
+        },
+        "es": {
+          "plainSummary": "Destruir, demoler o derribar deliberadamente y con malicia un monumento conmemorativo definido por ley o bien oficialmente designado histórico sin autorización del propietario. Este apartado no exige una cuantía determinada.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. El tribunal debe ordenar restitución que incluya el costo total de reparación o reemplazo."
+        },
+        "zh": {
+          "plainSummary": "未经所有者授权，故意且恶意摧毁、拆除或拉倒法定纪念物或正式指定的历史财产。本款未设金额门槛。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 法院须判令赔偿，包括全部修理或更换费用。"
+        }
+      }
+    },
+    "conductScope": "(2)"
+  },
+  {
+    "id": "fl-fs-806-14-2-a-property-damage",
+    "section": "806.14",
+    "scope": "(2)(a)",
+    "officialTitle": "Art works in public buildings; willful damage; unauthorized removal; penalties",
+    "dependencies": [
+      "806.14",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "806.14": [
+        "(1)",
+        "(2)(a)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-14-2-a-property-damage",
+      "name": "Damage or unauthorized removal of art in a public building: $200 or less",
+      "names": {
+        "es": "Daño o retiro no autorizado de arte en edificio público: $200 o menos",
+        "zh": "损坏或擅自移走公共建筑内的艺术品： 不超过200美元"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "806.14(2)(a)",
+      "slug": "fl-fs-806-14-2-a-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.14(2)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.14.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.14",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.14.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Art works in public buildings; willful damage; unauthorized removal; penalties",
+          "FS 806.14(2)(a)",
+          "F.S. 806.14(2)(a)"
+        ],
+        "es": [
+          "Art works in public buildings; willful damage; unauthorized removal; penalties",
+          "FS 806.14(2)(a)",
+          "F.S. 806.14(2)(a)"
+        ],
+        "zh": [
+          "Art works in public buildings; willful damage; unauthorized removal; penalties",
+          "FS 806.14(2)(a)",
+          "F.S. 806.14(2)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully destroying, mutilating, defacing or injuring a work of art displayed in a public building, or removing it without authority. The restoration cost in labor and supplies, or the replacement value, is $200 or less.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine."
+        },
+        "es": {
+          "plainSummary": "Destruir, mutilar, desfigurar o dañar deliberadamente una obra de arte expuesta en un edificio público, o retirarla sin autorización. El costo de restauración en mano de obra y materiales, o el valor de reemplazo, es de $200 o menos.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500."
+        },
+        "zh": {
+          "plainSummary": "故意破坏、损毁、污损或损伤公共建筑内展出的艺术品，或未经授权将其移走。 修复所需人工和材料费用或替换价值为 不超过200美元。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。"
+        }
+      }
+    },
+    "conductScope": "(1)"
+  },
+  {
+    "id": "fl-fs-806-14-2-b-property-damage",
+    "section": "806.14",
+    "scope": "(2)(b)",
+    "officialTitle": "Art works in public buildings; willful damage; unauthorized removal; penalties",
+    "dependencies": [
+      "806.14",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "806.14": [
+        "(1)",
+        "(2)(b)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-14-2-b-property-damage",
+      "name": "Damage or unauthorized removal of art in a public building: over $200 but under $1,000",
+      "names": {
+        "es": "Daño o retiro no autorizado de arte en edificio público: más de $200 y menos de $1,000",
+        "zh": "损坏或擅自移走公共建筑内的艺术品： 超过200但低于1,000美元"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "806.14(2)(b)",
+      "slug": "fl-fs-806-14-2-b-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.14(2)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.14.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.14",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.14.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Art works in public buildings; willful damage; unauthorized removal; penalties",
+          "FS 806.14(2)(b)",
+          "F.S. 806.14(2)(b)"
+        ],
+        "es": [
+          "Art works in public buildings; willful damage; unauthorized removal; penalties",
+          "FS 806.14(2)(b)",
+          "F.S. 806.14(2)(b)"
+        ],
+        "zh": [
+          "Art works in public buildings; willful damage; unauthorized removal; penalties",
+          "FS 806.14(2)(b)",
+          "F.S. 806.14(2)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully destroying, mutilating, defacing or injuring a work of art displayed in a public building, or removing it without authority. The restoration cost in labor and supplies, or the replacement value, is over $200 but under $1,000.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine."
+        },
+        "es": {
+          "plainSummary": "Destruir, mutilar, desfigurar o dañar deliberadamente una obra de arte expuesta en un edificio público, o retirarla sin autorización. El costo de restauración en mano de obra y materiales, o el valor de reemplazo, es de más de $200 y menos de $1,000.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000."
+        },
+        "zh": {
+          "plainSummary": "故意破坏、损毁、污损或损伤公共建筑内展出的艺术品，或未经授权将其移走。 修复所需人工和材料费用或替换价值为 超过200但低于1,000美元。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    },
+    "conductScope": "(1)"
+  },
+  {
+    "id": "fl-fs-806-14-2-c-property-damage",
+    "section": "806.14",
+    "scope": "(2)(c)",
+    "officialTitle": "Art works in public buildings; willful damage; unauthorized removal; penalties",
+    "dependencies": [
+      "806.14",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "806.14": [
+        "(1)",
+        "(2)(c)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-806-14-2-c-property-damage",
+      "name": "Damage or unauthorized removal of art in a public building: $1,000 or more",
+      "names": {
+        "es": "Daño o retiro no autorizado de arte en edificio público: $1,000 o más",
+        "zh": "损坏或擅自移走公共建筑内的艺术品： 至少1,000美元"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "806.14(2)(c)",
+      "slug": "fl-fs-806-14-2-c-property-damage",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 806.14(2)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.14.html"
+        },
+        {
+          "citation": "Fla. Stat. § 806.14",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.14.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Art works in public buildings; willful damage; unauthorized removal; penalties",
+          "FS 806.14(2)(c)",
+          "F.S. 806.14(2)(c)"
+        ],
+        "es": [
+          "Art works in public buildings; willful damage; unauthorized removal; penalties",
+          "FS 806.14(2)(c)",
+          "F.S. 806.14(2)(c)"
+        ],
+        "zh": [
+          "Art works in public buildings; willful damage; unauthorized removal; penalties",
+          "FS 806.14(2)(c)",
+          "F.S. 806.14(2)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully destroying, mutilating, defacing or injuring a work of art displayed in a public building, or removing it without authority. The restoration cost in labor and supplies, or the replacement value, is $1,000 or more.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Destruir, mutilar, desfigurar o dañar deliberadamente una obra de arte expuesta en un edificio público, o retirarla sin autorización. El costo de restauración en mano de obra y materiales, o el valor de reemplazo, es de $1,000 o más.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "故意破坏、损毁、污损或损伤公共建筑内展出的艺术品，或未经授权将其移走。 修复所需人工和材料费用或替换价值为 至少1,000美元。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    },
+    "conductScope": "(1)"
+  }
+]

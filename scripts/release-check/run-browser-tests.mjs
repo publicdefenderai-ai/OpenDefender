@@ -138,6 +138,7 @@ const testProcess = spawn(
     "tests/e2e/florida-persons-publication-release.spec.ts",
     "tests/e2e/florida-robbery-publication-release.spec.ts",
     "tests/e2e/florida-false-reports-publication-release.spec.ts",
+    "tests/e2e/florida-property-damage-publication-release.spec.ts",
     "tests/e2e/florida-forged-instruments-publication-release.spec.ts",
     "tests/e2e/florida-corruption-publication-release.spec.ts",
     "tests/e2e/florida-road-racing-publication-release.spec.ts",
