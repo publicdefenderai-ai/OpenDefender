@@ -1,6 +1,6 @@
 import { lawyerQuestions, counselCopyKey } from "../../locales/guidance-reader";
 import { flushSync } from "react-dom";
-import { isOhioPlan, canOutputOhioPlan, ohioReselectionNotice, OhioChargeConfirmationError } from "@/lib/ohio-guidance-output";
+import { requiresOhioChargeConfirmation, canOutputOhioPlan, ohioReselectionNotice, OhioChargeConfirmationError } from "@/lib/ohio-guidance-output";
 import { ChargeTranslationSupplement } from "./charge-translation-supplement";
 import { fetchChargeCatalog } from "@/lib/charge-catalog";
 import { translationUnavailableNotice } from "@shared/translation-unavailable-notice";
@@ -1030,7 +1030,7 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
   const practicalActions = [...practicalStarterActions, ...generatedPracticalActions.map(action => action.action)];
 
   async function handlePrint() {
-    if (!isOhioPlan(guidance)) {
+    if (!requiresOhioChargeConfirmation(guidance)) {
       window.print();
       return;
     }
