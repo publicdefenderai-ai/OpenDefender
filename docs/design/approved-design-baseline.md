@@ -669,3 +669,7 @@ The approved mitigation-builder-content.html design places the seven social-hist
 ### First Contact Intake Checklist
 
 The approved advocate-intake-content.html reference (SHA-256 ae87d9dc7eb9f2e25220e33225ee77e86e143f2026804ca754ef7ad99f6dd175) places the seven screening sections above the draft record. All 32 fields use the existing screening and record-generation rules. Answers stay in component memory. The page retains the supervision notice, resource destinations and four ways to take a copy. Browser print uses the same draft text as the text download. The English intake is marked for screen readers in all interface languages.
+
+### Advocate Hub
+
+The approved opendefender-advocate-hub-preview.html (SHA-256 865db40eaed5b3d5911076632688be0dc8f13db82006be5257a1452d970de110) features First Contact Intake and Mitigation Builder. The subsequent heading decision was “Tools for your practice.” Five categories keep the original fragment IDs and 18 resource entries, including three links into the reputation guide. Short descriptions identify each destination. Two planned tools remain in a disclosure. The English resource area declares its language in every interface locale.

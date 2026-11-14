@@ -1,454 +1,200 @@
-import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Scale,
-  Heart,
-  Clock,
-  BookOpen,
-  Users,
-  AlertTriangle,
-  Shield,
-  FileText,
-  Search,
-  Home,
-  Brain,
-  Globe2,
-  Gavel,
-  ClipboardList,
-  Award,
-  FileSearch,
-} from "lucide-react";
 import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import "./advocate-hub.css";
 
-interface ToolCardProps {
-  Icon: React.ElementType;
-  title: string;
-  desc: string;
-  href?: string;
-  color: string;
-  bg: string;
-  accent: string;
-  comingSoon?: boolean;
-  badge?: string;
-}
-
-function ToolCard({ Icon, title, desc, href, color, bg, accent, comingSoon, badge }: ToolCardProps) {
-  const inner = (
-    <div
-      className={`editorial-card editorial-card-interactive flex flex-col h-full border-l-4 p-5
-        ${comingSoon
-          ? "opacity-60 cursor-default bg-muted/30 border-border"
-          : "cursor-pointer"}
-      `}
-      style={{ borderLeftColor: comingSoon ? undefined : "var(--editorial-signal)" }}
-    >
-      <div className="flex items-start justify-between mb-3">
-        <Icon
-          className={`h-5 w-5 flex-shrink-0 ${comingSoon ? "text-muted-foreground" : "text-[var(--editorial-signal)]"}`}
-          strokeWidth={1.75}
-        />
-        {badge && (
-          <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[var(--editorial-signal-soft)] text-[var(--editorial-signal)] ml-2">
-            {badge}
-          </span>
-        )}
-        {comingSoon && (
-          <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-muted text-muted-foreground ml-2">
-            Coming soon
-          </span>
-        )}
-      </div>
-      <p className={`font-semibold text-sm mb-1 leading-snug ${comingSoon ? "text-muted-foreground" : "text-foreground"}`}>
-        {title}
-      </p>
-      <p className="text-xs text-muted-foreground leading-relaxed flex-1 mb-3">{desc}</p>
-      {!comingSoon && (
-        <p className="text-xs font-semibold flex items-center gap-1 text-[var(--editorial-signal)]">
-          Open <ArrowRight className="h-3 w-3" />
-        </p>
-      )}
-    </div>
-  );
-
-  if (comingSoon || !href) return <div>{inner}</div>;
-
-  return (
-    <Link href={href}>
-      {inner}
-    </Link>
-  );
-}
-
-interface SectionProps {
-  id: string;
-  label: string;
-  headline: string;
-  intro: string;
-  children: React.ReactNode;
-  cols?: 2 | 3;
-}
-
-function Section({ id, label, headline, intro, children, cols = 2 }: SectionProps) {
-  return (
-    <section id={id} className="py-12 border-t border-border/30">
-      <div className="max-w-4xl mx-auto px-4">
-        <ScrollReveal>
-          <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">{label}</p>
-          <h2 className="text-xl font-bold text-foreground mb-3 leading-snug">{headline}</h2>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-8 max-w-2xl">{intro}</p>
-        </ScrollReveal>
-        <div className={`grid gap-4 ${cols === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
-          {children}
-        </div>
-      </div>
-    </section>
-  );
-}
+const categories = [
+  {
+    id: "before-plea",
+    label: "Before the plea",
+    title: "Before the Plea: Early Intervention",
+    intro: "Screen immediate risks and gather information before plea discussions.",
+    tools: [
+      {
+        href: "/for-advocates/intake-checklist",
+        title: "First Contact Intake Checklist",
+        description: "Prepare for first contact with structured questions and flags for issues needing prompt legal attention."
+      },
+      {
+        href: "/collateral-consequences",
+        title: "Arrest-Stage Risk Screener",
+        description: "Screen for risks involving housing, work, immigration, benefits, caregiving, supervision, and licensing."
+      },
+      {
+        href: "/support/court-logistics/bail-preparation",
+        title: "Bail & Pretrial Release Preparation",
+        description: "Gather employment, housing, community, and support information, with letter templates and a printable checklist."
+      },
+      {
+        href: "/diversion-programs",
+        title: "Diversion Programs",
+        description: "Browse program listings by location and program type. Confirm eligibility, requirements, and outcomes with the program and counsel."
+      }
+    ]
+  },
+  {
+    id: "life-stabilization",
+    label: "Life stabilization",
+    title: "Life Stabilization",
+    intro: "Connect clients and families with practical support.",
+    tools: [
+      {
+        href: "/support",
+        title: "Life & Family Support Hub",
+        description: "Find housing, employment, childcare, health, transportation, finances, and reentry resources to share with clients and families."
+      },
+      {
+        href: "/support/court-logistics",
+        title: "Court Logistics & Hearing Preparation",
+        description: "Prepare for court with practical guidance, hearing checklists, date reminders, and courthouse information."
+      },
+      {
+        href: "/support/mental-health",
+        title: "Mental Health & Crisis Resources",
+        description: "Find crisis lines, substance use programs, and community mental health resources."
+      },
+      {
+        href: "/immigration-guidance",
+        title: "Immigration Guidance",
+        description: "Explore rights during enforcement encounters, detainers, and civil immigration resources."
+      }
+    ]
+  },
+  {
+    id: "reputation",
+    label: "Reputation & history",
+    title: "Reputation & Social History",
+    intro: "Organize a fuller picture of the client and explore record-related resources.",
+    tools: [
+      {
+        href: "/for-advocates/mitigation-builder",
+        title: "Mitigation Builder",
+        description: "Organize community ties, housing, employment, treatment, family responsibilities, and references into a summary to copy or print."
+      },
+      {
+        href: "/support/reputation/eligibility",
+        title: "Expungement Eligibility Screener",
+        description: "Explore state-based record clearance information, waiting periods, and exclusions for further legal review."
+      },
+      {
+        href: "/support/reputation#rap-sheet",
+        title: "Rap Sheet Review & Error Correction",
+        description: "Find guidance on obtaining records, identifying errors, and requesting corrections."
+      },
+      {
+        href: "/support/reputation#certificates-of-relief",
+        title: "Certificates of Relief",
+        description: "Explore certificates of relief and related resources where these options are available."
+      },
+      {
+        href: "/support/reputation#fcra-rights",
+        title: "Background Check Rights (FCRA)",
+        description: "Review background-check notices, disputes, and communication templates for employers and landlords."
+      }
+    ]
+  },
+  {
+    id: "client-education",
+    label: "Client education",
+    title: "Client Education",
+    intro: "Share plain-language guides that help clients understand the process.",
+    tools: [
+      {
+        href: "/first-24-hours",
+        title: "First 24 Hours: Arrest to Arraignment",
+        description: "Walk clients and families through arrest, booking, bail, access to counsel, and arraignment."
+      },
+      {
+        href: "/case-timeline",
+        title: "Full Case Timeline",
+        description: "Help clients understand the stages of a criminal case and the decisions along the way."
+      },
+      {
+        href: "/rights-info",
+        title: "Know Your Rights",
+        description: "Share plain-language resources on police encounters, searches, questioning, and quick-reference cards."
+      },
+      {
+        href: "/friends-family",
+        title: "Friends & Family Guide",
+        description: "Help supporters locate a detained person and coordinate practical support throughout a case."
+      }
+    ]
+  },
+  {
+    id: "find-help",
+    label: "Find help",
+    title: "Find Additional Help",
+    intro: "Find organizations that may be able to provide additional assistance.",
+    tools: [
+      {
+        href: "/legal-aid",
+        title: "Legal Aid Directory",
+        description: "Locate legal aid organizations and other assistance by location and practice area."
+      }
+    ]
+  }
+];
 
 export default function ForAdvocates() {
   useScrollToTop();
-
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <Header />
+      <div lang="en" className="advocate-hub">
+        <header>
+          <p>Advocate Hub</p>
+          <h1>Tools for your practice</h1>
+          <p className="advocate-intro">Resources for public defenders, social workers and case advocates, from the first client meeting through resolution and beyond.</p>
+        </header>
 
-      {/* Hero */}
-      <section className="border-b border-border/60 bg-[var(--editorial-paper-deep)] py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <p className="editorial-kicker mb-4">
-              Advocate Hub
-            </p>
-            <h1 className="text-3xl md:text-4xl text-foreground mb-5 leading-tight">
-              Tools for Public Defenders,{" "}
-              <br className="hidden sm:block" />
-              Social Workers & Case Advocates
-            </h1>
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
-              Organized around how you actually work with clients, from first contact through resolution and beyond.
-            </p>
-            {/* Jump nav */}
-            <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
-              {[
-                { label: "Before the Plea", href: "#before-plea" },
-                { label: "Life Stabilization", href: "#life-stabilization" },
-                { label: "Reputation & History", href: "#reputation" },
-                { label: "Client Education", href: "#client-education" },
-                { label: "Find Help", href: "#find-help" },
-              ].map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="editorial-path-action text-xs font-semibold px-3 py-1.5 transition-colors"
-                >
-                  {item.label}
-                </a>
+        <div className="advocate-featured">
+          <article>
+            <p>At the first meeting</p>
+            <h2>First Contact Intake Checklist</h2>
+            <p>Screen for concerns about supervision, immigration, warrants, housing, health and caregiving.</p>
+            <Link href="/for-advocates/intake-checklist">Open intake checklist</Link>
+          </article>
+          <article>
+            <p>Prepare a client’s social history</p>
+            <h2>Mitigation Builder</h2>
+            <p>Bring community ties, treatment, employment and family responsibilities into a structured summary.</p>
+            <Link href="/for-advocates/mitigation-builder">Open mitigation builder</Link>
+          </article>
+        </div>
+
+        <nav aria-label="Resource categories">
+          {categories.map(category => <a key={category.id} href={`#${category.id}`}>{category.label}</a>)}
+        </nav>
+        {categories.map(category => (
+          <section className="advocate-category" key={category.id} id={category.id} tabIndex={-1} aria-labelledby={`${category.id}-title`}>
+            <header>
+              <small>{category.tools.length} {category.tools.length === 1 ? "resource" : "resources"}</small>
+              <h2 id={`${category.id}-title`}>{category.title}</h2>
+              <p>{category.intro}</p>
+            </header>
+            <ul className="advocate-tools">
+              {category.tools.map(tool => (
+                <li key={tool.href}>
+                  <h3><Link href={tool.href}>{tool.title}</Link></h3>
+                  <p>{tool.description}</p>
+                </li>
               ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            </ul>
+          </section>
+        ))}
 
-      {/* Section 1 — Before the Plea */}
-      <Section
-        id="before-plea"
-        label="Section 1"
-        headline="Before the Plea: Early Intervention"
-        intro="The decisions made in the first days after arrest have the longest reach. Collateral consequences, pretrial detention status, and diversion eligibility all need to be evaluated before any plea discussion. Advocates working at this stage can change outcomes more than at any other point in the process."
-        cols={3}
-      >
-        <ScrollReveal delay={0}>
-          <ToolCard
-            Icon={ClipboardList}
-            title="First Contact Intake Checklist"
-            desc="A structured screening tool for the first meeting with a new client. Covers supervision status, immigration exposure, open warrants, housing, mental health, and caregiving. Flags fire automatically for answers that require immediate legal attention — Padilla triggers, active supervision, open warrants."
-            href="/for-advocates/intake-checklist"
-            color="text-violet-600 dark:text-violet-400"
-            bg="bg-violet-50 dark:bg-violet-900/10"
-            accent="#7c3aed"
-            badge="Start here"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.07}>
-          <ToolCard
-            Icon={AlertTriangle}
-            title="Arrest-Stage Risk Screener"
-            desc="Before any plea discussion: screen for immediate risks to housing, employment, immigration status, federal benefits, child welfare, supervision violation, and professional licensing. 7 yes-or-no questions. Results sorted by urgency with actions. Runs entirely in the browser."
-            href="/collateral-consequences"
-            color="text-red-600 dark:text-red-400"
-            bg="bg-red-50 dark:bg-red-900/10"
-            accent="#dc2626"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.14}>
-          <ToolCard
-            Icon={Gavel}
-            title="Bail & Pretrial Release Preparation"
-            desc="Pretrial detention status is the single strongest predictor of case outcome. Detained clients are more likely to accept unfavorable pleas regardless of the underlying facts. Preparation checklist, documentation guide, and jurisdiction-specific bail factors."
-            href="/support/court-logistics/bail-preparation"
-            color="text-amber-600 dark:text-amber-400"
-            bg="bg-amber-50 dark:bg-amber-900/10"
-            accent="#d97706"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.21}>
-          <ToolCard
-            Icon={Scale}
-            title="Diversion Programs"
-            desc="111 programs across all 50 states + DC + Federal. When a client is eligible, diversion is the upstream intervention that makes every other resource unnecessary, with no conviction, no record, and no collateral consequences. Filter by state, charge type, and program type."
-            href="/diversion-programs"
-            color="text-teal-600 dark:text-teal-400"
-            bg="bg-teal-50 dark:bg-teal-900/10"
-            accent="#0f766e"
-          />
-        </ScrollReveal>
-      </Section>
-
-      {/* Section 2 — Life Stabilization */}
-      <Section
-        id="life-stabilization"
-        label="Section 2"
-        headline="Life Stabilization"
-        intro="When clients can focus on their case rather than where they will sleep or how they will feed their family, outcomes improve. These resources help stabilize the circumstances that would otherwise consume a client's attention during the most consequential period of their life."
-      >
-        <ScrollReveal delay={0}>
-          <ToolCard
-            Icon={Heart}
-            title="Life & Family Support Hub"
-            desc="Housing, employment, childcare, mental health, transportation, finances, and re-entry resources, organized by life area. Designed to be shared directly with clients or referred to family members who are coordinating support."
-            href="/support"
-            color="text-rose-600 dark:text-rose-400"
-            bg="bg-rose-50 dark:bg-rose-900/10"
-            accent="#be185d"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.07}>
-          <ToolCard
-            Icon={Home}
-            title="Court Logistics & Hearing Preparation"
-            desc="What to bring to court, court etiquette guidance, bail preparation checklist, and court locator. Clients who arrive prepared and present themselves well make better impressions, and that matters."
-            href="/support/court-logistics"
-            color="text-slate-600 dark:text-slate-400"
-            bg="bg-slate-50 dark:bg-slate-900/10"
-            accent="#475569"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.14}>
-          <ToolCard
-            Icon={Brain}
-            title="Mental Health & Crisis Resources"
-            desc="Crisis lines, substance use programs, and community mental health resources by issue type. For clients who need stabilization before court dates, and for documenting treatment participation as part of a mitigation narrative."
-            href="/support/mental-health"
-            color="text-blue-600 dark:text-blue-400"
-            bg="bg-blue-50 dark:bg-blue-900/10"
-            accent="#1d4ed8"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.21}>
-          <ToolCard
-            Icon={Globe2}
-            title="Immigration Guidance"
-            desc="Rights during ICE encounters, detainer explained, and civil immigration resources. For clients with unresolved immigration status, this affects both the plea calculation and the collateral consequence screen."
-            href="/immigration-guidance"
-            color="text-orange-600 dark:text-orange-400"
-            bg="bg-orange-50 dark:bg-orange-900/10"
-            accent="#c2410c"
-          />
-        </ScrollReveal>
-      </Section>
-
-      {/* Section 3 — Reputation & Social History */}
-      <Section
-        id="reputation"
-        label="Section 3"
-        headline="Reputation & Social History"
-        intro="Judges and prosecutors respond to the whole person, not just the charge sheet. Presenting a client's community ties, treatment history, housing stability, employment record, and character can shift bail decisions, diversion eligibility rulings, and sentencing outcomes. These tools support both pre-plea mitigation work and post-resolution record relief."
-      >
-        <ScrollReveal delay={0}>
-          <ToolCard
-            Icon={FileText}
-            title="Mitigation Builder"
-            desc="A structured intake form covering the social history domains courts respond to: community ties, housing, employment, treatment participation, family responsibilities, character references, and additional context. Output is a formatted summary ready to copy or print for bail hearings, diversion eligibility, and sentencing."
-            href="/for-advocates/mitigation-builder"
-            color="text-violet-600 dark:text-violet-400"
-            bg="bg-violet-50 dark:bg-violet-900/10"
-            accent="#7c3aed"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.07}>
-          <ToolCard
-            Icon={Search}
-            title="Expungement Eligibility Screener"
-            desc="State-specific eligibility for expungement and record sealing, covering clean slate laws in 11 states, waiting periods, and charge-type exclusions. Useful for post-resolution planning and for advising clients on long-term record strategy before they accept a plea."
-            href="/support/reputation/eligibility"
-            color="text-green-600 dark:text-green-400"
-            bg="bg-green-50 dark:bg-green-900/10"
-            accent="#16a34a"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.14}>
-          <ToolCard
-            Icon={FileSearch}
-            title="Rap Sheet Review & Error Correction"
-            desc="Step-by-step guide to obtaining FBI and state rap sheets, identifying the most common errors (misattributed charges, missing dispositions, stale arrest records), and submitting disputes. Errors on a rap sheet can affect bail, plea offers, and sentencing, and are more common than most clients expect."
-            href="/support/reputation#rap-sheet"
-            color="text-slate-600 dark:text-slate-400"
-            bg="bg-slate-50 dark:bg-slate-900/10"
-            accent="#475569"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.21}>
-          <ToolCard
-            Icon={Award}
-            title="Certificates of Relief"
-            desc="Where full expungement is unavailable, certificates of relief offer partial restoration of rights and can be presented to employers and landlords. Covers IL, NY, OH, and other states where this option exists, with links to the Collateral Consequences Resource Center."
-            href="/support/reputation#certificates-of-relief"
-            color="text-amber-600 dark:text-amber-400"
-            bg="bg-amber-50 dark:bg-amber-900/10"
-            accent="#b45309"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.28}>
-          <ToolCard
-            Icon={Shield}
-            title="Background Check Rights (FCRA)"
-            desc="Adverse action notice rights, dispute procedures, and lookback period rules. Includes copy-ready employer and landlord communication templates clients can use directly, especially useful while a case is pending and before an expungement clears."
-            href="/support/reputation#fcra-rights"
-            color="text-cyan-600 dark:text-cyan-400"
-            bg="bg-cyan-50 dark:bg-cyan-900/10"
-            accent="#0891b2"
-          />
-        </ScrollReveal>
-      </Section>
-
-      {/* Section 4 — Client Education */}
-      <Section
-        id="client-education"
-        label="Section 4"
-        headline="Client Education"
-        intro="Clients who understand what's happening to them participate more effectively in their own defense. These plain-language resources are designed to be shared directly, all available in English, Spanish, and Chinese."
-      >
-        <ScrollReveal delay={0}>
-          <ToolCard
-            Icon={Clock}
-            title="First 24 Hours: Arrest to Arraignment"
-            desc="Step-by-step guide from moment of arrest through booking, the jail phone call, bail, right to counsel, and arraignment. Includes a state-by-state inmate locator and full jail phone call script. Shareable with family members during the critical window."
-            href="/first-24-hours"
-            color="text-red-600 dark:text-red-400"
-            bg="bg-red-50 dark:bg-red-900/10"
-            accent="#dc2626"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.07}>
-          <ToolCard
-            Icon={BookOpen}
-            title="Full Case Timeline"
-            desc="7-stage visual guide from arrest through sentencing: arrest, booking, arraignment, pretrial, discovery, trial, sentencing. Covers client rights and key decisions at each stage. Useful at any point in the process for orienting clients to where they are."
-            href="/case-timeline"
-            color="text-slate-600 dark:text-slate-400"
-            bg="bg-slate-50 dark:bg-slate-900/10"
-            accent="#475569"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.14}>
-          <ToolCard
-            Icon={Shield}
-            title="Know Your Rights"
-            desc="Core rights during police encounters, traffic stops, searches, and interrogations. Includes search and seizure scenarios and quick-reference cards. Available in English, Spanish, and Chinese, printable for distribution."
-            href="/rights-info"
-            color="text-blue-600 dark:text-blue-400"
-            bg="bg-blue-50 dark:bg-blue-900/10"
-            accent="#1d4ed8"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.21}>
-          <ToolCard
-            Icon={Users}
-            title="Friends & Family Guide"
-            desc="For clients whose family members are coordinating support: what to do when a loved one is arrested, how to locate a detained person, how to support someone through the process. Available in English, Spanish, and Chinese."
-            href="/friends-family"
-            color="text-pink-600 dark:text-pink-400"
-            bg="bg-pink-50 dark:bg-pink-900/10"
-            accent="#db2777"
-          />
-        </ScrollReveal>
-      </Section>
-
-      {/* Section 5 — Find Help */}
-      <Section
-        id="find-help"
-        label="Section 5"
-        headline="Find Additional Help"
-        intro="When your client needs representation they don't yet have, these resources help locate legal aid and pro bono services by location."
-        cols={2}
-      >
-        <ScrollReveal delay={0}>
-          <ToolCard
-            Icon={Users}
-            title="Legal Aid Directory"
-            desc="Find legal aid organizations near any ZIP code. Includes LSC-funded offices, pro bono programs, and law school clinics, searchable by location and practice area."
-            href="/legal-aid"
-            color="text-teal-600 dark:text-teal-400"
-            bg="bg-teal-50 dark:bg-teal-900/10"
-            accent="#0f766e"
-          />
-        </ScrollReveal>
-      </Section>
-
-      {/* Coming soon footer strip */}
-      <section className="py-10 border-t border-border/30 bg-muted/20">
-        <div className="max-w-4xl mx-auto px-4">
-          <ScrollReveal>
-            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">In development</p>
-            <p className="text-sm font-semibold text-foreground mb-5">Tools being built specifically for advocates</p>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {[
-                {
-                  Icon: Gavel,
-                  title: "Pretrial Release Arguments",
-                  desc: "Jurisdiction-specific bail factors, statutory alternatives to cash bail, and release argument language.",
-                },
-                {
-                  Icon: Globe2,
-                  title: "Immigration Intersection Screen",
-                  desc: "Padilla-compliant tool: does this charge trigger deportation or inadmissibility in this jurisdiction?",
-                },
-              ].map(({ Icon, title, desc }) => (
-                <div key={title} className="flex items-start gap-3 rounded-lg border border-dashed border-border p-4 bg-background">
-                  <Icon className="h-4 w-4 mt-0.5 flex-shrink-0 text-muted-foreground" strokeWidth={1.75} />
-                  <div>
-                    <p className="text-sm font-semibold text-foreground">{title}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Footer note */}
-      <section className="py-8 border-t border-border/20">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-xs text-muted-foreground max-w-lg mx-auto">
-            OpenDefender is built around the holistic defense model. If you work in public defense, social work, or community advocacy and want to shape what gets built next,{" "}
-            <Link href="/mission-statement" className="font-medium text-foreground underline underline-offset-2 hover:no-underline">
-              learn more about the project
-            </Link>
-            .
-          </p>
-        </div>
-      </section>
-
+        <details className="advocate-planned">
+          <summary>In development · 2 tools</summary>
+          <ul className="advocate-tools">
+            <li><h3>Pretrial Release Arguments</h3><p>Planned resources for bail factors, alternatives to cash bail and release arguments.</p></li>
+            <li><h3>Immigration Intersection Screen</h3><p>Planned screening support for immigration consequences that require specialist review.</p></li>
+          </ul>
+        </details>
+        <p className="advocate-mission">OpenDefender is built around the holistic defense model. If you work in public defense, social work or community advocacy, <Link href="/mission-statement">learn more about the project</Link>.</p>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

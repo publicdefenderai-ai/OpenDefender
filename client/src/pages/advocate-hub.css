@@ -1,0 +1,33 @@
+.advocate-hub { max-width: 72rem; margin: auto; padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 5vw, 3.5rem); }
+.advocate-hub h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); letter-spacing: -.045em; line-height: 1.08; margin: .8rem 0; }
+.advocate-hub h2 { font-size: clamp(1.35rem, 2.5vw, 1.7rem); line-height: 1.24; letter-spacing: -.025em; }
+.advocate-hub h3 { font-weight: 550; font-size: 1.12rem; line-height: 1.4; }
+.advocate-hub p, .advocate-hub small { color: var(--muted-foreground); line-height: 1.65; }
+.advocate-intro, .advocate-mission { max-width: 70ch; }
+.advocate-intro { font-size: 1.1rem; }
+.advocate-hub a { color: var(--primary); }
+.advocate-hub a:hover, .advocate-hub a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
+.advocate-hub :focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+.advocate-featured, .advocate-tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.advocate-featured { margin-top: 2rem; background: var(--editorial-signal-soft); }
+.advocate-featured article { display: flex; flex-direction: column; align-items: flex-start; gap: .8rem; padding: clamp(1.25rem, 3vw, 2rem); }
+.advocate-featured article + article { border-inline-start: 1px solid var(--border); }
+.advocate-featured article > p:first-child { font-size: .875rem; }
+.advocate-featured a { margin-top: auto; font-weight: 600; }
+.advocate-featured a, .advocate-hub nav a, .advocate-tools a { display: inline-flex; align-items: center; min-height: 44px; }
+.advocate-hub nav { display: flex; flex-wrap: wrap; column-gap: 1.5rem; padding-block: 1rem; }
+.advocate-category { display: grid; grid-template-columns: minmax(12rem, 1fr) minmax(0, 3fr); gap: 2.5rem; padding-block: 2rem; border-top: 1px solid var(--border); scroll-margin-top: 6rem; }
+.advocate-category h2 { margin: .55rem 0; }
+.advocate-tools { gap: 1.4rem 2rem; }
+.advocate-tools li { border-top: 1px solid var(--border); padding-top: .55rem; }
+.advocate-planned, .advocate-mission { border-top: 1px solid var(--border); padding-block: 1rem; }
+.advocate-planned summary { cursor: pointer; padding-block: .7rem; }
+.advocate-planned ul { margin-top: 1rem; }
+@media (max-width: 760px) {
+  .advocate-category, .advocate-featured { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .advocate-category header { margin-bottom: 1rem; }
+  .advocate-featured article + article { border-inline-start: 0; border-top: 1px solid var(--border); }
+}
+@media (max-width: 500px) {
+  .advocate-tools { grid-template-columns: minmax(0, 1fr); }
+}
