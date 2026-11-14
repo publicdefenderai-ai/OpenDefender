@@ -1,0 +1,617 @@
+[
+  {
+    "level": 1,
+    "row": 6,
+    "levelRows": 37,
+    "citation": "319.30(5)",
+    "degree": "3rd",
+    "description": "Sell, exchange, give away certificate of title or identification number plate.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 1,
+    "row": 19,
+    "levelRows": 37,
+    "citation": "817.52(2)",
+    "degree": "3rd",
+    "description": "Hiring with intent to defraud, motor vehicle services.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 1,
+    "row": 31,
+    "levelRows": 37,
+    "citation": "849.23",
+    "degree": "3rd",
+    "description": "Gambling-related machines; “common offender” as to property rights.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 2,
+    "row": 6,
+    "levelRows": 38,
+    "citation": "590.28(1)",
+    "degree": "3rd",
+    "description": "Intentional burning of lands.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 2,
+    "row": 19,
+    "levelRows": 38,
+    "citation": "817.481(3)(a)",
+    "degree": "3rd",
+    "description": "Obtain credit or purchase with false, expired, counterfeit, etc., credit card, value over $300.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 2,
+    "row": 32,
+    "levelRows": 38,
+    "citation": "832.05(3)(a)",
+    "degree": "3rd",
+    "description": "Cashing or depositing item with intent to defraud.",
+    "result": "same_section_requires_scope_review",
+    "matches": [
+      {
+        "id": "fl-fs-832-05-giving-worthless-checks-drafts-and-debit-card-orders-penalty-duty-of-drawee-evidence-costs-complaint-form",
+        "code": "832.05(2)-(4)"
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "row": 11,
+    "levelRows": 69,
+    "citation": "328.07(4)",
+    "degree": "3rd",
+    "description": "Manufacture, exchange, or possess vessel with counterfeit or wrong ID number.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 3,
+    "row": 35,
+    "levelRows": 69,
+    "citation": "815.04(4)(b)",
+    "degree": "2nd",
+    "description": "Computer offense devised to defraud or obtain property.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 3,
+    "row": 58,
+    "levelRows": 69,
+    "citation": "893.13(7)(a)8.",
+    "degree": "3rd",
+    "description": "Withhold information from practitioner regarding previous receipt of or prescription for a controlled substance.",
+    "result": "same_section_requires_scope_review",
+    "matches": [
+      {
+        "id": "fl-fs-893-13-1-a-prohibited-acts-penalties",
+        "code": "893.13(1)(a)"
+      },
+      {
+        "id": "fl-fs-893-13-2-a-prohibited-acts-penalties",
+        "code": "893.13(2)(a)"
+      },
+      {
+        "id": "fl-fs-893-13-4-prohibited-acts-penalties",
+        "code": "893.13(4)"
+      },
+      {
+        "id": "fl-fs-893-13-5-prohibited-acts-penalties",
+        "code": "893.13(5)"
+      },
+      {
+        "id": "fl-fs-893-13-6-a-prohibited-acts-penalties",
+        "code": "893.13(6)(a)"
+      },
+      {
+        "id": "fl-possession-of-marijuana-under-20g",
+        "code": "893.13(6)(b)"
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "row": 10,
+    "levelRows": 64,
+    "citation": "784.08(2)(c)",
+    "degree": "3rd",
+    "description": "Battery on a person 65 years of age or older.",
+    "result": "exact_citation",
+    "matches": [
+      {
+        "id": "fl-fs-784-08-2-c-persons",
+        "code": "784.08(2)(c)"
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "row": 32,
+    "levelRows": 64,
+    "citation": "812.014(2)(d)2.",
+    "degree": "3rd",
+    "description": "Grand theft, 3rd degree; $750 or more taken from dwelling or its unenclosed curtilage.",
+    "result": "same_section_requires_scope_review",
+    "matches": [
+      {
+        "id": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
+        "code": "812.014(2)(e)"
+      },
+      {
+        "id": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
+        "code": "812.014(2)(f)"
+      },
+      {
+        "id": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
+        "code": "812.014(3)(a)"
+      },
+      {
+        "id": "fl-fs-812-014-3-b-petit-theft",
+        "code": "812.014(3)(b)"
+      },
+      {
+        "id": "fl-fs-812-014-3-c-petit-theft",
+        "code": "812.014(3)(c)"
+      },
+      {
+        "id": "fl-grand-theft-in-the-first-degree",
+        "code": "812.014(2)(a)"
+      },
+      {
+        "id": "fl-grand-theft-in-the-second-degree",
+        "code": "812.014(2)(b)"
+      },
+      {
+        "id": "fl-grand-theft-in-the-third-degree",
+        "code": "812.014(2)(c)"
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "row": 54,
+    "levelRows": 64,
+    "citation": "870.01(3)",
+    "degree": "2nd",
+    "description": "Aggravated rioting.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 5,
+    "row": 9,
+    "levelRows": 60,
+    "citation": "379.407(5)(b)3.",
+    "degree": "3rd",
+    "description": "Possession of 100 or more undersized spiny lobsters.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 5,
+    "row": 30,
+    "levelRows": 60,
+    "citation": "812.0145(2)(b)",
+    "degree": "2nd",
+    "description": "Theft from person 65 years of age or older; $10,000 or more but less than $50,000.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 5,
+    "row": 51,
+    "levelRows": 60,
+    "citation": "847.0138 (2) & (3)",
+    "degree": "3rd",
+    "description": "Transmission of material harmful to minors to a minor by electronic device or equipment.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 6,
+    "row": 11,
+    "levelRows": 70,
+    "citation": "784.021(1)(b)",
+    "degree": "3rd",
+    "description": "Aggravated assault; intent to commit felony.",
+    "result": "same_section_requires_scope_review",
+    "matches": [
+      {
+        "id": "fl-aggravated-assault",
+        "code": "784.021"
+      }
+    ]
+  },
+  {
+    "level": 6,
+    "row": 35,
+    "levelRows": 70,
+    "citation": "812.014(2)(c)5.",
+    "degree": "3rd",
+    "description": "Grand theft; third degree; firearm.",
+    "result": "same_section_requires_scope_review",
+    "matches": [
+      {
+        "id": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
+        "code": "812.014(2)(e)"
+      },
+      {
+        "id": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
+        "code": "812.014(2)(f)"
+      },
+      {
+        "id": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
+        "code": "812.014(3)(a)"
+      },
+      {
+        "id": "fl-fs-812-014-3-b-petit-theft",
+        "code": "812.014(3)(b)"
+      },
+      {
+        "id": "fl-fs-812-014-3-c-petit-theft",
+        "code": "812.014(3)(c)"
+      },
+      {
+        "id": "fl-grand-theft-in-the-first-degree",
+        "code": "812.014(2)(a)"
+      },
+      {
+        "id": "fl-grand-theft-in-the-second-degree",
+        "code": "812.014(2)(b)"
+      },
+      {
+        "id": "fl-grand-theft-in-the-third-degree",
+        "code": "812.014(2)(c)"
+      }
+    ]
+  },
+  {
+    "level": 6,
+    "row": 59,
+    "levelRows": 70,
+    "citation": "847.011",
+    "degree": "3rd",
+    "description": "Distributing, offering to distribute, or possessing with intent to distribute obscene materials depicting minors.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 7,
+    "row": 22,
+    "levelRows": 143,
+    "citation": "483.901(7)",
+    "degree": "3rd",
+    "description": "Practicing medical physics without a license.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 7,
+    "row": 72,
+    "levelRows": 143,
+    "citation": "812.014(2)(b)4.",
+    "degree": "2nd",
+    "description": "Property stolen, law enforcement equipment from authorized emergency vehicle.",
+    "result": "same_section_requires_scope_review",
+    "matches": [
+      {
+        "id": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
+        "code": "812.014(2)(e)"
+      },
+      {
+        "id": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
+        "code": "812.014(2)(f)"
+      },
+      {
+        "id": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
+        "code": "812.014(3)(a)"
+      },
+      {
+        "id": "fl-fs-812-014-3-b-petit-theft",
+        "code": "812.014(3)(b)"
+      },
+      {
+        "id": "fl-fs-812-014-3-c-petit-theft",
+        "code": "812.014(3)(c)"
+      },
+      {
+        "id": "fl-grand-theft-in-the-first-degree",
+        "code": "812.014(2)(a)"
+      },
+      {
+        "id": "fl-grand-theft-in-the-second-degree",
+        "code": "812.014(2)(b)"
+      },
+      {
+        "id": "fl-grand-theft-in-the-third-degree",
+        "code": "812.014(2)(c)"
+      }
+    ]
+  },
+  {
+    "level": 7,
+    "row": 121,
+    "levelRows": 143,
+    "citation": "893.135(1)(f)1.",
+    "degree": "1st",
+    "description": "Trafficking in amphetamine, 14 grams or more, less than 28 grams.",
+    "result": "exact_citation",
+    "matches": [
+      {
+        "id": "fl-fs-893-135-1-f-1-trafficking-in-amphetamine",
+        "code": "893.135(1)(f)1."
+      }
+    ]
+  },
+  {
+    "level": 8,
+    "row": 12,
+    "levelRows": 76,
+    "citation": "782.071(1)(b)",
+    "degree": "1st",
+    "description": "Committing vehicular homicide and failing to render aid or give information.",
+    "result": "same_section_requires_scope_review",
+    "matches": [
+      {
+        "id": "fl-vehicular-homicide",
+        "code": "782.071"
+      }
+    ]
+  },
+  {
+    "level": 8,
+    "row": 38,
+    "levelRows": 76,
+    "citation": "817.504(1)(b)",
+    "degree": "2nd",
+    "description": "Offering or advertising a vaccine with intent to defraud; second or subsequent offense.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 8,
+    "row": 64,
+    "levelRows": 76,
+    "citation": "893.135 (1)(f)1.b.",
+    "degree": "1st",
+    "description": "Trafficking in amphetamine, 28 grams or more, less than 200 grams.",
+    "result": "same_section_requires_scope_review",
+    "matches": [
+      {
+        "id": "fl-fs-893-135-1-b-1-trafficking-in-cocaine",
+        "code": "893.135(1)(b)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",
+        "code": "893.135(1)(c)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-c-2-trafficking-in-hydrocodone",
+        "code": "893.135(1)(c)2."
+      },
+      {
+        "id": "fl-fs-893-135-1-c-3-trafficking-in-oxycodone",
+        "code": "893.135(1)(c)3."
+      },
+      {
+        "id": "fl-fs-893-135-1-c-4-a-trafficking-in-dangerous-fentanyl-or-fentanyl-analogues",
+        "code": "893.135(1)(c)4.a."
+      },
+      {
+        "id": "fl-fs-893-135-1-c-7-trafficking-in-xylazine",
+        "code": "893.135(1)(c)7."
+      },
+      {
+        "id": "fl-fs-893-135-1-d-1-trafficking-in-phencyclidine",
+        "code": "893.135(1)(d)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-e-1-trafficking-in-methaqualone",
+        "code": "893.135(1)(e)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-f-1-trafficking-in-amphetamine",
+        "code": "893.135(1)(f)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-g-1-trafficking-in-flunitrazepam",
+        "code": "893.135(1)(g)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-h-1-trafficking-in-gamma-hydroxybutyric-acid-ghb",
+        "code": "893.135(1)(h)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-i-1-trafficking-in-gamma-butyrolactone-gbl",
+        "code": "893.135(1)(i)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-j-1-trafficking-in-1-4-butanediol",
+        "code": "893.135(1)(j)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-k-1-trafficking-in-phenethylamines",
+        "code": "893.135(1)(k)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-l-1-trafficking-in-lysergic-acid-diethylamide-lsd",
+        "code": "893.135(1)(l)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-m-1-trafficking-in-synthetic-cannabinoids",
+        "code": "893.135(1)(m)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-n-1-trafficking-in-n-benzyl-phenethylamines",
+        "code": "893.135(1)(n)1."
+      }
+    ]
+  },
+  {
+    "level": 9,
+    "row": 9,
+    "levelRows": 60,
+    "citation": "655.50(10)(b)3.",
+    "degree": "1st",
+    "description": "Failure to report financial transactions totaling or exceeding $100,000 by financial institution.",
+    "result": "section_absent",
+    "matches": []
+  },
+  {
+    "level": 9,
+    "row": 30,
+    "levelRows": 60,
+    "citation": "794.011(8)(b)",
+    "degree": "1st,PBL",
+    "description": "Sexual battery; engage in sexual conduct with minor 12 to 18 years by person in familial or custodial authority.",
+    "result": "same_section_requires_scope_review",
+    "matches": [
+      {
+        "id": "fl-fs-794-011-2-sexual-battery",
+        "code": "794.011(2)"
+      },
+      {
+        "id": "fl-sexual-assault-in-the-first-degree",
+        "code": "794.011(3)"
+      },
+      {
+        "id": "fl-sexual-assault-in-the-third-degree",
+        "code": "794.011(5)"
+      }
+    ]
+  },
+  {
+    "level": 9,
+    "row": 51,
+    "levelRows": 60,
+    "citation": "893.135 (1)(d)1.c.",
+    "degree": "1st",
+    "description": "Trafficking in phencyclidine, 400 grams or more.",
+    "result": "same_section_requires_scope_review",
+    "matches": [
+      {
+        "id": "fl-fs-893-135-1-b-1-trafficking-in-cocaine",
+        "code": "893.135(1)(b)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",
+        "code": "893.135(1)(c)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-c-2-trafficking-in-hydrocodone",
+        "code": "893.135(1)(c)2."
+      },
+      {
+        "id": "fl-fs-893-135-1-c-3-trafficking-in-oxycodone",
+        "code": "893.135(1)(c)3."
+      },
+      {
+        "id": "fl-fs-893-135-1-c-4-a-trafficking-in-dangerous-fentanyl-or-fentanyl-analogues",
+        "code": "893.135(1)(c)4.a."
+      },
+      {
+        "id": "fl-fs-893-135-1-c-7-trafficking-in-xylazine",
+        "code": "893.135(1)(c)7."
+      },
+      {
+        "id": "fl-fs-893-135-1-d-1-trafficking-in-phencyclidine",
+        "code": "893.135(1)(d)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-e-1-trafficking-in-methaqualone",
+        "code": "893.135(1)(e)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-f-1-trafficking-in-amphetamine",
+        "code": "893.135(1)(f)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-g-1-trafficking-in-flunitrazepam",
+        "code": "893.135(1)(g)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-h-1-trafficking-in-gamma-hydroxybutyric-acid-ghb",
+        "code": "893.135(1)(h)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-i-1-trafficking-in-gamma-butyrolactone-gbl",
+        "code": "893.135(1)(i)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-j-1-trafficking-in-1-4-butanediol",
+        "code": "893.135(1)(j)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-k-1-trafficking-in-phenethylamines",
+        "code": "893.135(1)(k)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-l-1-trafficking-in-lysergic-acid-diethylamide-lsd",
+        "code": "893.135(1)(l)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-m-1-trafficking-in-synthetic-cannabinoids",
+        "code": "893.135(1)(m)1."
+      },
+      {
+        "id": "fl-fs-893-135-1-n-1-trafficking-in-n-benzyl-phenethylamines",
+        "code": "893.135(1)(n)1."
+      }
+    ]
+  },
+  {
+    "level": 10,
+    "row": 2,
+    "levelRows": 10,
+    "citation": "782.04(2)",
+    "degree": "1st,PBL",
+    "description": "Unlawful killing of human; act is homicide, unpremeditated.",
+    "result": "exact_citation",
+    "matches": [
+      {
+        "id": "fl-murder-in-the-second-degree",
+        "code": "782.04(2)"
+      }
+    ]
+  },
+  {
+    "level": 10,
+    "row": 5,
+    "levelRows": 10,
+    "citation": "787.01(3)(a)",
+    "degree": "Life",
+    "description": "Kidnapping; child under age 13, perpetrator also commits aggravated child abuse, sexual battery, or lewd or lascivious battery, molestation, conduct, or exhibition.",
+    "result": "same_section_requires_scope_review",
+    "matches": [
+      {
+        "id": "fl-fs-787-01-2-restraint",
+        "code": "787.01(2)"
+      }
+    ]
+  },
+  {
+    "level": 10,
+    "row": 8,
+    "levelRows": 10,
+    "citation": "794.011(3)",
+    "degree": "Life",
+    "description": "Sexual battery; victim 12 years or older, offender uses or threatens to use deadly weapon or physical force to cause serious injury.",
+    "result": "exact_citation",
+    "matches": [
+      {
+        "id": "fl-sexual-assault-in-the-first-degree",
+        "code": "794.011(3)"
+      }
+    ]
+  }
+]
