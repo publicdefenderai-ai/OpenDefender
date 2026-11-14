@@ -490,10 +490,10 @@ export function findSubdivisionRange(
     }];
   }
   const match = subdivision.match(
-    /^\((\d+)\)(?:\(([a-z]+)\))?(?:(\d+)\.)?(?:([a-z]+)\.)?$/i,
+    /^\((\d+)\)(?:\(([a-z]+)\))?(?:(\d+)\.)?(?:([a-z]+)\.)?(?:\(([IVX]+)\))?$/i,
   );
   if (!match) return [];
-  const [, top, alpha, number, letter] = match;
+  const [, top, alpha, number, letter, roman] = match;
   const topIndex = markers.findIndex(marker => marker.label.startsWith(`(${top})`));
   if (topIndex < 0) return [];
   const parentEnd = topEnd(topIndex);
@@ -541,6 +541,15 @@ export function findSubdivisionRange(
     start = markers[itemIndex].start;
     end = markers.slice(itemIndex + 1).find(marker =>
       marker.start < end && /^[a-z]+\.$/.test(marker.label))?.start ?? end;
+  }
+  if (roman) {
+    if (!letter) return [];
+    const romanMarkers = [...text.slice(start, end).matchAll(/^\(([IVX]+)\)[\t\u2000-\u206f ]*$/gm)];
+    const matches = romanMarkers.filter(marker => marker[1] === roman.toUpperCase());
+    if (matches.length !== 1) return [];
+    const index = romanMarkers.indexOf(matches[0]);
+    end = romanMarkers[index + 1] ? start + romanMarkers[index + 1].index : end;
+    start += matches[0].index;
   }
   return [{ subdivision, start, end }];
 }

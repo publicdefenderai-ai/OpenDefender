@@ -1,6 +1,7 @@
 import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "./florida-persons-source";
 import { FLORIDA_ROBBERY_SOURCES, isFloridaRobberySourceFresh } from "./florida-robbery-source";
 import { FLORIDA_FALSE_REPORTS_SOURCES, isFloridaFalseReportsSourceFresh } from "./florida-false-reports-source";
+import { FLORIDA_BOATING_SOURCES, isFloridaBoatingSourceFresh } from "./florida-boating-source";
 import { FLORIDA_PROTECTED_PERSONS_SOURCES, isFloridaProtectedPersonsSourceFresh } from "./florida-protected-persons-source";
 import { FLORIDA_LICENSE_DOCUMENTS_SOURCES, isFloridaLicenseDocumentsSourceFresh } from "./florida-license-documents-source";
 import { FLORIDA_PROPERTY_DAMAGE_SOURCES, isFloridaPropertyDamageSourceFresh } from "./florida-property-damage-source";
@@ -31,7 +32,7 @@ import {
   type FloridaReviewedSourceRecord,
 } from "./florida-reviewed-source-records";
 
-const allReviewedSources = [...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES, ...FLORIDA_FALSE_REPORTS_SOURCES, ...FLORIDA_PROTECTED_PERSONS_SOURCES, ...FLORIDA_LICENSE_DOCUMENTS_SOURCES, ...FLORIDA_PROPERTY_DAMAGE_SOURCES, ...FLORIDA_EXPLOITATION_SOURCES, ...FLORIDA_FORGED_INSTRUMENTS_SOURCES, ...FLORIDA_CORRUPTION_SOURCES, ...FLORIDA_ROAD_RACING_SOURCES, ...FLORIDA_COURT_OFFICIALS_SOURCES, ...FLORIDA_JUSTICE_SOURCES, ...FLORIDA_CREDIT_CARD_SOURCES, ...FLORIDA_RESTRAINT_SOURCES, ...FLORIDA_CRASH_FLIGHT_SOURCES];
+const allReviewedSources = [...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES, ...FLORIDA_FALSE_REPORTS_SOURCES, ...FLORIDA_BOATING_SOURCES, ...FLORIDA_PROTECTED_PERSONS_SOURCES, ...FLORIDA_LICENSE_DOCUMENTS_SOURCES, ...FLORIDA_PROPERTY_DAMAGE_SOURCES, ...FLORIDA_EXPLOITATION_SOURCES, ...FLORIDA_FORGED_INSTRUMENTS_SOURCES, ...FLORIDA_CORRUPTION_SOURCES, ...FLORIDA_ROAD_RACING_SOURCES, ...FLORIDA_COURT_OFFICIALS_SOURCES, ...FLORIDA_JUSTICE_SOURCES, ...FLORIDA_CREDIT_CARD_SOURCES, ...FLORIDA_RESTRAINT_SOURCES, ...FLORIDA_CRASH_FLIGHT_SOURCES];
 
 export const FLORIDA_SOURCE_POLICY = "official_florida_online_sunshine_statutes";
 export const FLORIDA_SOURCE_BASE = "https://www.leg.state.fl.us/statutes/index.cfm";
@@ -673,6 +674,7 @@ export function buildFloridaSourceDatabaseSeed(
     .filter(record => !FLORIDA_PERSONS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaPersonsSourceFresh(now))
     .filter(record => !FLORIDA_ROBBERY_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaRobberySourceFresh(now))
     .filter(record => !FLORIDA_FALSE_REPORTS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaFalseReportsSourceFresh(now))
+    .filter(record => !FLORIDA_BOATING_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaBoatingSourceFresh(now))
     .filter(record => !FLORIDA_PROTECTED_PERSONS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaProtectedPersonsSourceFresh(now))
     .filter(record => !FLORIDA_LICENSE_DOCUMENTS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaLicenseDocumentsSourceFresh(now))
     .filter(record => !FLORIDA_PROPERTY_DAMAGE_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaPropertyDamageSourceFresh(now))

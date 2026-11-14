@@ -6,6 +6,7 @@ import { isReviewedOhioChargeId } from "./ohio-reviewed-identity";
 import { FLORIDA_PERSONS_BATCH } from "./florida-persons-batch";
 import { FLORIDA_ROBBERY_BATCH } from "./florida-robbery-batch";
 import { FLORIDA_FALSE_REPORTS_BATCH } from "./florida-false-reports-batch";
+import { FLORIDA_BOATING_BATCH } from "./florida-boating-batch";
 import { FLORIDA_PROTECTED_PERSONS_BATCH } from "./florida-protected-persons-batch";
 import { FLORIDA_LICENSE_DOCUMENTS_BATCH } from "./florida-license-documents-batch";
 import { FLORIDA_PROPERTY_DAMAGE_BATCH } from "./florida-property-damage-batch";
@@ -94654,7 +94655,7 @@ criminalCharges.push(...phase5JuvenileCharges);
 // older degree-labelled Ohio homicide rows.
 criminalCharges.push(...OHIO_CHAPTER_2903_PILOT_CHARGES);
 // Additive source-first Florida identities never replace or alias legacy rows.
-criminalCharges.push(...FLORIDA_REVIEWED_BATCH.charges, ...FLORIDA_PERSONS_BATCH.charges, ...FLORIDA_ROBBERY_BATCH.charges, ...FLORIDA_FALSE_REPORTS_BATCH.charges, ...FLORIDA_PROTECTED_PERSONS_BATCH.charges, ...FLORIDA_LICENSE_DOCUMENTS_BATCH.charges, ...FLORIDA_PROPERTY_DAMAGE_BATCH.charges, ...FLORIDA_EXPLOITATION_BATCH.charges, ...FLORIDA_FORGED_INSTRUMENTS_BATCH.charges, ...FLORIDA_CORRUPTION_BATCH.charges, ...FLORIDA_ROAD_RACING_BATCH.charges, ...FLORIDA_COURT_OFFICIALS_BATCH.charges, ...FLORIDA_JUSTICE_BATCH.charges, ...FLORIDA_CREDIT_CARD_BATCH.charges, ...FLORIDA_RESTRAINT_BATCH.charges, ...FLORIDA_CRASH_FLIGHT_BATCH.charges);
+criminalCharges.push(...FLORIDA_REVIEWED_BATCH.charges, ...FLORIDA_PERSONS_BATCH.charges, ...FLORIDA_ROBBERY_BATCH.charges, ...FLORIDA_FALSE_REPORTS_BATCH.charges, ...FLORIDA_BOATING_BATCH.charges, ...FLORIDA_PROTECTED_PERSONS_BATCH.charges, ...FLORIDA_LICENSE_DOCUMENTS_BATCH.charges, ...FLORIDA_PROPERTY_DAMAGE_BATCH.charges, ...FLORIDA_EXPLOITATION_BATCH.charges, ...FLORIDA_FORGED_INSTRUMENTS_BATCH.charges, ...FLORIDA_CORRUPTION_BATCH.charges, ...FLORIDA_ROAD_RACING_BATCH.charges, ...FLORIDA_COURT_OFFICIALS_BATCH.charges, ...FLORIDA_JUSTICE_BATCH.charges, ...FLORIDA_CREDIT_CARD_BATCH.charges, ...FLORIDA_RESTRAINT_BATCH.charges, ...FLORIDA_CRASH_FLIGHT_BATCH.charges);
 // Source-first California additions preserve the separate legacy inventory.
 criminalCharges.push(...getCaliforniaAdditionCharges());
 

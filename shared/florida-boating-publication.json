@@ -1,0 +1,1553 @@
+[
+  {
+    "id": "fl-fs-327-35-1-bui",
+    "section": "327.35",
+    "scope": "(1)",
+    "officialTitle": "Boating under the influence; penalties; “designated drivers.”",
+    "dependencies": [
+      "327.35",
+      "327.02",
+      "327.36",
+      "327.731",
+      "877.111",
+      "893.03",
+      "775.08",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "327.35": [
+        "(1)",
+        "(2)(a)1.a.",
+        "(2)(a)2.a.",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(9)"
+      ],
+      "327.02": [
+        "(34)",
+        "(46)"
+      ],
+      "327.36": [
+        "(1)",
+        "(2)"
+      ],
+      "327.731": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "877.111": [
+        "(1)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "775.08": [
+        "(2)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-327-35-1-bui",
+      "name": "Boating under the influence (BUI), first conviction",
+      "names": {
+        "es": "Operación de embarcación bajo la influencia, primera condena",
+        "zh": "受酒精或药物影响操船，首次定罪"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "327.35(1)",
+      "slug": "fl-fs-327-35-1-bui",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 327.35(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.35",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.36",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.731",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.731.html"
+        },
+        {
+          "citation": "Fla. Stat. § 877.111",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.111.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.08",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.08.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(1)",
+          "F.S. 327.35(1)",
+          "BUI",
+          "Boating under the influence (1)"
+        ],
+        "es": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(1)",
+          "F.S. 327.35(1)",
+          "BUI",
+          "Boating under the influence (1)"
+        ],
+        "zh": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(1)",
+          "F.S. 327.35(1)",
+          "BUI",
+          "Boating under the influence (1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Operating a vessel in Florida while alcohol, a listed chemical or a controlled substance impairs normal faculties, or with at least 0.08 grams of alcohol per 100 mL of blood or 210 L of breath.",
+          "degreeContext": "Misdemeanor. First conviction: $500–$1,000 and up to six months. A reading of at least 0.15 or someone under 18 aboard raises this to $1,000–$2,000 and up to nine months. At least 50 hours of community work and ordinarily ten days of impoundment; incarceration plus probation cannot exceed one year. Monthly reporting probation and a substance-abuse course are required; referral may require evaluation and treatment at the offender’s expense. Section 327.731 also requires a $500 fine and boating-safety education; operation must wait until proof of completion is filed. Section 327.35(9) adds $60 to the fines under (2) and (4). Adjudication and sentence cannot be withheld. A guilty plea to a lesser offense is barred when a blood or breath test shows at least 0.15, or when charged with felony BUI."
+        },
+        "es": {
+          "plainSummary": "Operar una embarcación en Florida con facultades normales afectadas por alcohol, una sustancia química enumerada o una sustancia controlada, o con al menos 0.08 gramos de alcohol por 100 mL de sangre o 210 L de aliento.",
+          "degreeContext": "Delito menor. Primera condena: $500–$1,000 y hasta seis meses. Con nivel de al menos 0.15 o una persona menor de 18 a bordo: $1,000–$2,000 y hasta nueve meses. Al menos 50 horas de servicio y normalmente diez días de inmovilización; cárcel y libertad vigilada juntas no pueden superar un año. Se exige libertad vigilada con informes mensuales y un curso sobre consumo de sustancias; una remisión puede exigir evaluación y tratamiento a cargo del condenado. El §327.731 exige además $500 y un curso de seguridad náutica; no se puede operar hasta presentar la constancia. El §327.35(9) añade $60 a las multas de (2) y (4). No puede reservarse la adjudicación ni la pena. Se prohíbe aceptar una declaración de culpabilidad por un delito menor si una prueba de sangre o aliento da al menos 0.15 o si se acusa de BUI grave."
+        },
+        "zh": {
+          "plainSummary": "在佛州操控船只时，正常能力因酒精、指定化学物质或管制物质受损，或每100毫升血液或每210升呼气中至少含0.08克酒精。",
+          "degreeContext": "轻罪。 首次定罪：500至1,000美元，最高六个月。读数至少0.15或船上有未满18岁的人：1,000至2,000美元，最高九个月。至少50小时社区服务，通常扣押十天；监禁与缓刑合计不超过一年。 须每月向缓刑监督部门报到并参加药物或酒精课程；如被转介，还须自费接受评估和治疗。第327.731条另规定500美元罚金及船舶安全课程，提交结业证明前不得操船。第327.35(9)款在第(2)、(4)款罚金外另加60美元。 法院不得暂缓定罪或量刑。若血液或呼气检测读数至少0.15，或被控重罪级受影响操船，不得接受对较轻罪行的认罪。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-327-35-2-a-2-b-bui",
+    "section": "327.35",
+    "scope": "(2)(a)2.b.",
+    "officialTitle": "Boating under the influence; penalties; “designated drivers.”",
+    "dependencies": [
+      "327.35",
+      "327.02",
+      "327.36",
+      "327.731",
+      "877.111",
+      "893.03",
+      "775.08",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "327.35": [
+        "(2)(a)2.b.",
+        "(1)",
+        "(2)(a)1.b.",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(9)"
+      ],
+      "327.02": [
+        "(34)",
+        "(46)"
+      ],
+      "327.36": [
+        "(1)",
+        "(2)"
+      ],
+      "327.731": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "877.111": [
+        "(1)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "775.08": [
+        "(2)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-327-35-2-a-2-b-bui",
+      "name": "Boating under the influence, second conviction",
+      "names": {
+        "es": "Operación de embarcación bajo la influencia, segunda condena",
+        "zh": "受酒精或药物影响操船，第二次定罪"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "327.35(2)(a)2.b.",
+      "slug": "fl-fs-327-35-2-a-2-b-bui",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 327.35(2)(a)2.b.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.35",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.36",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.731",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.731.html"
+        },
+        {
+          "citation": "Fla. Stat. § 877.111",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.111.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.08",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.08.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(2)(a)2.b.",
+          "F.S. 327.35(2)(a)2.b.",
+          "BUI",
+          "Boating under the influence (2)(a)2.b."
+        ],
+        "es": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(2)(a)2.b.",
+          "F.S. 327.35(2)(a)2.b.",
+          "BUI",
+          "Boating under the influence (2)(a)2.b."
+        ],
+        "zh": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(2)(a)2.b.",
+          "F.S. 327.35(2)(a)2.b.",
+          "BUI",
+          "Boating under the influence (2)(a)2.b."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Operating a vessel in Florida while alcohol, a listed chemical or a controlled substance impairs normal faculties, or with at least 0.08 grams of alcohol per 100 mL of blood or 210 L of breath.",
+          "degreeContext": "Misdemeanor. Second conviction: $1,000–$2,000 and up to nine months. With at least 0.15 or someone under 18 aboard: $2,000–$4,000 and up to twelve months. If the offense occurred within five years of a prior conviction: at least ten days in custody, including 48 consecutive hours, and ordinarily 30 days of impoundment. Qualifying priors include Florida DUI, the former laws listed in (6), and specified comparable out-of-state impaired-driving or similar traffic convictions. Monthly reporting probation and a substance-abuse course are required; referral may require evaluation and treatment at the offender’s expense. Section 327.731 also requires a $500 fine and boating-safety education; operation must wait until proof of completion is filed. Section 327.35(9) adds $60 to the fines under (2) and (4). Adjudication and sentence cannot be withheld. A guilty plea to a lesser offense is barred when a blood or breath test shows at least 0.15, or when charged with felony BUI."
+        },
+        "es": {
+          "plainSummary": "Operar una embarcación en Florida con facultades normales afectadas por alcohol, una sustancia química enumerada o una sustancia controlada, o con al menos 0.08 gramos de alcohol por 100 mL de sangre o 210 L de aliento.",
+          "degreeContext": "Delito menor. Segunda condena: $1,000–$2,000 y hasta nueve meses. Con al menos 0.15 o persona menor de 18 a bordo: $2,000–$4,000 y hasta doce meses. Dentro de cinco años de una condena anterior: mínimo diez días de cárcel, incluidas 48 horas consecutivas, y normalmente 30 días de inmovilización. Los antecedentes computables incluyen DUI de Florida, las leyes anteriores enumeradas en (6) y determinadas condenas comparables de tránsito de otros estados. Se exige libertad vigilada con informes mensuales y un curso sobre consumo de sustancias; una remisión puede exigir evaluación y tratamiento a cargo del condenado. El §327.731 exige además $500 y un curso de seguridad náutica; no se puede operar hasta presentar la constancia. El §327.35(9) añade $60 a las multas de (2) y (4). No puede reservarse la adjudicación ni la pena. Se prohíbe aceptar una declaración de culpabilidad por un delito menor si una prueba de sangre o aliento da al menos 0.15 o si se acusa de BUI grave."
+        },
+        "zh": {
+          "plainSummary": "在佛州操控船只时，正常能力因酒精、指定化学物质或管制物质受损，或每100毫升血液或每210升呼气中至少含0.08克酒精。",
+          "degreeContext": "轻罪。 第二次定罪：1,000至2,000美元，最高九个月。读数至少0.15或有未满18岁的人：2,000至4,000美元，最高十二个月。若距前次定罪不超过五年，至少监禁十天，其中48小时须连续，通常扣押30天。 可计入的前科包括佛州酒驾、第(6)款列明的旧法定罪和外州指定的酒毒驾或类似交通定罪。 须每月向缓刑监督部门报到并参加药物或酒精课程；如被转介，还须自费接受评估和治疗。第327.731条另规定500美元罚金及船舶安全课程，提交结业证明前不得操船。第327.35(9)款在第(2)、(4)款罚金外另加60美元。 法院不得暂缓定罪或量刑。若血液或呼气检测读数至少0.15，或被控重罪级受影响操船，不得接受对较轻罪行的认罪。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-327-35-2-b-1-bui",
+    "section": "327.35",
+    "scope": "(2)(b)1.",
+    "officialTitle": "Boating under the influence; penalties; “designated drivers.”",
+    "dependencies": [
+      "327.35",
+      "327.02",
+      "327.36",
+      "327.731",
+      "877.111",
+      "893.03",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "327.35": [
+        "(2)(b)1.",
+        "(1)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(9)"
+      ],
+      "327.02": [
+        "(34)",
+        "(46)"
+      ],
+      "327.36": [
+        "(1)",
+        "(2)"
+      ],
+      "327.731": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "877.111": [
+        "(1)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-327-35-2-b-1-bui",
+      "name": "Boating under the influence, third conviction within ten years",
+      "names": {
+        "es": "Operación de embarcación bajo la influencia, tercera condena dentro de diez años",
+        "zh": "受酒精或药物影响操船，十年内第三次定罪"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "327.35(2)(b)1.",
+      "slug": "fl-fs-327-35-2-b-1-bui",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 327.35(2)(b)1.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.35",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.36",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.731",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.731.html"
+        },
+        {
+          "citation": "Fla. Stat. § 877.111",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.111.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(2)(b)1.",
+          "F.S. 327.35(2)(b)1.",
+          "BUI",
+          "Boating under the influence (2)(b)1."
+        ],
+        "es": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(2)(b)1.",
+          "F.S. 327.35(2)(b)1.",
+          "BUI",
+          "Boating under the influence (2)(b)1."
+        ],
+        "zh": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(2)(b)1.",
+          "F.S. 327.35(2)(b)1.",
+          "BUI",
+          "Boating under the influence (2)(b)1."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Operating a vessel in Florida while alcohol, a listed chemical or a controlled substance impairs normal faculties, or with at least 0.08 grams of alcohol per 100 mL of blood or 210 L of breath.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For a third or later conviction with at least 0.15 or someone under 18 aboard, the fine is at least $4,000. If the offense occurred within ten years of a prior conviction, at least 30 days in custody, including 48 consecutive hours, and ordinarily 90 days of impoundment apply. Qualifying priors include Florida DUI, the former laws listed in (6), and specified comparable out-of-state impaired-driving or similar traffic convictions. Monthly reporting probation and a substance-abuse course are required; referral may require evaluation and treatment at the offender’s expense. Section 327.731 also requires a $500 fine and boating-safety education; operation must wait until proof of completion is filed. Section 327.35(9) adds $60 to the fines under (2) and (4). Adjudication and sentence cannot be withheld. A guilty plea to a lesser offense is barred when a blood or breath test shows at least 0.15, or when charged with felony BUI."
+        },
+        "es": {
+          "plainSummary": "Operar una embarcación en Florida con facultades normales afectadas por alcohol, una sustancia química enumerada o una sustancia controlada, o con al menos 0.08 gramos de alcohol por 100 mL de sangre o 210 L de aliento.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Para una tercera condena o posterior con al menos 0.15 o persona menor de 18 a bordo, la multa mínima es $4,000. Si el hecho ocurrió dentro de diez años de una condena anterior: al menos 30 días de cárcel, incluidas 48 horas consecutivas, y normalmente 90 días de inmovilización. Los antecedentes computables incluyen DUI de Florida, las leyes anteriores enumeradas en (6) y determinadas condenas comparables de tránsito de otros estados. Se exige libertad vigilada con informes mensuales y un curso sobre consumo de sustancias; una remisión puede exigir evaluación y tratamiento a cargo del condenado. El §327.731 exige además $500 y un curso de seguridad náutica; no se puede operar hasta presentar la constancia. El §327.35(9) añade $60 a las multas de (2) y (4). No puede reservarse la adjudicación ni la pena. Se prohíbe aceptar una declaración de culpabilidad por un delito menor si una prueba de sangre o aliento da al menos 0.15 o si se acusa de BUI grave."
+        },
+        "zh": {
+          "plainSummary": "在佛州操控船只时，正常能力因酒精、指定化学物质或管制物质受损，或每100毫升血液或每210升呼气中至少含0.08克酒精。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 第三次或更多次定罪，读数至少0.15或有未满18岁的人，罚金至少4,000美元。若距前次定罪不超过十年，至少监禁30天，其中48小时须连续，通常扣押90天。 可计入的前科包括佛州酒驾、第(6)款列明的旧法定罪和外州指定的酒毒驾或类似交通定罪。 须每月向缓刑监督部门报到并参加药物或酒精课程；如被转介，还须自费接受评估和治疗。第327.731条另规定500美元罚金及船舶安全课程，提交结业证明前不得操船。第327.35(9)款在第(2)、(4)款罚金外另加60美元。 法院不得暂缓定罪或量刑。若血液或呼气检测读数至少0.15，或被控重罪级受影响操船，不得接受对较轻罪行的认罪。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-327-35-2-b-2-bui",
+    "section": "327.35",
+    "scope": "(2)(b)2.",
+    "officialTitle": "Boating under the influence; penalties; “designated drivers.”",
+    "dependencies": [
+      "327.35",
+      "327.02",
+      "327.36",
+      "327.731",
+      "877.111",
+      "893.03",
+      "775.08",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "327.35": [
+        "(2)(b)2.",
+        "(1)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(9)"
+      ],
+      "327.02": [
+        "(34)",
+        "(46)"
+      ],
+      "327.36": [
+        "(1)",
+        "(2)"
+      ],
+      "327.731": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "877.111": [
+        "(1)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "775.08": [
+        "(2)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-327-35-2-b-2-bui",
+      "name": "Boating under the influence, third conviction outside ten years",
+      "names": {
+        "es": "Operación de embarcación bajo la influencia, tercera condena fuera de diez años",
+        "zh": "受酒精或药物影响操船，超过十年的第三次定罪"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "327.35(2)(b)2.",
+      "slug": "fl-fs-327-35-2-b-2-bui",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 327.35(2)(b)2.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.35",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.36",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.731",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.731.html"
+        },
+        {
+          "citation": "Fla. Stat. § 877.111",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.111.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.08",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.08.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(2)(b)2.",
+          "F.S. 327.35(2)(b)2.",
+          "BUI",
+          "Boating under the influence (2)(b)2."
+        ],
+        "es": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(2)(b)2.",
+          "F.S. 327.35(2)(b)2.",
+          "BUI",
+          "Boating under the influence (2)(b)2."
+        ],
+        "zh": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(2)(b)2.",
+          "F.S. 327.35(2)(b)2.",
+          "BUI",
+          "Boating under the influence (2)(b)2."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Operating a vessel in Florida while alcohol, a listed chemical or a controlled substance impairs normal faculties, or with at least 0.08 grams of alcohol per 100 mL of blood or 210 L of breath.",
+          "degreeContext": "Misdemeanor. More than ten years after the prior conviction: $2,000–$5,000 and up to twelve months. For a third or later conviction with at least 0.15 or someone under 18 aboard, the fine is at least $4,000. Qualifying priors include Florida DUI, the former laws listed in (6), and specified comparable out-of-state impaired-driving or similar traffic convictions. Monthly reporting probation and a substance-abuse course are required; referral may require evaluation and treatment at the offender’s expense. Section 327.731 also requires a $500 fine and boating-safety education; operation must wait until proof of completion is filed. Section 327.35(9) adds $60 to the fines under (2) and (4). Adjudication and sentence cannot be withheld. A guilty plea to a lesser offense is barred when a blood or breath test shows at least 0.15, or when charged with felony BUI."
+        },
+        "es": {
+          "plainSummary": "Operar una embarcación en Florida con facultades normales afectadas por alcohol, una sustancia química enumerada o una sustancia controlada, o con al menos 0.08 gramos de alcohol por 100 mL de sangre o 210 L de aliento.",
+          "degreeContext": "Delito menor. Más de diez años después de la condena anterior: $2,000–$5,000 y hasta doce meses. Para una tercera condena o posterior con al menos 0.15 o persona menor de 18 a bordo, la multa mínima es $4,000. Los antecedentes computables incluyen DUI de Florida, las leyes anteriores enumeradas en (6) y determinadas condenas comparables de tránsito de otros estados. Se exige libertad vigilada con informes mensuales y un curso sobre consumo de sustancias; una remisión puede exigir evaluación y tratamiento a cargo del condenado. El §327.731 exige además $500 y un curso de seguridad náutica; no se puede operar hasta presentar la constancia. El §327.35(9) añade $60 a las multas de (2) y (4). No puede reservarse la adjudicación ni la pena. Se prohíbe aceptar una declaración de culpabilidad por un delito menor si una prueba de sangre o aliento da al menos 0.15 o si se acusa de BUI grave."
+        },
+        "zh": {
+          "plainSummary": "在佛州操控船只时，正常能力因酒精、指定化学物质或管制物质受损，或每100毫升血液或每210升呼气中至少含0.08克酒精。",
+          "degreeContext": "轻罪。 距前次定罪超过十年：2,000至5,000美元，最高十二个月。 第三次或更多次定罪，读数至少0.15或有未满18岁的人，罚金至少4,000美元。 可计入的前科包括佛州酒驾、第(6)款列明的旧法定罪和外州指定的酒毒驾或类似交通定罪。 须每月向缓刑监督部门报到并参加药物或酒精课程；如被转介，还须自费接受评估和治疗。第327.731条另规定500美元罚金及船舶安全课程，提交结业证明前不得操船。第327.35(9)款在第(2)、(4)款罚金外另加60美元。 法院不得暂缓定罪或量刑。若血液或呼气检测读数至少0.15，或被控重罪级受影响操船，不得接受对较轻罪行的认罪。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-327-35-2-b-3-bui",
+    "section": "327.35",
+    "scope": "(2)(b)3.",
+    "officialTitle": "Boating under the influence; penalties; “designated drivers.”",
+    "dependencies": [
+      "327.35",
+      "327.02",
+      "327.36",
+      "327.731",
+      "877.111",
+      "893.03",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "327.35": [
+        "(2)(b)3.",
+        "(1)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(9)"
+      ],
+      "327.02": [
+        "(34)",
+        "(46)"
+      ],
+      "327.36": [
+        "(1)",
+        "(2)"
+      ],
+      "327.731": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "877.111": [
+        "(1)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-327-35-2-b-3-bui",
+      "name": "Boating under the influence, fourth or subsequent conviction",
+      "names": {
+        "es": "Operación de embarcación bajo la influencia, cuarta condena o posterior",
+        "zh": "受酒精或药物影响操船，第四次或更多次定罪"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "327.35(2)(b)3.",
+      "slug": "fl-fs-327-35-2-b-3-bui",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 327.35(2)(b)3.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.35",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.36",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.731",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.731.html"
+        },
+        {
+          "citation": "Fla. Stat. § 877.111",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.111.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(2)(b)3.",
+          "F.S. 327.35(2)(b)3.",
+          "BUI",
+          "Boating under the influence (2)(b)3."
+        ],
+        "es": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(2)(b)3.",
+          "F.S. 327.35(2)(b)3.",
+          "BUI",
+          "Boating under the influence (2)(b)3."
+        ],
+        "zh": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(2)(b)3.",
+          "F.S. 327.35(2)(b)3.",
+          "BUI",
+          "Boating under the influence (2)(b)3."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Operating a vessel in Florida while alcohol, a listed chemical or a controlled substance impairs normal faculties, or with at least 0.08 grams of alcohol per 100 mL of blood or 210 L of breath.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Regardless of dates of prior convictions, the minimum fine is $2,000. For a third or later conviction with at least 0.15 or someone under 18 aboard, the fine is at least $4,000. If the offense occurred within ten years of a prior conviction, at least 30 days in custody, including 48 consecutive hours, and ordinarily 90 days of impoundment apply. Qualifying priors include Florida DUI, the former laws listed in (6), and specified comparable out-of-state impaired-driving or similar traffic convictions. Monthly reporting probation and a substance-abuse course are required; referral may require evaluation and treatment at the offender’s expense. Section 327.731 also requires a $500 fine and boating-safety education; operation must wait until proof of completion is filed. Section 327.35(9) adds $60 to the fines under (2) and (4). Adjudication and sentence cannot be withheld. A guilty plea to a lesser offense is barred when a blood or breath test shows at least 0.15, or when charged with felony BUI."
+        },
+        "es": {
+          "plainSummary": "Operar una embarcación en Florida con facultades normales afectadas por alcohol, una sustancia química enumerada o una sustancia controlada, o con al menos 0.08 gramos de alcohol por 100 mL de sangre o 210 L de aliento.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Sin importar la fecha de los antecedentes, la multa mínima es $2,000. Para una tercera condena o posterior con al menos 0.15 o persona menor de 18 a bordo, la multa mínima es $4,000. Si el hecho ocurrió dentro de diez años de una condena anterior: al menos 30 días de cárcel, incluidas 48 horas consecutivas, y normalmente 90 días de inmovilización. Los antecedentes computables incluyen DUI de Florida, las leyes anteriores enumeradas en (6) y determinadas condenas comparables de tránsito de otros estados. Se exige libertad vigilada con informes mensuales y un curso sobre consumo de sustancias; una remisión puede exigir evaluación y tratamiento a cargo del condenado. El §327.731 exige además $500 y un curso de seguridad náutica; no se puede operar hasta presentar la constancia. El §327.35(9) añade $60 a las multas de (2) y (4). No puede reservarse la adjudicación ni la pena. Se prohíbe aceptar una declaración de culpabilidad por un delito menor si una prueba de sangre o aliento da al menos 0.15 o si se acusa de BUI grave."
+        },
+        "zh": {
+          "plainSummary": "在佛州操控船只时，正常能力因酒精、指定化学物质或管制物质受损，或每100毫升血液或每210升呼气中至少含0.08克酒精。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 无论前科日期，最低罚金2,000美元。 第三次或更多次定罪，读数至少0.15或有未满18岁的人，罚金至少4,000美元。若距前次定罪不超过十年，至少监禁30天，其中48小时须连续，通常扣押90天。 可计入的前科包括佛州酒驾、第(6)款列明的旧法定罪和外州指定的酒毒驾或类似交通定罪。 须每月向缓刑监督部门报到并参加药物或酒精课程；如被转介，还须自费接受评估和治疗。第327.731条另规定500美元罚金及船舶安全课程，提交结业证明前不得操船。第327.35(9)款在第(2)、(4)款罚金外另加60美元。 法院不得暂缓定罪或量刑。若血液或呼气检测读数至少0.15，或被控重罪级受影响操船，不得接受对较轻罪行的认罪。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-327-35-3-a-3-a-bui",
+    "section": "327.35",
+    "scope": "(3)(a)3.a.",
+    "officialTitle": "Boating under the influence; penalties; “designated drivers.”",
+    "dependencies": [
+      "327.35",
+      "327.02",
+      "327.36",
+      "327.731",
+      "877.111",
+      "893.03",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "327.35": [
+        "(3)(a)3.a.",
+        "(1)",
+        "(3)(a)1.",
+        "(3)(a)2.",
+        "(3)(a)3.",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(9)"
+      ],
+      "327.02": [
+        "(34)",
+        "(46)"
+      ],
+      "327.36": [
+        "(1)",
+        "(2)"
+      ],
+      "327.731": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "877.111": [
+        "(1)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-327-35-3-a-3-a-bui",
+      "name": "Boating under the influence causing damage to another’s property or person",
+      "names": {
+        "es": "Operación bajo la influencia que causa daño a la persona o bienes de otro",
+        "zh": "受影响操船造成他人人身或财产损害"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "327.35(3)(a)3.a.",
+      "slug": "fl-fs-327-35-3-a-3-a-bui",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 327.35(3)(a)3.a.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.35",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.36",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.731",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.731.html"
+        },
+        {
+          "citation": "Fla. Stat. § 877.111",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.111.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.a.",
+          "F.S. 327.35(3)(a)3.a.",
+          "BUI",
+          "Boating under the influence (3)(a)3.a."
+        ],
+        "es": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.a.",
+          "F.S. 327.35(3)(a)3.a.",
+          "BUI",
+          "Boating under the influence (3)(a)3.a."
+        ],
+        "zh": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.a.",
+          "F.S. 327.35(3)(a)3.a.",
+          "BUI",
+          "Boating under the influence (3)(a)3.a."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Operating a vessel in Florida while alcohol, a listed chemical or a controlled substance impairs normal faculties, or with at least 0.08 grams of alcohol per 100 mL of blood or 210 L of breath. The operation must cause or contribute to the result. The damage must be to another person or their property.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine. Monthly reporting probation and a substance-abuse course are required; referral may require evaluation and treatment at the offender’s expense. Section 327.731 also requires a $500 fine and boating-safety education; operation must wait until proof of completion is filed. Section 327.35(9) adds $60 to the fines under (2) and (4). Adjudication and sentence cannot be withheld. A guilty plea to a lesser offense is barred when a blood or breath test shows at least 0.15, or when charged with felony BUI."
+        },
+        "es": {
+          "plainSummary": "Operar una embarcación en Florida con facultades normales afectadas por alcohol, una sustancia química enumerada o una sustancia controlada, o con al menos 0.08 gramos de alcohol por 100 mL de sangre o 210 L de aliento. La operación de la embarcación debe causar o contribuir a causar el resultado. El daño debe ser a otra persona o sus bienes.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000. Se exige libertad vigilada con informes mensuales y un curso sobre consumo de sustancias; una remisión puede exigir evaluación y tratamiento a cargo del condenado. El §327.731 exige además $500 y un curso de seguridad náutica; no se puede operar hasta presentar la constancia. El §327.35(9) añade $60 a las multas de (2) y (4). No puede reservarse la adjudicación ni la pena. Se prohíbe aceptar una declaración de culpabilidad por un delito menor si una prueba de sangre o aliento da al menos 0.15 o si se acusa de BUI grave."
+        },
+        "zh": {
+          "plainSummary": "在佛州操控船只时，正常能力因酒精、指定化学物质或管制物质受损，或每100毫升血液或每210升呼气中至少含0.08克酒精。 操船行为须造成或促成有关后果。 须损害他人身体或财产。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。 须每月向缓刑监督部门报到并参加药物或酒精课程；如被转介，还须自费接受评估和治疗。第327.731条另规定500美元罚金及船舶安全课程，提交结业证明前不得操船。第327.35(9)款在第(2)、(4)款罚金外另加60美元。 法院不得暂缓定罪或量刑。若血液或呼气检测读数至少0.15，或被控重罪级受影响操船，不得接受对较轻罪行的认罪。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-327-35-3-a-3-b-bui",
+    "section": "327.35",
+    "scope": "(3)(a)3.b.",
+    "officialTitle": "Boating under the influence; penalties; “designated drivers.”",
+    "dependencies": [
+      "327.35",
+      "327.02",
+      "327.36",
+      "327.731",
+      "877.111",
+      "893.03",
+      "327.353",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "327.35": [
+        "(3)(a)3.b.",
+        "(1)",
+        "(3)(a)1.",
+        "(3)(a)2.",
+        "(3)(a)3.",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(9)"
+      ],
+      "327.02": [
+        "(34)",
+        "(46)"
+      ],
+      "327.36": [
+        "(1)",
+        "(2)"
+      ],
+      "327.731": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "877.111": [
+        "(1)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "327.353": [
+        "(1)(b)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-327-35-3-a-3-b-bui",
+      "name": "Boating under the influence causing serious bodily injury",
+      "names": {
+        "es": "Operación de embarcación bajo la influencia con lesiones corporales graves",
+        "zh": "受影响操船导致严重人身伤害"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "327.35(3)(a)3.b.",
+      "slug": "fl-fs-327-35-3-a-3-b-bui",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 327.35(3)(a)3.b.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.35",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.36",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.731",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.731.html"
+        },
+        {
+          "citation": "Fla. Stat. § 877.111",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.111.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.353",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.353.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.b.",
+          "F.S. 327.35(3)(a)3.b.",
+          "BUI",
+          "Boating under the influence (3)(a)3.b."
+        ],
+        "es": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.b.",
+          "F.S. 327.35(3)(a)3.b.",
+          "BUI",
+          "Boating under the influence (3)(a)3.b."
+        ],
+        "zh": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.b.",
+          "F.S. 327.35(3)(a)3.b.",
+          "BUI",
+          "Boating under the influence (3)(a)3.b."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Operating a vessel in Florida while alcohol, a listed chemical or a controlled substance impairs normal faculties, or with at least 0.08 grams of alcohol per 100 mL of blood or 210 L of breath. The operation must cause or contribute to the result. Another person must suffer a substantial risk of death, serious personal disfigurement, or prolonged loss or impairment of a bodily member or organ.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Monthly reporting probation and a substance-abuse course are required; referral may require evaluation and treatment at the offender’s expense. Section 327.731 also requires a $500 fine and boating-safety education; operation must wait until proof of completion is filed. Section 327.35(9) adds $60 to the fines under (2) and (4). Adjudication and sentence cannot be withheld. A guilty plea to a lesser offense is barred when a blood or breath test shows at least 0.15, or when charged with felony BUI."
+        },
+        "es": {
+          "plainSummary": "Operar una embarcación en Florida con facultades normales afectadas por alcohol, una sustancia química enumerada o una sustancia controlada, o con al menos 0.08 gramos de alcohol por 100 mL de sangre o 210 L de aliento. La operación de la embarcación debe causar o contribuir a causar el resultado. Otra persona debe sufrir riesgo considerable de muerte, desfiguración grave o pérdida o deterioro prolongado de una extremidad u órgano.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Se exige libertad vigilada con informes mensuales y un curso sobre consumo de sustancias; una remisión puede exigir evaluación y tratamiento a cargo del condenado. El §327.731 exige además $500 y un curso de seguridad náutica; no se puede operar hasta presentar la constancia. El §327.35(9) añade $60 a las multas de (2) y (4). No puede reservarse la adjudicación ni la pena. Se prohíbe aceptar una declaración de culpabilidad por un delito menor si una prueba de sangre o aliento da al menos 0.15 o si se acusa de BUI grave."
+        },
+        "zh": {
+          "plainSummary": "在佛州操控船只时，正常能力因酒精、指定化学物质或管制物质受损，或每100毫升血液或每210升呼气中至少含0.08克酒精。 操船行为须造成或促成有关后果。 他人须面临重大死亡风险、严重毁容或肢体或器官功能长期丧失或受损。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 须每月向缓刑监督部门报到并参加药物或酒精课程；如被转介，还须自费接受评估和治疗。第327.731条另规定500美元罚金及船舶安全课程，提交结业证明前不得操船。第327.35(9)款在第(2)、(4)款罚金外另加60美元。 法院不得暂缓定罪或量刑。若血液或呼气检测读数至少0.15，或被控重罪级受影响操船，不得接受对较轻罪行的认罪。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-327-35-3-a-3-c-i-bui",
+    "section": "327.35",
+    "scope": "(3)(a)3.c.(I)",
+    "officialTitle": "Boating under the influence; penalties; “designated drivers.”",
+    "dependencies": [
+      "327.35",
+      "327.02",
+      "327.36",
+      "327.731",
+      "877.111",
+      "893.03",
+      "775.021",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "327.35": [
+        "(3)(a)3.c.(I)",
+        "(1)",
+        "(3)(a)1.",
+        "(3)(a)2.",
+        "(3)(a)3.",
+        "(3)(a)3.c.",
+        "(3)(b)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(9)"
+      ],
+      "327.02": [
+        "(34)",
+        "(46)"
+      ],
+      "327.36": [
+        "(1)",
+        "(2)"
+      ],
+      "327.731": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "877.111": [
+        "(1)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "775.021": [
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-327-35-3-a-3-c-i-bui",
+      "name": "BUI manslaughter",
+      "names": {
+        "es": "Homicidio por operación de embarcación bajo la influencia",
+        "zh": "受影响操船致死"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "327.35(3)(a)3.c.(I)",
+      "slug": "fl-fs-327-35-3-a-3-c-i-bui",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 327.35(3)(a)3.c.(I)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.35",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.36",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.731",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.731.html"
+        },
+        {
+          "citation": "Fla. Stat. § 877.111",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.111.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.c.(I)",
+          "F.S. 327.35(3)(a)3.c.(I)",
+          "BUI",
+          "Boating under the influence (3)(a)3.c.(I)"
+        ],
+        "es": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.c.(I)",
+          "F.S. 327.35(3)(a)3.c.(I)",
+          "BUI",
+          "Boating under the influence (3)(a)3.c.(I)"
+        ],
+        "zh": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.c.(I)",
+          "F.S. 327.35(3)(a)3.c.(I)",
+          "BUI",
+          "Boating under the influence (3)(a)3.c.(I)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Operating a vessel in Florida while alcohol, a listed chemical or a controlled substance impairs normal faculties, or with at least 0.08 grams of alcohol per 100 mL of blood or 210 L of breath. The operation must cause or contribute to the result. A human being or an unborn child as defined in §775.021(5) dies.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. Mandatory minimum of four years in prison. Monthly reporting probation and a substance-abuse course are required; referral may require evaluation and treatment at the offender’s expense. Section 327.731 also requires a $500 fine and boating-safety education; operation must wait until proof of completion is filed. Section 327.35(9) adds $60 to the fines under (2) and (4). Adjudication and sentence cannot be withheld. A guilty plea to a lesser offense is barred when a blood or breath test shows at least 0.15, or when charged with felony BUI."
+        },
+        "es": {
+          "plainSummary": "Operar una embarcación en Florida con facultades normales afectadas por alcohol, una sustancia química enumerada o una sustancia controlada, o con al menos 0.08 gramos de alcohol por 100 mL de sangre o 210 L de aliento. La operación de la embarcación debe causar o contribuir a causar el resultado. Muere un ser humano o un hijo no nacido según §775.021(5).",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. Mínimo obligatorio de cuatro años de prisión. Se exige libertad vigilada con informes mensuales y un curso sobre consumo de sustancias; una remisión puede exigir evaluación y tratamiento a cargo del condenado. El §327.731 exige además $500 y un curso de seguridad náutica; no se puede operar hasta presentar la constancia. El §327.35(9) añade $60 a las multas de (2) y (4). No puede reservarse la adjudicación ni la pena. Se prohíbe aceptar una declaración de culpabilidad por un delito menor si una prueba de sangre o aliento da al menos 0.15 o si se acusa de BUI grave."
+        },
+        "zh": {
+          "plainSummary": "在佛州操控船只时，正常能力因酒精、指定化学物质或管制物质受损，或每100毫升血液或每210升呼气中至少含0.08克酒精。 操船行为须造成或促成有关后果。 一人或第775.021(5)条定义的未出生胎儿死亡。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 强制最低四年监禁。 须每月向缓刑监督部门报到并参加药物或酒精课程；如被转介，还须自费接受评估和治疗。第327.731条另规定500美元罚金及船舶安全课程，提交结业证明前不得操船。第327.35(9)款在第(2)、(4)款罚金外另加60美元。 法院不得暂缓定罪或量刑。若血液或呼气检测读数至少0.15，或被控重罪级受影响操船，不得接受对较轻罪行的认罪。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-327-35-3-a-3-c-ii-bui",
+    "section": "327.35",
+    "scope": "(3)(a)3.c.(II)",
+    "officialTitle": "Boating under the influence; penalties; “designated drivers.”",
+    "dependencies": [
+      "327.35",
+      "327.02",
+      "327.36",
+      "327.731",
+      "877.111",
+      "893.03",
+      "775.021",
+      "327.30",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "327.35": [
+        "(3)(a)3.c.(II)",
+        "(1)",
+        "(3)(a)1.",
+        "(3)(a)2.",
+        "(3)(a)3.",
+        "(3)(a)3.c.",
+        "(3)(b)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(9)"
+      ],
+      "327.02": [
+        "(34)",
+        "(46)"
+      ],
+      "327.36": [
+        "(1)",
+        "(2)"
+      ],
+      "327.731": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "877.111": [
+        "(1)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "775.021": [
+        "(5)"
+      ],
+      "327.30": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-327-35-3-a-3-c-ii-bui",
+      "name": "BUI manslaughter with failure to give information and render aid",
+      "names": {
+        "es": "Homicidio por operación bajo la influencia sin dar información ni auxilio",
+        "zh": "受影响操船致死且未提供资料和施救"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "327.35(3)(a)3.c.(II)",
+      "slug": "fl-fs-327-35-3-a-3-c-ii-bui",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 327.35(3)(a)3.c.(II)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.35",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.36",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.731",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.731.html"
+        },
+        {
+          "citation": "Fla. Stat. § 877.111",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.111.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.30",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.30.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.c.(II)",
+          "F.S. 327.35(3)(a)3.c.(II)",
+          "BUI",
+          "Boating under the influence (3)(a)3.c.(II)"
+        ],
+        "es": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.c.(II)",
+          "F.S. 327.35(3)(a)3.c.(II)",
+          "BUI",
+          "Boating under the influence (3)(a)3.c.(II)"
+        ],
+        "zh": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.c.(II)",
+          "F.S. 327.35(3)(a)3.c.(II)",
+          "BUI",
+          "Boating under the influence (3)(a)3.c.(II)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Operating a vessel in Florida while alcohol, a listed chemical or a controlled substance impairs normal faculties, or with at least 0.08 grams of alcohol per 100 mL of blood or 210 L of breath. The operation must cause or contribute to the result. A human being or an unborn child as defined in §775.021(5) dies. The operator knew or should have known an accident occurred and failed to give information and render aid as §327.30 requires. Knowledge of injury or death is unnecessary; practicable aid is subject to safety limits.",
+          "degreeContext": "First-degree felony: ordinarily up to 30 years and a $10,000 fine. Mandatory minimum of four years in prison. Monthly reporting probation and a substance-abuse course are required; referral may require evaluation and treatment at the offender’s expense. Section 327.731 also requires a $500 fine and boating-safety education; operation must wait until proof of completion is filed. Section 327.35(9) adds $60 to the fines under (2) and (4). Adjudication and sentence cannot be withheld. A guilty plea to a lesser offense is barred when a blood or breath test shows at least 0.15, or when charged with felony BUI."
+        },
+        "es": {
+          "plainSummary": "Operar una embarcación en Florida con facultades normales afectadas por alcohol, una sustancia química enumerada o una sustancia controlada, o con al menos 0.08 gramos de alcohol por 100 mL de sangre o 210 L de aliento. La operación de la embarcación debe causar o contribuir a causar el resultado. Muere un ser humano o un hijo no nacido según §775.021(5). El operador sabía o debía saber que hubo accidente y omitió informar y prestar el auxilio exigido por §327.30. No es necesario conocer las lesiones o muerte; el deber de auxilio se limita por la seguridad.",
+          "degreeContext": "Delito grave de primer grado: normalmente hasta 30 años y multa de $10,000. Mínimo obligatorio de cuatro años de prisión. Se exige libertad vigilada con informes mensuales y un curso sobre consumo de sustancias; una remisión puede exigir evaluación y tratamiento a cargo del condenado. El §327.731 exige además $500 y un curso de seguridad náutica; no se puede operar hasta presentar la constancia. El §327.35(9) añade $60 a las multas de (2) y (4). No puede reservarse la adjudicación ni la pena. Se prohíbe aceptar una declaración de culpabilidad por un delito menor si una prueba de sangre o aliento da al menos 0.15 o si se acusa de BUI grave."
+        },
+        "zh": {
+          "plainSummary": "在佛州操控船只时，正常能力因酒精、指定化学物质或管制物质受损，或每100毫升血液或每210升呼气中至少含0.08克酒精。 操船行为须造成或促成有关后果。 一人或第775.021(5)条定义的未出生胎儿死亡。 操船人知道或理应知道发生事故，未按第327.30条提供资料和施救。无需知道有人伤亡；救助义务受安全条件限制。",
+          "degreeContext": "一级重罪：通常最高30年监禁及10,000美元罚金。 强制最低四年监禁。 须每月向缓刑监督部门报到并参加药物或酒精课程；如被转介，还须自费接受评估和治疗。第327.731条另规定500美元罚金及船舶安全课程，提交结业证明前不得操船。第327.35(9)款在第(2)、(4)款罚金外另加60美元。 法院不得暂缓定罪或量刑。若血液或呼气检测读数至少0.15，或被控重罪级受影响操船，不得接受对较轻罪行的认罪。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-327-35-3-a-3-c-iii-bui",
+    "section": "327.35",
+    "scope": "(3)(a)3.c.(III)",
+    "officialTitle": "Boating under the influence; penalties; “designated drivers.”",
+    "dependencies": [
+      "327.35",
+      "327.02",
+      "327.36",
+      "327.731",
+      "877.111",
+      "893.03",
+      "775.021",
+      "316.193",
+      "782.071",
+      "782.072",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "327.35": [
+        "(3)(a)3.c.(III)",
+        "(1)",
+        "(3)(a)1.",
+        "(3)(a)2.",
+        "(3)(a)3.",
+        "(3)(a)3.c.",
+        "(3)(b)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(9)"
+      ],
+      "327.02": [
+        "(34)",
+        "(46)"
+      ],
+      "327.36": [
+        "(1)",
+        "(2)"
+      ],
+      "327.731": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "877.111": [
+        "(1)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "775.021": [
+        "(5)"
+      ],
+      "316.193": [
+        "(3)(c)3."
+      ],
+      "782.071": [
+        ""
+      ],
+      "782.072": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-327-35-3-a-3-c-iii-bui",
+      "name": "BUI manslaughter following a specified homicide conviction",
+      "names": {
+        "es": "Homicidio por operación bajo la influencia tras condena previa por homicidio especificado",
+        "zh": "有特定致死前科的受影响操船致死"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "327.35(3)(a)3.c.(III)",
+      "slug": "fl-fs-327-35-3-a-3-c-iii-bui",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 327.35(3)(a)3.c.(III)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.35",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.36",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 327.731",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.731.html"
+        },
+        {
+          "citation": "Fla. Stat. § 877.111",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.111.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.193",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.193.html"
+        },
+        {
+          "citation": "Fla. Stat. § 782.071",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.071.html"
+        },
+        {
+          "citation": "Fla. Stat. § 782.072",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.072.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.c.(III)",
+          "F.S. 327.35(3)(a)3.c.(III)",
+          "BUI",
+          "Boating under the influence (3)(a)3.c.(III)"
+        ],
+        "es": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.c.(III)",
+          "F.S. 327.35(3)(a)3.c.(III)",
+          "BUI",
+          "Boating under the influence (3)(a)3.c.(III)"
+        ],
+        "zh": [
+          "Boating under the influence; penalties; “designated drivers.”",
+          "FS 327.35(3)(a)3.c.(III)",
+          "F.S. 327.35(3)(a)3.c.(III)",
+          "BUI",
+          "Boating under the influence (3)(a)3.c.(III)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Operating a vessel in Florida while alcohol, a listed chemical or a controlled substance impairs normal faculties, or with at least 0.08 grams of alcohol per 100 mL of blood or 210 L of breath. The operation must cause or contribute to the result. A human being or an unborn child as defined in §775.021(5) dies. For offenses from October 1, 2025, a prior conviction for BUI manslaughter, DUI manslaughter, vehicular homicide or vessel homicide under the cited laws triggers this branch.",
+          "degreeContext": "First-degree felony: ordinarily up to 30 years and a $10,000 fine. Mandatory minimum of four years in prison. Monthly reporting probation and a substance-abuse course are required; referral may require evaluation and treatment at the offender’s expense. Section 327.731 also requires a $500 fine and boating-safety education; operation must wait until proof of completion is filed. Section 327.35(9) adds $60 to the fines under (2) and (4). Adjudication and sentence cannot be withheld. A guilty plea to a lesser offense is barred when a blood or breath test shows at least 0.15, or when charged with felony BUI."
+        },
+        "es": {
+          "plainSummary": "Operar una embarcación en Florida con facultades normales afectadas por alcohol, una sustancia química enumerada o una sustancia controlada, o con al menos 0.08 gramos de alcohol por 100 mL de sangre o 210 L de aliento. La operación de la embarcación debe causar o contribuir a causar el resultado. Muere un ser humano o un hijo no nacido según §775.021(5). Para hechos desde el 1 de octubre de 2025, se exige condena previa por homicidio náutico o vial bajo la influencia, u homicidio vehicular o náutico, conforme a las disposiciones citadas.",
+          "degreeContext": "Delito grave de primer grado: normalmente hasta 30 años y multa de $10,000. Mínimo obligatorio de cuatro años de prisión. Se exige libertad vigilada con informes mensuales y un curso sobre consumo de sustancias; una remisión puede exigir evaluación y tratamiento a cargo del condenado. El §327.731 exige además $500 y un curso de seguridad náutica; no se puede operar hasta presentar la constancia. El §327.35(9) añade $60 a las multas de (2) y (4). No puede reservarse la adjudicación ni la pena. Se prohíbe aceptar una declaración de culpabilidad por un delito menor si una prueba de sangre o aliento da al menos 0.15 o si se acusa de BUI grave."
+        },
+        "zh": {
+          "plainSummary": "在佛州操控船只时，正常能力因酒精、指定化学物质或管制物质受损，或每100毫升血液或每210升呼气中至少含0.08克酒精。 操船行为须造成或促成有关后果。 一人或第775.021(5)条定义的未出生胎儿死亡。 对2025年10月1日起的行为，须有引用法条所列酒毒驾船致死、酒毒驾车致死、车辆致死或船舶致死定罪。",
+          "degreeContext": "一级重罪：通常最高30年监禁及10,000美元罚金。 强制最低四年监禁。 须每月向缓刑监督部门报到并参加药物或酒精课程；如被转介，还须自费接受评估和治疗。第327.731条另规定500美元罚金及船舶安全课程，提交结业证明前不得操船。第327.35(9)款在第(2)、(4)款罚金外另加60美元。 法院不得暂缓定罪或量刑。若血液或呼气检测读数至少0.15，或被控重罪级受影响操船，不得接受对较轻罪行的认罪。"
+        }
+      }
+    }
+  }
+]
