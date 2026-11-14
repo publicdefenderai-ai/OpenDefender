@@ -84,6 +84,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     alternateCitations: row.references.map(texasDwiCitation),
     confidence: "high", lastVerified: "2026-11", source: "Texas Legislative Council TCSS",
     sourceUrl: texasDwiUrl(row.references[1]),
+    instructionRef: "TPJC 49.04",
   } satisfies CitationRecord])),
 
   // ── BATCH 1: AL, AR, DC, DE, FL, GA, MD, MS, NC, SC, VA ─────────────────
