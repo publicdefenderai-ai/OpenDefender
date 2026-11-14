@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { PDFParse } from 'pdf-parse';
 
 // Test-only generated content. Production questions, generators and eligibility are not bypassed.
 const guidance = {
@@ -154,3 +155,91 @@ for (const [language, title] of Object.entries({ en: 'Guidance: Example charge i
     await expect(page.getByTestId('guidance-dashboard').getByRole('heading', { level: 1 })).toHaveText(title);
   });
 }
+
+for (const scenario of ['legacy', 'code-only', 'saved-text-only', 'mixed', 'withheld', 'offline', 'current'] as const) {
+  test(`Ohio saved roadmap print boundary: ${scenario}`, async ({ page }) => {
+    await setup(page);
+    const reviewed = 'oh-orc-2903-01-aggravated-murder';
+    const legacy = 'oh-robbery-in-the-first-degree';
+    const ids = scenario === 'saved-text-only' ? [] : scenario === 'mixed' ? [reviewed, legacy]
+      : [scenario === 'legacy' ? legacy : scenario === 'code-only' ? undefined : reviewed];
+    const overview = 'Historical penalty and citation from a saved session.';
+    await page.route('**/api/legal-guidance/design-results', route => route.fulfill({ json: {
+      success: true, guidance: { ...guidance, overview, caseData: { ...guidance.caseData, jurisdiction: 'Ohio', charges: scenario === 'saved-text-only' ? 'Former Ohio charge' : '' },
+        chargeClassifications: ids.map(id => ({ id, name: 'Saved charge', code: '2911.01', classification: 'felony' })) },
+    } }));
+    let available = scenario === 'current' || scenario === 'mixed';
+    await page.route('**/api/criminal-charges?**', route => {
+      if (scenario === 'offline') return route.abort();
+      const charges = available ? [{ id: reviewed }] : [];
+      return route.fulfill({ json: { success: true, count: charges.length, charges, totalAvailable: charges.length,
+        pagination: { offset: 0, limit: 500, totalMatches: charges.length, nextOffset: null, snapshot: 'a'.repeat(64) } } });
+    });
+    await page.goto('/case-guidance?session=design-results');
+    const print = page.getByTestId('button-print-guidance');
+    await expect(print).toBeVisible();
+    const plan = page.getByTestId('print-guidance-plan');
+    await page.emulateMedia({ media: 'print' });
+    await expect(plan).toBeVisible();
+    await expect(plan).toContainText('Charge selection needs to be confirmed');
+    await expect(page.locator('body')).not.toContainText(overview, { useInnerText: true });
+    if (scenario === 'legacy') {
+      const pdf = new PDFParse({ data: new Uint8Array(await page.pdf()) });
+      try {
+        const { text } = await pdf.getText();
+        expect(text).toContain('Charge selection needs to be confirmed');
+        expect(text).not.toContain(overview);
+        expect(text).not.toContain('Saved charge');
+      } finally {
+        await pdf.destroy();
+      }
+    }
+    await page.emulateMedia({ media: 'screen' });
+    // Inspect exactly what the app hands to the browser at window.print().
+    await page.evaluate(() => {
+      window.print = () => { document.body.dataset.printedPlan =
+        document.querySelector('[data-testid="print-guidance-plan"]')?.textContent ?? ''; };
+    });
+    if (scenario === 'current') {
+      await print.click();
+      await expect(page.locator('body')).toHaveAttribute('data-printed-plan', new RegExp(overview));
+      await expect(plan).not.toContainText(overview);
+      available = false;
+    }
+    const warning = page.waitForEvent('dialog').then(async dialog => {
+      const message = dialog.message();
+      await dialog.dismiss();
+      return message;
+    });
+    await print.click();
+    expect(await warning).toContain('Charge selection needs to be confirmed');
+    if (scenario !== 'current') await expect(page.locator('body')).not.toHaveAttribute('data-printed-plan', /.*/);
+    await page.emulateMedia({ media: 'print' });
+    await expect(plan).toContainText('Charge selection needs to be confirmed');
+    await expect(plan).not.toContainText(overview);
+  });
+}
+
+test('Ohio roadmap without selected charges supports browser print, roadmap print and PDF export', async ({ page }) => {
+  await setup(page);
+  await page.route('**/api/legal-guidance/design-results', route => route.fulfill({ json: {
+    success: true, guidance: { ...guidance, chargeClassifications: [], caseData: { ...guidance.caseData, jurisdiction: 'OH' } },
+  } }));
+  await page.route('**/api/criminal-charges?**', route => route.abort());
+  await page.goto('/case-guidance?session=design-results');
+  const plan = page.getByTestId('print-guidance-plan');
+  await page.emulateMedia({ media: 'print' });
+  await expect(plan).toBeVisible();
+  await expect(plan).toContainText(guidance.overview);
+  await page.emulateMedia({ media: 'screen' });
+  await page.evaluate(() => {
+    window.print = () => { document.body.dataset.printedPlan =
+      document.querySelector('[data-testid="print-guidance-plan"]')?.textContent ?? ''; };
+  });
+  await page.getByTestId('button-print-guidance').click();
+  await expect(page.locator('body')).toHaveAttribute('data-printed-plan', /a complete roadmap/);
+  await page.getByTestId('button-export-pdf').click();
+  const download = page.waitForEvent('download');
+  await page.getByTestId('button-confirm-export').click();
+  expect(await (await download).failure()).toBeNull();
+});
