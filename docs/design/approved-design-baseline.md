@@ -681,3 +681,7 @@ The approved mission-content.html reference (SHA-256 5a03865b77324027f2b47076b06
 ### Case Documents Library
 
 The approved opendefender-document-library-preview.html reference (SHA-256 2745cab6186fb10b7b1f982272b142408adb8fcd944e90b37fe34605b6d693c7) presents all 18 explainers in expandable rows. Search uses the current locale’s title, description, purpose, action and section text plus the form number. Phase and category filters combine with the search. Shared document links open the matching entry, including links from Case Guidance. Published explanations and phase assignments are retained. The former importance badges are omitted from the library as in the approved preview.
+
+### Legal Glossary
+
+The approved glossary-content.html reference (SHA-256 c8ee1f6bee23cf831e3af7b5b6ec550614fa389428ffe7e4df83f1c34e44d736) uses alphabetical rows, a topic selector and inline definitions. The live shared catalog supplies all terms, aliases, topic tags, definitions and related destinations. The English entries are marked for assistive technology within the localized interface. The page supports incoming search parameters and term fragments, with all filtering performed locally.

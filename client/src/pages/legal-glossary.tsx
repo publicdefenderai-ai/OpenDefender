@@ -1,343 +1,126 @@
-import { useState, useMemo, useEffect } from "react";
-import { motion } from "framer-motion";
-import { useTranslation } from 'react-i18next';
-import { 
-  Search, 
-  BookOpen, 
-  ArrowLeft,
-  Hash,
-  Filter,
-  X
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-import { 
-  Accordion, 
-  AccordionContent, 
-  AccordionItem, 
-  AccordionTrigger 
-} from "@/components/ui/accordion";
-import { Link } from "wouter";
-
+import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Link, useSearch } from "wouter";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import {
-  legalGlossaryTerms,
-  searchGlossaryTerms,
-  getTermsByLetter,
-  getAvailableLetters,
-  type GlossaryTermWithLink,
-} from "@/lib/legal-glossary-data";
+import { getAvailableLetters, legalGlossaryTerms, searchGlossaryTerms } from "@/lib/legal-glossary-data";
+import "./legal-glossary.css";
+
+const letters = getAvailableLetters();
+const topics = [...new Set(legalGlossaryTerms.flatMap(term => term.tags ?? []))].sort();
 
 export default function LegalGlossary() {
   useScrollToTop();
   const { t } = useTranslation();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedLetter, setSelectedLetter] = useState("");
-  const [selectedTag, setSelectedTag] = useState("");
+  const searchParams = useSearch();
+  const [query, setQuery] = useState("");
+  const [letter, setLetter] = useState("");
+  const [topic, setTopic] = useState("");
+  const search = useRef<HTMLInputElement>(null);
+  const selector = useRef<HTMLSelectElement>(null);
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const search = params.get("search");
-    if (search) setSearchQuery(search);
-  }, []);
-
-  // Get all unique tags
-  const availableTags = useMemo(() => {
-    const tags = new Set<string>();
-    legalGlossaryTerms.forEach(term => {
-      term.tags?.forEach(tag => tags.add(tag));
-    });
-    return Array.from(tags).sort();
-  }, []);
-
-  // Filter terms based on search, letter, and tag
-  const filteredTerms = useMemo(() => {
-    let terms = legalGlossaryTerms;
-
-    // Apply search filter
-    if (searchQuery.trim()) {
-      terms = searchGlossaryTerms(searchQuery);
+    setQuery(new URLSearchParams(searchParams).get("search") ?? "");
+    setLetter("");
+    setTopic("");
+    let frame = 0;
+    function openAnchor() {
+      const slug = window.location.hash.slice(1);
+      if (!legalGlossaryTerms.some(term => term.slug === slug)) return;
+      setQuery("");
+      setLetter("");
+      setTopic("");
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const entry = document.getElementById(slug);
+        if (entry instanceof HTMLDetailsElement) {
+          entry.open = true;
+          entry.querySelector("summary")?.focus({ preventScroll: true });
+          entry.scrollIntoView({ block: "start" });
+        }
+      });
     }
+    openAnchor();
+    window.addEventListener("hashchange", openAnchor);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("hashchange", openAnchor);
+    };
+  }, [searchParams]);
 
-    // Apply letter filter
-    if (selectedLetter) {
-      terms = terms.filter(term => 
-        term.term.charAt(0).toLowerCase() === selectedLetter.toLowerCase()
-      );
-    }
-
-    // Apply tag filter
-    if (selectedTag) {
-      terms = terms.filter(term => 
-        term.tags?.includes(selectedTag)
-      );
-    }
-
-    return terms.sort((a, b) => a.term.localeCompare(b.term));
-  }, [searchQuery, selectedLetter, selectedTag]);
-
-  const availableLetters = getAvailableLetters();
-
-  const clearFilters = () => {
-    setSearchQuery("");
-    setSelectedLetter("");
-    setSelectedTag("");
-  };
-
-  const hasActiveFilters = searchQuery || selectedLetter || selectedTag;
+  const matches = searchGlossaryTerms(query.trim()).filter(term =>
+    (!letter || term.term[0].toLowerCase() === letter) && (!topic || term.tags?.includes(topic))
+  ).sort((a, b) => a.term.localeCompare(b.term));
+  const count = t("legalGlossary.navigation.termsCount", { count: matches.length, total: legalGlossaryTerms.length });
+  function clearFilters() {
+    setQuery("");
+    setLetter("");
+    setTopic("");
+    search.current?.focus();
+  }
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <Header />
-
-      {/* Editorial opening */}
-      <section className="editorial-page-intro py-12 md:py-16 lg:py-20">
-        <div className="editorial-page-intro-inner max-w-6xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="editorial-tool-icon w-12 h-12 mb-5">
-              <BookOpen className="h-6 w-6" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              {t('legalGlossary.hero.title')}
-            </h1>
-            <p className="text-lg md:text-xl max-w-3xl">
-              {t('legalGlossary.hero.subtitle')}
-            </p>
-          </motion.div>
+      <div data-skip-content tabIndex={-1} className="glossary-reader">
+        <header className="glossary-intro">
+          <div>
+            <p>{t("legalGlossary.hero.title")}</p>
+            <h1>{t("legalGlossary.reader.heading")} <span>{t("legalGlossary.reader.accent")}</span></h1>
+            <p>{t("legalGlossary.reader.intro")}</p>
+          </div>
+          <span className="glossary-specimen" aria-hidden="true">Aa</span>
+        </header>
+        <div className="glossary-controls">
+          <label>{t("legalGlossary.reader.search")}
+            <input type="search" ref={search} value={query} placeholder={t("legalGlossary.search.placeholder")}
+              onChange={event => setQuery(event.target.value)} data-testid="input-glossary-search" />
+          </label>
+          <label>{t("legalGlossary.reader.topic")}
+            <select ref={selector} value={topic} onChange={event => setTopic(event.target.value)}>
+              <option value="">{t("legalGlossary.reader.allTopics")}</option>
+              {topics.map(tag => <option lang="en" key={tag} value={tag}>{tag}</option>)}
+            </select>
+          </label>
+          <button type="button" data-testid="button-clear-filters" onClick={clearFilters} disabled={!query && !letter && !topic}>{t("legalGlossary.search.clearFilters")}</button>
         </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="editorial-reading py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <ScrollReveal>
-            <div className="flex flex-wrap items-center gap-3 mb-8">
-              <Link href="/">
-                <Button variant="outline" size="sm">
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  {t('legalGlossary.navigation.backToHome')}
-                </Button>
-              </Link>
-              <div className="text-sm text-muted-foreground">
-                {t('legalGlossary.navigation.termsCount', { count: filteredTerms.length, total: legalGlossaryTerms.length })}
-              </div>
-            </div>
-          </ScrollReveal>
-
-          {/* Search and Filters */}
-          <ScrollReveal delay={0.1}>
-            <Card className="editorial-card mb-8">
-              <CardContent className="p-6">
-                <div className="space-y-6">
-                  {/* Search Input */}
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                    <Input
-                      placeholder={t('legalGlossary.search.placeholder')}
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-10"
-                      data-testid="input-glossary-search"
-                    />
-                  </div>
-
-                  {/* Alphabet Filter */}
-                  <div>
-                    <div className="flex items-center gap-2 mb-3">
-                      <Hash className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-sm font-medium">{t('legalGlossary.search.browseByLetter')}</span>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {availableLetters.map(letter => (
-                        <Button
-                          key={letter}
-                          variant={selectedLetter === letter ? "default" : "outline"}
-                          size="sm"
-                          onClick={() => setSelectedLetter(selectedLetter === letter ? "" : letter)}
-                           className="w-10 h-10 min-h-[44px] p-0 min-w-[2.5rem]"
-                          data-testid={`button-letter-${letter}`}
-                        >
-                          {letter.toUpperCase()}
-                        </Button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Tag Filter */}
-                  <div>
-                    <div className="flex items-center gap-2 mb-3">
-                      <Filter className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-sm font-medium">{t('legalGlossary.search.filterByCategory')}</span>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {availableTags.slice(0, 10).map(tag => (
-                        <Button
-                          key={tag}
-                          variant={selectedTag === tag ? "default" : "outline"}
-                          size="sm"
-                          onClick={() => setSelectedTag(selectedTag === tag ? "" : tag)}
-                          data-testid={`button-tag-${tag}`}
-                        >
-                          {tag}
-                        </Button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Clear Filters */}
-                  {hasActiveFilters && (
-                    <div className="flex items-center gap-2">
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={clearFilters}
-                        className="text-muted-foreground"
-                        data-testid="button-clear-filters"
-                      >
-                        <X className="h-4 w-4 mr-2" />
-                        {t('legalGlossary.search.clearFilters')}
-                      </Button>
-                    </div>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-          </ScrollReveal>
-
-          {/* Terms List */}
-          <ScrollReveal delay={0.2}>
-            {filteredTerms.length > 0 ? (
-              <Card className="editorial-card">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <BookOpen className="h-5 w-5" />
-                    {t('legalGlossary.terms.title')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-0">
-                  <Accordion type="multiple" className="w-full">
-                    {filteredTerms.map((term, index) => (
-                      <AccordionItem 
-                        key={term.id} 
-                        value={term.id}
-                        className="px-6"
-                      >
-                        <AccordionTrigger 
-                          className="text-left hover:no-underline"
-                          data-testid={`accordion-term-${term.slug}`}
-                        >
-                          <div className="flex flex-col items-start gap-2 flex-1">
-                            <div className="font-semibold text-lg">
-                              {term.term}
-                            </div>
-                            {term.aliases && term.aliases.length > 0 && (
-                              <div className="flex flex-wrap gap-1">
-                                {term.aliases.map(alias => (
-                                  <Badge key={alias} variant="secondary" className="text-xs">
-                                    {alias}
-                                  </Badge>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        </AccordionTrigger>
-                        <AccordionContent className="pt-0 pb-6">
-                          <div className="space-y-4">
-                            <p className="text-muted-foreground leading-relaxed">
-                              {term.definition}
-                            </p>
-                            {(term as GlossaryTermWithLink).learnMoreUrl && (
-                              <Link
-                                href={(term as GlossaryTermWithLink).learnMoreUrl!}
-                                className="inline-flex items-center text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium underline"
-                              >
-                                Learn more →
-                              </Link>
-                            )}
-                            {term.tags && term.tags.length > 0 && (
-                              <div className="flex flex-wrap gap-2">
-                                {term.tags.map(tag => (
-                                  <Badge
-                                    key={tag}
-                                    variant="outline"
-                                    className="text-xs cursor-pointer hover:bg-muted"
-                                    onClick={() => setSelectedTag(tag)}
-                                    data-testid={`badge-tag-${tag}`}
-                                  >
-                                    #{tag}
-                                  </Badge>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </CardContent>
-              </Card>
-            ) : (
-              <Card className="editorial-card">
-                <CardContent className="p-12 text-center">
-                  <BookOpen className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">{t('legalGlossary.results.noResults', { defaultValue: 'No terms found' })}</h3>
-                  <p className="text-muted-foreground mb-4">
-                    {t('legalGlossary.results.tryDifferentSearch', { defaultValue: 'Try a different search term or clear filters' })}
-                  </p>
-                  {hasActiveFilters && (
-                    <Button variant="outline" onClick={clearFilters}>
-                      {t('legalGlossary.search.clearFilters')}
-                    </Button>
-                  )}
-                </CardContent>
-              </Card>
-            )}
-          </ScrollReveal>
-
-          {/* Quick Navigation */}
-          <ScrollReveal delay={0.3}>
-            <div className="mt-12 grid md:grid-cols-2 gap-6">
-              <Card className="editorial-card editorial-card-interactive">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">Need Case Support?</h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Get personalized case support for your specific situation.
-                  </p>
-                  <Link href="/case-guidance">
-                    <Button variant="outline" className="w-full">
-                      Get Case Support
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-              <Card className="editorial-card editorial-card-interactive">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">Know Your Rights</h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Learn about your constitutional rights and legal protections.
-                  </p>
-                  <Link href="/rights-info">
-                    <Button variant="outline" className="w-full">
-                      Learn Your Rights
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
-          </ScrollReveal>
+        <div className="glossary-alphabet" role="group" aria-label={t("legalGlossary.search.browseByLetter")}>
+          <button type="button" aria-pressed={!letter} onClick={() => setLetter("")}>{t("legalGlossary.reader.all")}</button>
+          {Array.from("abcdefghijklmnopqrstuvwxyz", initial => (
+            <button type="button" key={initial} disabled={!letters.includes(initial)} aria-pressed={letter === initial}
+              data-testid={`button-letter-${initial}`} onClick={() => setLetter(letter === initial ? "" : initial)}>{initial.toUpperCase()}</button>
+          ))}
         </div>
-      </section>
-
+        <p role="status" className="glossary-count">{count}</p>
+        {!matches.length && <div><h2>{t("legalGlossary.results.noResults")}</h2><p>{t("legalGlossary.results.tryDifferentSearch")}</p></div>}
+        {letters.map(initial => {
+          const terms = matches.filter(term => term.term[0].toLowerCase() === initial);
+          if (!terms.length) return null;
+          return <section key={initial} className="glossary-group">
+            <h2>{initial.toUpperCase()}</h2>
+            <div>{terms.map(term => <details key={term.id} id={term.slug}>
+              <summary lang="en" data-testid={`accordion-term-${term.slug}`}>{term.term}</summary>
+              {term.aliases?.length ? <p>{t("legalGlossary.terms.aliases")} <span lang="en">{term.aliases.join(", ")}</span></p> : null}
+              <p lang="en">{term.definition}</p>
+              {term.learnMoreUrl && <Link href={term.learnMoreUrl}>{t("legalGlossary.reader.guide")}</Link>}
+              <div className="glossary-tags">{term.tags?.map(tag => (
+                <button type="button" lang="en" key={tag} onClick={() => {
+                  setTopic(tag); setLetter(""); selector.current?.focus();
+                }}>{tag}</button>
+              ))}</div>
+            </details>)}</div>
+          </section>;
+        })}
+        <nav className="glossary-links" aria-label={t("legalGlossary.reader.related")}>
+          <Link href="/document-library">{t("documentLibrary.title")}</Link>
+          <Link href="/rights-info">{t("legalGlossary.reader.rights")}</Link>
+          <Link href="/directory">{t("legalGlossary.reader.resources")}</Link>
+          <Link href="/case-guidance">{t("legalGlossary.reader.guidance")}</Link>
+          <Link href="/">{t("legalGlossary.navigation.backToHome")}</Link>
+        </nav>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

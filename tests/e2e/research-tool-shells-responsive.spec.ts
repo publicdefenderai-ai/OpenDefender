@@ -413,7 +413,7 @@ async function expectPrimaryToolSurface(page: Page, route: string) {
     case "/legal-glossary":
       await expect(page.getByTestId("input-glossary-search")).toBeVisible();
       await expect(
-        page.locator("section.editorial-reading .editorial-card").first(),
+        page.getByTestId("accordion-term-arraignment"),
       ).toBeVisible();
       return;
     case "/document-summarizer":
@@ -476,9 +476,18 @@ for (const viewport of VIEWPORTS) {
       });
     });
 
+    test("glossary opening and alphabetical groups fit the available width", async ({ page }, info) => {
+      await page.goto("/legal-glossary");
+      await expect(page.locator(".glossary-intro h1")).toBeVisible();
+      await expectPrimaryToolSurface(page, "/legal-glossary");
+      await expect(page.locator(".glossary-controls").getByRole("combobox")).toBeVisible();
+      await expect(page.locator(".glossary-group").first().getByRole("heading")).toHaveText("A");
+      await expectNoHorizontalOverflow(page);
+      await info.attach("Glossary layout", { body: await page.screenshot(), contentType: "image/png" });
+    });
+
     test("render their editorial openings and initial tool surfaces without overflow", async ({ page }) => {
       const routes = [
-        "/legal-glossary",
         "/document-summarizer",
         "/statutes",
       ] as const;

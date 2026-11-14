@@ -241,7 +241,7 @@ test.describe("intent navigation and accessibility", () => {
     await page.setViewportSize({ width: 360, height: 800 });
 
     await page.goto("/legal-glossary");
-    await expect(page.getByRole("heading", { name: "Legal Glossary" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Legal language. Plain explanations." })).toBeVisible();
     await expect(page.getByPlaceholder(/search legal terms/i)).toBeVisible();
 
     await page.goto("/document-summarizer");

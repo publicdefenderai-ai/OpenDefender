@@ -4033,6 +4033,20 @@ export default {
     }
   },
   "legalGlossary": {
+    "reader": {
+      "heading": "Legal language.",
+      "accent": "Plain explanations.",
+      "intro": "Find a term from a court document, a conversation, or a guide. Search by its name or another word used for it.",
+      "search": "Find a legal term",
+      "topic": "Topic",
+      "allTopics": "All topics",
+      "all": "All",
+      "guide": "Explore the related guide",
+      "related": "Related resources",
+      "rights": "Know Your Rights",
+      "resources": "All resources",
+      "guidance": "Case Guidance"
+    },
     "hero": {
       "title": "Legal Glossary",
       "subtitle": "Understanding legal terms and concepts to help you navigate the criminal justice system"
