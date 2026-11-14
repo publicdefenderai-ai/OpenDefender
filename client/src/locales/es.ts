@@ -5609,6 +5609,15 @@ export default {
     }
   },
   "documentLibrary": {
+    "reader": {
+      "heading": "Entienda los documentos de su caso.",
+      "search": "Buscar un documento",
+      "clear": "Borrar filtros",
+      "note": "Estas guías explican documentos. Los nombres, formatos y requisitos pueden variar. Para obtener una copia de sus documentos, consulte a la oficina que los emitió.",
+      "help": "¿Tiene preguntas sobre un documento?",
+      "helpText": "El asistente de IA puede explicar términos generales. Un abogado puede ayudarle con preguntas sobre su caso o un plazo.",
+      "chat": "Abrir el asistente de IA"
+    },
     "title": "Biblioteca de Documentos del Caso",
     "subtitle": "Comprenda los documentos que puede recibir durante su caso. Cada sección se explica en lenguaje sencillo.",
     "importance": {
