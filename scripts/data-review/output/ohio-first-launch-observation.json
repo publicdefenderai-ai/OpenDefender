@@ -1,0 +1,210 @@
+{
+  "reviewedRevision": "a3c970a17bab2c9a9e183a7ab59792b760a25be5",
+  "prioritySourceRevision": "f60b38b5",
+  "observation": {
+    "publicOrigin": "https://opendefender.net",
+    "selectorObservedAt": "2026-11-14T05:11:40+00:00",
+    "selectorPath": "/api/criminal-charges?jurisdiction=OH&limit=500",
+    "selectorResponseSha256": "0c54f67042a11066178074f14ed590426b9468e881d8fdcda4b2579db86e1386",
+    "pagination": {
+      "offset": 0,
+      "limit": 500,
+      "totalMatches": 7,
+      "nextOffset": null,
+      "snapshot": "34ed5248ad0fc0dafe4013d62d45ab676e294b26d9fd622349a93ee57ace6d6c"
+    },
+    "publicChoices": [
+      {
+        "id": "oh-rape-in-the-first-degree",
+        "name": "Rape",
+        "code": "2907.02",
+        "maxPenalty": "First-degree felony; up to 11 years imprisonment; up to life if prior offenses"
+      },
+      {
+        "id": "oh-sexual-assault-in-the-third-degree",
+        "name": "Gross Sexual Imposition",
+        "code": "2907.05",
+        "maxPenalty": "Third-degree felony; up to 5 years imprisonment; up to life if victim under 13"
+      },
+      {
+        "id": "oh-robbery-in-the-first-degree",
+        "name": "Aggravated Robbery",
+        "code": "2911.01",
+        "maxPenalty": "Up to life imprisonment and/or substantial fines"
+      },
+      {
+        "id": "oh-robbery-in-the-second-degree",
+        "name": "Robbery",
+        "code": "2911.02",
+        "maxPenalty": "Up to 20 years imprisonment and/or substantial fines"
+      },
+      {
+        "id": "oh-disorderly-conduct",
+        "name": "Disorderly Conduct",
+        "code": "2917.11",
+        "maxPenalty": "Penalties vary by jurisdiction"
+      },
+      {
+        "id": "oh-domestic-violence",
+        "name": "Domestic Violence",
+        "code": "2919.25",
+        "maxPenalty": "M1 1st offense: up to 180 days/$1,000"
+      },
+      {
+        "id": "oh-criminal-trespass",
+        "name": "Criminal Trespass",
+        "code": "2911.21",
+        "maxPenalty": "M4: up to 30 days/$250"
+      }
+    ],
+    "statusObservedAt": "2026-11-14T05:11:41+00:00",
+    "statusPath": "/api/statutes/sources/ohio/status",
+    "statusResponseSha256": "ac3564cc9c5f079d0e74f029db7d7620391485d6aff0dbe4eaf570384da04e2a",
+    "status": {
+      "sourceCount": 259,
+      "snapshotCount": 259,
+      "currentSnapshotCount": 259,
+      "pendingReviewCount": 0,
+      "linkedChargeCount": 134,
+      "selectableChargeCount": 10,
+      "catalogRecordCount": 115
+    },
+    "lastImport": {
+      "status": "completed",
+      "completedAt": "2026-10-27T02:21:42.972Z"
+    }
+  },
+  "priorityGroups": {
+    "assault": [
+      {
+        "id": "oh-orc-2903-11-felonious-assault",
+        "code": "2903.11",
+        "group": "chapter-2903"
+      },
+      {
+        "id": "oh-orc-2903-12-aggravated-assault",
+        "code": "2903.12",
+        "group": "chapter-2903"
+      },
+      {
+        "id": "oh-orc-2903-14-negligent-assault",
+        "code": "2903.14",
+        "group": "chapter-2903"
+      },
+      {
+        "id": "oh-orc-2903-13-assault",
+        "code": "2903.13",
+        "group": "reviewed"
+      }
+    ],
+    "domestic violence": [
+      {
+        "id": "oh-orc-2919-25-physical-harm",
+        "code": "2919.25(A)",
+        "group": "protection"
+      },
+      {
+        "id": "oh-orc-2919-25-reckless-serious-harm",
+        "code": "2919.25(B)",
+        "group": "protection"
+      },
+      {
+        "id": "oh-orc-2919-25-threat-of-force",
+        "code": "2919.25(C)",
+        "group": "protection"
+      }
+    ],
+    "theft": [
+      {
+        "id": "oh-orc-2913-02-theft",
+        "code": "2913.02",
+        "group": "reviewed"
+      }
+    ],
+    "impaired driving": [
+      {
+        "id": "oh-orc-4511-19-operating-a-vehicle-after-underage-alcohol-consumption",
+        "code": "4511.19",
+        "group": "reviewed"
+      },
+      {
+        "id": "oh-orc-4511-19-operating-a-vehicle-under-the-influence-of-alcohol-a-drug-of-abuse-or-a-combination-of-them",
+        "code": "4511.19",
+        "group": "reviewed"
+      },
+      {
+        "id": "oh-orc-4511-19-operating-a-vehicle-while-under-the-influence-of-a-listed-controlled-substance-or-a-listed-metabolite-of-a-controlled-substance",
+        "code": "4511.19",
+        "group": "reviewed"
+      }
+    ],
+    "drug possession": [
+      {
+        "id": "oh-orc-2925-11-aggravated-possession-of-drugs",
+        "code": "2925.11",
+        "group": "reviewed"
+      },
+      {
+        "id": "oh-orc-2925-11-possession-of-a-controlled-substance-analog",
+        "code": "2925.11",
+        "group": "reviewed"
+      },
+      {
+        "id": "oh-orc-2925-11-possession-of-a-fentanyl-related-compound",
+        "code": "2925.11",
+        "group": "reviewed"
+      },
+      {
+        "id": "oh-orc-2925-11-possession-of-cocaine",
+        "code": "2925.11",
+        "group": "reviewed"
+      },
+      {
+        "id": "oh-orc-2925-11-possession-of-drugs",
+        "code": "2925.11",
+        "group": "reviewed"
+      },
+      {
+        "id": "oh-orc-2925-11-possession-of-hashish",
+        "code": "2925.11",
+        "group": "reviewed"
+      },
+      {
+        "id": "oh-orc-2925-11-possession-of-heroin",
+        "code": "2925.11",
+        "group": "reviewed"
+      },
+      {
+        "id": "oh-orc-2925-11-possession-of-l-s-d",
+        "code": "2925.11",
+        "group": "reviewed"
+      },
+      {
+        "id": "oh-orc-2925-11-possession-of-marihuana",
+        "code": "2925.11",
+        "group": "reviewed"
+      }
+    ],
+    "extortion": [
+      {
+        "id": "oh-orc-2905-11-extortion",
+        "code": "2905.11",
+        "group": "residual"
+      },
+      {
+        "id": "oh-orc-2905-11-sexual-extortion",
+        "code": "2905.11",
+        "group": "residual"
+      }
+    ]
+  },
+  "previouslyMissingSections": [
+    "2907.06",
+    "2907.07",
+    "2907.08",
+    "2923.15",
+    "2923.16",
+    "2925.12",
+    "2925.22"
+  ]
+}
