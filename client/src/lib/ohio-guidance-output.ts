@@ -26,12 +26,19 @@ export class OhioChargeConfirmationError extends Error {
   }
 }
 
+export function ohioChargesAreCurrent(plan: SavedPlan, currentIds: ReadonlySet<string>) {
+  const ids = new Set(plan.chargeClassifications.map(charge => charge.id));
+  if (!ids.size || [...ids].some(id => !id || !isReviewedOhioChargeId(id) || !currentIds.has(id))) return false;
+  // When the saved selection is present, every entry must be accounted for by a verified classification.
+  const selected = plan.caseData.charges.trim();
+  if (!selected) return true;
+  const names = new Set(plan.chargeClassifications.map(charge => charge.name));
+  if (selected === plan.chargeClassifications.map(charge => charge.name).join(", ")) return true;
+  return selected.split(",").every(entry => ids.has(entry.trim()) || names.has(entry.trim()));
+}
+
 export async function canOutputOhioPlan(plan: SavedPlan) {
-  const charges = plan.chargeClassifications;
   if (!requiresOhioChargeConfirmation(plan)) return true;
-  if (!charges.length || charges.some(charge => !charge.id || !isReviewedOhioChargeId(charge.id))) return false;
   const catalog = await fetchChargeCatalog({ jurisdiction: "OH" }).catch(() => null);
-  if (!catalog) return false;
-  const currentIds = new Set(catalog.charges.map(charge => charge.id));
-  return charges.every(charge => currentIds.has(charge.id ?? ""));
+  return !!catalog && ohioChargesAreCurrent(plan, new Set(catalog.charges.map(charge => charge.id)));
 }

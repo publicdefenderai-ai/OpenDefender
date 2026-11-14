@@ -1,5 +1,5 @@
 import { flushSync } from "react-dom";
-import { requiresOhioChargeConfirmation, canOutputOhioPlan, ohioReselectionNotice, OhioChargeConfirmationError } from "@/lib/ohio-guidance-output";
+import { requiresOhioChargeConfirmation, ohioChargesAreCurrent, canOutputOhioPlan, ohioReselectionNotice, OhioChargeConfirmationError } from "@/lib/ohio-guidance-output";
 import { ChargeTranslationSupplement } from "./charge-translation-supplement";
 import { fetchChargeCatalog } from "@/lib/charge-catalog";
 import { translationUnavailableNotice } from "@shared/translation-unavailable-notice";
@@ -591,36 +591,17 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
 }
 
 function YourChargesSection({
+  normalizedJurisdiction, isAuthorityBacked, currentAuthorityIds,
   chargeClassifications,
   jurisdiction,
 }: {
+  normalizedJurisdiction: string;
+  isAuthorityBacked: boolean;
+  currentAuthorityIds: ReadonlySet<string>;
   chargeClassifications?: GuidanceChargeClassification[];
   jurisdiction?: string;
 }) {
   const { t, i18n } = useTranslation();
-  const normalizedJurisdiction = jurisdiction?.toUpperCase() === "OHIO" ? "OH" : jurisdiction?.toUpperCase();
-  const isAuthorityBacked = normalizedJurisdiction === "NY" ||
-    normalizedJurisdiction === "TX" ||
-    normalizedJurisdiction === "FL" ||
-    normalizedJurisdiction === "PA" ||
-    normalizedJurisdiction === "SC" ||
-    normalizedJurisdiction === "IL" ||
-    normalizedJurisdiction === "OH" ||
-    normalizedJurisdiction === "GA" ||
-    normalizedJurisdiction === "CA";
-  const { data: currentAuthorityCharges, isError: authorityError } = useQuery<{ charges?: Array<{ id: string }> }>({
-    queryKey: ["/api/criminal-charges", "guidance-authority", normalizedJurisdiction],
-    queryFn: ({ signal }) => fetchChargeCatalog({ jurisdiction: normalizedJurisdiction ?? "" }, signal),
-    enabled: isAuthorityBacked,
-    staleTime: 0,
-    retry: false,
-    refetchOnWindowFocus: true,
-    refetchOnReconnect: true,
-  });
-  const currentAuthorityIds = new Set(
-    authorityError ? [] : currentAuthorityCharges?.charges?.map((charge) => charge.id) ?? [],
-  );
-  
   if (!chargeClassifications || chargeClassifications.length === 0) {
     return null;
   }
@@ -984,6 +965,30 @@ function DocumentsSection({ caseStage, guardedNavigate }: { caseStage: string; g
 
 export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, onShowPublicDefender, onShowLegalAid, onExport, guidanceMode = 'ai' }: GuidanceDashboardProps) {
   const guidance = normalizeGuidance(savedPlan);
+  const needsOhioConfirmation = requiresOhioChargeConfirmation(guidance);
+  const normalizedJurisdiction = needsOhioConfirmation ? "OH" : guidance.caseData.jurisdiction.trim().toUpperCase();
+  const isAuthorityBacked = normalizedJurisdiction === "NY" ||
+    normalizedJurisdiction === "TX" ||
+    normalizedJurisdiction === "FL" ||
+    normalizedJurisdiction === "PA" ||
+    normalizedJurisdiction === "SC" ||
+    normalizedJurisdiction === "IL" ||
+    normalizedJurisdiction === "OH" ||
+    normalizedJurisdiction === "GA" ||
+    normalizedJurisdiction === "CA";
+  const authority = useQuery<{ charges?: Array<{ id: string }> }>({
+    queryKey: ["/api/criminal-charges", "guidance-authority", normalizedJurisdiction, needsOhioConfirmation ? guidance.sessionId : null],
+    queryFn: ({ signal }) => fetchChargeCatalog({ jurisdiction: normalizedJurisdiction ?? "" }, signal),
+    enabled: isAuthorityBacked && (needsOhioConfirmation || guidance.chargeClassifications.length > 0),
+    staleTime: 0,
+    retry: false,
+    refetchOnWindowFocus: true,
+    refetchOnReconnect: true,
+  });
+  const currentAuthorityIds = new Set(
+    authority.isError ? [] : authority.data?.charges?.map((charge) => charge.id) ?? [],
+  );
+
   const [verifiedPrintPlan, setVerifiedPrintPlan] = useState<GuidanceViewModel | null>(null);
   const { t, i18n } = useTranslation();
   const [, setLocation] = useLocation();
@@ -1065,6 +1070,7 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
     // narrative during this print call, after checking the complete catalog.
     const verified = await canOutputOhioPlan(guidance);
     if (!verified) {
+      void authority.refetch();
       alert(ohioReselectionNotice(i18n.language));
       return;
     }
@@ -1103,6 +1109,7 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
       console.error('[PDF export error]', err);
       // Surface the failure — previously this threw silently and the dialog
       // just closed, leaving the user wondering why nothing happened.
+      if (err instanceof OhioChargeConfirmationError) void authority.refetch();
       alert(err instanceof OhioChargeConfirmationError ? ohioReselectionNotice(i18n.language) : t('exportWarning.exportFailed', 'PDF export failed. Please try again or use your browser\'s print function (Ctrl+P / Cmd+P).'));
     } finally {
       setIsExporting(false);
@@ -1114,6 +1121,27 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
     section?.focus({ preventScroll: true });
     section?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
   };
+
+  if (needsOhioConfirmation && (
+    !authority.isFetchedAfterMount || !authority.isSuccess || authority.fetchStatus !== "idle" ||
+    !ohioChargesAreCurrent(guidance, currentAuthorityIds)
+  )) {
+    return (
+      <>
+        <GuidancePrintPlan guidance={guidance} language={i18n.language} ohioVerified={verifiedPrintPlan === savedPlan} />
+        <section className="guidance-results space-y-4 print:hidden" data-testid="guidance-dashboard">
+          <h1 className="guidance-result-title">{t('design.guidanceRoadmapTitle', { jurisdiction: 'Ohio' })}</h1>
+          <p role="status">{authority.isFetching ? t('common.loading') : t('guidance.ohioSavedChargeNotice')}</p>
+          <div className="flex flex-wrap gap-2">
+            {onNewSession && <Button onClick={onNewSession} data-testid="button-new-session">{t('legalGuidance.dashboard.newSession')}</Button>}
+            <Button variant="outline" onClick={() => authority.refetch()} disabled={authority.isFetching}>{t('guidance.checkOhioCharges')}</Button>
+            <Button variant="outline" onClick={handlePrint} data-testid="button-print-guidance">{t('legalGuidance.dashboard.print')}</Button>
+            <Button variant="outline" onClick={onClose}>{t('legalGuidance.dashboard.close')}</Button>
+          </div>
+        </section>
+      </>
+    );
+  }
 
   return (
     <>
@@ -1336,6 +1364,7 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
       {/* Your Charges Section */}
       <div data-guidance-section="charges">
         <YourChargesSection
+          normalizedJurisdiction={normalizedJurisdiction} isAuthorityBacked={isAuthorityBacked} currentAuthorityIds={currentAuthorityIds}
           chargeClassifications={guidance.chargeClassifications}
           jurisdiction={guidance.caseData?.jurisdiction}
         />
