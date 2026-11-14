@@ -5871,6 +5871,8 @@ export default {
     }
   },
   "guidance": {
+    "ohioSavedChargeNotice": "需要重新确认罪名。已保存的路线图可能包含基于未经核实罪名的指引，因此暂不显示。请开始新会话，选择俄亥俄州当前的罪名，也可以不选择罪名继续。",
+    "checkOhioCharges": "重新核对俄亥俄州当前的罪名",
     "yourCharges": {
       "pendingReviewWarning": {
         "title": "尚未经律师审查。",

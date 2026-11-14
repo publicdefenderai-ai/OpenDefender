@@ -5871,6 +5871,8 @@ export default {
     }
   },
   "guidance": {
+    "ohioSavedChargeNotice": "Se necesita volver a seleccionar el cargo. La hoja de ruta guardada está oculta porque puede depender de un cargo que no pudimos verificar. Inicie una nueva sesión para elegir un cargo vigente de Ohio o continuar sin un cargo.",
+    "checkOhioCharges": "Volver a comprobar los cargos de Ohio",
     "yourCharges": {
       "pendingReviewWarning": {
         "title": "Aún no revisado por un abogado.",
