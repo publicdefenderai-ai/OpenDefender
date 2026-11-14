@@ -1,0 +1,955 @@
+[
+  {
+    "id": "fl-fs-784-07-2-a-protected-person",
+    "section": "784.07",
+    "scope": "(2)(a)",
+    "officialTitle": "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+    "dependencies": [
+      "784.07",
+      "943.10",
+      "901.1505",
+      "456.001",
+      "395.002",
+      "401.23",
+      "354.01",
+      "316.640",
+      "493.6101",
+      "812.141",
+      "812.015",
+      "741.28",
+      "741.2801",
+      "784.011",
+      "775.084",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "784.07": [
+        "(1)",
+        "(2)",
+        "(2)(a)"
+      ],
+      "943.10": [
+        ""
+      ],
+      "901.1505": [
+        ""
+      ],
+      "456.001": [
+        ""
+      ],
+      "395.002": [
+        ""
+      ],
+      "401.23": [
+        ""
+      ],
+      "354.01": [
+        ""
+      ],
+      "316.640": [
+        ""
+      ],
+      "493.6101": [
+        ""
+      ],
+      "812.141": [
+        "(1)"
+      ],
+      "812.015": [
+        "(1)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "784.011": [
+        "(1)",
+        "(2)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "775.082": [
+        "(4)",
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-784-07-2-a-protected-person",
+      "name": "Assault on a law enforcement officer or other specified personnel",
+      "names": {
+        "es": "Agresión contra un agente u otro personal protegido",
+        "zh": "威胁侵害执法人员或其他受保护人员"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "784.07(2)(a)",
+      "slug": "fl-fs-784-07-2-a-protected-person",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 784.07(2)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 784.07",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.10",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 901.1505",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0901/Sections/0901.1505.html"
+        },
+        {
+          "citation": "Fla. Stat. § 456.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0456/Sections/0456.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 395.002",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0395/Sections/0395.002.html"
+        },
+        {
+          "citation": "Fla. Stat. § 401.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0401/Sections/0401.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 354.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0354/Sections/0354.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.640",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.640.html"
+        },
+        {
+          "citation": "Fla. Stat. § 493.6101",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0493/Sections/0493.6101.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.141",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.141.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.015",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 784.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+          "FS 784.07(2)(a)",
+          "F.S. 784.07(2)(a)",
+          "Florida (2)(a) Assault on a law enforcement officer or other specified personnel",
+          "assault on a law enforcement officer"
+        ],
+        "es": [
+          "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+          "FS 784.07(2)(a)",
+          "F.S. 784.07(2)(a)"
+        ],
+        "zh": [
+          "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+          "FS 784.07(2)(a)",
+          "F.S. 784.07(2)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "An intentional unlawful threat by word or act to do violence, accompanied by apparent ability and an act creating a well-founded fear that violence is imminent. The accused must know the victim has a protected status, and the victim must be performing official duties. Examples include qualifying officers, firefighters, emergency or hospital personnel and security personnel. The statute specifies particular duties, uniforms, identification or supervision for some roles. The utility-worker branch requires qualifying critical-infrastructure work. An occupation alone does not settle eligibility. This is the official-duty wording effective June 16, 2026. Earlier conduct requires the version in force on its date.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine.  For conduct from July 1, 2026, a qualifying family or household relationship and a prior domestic-violence conviction at the time can trigger §741.2801; the victim’s job alone does not establish this. The conditional grade is a third-degree felony, ordinarily up to five years and $5,000."
+        },
+        "es": {
+          "plainSummary": "Amenaza ilícita e intencional, de palabra o acto, de ejercer violencia, acompañada de aparente capacidad y de un acto que causa un temor fundado de violencia inminente. El acusado debe conocer la condición protegida de la víctima, que debe estar en funciones oficiales. Se incluyen ciertos agentes, bomberos, personal de emergencias u hospitales y de seguridad. Para algunos cargos se exigen funciones, uniforme, identificación o supervisión específicos. El trabajador de servicios públicos debe estar trabajando en infraestructura crítica comprendida. La ocupación por sí sola no basta. Esta redacción sobre funciones oficiales rige desde el 16 de junio de 2026. Para hechos anteriores se debe consultar la versión vigente en esa fecha.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000.  Para hechos desde el 1 de julio de 2026, una relación familiar o de hogar comprendida y una condena previa por violencia doméstica al cometerse el hecho pueden activar §741.2801; el cargo de la víctima por sí solo no basta. El grado condicional es delito grave de tercer grado, normalmente hasta cinco años y $5,000."
+        },
+        "zh": {
+          "plainSummary": "故意以言语或行为非法威胁施加暴力，表面上有能力实施，并有行为使对方有充分理由恐惧暴力即将发生。 被告须知道对方具有受保护身份，且对方须正在执行公务。涵盖符合条件的执法人员、消防员、急救或医院人员及安保人员等。部分身份另有具体职责、制服、标识或监督要求；公用事业工作人员须在合格关键基础设施上工作。仅凭职业名称不能确定适用。 此处公务职责条文自2026年6月16日生效。此前行为须参照行为日有效版本。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。  2026年7月1日起的行为，如属合格家庭或同住关系且行为时已有家庭暴力定罪，可触发第741.2801条；仅凭受害人职业不足以适用。该条件下可升为 三级重罪，通常最高五年及5,000美元罚金。"
+        }
+      },
+      "categories": [
+        "misdemeanor",
+        "felony"
+      ]
+    }
+  },
+  {
+    "id": "fl-fs-784-07-2-b-protected-person",
+    "section": "784.07",
+    "scope": "(2)(b)",
+    "officialTitle": "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+    "dependencies": [
+      "784.07",
+      "943.10",
+      "901.1505",
+      "456.001",
+      "395.002",
+      "401.23",
+      "354.01",
+      "316.640",
+      "493.6101",
+      "812.141",
+      "812.015",
+      "741.28",
+      "741.2801",
+      "784.03",
+      "790.001",
+      "775.087",
+      "948.01",
+      "944.275",
+      "947.149",
+      "870.01",
+      "921.0022",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "784.07": [
+        "(1)",
+        "(2)",
+        "(2)(b)",
+        "(4)",
+        "(3)"
+      ],
+      "943.10": [
+        ""
+      ],
+      "901.1505": [
+        ""
+      ],
+      "456.001": [
+        ""
+      ],
+      "395.002": [
+        ""
+      ],
+      "401.23": [
+        ""
+      ],
+      "354.01": [
+        ""
+      ],
+      "316.640": [
+        ""
+      ],
+      "493.6101": [
+        ""
+      ],
+      "812.141": [
+        "(1)"
+      ],
+      "812.015": [
+        "(1)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "784.03": [
+        "(1)"
+      ],
+      "790.001": [
+        ""
+      ],
+      "775.087": [
+        "(3)"
+      ],
+      "948.01": [
+        ""
+      ],
+      "944.275": [
+        ""
+      ],
+      "947.149": [
+        ""
+      ],
+      "870.01": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "921.0022": [
+        "(2)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-784-07-2-b-protected-person",
+      "name": "Battery on a law enforcement officer or other specified personnel",
+      "names": {
+        "es": "Agresión física contra un agente u otro personal protegido",
+        "zh": "殴打执法人员或其他受保护人员"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "784.07(2)(b)",
+      "slug": "fl-fs-784-07-2-b-protected-person",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 784.07(2)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 784.07",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.10",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 901.1505",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0901/Sections/0901.1505.html"
+        },
+        {
+          "citation": "Fla. Stat. § 456.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0456/Sections/0456.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 395.002",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0395/Sections/0395.002.html"
+        },
+        {
+          "citation": "Fla. Stat. § 401.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0401/Sections/0401.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 354.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0354/Sections/0354.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.640",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.640.html"
+        },
+        {
+          "citation": "Fla. Stat. § 493.6101",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0493/Sections/0493.6101.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.141",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.141.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.015",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 784.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 790.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.087",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.087.html"
+        },
+        {
+          "citation": "Fla. Stat. § 948.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0948/Sections/0948.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 944.275",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0944/Sections/0944.275.html"
+        },
+        {
+          "citation": "Fla. Stat. § 947.149",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0947/Sections/0947.149.html"
+        },
+        {
+          "citation": "Fla. Stat. § 870.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.0022",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.0022.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+          "FS 784.07(2)(b)",
+          "F.S. 784.07(2)(b)",
+          "Florida (2)(b) Battery on a law enforcement officer or other specified personnel",
+          "battery on a law enforcement officer"
+        ],
+        "es": [
+          "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+          "FS 784.07(2)(b)",
+          "F.S. 784.07(2)(b)"
+        ],
+        "zh": [
+          "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+          "FS 784.07(2)(b)",
+          "F.S. 784.07(2)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Actually and intentionally touching or striking another against their will, or intentionally causing bodily harm. The accused must know the victim has a protected status, and the victim must be performing official duties. Examples include qualifying officers, firefighters, emergency or hospital personnel and security personnel. The statute specifies particular duties, uniforms, identification or supervision for some roles. The utility-worker branch requires qualifying critical-infrastructure work. An occupation alone does not settle eligibility. This is the official-duty wording effective June 16, 2026. Earlier conduct requires the version in force on its date.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For battery against a law enforcement officer in furtherance of a qualifying riot the minimum is six months. For any conviction under (2)(b), possessing a statutory firearm or destructive device during the battery requires at least three years; a semiautomatic firearm together with its qualifying high-capacity detachable box magazine, or a machine gun, requires eight. The weapon minimums restrict withholding, gain-time and discretionary release, subject to the stated clemency and medical exceptions. For a felony committed in furtherance of riot or aggravated riot, §784.07(4) increases the sentencing rank one level; that change alone does not increase the felony degree. For conduct from July 1, 2026, a qualifying family or household relationship and a prior domestic-violence conviction at the time can trigger §741.2801; the victim’s job alone does not establish this. The conditional grade is a second-degree felony, ordinarily up to 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Tocar o golpear efectiva e intencionalmente a otra persona contra su voluntad, o causarle intencionalmente daño corporal. El acusado debe conocer la condición protegida de la víctima, que debe estar en funciones oficiales. Se incluyen ciertos agentes, bomberos, personal de emergencias u hospitales y de seguridad. Para algunos cargos se exigen funciones, uniforme, identificación o supervisión específicos. El trabajador de servicios públicos debe estar trabajando en infraestructura crítica comprendida. La ocupación por sí sola no basta. Esta redacción sobre funciones oficiales rige desde el 16 de junio de 2026. Para hechos anteriores se debe consultar la versión vigente en esa fecha.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Para agresión a un agente que promueva un motín comprendido, el mínimo es seis meses. Para cualquier condena por (2)(b), poseer durante el hecho un arma de fuego o artefacto destructivo según la ley exige al menos tres años; un arma semiautomática junto con su cargador de caja desmontable de alta capacidad comprendido, o una ametralladora, exige ocho. Esos mínimos restringen el aplazamiento de la sentencia, créditos y libertad discrecional, con las excepciones legales de clemencia y médicas. Si el delito grave se comete para promover un motín o motín agravado, §784.07(4) eleva un nivel la clasificación para la sentencia; eso por sí solo no eleva el grado del delito. Para hechos desde el 1 de julio de 2026, una relación familiar o de hogar comprendida y una condena previa por violencia doméstica al cometerse el hecho pueden activar §741.2801; el cargo de la víctima por sí solo no basta. El grado condicional es delito grave de segundo grado, normalmente hasta 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "违背对方意愿实际且故意触碰或击打，或故意造成身体伤害。 被告须知道对方具有受保护身份，且对方须正在执行公务。涵盖符合条件的执法人员、消防员、急救或医院人员及安保人员等。部分身份另有具体职责、制服、标识或监督要求；公用事业工作人员须在合格关键基础设施上工作。仅凭职业名称不能确定适用。 此处公务职责条文自2026年6月16日生效。此前行为须参照行为日有效版本。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 为推进合格暴乱而殴打执法人员，最低六个月。任何依(2)(b)定罪者在犯罪期间持有法定枪支或破坏性装置，最低三年；持有半自动枪支及其合格的大容量可拆卸盒式弹匣，或持有机关枪，最低八年。武器最低刑限制暂缓裁判、减刑积分和酌情提前释放，法定赦免及医疗例外除外。 为推进暴乱或加重暴乱而实施本条重罪时，第(4)款将量刑计分等级上调一级；这本身不改变重罪级别。 2026年7月1日起的行为，如属合格家庭或同住关系且行为时已有家庭暴力定罪，可触发第741.2801条；仅凭受害人职业不足以适用。该条件下可升为 二级重罪，通常最高15年及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-784-07-2-c-protected-person",
+    "section": "784.07",
+    "scope": "(2)(c)",
+    "officialTitle": "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+    "dependencies": [
+      "784.07",
+      "943.10",
+      "901.1505",
+      "456.001",
+      "395.002",
+      "401.23",
+      "354.01",
+      "316.640",
+      "493.6101",
+      "812.141",
+      "812.015",
+      "741.28",
+      "741.2801",
+      "784.011",
+      "784.021",
+      "775.0823",
+      "870.01",
+      "921.0022",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "784.07": [
+        "(1)",
+        "(2)",
+        "(2)(c)",
+        "(4)"
+      ],
+      "943.10": [
+        ""
+      ],
+      "901.1505": [
+        ""
+      ],
+      "456.001": [
+        ""
+      ],
+      "395.002": [
+        ""
+      ],
+      "401.23": [
+        ""
+      ],
+      "354.01": [
+        ""
+      ],
+      "316.640": [
+        ""
+      ],
+      "493.6101": [
+        ""
+      ],
+      "812.141": [
+        "(1)"
+      ],
+      "812.015": [
+        "(1)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "784.011": [
+        "(1)"
+      ],
+      "784.021": [
+        "(1)",
+        "(2)"
+      ],
+      "775.0823": [
+        ""
+      ],
+      "870.01": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "921.0022": [
+        "(2)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-784-07-2-c-protected-person",
+      "name": "Aggravated assault on a law enforcement officer or other specified personnel",
+      "names": {
+        "es": "Agresión agravada contra un agente u otro personal protegido",
+        "zh": "加重威胁侵害执法人员或其他受保护人员"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "784.07(2)(c)",
+      "slug": "fl-fs-784-07-2-c-protected-person",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 784.07(2)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 784.07",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.10",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 901.1505",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0901/Sections/0901.1505.html"
+        },
+        {
+          "citation": "Fla. Stat. § 456.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0456/Sections/0456.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 395.002",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0395/Sections/0395.002.html"
+        },
+        {
+          "citation": "Fla. Stat. § 401.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0401/Sections/0401.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 354.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0354/Sections/0354.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.640",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.640.html"
+        },
+        {
+          "citation": "Fla. Stat. § 493.6101",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0493/Sections/0493.6101.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.141",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.141.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.015",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 784.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 784.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.0823",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.0823.html"
+        },
+        {
+          "citation": "Fla. Stat. § 870.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.0022",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.0022.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+          "FS 784.07(2)(c)",
+          "F.S. 784.07(2)(c)",
+          "Florida (2)(c) Aggravated assault on a law enforcement officer or other specified personnel",
+          "aggravated assault on a law enforcement officer"
+        ],
+        "es": [
+          "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+          "FS 784.07(2)(c)",
+          "F.S. 784.07(2)(c)"
+        ],
+        "zh": [
+          "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+          "FS 784.07(2)(c)",
+          "F.S. 784.07(2)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "An intentional unlawful threat of violence coupled with apparent ability and a well-founded fear of imminent violence, committed either with a deadly weapon without intent to kill or with intent to commit a felony. The accused must know the victim has a protected status, and the victim must be performing official duties. Examples include qualifying officers, firefighters, emergency or hospital personnel and security personnel. The statute specifies particular duties, uniforms, identification or supervision for some roles. The utility-worker branch requires qualifying critical-infrastructure work. An occupation alone does not settle eligibility. This is the official-duty wording effective June 16, 2026. Earlier conduct requires the version in force on its date.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. The three-year minimum in (2)(c) applies specifically when the victim is a law enforcement officer. Other protected jobs do not by themselves trigger it. For a felony committed in furtherance of riot or aggravated riot, §784.07(4) increases the sentencing rank one level; that change alone does not increase the felony degree. A finding under §775.0823 for a qualifying violent offense arising from specified justice personnel duties also bars suspension, deferral or withholding of adjudication or sentence. For conduct from July 1, 2026, a qualifying family or household relationship and a prior domestic-violence conviction at the time can trigger §741.2801; the victim’s job alone does not establish this. The conditional grade is a first-degree felony, ordinarily up to 30 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Amenaza ilícita e intencional de violencia con aparente capacidad y temor fundado de violencia inminente, cometida con arma mortal sin intención de matar o con intención de cometer un delito grave. El acusado debe conocer la condición protegida de la víctima, que debe estar en funciones oficiales. Se incluyen ciertos agentes, bomberos, personal de emergencias u hospitales y de seguridad. Para algunos cargos se exigen funciones, uniforme, identificación o supervisión específicos. El trabajador de servicios públicos debe estar trabajando en infraestructura crítica comprendida. La ocupación por sí sola no basta. Esta redacción sobre funciones oficiales rige desde el 16 de junio de 2026. Para hechos anteriores se debe consultar la versión vigente en esa fecha.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. El mínimo de tres años de (2)(c) se aplica específicamente cuando la víctima es agente del orden. Los otros cargos protegidos por sí solos no lo activan. Si el delito grave se comete para promover un motín o motín agravado, §784.07(4) eleva un nivel la clasificación para la sentencia; eso por sí solo no eleva el grado del delito. Si se determina la aplicación de §775.0823 por un delito violento vinculado a las funciones de determinado personal de justicia, tampoco se permite suspender, diferir ni reservar la declaración de culpabilidad o la pena. Para hechos desde el 1 de julio de 2026, una relación familiar o de hogar comprendida y una condena previa por violencia doméstica al cometerse el hecho pueden activar §741.2801; el cargo de la víctima por sí solo no basta. El grado condicional es delito grave de primer grado, normalmente hasta 30 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "故意非法威胁施加暴力，表面上有能力实施且使对方有充分理由恐惧暴力即将发生，并在无杀人故意下使用致命武器，或意图实施重罪。 被告须知道对方具有受保护身份，且对方须正在执行公务。涵盖符合条件的执法人员、消防员、急救或医院人员及安保人员等。部分身份另有具体职责、制服、标识或监督要求；公用事业工作人员须在合格关键基础设施上工作。仅凭职业名称不能确定适用。 此处公务职责条文自2026年6月16日生效。此前行为须参照行为日有效版本。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 (2)(c)的三年最低刑仅针对受害者为法定执法人员的情形；其他受保护职业本身不会触发该最低刑。 为推进暴乱或加重暴乱而实施本条重罪时，第(4)款将量刑计分等级上调一级；这本身不改变重罪级别。 若法院认定符合第775.0823条，即有关暴力犯罪源于特定司法人员职责，则也不得暂停、延后或暂缓定罪或量刑。 2026年7月1日起的行为，如属合格家庭或同住关系且行为时已有家庭暴力定罪，可触发第741.2801条；仅凭受害人职业不足以适用。该条件下可升为 一级重罪，通常最高30年及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-784-07-2-d-protected-person",
+    "section": "784.07",
+    "scope": "(2)(d)",
+    "officialTitle": "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+    "dependencies": [
+      "784.07",
+      "943.10",
+      "901.1505",
+      "456.001",
+      "395.002",
+      "401.23",
+      "354.01",
+      "316.640",
+      "493.6101",
+      "812.141",
+      "812.015",
+      "741.28",
+      "741.2801",
+      "784.045",
+      "784.03",
+      "775.0823",
+      "870.01",
+      "921.0022",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "784.07": [
+        "(1)",
+        "(2)",
+        "(2)(d)",
+        "(4)"
+      ],
+      "943.10": [
+        ""
+      ],
+      "901.1505": [
+        ""
+      ],
+      "456.001": [
+        ""
+      ],
+      "395.002": [
+        ""
+      ],
+      "401.23": [
+        ""
+      ],
+      "354.01": [
+        ""
+      ],
+      "316.640": [
+        ""
+      ],
+      "493.6101": [
+        ""
+      ],
+      "812.141": [
+        "(1)"
+      ],
+      "812.015": [
+        "(1)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "784.045": [
+        "(1)",
+        "(2)"
+      ],
+      "784.03": [
+        "(1)"
+      ],
+      "775.0823": [
+        ""
+      ],
+      "870.01": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "921.0022": [
+        "(2)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-784-07-2-d-protected-person",
+      "name": "Aggravated battery on a law enforcement officer or other specified personnel",
+      "names": {
+        "es": "Agresión física agravada contra un agente u otro personal protegido",
+        "zh": "加重殴打执法人员或其他受保护人员"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "784.07(2)(d)",
+      "slug": "fl-fs-784-07-2-d-protected-person",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 784.07(2)(d)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 784.07",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.10",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 901.1505",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0901/Sections/0901.1505.html"
+        },
+        {
+          "citation": "Fla. Stat. § 456.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0456/Sections/0456.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 395.002",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0395/Sections/0395.002.html"
+        },
+        {
+          "citation": "Fla. Stat. § 401.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0401/Sections/0401.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 354.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0354/Sections/0354.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.640",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.640.html"
+        },
+        {
+          "citation": "Fla. Stat. § 493.6101",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0493/Sections/0493.6101.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.141",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.141.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.015",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 784.045",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.045.html"
+        },
+        {
+          "citation": "Fla. Stat. § 784.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.0823",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.0823.html"
+        },
+        {
+          "citation": "Fla. Stat. § 870.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.0022",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.0022.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+          "FS 784.07(2)(d)",
+          "F.S. 784.07(2)(d)",
+          "Florida (2)(d) Aggravated battery on a law enforcement officer or other specified personnel",
+          "aggravated battery on a law enforcement officer"
+        ],
+        "es": [
+          "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+          "FS 784.07(2)(d)",
+          "F.S. 784.07(2)(d)"
+        ],
+        "zh": [
+          "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+          "FS 784.07(2)(d)",
+          "F.S. 784.07(2)(d)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Battery involving intentional or knowing infliction of great bodily harm, permanent disability or permanent disfigurement, or use of a deadly weapon. Section 784.045 also covers battery on a pregnant victim when the offender knew or should have known of the pregnancy. Battery requires an intentional unwanted touch or strike, or intentional bodily harm. The accused must know the victim has a protected status, and the victim must be performing official duties. Examples include qualifying officers, firefighters, emergency or hospital personnel and security personnel. The statute specifies particular duties, uniforms, identification or supervision for some roles. The utility-worker branch requires qualifying critical-infrastructure work. An occupation alone does not settle eligibility. This is the official-duty wording effective June 16, 2026. Earlier conduct requires the version in force on its date.",
+          "degreeContext": "First-degree felony: ordinarily up to 30 years in prison and a $10,000 fine. The five-year minimum in (2)(d) applies specifically when the victim is a law enforcement officer. Other protected jobs do not by themselves trigger it. For a felony committed in furtherance of riot or aggravated riot, §784.07(4) increases the sentencing rank one level; that change alone does not increase the felony degree. A finding under §775.0823 for a qualifying violent offense arising from specified justice personnel duties also bars suspension, deferral or withholding of adjudication or sentence. For conduct from July 1, 2026, a qualifying family or household relationship and a prior domestic-violence conviction at the time can trigger §741.2801; the victim’s job alone does not establish this. The conditional grade is a life felony, punishable by life or a term not exceeding life, with an ordinary fine up to $15,000."
+        },
+        "es": {
+          "plainSummary": "Agresión física que causa deliberadamente o a sabiendas daño corporal grave, discapacidad o desfiguración permanente, o en que se usa un arma mortal. La ley también incluye agresión a una víctima embarazada si el autor sabía o debía saber del embarazo. Se requiere contacto o golpe intencional no consentido, o daño corporal intencional. El acusado debe conocer la condición protegida de la víctima, que debe estar en funciones oficiales. Se incluyen ciertos agentes, bomberos, personal de emergencias u hospitales y de seguridad. Para algunos cargos se exigen funciones, uniforme, identificación o supervisión específicos. El trabajador de servicios públicos debe estar trabajando en infraestructura crítica comprendida. La ocupación por sí sola no basta. Esta redacción sobre funciones oficiales rige desde el 16 de junio de 2026. Para hechos anteriores se debe consultar la versión vigente en esa fecha.",
+          "degreeContext": "Delito grave de primer grado: normalmente hasta 30 años de prisión y multa de $10,000. El mínimo de cinco años de (2)(d) se aplica específicamente cuando la víctima es agente del orden. Los otros cargos protegidos por sí solos no lo activan. Si el delito grave se comete para promover un motín o motín agravado, §784.07(4) eleva un nivel la clasificación para la sentencia; eso por sí solo no eleva el grado del delito. Si se determina la aplicación de §775.0823 por un delito violento vinculado a las funciones de determinado personal de justicia, tampoco se permite suspender, diferir ni reservar la declaración de culpabilidad o la pena. Para hechos desde el 1 de julio de 2026, una relación familiar o de hogar comprendida y una condena previa por violencia doméstica al cometerse el hecho pueden activar §741.2801; el cargo de la víctima por sí solo no basta. El grado condicional es delito grave de categoría perpetua, con prisión perpetua o plazo que no la exceda y multa ordinaria de hasta $15,000."
+        },
+        "zh": {
+          "plainSummary": "殴打时故意或明知造成严重身体伤害、永久残疾或永久毁容，或使用致命武器。第784.045条亦包括在知道或理应知道受害人怀孕时实施殴打。殴打要求故意违背意愿触碰、击打或故意伤害身体。 被告须知道对方具有受保护身份，且对方须正在执行公务。涵盖符合条件的执法人员、消防员、急救或医院人员及安保人员等。部分身份另有具体职责、制服、标识或监督要求；公用事业工作人员须在合格关键基础设施上工作。仅凭职业名称不能确定适用。 此处公务职责条文自2026年6月16日生效。此前行为须参照行为日有效版本。",
+          "degreeContext": "一级重罪：通常最高30年监禁及10,000美元罚金。 (2)(d)的五年最低刑仅针对受害者为法定执法人员的情形；其他受保护职业本身不会触发该最低刑。 为推进暴乱或加重暴乱而实施本条重罪时，第(4)款将量刑计分等级上调一级；这本身不改变重罪级别。 若法院认定符合第775.0823条，即有关暴力犯罪源于特定司法人员职责，则也不得暂停、延后或暂缓定罪或量刑。 2026年7月1日起的行为，如属合格家庭或同住关系且行为时已有家庭暴力定罪，可触发第741.2801条；仅凭受害人职业不足以适用。该条件下可升为 终身重罪，可判终身监禁或不超过终身的有期刑，一般罚金最高15,000美元。"
+        }
+      }
+    }
+  }
+]

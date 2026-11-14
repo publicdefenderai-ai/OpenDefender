@@ -25,3 +25,11 @@ The [2026 statewide bond schedule, item 8](https://flcourts-media.flcourts.gov/c
 3. Prioritize the remainder by actual filing frequency when an official statewide charge-level frequency source is available. The severity chart alone cannot supply that ordering.
 
 For an offline replay run `node scripts/data-review/florida-launch/benchmark.mjs`. Supply a checkout directory as its first argument to measure another revision. To reproduce the frozen baseline use a checkout at `a3c970a1`; compare the emitted JSON to `baseline-citation-results.json`. To verify the source snapshot, run the same script with `--verify-source PATH_TO_ORIGINAL_HTML`. A later official HTML version may need its own snapshot.
+
+### Protected-person follow-up
+
+The four §784.07(2) rows above report the historical finding on the benchmark revision. The follow-up provides four separate configured choices. Each depends on the underlying assault or battery definition, qualifying personnel and duty conditions, plus its own ordinary grade and any role-specific mandatory minimum. The previously withheld generic officer-assault ID stays withheld. The 30-row frozen sample and its results are unchanged.
+
+Sections 4 and 7 of [chapter 2026-144](https://laws.flrules.org/2026/144) changed the officer definition and duty wording effective June 16, 2026, when the act became law. Earlier offenses need their earlier version. Subsection (2) mentions public transit personnel in its duty clause and omits them from its opening victim list; this batch does not rely on transit employment alone to establish eligibility. The separate repeat-domestic-violence provisions effective July 1 require independently qualifying facts. Boating under the influence remains open.
+
+For a newly downloaded benchmark page, `--verify-source` distinguishes byte-identical HTML from identical sampled rows and positions in changed HTML. A changed sampled row or position fails verification; equality of the sample does not verify the rest of the statute.
