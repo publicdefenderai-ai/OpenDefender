@@ -40,8 +40,13 @@ describe("Texas assault and public intoxication", () => {
       }
       const charge = getChargeById(row.id)!;
       expect(getVerifiedCitation(charge)).toBe(row.citation);
-      expect(getInstructionRef(charge)).toBeNull();
-      expect(getInstructionUrl(charge)).toBeNull();
+      if (row.id === "tx-public-intoxication") {
+        expect(getInstructionRef(charge)).toBeNull();
+        expect(getInstructionUrl(charge)).toBeNull();
+      } else {
+        expect(getInstructionRef(charge)).toContain(row.id.includes("family-breath") ? "CPJC 22.4" : "CPJC 22.1");
+        expect(getInstructionUrl(charge)).toContain(row.id.includes("family-breath") ? "CPJC22-4.htm" : "CPJC22-1.htm");
+      }
       for (const locale of ["en","es","zh"]) {
         const explanation = getChargeExplanation(row.name,"TX",locale,row.id)!;
         expect(explanation.plainSummary).toBe(row.conduct);

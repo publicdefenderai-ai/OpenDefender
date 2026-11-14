@@ -128,7 +128,7 @@ export const SOURCE_EVIDENCE: Record<string, SourceEvidence> = {
   juryInstructions: {
     sourceType: "mixedResearch",
     sources: ["State court instruction publishers", "Federal jury-instruction references"],
-    citations: ["CALCRIM, NYPJI, FPJI, CTJI, TX CPJC, PA SSJI, OH OJI, IL IPI-Crim; some series are paywalled"],
+    citations: ["CALCRIM, NYPJI, FPJI, CTJI, Texas Bar Books CPJC 22.1, 22.4 and 49.16 (underlying conduct), PA SSJI, OH OJI, IL IPI-Crim; some series are paywalled"],
   },
   validation: {
     sourceType: "externalProvider",
