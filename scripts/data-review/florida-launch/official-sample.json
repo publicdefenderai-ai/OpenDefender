@@ -1,0 +1,248 @@
+{
+  "source": "https://www.flsenate.gov/Laws/Statutes/2026/921.0022",
+  "acquiredAt": "2026-11-14T05:10:58.936Z",
+  "pageSha256": "5e9fc4f699401c276855948da7931e8ec73cf83ac33b9261e2d63242fdddc69a",
+  "selection": "For each of ten severity levels, percentile positions 15%, 50%, 85% of linked rows in publisher order, using floor((n - 1) * p).",
+  "rows": [
+    {
+      "level": 1,
+      "row": 6,
+      "levelRows": 37,
+      "citation": "319.30(5)",
+      "degree": "3rd",
+      "description": "Sell, exchange, give away certificate of title or identification number plate."
+    },
+    {
+      "level": 1,
+      "row": 19,
+      "levelRows": 37,
+      "citation": "817.52(2)",
+      "degree": "3rd",
+      "description": "Hiring with intent to defraud, motor vehicle services."
+    },
+    {
+      "level": 1,
+      "row": 31,
+      "levelRows": 37,
+      "citation": "849.23",
+      "degree": "3rd",
+      "description": "Gambling-related machines; “common offender” as to property rights."
+    },
+    {
+      "level": 2,
+      "row": 6,
+      "levelRows": 38,
+      "citation": "590.28(1)",
+      "degree": "3rd",
+      "description": "Intentional burning of lands."
+    },
+    {
+      "level": 2,
+      "row": 19,
+      "levelRows": 38,
+      "citation": "817.481(3)(a)",
+      "degree": "3rd",
+      "description": "Obtain credit or purchase with false, expired, counterfeit, etc., credit card, value over $300."
+    },
+    {
+      "level": 2,
+      "row": 32,
+      "levelRows": 38,
+      "citation": "832.05(3)(a)",
+      "degree": "3rd",
+      "description": "Cashing or depositing item with intent to defraud."
+    },
+    {
+      "level": 3,
+      "row": 11,
+      "levelRows": 69,
+      "citation": "328.07(4)",
+      "degree": "3rd",
+      "description": "Manufacture, exchange, or possess vessel with counterfeit or wrong ID number."
+    },
+    {
+      "level": 3,
+      "row": 35,
+      "levelRows": 69,
+      "citation": "815.04(4)(b)",
+      "degree": "2nd",
+      "description": "Computer offense devised to defraud or obtain property."
+    },
+    {
+      "level": 3,
+      "row": 58,
+      "levelRows": 69,
+      "citation": "893.13(7)(a)8.",
+      "degree": "3rd",
+      "description": "Withhold information from practitioner regarding previous receipt of or prescription for a controlled substance."
+    },
+    {
+      "level": 4,
+      "row": 10,
+      "levelRows": 64,
+      "citation": "784.08(2)(c)",
+      "degree": "3rd",
+      "description": "Battery on a person 65 years of age or older."
+    },
+    {
+      "level": 4,
+      "row": 32,
+      "levelRows": 64,
+      "citation": "812.014(2)(d)2.",
+      "degree": "3rd",
+      "description": "Grand theft, 3rd degree; $750 or more taken from dwelling or its unenclosed curtilage."
+    },
+    {
+      "level": 4,
+      "row": 54,
+      "levelRows": 64,
+      "citation": "870.01(3)",
+      "degree": "2nd",
+      "description": "Aggravated rioting."
+    },
+    {
+      "level": 5,
+      "row": 9,
+      "levelRows": 60,
+      "citation": "379.407(5)(b)3.",
+      "degree": "3rd",
+      "description": "Possession of 100 or more undersized spiny lobsters."
+    },
+    {
+      "level": 5,
+      "row": 30,
+      "levelRows": 60,
+      "citation": "812.0145(2)(b)",
+      "degree": "2nd",
+      "description": "Theft from person 65 years of age or older; $10,000 or more but less than $50,000."
+    },
+    {
+      "level": 5,
+      "row": 51,
+      "levelRows": 60,
+      "citation": "847.0138 (2) & (3)",
+      "degree": "3rd",
+      "description": "Transmission of material harmful to minors to a minor by electronic device or equipment."
+    },
+    {
+      "level": 6,
+      "row": 11,
+      "levelRows": 70,
+      "citation": "784.021(1)(b)",
+      "degree": "3rd",
+      "description": "Aggravated assault; intent to commit felony."
+    },
+    {
+      "level": 6,
+      "row": 35,
+      "levelRows": 70,
+      "citation": "812.014(2)(c)5.",
+      "degree": "3rd",
+      "description": "Grand theft; third degree; firearm."
+    },
+    {
+      "level": 6,
+      "row": 59,
+      "levelRows": 70,
+      "citation": "847.011",
+      "degree": "3rd",
+      "description": "Distributing, offering to distribute, or possessing with intent to distribute obscene materials depicting minors."
+    },
+    {
+      "level": 7,
+      "row": 22,
+      "levelRows": 143,
+      "citation": "483.901(7)",
+      "degree": "3rd",
+      "description": "Practicing medical physics without a license."
+    },
+    {
+      "level": 7,
+      "row": 72,
+      "levelRows": 143,
+      "citation": "812.014(2)(b)4.",
+      "degree": "2nd",
+      "description": "Property stolen, law enforcement equipment from authorized emergency vehicle."
+    },
+    {
+      "level": 7,
+      "row": 121,
+      "levelRows": 143,
+      "citation": "893.135(1)(f)1.",
+      "degree": "1st",
+      "description": "Trafficking in amphetamine, 14 grams or more, less than 28 grams."
+    },
+    {
+      "level": 8,
+      "row": 12,
+      "levelRows": 76,
+      "citation": "782.071(1)(b)",
+      "degree": "1st",
+      "description": "Committing vehicular homicide and failing to render aid or give information."
+    },
+    {
+      "level": 8,
+      "row": 38,
+      "levelRows": 76,
+      "citation": "817.504(1)(b)",
+      "degree": "2nd",
+      "description": "Offering or advertising a vaccine with intent to defraud; second or subsequent offense."
+    },
+    {
+      "level": 8,
+      "row": 64,
+      "levelRows": 76,
+      "citation": "893.135 (1)(f)1.b.",
+      "degree": "1st",
+      "description": "Trafficking in amphetamine, 28 grams or more, less than 200 grams."
+    },
+    {
+      "level": 9,
+      "row": 9,
+      "levelRows": 60,
+      "citation": "655.50(10)(b)3.",
+      "degree": "1st",
+      "description": "Failure to report financial transactions totaling or exceeding $100,000 by financial institution."
+    },
+    {
+      "level": 9,
+      "row": 30,
+      "levelRows": 60,
+      "citation": "794.011(8)(b)",
+      "degree": "1st,PBL",
+      "description": "Sexual battery; engage in sexual conduct with minor 12 to 18 years by person in familial or custodial authority."
+    },
+    {
+      "level": 9,
+      "row": 51,
+      "levelRows": 60,
+      "citation": "893.135 (1)(d)1.c.",
+      "degree": "1st",
+      "description": "Trafficking in phencyclidine, 400 grams or more."
+    },
+    {
+      "level": 10,
+      "row": 2,
+      "levelRows": 10,
+      "citation": "782.04(2)",
+      "degree": "1st,PBL",
+      "description": "Unlawful killing of human; act is homicide, unpremeditated."
+    },
+    {
+      "level": 10,
+      "row": 5,
+      "levelRows": 10,
+      "citation": "787.01(3)(a)",
+      "degree": "Life",
+      "description": "Kidnapping; child under age 13, perpetrator also commits aggravated child abuse, sexual battery, or lewd or lascivious battery, molestation, conduct, or exhibition."
+    },
+    {
+      "level": 10,
+      "row": 8,
+      "levelRows": 10,
+      "citation": "794.011(3)",
+      "degree": "Life",
+      "description": "Sexual battery; victim 12 years or older, offender uses or threatens to use deadly weapon or physical force to cause serious injury."
+    }
+  ]
+}

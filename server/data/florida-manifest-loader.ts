@@ -3,6 +3,7 @@ import { FLORIDA_ROBBERY_SOURCES, isFloridaRobberySourceFresh } from "./florida-
 import { FLORIDA_FALSE_REPORTS_SOURCES, isFloridaFalseReportsSourceFresh } from "./florida-false-reports-source";
 import { FLORIDA_LICENSE_DOCUMENTS_SOURCES, isFloridaLicenseDocumentsSourceFresh } from "./florida-license-documents-source";
 import { FLORIDA_PROPERTY_DAMAGE_SOURCES, isFloridaPropertyDamageSourceFresh } from "./florida-property-damage-source";
+import { FLORIDA_EXPLOITATION_SOURCES, isFloridaExploitationSourceFresh } from "./florida-exploitation-source";
 import { FLORIDA_FORGED_INSTRUMENTS_SOURCES, isFloridaForgedInstrumentsSourceFresh } from "./florida-forged-instruments-source";
 import { FLORIDA_CORRUPTION_SOURCES, isFloridaCorruptionSourceFresh } from "./florida-corruption-source";
 import { FLORIDA_ROAD_RACING_SOURCES, isFloridaRoadRacingSourceFresh } from "./florida-road-racing-source";
@@ -53,7 +54,7 @@ export function loadFloridaAuthorityManifest(
     throw new Error("The committed Florida manifest has an invalid generation timestamp");
   }
 
-  const sourceFirstIds = new Set([...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES, ...FLORIDA_FALSE_REPORTS_SOURCES, ...FLORIDA_LICENSE_DOCUMENTS_SOURCES, ...FLORIDA_PROPERTY_DAMAGE_SOURCES, ...FLORIDA_FORGED_INSTRUMENTS_SOURCES, ...FLORIDA_CORRUPTION_SOURCES, ...FLORIDA_ROAD_RACING_SOURCES, ...FLORIDA_COURT_OFFICIALS_SOURCES, ...FLORIDA_JUSTICE_SOURCES, ...FLORIDA_CREDIT_CARD_SOURCES, ...FLORIDA_RESTRAINT_SOURCES, ...FLORIDA_CRASH_FLIGHT_SOURCES].map(row => row.chargeId));
+  const sourceFirstIds = new Set([...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES, ...FLORIDA_FALSE_REPORTS_SOURCES, ...FLORIDA_LICENSE_DOCUMENTS_SOURCES, ...FLORIDA_PROPERTY_DAMAGE_SOURCES, ...FLORIDA_EXPLOITATION_SOURCES, ...FLORIDA_FORGED_INSTRUMENTS_SOURCES, ...FLORIDA_CORRUPTION_SOURCES, ...FLORIDA_ROAD_RACING_SOURCES, ...FLORIDA_COURT_OFFICIALS_SOURCES, ...FLORIDA_JUSTICE_SOURCES, ...FLORIDA_CREDIT_CARD_SOURCES, ...FLORIDA_RESTRAINT_SOURCES, ...FLORIDA_CRASH_FLIGHT_SOURCES].map(row => row.chargeId));
   if (raw.catalogRecords.some(record => sourceFirstIds.has(record.chargeId))) {
     throw new Error("The legacy Florida manifest must not shadow a reviewed source-first record");
   }
@@ -77,6 +78,7 @@ export function loadFloridaAuthorityManifest(
   const falseReportsFresh = isFloridaFalseReportsSourceFresh(now);
   const licenseDocumentsFresh = isFloridaLicenseDocumentsSourceFresh(now);
   const propertyDamageFresh = isFloridaPropertyDamageSourceFresh(now);
+  const exploitationFresh = isFloridaExploitationSourceFresh(now);
   const forgedInstrumentsFresh = isFloridaForgedInstrumentsSourceFresh(now);
   const corruptionFresh = isFloridaCorruptionSourceFresh(now);
   const roadRacingFresh = isFloridaRoadRacingSourceFresh(now);
@@ -86,8 +88,8 @@ export function loadFloridaAuthorityManifest(
   const restraintFresh = isFloridaRestraintSourceFresh(now);
   const crashFlightFresh = isFloridaCrashFlightSourceFresh(now);
   const personsFresh = isFloridaPersonsSourceFresh(now);
-  const publishableReviewedIds = new Set([...(reviewedFresh ? FLORIDA_REVIEWED_SOURCE_RECORDS : []), ...(personsFresh ? FLORIDA_PERSONS_SOURCES : []), ...(robberyFresh ? FLORIDA_ROBBERY_SOURCES : []), ...(falseReportsFresh ? FLORIDA_FALSE_REPORTS_SOURCES : []), ...(licenseDocumentsFresh ? FLORIDA_LICENSE_DOCUMENTS_SOURCES : []), ...(propertyDamageFresh ? FLORIDA_PROPERTY_DAMAGE_SOURCES : []), ...(forgedInstrumentsFresh ? FLORIDA_FORGED_INSTRUMENTS_SOURCES : []), ...(corruptionFresh ? FLORIDA_CORRUPTION_SOURCES : []), ...(roadRacingFresh ? FLORIDA_ROAD_RACING_SOURCES : []), ...(courtOfficialsFresh ? FLORIDA_COURT_OFFICIALS_SOURCES : []), ...(justiceFresh ? FLORIDA_JUSTICE_SOURCES : []), ...(creditCardFresh ? FLORIDA_CREDIT_CARD_SOURCES : []), ...(restraintFresh ? FLORIDA_RESTRAINT_SOURCES : []), ...(crashFlightFresh ? FLORIDA_CRASH_FLIGHT_SOURCES : [])].map(row => row.chargeId));
-  const reviewedRetrievals = [...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES, ...FLORIDA_FALSE_REPORTS_SOURCES, ...FLORIDA_LICENSE_DOCUMENTS_SOURCES, ...FLORIDA_PROPERTY_DAMAGE_SOURCES, ...FLORIDA_FORGED_INSTRUMENTS_SOURCES, ...FLORIDA_CORRUPTION_SOURCES, ...FLORIDA_ROAD_RACING_SOURCES, ...FLORIDA_COURT_OFFICIALS_SOURCES, ...FLORIDA_JUSTICE_SOURCES, ...FLORIDA_CREDIT_CARD_SOURCES, ...FLORIDA_RESTRAINT_SOURCES, ...FLORIDA_CRASH_FLIGHT_SOURCES].flatMap(record =>
+  const publishableReviewedIds = new Set([...(reviewedFresh ? FLORIDA_REVIEWED_SOURCE_RECORDS : []), ...(personsFresh ? FLORIDA_PERSONS_SOURCES : []), ...(robberyFresh ? FLORIDA_ROBBERY_SOURCES : []), ...(falseReportsFresh ? FLORIDA_FALSE_REPORTS_SOURCES : []), ...(licenseDocumentsFresh ? FLORIDA_LICENSE_DOCUMENTS_SOURCES : []), ...(propertyDamageFresh ? FLORIDA_PROPERTY_DAMAGE_SOURCES : []), ...(exploitationFresh ? FLORIDA_EXPLOITATION_SOURCES : []), ...(forgedInstrumentsFresh ? FLORIDA_FORGED_INSTRUMENTS_SOURCES : []), ...(corruptionFresh ? FLORIDA_CORRUPTION_SOURCES : []), ...(roadRacingFresh ? FLORIDA_ROAD_RACING_SOURCES : []), ...(courtOfficialsFresh ? FLORIDA_COURT_OFFICIALS_SOURCES : []), ...(justiceFresh ? FLORIDA_JUSTICE_SOURCES : []), ...(creditCardFresh ? FLORIDA_CREDIT_CARD_SOURCES : []), ...(restraintFresh ? FLORIDA_RESTRAINT_SOURCES : []), ...(crashFlightFresh ? FLORIDA_CRASH_FLIGHT_SOURCES : [])].map(row => row.chargeId));
+  const reviewedRetrievals = [...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES, ...FLORIDA_FALSE_REPORTS_SOURCES, ...FLORIDA_LICENSE_DOCUMENTS_SOURCES, ...FLORIDA_PROPERTY_DAMAGE_SOURCES, ...FLORIDA_EXPLOITATION_SOURCES, ...FLORIDA_FORGED_INSTRUMENTS_SOURCES, ...FLORIDA_CORRUPTION_SOURCES, ...FLORIDA_ROAD_RACING_SOURCES, ...FLORIDA_COURT_OFFICIALS_SOURCES, ...FLORIDA_JUSTICE_SOURCES, ...FLORIDA_CREDIT_CARD_SOURCES, ...FLORIDA_RESTRAINT_SOURCES, ...FLORIDA_CRASH_FLIGHT_SOURCES].flatMap(record =>
     record.dependencies.map(document => Date.parse(document.retrievedAt)));
   const manifestGeneratedAt = reviewedRetrievals.length
     ? new Date(Math.max(generatedAt.getTime(), ...reviewedRetrievals))
@@ -100,6 +102,7 @@ export function loadFloridaAuthorityManifest(
     ...(falseReportsFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt, FLORIDA_FALSE_REPORTS_SOURCES) : []),
     ...(licenseDocumentsFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt, FLORIDA_LICENSE_DOCUMENTS_SOURCES) : []),
     ...(propertyDamageFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt, FLORIDA_PROPERTY_DAMAGE_SOURCES) : []),
+    ...(exploitationFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt, FLORIDA_EXPLOITATION_SOURCES) : []),
     ...(forgedInstrumentsFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt, FLORIDA_FORGED_INSTRUMENTS_SOURCES) : []),
     ...(corruptionFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt, FLORIDA_CORRUPTION_SOURCES) : []),
     ...(roadRacingFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt, FLORIDA_ROAD_RACING_SOURCES) : []),
