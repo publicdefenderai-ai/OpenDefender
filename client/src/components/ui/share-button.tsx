@@ -138,6 +138,7 @@ interface ShareResourceProps {
   resourceDescription?: string;
   className?: string;
   resourceId?: string;
+  url?: string;
 }
 
 export function ShareResource({
@@ -145,6 +146,7 @@ export function ShareResource({
   resourceDescription,
   className,
   resourceId,
+  url,
 }: ShareResourceProps) {
   const { t } = useTranslation();
 
@@ -153,6 +155,7 @@ export function ShareResource({
       title={t("share.resourceTitle", "Check out this legal resource: {{title}}", {
         title: resourceTitle,
       })}
+      url={url}
       text={resourceDescription || resourceTitle}
       variant="ghost"
       size="sm"

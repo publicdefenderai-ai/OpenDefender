@@ -677,3 +677,7 @@ The approved opendefender-advocate-hub-preview.html (SHA-256 865db40eaed5b3d5911
 ### Mission page
 
 The approved mission-content.html reference (SHA-256 5a03865b77324027f2b47076b068f4a0b0ae18104bdae71cb7424d9bfbd830c5) opens with “Legal information. Open to everyone.” and an open book on desktop. The mobile layout opens directly on the introduction. All four goals, the founding statement, philosophy, public-good statement, principles and role limitation use the published localized text. The page links to privacy, sources, disclaimers and the directory.
+
+### Case Documents Library
+
+The approved opendefender-document-library-preview.html reference (SHA-256 2745cab6186fb10b7b1f982272b142408adb8fcd944e90b37fe34605b6d693c7) presents all 18 explainers in expandable rows. Search uses the current locale’s title, description, purpose, action and section text plus the form number. Phase and category filters combine with the search. Shared document links open the matching entry, including links from Case Guidance. Published explanations and phase assignments are retained. The former importance badges are omitted from the library as in the approved preview.

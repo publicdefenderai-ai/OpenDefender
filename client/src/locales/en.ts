@@ -5607,6 +5607,15 @@ export default {
     }
   },
   "documentLibrary": {
+    "reader": {
+      "heading": "Make sense of the paperwork.",
+      "search": "Find a document",
+      "clear": "Clear filters",
+      "note": "These guides explain documents. Names, layouts and requirements can vary. For a copy of your own paperwork, check with the issuing office.",
+      "help": "Still working through a document?",
+      "helpText": "The AI assistant can explain general terms. A lawyer can help with questions about your case or a deadline.",
+      "chat": "Open AI assistant"
+    },
     "title": "Case Documents Library",
     "subtitle": "Understand the documents you may receive during your case. Each section is explained in plain language.",
     "importance": {
