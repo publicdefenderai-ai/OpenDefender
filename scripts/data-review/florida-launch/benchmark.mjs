@@ -57,8 +57,12 @@ if (process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta
   const source=load(samplePath);
   if (process.argv[2]==='--verify-source') {
     const html=fs.readFileSync(process.argv[3]);
-    if (createHash('sha256').update(html).digest('hex')!==source.pageSha256 ||
-        JSON.stringify(selectSample(html))!==JSON.stringify(source.rows)) throw Error('Official benchmark snapshot differs');
+    const samePage = createHash('sha256').update(html).digest('hex') === source.pageSha256;
+    const sameSample = JSON.stringify(selectSample(html)) === JSON.stringify(source.rows);
+    if (!sameSample) throw Error('Sampled official rows or their positions changed; review the benchmark');
+    console.log(samePage ? 'Original page and sampled rows match' :
+      'Page bytes changed; sampled rows and positions still match. Other rows were not compared.');
+
   } else {
     const choices=configuredChoices(process.argv[2]);
     console.log(JSON.stringify(source.rows.map(r=>({...r,...assess(r.citation,choices)})),null,2));
