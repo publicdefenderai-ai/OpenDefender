@@ -1,0 +1,212 @@
+{
+  "source": "https://opendefender.net/api/criminal-charges?jurisdiction=TX&limit=500",
+  "observedAt": "2026-11-14T05:39:47+00:00",
+  "responseSha256": "c1756ead572f566722ad6384ce3ebe71fec8dce8889dce37761d8b95e78fb5d9",
+  "pagination": {
+    "offset": 0,
+    "limit": 500,
+    "totalMatches": 33,
+    "nextOffset": null,
+    "snapshot": "ecb710b43ba6337b742fd7d11c0b2ba29a7bda113524543270569bfea9087540"
+  },
+  "charges": [
+    {
+      "id": "tx-involuntary-manslaughter",
+      "name": "Manslaughter",
+      "code": "19.04",
+      "maxPenalty": "Up to 10 years imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-criminally-negligent-homicide",
+      "name": "Criminally Negligent Homicide",
+      "code": "19.05",
+      "maxPenalty": "Up to 5 years imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-vehicular-homicide",
+      "name": "Intoxication Manslaughter",
+      "code": "49.08",
+      "maxPenalty": "Second-degree felony; 2 to 20 years imprisonment and up to $10,000 fine"
+    },
+    {
+      "id": "tx-aggravated-assault",
+      "name": "Aggravated Assault",
+      "code": "22.02",
+      "maxPenalty": "Up to 20 years imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-sexual-assault-in-the-first-degree",
+      "name": "Aggravated Sexual Assault",
+      "code": "22.021",
+      "maxPenalty": "Up to life imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-sexual-assault-in-the-second-degree",
+      "name": "Sexual Assault",
+      "code": "22.011",
+      "maxPenalty": "Up to 20 years imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-statutory-rape",
+      "name": "Sexual Assault",
+      "code": "22.011(a)(2)(A)",
+      "maxPenalty": "Up to 10 years imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-sexual-exploitation-of-minor",
+      "name": "Sexual Performance by a Child",
+      "code": "43.25",
+      "maxPenalty": "Up to 20 years imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-identity-theft",
+      "name": "Fraudulent Use or Possession of Identifying Information",
+      "code": "32.51",
+      "maxPenalty": "Up to 10 years imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-auto-burglary",
+      "name": "Burglary of Vehicles",
+      "code": "30.04",
+      "maxPenalty": "Up to 5 years imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-robbery-in-the-first-degree",
+      "name": "Aggravated Robbery",
+      "code": "29.03",
+      "maxPenalty": "Up to life imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-robbery-in-the-second-degree",
+      "name": "Robbery",
+      "code": "29.02",
+      "maxPenalty": "Up to 20 years imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-unlawful-carrying-of-weapon",
+      "name": "Unlawful Carrying Weapons",
+      "code": "46.02",
+      "maxPenalty": "Up to 1 year jail and/or fines"
+    },
+    {
+      "id": "tx-possession-of-prohibited-weapon",
+      "name": "Prohibited Weapons",
+      "code": "46.05",
+      "maxPenalty": "Up to 10 years imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-insurance-fraud",
+      "name": "Insurance Fraud",
+      "code": "35.02",
+      "maxPenalty": "Up to 10 years imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-forgery",
+      "name": "Forgery",
+      "code": "32.21",
+      "maxPenalty": "Up to 10 years imprisonment and/or substantial fines"
+    },
+    {
+      "id": "tx-disorderly-conduct",
+      "name": "Disorderly Conduct",
+      "code": "42.01",
+      "maxPenalty": "Penalties vary by jurisdiction"
+    },
+    {
+      "id": "tx-public-intoxication",
+      "name": "Public Intoxication",
+      "code": "49.02",
+      "maxPenalty": "Penalties vary by jurisdiction"
+    },
+    {
+      "id": "tx-dui-first-offense",
+      "name": "Driving While Intoxicated",
+      "code": "49.04",
+      "maxPenalty": "Penalties vary by jurisdiction"
+    },
+    {
+      "id": "tx-dui-second-offense",
+      "name": "Driving While Intoxicated",
+      "code": "49.04",
+      "maxPenalty": "Up to 1 year jail and/or fines"
+    },
+    {
+      "id": "tx-criminal-trespass",
+      "name": "Criminal Trespass",
+      "code": "30.05",
+      "maxPenalty": "Class B misdemeanor: up to 180 days jail and/or $2,000 fine; Class A if on critical infrastructure"
+    },
+    {
+      "id": "tx-evading-arrest",
+      "name": "Evading Arrest or Detention",
+      "code": "38.04",
+      "maxPenalty": "Class A misdemeanor (on foot): up to 1 year jail and $4,000 fine; felony if in a vehicle"
+    },
+    {
+      "id": "tx-failure-to-identify",
+      "name": "Failure to Identify",
+      "code": "38.02",
+      "maxPenalty": "Class C misdemeanor (refusal): up to $500 fine; Class B (false info): up to 180 days jail"
+    },
+    {
+      "id": "tx-criminal-mischief",
+      "name": "Criminal Mischief",
+      "code": "28.03",
+      "maxPenalty": "Class C ($100 or less) to Class A ($2,500 or less): fines up to $4,000 and/or up to 1 year jail"
+    },
+    {
+      "id": "tx-terroristic-threat",
+      "name": "Terroristic Threat",
+      "code": "22.07",
+      "maxPenalty": "Class B misdemeanor: up to 180 days jail and/or $2,000 fine; can be enhanced to felony"
+    },
+    {
+      "id": "tx-trespass-after-warning",
+      "name": "Criminal Trespass",
+      "code": "30.05",
+      "maxPenalty": "Up to 1 year jail and/or $1,000 fine"
+    },
+    {
+      "id": "tx-criminal-attempt",
+      "name": "Criminal Attempt",
+      "code": "MPC \u00a7 5.01 / TX attempt statute",
+      "maxPenalty": "Varies \u2014 typically one class below the completed offense; up to life imprisonment for attempted first-degree felonies"
+    },
+    {
+      "id": "tx-conspiracy",
+      "name": "Criminal Conspiracy",
+      "code": "MPC \u00a7 5.03 / TX conspiracy statute",
+      "maxPenalty": "Varies \u2014 typically same as or one class below the target offense; can be substantial even if the target crime was never completed"
+    },
+    {
+      "id": "tx-aiding-and-abetting",
+      "name": "Criminal Responsibility for Conduct of Another",
+      "code": "MPC \u00a7 2.06 / TX accomplice statute",
+      "maxPenalty": "Same as the principal offense \u2014 you face identical penalties to the person who directly committed the crime"
+    },
+    {
+      "id": "tx-accessory-after-the-fact",
+      "name": "Hindering Apprehension or Prosecution",
+      "code": "MPC \u00a7 2.07 / TX accessory statute",
+      "maxPenalty": "Typically a lower class felony than the underlying offense; federal carries up to half the sentence of the principal (18 U.S.C. \u00a7 3)"
+    },
+    {
+      "id": "tx-criminal-solicitation",
+      "name": "Criminal Solicitation",
+      "code": "MPC \u00a7 5.02 / TX solicitation statute",
+      "maxPenalty": "Typically one class below the target offense; a felony solicitation can result in 1 to 10+ years imprisonment depending on the target crime"
+    },
+    {
+      "id": "tx-rico-organized-crime",
+      "name": "Engaging in Organized Criminal Activity",
+      "code": "TX organized crime / racketeering statute",
+      "maxPenalty": "Up to 20 years per racketeering count; life imprisonment if the racketeering includes murder; mandatory forfeiture of all proceeds and assets"
+    },
+    {
+      "id": "tx-money-laundering",
+      "name": "Money Laundering",
+      "code": "TX money laundering statute",
+      "maxPenalty": "Up to 20 years imprisonment; fines up to $500,000 or twice the value of the laundered funds; mandatory forfeiture of all laundered proceeds"
+    }
+  ]
+}

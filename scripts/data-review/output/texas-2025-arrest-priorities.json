@@ -1,0 +1,213 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "year": 2025,
+  "statewideAdult": 831210,
+  "statewideJuvenile": 44782,
+  "eligibleCodes": 2378,
+  "excludedCodes": 57,
+  "excludedAdult": 71549,
+  "top25": [
+    {
+      "code": "54040009",
+      "label": "DRIVING WHILE INTOXICATED",
+      "law": "PC",
+      "citation": "49.04",
+      "adult": 50134,
+      "juvenile": 44
+    },
+    {
+      "code": "13990031",
+      "label": "ASSAULT CAUSES BODILY INJURY FAMILY MEMBER",
+      "law": "PC",
+      "citation": "22.01(a)(1)",
+      "adult": 44649,
+      "juvenile": 3774
+    },
+    {
+      "code": "35990247",
+      "label": "POSS CS PG 1/1-B <1G",
+      "law": "HSC",
+      "citation": "481.115(b)",
+      "adult": 36273,
+      "juvenile": 81
+    },
+    {
+      "code": "35620008",
+      "label": "POSS MARIJ < 2OZ",
+      "law": "HSC",
+      "citation": "481.121(b)(1)",
+      "adult": 34955,
+      "juvenile": 509
+    },
+    {
+      "code": "57070020",
+      "label": "CRIMINAL TRESPASS",
+      "law": "PC",
+      "citation": "30.05(d)(1)",
+      "adult": 30751,
+      "juvenile": 958
+    },
+    {
+      "code": "23990191",
+      "label": "THEFT PROP >=$100<$750",
+      "law": "PC",
+      "citation": "31.03(e)(2)(A)",
+      "adult": 19943,
+      "juvenile": 1156
+    },
+    {
+      "code": "52030027",
+      "label": "UNL CARRYING WEAPON",
+      "law": "PC",
+      "citation": "46.02(b)",
+      "adult": 19321,
+      "juvenile": 919
+    },
+    {
+      "code": "48010006",
+      "label": "RESIST ARREST SEARCH OR TRANSP",
+      "law": "PC",
+      "citation": "38.03(a)",
+      "adult": 18432,
+      "juvenile": 964
+    },
+    {
+      "code": "35990248",
+      "label": "POSS CS PG 1/1-B >=1G<4G",
+      "law": "HSC",
+      "citation": "481.115(c)",
+      "adult": 17698,
+      "juvenile": 57
+    },
+    {
+      "code": "13150005",
+      "label": "AGG ASSLT W/DEADLY WEAPON",
+      "law": "PC",
+      "citation": "22.02(a)(2)",
+      "adult": 17589,
+      "juvenile": 1126
+    },
+    {
+      "code": "54990067",
+      "label": "DRIVING W/LIC INV W/PREV CONV/SUSP/W/O FIN RES",
+      "law": "TRC",
+      "citation": "521.457(f)(f-1)",
+      "adult": 15301,
+      "juvenile": 1
+    },
+    {
+      "code": "13990001",
+      "label": "ASSAULT CAUSES BODILY INJ",
+      "law": "PC",
+      "citation": "22.01(a)(1)",
+      "adult": 14591,
+      "juvenile": 5946
+    },
+    {
+      "code": "48010017",
+      "label": "EVADING ARREST DETENTION",
+      "law": "PC",
+      "citation": "38.04(b)",
+      "adult": 14075,
+      "juvenile": 2260
+    },
+    {
+      "code": "35990019",
+      "label": "POSS CS PG 2 < 1G",
+      "law": "HSC",
+      "citation": "481.116(b)",
+      "adult": 12193,
+      "juvenile": 2058
+    },
+    {
+      "code": "54040014",
+      "label": "DRIVING WHILE INTOXICATED BAC >= 0.15",
+      "law": "PC",
+      "citation": "49.04(d)",
+      "adult": 11546,
+      "juvenile": 6
+    },
+    {
+      "code": "23990196",
+      "label": "THEFT PROP <$2,500  2/MORE PREV CONV",
+      "law": "PC",
+      "citation": "31.03(e)(4)(D)",
+      "adult": 10620,
+      "juvenile": 1
+    },
+    {
+      "code": "54040010",
+      "label": "DRIVING WHILE INTOXICATED 2ND",
+      "law": "PC",
+      "citation": "49.09(a)",
+      "adult": 10443,
+      "juvenile": 0
+    },
+    {
+      "code": "13990076",
+      "label": "ASSAULT FAM/HOUSE MEM IMPEDE BREATH/CIRCULAT",
+      "law": "PC",
+      "citation": "22.01(b)(2)(B)",
+      "adult": 10224,
+      "juvenile": 193
+    },
+    {
+      "code": "48010020",
+      "label": "EVADING ARREST DET W/VEH",
+      "law": "PC",
+      "citation": "38.04(b)(2)(A)",
+      "adult": 9792,
+      "juvenile": 665
+    },
+    {
+      "code": "35990249",
+      "label": "POSS CS PG 1/1-B >=4G<200G",
+      "law": "HSC",
+      "citation": "481.115(d)",
+      "adult": 8851,
+      "juvenile": 25
+    },
+    {
+      "code": "24110003",
+      "label": "UNAUTH USE OF VEHICLE",
+      "law": "PC",
+      "citation": "31.07",
+      "adult": 8401,
+      "juvenile": 1081
+    },
+    {
+      "code": "48990009",
+      "label": "FAIL TO ID FUGITIVE INTENT GIVE FALSE INFO",
+      "law": "PC",
+      "citation": "38.02(d)(2)",
+      "adult": 8163,
+      "juvenile": 57
+    },
+    {
+      "code": "54040012",
+      "label": "DRIVING WHILE INTOXICATED/OPEN ALCH CONTAINER",
+      "law": "PC",
+      "citation": "49.04(c)",
+      "adult": 8116,
+      "juvenile": 5
+    },
+    {
+      "code": "35990020",
+      "label": "POSS CS PG 2 >= 1G < 4G",
+      "law": "HSC",
+      "citation": "481.116(c)",
+      "adult": 8068,
+      "juvenile": 978
+    },
+    {
+      "code": "38990027",
+      "label": "VIOL BOND/PROTECTIVE ORDER",
+      "law": "PC",
+      "citation": "25.07(g)",
+      "adult": 7782,
+      "juvenile": 4
+    }
+  ]
+}
