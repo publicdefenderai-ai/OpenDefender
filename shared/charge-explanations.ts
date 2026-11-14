@@ -1,4 +1,4 @@
-import { texasDwiById, texasDwiCitation, texasDwiUrl, texasDwiConduct, texasDwiQualifications } from "./texas-dwi";
+import { texasReviewedById, texasReviewedRecords, texasReviewedCitation, texasReviewedUrl } from "./texas-reviewed";
 import { FLORIDA_LEGACY_REMAINING } from "./florida-legacy-remaining";
 import { FLORIDA_LEGACY_SEXUAL } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
@@ -3807,16 +3807,18 @@ export function getChargeExplanation(
   language?: string,
   canonicalChargeId?: string,
 ): ChargeExplanationWithJurisdiction | null {
-  const dwi = jurisdiction?.toUpperCase() === "TX" && canonicalChargeId
-    ? texasDwiById.get(canonicalChargeId) : undefined;
-  if (dwi) {
-    const penalty = `${dwi.summary} ${texasDwiQualifications}`;
+  const reviewed = jurisdiction?.toUpperCase() === "TX"
+    ? canonicalChargeId ? texasReviewedById.get(canonicalChargeId)
+      : texasReviewedRecords.find(row => row.name.toLowerCase() === chargeName.trim().toLowerCase())
+    : undefined;
+  if (reviewed) {
+    const penalty = reviewed.penalty;
     return {
-      canonicalChargeId: dwi.id, jurisdiction: "TX", chargePattern: /$^/, slug: dwi.id,
-      plainSummary: texasDwiConduct, keyTerms: [], degreeContext: penalty,
-      sources: dwi.references.map(ref => ({ citation: texasDwiCitation(ref), url: texasDwiUrl(ref), jurisdiction: "TX" })),
-      jurisdictionDetail: { citation: texasDwiCitation(dwi.references[1]), keyRule: texasDwiConduct,
-        penaltyClass: penalty, source: "Texas Legislative Council TCSS", sourceUrl: texasDwiUrl(dwi.references[1]),
+      canonicalChargeId: reviewed.id, jurisdiction: "TX", chargePattern: /$^/, slug: reviewed.id,
+      plainSummary: reviewed.conduct, keyTerms: [], degreeContext: penalty,
+      sources: reviewed.references.map(ref => ({ citation: texasReviewedCitation(ref), url: texasReviewedUrl(ref), jurisdiction: "TX" })),
+      jurisdictionDetail: { citation: reviewed.citation, keyRule: reviewed.conduct,
+        penaltyClass: penalty, source: "Texas Legislative Council TCSS", sourceUrl: texasReviewedUrl(reviewed.references[1]),
         dataConfidence: "high", lastVerified: "2026-11" },
       jurisdictionDetailMissing: false, translationDraft: false,
       untranslated: (language ?? "en").split("-")[0].toLowerCase() !== "en",

@@ -1,4 +1,4 @@
-import { texasDwiRecords, texasDwiCitation, texasDwiUrl } from "./texas-dwi";
+import { texasReviewedRecords, texasReviewedCitation, texasReviewedUrl } from "./texas-reviewed";
 import { FLORIDA_LEGACY_REMAINING_DEFINITIONS } from "./florida-legacy-remaining";
 import { FLORIDA_LEGACY_SEXUAL_DEFINITIONS } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY_DEFINITIONS } from "./florida-legacy-property";
@@ -81,12 +81,14 @@ export interface CitationRecord {
  * e.g. 'al-murder-in-the-first-degree'
  */
 export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
-  ...Object.fromEntries(texasDwiRecords.map(row => [row.id, {
-    citation: texasDwiCitation(row.references[1]),
-    alternateCitations: row.references.map(texasDwiCitation),
-    confidence: "high", lastVerified: "2026-11", source: "Texas Legislative Council TCSS",
-    sourceUrl: texasDwiUrl(row.references[1]),
-    instructionRef: "TPJC 49.04",
+  ...Object.fromEntries(texasReviewedRecords.map(row => [row.id, {
+    citation: row.citation,
+    alternateCitations: row.references.map(texasReviewedCitation),
+    confidence: "high", lastVerified: "2026-11",
+    source: row.officialTitle === "DRIVING WHILE INTOXICATED." ? "Texas Legislative Council TCSS" :
+      "Texas Legislative Council TCSS; no TPJC (per-charge instruction mapping not verified)",
+    sourceUrl: texasReviewedUrl(row.references[1]),
+    ...(row.officialTitle === "DRIVING WHILE INTOXICATED." ? { instructionRef: "TPJC 49.04" } : {}),
   } satisfies CitationRecord])),
 
   // ── BATCH 1: AL, AR, DC, DE, FL, GA, MD, MS, NC, SC, VA ─────────────────
@@ -3562,14 +3564,6 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Justia Texas Code — Tex. Penal Code § 30.05 Criminal trespass",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.30.htm",
     instructionRef: "TPJC 30.05",
-  },
-  "tx-public-intoxication": {
-    citation: "Tex. Penal Code § 49.02",
-    confidence: "high",
-    lastVerified: "2026-06",
-    source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 49.02",
-    sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.02",
-    instructionRef: "TPJC 49.02",
   },
   "tx-public-intoxication-misdemeanor": {
     citation: "Tex. Penal Code § 49.02",
@@ -19254,7 +19248,6 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "tn-driving-on-revoked-license": { citation: "Tenn. Code Ann. § 55-50-504", confidence: "medium", lastVerified: "2026-04", source: "Training data — Tennessee driving on revoked license", sourceUrl: "https://law.justia.com/codes/tennessee/section-55-50-504/" },
 
   "tx-theft-under-2500": { citation: "Tex. Penal Code § 31.03", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas theft under $2,500; no TPJC (no per-charge TPJC instruction identified)", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.31.htm" },
-  "tx-assault-bodily-injury-family": { citation: "Tex. Penal Code § 22.01(b)(2)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm", instructionRef: "TPJC §22.01 (DV)",},
   "tx-driving-while-license-invalid": { citation: "Tex. Transp. Code § 521.457", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas driving while license invalid; no TPJC (no per-charge TPJC instruction identified)", sourceUrl: "https://law.justia.com/codes/texas/section-521-457/" },
   "tx-possession-of-marijuana": { citation: "Tex. Health & Safety Code § 481.121", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas possession of marijuana; no TPJC (no per-charge TPJC instruction identified)", sourceUrl: "https://law.justia.com/codes/texas/section-481-121/" },
   "tx-evading-arrest": { citation: "Tex. Penal Code § 38.04", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas evading arrest or detention; no TPJC (no per-charge TPJC instruction identified)", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.38.htm" },

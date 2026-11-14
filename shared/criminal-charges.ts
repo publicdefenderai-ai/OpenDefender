@@ -1,4 +1,5 @@
-import { texasDwiRecords, texasDwiCitation, texasDwiConduct, texasDwiQualifications } from "./texas-dwi";
+import { texasReviewedRecords } from "./texas-reviewed";
+import { texasDwiRecords } from "./texas-dwi";
 import { floridaRemainingChargeText, floridaRemainingDisplayName } from "./florida-legacy-remaining";
 import { floridaSexualChargeText, floridaSexualDisplayName } from "./florida-legacy-sexual";
 import { floridaLegacyPropertyText } from "./florida-legacy-property";
@@ -40531,19 +40532,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
-    id: 'tx-public-intoxication',
-    name: 'Public Intoxication',
-    code: '49.02',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Being intoxicated in public under Texas law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
-  },
-  {
     id: 'tx-loitering',
     name: 'Loitering',
     code: '25.3',
@@ -40556,10 +40544,10 @@ export const criminalCharges: CriminalCharge[] = [
     specificRights: ['Constitutional rights apply to all criminal cases'],
     urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
-  ...texasDwiRecords.map((row): CriminalCharge => ({
-    id: row.id, name: row.name, code: row.code, jurisdiction: "TX", category: "misdemeanor",
-    description: texasDwiConduct, maxPenalty: `${row.summary} ${texasDwiQualifications}`,
-    searchAliases: [`DWI ${row.code}`, row.dpsCode, texasDwiCitation(row.references[1])],
+  ...texasReviewedRecords.map((row): CriminalCharge => ({
+    id: row.id, name: row.name, code: row.code, jurisdiction: "TX", category: row.category === "felony" ? "felony" : "misdemeanor",
+    description: row.conduct, maxPenalty: row.penalty,
+    searchAliases: [row.citation, row.dpsCode, ...(row.officialTitle === "DRIVING WHILE INTOXICATED." ? [`DWI ${row.code}`] : [])].filter(Boolean),
     commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: [],
   })),
   {
@@ -40613,19 +40601,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Surveillance footage', 'Receipts or proof of purchase', 'Witness statements', 'Value documentation'],
     specificRights: ['Right to pretrial diversion for first offenders', 'Right to challenge valuation', 'Right to negotiate restitution'],
     urgentActions: ['Contact attorney', 'Do not make statements', 'Preserve any receipts or proof of purchase']
-  },
-  {
-    id: 'tx-assault-bodily-injury-family',
-    name: 'Assault Causing Bodily Injury (Family Violence)',
-    code: '22.01(a)(1)',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Intentionally, knowingly, or recklessly causing bodily injury to a family member, household member, or dating partner under Texas Penal Code § 22.01',
-    maxPenalty: 'Class A misdemeanor: up to 1 year county jail and/or $4,000 fine; enhances to felony with prior conviction',
-    commonDefenses: ['Self-defense', 'Defense of others', 'False accusation', 'No bodily injury', 'Mutual combat'],
-    evidenceToGather: ['Photos of injuries (or lack thereof)', 'Medical records', '911 call recordings', 'Witness statements', 'Communication records'],
-    specificRights: ['Right to examine complainant', 'Right to challenge protective order', 'Right to jury trial', 'Right to challenge family violence finding'],
-    urgentActions: ['Contact attorney immediately', 'Comply with any protective orders', 'Do not contact the alleged victim']
   },
   {
     id: 'tx-driving-while-license-invalid',
@@ -95098,6 +95073,10 @@ for (const [group, sections] of [['Violent Crimes', californiaPeopleSections], [
 // reselection handling.
 for (const group of ["TX", "DUI & Traffic", "DUI/Traffic Crimes"]) {
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...texasDwiRecords.map(row => row.id)])];
+}
+for (const [group, heading] of [["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
+  const ids = texasReviewedRecords.filter(row => !heading || row.officialTitle === heading).map(row => row.id);
+  chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
 chargeCategories['OH'] = Array.from(new Set([
   ...chargeCategories['OH'].filter((id) =>

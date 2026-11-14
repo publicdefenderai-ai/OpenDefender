@@ -64,7 +64,7 @@ describe("Texas DWI reviewed dependencies", () => {
       expect(buildTexasManifestRecord(c,bad,manifest.generatedAt).disposition).toBe("require_exact_reselection");
     }
     const bad = {...record, provisions:record.provisions.map((p,i) => i === 1 ? {...p,subdivision:"(b)"}:p)};
-    expect(() => buildTexasSourceDatabaseSeed({...manifest, catalogRecords:[bad]})).toThrow(/unreviewed Texas DWI/);
+    expect(() => buildTexasSourceDatabaseSeed({...manifest, catalogRecords:[bad]})).toThrow(/unreviewed Texas evidence/);
   });
 
   it("requires deployed links with exact reviewed content, including when the old import omits them", async () => {
