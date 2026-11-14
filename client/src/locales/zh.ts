@@ -4034,6 +4034,20 @@ export default {
     }
   },
   "legalGlossary": {
+    "reader": {
+      "heading": "法律术语。",
+      "accent": "通俗解释。",
+      "intro": "查找您在法院文书、谈话或指南中遇到的英文术语。可按名称或别称搜索。",
+      "search": "查找法律术语",
+      "topic": "主题",
+      "allTopics": "所有主题",
+      "all": "全部",
+      "guide": "查看相关指南",
+      "related": "相关资源",
+      "rights": "了解您的权利",
+      "resources": "所有资源",
+      "guidance": "案件指南"
+    },
     "hero": {
       "title": "法律术语表",
       "subtitle": "了解法律术语和概念，帮助您理解刑事司法系统"

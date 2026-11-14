@@ -4035,6 +4035,20 @@ export default {
     }
   },
   "legalGlossary": {
+    "reader": {
+      "heading": "Lenguaje jurídico.",
+      "accent": "Explicaciones sencillas.",
+      "intro": "Busque un término que haya visto en un documento judicial, escuchado en una conversación o leído en una guía. Puede buscar por su nombre o por un sinónimo.",
+      "search": "Buscar un término jurídico",
+      "topic": "Tema",
+      "allTopics": "Todos los temas",
+      "all": "Todas",
+      "guide": "Consultar la guía relacionada",
+      "related": "Recursos relacionados",
+      "rights": "Conozca sus derechos",
+      "resources": "Todos los recursos",
+      "guidance": "Orientación sobre su caso"
+    },
     "hero": {
       "title": "Glosario Legal",
       "subtitle": "Comprendiendo términos y conceptos legales para ayudarle a navegar el sistema de justicia penal"
