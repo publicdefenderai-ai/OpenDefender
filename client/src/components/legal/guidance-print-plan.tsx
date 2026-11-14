@@ -1,5 +1,6 @@
 import { lawyerQuestions, guidanceReaderCopy, counselCopyKey } from "../../locales/guidance-reader";
 import React from "react";
+import { requiresOhioChargeConfirmation, ohioReselectionNotice } from "../../lib/ohio-guidance-output";
 import {
   GUIDANCE_SECTION_ORDER,
   normalizeGuidance,
@@ -227,8 +228,19 @@ function sectionContent(section: GuidanceSectionId, guidance: GuidanceViewModel,
  * Print does not depend on interactive accordion state. It renders a fresh,
  * complete plan from the normalized model in the canonical section order.
  */
-export function GuidancePrintPlan({ guidance: raw, language = "en", chargeDetails }: { guidance: GuidanceViewModel; language?: string; chargeDetails?: React.ReactNode }) {
+export function GuidancePrintPlan({ guidance: raw, language = "en", chargeDetails, ohioVerified = false }: { guidance: GuidanceViewModel; language?: string; chargeDetails?: React.ReactNode; ohioVerified?: boolean }) {
   const guidance = normalizeGuidance(raw);
+  if (requiresOhioChargeConfirmation(guidance) && !ohioVerified) {
+    const printHint = language.startsWith("es") ? "Use el botón Imprimir de la hoja de ruta para comprobar el cargo."
+      : language.startsWith("zh") ? "请使用路线图中的打印按钮核实罪名。"
+      : "Use the Print button on the roadmap to check the charge.";
+    return (
+      <article className="hidden print:block guidance-print-plan" data-testid="print-guidance-plan">
+        <p>{ohioReselectionNotice(language)}</p>
+        <p>{printHint}</p>
+      </article>
+    );
+  }
   const reader = guidanceReaderCopy(language);
   const labels = { ...sectionLabels(language), courtPreparation: reader.readerPrepare, collateralConsequences: reader.readerConsequences };
   const questions = lawyerQuestions(language, guidance.chargeClassifications.length > 0, guidance.caseData.custodyStatus, guidance.caseData.selectedConcerns);
