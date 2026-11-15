@@ -156,21 +156,25 @@ for (const [language, title] of Object.entries({ en: 'Guidance: Example charge i
   });
 }
 
-for (const scenario of ['legacy', 'code-only', 'saved-text-only', 'mixed', 'withheld', 'offline', 'current'] as const) {
+for (const scenario of ['legacy', 'code-only', 'saved-text-only', 'mixed', 'saved-case-only', 'missing-classification', 'extra-typed-charge', 'conflicting-selections', 'withheld', 'offline', 'partial', 'current'] as const) {
   test(`Ohio saved roadmap print boundary: ${scenario}`, async ({ page }) => {
     await setup(page);
     const reviewed = 'oh-orc-2903-01-aggravated-murder';
     const legacy = 'oh-robbery-in-the-first-degree';
-    const ids = scenario === 'saved-text-only' ? [] : scenario === 'mixed' ? [reviewed, legacy]
+    const ids = scenario === 'saved-text-only' || scenario === 'saved-case-only' ? [] : scenario === 'mixed' ? [reviewed, legacy]
       : [scenario === 'legacy' ? legacy : scenario === 'code-only' ? undefined : reviewed];
     const overview = 'Historical penalty and citation from a saved session.';
     await page.route('**/api/legal-guidance/design-results', route => route.fulfill({ json: {
-      success: true, guidance: { ...guidance, overview, caseData: { ...guidance.caseData, jurisdiction: 'Ohio', charges: scenario === 'saved-text-only' ? 'Former Ohio charge' : '' },
+      success: true,
+      case: ['saved-case-only', 'missing-classification', 'extra-typed-charge', 'conflicting-selections'].includes(scenario)
+        ? { jurisdiction: 'Ohio', charges: scenario === 'saved-case-only' ? ['Former Ohio charge'] : scenario === 'conflicting-selections' ? [reviewed] : [reviewed, scenario === 'extra-typed-charge' ? 'Unknown historical charge' : legacy] } : undefined,
+      guidance: { ...guidance, overview, caseData: { ...guidance.caseData, jurisdiction: scenario === 'saved-case-only' ? '' : 'Ohio', charges: scenario === 'saved-text-only' || scenario === 'conflicting-selections' ? 'Former Ohio charge' : '' },
         chargeClassifications: ids.map(id => ({ id, name: 'Saved charge', code: '2911.01', classification: 'felony' })) },
     } }));
-    let available = scenario === 'current' || scenario === 'mixed';
+    let available = ['current', 'mixed', 'missing-classification', 'extra-typed-charge', 'conflicting-selections'].includes(scenario);
     await page.route('**/api/criminal-charges?**', route => {
       if (scenario === 'offline') return route.abort();
+      if (scenario === 'partial') return route.fulfill({ json: { success: true, charges: [{ id: reviewed }], count: 1, totalAvailable: 2 } });
       const charges = available ? [{ id: reviewed }] : [];
       return route.fulfill({ json: { success: true, count: charges.length, charges, totalAvailable: charges.length,
         pagination: { offset: 0, limit: 500, totalMatches: charges.length, nextOffset: null, snapshot: 'a'.repeat(64) } } });
@@ -178,6 +182,16 @@ for (const scenario of ['legacy', 'code-only', 'saved-text-only', 'mixed', 'with
     await page.goto('/case-guidance?session=design-results');
     const print = page.getByTestId('button-print-guidance');
     await expect(print).toBeVisible();
+    const screen = page.getByTestId('guidance-dashboard');
+    if (scenario === 'current') {
+      await expect(screen).toContainText(overview);
+    } else {
+      await expect(screen.getByRole('status')).toContainText('Charge selection needs to be confirmed');
+      for (const historical of [overview, 'Saved charge', 'Former Ohio charge', '2911.01', 'Fixture practical step']) {
+        await expect(screen).not.toContainText(historical);
+      }
+      await expect(page.getByRole('link', { name: 'Find a lawyer or resources' })).toBeVisible();
+    }
     const plan = page.getByTestId('print-guidance-plan');
     await page.emulateMedia({ media: 'print' });
     await expect(plan).toBeVisible();
@@ -213,6 +227,8 @@ for (const scenario of ['legacy', 'code-only', 'saved-text-only', 'mixed', 'with
     });
     await print.click();
     expect(await warning).toContain('Charge selection needs to be confirmed');
+    await expect(screen.getByRole('status')).toContainText('Charge selection needs to be confirmed');
+    await expect(screen).not.toContainText(overview);
     if (scenario !== 'current') await expect(page.locator('body')).not.toHaveAttribute('data-printed-plan', /.*/);
     await page.emulateMedia({ media: 'print' });
     await expect(plan).toContainText('Charge selection needs to be confirmed');
@@ -227,6 +243,7 @@ test('Ohio roadmap without selected charges supports browser print, roadmap prin
   } }));
   await page.route('**/api/criminal-charges?**', route => route.abort());
   await page.goto('/case-guidance?session=design-results');
+  await expect(page.getByTestId('guidance-dashboard')).toContainText(guidance.overview);
   const plan = page.getByTestId('print-guidance-plan');
   await page.emulateMedia({ media: 'print' });
   await expect(plan).toBeVisible();
@@ -242,4 +259,31 @@ test('Ohio roadmap without selected charges supports browser print, roadmap prin
   const download = page.waitForEvent('download');
   await page.getByTestId('button-confirm-export').click();
   expect(await (await download).failure()).toBeNull();
+});
+
+test('Ohio restore withholds the saved narrative during verification and restores it after a successful retry', async ({ page }) => {
+  await setup(page, 'es');
+  const id = 'oh-orc-2903-01-aggravated-murder';
+  await page.route('**/api/legal-guidance/design-results', route => route.fulfill({ json: {
+    success: true, guidance: { ...guidance, caseData: { ...guidance.caseData, jurisdiction: 'OH' },
+      chargeClassifications: [{ id, name: 'Historical charge', classification: 'felony' }] },
+  } }));
+  let releaseCheck!: () => void;
+  const delay = new Promise<void>(resolve => { releaseCheck = resolve; });
+  let available = false;
+  await page.route('**/api/criminal-charges?**', async route => {
+    await delay;
+    const charges = available ? [{ id }] : [];
+    await route.fulfill({ json: { success: true, charges, count: charges.length, totalAvailable: charges.length,
+      pagination: { offset: 0, limit: 500, totalMatches: charges.length, nextOffset: null, snapshot: 'a'.repeat(64) } } });
+  });
+  await page.goto('/case-guidance?session=design-results');
+  const screen = page.getByTestId('guidance-dashboard');
+  await expect(screen.getByRole('status')).toBeVisible();
+  await expect(screen).not.toContainText(guidance.overview);
+  releaseCheck();
+  await expect(screen.getByRole('status')).toContainText('Se necesita volver a seleccionar el cargo');
+  available = true;
+  await screen.getByRole('button', { name: 'Volver a comprobar los cargos de Ohio' }).click();
+  await expect(screen).toContainText(guidance.overview);
 });

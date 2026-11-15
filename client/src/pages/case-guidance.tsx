@@ -436,7 +436,15 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
     legalDataApi.getLegalGuidance(urlSessionId).then((data) => {
       if (data.success && data.guidance) {
         const guidance = data.guidance as any;
-        setGuidanceResult(normalizeGuidance({ ...guidance, sessionId: urlSessionId }) as EnhancedGuidanceResult);
+        // Older sessions can carry their Ohio jurisdiction and selected IDs only on the saved case.
+        const savedCase = data.case;
+        const savedState = String(savedCase?.jurisdiction ?? '').trim().toUpperCase();
+        const ohioCase = savedState === 'OH' || savedState === 'OHIO';
+        const savedCharges = Array.isArray(savedCase?.charges) ? savedCase.charges.join(', ') : savedCase?.charges;
+        setGuidanceResult(normalizeGuidance({ ...guidance, sessionId: urlSessionId }, ohioCase ? {
+          jurisdiction: savedState,
+          charges: [...new Set([savedCharges, guidance.caseData?.charges].filter(Boolean))].join(', '),
+        } : undefined) as EnhancedGuidanceResult);
       }
     }).catch((err: Error & { code?: string }) => {
       if (err.code === 'SESSION_EXPIRED') {
