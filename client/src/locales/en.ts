@@ -2823,6 +2823,7 @@ export default {
       "showDetails": "Show Details",
       "newSession": "Start New Session",
       "close": "Close",
+      "print": "Print",
       "exportPDF": "Export PDF",
       "nextStep": {
         "label": "Start here",

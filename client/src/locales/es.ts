@@ -2825,6 +2825,7 @@ export default {
       "showDetails": "Mostrar Detalles",
       "newSession": "Iniciar una nueva sesión",
       "close": "Cerrar",
+      "print": "Imprimir",
       "exportPDF": "Exportar PDF",
       "nextStep": {
         "label": "Comience aquí",

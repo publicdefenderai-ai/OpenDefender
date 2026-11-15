@@ -322,6 +322,20 @@ test('Ohio roadmap without selected charges supports browser print, roadmap prin
   expect(await (await download).failure()).toBeNull();
 });
 
+for (const [language, printLabel] of Object.entries({ en: 'Print', es: 'Imprimir', zh: '打印' })) {
+  test(`withheld Ohio roadmap labels the Print button in ${language}`, async ({ page }) => {
+    await setup(page, language);
+    await page.route('**/api/legal-guidance/design-results', route => route.fulfill({ json: {
+      success: true, guidance: { ...guidance, caseData: { ...guidance.caseData, jurisdiction: 'OH', charges: 'Former Ohio charge' } },
+    } }));
+    await page.route('**/api/criminal-charges?**', route => route.abort());
+    await page.goto('/case-guidance?session=design-results');
+    const button = page.getByTestId('button-print-guidance');
+    await expect(button).toHaveText(printLabel);
+    await expect(button).toHaveAccessibleName(printLabel);
+  });
+}
+
 test('Ohio restore withholds the saved narrative during verification and restores it after a successful retry', async ({ page }) => {
   await setup(page, 'es');
   const id = 'oh-orc-2903-01-aggravated-murder';
