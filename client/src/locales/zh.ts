@@ -2823,6 +2823,7 @@ export default {
       "showDetails": "显示详情",
       "newSession": "开始新会话",
       "close": "关闭",
+      "print": "打印",
       "exportPDF": "导出PDF",
       "nextStep": {
         "label": "从这里开始",
