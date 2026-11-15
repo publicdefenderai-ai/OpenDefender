@@ -685,3 +685,7 @@ The approved opendefender-document-library-preview.html reference (SHA-256 2745c
 ### Legal Glossary
 
 The approved glossary-content.html reference (SHA-256 c8ee1f6bee23cf831e3af7b5b6ec550614fa389428ffe7e4df83f1c34e44d736) uses alphabetical rows, a topic selector and inline definitions. The live shared catalog supplies all terms, aliases, topic tags, definitions and related destinations. The English entries are marked for assistive technology within the localized interface. The page supports incoming search parameters and term fragments, with all filtering performed locally.
+
+### Search and seizure scenarios
+
+The Search & Seizure preview’s five-situation reader lives in the existing Know Your Rights disclosure. The legacy route now opens that disclosure. Each situation keeps its published description and rights and uses the approved illustration, including the revised stop illustration. The section keeps the supervision advisory, general guidelines, and legal notice. Its English content declares its language in every locale.

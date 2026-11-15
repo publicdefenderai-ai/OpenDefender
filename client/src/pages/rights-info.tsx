@@ -1,10 +1,9 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FileText, AlertTriangle, Scale, Gavel, UserCheck, FileX, Search, Home, Car, Smartphone, CheckCircle, ChevronDown, User } from "lucide-react";
+import { FileText, AlertTriangle, Scale, Gavel, UserCheck, FileX } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Link } from "wouter";
 import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
@@ -271,7 +270,7 @@ function PrisonRightsSection() {
 }
 
 interface SearchScenario {
-  icon: React.ReactNode;
+  illustration: string;
   title: string;
   description: string;
   yourRights: string[];
@@ -281,7 +280,7 @@ interface SearchScenario {
 
 const searchScenarios: SearchScenario[] = [
   {
-    icon: <User className="h-6 w-6 text-primary" />,
+    illustration: "stop",
     title: "Stop and Frisk",
     description: "When police stop you on the street and pat you down for weapons",
     yourRights: [
@@ -306,7 +305,7 @@ const searchScenarios: SearchScenario[] = [
     ],
   },
   {
-    icon: <Car className="h-6 w-6 text-primary" />,
+    illustration: "vehicle",
     title: "Vehicle Search",
     description: "When police want to search your car during a traffic stop",
     yourRights: [
@@ -331,7 +330,7 @@ const searchScenarios: SearchScenario[] = [
     ],
   },
   {
-    icon: <Home className="h-6 w-6 text-primary" />,
+    illustration: "home",
     title: "Home Search",
     description: "When law enforcement wants to enter or search your home",
     yourRights: [
@@ -358,7 +357,7 @@ const searchScenarios: SearchScenario[] = [
     ],
   },
   {
-    icon: <BrandShieldIcon size={24} light />,
+    illustration: "person",
     title: "Search of Your Person",
     description: "When police want to conduct a body search",
     yourRights: [
@@ -384,7 +383,7 @@ const searchScenarios: SearchScenario[] = [
     ],
   },
   {
-    icon: <Smartphone className="h-6 w-6 text-primary" />,
+    illustration: "phone",
     title: "Phone Search",
     description: "When police ask to see or unlock your phone",
     yourRights: [
@@ -411,61 +410,32 @@ const searchScenarios: SearchScenario[] = [
   },
 ];
 
-function SearchScenarioCard({ scenario }: { scenario: SearchScenario }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <Card className="rights-search-scenario">
-      <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-        <CardHeader>
-          <CollapsibleTrigger className="w-full">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4 min-w-0">
-                <div className={`w-12 h-12 bg-muted text-primary rounded-lg flex items-center justify-center`}>
-                  {scenario.icon}
-                </div>
-                <div className="text-left min-w-0">
-                  <CardTitle className="text-base">{scenario.title}</CardTitle>
-                  <p className="text-sm text-muted-foreground mt-1">{scenario.description}</p>
-                </div>
-              </div>
-              <ChevronDown className={`h-5 w-5 flex-shrink-0 ml-2 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
-            </div>
-          </CollapsibleTrigger>
-        </CardHeader>
-        <CollapsibleContent>
-          <CardContent className="pt-0">
-            <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
-              <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-3 flex items-center gap-2 text-sm">
-                <BrandShieldIcon size={14} />
-                Your Rights:
-              </h4>
-              <ul className="space-y-2">
-                {scenario.yourRights.map((right, i) => (
-                  <li key={i} className="text-sm text-blue-800 dark:text-blue-200 flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                    {right}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </CardContent>
-        </CollapsibleContent>
-      </Collapsible>
-    </Card>
-  );
-}
-
 function SearchSeizureSection() {
+  const [scenario, setScenario] = useState(searchScenarios[0]);
   return (
-    <Card>
-      <CardHeader className="animate-rights-header">
-        <CardTitle className="flex items-center space-x-2">
-          <Search className="h-5 w-5 text-primary" />
-          <span>Search &amp; Seizure Rights</span>
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-6 animate-rights-content">
+    <section lang="en" className="search-guide">
+      <h3>Different situations. Different questions.</h3>
+      <p>Choose a situation to explore your search and seizure rights.</p>
+      <div className="search-guide-options" role="group" aria-label="Common search scenarios">
+        {searchScenarios.map(item => (
+          <button key={item.title} type="button" aria-pressed={item === scenario}
+            aria-controls="search-scenario-reader" onClick={() => setScenario(item)}>
+            {item.title}
+          </button>
+        ))}
+      </div>
+      <article id="search-scenario-reader" aria-labelledby="search-scenario-title">
+        <div className="search-guide-heading">
+          <div>
+            <h4 id="search-scenario-title">{scenario.title}</h4>
+            <p>{scenario.description}</p>
+          </div>
+          <img src={`/images/design/search-guides/${scenario.illustration}.webp`} loading="lazy" alt="" width="240" height="240" />
+        </div>
+        <h5>Your rights</h5>
+        <ul>{scenario.yourRights.map(right => <li key={right}>{right}</li>)}</ul>
+      </article>
+      <div className="space-y-6">
         <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
           <AlertDescription className="text-blue-800 dark:text-blue-200 flex items-start gap-3">
             <BrandShieldIcon size={16} className="mt-0.5 flex-shrink-0" />
@@ -498,24 +468,17 @@ function SearchSeizureSection() {
           </div>
         </div>
 
-        <div>
-          <h4 className="font-semibold text-foreground mb-4">Common Search Scenarios</h4>
-          <p className="text-sm text-muted-foreground mb-4">Tap each scenario to see your rights and what to do.</p>
-          <div className="space-y-3">
-            {searchScenarios.map((scenario) => (
-              <SearchScenarioCard key={scenario.title} scenario={scenario} />
-            ))}
-          </div>
-        </div>
-
         <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
           <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
           <AlertDescription className="text-amber-800 dark:text-amber-200">
             <strong>Note:</strong> Laws vary by state and situation. This is general information, not legal advice. If your rights were violated during a search, tell your attorney immediately. Evidence obtained illegally may be excluded from your case.
           </AlertDescription>
         </Alert>
-      </CardContent>
-    </Card>
+        <nav aria-label="Related rights guides" className="flex flex-wrap gap-5">
+          <Link className="rights-link" href="/warrants">Warrants &amp; Your Rights</Link>
+          <Link className="rights-link" href="/right-to-counsel">Right to Counsel</Link>
+        </nav>
+      </div>
+    </section>
   );
 }
-
