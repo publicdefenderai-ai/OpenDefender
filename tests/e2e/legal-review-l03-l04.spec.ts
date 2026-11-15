@@ -41,15 +41,17 @@ for (const [language, locale] of Object.entries({ en, es, zh })) {
 test('search scenarios expose the qualifications instead of absolute warrant/unlock rules', async ({ page }) => {
   await page.goto('/rights-info');
   await page.getByTestId('tab-search').click();
-  for (const name of ['Vehicle Search', 'Home Search', 'Search of Your Person', 'Phone Search']) {
-    await page.getByRole('button').filter({ hasText: name }).first().click();
-  }
-  await expect(page.getByText(/This does not lower the probable-cause standard/)).toBeVisible();
-  await expect(page.getByText(/Arrest alone does not authorize every vehicle search/)).toBeVisible();
-  await expect(page.getByText(/They are not always required to show it before entry/)).toBeVisible();
-  await expect(page.getByText(/In the Third Circuit, strip searches incident to arrest outside jails/)).toBeVisible();
-  await expect(page.getByText(/Courts are split on when this is testimonial/)).toBeVisible();
-  await expect(page.getByText(/foregone-conclusion doctrine/)).toBeVisible();
+  const reader = page.locator('#search-scenario-reader');
+  await page.getByRole('button', { name: 'Vehicle Search', exact: true }).click();
+  await expect(reader).toContainText('This does not lower the probable-cause standard');
+  await expect(reader).toContainText('Arrest alone does not authorize every vehicle search');
+  await page.getByRole('button', { name: 'Home Search', exact: true }).click();
+  await expect(reader).toContainText('They are not always required to show it before entry');
+  await page.getByRole('button', { name: 'Search of Your Person', exact: true }).click();
+  await expect(reader).toContainText('In the Third Circuit, strip searches incident to arrest outside jails');
+  await page.getByRole('button', { name: 'Phone Search', exact: true }).click();
+  await expect(reader).toContainText('Courts are split on when this is testimonial');
+  await expect(reader).toContainText('foregone-conclusion doctrine');
   await expect(page.getByText('Strip searches require a warrant or serious emergency', { exact: true })).toHaveCount(0);
 });
 

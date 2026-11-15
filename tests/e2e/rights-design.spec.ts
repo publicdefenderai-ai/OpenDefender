@@ -128,10 +128,17 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
     await page.getByTestId('tab-search').click();
     await expect(page.locator('#constitutional-rights > div > details[open]')).toHaveCount(5);
     for (const scenario of ['Stop and Frisk', 'Vehicle Search', 'Home Search', 'Search of Your Person', 'Phone Search']) {
-      await page.getByRole('button').filter({ hasText: scenario }).first().click();
+      const choice = page.getByRole('button', { name: scenario, exact: true });
+      await choice.focus();
+      await page.keyboard.press('Enter');
+      await expect(choice).toHaveAttribute('aria-pressed', 'true');
+      const reader = page.locator('#search-scenario-reader');
+      await expect(reader.getByRole('heading', { name: scenario, exact: true })).toBeVisible();
+      if (scenario === 'Vehicle Search') await expect(reader).toContainText('This does not lower the probable-cause standard');
+      if (scenario === 'Phone Search') await expect(reader).toContainText('foregone-conclusion doctrine');
+      await reader.locator('img').scrollIntoViewIfNeeded();
+      await expect.poll(() => reader.locator('img').evaluate(img => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
     }
-    await expect(page.getByText(/This does not lower the probable-cause standard/)).toBeVisible();
-    await expect(page.getByText(/foregone-conclusion doctrine/)).toBeVisible();
     await expect(page.locator('.rights-closing')).toContainText(copy.disclaimer.text);
     for (const width of [1280, 320]) {
       await page.setViewportSize({ width, height: 900 });
@@ -142,7 +149,8 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
       expect(clipped).toEqual([]);
       await page.screenshot({ path: info.outputPath(`rights-${width}.png`), fullPage: true });
     }
-    await page.goto('/rights-info#rights-search');
+    await page.goto('/search-seizure');
+    await expect(page).toHaveURL(/rights-info#rights-search$/);
     await expect(page.locator('#rights-search')).toHaveAttribute('open', '');
     await expect(page.locator('#rights-search')).toBeInViewport();
     await page.getByTestId('button-open-printable-rights-cards').click();

@@ -160,7 +160,7 @@ function Router() {
       <Route path="/quick-reference-cards" component={QuickReference} />
       {/* Keep the legacy URL pointed at the canonical rights experience. */}
       <Route path="/quick-reference"><Redirect to="/rights-info" /></Route>
-      <Route path="/search-seizure"><Redirect to="/rights-info" /></Route>
+      <Route path="/search-seizure"><Redirect replace to="/rights-info#rights-search" /></Route>
       <Route path="/friends-family" component={FriendsFamily} />
       <Route path="/friends-family/toolkit" component={FamilyToolkit} />
       <Route path="/first-24-hours" component={FirstTwentyFourHours} />

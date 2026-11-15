@@ -309,7 +309,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       </button>
 
       <button
-        onClick={() => handleNavigate('/rights-info')}
+        onClick={() => handleNavigate('/search-seizure')}
         className="w-full"
         data-testid="submenu-item-search-seizure"
       >
