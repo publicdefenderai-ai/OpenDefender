@@ -2823,6 +2823,7 @@ export default {
       "showDetails": "Show Details",
       "newSession": "Start New Session",
       "close": "Close",
+      "print": "Print",
       "exportPDF": "Export PDF",
       "nextStep": {
         "label": "Start here",
@@ -5869,6 +5870,8 @@ export default {
     }
   },
   "guidance": {
+    "ohioSavedChargeNotice": "Charge selection needs to be confirmed. The saved roadmap is hidden because its guidance may depend on a charge we could not verify. Start a new session to select a current Ohio charge, or continue without a charge.",
+    "checkOhioCharges": "Check current Ohio charges again",
     "yourCharges": {
       "pendingReviewWarning": {
         "title": "Not yet attorney-reviewed.",

@@ -26,12 +26,33 @@ export class OhioChargeConfirmationError extends Error {
   }
 }
 
+export function ohioChargesAreCurrent(plan: SavedPlan, currentIds: ReadonlySet<string>) {
+  const ids = new Set(plan.chargeClassifications.map(charge => charge.id));
+  if (!ids.size || [...ids].some(id => !id || !isReviewedOhioChargeId(id) || !currentIds.has(id))) return false;
+  // When the saved selection is present, every entry must be accounted for by a verified classification.
+  const selected = plan.caseData.charges.trim();
+  if (!selected) return true;
+  // Old sessions serialize IDs and display names in a comma-separated string.
+  // A comma is a separator only after an entire verified ID or name matches.
+  const choices = new Set(plan.chargeClassifications.flatMap(charge => [charge.id, charge.name]));
+  const starts = new Set([0]);
+  for (const start of starts) {
+    for (const choice of choices) {
+      if (!choice || !selected.startsWith(choice, start)) continue;
+      let end = start + choice.length;
+      while (end < selected.length && /\s/.test(selected[end])) end++;
+      if (end === selected.length) return true;
+      if (selected[end] !== ",") continue;
+      let next = end + 1;
+      while (next < selected.length && /\s/.test(selected[next])) next++;
+      if (next < selected.length) starts.add(next);
+    }
+  }
+  return false;
+}
+
 export async function canOutputOhioPlan(plan: SavedPlan) {
-  const charges = plan.chargeClassifications;
   if (!requiresOhioChargeConfirmation(plan)) return true;
-  if (!charges.length || charges.some(charge => !charge.id || !isReviewedOhioChargeId(charge.id))) return false;
   const catalog = await fetchChargeCatalog({ jurisdiction: "OH" }).catch(() => null);
-  if (!catalog) return false;
-  const currentIds = new Set(catalog.charges.map(charge => charge.id));
-  return charges.every(charge => currentIds.has(charge.id ?? ""));
+  return !!catalog && ohioChargesAreCurrent(plan, new Set(catalog.charges.map(charge => charge.id)));
 }
