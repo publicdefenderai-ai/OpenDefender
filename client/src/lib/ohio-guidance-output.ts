@@ -32,9 +32,23 @@ export function ohioChargesAreCurrent(plan: SavedPlan, currentIds: ReadonlySet<s
   // When the saved selection is present, every entry must be accounted for by a verified classification.
   const selected = plan.caseData.charges.trim();
   if (!selected) return true;
-  const names = new Set(plan.chargeClassifications.map(charge => charge.name));
-  if (selected === plan.chargeClassifications.map(charge => charge.name).join(", ")) return true;
-  return selected.split(",").every(entry => ids.has(entry.trim()) || names.has(entry.trim()));
+  // Old sessions serialize IDs and display names in a comma-separated string.
+  // A comma is a separator only after an entire verified ID or name matches.
+  const choices = new Set(plan.chargeClassifications.flatMap(charge => [charge.id, charge.name]));
+  const starts = new Set([0]);
+  for (const start of starts) {
+    for (const choice of choices) {
+      if (!choice || !selected.startsWith(choice, start)) continue;
+      let end = start + choice.length;
+      while (end < selected.length && /\s/.test(selected[end])) end++;
+      if (end === selected.length) return true;
+      if (selected[end] !== ",") continue;
+      let next = end + 1;
+      while (next < selected.length && /\s/.test(selected[next])) next++;
+      if (next < selected.length) starts.add(next);
+    }
+  }
+  return false;
 }
 
 export async function canOutputOhioPlan(plan: SavedPlan) {

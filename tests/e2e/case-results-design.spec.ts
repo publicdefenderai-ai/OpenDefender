@@ -348,3 +348,35 @@ test('Ohio restore withholds the saved narrative during verification and restore
   await screen.getByRole('button', { name: 'Volver a comprobar los cargos de Ohio' }).click();
   await expect(screen).toContainText(guidance.overview);
 });
+
+for (const [scenario, caseUsesId, suffix] of [
+  ['saved ID and plan name', true, ''],
+  ['saved name and plan ID', false, ''],
+  ['unverified name after OVI', true, ', Unverified historical charge'],
+  ['partial OVI name', true, 'partial'],
+] as const) {
+  test(`Ohio restore matches whole comma-containing charge names: ${scenario}`, async ({ page }) => {
+    await setup(page);
+    const id = "oh-orc-4511-19-operating-a-vehicle-under-the-influence-of-alcohol-a-drug-of-abuse-or-a-combination-of-them";
+    const name = "Operating a vehicle under the influence of alcohol, a drug of abuse, or a combination of them";
+    const planChoice = suffix === 'partial' ? name.split(',')[0] : (caseUsesId ? name : id) + suffix;
+    await page.route('**/api/legal-guidance/design-results', route => route.fulfill({ json: {
+      success: true, case: { jurisdiction: 'Ohio', charges: [caseUsesId ? id : name] },
+      guidance: { ...guidance, caseData: { ...guidance.caseData, jurisdiction: 'Ohio', charges: planChoice },
+        chargeClassifications: [{ id, name, classification: 'misdemeanor' }] },
+    } }));
+    await page.route('**/api/criminal-charges?**', route => route.fulfill({ json: {
+      success: true, count: 1, charges: [{ id }], totalAvailable: 1,
+      pagination: { offset: 0, limit: 500, totalMatches: 1, nextOffset: null, snapshot: 'a'.repeat(64) },
+    } }));
+    await page.goto('/case-guidance?session=design-results');
+    const dashboard = page.getByTestId('guidance-dashboard');
+    if (suffix) {
+      await expect(dashboard.getByRole('status')).toContainText('Charge selection needs to be confirmed');
+      await expect(dashboard).not.toContainText(guidance.overview);
+    } else {
+      await expect(dashboard).toContainText(guidance.overview);
+      await expect(dashboard.getByTestId('button-export-pdf')).toBeVisible();
+    }
+  });
+}
