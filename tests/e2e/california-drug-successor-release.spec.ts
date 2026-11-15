@@ -105,7 +105,9 @@ for (const unavailable of [false, true]) {
     await page.getByRole("button", { name: /Get My Case Support/i }).click();
     if (unavailable) {
       await expect(page.getByTestId("charge-reselection-warning-0")).toBeVisible();
-      await expect(page.getByText(/We cannot show charge-specific information/)).toBeVisible();
+      const withheldMessage = /We cannot show charge-specific information/;
+      await expect(page.getByTestId("charge-explanation-0").getByText(withheldMessage)).toBeVisible();
+      await expect(page.getByTestId("print-guidance-plan")).toContainText(withheldMessage);
       await expect(page.getByRole("button", { name: /Read the Law/i })).toHaveCount(0);
     } else {
       await expect(page.getByRole("button", { name: /Read the Law/i })).toBeVisible();
