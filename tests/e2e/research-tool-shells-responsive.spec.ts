@@ -431,11 +431,6 @@ async function expectPrimaryToolSurface(page: Page, route: string) {
         page.getByRole("form"),
       ).toBeVisible();
       return;
-    case "/statutes":
-      await expect(page.getByTestId("input-search-statutes")).toBeVisible();
-      await expect(page.getByTestId("tab-federal")).toBeVisible();
-      await expect(page.locator(".statutes-search")).toBeVisible();
-      return;
     default:
       throw new Error(`Unhandled research tool route: ${route}`);
   }

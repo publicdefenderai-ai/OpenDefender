@@ -3972,7 +3972,11 @@ export default {
       "glossary": "法律术语表",
       "counsel": "获得律师帮助的权利",
       "sources": "数据来源",
-      "official": "官方来源"
+      "official": "官方来源",
+      "summary": "摘要",
+      "penalties": "处罚",
+      "untitled": "未命名法规",
+      "related": "相关页面"
     },
     "liveText": {
       "readLaw": "阅读法律",

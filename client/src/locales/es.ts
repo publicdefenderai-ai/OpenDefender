@@ -3973,7 +3973,11 @@ export default {
       "glossary": "Glosario jurídico",
       "counsel": "Derecho a un abogado",
       "sources": "Nuestras fuentes",
-      "official": "Fuente oficial"
+      "official": "Fuente oficial",
+      "summary": "Resumen",
+      "penalties": "Sanciones",
+      "untitled": "Ley sin título",
+      "related": "Páginas relacionadas"
     },
     "liveText": {
       "readLaw": "Leer la ley",

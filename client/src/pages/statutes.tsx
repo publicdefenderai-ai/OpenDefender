@@ -466,7 +466,7 @@ export default function StatutesPage() {
             </div>
           </TabsContent>
         </Tabs>
-        <nav className="statutes-related" aria-label={t('statutes.reader.sources')}>
+        <nav className="statutes-related" aria-label={t('statutes.reader.related')}>
           <Link href="/legal-glossary">{t('statutes.reader.glossary')}</Link>
           <Link href="/right-to-counsel">{t('statutes.reader.counsel')}</Link>
           <Link href="/data-sources">{t('statutes.reader.sources')}</Link>
@@ -531,7 +531,7 @@ function StatuteCard({ statute }: { statute: Statute }) {
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
             <CardTitle className="text-xl mb-2">
-              {statute.title || 'Untitled Statute'}
+              {statute.title || t('statutes.reader.untitled')}
             </CardTitle>
             <div className="flex flex-wrap gap-2 items-center">
               {statute.citation && (
@@ -563,13 +563,13 @@ function StatuteCard({ statute }: { statute: Statute }) {
       <CardContent>
         {statute.summary && (
           <div className="mb-4">
-            <h4 className="font-semibold text-sm mb-1">Summary:</h4>
+            <h4 className="font-semibold text-sm mb-1">{t('statutes.reader.summary')}</h4>
             <p className="text-sm text-muted-foreground">{statute.summary}</p>
           </div>
         )}
         {statute.penalties && (!statute.citation || showFullText) && (
           <div className="mb-4">
-            <h4 className="font-semibold text-sm mb-1">Penalties:</h4>
+            <h4 className="font-semibold text-sm mb-1">{t('statutes.reader.penalties')}</h4>
             <p className="text-sm text-muted-foreground">{statute.penalties}</p>
           </div>
         )}

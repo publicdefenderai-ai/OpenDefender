@@ -3971,7 +3971,11 @@ export default {
       "glossary": "Legal glossary",
       "counsel": "Right to counsel",
       "sources": "About our data sources",
-      "official": "Official source"
+      "official": "Official source",
+      "summary": "Summary",
+      "penalties": "Penalties",
+      "untitled": "Untitled statute",
+      "related": "Related pages"
     },
     "liveText": {
       "readLaw": "Read the Law",
