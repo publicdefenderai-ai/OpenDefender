@@ -402,10 +402,12 @@ async function stubRecoveringStatuteCardProvider(page: Page) {
 }
 
 async function expectEditorialOpening(page: Page) {
-  const opening = page.locator(new URL(page.url()).pathname === "/court-records" ? ".records-opening" : "section.editorial-page-intro");
+  const pathname = new URL(page.url()).pathname;
+  const openings: Record<string, string> = { "/court-records": ".records-opening", "/statutes": ".statutes-opening" };
+  const opening = page.locator(openings[pathname] ?? "section.editorial-page-intro");
   await expect(opening).toHaveCount(1);
   await expect(opening.locator("h1")).toBeVisible();
-  await expect(opening.locator("p")).toBeVisible();
+  await expect(opening.locator("p").first()).toBeVisible();
 }
 
 async function expectPrimaryToolSurface(page: Page, route: string) {
@@ -432,7 +434,7 @@ async function expectPrimaryToolSurface(page: Page, route: string) {
     case "/statutes":
       await expect(page.getByTestId("input-search-statutes")).toBeVisible();
       await expect(page.getByTestId("tab-federal")).toBeVisible();
-      await expect(page.locator(".editorial-workspace > .editorial-surface")).toBeVisible();
+      await expect(page.locator(".statutes-search")).toBeVisible();
       return;
     default:
       throw new Error(`Unhandled research tool route: ${route}`);
@@ -489,7 +491,6 @@ for (const viewport of VIEWPORTS) {
     test("render their editorial openings and initial tool surfaces without overflow", async ({ page }) => {
       const routes = [
         "/document-summarizer",
-        "/statutes",
       ] as const;
 
       for (const route of routes) {
