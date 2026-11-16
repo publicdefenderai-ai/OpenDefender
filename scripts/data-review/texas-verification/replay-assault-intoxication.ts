@@ -7,12 +7,20 @@ import { buildTexasManifestRecord } from "../../../server/data/texas-source-data
 import possessionRows from "../../../shared/texas-ranked-possession.json";
 import possessionEvidence from "../output/texas-ranked-possession-evidence.json";
 
-const batch = process.argv[2] ?? "assault-intoxication";
-if (!["assault-intoxication", "ranked-possession"].includes(batch)) throw new Error(`Unknown Texas batch: ${batch}`);
-const rows = batch === "ranked-possession" ? possessionRows : assaultRows;
-const evidence = batch === "ranked-possession" ? possessionEvidence : assaultEvidence;
-const sources = new Map(Object.entries(evidence));
-const generatedAt = new Date(Math.max(...Object.values(evidence).map(doc => Date.parse(doc.retrievedAt))));
+import theftRows from "../../../shared/texas-ranked-theft.json";
+import theftEvidence from "../output/texas-ranked-theft-evidence.json";
+
+const batches = new Map([
+  ["assault-intoxication", { rows: assaultRows, evidence: Object.entries(assaultEvidence) }],
+  ["ranked-possession", { rows: possessionRows, evidence: Object.entries(possessionEvidence) }],
+  ["ranked-theft", { rows: theftRows, evidence: Object.entries(theftEvidence) }],
+]);
+const name = process.argv[2] ?? "assault-intoxication";
+const batch = batches.get(name);
+if (!batch) throw new Error(`Unknown Texas batch: ${name}`);
+const rows = batch.rows;
+const sources = new Map(batch.evidence);
+const generatedAt = new Date(Math.max(...[...sources.values()].map(doc => Date.parse(doc.retrievedAt))));
 const records = rows.map(row => {
   const charge = criminalCharges.find(c => c.id === row.id)!;
   const docs = row.references.map(ref => {

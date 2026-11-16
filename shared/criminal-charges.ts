@@ -95066,7 +95066,7 @@ for (const group of ["Drug Offenses", "Drug Crimes"]) {
   const ids = texasReviewedRecords.filter(row => row.references[0].code === "HS").map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
-for (const [group, heading] of [["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
+for (const [group, heading] of [["Theft & Property", "THEFT."], ["Property Crimes", "THEFT."], ["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
   const ids = texasReviewedRecords.filter(row => !heading || row.officialTitle === heading).map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
