@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "verificationPolicy": "quarterly-v1",
+  "reportHash": "1caa76eb69da3c5e9eff0ac824cb99b9e483b49ae99ee66d0382d31c6b636d6f",
+  "eligibilityHash": "0b5230950da5b80606d37f03dcffe4dba4db1f6209f42ce3614344e2e0aa4525",
+  "checkedAt": "2026-11-16T20:48:34.390Z",
+  "expiresAt": "2027-02-16T20:47:30.850Z",
+  "documents": [
+    {
+      "sourceKey": "fl:statute:319.30:5_a",
+      "contentHash": "00261df19587874f5b1d2bb4301a4ac2e704e365aa75ab24e82411b5119e2020",
+      "retrievedAt": "2026-11-16T20:47:30.850Z"
+    },
+    {
+      "sourceKey": "fl:statute:319.30",
+      "contentHash": "00261df19587874f5b1d2bb4301a4ac2e704e365aa75ab24e82411b5119e2020",
+      "retrievedAt": "2026-11-16T20:47:30.850Z"
+    },
+    {
+      "sourceKey": "fl:statute:741.28",
+      "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+      "retrievedAt": "2026-11-16T20:47:38.302Z"
+    },
+    {
+      "sourceKey": "fl:statute:741.2801",
+      "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+      "retrievedAt": "2026-11-16T20:47:39.339Z"
+    },
+    {
+      "sourceKey": "fl:statute:775.082",
+      "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+      "retrievedAt": "2026-11-16T20:47:35.021Z"
+    },
+    {
+      "sourceKey": "fl:statute:775.083",
+      "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+      "retrievedAt": "2026-11-16T20:47:36.134Z"
+    },
+    {
+      "sourceKey": "fl:statute:775.084",
+      "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+      "retrievedAt": "2026-11-16T20:47:37.279Z"
+    },
+    {
+      "sourceKey": "fl:statute:319.30:5_b",
+      "contentHash": "00261df19587874f5b1d2bb4301a4ac2e704e365aa75ab24e82411b5119e2020",
+      "retrievedAt": "2026-11-16T20:47:30.850Z"
+    },
+    {
+      "sourceKey": "fl:statute:319.30:4",
+      "contentHash": "00261df19587874f5b1d2bb4301a4ac2e704e365aa75ab24e82411b5119e2020",
+      "retrievedAt": "2026-11-16T20:47:30.850Z"
+    },
+    {
+      "sourceKey": "fl:statute:319.33:1_c",
+      "contentHash": "9231d9c2c6c5a37bb7c7b136a06e7a68a72a1b7a6035ee0be384b8df07601c7b",
+      "retrievedAt": "2026-11-16T20:47:31.916Z"
+    },
+    {
+      "sourceKey": "fl:statute:319.33",
+      "contentHash": "9231d9c2c6c5a37bb7c7b136a06e7a68a72a1b7a6035ee0be384b8df07601c7b",
+      "retrievedAt": "2026-11-16T20:47:31.916Z"
+    },
+    {
+      "sourceKey": "fl:statute:932.703",
+      "contentHash": "16f70cd722198da4fad96b5f26286a941c092edf2ff0a8ce798bbe292e5856bb",
+      "retrievedAt": "2026-11-16T20:48:33.385Z"
+    },
+    {
+      "sourceKey": "fl:statute:932.704",
+      "contentHash": "8f019070ca0bf116fb7d984c94016a3fe8422d9087b1bc9243fdcb7075400f14",
+      "retrievedAt": "2026-11-16T20:48:34.390Z"
+    },
+    {
+      "sourceKey": "fl:statute:319.33:5",
+      "contentHash": "9231d9c2c6c5a37bb7c7b136a06e7a68a72a1b7a6035ee0be384b8df07601c7b",
+      "retrievedAt": "2026-11-16T20:47:31.916Z"
+    },
+    {
+      "sourceKey": "fl:statute:328.05:1",
+      "contentHash": "1c58b1d3948cd88b495d31582719bbe26f3b7659f6464a7a7d89433f01663597",
+      "retrievedAt": "2026-11-16T20:47:33.979Z"
+    },
+    {
+      "sourceKey": "fl:statute:328.05",
+      "contentHash": "1c58b1d3948cd88b495d31582719bbe26f3b7659f6464a7a7d89433f01663597",
+      "retrievedAt": "2026-11-16T20:47:33.979Z"
+    },
+    {
+      "sourceKey": "fl:statute:328.07:4_a",
+      "contentHash": "1f386738dbb1b84cb144d0145a064b8197483823296adb58b255c035b1f1ab15",
+      "retrievedAt": "2026-11-16T20:47:32.930Z"
+    },
+    {
+      "sourceKey": "fl:statute:328.07",
+      "contentHash": "1f386738dbb1b84cb144d0145a064b8197483823296adb58b255c035b1f1ab15",
+      "retrievedAt": "2026-11-16T20:47:32.930Z"
+    },
+    {
+      "sourceKey": "fl:statute:328.07:4_b",
+      "contentHash": "1f386738dbb1b84cb144d0145a064b8197483823296adb58b255c035b1f1ab15",
+      "retrievedAt": "2026-11-16T20:47:32.930Z"
+    }
+  ]
+}

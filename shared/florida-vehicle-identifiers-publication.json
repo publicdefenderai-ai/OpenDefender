@@ -1,0 +1,945 @@
+[
+  {
+    "id": "fl-fs-319-30-5-a-identifier",
+    "section": "319.30",
+    "scope": "(5)(a)",
+    "officialTitle": "Definitions; dismantling, destruction, change of identity of motor vehicle, vessel, or mobile home; salvage",
+    "dependencies": [
+      "319.30",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "319.30": [
+        "(5)(a)",
+        "(5)(c)",
+        "(10)",
+        "(1)",
+        "(3)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-319-30-5-a-identifier",
+      "name": "Possession or transfer of a title or identification plate from an unlawful salvage sale",
+      "names": {
+        "es": "Posesión o transferencia de título o placa de identificación de una venta ilegal para salvamento",
+        "zh": "持有或转让违规残值出售的产权证或识别牌"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "319.30(5)(a)",
+      "slug": "fl-fs-319-30-5-a-identifier",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 319.30(5)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0319/Sections/0319.30.html"
+        },
+        {
+          "citation": "Fla. Stat. § 319.30",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0319/Sections/0319.30.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Definitions; dismantling, destruction, change of identity of motor vehicle, vessel, or mobile home; salvage",
+          "FS 319.30(5)(a)",
+          "F.S. 319.30(5)(a)",
+          "Fla. Stat. § 319.30(5)"
+        ],
+        "es": [
+          "Definitions; dismantling, destruction, change of identity of motor vehicle, vessel, or mobile home; salvage",
+          "FS 319.30(5)(a)",
+          "F.S. 319.30(5)(a)",
+          "Fla. Stat. § 319.30(5)"
+        ],
+        "zh": [
+          "Definitions; dismantling, destruction, change of identity of motor vehicle, vessel, or mobile home; salvage",
+          "FS 319.30(5)(a)",
+          "F.S. 319.30(5)(a)",
+          "Fla. Stat. § 319.30(5)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly possessing, selling, exchanging, offering to sell or exchange, or giving away a title or manufacturer- or state-assigned identification or serial plate of a motor vehicle, mobile home or derelict sold as salvage contrary to §319.30. Authorizing, directing, assisting or consenting to the listed dealings is also covered. Necessary vehicle repairs are excepted by (5)(c). When a numbered part must be replaced, the vehicle’s own plate goes on its replacement and the replacement part’s former plate goes on the part removed.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Poseer a sabiendas, vender, intercambiar, ofrecer vender o intercambiar, o regalar el título o placa de identificación o de serie de fabricante o estatal de un vehículo, casa móvil o unidad de desecho vendido para salvamento infringiendo §319.30. También comprende autorizar, dirigir, ayudar o consentir las operaciones indicadas. El apartado (5)(c) exceptúa las reparaciones necesarias. Al sustituir una pieza numerada, la placa del vehículo pasa a la pieza de reemplazo y la placa anterior de esta pasa a la pieza retirada.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "明知而持有、出售、交换、提议出售或交换、或赠送违反第319.30条以残值出售的机动车、移动房屋或废旧车辆的产权证、制造商或州分配的识别牌或序列号牌。授权、指挥、协助或同意所列行为也在范围内。 第(5)(c)项对必要维修设有例外。更换带牌部件时，须将本车的牌装至替换件，替换件原来的牌装至拆下的部件。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-319-30-5-b-identifier",
+    "section": "319.30",
+    "scope": "(5)(b)",
+    "officialTitle": "Definitions; dismantling, destruction, change of identity of motor vehicle, vessel, or mobile home; salvage",
+    "dependencies": [
+      "319.30",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "319.30": [
+        "(5)(b)",
+        "(5)(c)",
+        "(10)",
+        "(1)",
+        "(3)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-319-30-5-b-identifier",
+      "name": "Possession or transfer of an identification plate removed from its vehicle",
+      "names": {
+        "es": "Posesión o transferencia de placa de identificación retirada de su vehículo",
+        "zh": "持有或转让从原车拆下的识别牌"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "319.30(5)(b)",
+      "slug": "fl-fs-319-30-5-b-identifier",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 319.30(5)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0319/Sections/0319.30.html"
+        },
+        {
+          "citation": "Fla. Stat. § 319.30",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0319/Sections/0319.30.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Definitions; dismantling, destruction, change of identity of motor vehicle, vessel, or mobile home; salvage",
+          "FS 319.30(5)(b)",
+          "F.S. 319.30(5)(b)",
+          "Fla. Stat. § 319.30(5)"
+        ],
+        "es": [
+          "Definitions; dismantling, destruction, change of identity of motor vehicle, vessel, or mobile home; salvage",
+          "FS 319.30(5)(b)",
+          "F.S. 319.30(5)(b)",
+          "Fla. Stat. § 319.30(5)"
+        ],
+        "zh": [
+          "Definitions; dismantling, destruction, change of identity of motor vehicle, vessel, or mobile home; salvage",
+          "FS 319.30(5)(b)",
+          "F.S. 319.30(5)(b)",
+          "Fla. Stat. § 319.30(5)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly possessing or dealing in a manufacturer- or state-assigned identification or serial plate removed from the motor vehicle or mobile home for which it was made. The prohibited dealings include selling, exchanging, offering either, giving away, and authorizing, directing, assisting or consenting to the listed conduct. Necessary vehicle repairs are excepted by (5)(c). When a numbered part must be replaced, the vehicle’s own plate goes on its replacement and the replacement part’s former plate goes on the part removed.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Poseer a sabiendas o negociar con una placa de identificación o de serie del fabricante o del estado retirada del vehículo o casa móvil para el que fue fabricada. Comprende venderla, intercambiarla, ofrecer estas operaciones, regalarla, o autorizar, dirigir, ayudar o consentir lo indicado. El apartado (5)(c) exceptúa las reparaciones necesarias. Al sustituir una pieza numerada, la placa del vehículo pasa a la pieza de reemplazo y la placa anterior de esta pasa a la pieza retirada.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "明知而持有或处置从其原配机动车或移动房屋拆下的制造商或州分配的识别牌或序列号牌。包括出售、交换、提议出售或交换、赠送，以及授权、指挥、协助或同意所列行为。 第(5)(c)项对必要维修设有例外。更换带牌部件时，须将本车的牌装至替换件，替换件原来的牌装至拆下的部件。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-319-30-4-identifier",
+    "section": "319.30",
+    "scope": "(4)",
+    "officialTitle": "Definitions; dismantling, destruction, change of identity of motor vehicle, vessel, or mobile home; salvage",
+    "dependencies": [
+      "319.30",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "319.30": [
+        "(4)",
+        "(5)(c)",
+        "(10)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-319-30-4-identifier",
+      "name": "Possession of a vehicle or mobile home with its identification plate removed",
+      "names": {
+        "es": "Posesión de vehículo o casa móvil con placa de identificación retirada",
+        "zh": "持有识别牌已拆除的机动车或移动房屋"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "319.30(4)",
+      "slug": "fl-fs-319-30-4-identifier",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 319.30(4)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0319/Sections/0319.30.html"
+        },
+        {
+          "citation": "Fla. Stat. § 319.30",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0319/Sections/0319.30.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Definitions; dismantling, destruction, change of identity of motor vehicle, vessel, or mobile home; salvage",
+          "FS 319.30(4)",
+          "F.S. 319.30(4)"
+        ],
+        "es": [
+          "Definitions; dismantling, destruction, change of identity of motor vehicle, vessel, or mobile home; salvage",
+          "FS 319.30(4)",
+          "F.S. 319.30(4)"
+        ],
+        "zh": [
+          "Definitions; dismantling, destruction, change of identity of motor vehicle, vessel, or mobile home; salvage",
+          "FS 319.30(4)",
+          "F.S. 319.30(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Possessing a motor vehicle or mobile home after removal of its manufacturer- or state-assigned identification or serial plate. The statute excepts a derelict or salvage acquisition from another state that required surrender of the plate, with the specified seller affidavit, or a vehicle for which a destruction certificate was obtained. Necessary repairs have separate plate-handling rules.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Poseer un vehículo o casa móvil después de retirarse su placa de identificación o de serie del fabricante o del estado. Se exceptúa la adquisición de una unidad de desecho o salvamento de otro estado que exigió entregar la placa, con la declaración jurada requerida del vendedor, o un vehículo con certificado de destrucción. Las reparaciones necesarias tienen reglas propias sobre las placas.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "持有其制造商或州分配的识别牌或序列号牌已被拆除的机动车或移动房屋。 例外包括从要求上缴标牌的外州取得废旧或残值车辆且有符合法定要求的卖方宣誓书，或该车已取得销毁证明。必要维修另有标牌处理规定。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-319-33-1-c-identifier",
+    "section": "319.33",
+    "scope": "(1)(c)",
+    "officialTitle": "Offenses involving vehicle identification numbers, applications, certificates, papers; penalty",
+    "dependencies": [
+      "319.33",
+      "932.703",
+      "932.704",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "319.33": [
+        "(1)(c)",
+        "(6)"
+      ],
+      "932.703": [
+        ""
+      ],
+      "932.704": [
+        ""
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-319-33-1-c-identifier",
+      "name": "Obtaining or passing title to a stolen vehicle or mobile home",
+      "names": {
+        "es": "Obtener o transmitir el título de vehículo o casa móvil robados",
+        "zh": "取得或转让被盗机动车或移动房屋产权证"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "319.33(1)(c)",
+      "slug": "fl-fs-319-33-1-c-identifier",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 319.33(1)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0319/Sections/0319.33.html"
+        },
+        {
+          "citation": "Fla. Stat. § 319.33",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0319/Sections/0319.33.html"
+        },
+        {
+          "citation": "Fla. Stat. § 932.703",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0932/Sections/0932.703.html"
+        },
+        {
+          "citation": "Fla. Stat. § 932.704",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0932/Sections/0932.704.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Offenses involving vehicle identification numbers, applications, certificates, papers; penalty",
+          "FS 319.33(1)(c)",
+          "F.S. 319.33(1)(c)"
+        ],
+        "es": [
+          "Offenses involving vehicle identification numbers, applications, certificates, papers; penalty",
+          "FS 319.33(1)(c)",
+          "F.S. 319.33(1)(c)"
+        ],
+        "zh": [
+          "Offenses involving vehicle identification numbers, applications, certificates, papers; penalty",
+          "FS 319.33(1)(c)",
+          "F.S. 319.33(1)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Obtaining or trying to obtain a title, or passing or trying to pass the title or its assignment, knowing or having reason to believe the motor vehicle or mobile home was stolen. A motor vehicle used in a violation can be seized and subjected to forfeiture proceedings under §319.33(6).",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Obtener o intentar obtener el título, o transmitir o intentar transmitir el título o su cesión, sabiendo o teniendo razones para creer que el vehículo o la casa móvil fue robado. Un vehículo usado en la infracción puede quedar sujeto a incautación y a un procedimiento de decomiso conforme a §319.33(6).",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "知道或有理由相信机动车或移动房屋被盗，却取得或试图取得产权证，或转让或试图转让产权证或其转让书。 根据第319.33(6)款，违法所用机动车可能被扣押并进入没收程序。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-319-33-5-identifier",
+    "section": "319.33",
+    "scope": "(5)",
+    "officialTitle": "Offenses involving vehicle identification numbers, applications, certificates, papers; penalty",
+    "dependencies": [
+      "319.33",
+      "932.703",
+      "932.704",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "319.33": [
+        "(5)",
+        "(6)"
+      ],
+      "932.703": [
+        ""
+      ],
+      "932.704": [
+        ""
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-319-33-5-identifier",
+      "name": "Counterfeit motor vehicle identification plates or decals",
+      "names": {
+        "es": "Placas o calcomanías de identificación de vehículo falsificadas",
+        "zh": "伪造的机动车识别牌或贴标"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "319.33(5)",
+      "slug": "fl-fs-319-33-5-identifier",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 319.33(5)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0319/Sections/0319.33.html"
+        },
+        {
+          "citation": "Fla. Stat. § 319.33",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0319/Sections/0319.33.html"
+        },
+        {
+          "citation": "Fla. Stat. § 932.703",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0932/Sections/0932.703.html"
+        },
+        {
+          "citation": "Fla. Stat. § 932.704",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0932/Sections/0932.704.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Offenses involving vehicle identification numbers, applications, certificates, papers; penalty",
+          "FS 319.33(5)",
+          "F.S. 319.33(5)"
+        ],
+        "es": [
+          "Offenses involving vehicle identification numbers, applications, certificates, papers; penalty",
+          "FS 319.33(5)",
+          "F.S. 319.33(5)"
+        ],
+        "zh": [
+          "Offenses involving vehicle identification numbers, applications, certificates, papers; penalty",
+          "FS 319.33(5)",
+          "F.S. 319.33(5)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly possessing, manufacturing, selling, exchanging, offering, supplying in blank or giving away a counterfeit manufacturer’s or state-assigned vehicle identification or serial plate or decal, or directing, assisting or conspiring in the listed dealings. Approved replacements issued by the department or a state are excepted. A motor vehicle used in a violation can be seized and subjected to forfeiture proceedings under §319.33(6).",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Poseer a sabiendas, fabricar, vender, intercambiar, ofrecer, suministrar en blanco o regalar placas o calcomanías falsificadas de identificación o de serie del fabricante o del estado, o dirigir, ayudar o conspirar en las operaciones previstas. Se exceptúan los reemplazos aprobados emitidos por el departamento o un estado. Un vehículo usado en la infracción puede quedar sujeto a incautación y a un procedimiento de decomiso conforme a §319.33(6).",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "明知而持有、制造、出售、交换、要约、空白供应或赠送伪造的制造商或州分配的机动车识别牌、序列号牌或贴标，或指挥、协助或共谋所列行为。主管部门或州签发的经批准替换标牌除外。 根据第319.33(6)款，违法所用机动车可能被扣押并进入没收程序。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-328-05-1-identifier",
+    "section": "328.05",
+    "scope": "(1)",
+    "officialTitle": "Crimes relating to certificates of title to, or other indicia of ownership of, vessels; penalties",
+    "dependencies": [
+      "328.05",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "328.05": [
+        "(1)",
+        "(4)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-328-05-1-identifier",
+      "name": "Obtaining or passing title to a stolen vessel",
+      "names": {
+        "es": "Obtener o transmitir el título de una embarcación robada",
+        "zh": "取得或转让被盗船舶产权证"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "328.05(1)",
+      "slug": "fl-fs-328-05-1-identifier",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 328.05(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0328/Sections/0328.05.html"
+        },
+        {
+          "citation": "Fla. Stat. § 328.05",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0328/Sections/0328.05.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Crimes relating to certificates of title to, or other indicia of ownership of, vessels; penalties",
+          "FS 328.05(1)",
+          "F.S. 328.05(1)"
+        ],
+        "es": [
+          "Crimes relating to certificates of title to, or other indicia of ownership of, vessels; penalties",
+          "FS 328.05(1)",
+          "F.S. 328.05(1)"
+        ],
+        "zh": [
+          "Crimes relating to certificates of title to, or other indicia of ownership of, vessels; penalties",
+          "FS 328.05(1)",
+          "F.S. 328.05(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Obtaining or trying to obtain a vessel title or duplicate, or passing or trying to pass the title, duplicate or its assignment, knowing or having reason to believe the vessel was stolen.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Obtener o intentar obtener un título de embarcación o duplicado, o transmitir o intentar transmitir el título, duplicado o cesión, sabiendo o teniendo razones para creer que la embarcación fue robada.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "知道或有理由相信船舶被盗，却取得或试图取得船舶产权证或副本，或转让或试图转让产权证、副本或其转让书。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-328-07-4-a-identifier",
+    "section": "328.07",
+    "scope": "(4)(a)",
+    "officialTitle": "Hull identification number required",
+    "dependencies": [
+      "328.07",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "328.07": [
+        "(4)(a)",
+        "(4)(c)",
+        "(3)",
+        "(5)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-328-07-4-a-identifier",
+      "name": "Counterfeit or reassigned vessel hull identification plates or decals",
+      "names": {
+        "es": "Placas o calcomanías de identificación de casco falsificadas o asignadas a otra embarcación",
+        "zh": "伪造或原配另一艘船的船体识别牌或贴标"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "328.07(4)(a)",
+      "slug": "fl-fs-328-07-4-a-identifier",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 328.07(4)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0328/Sections/0328.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 328.07",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0328/Sections/0328.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Hull identification number required",
+          "FS 328.07(4)(a)",
+          "F.S. 328.07(4)(a)",
+          "Fla. Stat. § 328.07(4)"
+        ],
+        "es": [
+          "Hull identification number required",
+          "FS 328.07(4)(a)",
+          "F.S. 328.07(4)(a)",
+          "Fla. Stat. § 328.07(4)"
+        ],
+        "zh": [
+          "Hull identification number required",
+          "FS 328.07(4)(a)",
+          "F.S. 328.07(4)(a)",
+          "Fla. Stat. § 328.07(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly possessing, making, selling, exchanging, offering, supplying in blank or giving away a counterfeit manufacturer’s hull ID plate or decal, or one assigned to another vessel for identification. The listed authorization, assistance and conspiracy also qualify. Approved replacements issued by the manufacturer, department or another state are exempt.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Poseer a sabiendas, fabricar, vender, intercambiar, ofrecer, suministrar en blanco o regalar una placa o calcomanía de identificación del casco falsificada del fabricante, o asignada a otra embarcación para identificación. También se incluyen la autorización, ayuda y conspiración indicadas. Se exceptúan reemplazos aprobados emitidos por fabricante, departamento u otro estado.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "明知而持有、制造、出售、交换、要约、空白供应或赠送伪造的制造商船体识别牌或贴标，或将原配另一艘船的牌或贴标用于识别船舶。所列授权、协助或共谋也在范围内。制造商、主管部门或其他州签发的经批准替换标牌除外。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-328-07-4-b-identifier",
+    "section": "328.07",
+    "scope": "(4)(b)",
+    "officialTitle": "Hull identification number required",
+    "dependencies": [
+      "328.07",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "328.07": [
+        "(4)(b)",
+        "(4)(c)",
+        "(3)",
+        "(5)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-328-07-4-b-identifier",
+      "name": "Dealing in or possessing a vessel with an altered identification number",
+      "names": {
+        "es": "Comercio o posesión de embarcación con número de identificación alterado",
+        "zh": "交易或持有识别号遭篡改的船舶"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "328.07(4)(b)",
+      "slug": "fl-fs-328-07-4-b-identifier",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 328.07(4)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0328/Sections/0328.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 328.07",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0328/Sections/0328.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Hull identification number required",
+          "FS 328.07(4)(b)",
+          "F.S. 328.07(4)(b)",
+          "Fla. Stat. § 328.07(4)"
+        ],
+        "es": [
+          "Hull identification number required",
+          "FS 328.07(4)(b)",
+          "F.S. 328.07(4)(b)",
+          "Fla. Stat. § 328.07(4)"
+        ],
+        "zh": [
+          "Hull identification number required",
+          "FS 328.07(4)(b)",
+          "F.S. 328.07(4)(b)",
+          "Fla. Stat. § 328.07(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly buying, selling, offering for sale, receiving, disposing of, concealing or possessing a vessel or part whose assigned number has been altered, removed, destroyed, covered or defaced, or maintaining the vessel to conceal or misrepresent its true identity. A missing display can warrant further inspection; it does not alone establish knowing conduct.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Comprar, vender, ofrecer, recibir, disponer, ocultar o poseer a sabiendas una embarcación o pieza cuyo número asignado fue alterado, retirado, destruido, cubierto o desfigurado, o mantener la embarcación ocultando o falseando su identidad. La falta de exhibición permite investigar pero no prueba por sí sola el conocimiento.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "明知船舶或其部件所配识别号已被更改、拆除、销毁、遮盖或毁损而购买、出售、要约出售、收受、处置、藏匿或持有，或以掩盖或歪曲船舶真实身份的方式保管。未展示号码可成为进一步检查的理由，不能单独证明明知。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  }
+]
