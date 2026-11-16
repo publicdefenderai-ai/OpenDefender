@@ -1,4 +1,4 @@
-import { texasReviewedRecords } from "./texas-reviewed";
+import { texasHeldTheftId, texasReviewedRecords } from "./texas-reviewed";
 import { texasDwiRecords } from "./texas-dwi";
 import { floridaRemainingChargeText, floridaRemainingDisplayName } from "./florida-legacy-remaining";
 import { floridaSexualChargeText, floridaSexualDisplayName } from "./florida-legacy-sexual";
@@ -40599,12 +40599,9 @@ export const criminalCharges: CriminalCharge[] = [
     code: '31.03',
     jurisdiction: 'TX',
     category: 'misdemeanor',
-    description: 'Unlawful appropriation of property valued between $100 and $2,500 under Texas Penal Code § 31.03. One of the most commonly prosecuted offenses in Texas.',
-    maxPenalty: 'Class A misdemeanor: up to 1 year county jail and/or $4,000 fine',
-    commonDefenses: ['Lack of intent to deprive owner', 'Claim of right', 'Consent', 'Mistaken identity', 'Value dispute'],
-    evidenceToGather: ['Surveillance footage', 'Receipts or proof of purchase', 'Witness statements', 'Value documentation'],
-    specificRights: ['Right to pretrial diversion for first offenders', 'Right to challenge valuation', 'Right to negotiate restitution'],
-    urgentActions: ['Contact attorney', 'Do not make statements', 'Preserve any receipts or proof of purchase']
+    description: 'Historical selection covering several theft grades. Select the applicable value and prior-conviction branch.',
+    maxPenalty: 'The amount alone does not establish the applicable penalty.',
+    commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: []
   },
   {
     id: 'tx-driving-while-license-invalid',
@@ -40618,19 +40615,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['DPS driving record', 'Proof of address for notification', 'Documentation of license reinstatement', 'Surcharge payment records'],
     specificRights: ['Right to challenge notice of suspension', 'Right to occupational license', 'Right to request driving record from DPS'],
     urgentActions: ['Check license status with DPS', 'Apply for occupational license', 'Contact attorney', 'Work on reinstating license']
-  },
-  {
-    id: 'tx-criminal-trespass',
-    name: 'Criminal Trespass',
-    code: '30.05',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Entering or remaining on property without effective consent when the person had notice that entry was forbidden under Texas Penal Code § 30.05',
-    maxPenalty: 'Class B misdemeanor: up to 180 days jail and/or $2,000 fine; Class A if on critical infrastructure',
-    commonDefenses: ['Had consent or permission', 'No proper notice (signs, fencing)', 'Mistaken belief of permission', 'Emergency access'],
-    evidenceToGather: ['Photos of property signage and fencing', 'Documentation of permission', 'Witness statements', 'Communication with property owner'],
-    specificRights: ['Right to challenge adequacy of notice', 'Right to present evidence of consent', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Do not return to the property', 'Document any evidence of permission']
   },
   {
     id: 'tx-evading-arrest',
@@ -95069,7 +95053,7 @@ for (const group of ["Drug Offenses", "Drug Crimes"]) {
   const ids = texasReviewedRecords.filter(row => row.references[0].code === "HS").map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
-for (const [group, heading] of [["Theft & Property", "THEFT."], ["Property Crimes", "THEFT."], ["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
+for (const [group, heading] of [["Theft & Property", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "CRIMINAL TRESPASS."], ["Theft & Property", "THEFT."], ["Property Crimes", "THEFT."], ["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
   const ids = texasReviewedRecords.filter(row => !heading || row.officialTitle === heading).map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
@@ -95094,6 +95078,7 @@ function withAuthorityDisplayName(charge: CriminalCharge): CriminalCharge {
 export function getChargeById(id: string): CriminalCharge | undefined {
   const normalizedId = normalizeChargeId(id);
   if (
+    normalizedId === texasHeldTheftId ||
     NY_CHARGE_IDS_REQUIRING_RESELECTION.has(normalizedId) ||
     OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(normalizedId)
   ) return undefined;

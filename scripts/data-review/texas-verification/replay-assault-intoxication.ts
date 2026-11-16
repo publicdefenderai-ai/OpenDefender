@@ -10,9 +10,13 @@ import possessionEvidence from "../output/texas-ranked-possession-evidence.json"
 import theftRows from "../../../shared/texas-ranked-theft.json";
 import theftEvidence from "../output/texas-ranked-theft-evidence.json";
 
+import propertyRows from "../../../shared/texas-property-access.json";
+import propertyEvidence from "../output/texas-property-access-evidence.json";
+
 const batches = new Map([
   ["assault-intoxication", { rows: assaultRows, evidence: Object.entries(assaultEvidence) }],
   ["ranked-possession", { rows: possessionRows, evidence: Object.entries(possessionEvidence) }],
+  ["property-access", { rows: propertyRows, evidence: Object.entries(propertyEvidence) }],
   ["ranked-theft", { rows: theftRows, evidence: Object.entries(theftEvidence) }],
 ]);
 const name = process.argv[2] ?? "assault-intoxication";

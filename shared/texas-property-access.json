@@ -1,0 +1,301 @@
+[
+  {
+    "id": "tx-pc-31-03-e-1",
+    "name": "Theft (property under $100)",
+    "officialTitle": "THEFT.",
+    "category": "misdemeanor",
+    "code": "31.03(e)(1)",
+    "citation": "Tex. Penal Code § 31.03(e)(1)",
+    "conduct": "Theft requires unlawful appropriation of property with intent to deprive its owner. Under §31.03(b), appropriation is unlawful when the owner did not effectively consent, the person knew another had stolen the property, or a law enforcement agent explicitly represented property in agency custody as stolen and the person believed another had stolen it. This branch applies when the property is worth less than $100 and no special grading provision applies. Ordinarily, value is the fair market value at the time and place of the theft, or reasonable replacement cost if fair market value cannot be determined. Section 31.08 provides special valuation rules and deductions. Amounts taken in one scheme or continuing course of conduct may be combined under §31.09.",
+    "penalty": "Ordinarily a Class C misdemeanor, punishable by a fine up to $500. A prior conviction for theft of any grade can make the offense Class B. Two or more prior theft convictions can make it a state jail felony. The kind of property, qualifying facts under §31.03(f), or a qualifying declared disaster or evacuation area under §12.50 can change punishment. Repeat-offender rules are fact-specific. Section 12.43(d) gives a specific repeat-offense enhancement priority.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(e)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": "(2), (3), (4), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.08",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(11), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-31-03-e-2-b",
+    "name": "Theft (property under $100 with a previous theft conviction)",
+    "officialTitle": "THEFT.",
+    "category": "misdemeanor",
+    "code": "31.03(e)(2)(B)",
+    "citation": "Tex. Penal Code § 31.03(e)(2)(B)",
+    "conduct": "Theft requires unlawful appropriation of property with intent to deprive its owner. Under §31.03(b), appropriation is unlawful when the owner did not effectively consent, the person knew another had stolen the property, or a law enforcement agent explicitly represented property in agency custody as stolen and the person believed another had stolen it. The value must be below $100. A previous conviction for theft of any grade is required. An arrest alone does not qualify. Ordinarily, value is the fair market value at the time and place of the theft, or reasonable replacement cost if fair market value cannot be determined. Section 31.08 provides special valuation rules and deductions. Amounts taken in one scheme or continuing course of conduct may be combined under §31.09.",
+    "penalty": "Ordinarily a Class B misdemeanor, punishable by up to 180 days in jail, a fine up to $2,000, or both. Two or more prior theft convictions can make the offense a state jail felony under (e)(4)(D). The kind of property, qualifying facts under §31.03(f), or a qualifying declared disaster or evacuation area under §12.50 can change punishment. Repeat-offender rules are fact-specific. Section 12.43(d) gives a specific repeat-offense enhancement priority.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(e)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": "(2), (3), (4), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.08",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(11), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-31-03-e-3",
+    "name": "Theft (property worth $750 or more but less than $2,500)",
+    "officialTitle": "THEFT.",
+    "category": "misdemeanor",
+    "code": "31.03(e)(3)",
+    "citation": "Tex. Penal Code § 31.03(e)(3)",
+    "conduct": "Theft requires unlawful appropriation of property with intent to deprive its owner. Under §31.03(b), appropriation is unlawful when the owner did not effectively consent, the person knew another had stolen the property, or a law enforcement agent explicitly represented property in agency custody as stolen and the person believed another had stolen it. The value must be at least $750 and below $2,500. Ordinarily, value is the fair market value at the time and place of the theft, or reasonable replacement cost if fair market value cannot be determined. Section 31.08 provides special valuation rules and deductions. Amounts taken in one scheme or continuing course of conduct may be combined under §31.09.",
+    "penalty": "Ordinarily a Class A misdemeanor, punishable by up to one year in jail, a fine up to $4,000, or both. Two or more prior theft convictions can make the offense a state jail felony under (e)(4)(D). The kind of property, qualifying facts under §31.03(f), or a qualifying declared disaster or evacuation area under §12.50 can change punishment. Repeat-offender rules are fact-specific. Section 12.43(d) gives a specific repeat-offense enhancement priority.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(e)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": "(2), (3), (4), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.08",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(11), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-criminal-trespass",
+    "name": "Criminal trespass (ordinary Class B)",
+    "officialTitle": "CRIMINAL TRESPASS.",
+    "category": "misdemeanor",
+    "code": "30.05(d)(1)",
+    "citation": "Tex. Penal Code § 30.05(d)(1)",
+    "conduct": "Entering or remaining on or in someone else’s property without effective consent after notice that entry was forbidden, or receiving notice to depart and failing to do so. Entry requires the entire body. Notice can include communication from the owner or someone with apparent authority, qualifying fencing or signs, or markings and other conditions specified in §30.05(b). The statute provides exceptions and defenses for particular circumstances, including certain authorized work and firearm-related conduct.",
+    "penalty": "Ordinarily a Class B misdemeanor, punishable by up to 180 days in jail, a fine up to $2,000, or both. Qualifying prior convictions can change the minimum jail term if confinement is imposed. Section 12.50 can increase punishment in a qualifying declared disaster or evacuation area. The 100-foot land provisions, specified locations or weapons, certain repeat campus cases and trespass during specified smuggling conduct carry separate grades under §30.05(d)(2) through (4). When a weapon prohibition is the sole basis for forbidding entry, (d-3) generally sets a $200 Class C ceiling, with a Class A exception for personal notice after entry followed by failure to depart.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.05",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.05",
+        "subdivision": "(d)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b), (d)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(10), (c)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "57070020"
+  },
+  {
+    "id": "tx-pc-31-07-unauthorized-use",
+    "name": "Unauthorized use of a vehicle",
+    "officialTitle": "UNAUTHORIZED USE OF A VEHICLE.",
+    "category": "felony",
+    "code": "31.07(b)",
+    "citation": "Tex. Penal Code § 31.07(b)",
+    "conduct": "Intentionally or knowingly operating another person’s boat, airplane or motor-propelled vehicle without the owner’s effective consent. The person must know the owner did not effectively consent. This charge does not require intent to permanently keep the vehicle.",
+    "penalty": "A state jail felony, ordinarily punishable by 180 days to two years in state jail and a possible fine up to $10,000. Specified findings under §12.35(c) can require third-degree punishment. Qualifying prior felony convictions under §12.425 can require third- or second-degree punishment, depending on their type and sequence.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "31.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "31.07",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "24110003"
+  }
+]
