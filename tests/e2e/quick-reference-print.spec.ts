@@ -12,7 +12,7 @@ const PRINT_CARD_TITLES = [
 test.describe("quick-reference card printing", () => {
   test("print media includes every rights card without site navigation", async ({ page }) => {
     await page.goto("/quick-reference-cards");
-    await expect(page.getByRole("heading", { name: "Quick-Reference Cards" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Know your rights. Be prepared." })).toBeVisible();
 
     await page.emulateMedia({ media: "print" });
 
@@ -63,3 +63,41 @@ test.describe("quick-reference card printing", () => {
     });
   });
 });
+for (const language of ["en", "es", "zh"] as const) {
+  for (const theme of ["light", "dark"]) {
+    test(`all six cards retain their text on screen and paper in ${language}, ${theme}`, async ({ page }, info) => {
+      const { default: locale } = await import(`../../client/src/locales/${language}`);
+      const copy = locale.translation.quickRef;
+      await page.addInitScript(({ language, theme }) => {
+        localStorage.setItem("i18nextLng", language);
+        localStorage.setItem("public-defender-theme", theme);
+      }, { language, theme });
+      await page.goto("/quick-reference-cards");
+      const reader = page.locator(".reference-reader");
+      const cards = reader.locator('[role="tabpanel"] article:visible');
+      await expect(cards).toHaveCount(1);
+      await reader.getByRole("tab", { name: copy.tabs.court }).click();
+      await expect(cards).toHaveCount(5);
+      await page.emulateMedia({ media: "print" });
+      await expect(cards).toHaveCount(0);
+      const printed = page.getByTestId("printable-card");
+      await expect(printed).toHaveCount(6);
+      const names = ["police", "arraignment", "bail", "pretrial", "plea", "sentencing"];
+      for (const [index, name] of names.entries()) {
+        for (const text of Object.values(copy[name]) as string[]) await expect(printed.nth(index)).toContainText(text);
+      }
+      if (theme === "light") await page.pdf({ path: info.outputPath(`cards-${language}.pdf`), format: "Letter" });
+      await page.emulateMedia({ media: "screen" });
+      await page.evaluate(() => { window.print = () => { document.documentElement.dataset.printCalled = "true"; }; });
+      await page.getByTestId("button-print-all-cards").click();
+      await expect(page.locator("html")).toHaveAttribute("data-print-called", "true");
+      await expect(cards).toHaveCount(6);
+      await page.setViewportSize({ width: 320, height: 800 });
+      expect(await reader.locator("article, h1, li, [role=tab], button").evaluateAll(nodes =>
+        nodes.some(node => node.getBoundingClientRect().right > innerWidth + 1))).toBe(false);
+      for (const [index, name] of names.entries()) {
+        for (const text of Object.values(copy[name]) as string[]) await expect(cards.nth(index)).toContainText(text);
+      }
+    });
+  }
+}
