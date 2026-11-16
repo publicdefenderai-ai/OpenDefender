@@ -1,0 +1,913 @@
+[
+  {
+    "id": "fl-fs-817-52-1-fraud",
+    "section": "817.52",
+    "scope": "(1)",
+    "officialTitle": "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+    "dependencies": [
+      "817.52",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "817.52": [
+        "(1)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-52-1-fraud",
+      "name": "Obtaining custody of a motor vehicle by deceit",
+      "names": {
+        "es": "Obtención de la custodia de un vehículo mediante engaño",
+        "zh": "以欺骗手段取得机动车保管权"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.52(1)",
+      "slug": "fl-fs-817-52-1-fraud",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.52(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.52.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.52",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.52.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+          "FS 817.52(1)",
+          "F.S. 817.52(1)"
+        ],
+        "es": [
+          "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+          "FS 817.52(1)",
+          "F.S. 817.52(1)"
+        ],
+        "zh": [
+          "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+          "FS 817.52(1)",
+          "F.S. 817.52(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Obtaining custody of a motor vehicle by trick, deceit or fraudulent or willful false representation, intending to defraud the owner or lawful possessor.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Obtener la custodia de un vehículo mediante artificio, engaño o representación falsa fraudulenta o deliberada, con intención de defraudar al propietario o poseedor legítimo.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "以诡计、欺骗、欺诈性或故意虚假陈述取得机动车保管权，意图欺诈车主或合法占有人。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-52-2-fraud",
+    "section": "817.52",
+    "scope": "(2)",
+    "officialTitle": "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+    "dependencies": [
+      "817.52",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "817.52": [
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-52-2-fraud",
+      "name": "Hiring a motor vehicle with intent to defraud",
+      "names": {
+        "es": "Alquilar un vehículo con intención de defraudar",
+        "zh": "意图骗取租金而租用机动车"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.52(2)",
+      "slug": "fl-fs-817-52-2-fraud",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.52(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.52.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.52",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.52.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+          "FS 817.52(2)",
+          "F.S. 817.52(2)"
+        ],
+        "es": [
+          "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+          "FS 817.52(2)",
+          "F.S. 817.52(2)"
+        ],
+        "zh": [
+          "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+          "FS 817.52(2)",
+          "F.S. 817.52(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Hiring a motor vehicle from its owner, the owner’s agent or a lawful possessor, intending to defraud the owner or lawful possessor of the rental payment. Absconding without paying or offering to pay is evidence of intent; intent must still be proved.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Alquilar un vehículo al propietario, su agente o un poseedor legítimo con intención de privar al propietario o poseedor del pago del alquiler. Huir sin pagar ni ofrecer el pago constituye indicio de la intención, que aún debe probarse.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "向车主、其代理人或合法占有人租用机动车，意图骗取本应支付的租金。逃离且未支付或提出支付租金可作为意图的证据，仍须证明欺诈意图。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-52-3-fraud",
+    "section": "817.52",
+    "scope": "(3)",
+    "officialTitle": "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+    "dependencies": [
+      "817.52",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "817.52": [
+        "(3)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-52-3-fraud",
+      "name": "Failure to redeliver a hired motor vehicle with intent to defraud",
+      "names": {
+        "es": "No devolver un vehículo alquilado con intención de defraudar",
+        "zh": "意图欺诈而不归还所租机动车"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.52(3)",
+      "slug": "fl-fs-817-52-3-fraud",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.52(3)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.52.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.52",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.52.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+          "FS 817.52(3)",
+          "F.S. 817.52(3)"
+        ],
+        "es": [
+          "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+          "FS 817.52(3)",
+          "F.S. 817.52(3)"
+        ],
+        "zh": [
+          "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+          "FS 817.52(3)",
+          "F.S. 817.52(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "After agreeing to return a rented motor vehicle to the lessor or agent when the rental ends, abandoning it or willfully refusing to return it as agreed, without consent and with intent to defraud. A late return alone does not establish those elements.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Tras acordar devolver el vehículo al arrendador o su agente al finalizar el alquiler, abandonarlo o negarse deliberadamente a devolverlo según lo pactado, sin consentimiento y con intención de defraudar.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "约定租期届满时将机动车归还出租方或代理人后，未经同意、意图欺诈而弃置或故意拒绝依约归还。仅逾期归还并不足以证明这些要件。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-52-4-fraud",
+    "section": "817.52",
+    "scope": "(4)",
+    "officialTitle": "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+    "dependencies": [
+      "817.52",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "817.52": [
+        "(4)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-52-4-fraud",
+      "name": "Tampering with a hired vehicle’s mileage device",
+      "names": {
+        "es": "Manipulación del cuentakilómetros de un vehículo alquilado",
+        "zh": "篡改所租机动车的里程装置"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "817.52(4)",
+      "slug": "fl-fs-817-52-4-fraud",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.52(4)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.52.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.52",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.52.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+          "FS 817.52(4)",
+          "F.S. 817.52(4)"
+        ],
+        "es": [
+          "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+          "FS 817.52(4)",
+          "F.S. 817.52(4)"
+        ],
+        "zh": [
+          "Obtaining vehicles with intent to defraud, failing to return hired vehicle, or tampering with mileage device of hired vehicle",
+          "FS 817.52(4)",
+          "F.S. 817.52(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "For a rental priced wholly or partly by distance, removing, attempting to remove, tampering or attempting to tamper with, or otherwise interfering with the mileage device, intending to deceive the lessor or agent about distance traveled. Knowingly assisting also carries the same grade.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is one year and $1,000."
+        },
+        "es": {
+          "plainSummary": "En un alquiler cobrado total o parcialmente por distancia, retirar, intentar retirar, manipular, intentar manipular o interferir de otro modo con el medidor para engañar al arrendador o su agente sobre la distancia recorrida. Ayudar a sabiendas tiene el mismo grado.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de un año y $1,000."
+        },
+        "zh": {
+          "plainSummary": "若租金全部或部分按里程计算，为欺骗出租方或代理人有关实际里程而拆除、企图拆除、篡改、企图篡改或以其他方式干扰计程装置。明知而协助者也属同一罪级。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-832-05-3-a-fraud",
+    "section": "832.05",
+    "scope": "(3)(a)",
+    "officialTitle": "Giving worthless checks, drafts, and debit card orders; penalty; duty of drawee; evidence; costs; complaint form",
+    "dependencies": [
+      "832.05",
+      "674.104",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "832.05": [
+        "(3)(a)",
+        "(3)(b)",
+        "(5)"
+      ],
+      "674.104": [
+        "(1)(i)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-832-05-3-a-fraud",
+      "name": "Cashing or depositing an item with intent to defraud",
+      "names": {
+        "es": "Cobro o depósito de un instrumento bancario con intención de defraudar",
+        "zh": "意图欺诈而兑现或存入银行票据"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "832.05(3)(a)",
+      "slug": "fl-fs-832-05-3-a-fraud",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 832.05(3)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0832/Sections/0832.05.html"
+        },
+        {
+          "citation": "Fla. Stat. § 832.05",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0832/Sections/0832.05.html"
+        },
+        {
+          "citation": "Fla. Stat. § 674.104",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0674/Sections/0674.104.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Giving worthless checks, drafts, and debit card orders; penalty; duty of drawee; evidence; costs; complaint form",
+          "FS 832.05(3)(a)",
+          "F.S. 832.05(3)(a)"
+        ],
+        "es": [
+          "Giving worthless checks, drafts, and debit card orders; penalty; duty of drawee; evidence; costs; complaint form",
+          "FS 832.05(3)(a)",
+          "F.S. 832.05(3)(a)"
+        ],
+        "zh": [
+          "Giving worthless checks, drafts, and debit card orders; penalty; duty of drawee; evidence; costs; complaint form",
+          "FS 832.05(3)(a)",
+          "F.S. 832.05(3)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Cashing or depositing a bank collection or payment item in a bank or depository, by an act or common scheme and with intent to defraud. The definition excludes a chapter 670 payment order and credit- or debit-card slips. This felony has no minimum dollar amount. Payment of a dishonored order is not itself a defense.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Cobrar o depositar en un banco o depositario un instrumento de cobro o pago bancario, mediante un acto o plan común con intención de defraudar. Se excluyen las órdenes del capítulo 670 y los comprobantes de tarjetas de crédito o débito. No se exige un importe mínimo. Pagar una orden rechazada no constituye por sí solo una defensa.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "意图欺诈，以单一行为或共同计划在银行或存款机构兑现或存入银行经手收付款的票据。定义排除第670章付款指令及信用卡或借记卡签单。本重罪没有最低金额；事后支付被拒付票据本身不构成抗辩。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-481-3-a-fraud",
+    "section": "817.481",
+    "scope": "(3)(a)",
+    "officialTitle": "Credit or purchases; obtaining illicitly",
+    "dependencies": [
+      "817.481",
+      "921.0022",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "817.481": [
+        "(3)(a)",
+        "(1)",
+        "(2)"
+      ],
+      "921.0022": [
+        "(2)",
+        "(3)(b)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-481-3-a-fraud",
+      "name": "Obtaining illicit credit or purchases, $300 or more",
+      "names": {
+        "es": "Obtención ilícita de crédito o compras de $300 o más",
+        "zh": "非法取得信贷或购物，价值至少300美元"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.481(3)(a)",
+      "slug": "fl-fs-817-481-3-a-fraud",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.481(3)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.481.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.481",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.481.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.0022",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.0022.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Credit or purchases; obtaining illicitly",
+          "FS 817.481(3)(a)",
+          "F.S. 817.481(3)(a)"
+        ],
+        "es": [
+          "Credit or purchases; obtaining illicitly",
+          "FS 817.481(3)(a)",
+          "F.S. 817.481(3)(a)"
+        ],
+        "zh": [
+          "Credit or purchases; obtaining illicitly",
+          "FS 817.481(3)(a)",
+          "F.S. 817.481(3)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly obtaining or attempting to obtain credit or make purchases using a false, fictitious, counterfeit or expired credit device, another person’s device without authorization, or a revoked device after notice to its holder. Section (2) also covers avoiding, attempting to avoid or causing another to avoid lawful telephone or telegraph charges using fraudulent means or a device. Property, goods or services obtained or sought must be worth at least $300; exactly $300 qualifies.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Obtener o intentar obtener a sabiendas crédito o compras con un medio de crédito falso, ficticio, falsificado o vencido, el de otro sin autorización, o uno revocado tras aviso al titular. El apartado (2) también abarca eludir, intentar eludir o hacer que otro eluda cargos telefónicos o telegráficos mediante fraude o un dispositivo. Los bienes o servicios obtenidos o pretendidos deben valer al menos $300, incluidos exactamente $300.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "明知而使用虚假、虚构、伪造、过期的信用工具、未经授权的他人工具，或已通知持有人撤销的工具，取得或企图取得信贷或购物。第(2)款还涉及使用欺诈方法或装置逃避、企图逃避或使他人逃避电话或电报合法费用。取得或试图取得的财物或服务价值须至少300美元，正好300美元也包括在内。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-504-1-a-fraud",
+    "section": "817.504",
+    "scope": "(1)(a)",
+    "officialTitle": "Offering or advertising a vaccine with intent to defraud",
+    "dependencies": [
+      "817.504",
+      "817.568",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "817.504": [
+        "(1)(a)",
+        "(1)"
+      ],
+      "817.568": [
+        "(1)(f)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-504-1-a-fraud",
+      "name": "Offering or advertising a vaccine with intent to defraud",
+      "names": {
+        "es": "Oferta o publicidad de una vacuna con intención de defraudar",
+        "zh": "意图欺诈而推销或宣传疫苗"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.504(1)(a)",
+      "slug": "fl-fs-817-504-1-a-fraud",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.504(1)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.504.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.504",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.504.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.568",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Offering or advertising a vaccine with intent to defraud",
+          "FS 817.504(1)(a)",
+          "F.S. 817.504(1)(a)"
+        ],
+        "es": [
+          "Offering or advertising a vaccine with intent to defraud",
+          "FS 817.504(1)(a)",
+          "F.S. 817.504(1)(a)"
+        ],
+        "zh": [
+          "Offering or advertising a vaccine with intent to defraud",
+          "FS 817.504(1)(a)",
+          "F.S. 817.504(1)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly and willfully making a materially false or misleading statement, or knowingly and willfully spreading false or misleading information, about access to or availability of a COVID-19 or other pandemic-disease vaccine, through advertising, media, telephone, text, mail or email. The intent must be to obtain another person’s identifying information, money or other valuable consideration.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Hacer a sabiendas y deliberadamente una declaración materialmente falsa o engañosa, o difundir de igual modo información falsa o engañosa, sobre el acceso o disponibilidad de una vacuna contra la COVID-19 u otra enfermedad pandémica por publicidad, medios, teléfono, mensaje de texto, correo postal o electrónico. Debe existir intención de obtener datos identificativos ajenos, dinero u otra contraprestación valiosa.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "明知且故意就新冠或其他大流行疾病疫苗的供应或获取途径作出实质性虚假或误导陈述，或明知且故意传播虚假或误导信息，渠道包括广告、媒体、电话、短信、邮寄或电邮。须有获取他人身份信息、金钱或其他有价对价的意图。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-504-1-b-fraud",
+    "section": "817.504",
+    "scope": "(1)(b)",
+    "officialTitle": "Offering or advertising a vaccine with intent to defraud",
+    "dependencies": [
+      "817.504",
+      "817.568",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "817.504": [
+        "(1)(b)",
+        "(1)"
+      ],
+      "817.568": [
+        "(1)(f)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-504-1-b-fraud",
+      "name": "Offering or advertising a vaccine with intent to defraud (second or subsequent violation)",
+      "names": {
+        "es": "Oferta o publicidad de una vacuna con intención de defraudar (segunda infracción o posterior)",
+        "zh": "意图欺诈而推销或宣传疫苗 （第二次或后续违反）"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.504(1)(b)",
+      "slug": "fl-fs-817-504-1-b-fraud",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.504(1)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.504.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.504",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.504.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.568",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Offering or advertising a vaccine with intent to defraud",
+          "FS 817.504(1)(b)",
+          "F.S. 817.504(1)(b)"
+        ],
+        "es": [
+          "Offering or advertising a vaccine with intent to defraud",
+          "FS 817.504(1)(b)",
+          "F.S. 817.504(1)(b)"
+        ],
+        "zh": [
+          "Offering or advertising a vaccine with intent to defraud",
+          "FS 817.504(1)(b)",
+          "F.S. 817.504(1)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly and willfully making a materially false or misleading statement, or knowingly and willfully spreading false or misleading information, about access to or availability of a COVID-19 or other pandemic-disease vaccine, through advertising, media, telephone, text, mail or email. The intent must be to obtain another person’s identifying information, money or other valuable consideration. The current conduct must be a second or later violation of this subsection.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. If conduct from July 1, 2026 causes physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction, the grade can increase. The enhanced ordinary maximum is 30 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Hacer a sabiendas y deliberadamente una declaración materialmente falsa o engañosa, o difundir de igual modo información falsa o engañosa, sobre el acceso o disponibilidad de una vacuna contra la COVID-19 u otra enfermedad pandémica por publicidad, medios, teléfono, mensaje de texto, correo postal o electrónico. Debe existir intención de obtener datos identificativos ajenos, dinero u otra contraprestación valiosa. La conducta debe ser una segunda infracción o posterior de este apartado.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. Si un hecho desde el 1 de julio de 2026 causa lesión física o muerte a un familiar o miembro del hogar que reúna los requisitos y el acusado ya tenía una condena por violencia doméstica que reúna los requisitos, el grado puede aumentar. El máximo ordinario agravado es de 30 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "明知且故意就新冠或其他大流行疾病疫苗的供应或获取途径作出实质性虚假或误导陈述，或明知且故意传播虚假或误导信息，渠道包括广告、媒体、电话、短信、邮寄或电邮。须有获取他人身份信息、金钱或其他有价对价的意图。 本次行为须为第二次或此后再次违反本款。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 对于2026年7月1日起的行为，若造成本法规定的家庭成员身体受伤或死亡，且被告已有符合法定条件的家庭暴力定罪，罪级可能提高。 升级后通常最高30年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  }
+]
