@@ -1,0 +1,946 @@
+[
+  {
+    "id": "fl-fs-893-13-7-a-7-controlled-substance",
+    "section": "893.13",
+    "scope": "(7)(a)7.",
+    "officialTitle": "Prohibited acts; penalties",
+    "dependencies": [
+      "893.13",
+      "893.02",
+      "893.03",
+      "741.28",
+      "741.2801",
+      "893.04",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "893.13": [
+        "(7)(a)7.",
+        "(7)(d)",
+        "(9)"
+      ],
+      "893.02": [
+        "(19)",
+        "(23)",
+        "(24)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "893.04": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-893-13-7-a-7-controlled-substance",
+      "name": "Possession of an unsigned or incomplete prescription form",
+      "names": {
+        "es": "Posesión de formulario de receta sin firmar o incompleto",
+        "zh": "持有未经签名或未填写完整的处方表"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "893.13(7)(a)7.",
+      "slug": "fl-fs-893-13-7-a-7-controlled-substance",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 893.13(7)(a)7.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)7.",
+          "F.S. 893.13(7)(a)7."
+        ],
+        "es": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)7.",
+          "F.S. 893.13(7)(a)7."
+        ],
+        "zh": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)7.",
+          "F.S. 893.13(7)(a)7."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Possessing a prescription form unless completed and signed by the practitioner named on it. Exempt possessors include that practitioner, their agent or employee, a pharmacist, and a prescription-form supplier authorized by that practitioner.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For conduct on or after July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this offense causes injury or death to a qualifying family or household member. If reclassified, the ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Poseer un formulario de receta que no esté completo y firmado por el profesional cuyo nombre figura impreso. Están exceptuados ese profesional, su agente o empleado, un farmacéutico y el proveedor de formularios autorizado por ese profesional.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este delito causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. Si se reclasifica, el máximo ordinario es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "持有未填写完整或未经表上印名的执业人员签名的处方表。该执业人员本人、其代理人或雇员、药剂师以及经其授权持有表格的供应商除外。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对2026年7月1日起的行为，若本罪导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。 若升级，通常最高为15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-13-7-a-8-controlled-substance",
+    "section": "893.13",
+    "scope": "(7)(a)8.",
+    "officialTitle": "Prohibited acts; penalties",
+    "dependencies": [
+      "893.13",
+      "893.02",
+      "893.03",
+      "741.28",
+      "741.2801",
+      "893.04",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "893.13": [
+        "(7)(a)8.",
+        "(7)(d)",
+        "(9)"
+      ],
+      "893.02": [
+        "(4)",
+        "(23)",
+        "(24)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "893.04": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-893-13-7-a-8-controlled-substance",
+      "name": "Withholding information about a recent controlled substance or prescription",
+      "names": {
+        "es": "Ocultar información sobre una sustancia controlada o receta recibida recientemente",
+        "zh": "求取管制物质或处方时隐瞒近期取得情况"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "893.13(7)(a)8.",
+      "slug": "fl-fs-893-13-7-a-8-controlled-substance",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 893.13(7)(a)8.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)8.",
+          "F.S. 893.13(7)(a)8.",
+          "doctor shopping",
+          "withholding information from a practitioner"
+        ],
+        "es": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)8.",
+          "F.S. 893.13(7)(a)8."
+        ],
+        "zh": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)8.",
+          "F.S. 893.13(7)(a)8."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "When asking a practitioner for a controlled substance or its prescription, withholding that another practitioner supplied a controlled substance or prescription of like therapeutic use within the previous 30 days. The substance need not be identical; the prior source and therapeutic use both matter.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For conduct on or after July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this offense causes injury or death to a qualifying family or household member. If reclassified, the ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Al solicitar a un profesional una sustancia controlada o su receta, ocultar que otro profesional proporcionó en los 30 días anteriores una sustancia controlada o receta de uso terapéutico similar. No se exige que la sustancia sea idéntica.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este delito causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. Si se reclasifica, el máximo ordinario es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "向执业人员求取管制物质或其处方时，隐瞒在此前30天内已从另一名执业人员处取得治疗用途相似的管制物质或其处方。两种物质不必完全相同。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对2026年7月1日起的行为，若本罪导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。 若升级，通常最高为15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-13-7-a-9-controlled-substance",
+    "section": "893.13",
+    "scope": "(7)(a)9.",
+    "officialTitle": "Prohibited acts; penalties",
+    "dependencies": [
+      "893.13",
+      "893.02",
+      "893.03",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "893.13": [
+        "(7)(a)9.",
+        "(7)(d)",
+        "(9)"
+      ],
+      "893.02": [
+        "(4)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-893-13-7-a-9-controlled-substance",
+      "name": "Obtaining or attempting to obtain a controlled substance by fraud",
+      "names": {
+        "es": "Obtener o intentar obtener una sustancia controlada mediante fraude",
+        "zh": "以欺诈手段取得或企图取得管制物质"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "893.13(7)(a)9.",
+      "slug": "fl-fs-893-13-7-a-9-controlled-substance",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 893.13(7)(a)9.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)9.",
+          "F.S. 893.13(7)(a)9."
+        ],
+        "es": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)9.",
+          "F.S. 893.13(7)(a)9."
+        ],
+        "zh": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)9.",
+          "F.S. 893.13(7)(a)9."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Obtaining possession of a controlled substance, or trying to do so, through misrepresentation, fraud, forgery, deception or subterfuge. This branch does not require that the attempt succeed or that a practitioner be the source.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For conduct on or after July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this offense causes injury or death to a qualifying family or household member. If reclassified, the ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Obtener o intentar obtener la posesión de una sustancia controlada mediante tergiversación, fraude, falsificación, engaño o artificio. No se exige que el intento tenga éxito ni que la fuente sea un profesional.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este delito causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. Si se reclasifica, el máximo ordinario es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "以虚假陈述、欺诈、伪造、欺骗或诡计取得或企图取得对管制物质的占有。此项不要求企图成功，也不要求来源为执业人员。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对2026年7月1日起的行为，若本罪导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。 若升级，通常最高为15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-13-7-a-10-controlled-substance",
+    "section": "893.13",
+    "scope": "(7)(a)10.",
+    "officialTitle": "Prohibited acts; penalties",
+    "dependencies": [
+      "893.13",
+      "893.02",
+      "893.03",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "893.13": [
+        "(7)(a)10.",
+        "(7)(d)",
+        "(9)"
+      ],
+      "893.02": [
+        "(4)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-893-13-7-a-10-controlled-substance",
+      "name": "Affixing a false or forged label to a controlled-substance container",
+      "names": {
+        "es": "Colocar etiqueta falsa o falsificada en envase de sustancia controlada",
+        "zh": "在装有管制物质的容器上贴虚假或伪造标签"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "893.13(7)(a)10.",
+      "slug": "fl-fs-893-13-7-a-10-controlled-substance",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 893.13(7)(a)10.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)10.",
+          "F.S. 893.13(7)(a)10."
+        ],
+        "es": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)10.",
+          "F.S. 893.13(7)(a)10."
+        ],
+        "zh": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)10.",
+          "F.S. 893.13(7)(a)10."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Attaching a false or forged label to a package or receptacle that contains a controlled substance.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For conduct on or after July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this offense causes injury or death to a qualifying family or household member. If reclassified, the ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Colocar una etiqueta falsa o falsificada en un paquete o recipiente que contiene una sustancia controlada.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este delito causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. Si se reclasifica, el máximo ordinario es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "在确实装有管制物质的包装或容器上贴虚假或伪造的标签。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对2026年7月1日起的行为，若本罪导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。 若升级，通常最高为15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-13-7-a-11-controlled-substance",
+    "section": "893.13",
+    "scope": "(7)(a)11.",
+    "officialTitle": "Prohibited acts; penalties",
+    "dependencies": [
+      "893.13",
+      "893.02",
+      "893.03",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "893.13": [
+        "(7)(a)11.",
+        "(7)(d)",
+        "(9)"
+      ],
+      "893.02": [
+        "(4)"
+      ],
+      "893.03": [
+        ""
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-893-13-7-a-11-controlled-substance",
+      "name": "False or omitted material information in required controlled-substance records",
+      "names": {
+        "es": "Información material falsa u omitida en registros obligatorios de sustancias controladas",
+        "zh": "在法定管制物质记录中提供虚假或遗漏重要信息"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "893.13(7)(a)11.",
+      "slug": "fl-fs-893-13-7-a-11-controlled-substance",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 893.13(7)(a)11.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)11.",
+          "F.S. 893.13(7)(a)11."
+        ],
+        "es": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)11.",
+          "F.S. 893.13(7)(a)11."
+        ],
+        "zh": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)11.",
+          "F.S. 893.13(7)(a)11."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Providing false or fraudulent material information, or omitting material information, in a report, document or record required to be kept or filed under chapter 893. The information must be material and the item subject to the statutory recordkeeping or filing requirement.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For conduct on or after July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this offense causes injury or death to a qualifying family or household member. If reclassified, the ordinary maximum is 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Incluir información material falsa o fraudulenta, u omitir información material, en un informe, documento o registro cuya conservación o presentación exige el capítulo 893.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este delito causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. Si se reclasifica, el máximo ordinario es de 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "在第893章规定须保存或提交的报告、文件或记录中提供虚假或欺诈性的重要信息，或遗漏重要信息。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 对2026年7月1日起的行为，若本罪导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。 若升级，通常最高为15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-13-7-a-13-controlled-substance",
+    "section": "893.13",
+    "scope": "(7)(a)13.",
+    "officialTitle": "Prohibited acts; penalties",
+    "dependencies": [
+      "893.13",
+      "893.02",
+      "893.03",
+      "741.28",
+      "741.2801",
+      "893.04",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "893.13": [
+        "(7)(a)13.",
+        "(7)(e)",
+        "(9)",
+        "(7)(a)8."
+      ],
+      "893.02": [
+        "(4)",
+        "(23)",
+        "(24)"
+      ],
+      "893.03": [
+        "(2)",
+        "(3)",
+        "(4)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "893.04": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-893-13-7-a-13-controlled-substance",
+      "name": "Fraudulently seeking medically unnecessary controlled substances from a practitioner",
+      "names": {
+        "es": "Solicitar fraudulentamente a un profesional sustancias controladas sin necesidad médica",
+        "zh": "以欺诈手段向执业人员求取无医疗必要的管制物质"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "893.13(7)(a)13.",
+      "slug": "fl-fs-893-13-7-a-13-controlled-substance",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 893.13(7)(a)13.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)13.",
+          "F.S. 893.13(7)(a)13."
+        ],
+        "es": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)13.",
+          "F.S. 893.13(7)(a)13."
+        ],
+        "zh": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(a)13.",
+          "F.S. 893.13(7)(a)13."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Obtaining or trying to obtain a controlled substance or its prescription from a practitioner by misrepresentation, fraud, forgery, deception, subterfuge or concealing a material fact, intending to obtain a medically unnecessary drug, combination or amount for oneself. This felony grade requires a Schedule II, III or IV substance. A material fact can include another practitioner’s prescription for the same period or another practitioner’s supply or prescription for a like therapeutic use in the prior 30 days.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. For conduct on or after July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this offense causes injury or death to a qualifying family or household member. If reclassified, the ordinary maximum is 30 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Obtener o intentar obtener de un profesional una sustancia controlada o su receta por tergiversación, fraude, falsificación, engaño, artificio u ocultación de un hecho material, con intención de conseguir para sí una sustancia, combinación o cantidad médicamente innecesaria. Este grado requiere una sustancia de la lista II, III o IV. Un hecho material puede ser una receta de otro profesional para el mismo período o una sustancia o receta de uso terapéutico similar de otro profesional en los 30 días anteriores.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este delito causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. Si se reclasifica, el máximo ordinario es de 30 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "通过虚假陈述、欺诈、伪造、欺骗、诡计或隐瞒重要事实，向执业人员取得或企图取得管制物质或其处方，意图为自己取得无医疗必要的药物、组合或剂量。本重罪等级要求涉及第二、第三或第四类管制物质。 重要事实包括另一名执业人员为同一期间开具的处方，或其在此前30天内提供的治疗用途相似的管制物质或处方。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 对2026年7月1日起的行为，若本罪导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。 若升级，通常最高为30年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-13-7-b-controlled-substance",
+    "section": "893.13",
+    "scope": "(7)(b)",
+    "officialTitle": "Prohibited acts; penalties",
+    "dependencies": [
+      "893.13",
+      "893.02",
+      "893.03",
+      "741.28",
+      "741.2801",
+      "893.04",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "893.13": [
+        "(7)(b)",
+        "(7)(e)",
+        "(9)",
+        "(7)(a)8."
+      ],
+      "893.02": [
+        "(4)",
+        "(23)",
+        "(24)"
+      ],
+      "893.03": [
+        "(2)",
+        "(3)",
+        "(4)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "893.04": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-893-13-7-b-controlled-substance",
+      "name": "Practitioner fraudulently providing medically unnecessary controlled substances",
+      "names": {
+        "es": "Profesional que proporciona fraudulentamente sustancias controladas sin necesidad médica",
+        "zh": "医疗执业人员以欺诈手段提供无医疗必要的管制物质"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "893.13(7)(b)",
+      "slug": "fl-fs-893-13-7-b-controlled-substance",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 893.13(7)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 893.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(b)",
+          "F.S. 893.13(7)(b)"
+        ],
+        "es": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(b)",
+          "F.S. 893.13(7)(b)"
+        ],
+        "zh": [
+          "Prohibited acts; penalties",
+          "FS 893.13(7)(b)",
+          "F.S. 893.13(7)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A health care practitioner provides a drug or its prescription by misrepresentation, fraud, forgery, deception, subterfuge or concealing a material fact, intending to provide a medically unnecessary controlled substance, combination or amount for the patient. This felony grade requires a Schedule II, III or IV substance. A material fact can include another practitioner’s prescription for the same period or another practitioner’s supply or prescription for a like therapeutic use in the prior 30 days.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. For conduct on or after July 1, 2026, a qualifying prior domestic-violence conviction can raise the grade if this offense causes injury or death to a qualifying family or household member. If reclassified, the ordinary maximum is 30 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Un profesional sanitario proporciona una sustancia o su receta por tergiversación, fraude, falsificación, engaño, artificio u ocultación de un hecho material, con intención de proporcionar al paciente una sustancia controlada, combinación o cantidad médicamente innecesaria. Este grado requiere una sustancia de la lista II, III o IV. Un hecho material puede ser una receta de otro profesional para el mismo período o una sustancia o receta de uso terapéutico similar de otro profesional en los 30 días anteriores.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. Para hechos desde el 1 de julio de 2026, una condena previa por violencia doméstica puede elevar el grado si este delito causa lesiones físicas o muerte a un familiar o miembro del hogar que reúna los requisitos. Si se reclasifica, el máximo ordinario es de 30 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "医疗执业人员通过虚假陈述、欺诈、伪造、欺骗、诡计或隐瞒重要事实提供药物或其处方，意图向患者提供无医疗必要的管制物质、组合或剂量。本重罪等级要求涉及第二、第三或第四类管制物质。 重要事实包括另一名执业人员为同一期间开具的处方，或其在此前30天内提供的治疗用途相似的管制物质或处方。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 对2026年7月1日起的行为，若本罪导致符合法定条件的家庭成员受伤或死亡，且已有符合条件的家庭暴力定罪，罪级可能提高。 若升级，通常最高为30年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  }
+]
