@@ -877,9 +877,7 @@ for (const viewport of VIEWPORTS) {
           await stubCitationNotFound(page);
           await page.goto("/statutes");
           await expectEditorialOpening(page);
-          await page
-            .getByTestId("button-full-text-cal--penal-code---242")
-            .click();
+          await expect(page.getByTestId("button-full-text-cal--penal-code---242")).toHaveAttribute("aria-expanded", "true");
           await expect(
             page.getByText(language.cardCitationNotFound),
           ).toBeVisible();
@@ -1024,9 +1022,7 @@ test.describe("localized state statute errors at an extra-narrow mobile width", 
         await stubCitationNotFound(page);
         await page.goto("/statutes");
         await expectEditorialOpening(page);
-        await page
-          .getByTestId("button-full-text-cal--penal-code---242")
-          .click();
+        await expect(page.getByTestId("button-full-text-cal--penal-code---242")).toHaveAttribute("aria-expanded", "true");
         await expect(
           page.getByText(language.cardCitationNotFound),
         ).toBeVisible();
