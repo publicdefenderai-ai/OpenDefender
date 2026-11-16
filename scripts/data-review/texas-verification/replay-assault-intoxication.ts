@@ -13,9 +13,13 @@ import theftEvidence from "../output/texas-ranked-theft-evidence.json";
 import propertyRows from "../../../shared/texas-property-access.json";
 import propertyEvidence from "../output/texas-property-access-evidence.json";
 
+import arrestRows from "../../../shared/texas-ranked-arrest.json";
+import arrestEvidence from "../output/texas-ranked-arrest-evidence.json";
+
 const batches = new Map([
   ["assault-intoxication", { rows: assaultRows, evidence: Object.entries(assaultEvidence) }],
   ["ranked-possession", { rows: possessionRows, evidence: Object.entries(possessionEvidence) }],
+  ["ranked-arrest", { rows: arrestRows, evidence: Object.entries(arrestEvidence) }],
   ["property-access", { rows: propertyRows, evidence: Object.entries(propertyEvidence) }],
   ["ranked-theft", { rows: theftRows, evidence: Object.entries(theftEvidence) }],
 ]);

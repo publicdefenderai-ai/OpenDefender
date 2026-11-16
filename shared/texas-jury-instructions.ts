@@ -20,7 +20,18 @@ const possession = {
   instructionRef: "CPJC 81.10: Possession of Controlled Substance (underlying conduct only)",
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-10.htm&version=053",
 };
+const resistingArrest = {
+  instructionRef: "CPJC 38.2: Resisting Arrest (underlying conduct only)",
+  instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F38_Obstructing_Governmental_Operation%2FCPJC38-2.htm&version=013",
+};
+const evadingArrest = {
+  instructionRef: "CPJC 38.4: Evading Detention or Arrest in a motor vehicle (underlying conduct only)",
+  instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F38_Obstructing_Governmental_Operation%2FCPJC38-4.htm&version=026",
+};
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
+  "tx-pc-38-03-c": resistingArrest,
+  "tx-pc-38-03-d": resistingArrest,
+  "tx-pc-38-04-vehicle": evadingArrest,
   "tx-pc-31-03-e-1": theft,
   "tx-pc-31-03-e-2-b": theft,
   "tx-pc-31-03-e-3": theft,

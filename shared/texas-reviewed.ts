@@ -1,3 +1,4 @@
+import arrest from "./texas-ranked-arrest.json";
 import propertyAccess from "./texas-property-access.json";
 import theft from "./texas-ranked-theft.json";
 import possession from "./texas-ranked-possession.json";
@@ -23,14 +24,16 @@ export const texasReviewedRecords = [
   ...possession,
   ...theft,
   ...propertyAccess,
+  ...arrest,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 
 // The historical amount-only identity spans several grades and cannot resolve a saved charge.
 export const texasHeldTheftId = "tx-theft-under-2500";
 
-export function isTexasHeldTheftSelection(charge: { id?: string; name: string }, jurisdiction?: string) {
+export function isTexasHeldTheftSelection(charge: { id?: string; name: string; code?: string }, jurisdiction?: string) {
   return charge.id === texasHeldTheftId ||
     (!charge.id && /^(TX|Texas)$/i.test(jurisdiction ?? "") &&
-      charge.name.trim().toLowerCase() === "theft (under $2,500)");
+      (charge.name.trim().toLowerCase() === "theft (under $2,500)" ||
+       /^(?:(?:tex\.\s*)?penal code\s*)?(?:§\s*)?31\.03\.?$/i.test(charge.code?.trim() ?? "")));
 }

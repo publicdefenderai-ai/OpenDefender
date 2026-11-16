@@ -40617,32 +40617,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Check license status with DPS', 'Apply for occupational license', 'Contact attorney', 'Work on reinstating license']
   },
   {
-    id: 'tx-evading-arrest',
-    name: 'Evading Arrest or Detention',
-    code: '38.04',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Intentionally fleeing from a person you know is a peace officer attempting a lawful detention or arrest under Texas Penal Code § 38.04',
-    maxPenalty: 'Class A misdemeanor (on foot): up to 1 year jail and $4,000 fine; felony if in a vehicle',
-    commonDefenses: ['Did not know person was an officer', 'Detention was not lawful', 'Did not intentionally flee', 'Officer was not in uniform or unmarked car'],
-    evidenceToGather: ['Body cam or dash cam footage', 'Witness statements', 'Evidence of officer identification', 'Documentation of the initial stop reason'],
-    specificRights: ['Right to challenge lawfulness of detention', 'Right to challenge officer identification', 'Right to jury trial'],
-    urgentActions: ['Contact attorney immediately', 'Do not discuss the incident', 'Gather any witness information']
-  },
-  {
-    id: 'tx-failure-to-identify',
-    name: 'Failure to Identify',
-    code: '38.02',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Refusing to give your name, address, or date of birth to a peace officer who has lawfully arrested or detained you under Texas Penal Code § 38.02',
-    maxPenalty: 'Class C misdemeanor (refusal): up to $500 fine; Class B (false info): up to 180 days jail',
-    commonDefenses: ['Not lawfully arrested or detained', 'Did provide identification', 'Officer did not properly request', 'Information given was not intentionally false'],
-    evidenceToGather: ['Body cam footage', 'Witness statements', 'Documentation of the stop', 'Evidence of lawfulness of detention'],
-    specificRights: ['Right to challenge lawfulness of stop', 'Right to remain silent beyond identifying information', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Note exact circumstances of the encounter', 'Do not provide false information in future encounters']
-  },
-  {
     id: 'tx-criminal-mischief',
     name: 'Criminal Mischief (Vandalism)',
     code: '28.03',
@@ -95053,7 +95027,7 @@ for (const group of ["Drug Offenses", "Drug Crimes"]) {
   const ids = texasReviewedRecords.filter(row => row.references[0].code === "HS").map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
-for (const [group, heading] of [["Theft & Property", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "CRIMINAL TRESPASS."], ["Theft & Property", "THEFT."], ["Property Crimes", "THEFT."], ["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
+for (const [group, heading] of [["Public Order", "EVADING ARREST OR DETENTION."], ["Public Order", "FAILURE TO IDENTIFY."], ["Public Order", "RESISTING ARREST, SEARCH, OR TRANSPORTATION."], ["Theft & Property", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "CRIMINAL TRESPASS."], ["Theft & Property", "THEFT."], ["Property Crimes", "THEFT."], ["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
   const ids = texasReviewedRecords.filter(row => !heading || row.officialTitle === heading).map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }

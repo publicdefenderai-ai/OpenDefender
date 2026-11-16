@@ -179,9 +179,13 @@ describe('generateGuidancePDF — charge summary row citation logic', () => {
 
   // ── A. verifiedCitation populated ─────────────────────────────────────────
 
-  it.each(["tx-theft-under-2500", undefined])("withholds the ambiguous historical Texas theft grade in the PDF (%s)", async id => {
-    const guidance = makeGuidance([{ id, name: "Theft (Under $2,500)", classification:"misdemeanor",
-      code:"31.03", verifiedCitation:"Texas legacy citation" }]);
+  it.each([
+    ["tx-theft-under-2500", "Theft (Under $2,500)", "31.03"],
+    [undefined, "Theft (Under $2,500)", "31.03"],
+    [undefined, "AI-generated theft label", "Tex. Penal Code § 31.03"],
+  ])("withholds the ambiguous historical Texas theft grade in the PDF (%s, %s)", async (id, name, code) => {
+    const guidance = makeGuidance([{ id, name: name!, classification:"misdemeanor",
+      code:code!, verifiedCitation:"Texas legacy citation" }]);
     mockDoc.text.mockClear();
     await generateGuidancePDF({ ...guidance, caseData:{ ...guidance.caseData, jurisdiction:"TX" } }, "en");
     expect(chargeRows().join(" ")).not.toMatch(/MISDEMEANOR|Texas legacy citation/);

@@ -19219,8 +19219,6 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
 
   "tx-theft-under-2500": { citation: "Tex. Penal Code § 31.03", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas theft under $2,500", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.31.htm" },
   "tx-driving-while-license-invalid": { citation: "Tex. Transp. Code § 521.457", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas driving while license invalid", sourceUrl: "https://law.justia.com/codes/texas/section-521-457/" },
-  "tx-evading-arrest": { citation: "Tex. Penal Code § 38.04", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas evading arrest or detention", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.38.htm" },
-  "tx-failure-to-identify": { citation: "Tex. Penal Code § 38.02", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas failure to identify", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.38.htm" },
   "tx-terroristic-threat": { citation: "Tex. Penal Code § 22.07", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas terroristic threat", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm" },
 
   "va-destruction-of-property": { citation: "Va. Code Ann. § 18.2-137", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-137/" },
