@@ -9,6 +9,7 @@ vi.mock('node:fs',async original=>{
 vi.mock('../server/data/florida-persons-source',async original=>({...await original<typeof import('../server/data/florida-persons-source')>(),isFloridaPersonsSourceFresh:()=>false}));
 vi.mock('../server/data/florida-robbery-source',async original=>({...await original<typeof import('../server/data/florida-robbery-source')>(),isFloridaRobberySourceFresh:()=>false}));
 vi.mock('../server/data/florida-false-reports-source',async original=>({...await original<typeof import('../server/data/florida-false-reports-source')>(),isFloridaFalseReportsSourceFresh:()=>false}));
+vi.mock('../server/data/florida-payment-fraud-source',async original=>({...await original<typeof import('../server/data/florida-payment-fraud-source')>(),isFloridaPaymentFraudSourceFresh:()=>false}));
 vi.mock('../server/data/florida-prescription-fraud-source',async original=>({...await original<typeof import('../server/data/florida-prescription-fraud-source')>(),isFloridaPrescriptionFraudSourceFresh:()=>false}));
 vi.mock('../server/data/florida-theft-thresholds-source',async original=>({...await original<typeof import('../server/data/florida-theft-thresholds-source')>(),isFloridaTheftThresholdsSourceFresh:()=>false}));
 vi.mock('../server/data/florida-boating-source',async original=>({...await original<typeof import('../server/data/florida-boating-source')>(),isFloridaBoatingSourceFresh:()=>false}));

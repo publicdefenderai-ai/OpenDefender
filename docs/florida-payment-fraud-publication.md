@@ -1,0 +1,10 @@
+# Florida fraud benchmark follow-up
+
+| Independent benchmark citation | Individually verified treatment |
+|---|---|
+| §817.52(2) | Hiring a motor vehicle with intent to defraud its owner or lawful possessor of rent. Absconding without paying or offering payment supplies evidence of intent. Separate choices cover acquisition by deceit, fraudulent failure to redeliver and mileage-device tampering. |
+| §832.05(3)(a) | Cashing or depositing an item with intent to defraud; (3)(b) prescribes F3 without a dollar threshold. Section 674.104(1)(i) defines the banking item and excludes credit/debit card slips and chapter 670 payment orders. The existing (2)–(4) ID retains its separate eligibility gate. |
+| §817.481(3)(a) | The offense statute uses grand larceny and includes exactly $300. The degree column of §921.0022(3)(b) identifies this offense as a third-degree felony. Under §921.0022(2), the degree and statutory citation columns control and the description is shorthand. Subsection (3)(b) of §817.481 separately uses petit larceny below $300; its classification and penalty remain outside this publication. |
+| §817.504(1)(b) | A second or subsequent violation concerning access to a COVID-19 or other pandemic-disease vaccine carries F2. Also covers the ordinary F3 branch. Civil injunctions and prosecutorial venue provisions supply no extra criminal choice. |
+
+On main aa352449 the 30-row comparison produced eight matching citations, eight same-section candidates, and fourteen absent sections. PR 220 resolves one of the same-section rows. This batch resolves one additional same-section row and three absent sections. Those measurements describe a fixed sample of statutory citations. They do not establish statewide frequency or deployed availability. Eight new choices have three-language narratives and separate evidence spans from twelve official 2026 statutes. Replay without network or database access using `node --import tsx scripts/data-review/florida-payment-fraud/prepare.ts --check`.
