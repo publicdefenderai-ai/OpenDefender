@@ -27,6 +27,10 @@ describe('Florida vehicle-identifiers subdivisions', () => {
       expect(choices.get('328.07(4)('+scope+')')!.aliases.en).toContain('Fla. Stat. § 328.07(4)');
     }
     expect(choices.get('319.30(4)')!.text.en.plainSummary).toContain('seller affidavit');
+    const repair = choices.get('319.30(4)')!.text;
+    expect(repair.en.plainSummary).toContain('former plate goes onto the part removed');
+    expect(repair.es.plainSummary).toContain('placa anterior de esta va en la pieza retirada');
+    expect(repair.zh.plainSummary).toContain('替换件原标牌装到拆下的部件');
     const plate = choices.get('328.07(4)(a)')!;
     expect(plate.text.en.plainSummary).toContain('Approved replacements');
     expect(plate.text.es.plainSummary).toContain('reemplazos aprobados');

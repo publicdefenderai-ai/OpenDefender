@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "verificationPolicy": "quarterly-v1",
+  "reportHash": "7279e3c198ec184e0ada0fc95e69b2eb76eb0a22350c758718fb399519429079",
+  "eligibilityHash": "a4c033d8da47e6343ce6d03a73469594d5117d1757ffdb114d0f5dee821469fe",
+  "checkedAt": "2026-11-16T21:19:33.270Z",
+  "expiresAt": "2027-02-16T21:16:35.859Z",
+  "documents": [
+    {
+      "sourceKey": "fl:statute:847.011:1_c",
+      "contentHash": "dcdfd442a5778d0281b150e62222ea2549c8469e95c2c4ae94c0d4e66a1e0e0d",
+      "retrievedAt": "2026-11-16T21:16:35.859Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.011",
+      "contentHash": "dcdfd442a5778d0281b150e62222ea2549c8469e95c2c4ae94c0d4e66a1e0e0d",
+      "retrievedAt": "2026-11-16T21:16:35.859Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.001",
+      "contentHash": "3657a08dd5b0fafc89a6fa67841891375c35c5cc8afa7dfd186961cd1eae4c78",
+      "retrievedAt": "2026-11-16T21:16:38.188Z"
+    },
+    {
+      "sourceKey": "fl:statute:775.082",
+      "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+      "retrievedAt": "2026-11-16T21:16:45.853Z"
+    },
+    {
+      "sourceKey": "fl:statute:775.083",
+      "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+      "retrievedAt": "2026-11-16T21:16:46.788Z"
+    },
+    {
+      "sourceKey": "fl:statute:775.084",
+      "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+      "retrievedAt": "2026-11-16T21:16:48.072Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.012:3_a",
+      "contentHash": "55b1566f048501d0de66d9f81df0792efa83620cfef0ae2a19f6698a42251507",
+      "retrievedAt": "2026-11-16T21:16:40.512Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.012",
+      "contentHash": "55b1566f048501d0de66d9f81df0792efa83620cfef0ae2a19f6698a42251507",
+      "retrievedAt": "2026-11-16T21:16:40.512Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.013",
+      "contentHash": "a619600e32d115fd6f1d40264878242e384660d6687dd3fbe5ce19e8fe2b6259",
+      "retrievedAt": "2026-11-16T21:19:30.919Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.012:3_b",
+      "contentHash": "55b1566f048501d0de66d9f81df0792efa83620cfef0ae2a19f6698a42251507",
+      "retrievedAt": "2026-11-16T21:16:40.512Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.012:4",
+      "contentHash": "55b1566f048501d0de66d9f81df0792efa83620cfef0ae2a19f6698a42251507",
+      "retrievedAt": "2026-11-16T21:16:40.512Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.012:5",
+      "contentHash": "55b1566f048501d0de66d9f81df0792efa83620cfef0ae2a19f6698a42251507",
+      "retrievedAt": "2026-11-16T21:16:40.512Z"
+    },
+    {
+      "sourceKey": "fl:statute:1012.01",
+      "contentHash": "eee29e37fadb5ff414b78eac58d6021dd6b71365771fa28f895b85ba43637b87",
+      "retrievedAt": "2026-11-16T21:19:33.270Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.0133:1",
+      "contentHash": "a54aa8ca88db1e3168dd74758e7b60f81fd6c5645fe5b4b3ac3375fa4d471deb",
+      "retrievedAt": "2026-11-16T21:16:41.723Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.0133",
+      "contentHash": "a54aa8ca88db1e3168dd74758e7b60f81fd6c5645fe5b4b3ac3375fa4d471deb",
+      "retrievedAt": "2026-11-16T21:16:41.723Z"
+    },
+    {
+      "sourceKey": "fl:statute:943.0435",
+      "contentHash": "e6000698e64c90ddcb80cb502c7be99e389f0c8bd2774a13337ce16463f1d034",
+      "retrievedAt": "2026-11-16T21:19:32.335Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.0138:2",
+      "contentHash": "b672058158a1c3d10b22b078b8420ce06e9dc23cfa993769e7ebab6662a4204c",
+      "retrievedAt": "2026-11-16T21:16:36.868Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.0138",
+      "contentHash": "b672058158a1c3d10b22b078b8420ce06e9dc23cfa993769e7ebab6662a4204c",
+      "retrievedAt": "2026-11-16T21:16:36.868Z"
+    },
+    {
+      "sourceKey": "fl:statute:847.0138:3",
+      "contentHash": "b672058158a1c3d10b22b078b8420ce06e9dc23cfa993769e7ebab6662a4204c",
+      "retrievedAt": "2026-11-16T21:16:36.868Z"
+    }
+  ]
+}
