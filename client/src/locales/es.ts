@@ -4786,6 +4786,15 @@ export default {
     }
   },
   "diversionPrograms": {
+    "directory": {
+      "title": "Explore los programas alternativos.",
+      "accent": "Conozca sus opciones.",
+      "intro": "Busque programas alternativos al proceso penal o a la sentencia por ubicación y tipo de programa. Revise los detalles con su abogado para saber qué podría aplicarse a su caso.",
+      "location": "Ciudad, condado, estado o código postal",
+      "details": "Requisitos y datos de contacto",
+      "notice": "La disponibilidad, los criterios de elegibilidad, los requisitos y los resultados varían. Confirme los detalles actuales con su abogado y con el programa antes de tomar una decisión.",
+      "related": "Páginas relacionadas"
+    },
     "hero": {
       "title": "Programas de Desviación",
       "subtitle": "Encuentre programas alternativos para evitar condenas y obtener la ayuda que necesita"

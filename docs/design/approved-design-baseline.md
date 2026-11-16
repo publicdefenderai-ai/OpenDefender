@@ -697,3 +697,7 @@ The statutes-content.html design opens with the parts of a federal citation and 
 ### Quick Reference Cards
 
 The quick-reference-content.html design uses a printable reference sheet for each of six existing cards. The approved “Know your rights. Be prepared.” heading opens the page. Police, court, and all-card views retain the full localized guidance and term definitions. Browser printing from any tab uses one dedicated six-card set with a legal-information notice on each sheet.
+
+### Diversion Programs
+
+The diversion-content.html design opens with location, state and program type filters. Program rows disclose eligibility notes, locations and available contact methods. ZIP searches retain statewide expansion through the existing location service. The approved variability notice appears above the related links. Program records remain subject to the separate L12 review.
