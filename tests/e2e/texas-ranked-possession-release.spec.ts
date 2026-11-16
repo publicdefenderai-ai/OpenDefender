@@ -14,3 +14,18 @@ test("Texas selector distinguishes six possession branches and preserves the mar
   }
   expect(charges.some((row: {id: string}) => row.id === "tx-possession-of-controlled-substance")).toBe(false);
 });
+
+test("Texas selector keeps value-based theft and repeat theft distinct", async ({ request }) => {
+  const response = await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");
+  expect(response.ok()).toBe(true);
+  const { charges } = await response.json();
+  for (const [id, category, code] of [
+    ["tx-pc-31-03-e-2-a", "misdemeanor", "31.03(e)(2)(A)"],
+    ["tx-pc-31-03-e-4-d", "felony", "31.03(e)(4)(D)"],
+  ]) {
+    const selected = charges.find((row: {id:string}) => row.id === id);
+    expect(selected).toMatchObject({id, category, code});
+    expect(selected.instructionRef).toContain("CPJC 31.2");
+  }
+  expect(charges.some((row: {id:string}) => row.id === "tx-theft-under-2500")).toBe(false);
+});

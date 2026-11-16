@@ -12,11 +12,17 @@ const misdemeanorDwi = {
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F49_Intoxication_Offenses%2FCPJC49-16.htm&version=055",
 };
 
+const theft = {
+  instructionRef: "CPJC 31.2: Theft (underlying conduct only)",
+  instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F31_Theft%2FCPJC31-2.htm&version=037",
+};
 const possession = {
   instructionRef: "CPJC 81.10: Possession of Controlled Substance (underlying conduct only)",
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-10.htm&version=053",
 };
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
+  "tx-pc-31-03-e-2-a": theft,
+  "tx-pc-31-03-e-4-d": theft,
   "tx-hsc-481-115-b": possession,
   "tx-hsc-481-115-c": possession,
   "tx-hsc-481-116-b": possession,

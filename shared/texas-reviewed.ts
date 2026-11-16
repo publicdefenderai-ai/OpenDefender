@@ -1,3 +1,4 @@
+import theft from "./texas-ranked-theft.json";
 import possession from "./texas-ranked-possession.json";
 import additions from "./texas-assault-public-intoxication.json";
 import { texasDwiConduct, texasDwiQualifications, texasDwiRecords } from "./texas-dwi";
@@ -19,5 +20,6 @@ export const texasReviewedRecords = [
   })),
   ...additions,
   ...possession,
+  ...theft,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
