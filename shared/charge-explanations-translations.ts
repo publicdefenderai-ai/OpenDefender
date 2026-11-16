@@ -28,6 +28,7 @@ import { OHIO_RESIDUAL_BATCH } from "./ohio-residual-batch";
 import { FLORIDA_PERSONS_BATCH } from "./florida-persons-batch";
 import { FLORIDA_ROBBERY_BATCH } from "./florida-robbery-batch";
 import { FLORIDA_FALSE_REPORTS_BATCH } from "./florida-false-reports-batch";
+import { FLORIDA_VEHICLE_IDENTIFIERS_BATCH } from "./florida-vehicle-identifiers-batch";
 import { FLORIDA_PAYMENT_FRAUD_BATCH } from "./florida-payment-fraud-batch";
 import { FLORIDA_PRESCRIPTION_FRAUD_BATCH } from "./florida-prescription-fraud-batch";
 import { FLORIDA_THEFT_THRESHOLDS_BATCH } from "./florida-theft-thresholds-batch";
@@ -82,7 +83,7 @@ export interface ChargeTranslationEntry {
 
 export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEntry> = {
   ...FLORIDA_REVIEWED_BATCH.translations,
-  ...FLORIDA_PERSONS_BATCH.translations, ...FLORIDA_ROBBERY_BATCH.translations, ...FLORIDA_FALSE_REPORTS_BATCH.translations, ...FLORIDA_PAYMENT_FRAUD_BATCH.translations, ...FLORIDA_PRESCRIPTION_FRAUD_BATCH.translations, ...FLORIDA_THEFT_THRESHOLDS_BATCH.translations, ...FLORIDA_BOATING_BATCH.translations, ...FLORIDA_PROTECTED_PERSONS_BATCH.translations, ...FLORIDA_LICENSE_DOCUMENTS_BATCH.translations, ...FLORIDA_PROPERTY_DAMAGE_BATCH.translations, ...FLORIDA_EXPLOITATION_BATCH.translations, ...FLORIDA_FORGED_INSTRUMENTS_BATCH.translations, ...FLORIDA_CORRUPTION_BATCH.translations, ...FLORIDA_ROAD_RACING_BATCH.translations, ...FLORIDA_COURT_OFFICIALS_BATCH.translations, ...FLORIDA_JUSTICE_BATCH.translations, ...FLORIDA_CREDIT_CARD_BATCH.translations, ...FLORIDA_RESTRAINT_BATCH.translations, ...FLORIDA_CRASH_FLIGHT_BATCH.translations,
+  ...FLORIDA_PERSONS_BATCH.translations, ...FLORIDA_ROBBERY_BATCH.translations, ...FLORIDA_FALSE_REPORTS_BATCH.translations, ...FLORIDA_VEHICLE_IDENTIFIERS_BATCH.translations, ...FLORIDA_PAYMENT_FRAUD_BATCH.translations, ...FLORIDA_PRESCRIPTION_FRAUD_BATCH.translations, ...FLORIDA_THEFT_THRESHOLDS_BATCH.translations, ...FLORIDA_BOATING_BATCH.translations, ...FLORIDA_PROTECTED_PERSONS_BATCH.translations, ...FLORIDA_LICENSE_DOCUMENTS_BATCH.translations, ...FLORIDA_PROPERTY_DAMAGE_BATCH.translations, ...FLORIDA_EXPLOITATION_BATCH.translations, ...FLORIDA_FORGED_INSTRUMENTS_BATCH.translations, ...FLORIDA_CORRUPTION_BATCH.translations, ...FLORIDA_ROAD_RACING_BATCH.translations, ...FLORIDA_COURT_OFFICIALS_BATCH.translations, ...FLORIDA_JUSTICE_BATCH.translations, ...FLORIDA_CREDIT_CARD_BATCH.translations, ...FLORIDA_RESTRAINT_BATCH.translations, ...FLORIDA_CRASH_FLIGHT_BATCH.translations,
   ...FLORIDA_LEGACY_PROPERTY.translations,
   ...FLORIDA_LEGACY_SEXUAL.translations,
   ...FLORIDA_LEGACY_REMAINING.translations,
