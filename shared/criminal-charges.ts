@@ -40617,19 +40617,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Check license status with DPS', 'Apply for occupational license', 'Contact attorney', 'Work on reinstating license']
   },
   {
-    id: 'tx-possession-of-marijuana',
-    name: 'Possession of Marijuana (Under 2 oz)',
-    code: '481.121',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Possession of a usable quantity of marijuana weighing less than 2 ounces under Texas Health & Safety Code § 481.121. Note: marijuana remains illegal in Texas at all amounts.',
-    maxPenalty: 'Class B misdemeanor: up to 180 days county jail and/or $2,000 fine',
-    commonDefenses: ['Unlawful search and seizure', 'Not in knowing possession', 'Substance is hemp (under 0.3% THC)', 'Insufficient quantity', 'Affirmative link insufficient'],
-    evidenceToGather: ['Evidence of search circumstances', 'Lab results distinguishing marijuana from hemp', 'Witness statements', 'Body cam footage'],
-    specificRights: ['Right to challenge search', 'Right to demand lab testing (hemp defense)', 'Right to pretrial diversion in many counties'],
-    urgentActions: ['Contact attorney', 'Do not consent to additional searches', 'Note circumstances of the stop or search']
-  },
-  {
     id: 'tx-criminal-trespass',
     name: 'Criminal Trespass',
     code: '30.05',
@@ -95074,6 +95061,10 @@ for (const [group, sections] of [['Violent Crimes', californiaPeopleSections], [
 // reselection handling.
 for (const group of ["TX", "DUI & Traffic", "DUI/Traffic Crimes"]) {
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...texasDwiRecords.map(row => row.id)])];
+}
+for (const group of ["Drug Offenses", "Drug Crimes"]) {
+  const ids = texasReviewedRecords.filter(row => row.references[0].code === "HS").map(row => row.id);
+  chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
 for (const [group, heading] of [["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
   const ids = texasReviewedRecords.filter(row => !heading || row.officialTitle === heading).map(row => row.id);

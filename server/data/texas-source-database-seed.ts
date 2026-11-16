@@ -182,7 +182,7 @@ function provisionFromDocument(
   importedAt: Date,
 ): AuthorityProvisionSeed {
   const sourceKey = buildTexasSourceKey(reference.code, reference.section);
-  const citation = `${CODE_PREFIX[reference.code] ?? `Tex. ${reference.code} Code`} § ${reference.section}`;
+  const citation = reference.code === "CR" ? `Tex. Code Crim. Proc. art. ${reference.section}` : `${CODE_PREFIX[reference.code] ?? `Tex. ${reference.code} Code`} § ${reference.section}`;
   const contentHash = referenceHash(document.text);
   return {
     sourceKey,
@@ -259,7 +259,7 @@ export function buildTexasManifestRecord(
     if (!reviewed) return false;
     const digest = createHash("sha256").update(doc.text).digest("hex");
     return digest !== texasReviewedTextHashes[`${ref.code}:${ref.section}`]
-      || !doc.text.startsWith(`Sec. ${ref.section}. ${doc.title} `)
+      || !doc.text.startsWith(`${ref.code === "CR" ? "Art." : "Sec."} ${ref.section}. ${doc.title} `)
       || !Number.isFinite(doc.retrievedAt.getTime()) || doc.effectiveDateStart === null
       || (doc.effectiveDateStart !== null && !(Date.parse(doc.effectiveDateStart) <= doc.retrievedAt.getTime()));
   })) {
