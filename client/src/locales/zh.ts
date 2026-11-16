@@ -4635,6 +4635,14 @@ export default {
     }
   },
   "quickRef": {
+    "reader": {
+      "title": "了解您的权利。",
+      "accent": "提前做好准备。",
+      "rights": "了解您的权利",
+      "timeline": "案件时间线",
+      "consequences": "定罪的附带后果",
+      "pleaNote": "在接受任何认罪协议之前，请务必了解监禁以外的所有后果。"
+    },
     "title": "速查卡片",
     "subtitle": "简洁、可打印的权利指南，涵盖每个阶段。保存到手机或打印出来。",
     "printAll": "打印所有卡片",

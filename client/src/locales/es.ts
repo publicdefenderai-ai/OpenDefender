@@ -4636,6 +4636,14 @@ export default {
     }
   },
   "quickRef": {
+    "reader": {
+      "title": "Conozca sus derechos.",
+      "accent": "Prepárese.",
+      "rights": "Conozca sus derechos",
+      "timeline": "Etapas del proceso",
+      "consequences": "Consecuencias adicionales de una condena",
+      "pleaNote": "Antes de aceptar un acuerdo de culpabilidad, asegúrese de comprender todas las consecuencias más allá de la pena de cárcel."
+    },
     "title": "Tarjetas de Referencia Rápida",
     "subtitle": "Guías compactas e imprimibles para sus derechos en cada etapa. Guárdelas en su teléfono o imprimalas.",
     "printAll": "Imprimir Todas las Tarjetas",

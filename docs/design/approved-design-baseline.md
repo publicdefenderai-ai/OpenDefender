@@ -693,3 +693,7 @@ The Search & Seizure preview’s five-situation reader lives in the existing Kno
 ### Statutes
 
 The statutes-content.html design opens with the parts of a federal citation and three search modes. Federal and state records use unboxed rows. Expanding a cited record reveals its penalty description alongside the full-text reader. Records without a citation keep the penalty visible. Federal, state, and live citation requests retain their existing endpoints, retry behavior, and session-scoped reader state.
+
+### Quick Reference Cards
+
+The quick-reference-content.html design uses a printable reference sheet for each of six existing cards. The approved “Know your rights. Be prepared.” heading opens the page. Police, court, and all-card views retain the full localized guidance and term definitions. Browser printing from any tab uses one dedicated six-card set with a legal-information notice on each sheet.

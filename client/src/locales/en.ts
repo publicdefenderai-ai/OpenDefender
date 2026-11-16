@@ -4634,6 +4634,14 @@ export default {
     }
   },
   "quickRef": {
+    "reader": {
+      "title": "Know your rights.",
+      "accent": "Be prepared.",
+      "rights": "Know your rights",
+      "timeline": "Case timeline",
+      "consequences": "Hidden consequences of a conviction",
+      "pleaNote": "Before agreeing to any plea, make sure you understand all the consequences beyond jail time."
+    },
     "title": "Quick-Reference Cards",
     "subtitle": "Compact, printable guides for your rights at every stage. Save them to your phone or print them out.",
     "printAll": "Print All Cards",
