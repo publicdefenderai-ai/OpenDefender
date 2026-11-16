@@ -3956,6 +3956,28 @@ export default {
     }
   },
   "statutes": {
+    "reader": {
+      "heading": "刑事法律",
+      "accent": "查阅原文",
+      "intro": "按法律名称、引文或关键词搜索联邦和州刑事法律。",
+      "example": "法律引文指向具体条文",
+      "title": "编",
+      "code": "《美国法典》",
+      "section": "条",
+      "query": "法律名称、引文或关键词",
+      "search": "搜索",
+      "federal": "联邦法律",
+      "state": "州法律",
+      "lookup": "实时查询",
+      "glossary": "法律术语表",
+      "counsel": "获得律师帮助的权利",
+      "sources": "数据来源",
+      "official": "官方来源",
+      "summary": "摘要",
+      "penalties": "处罚",
+      "untitled": "未命名法规",
+      "related": "相关页面"
+    },
     "liveText": {
       "readLaw": "阅读法律",
       "hideStatuteText": "隐藏法规文本",

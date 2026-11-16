@@ -1,0 +1,26 @@
+.statutes-width { width: min(68rem, 90%); margin-inline: auto; }
+.statutes-opening { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 3rem; align-items: center; padding-block: clamp(2rem, 6vw, 5rem); }
+.statutes-opening h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 550; line-height: 1.07; letter-spacing: -.045em; }
+.statutes-opening h1 span { display: block; color: var(--primary); }
+.statutes-opening h1 + p { margin-top: 1.25rem; max-width: 48ch; color: var(--muted-foreground); }
+.statutes-opening aside { border-inline-start: 2px solid var(--border); padding-inline-start: 1.5rem; }
+.statutes-example { font: 1.8rem/1.6 Georgia, serif; }
+.statutes-opening dl { display: flex; flex-wrap: wrap; gap: 1.3rem; }
+.statutes-opening dd { font-size: .85rem; color: var(--muted-foreground); }
+.statutes-workspace .statutes-modes { display: flex; height: auto; flex-wrap: wrap; justify-content: start; background: transparent; padding: 0; border-radius: 0; border-bottom: 1px solid var(--border); }
+.statutes-modes [role=tab] { min-height: 44px; white-space: normal; border-radius: 0; padding: .65rem .95rem; }
+.statutes-modes [role=tab][data-state=active] { box-shadow: inset 0 -2px var(--primary); color: var(--primary); }
+.statutes-search { margin-block: 1.5rem; }
+.statutes-search label { display: block; margin-bottom: .45rem; font-weight: 550; }
+.statutes-search > div { display: flex; align-items: center; gap: .6rem; }
+.statutes-search input, .statutes-search button { min-height: 44px; }
+.statutes-result { border-top: 1px solid var(--border); overflow-wrap: anywhere; }
+.statutes-result > div { padding-inline: 0; }
+.statutes-result p { max-width: 80ch; }
+.statutes-related { display: flex; gap: 1.5rem; flex-wrap: wrap; border-top: 1px solid var(--border); margin-block: 2rem; }
+.statutes-related a { display: inline-flex; align-items: center; min-height: 44px; color: var(--primary); font-weight: 600; }
+.statutes-related a:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .statutes-opening { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; }
+  .statutes-modes [role=tab] { flex: 1; padding-inline: .35rem; }
+}

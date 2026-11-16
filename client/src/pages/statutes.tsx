@@ -1,3 +1,5 @@
+import "./statutes.css";
+import { Link } from "wouter";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
@@ -13,7 +15,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { getLiveStatuteErrorKey } from "@/lib/live-statute-errors";
-import { Search, BookOpen, ExternalLink, AlertCircle, Loader2, ChevronDown, ChevronUp, Zap, FileText } from "lucide-react";
+import { BookOpen, ExternalLink, AlertCircle, Loader2, ChevronDown, ChevronUp, Zap, FileText } from "lucide-react";
 
 interface Statute {
   packageId?: string;
@@ -209,7 +211,6 @@ export default function StatutesPage() {
   };
 
   const displayStatutes = activeTab === 'federal' ? federalStatutes : stateStatutes;
-  const isLoading = activeTab === 'federal' ? loadingFederal : loadingState;
 
   const filteredStatutes = displayStatutes?.statutes || [];
 
@@ -217,50 +218,35 @@ export default function StatutesPage() {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      {/* Editorial opening */}
-      <section data-skip-content tabIndex={-1} className="editorial-page-intro py-10 md:py-14">
-        <div className="editorial-page-intro-inner max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="editorial-tool-icon w-12 h-12 mb-5">
-            <BookOpen className="h-6 w-6" />
-          </div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-statutes">
-            Criminal Laws & Statutes
-          </h1>
-          <p className="text-lg max-w-3xl">
-            Search and browse federal and state criminal statutes
-          </p>
+      <section data-skip-content tabIndex={-1} className="statutes-opening statutes-width">
+        <div>
+          <h1 data-testid="heading-statutes">{t('statutes.reader.heading')} <span>{t('statutes.reader.accent')}</span></h1>
+          <p>{t('statutes.reader.intro')}</p>
         </div>
+        <aside aria-labelledby="citation-example">
+          <h2 id="citation-example">{t('statutes.reader.example')}</h2>
+          <p className="statutes-example">18 U.S.C. § 1343</p>
+          <dl>
+            <div><dt>18</dt><dd>{t('statutes.reader.title')}</dd></div>
+            <div><dt>U.S.C.</dt><dd>{t('statutes.reader.code')}</dd></div>
+            <div><dt>§ 1343</dt><dd>{t('statutes.reader.section')}</dd></div>
+          </dl>
+        </aside>
       </section>
-
-      <div className="editorial-workspace flex-1 container mx-auto px-4 py-8 max-w-7xl">
-        <div className="editorial-surface rounded-lg p-4 mb-6">
-          <div className="flex flex-col gap-3 mb-4 sm:flex-row">
-            <div className="flex-1">
-              <Input
-                placeholder="Search by law name, citation, or keyword..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-                data-testid="input-search-statutes"
-              />
-            </div>
-            <Button className="min-h-[44px] sm:w-auto" onClick={handleSearch} data-testid="button-search">
-              <Search className="h-4 w-4 mr-2" />
-              Search
-            </Button>
-          </div>
-        </div>
-
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full max-w-lg grid-cols-3">
-            <TabsTrigger value="federal" data-testid="tab-federal">Federal Laws</TabsTrigger>
-            <TabsTrigger value="state" data-testid="tab-state">State Laws</TabsTrigger>
-            <TabsTrigger value="lookup" data-testid="tab-lookup">
-              <Zap className="h-3.5 w-3.5 mr-1.5" />
-              Live Lookup
-            </TabsTrigger>
+      <div className="statutes-width statutes-workspace flex-1">
+        <Tabs value={activeTab} onValueChange={setActiveTab}>
+          <TabsList className="statutes-modes">
+            <TabsTrigger value="federal" data-testid="tab-federal">{t('statutes.reader.federal')}</TabsTrigger>
+            <TabsTrigger value="state" data-testid="tab-state">{t('statutes.reader.state')}</TabsTrigger>
+            <TabsTrigger value="lookup" data-testid="tab-lookup">{t('statutes.reader.lookup')}</TabsTrigger>
           </TabsList>
-
+          {activeTab !== 'lookup' && <form className="statutes-search" onSubmit={event => { event.preventDefault(); handleSearch(); }}>
+            <label htmlFor="statutes-query">{t('statutes.reader.query')}</label>
+            <div>
+              <Input id="statutes-query" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} data-testid="input-search-statutes" />
+              <Button type="submit" data-testid="button-search">{t('statutes.reader.search')}</Button>
+            </div>
+          </form>}
           <TabsContent value="federal" className="mt-6">
             {loadingFederal ? (
               <div className="space-y-4">
@@ -416,7 +402,6 @@ export default function StatutesPage() {
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex-1">
                           <CardTitle className="text-xl mb-2">
-                            <BookOpen className="inline h-5 w-5 mr-2 text-primary" />
                             {citationResult.statute.title}
                           </CardTitle>
                           <div className="flex flex-wrap gap-2 items-center">
@@ -429,7 +414,7 @@ export default function StatutesPage() {
                         </div>
                         {citationResult.statute.url && (
                           <Button variant="ghost" size="sm" asChild>
-                            <a href={citationResult.statute.url} target="_blank" rel="noopener noreferrer">
+                            <a href={citationResult.statute.url} target="_blank" rel="noopener noreferrer" aria-label={t("statutes.reader.official") + " · " + citationResult.statute.citation}>
                               <ExternalLink className="h-4 w-4" />
                             </a>
                           </Button>
@@ -481,6 +466,11 @@ export default function StatutesPage() {
             </div>
           </TabsContent>
         </Tabs>
+        <nav className="statutes-related" aria-label={t('statutes.reader.related')}>
+          <Link href="/legal-glossary">{t('statutes.reader.glossary')}</Link>
+          <Link href="/right-to-counsel">{t('statutes.reader.counsel')}</Link>
+          <Link href="/data-sources">{t('statutes.reader.sources')}</Link>
+        </nav>
       </div>
 
       <Footer />
@@ -533,17 +523,15 @@ function StatuteCard({ statute }: { statute: Statute }) {
   };
 
   const liveContent = liveData?.statute?.content;
-  const hasContent = statute.content || liveContent;
   const liveFailureKey = getLiveStatuteErrorKey(liveError, liveData?.error);
 
   return (
-    <Card className="editorial-card" data-testid={`card-statute-${citationKey}`}>
+    <article className="statutes-result" data-testid={`card-statute-${citationKey}`}>
       <CardHeader>
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
             <CardTitle className="text-xl mb-2">
-              <BookOpen className="inline h-5 w-5 mr-2 text-primary" />
-              {statute.title || 'Untitled Statute'}
+              {statute.title || t('statutes.reader.untitled')}
             </CardTitle>
             <div className="flex flex-wrap gap-2 items-center">
               {statute.citation && (
@@ -565,7 +553,7 @@ function StatuteCard({ statute }: { statute: Statute }) {
               asChild
               data-testid={`button-view-statute-${citationKey}`}
             >
-              <a href={statute.url} target="_blank" rel="noopener noreferrer">
+              <a href={statute.url} target="_blank" rel="noopener noreferrer" aria-label={t("statutes.reader.official") + " · " + (statute.citation || statute.title || "")}>
                 <ExternalLink className="h-4 w-4" />
               </a>
             </Button>
@@ -575,13 +563,13 @@ function StatuteCard({ statute }: { statute: Statute }) {
       <CardContent>
         {statute.summary && (
           <div className="mb-4">
-            <h4 className="font-semibold text-sm mb-1">Summary:</h4>
+            <h4 className="font-semibold text-sm mb-1">{t('statutes.reader.summary')}</h4>
             <p className="text-sm text-muted-foreground">{statute.summary}</p>
           </div>
         )}
-        {statute.penalties && (
+        {statute.penalties && (!statute.citation || showFullText) && (
           <div className="mb-4">
-            <h4 className="font-semibold text-sm mb-1">Penalties:</h4>
+            <h4 className="font-semibold text-sm mb-1">{t('statutes.reader.penalties')}</h4>
             <p className="text-sm text-muted-foreground">{statute.penalties}</p>
           </div>
         )}
@@ -597,6 +585,7 @@ function StatuteCard({ statute }: { statute: Statute }) {
             <Button
               variant="ghost"
               size="sm"
+              aria-expanded={showFullText}
               onClick={handleToggleFullText}
               className="text-primary hover:text-primary/80 p-0 h-auto font-medium"
               data-testid={`button-full-text-${citationKey}`}
@@ -667,6 +656,6 @@ function StatuteCard({ statute }: { statute: Statute }) {
           </>
         )}
       </CardContent>
-    </Card>
+    </article>
   );
 }

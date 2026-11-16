@@ -3955,6 +3955,28 @@ export default {
     }
   },
   "statutes": {
+    "reader": {
+      "heading": "Criminal laws.",
+      "accent": "Go to the source.",
+      "intro": "Search federal and state criminal statutes by law name, citation, or keyword.",
+      "example": "A citation points to a law",
+      "title": "Title",
+      "code": "United States Code",
+      "section": "Section",
+      "query": "Law name, citation, or keyword",
+      "search": "Search",
+      "federal": "Federal laws",
+      "state": "State laws",
+      "lookup": "Live lookup",
+      "glossary": "Legal glossary",
+      "counsel": "Right to counsel",
+      "sources": "About our data sources",
+      "official": "Official source",
+      "summary": "Summary",
+      "penalties": "Penalties",
+      "untitled": "Untitled statute",
+      "related": "Related pages"
+    },
     "liveText": {
       "readLaw": "Read the Law",
       "hideStatuteText": "Hide Statute Text",

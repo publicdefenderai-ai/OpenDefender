@@ -689,3 +689,7 @@ The approved glossary-content.html reference (SHA-256 c8ee1f6bee23cf831e3af7b5b6
 ### Search and seizure scenarios
 
 The Search & Seizure preview’s five-situation reader lives in the existing Know Your Rights disclosure. The legacy route now opens that disclosure. Each situation keeps its published description and rights and uses the approved illustration, including the revised stop illustration. The section keeps the supervision advisory, general guidelines, and legal notice. Its English content declares its language in every locale.
+
+### Statutes
+
+The statutes-content.html design opens with the parts of a federal citation and three search modes. Federal and state records use unboxed rows. Expanding a cited record reveals its penalty description alongside the full-text reader. Records without a citation keep the penalty visible. Federal, state, and live citation requests retain their existing endpoints, retry behavior, and session-scoped reader state.

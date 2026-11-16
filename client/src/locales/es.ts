@@ -3957,6 +3957,28 @@ export default {
     }
   },
   "statutes": {
+    "reader": {
+      "heading": "Leyes penales.",
+      "accent": "Consulte la fuente.",
+      "intro": "Busque leyes penales federales y estatales por nombre, cita o palabra clave.",
+      "example": "Una cita identifica una ley",
+      "title": "Título",
+      "code": "Código de los Estados Unidos",
+      "section": "Sección",
+      "query": "Nombre de la ley, cita o palabra clave",
+      "search": "Buscar",
+      "federal": "Leyes federales",
+      "state": "Leyes estatales",
+      "lookup": "Consulta directa",
+      "glossary": "Glosario jurídico",
+      "counsel": "Derecho a un abogado",
+      "sources": "Nuestras fuentes",
+      "official": "Fuente oficial",
+      "summary": "Resumen",
+      "penalties": "Sanciones",
+      "untitled": "Ley sin título",
+      "related": "Páginas relacionadas"
+    },
     "liveText": {
       "readLaw": "Leer la ley",
       "hideStatuteText": "Ocultar texto del estatuto",
