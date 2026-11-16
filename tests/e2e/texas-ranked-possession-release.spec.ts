@@ -55,3 +55,14 @@ test("Texas selector separates force, flight and identification branches", async
   ]) expect(charges.find((r:{id:string}) => r.id === id)).toMatchObject({id,code});
   expect(charges.some((r:{id:string}) => r.id === "tx-resisting-arrest")).toBe(false);
 });
+
+test("Texas selector requires a specific weapons branch and returns the three ranked charge families", async ({ request }) => {
+  const response = await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");
+  expect(response.ok()).toBe(true);
+  const { charges } = await response.json();
+  const reviewed = JSON.parse(readFileSync("shared/texas-priority-closeout.json", "utf8"));
+  for (const {id, code, category, penalty} of reviewed) {
+    expect(charges.find((r: {id: string}) => r.id === id)).toMatchObject({id, code, category, maxPenalty: penalty});
+  }
+  expect(charges.find((r: {id: string}) => r.id === "tx-unlawful-carrying-of-weapon")).toBeUndefined();
+});

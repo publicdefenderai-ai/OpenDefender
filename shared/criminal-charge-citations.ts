@@ -5073,13 +5073,6 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     sourceUrl: "https://law.justia.com/codes/tennessee/section-39-13-102/",
     instructionRef: "TPI-Crim. 7.21",
   },
-  "tx-aggravated-assault": {
-    citation: "Tex. Penal Code § 22.02",
-    confidence: "high",
-    lastVerified: "2026-04",
-    source: "OpenLaws verified 2026-04",
-    sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm",
-  },
   "ut-aggravated-assault": {
     citation: "Utah Code Ann. § 76-5-103",
     confidence: "needs_review",
@@ -13791,7 +13784,6 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "sc-unlawful-carrying-of-weapon": { citation: "S.C. Code Ann. § 16-23-20", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found: needs manual review", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-23-20/" },
   "sd-unlawful-carrying-of-weapon": { citation: "S.D. Codified Laws § 22-14-9", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Dakota carrying concealed weapon; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/south-dakota/section-22-14-9/" },
   "tn-unlawful-carrying-of-weapon": { citation: "Tenn. Code Ann. § 39-17-1307", confidence: "medium", lastVerified: "2026-04", source: "Training data — Tennessee unlawful carrying or possession of a weapon; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/tennessee/section-39-17-1307/" },
-  "tx-unlawful-carrying-of-weapon": { citation: "Tex. Penal Code § 46.02", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas unlawfully carrying weapons; verify against Justia before promoting to high", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm" },
   "ut-unlawful-carrying-of-weapon": { citation: "Utah Code Ann. § 76-10-504", confidence: "medium", lastVerified: "2026-04", source: "Training data — Utah carrying a concealed dangerous weapon; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/utah/section-76-10-504/" },
   "vt-unlawful-carrying-of-weapon": { citation: "Vt. Stat. Ann. tit. 13, § 4003", confidence: "medium", lastVerified: "2026-04", source: "Training data — Vermont carrying dangerous weapons; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/vermont/section-4003/" },
   "va-unlawful-carrying-of-weapon": { citation: "Va. Code Ann. § 18.2-308", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-308/" },
@@ -16083,7 +16075,6 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "sc-protective-order-violation": { citation: "S.C. Code Ann. § 16-25-20(F)", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Carolina violation of protection order", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-25-20/" },
   "sd-protective-order-violation": { citation: "S.D. Codified Laws § 25-10-16", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Dakota violation of protection order", sourceUrl: "https://law.justia.com/codes/south-dakota/section-25-10-16/" },
   "tn-protective-order-violation": { citation: "Tenn. Code Ann. § 36-3-610", confidence: "medium", lastVerified: "2026-04", source: "Training data — Tennessee violation of order of protection", sourceUrl: "https://law.justia.com/codes/tennessee/section-36-3-610/" },
-  "tx-protective-order-violation": { citation: "Tex. Penal Code § 25.07", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas violation of protective order", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.25.htm" },
   "ut-protective-order-violation": { citation: "Utah Code Ann. § 77-36-2.4", confidence: "medium", lastVerified: "2026-04", source: "Training data — Utah violation of protective order", sourceUrl: "https://law.justia.com/codes/utah/section-77-36-2-4/" },
   "vt-protective-order-violation": { citation: "Vt. Stat. Ann. tit. 15, § 1108", confidence: "medium", lastVerified: "2026-04", source: "Training data — Vermont violation of abuse prevention order", sourceUrl: "https://law.justia.com/codes/vermont/section-1108/" },
   "va-protective-order-violation": { citation: "Va. Code Ann. § 16.1-253.2", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/16.1-253.2/" },
@@ -19218,7 +19209,6 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "tn-driving-on-revoked-license": { citation: "Tenn. Code Ann. § 55-50-504", confidence: "medium", lastVerified: "2026-04", source: "Training data — Tennessee driving on revoked license", sourceUrl: "https://law.justia.com/codes/tennessee/section-55-50-504/" },
 
   "tx-theft-under-2500": { citation: "Tex. Penal Code § 31.03", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas theft under $2,500", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.31.htm" },
-  "tx-driving-while-license-invalid": { citation: "Tex. Transp. Code § 521.457", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas driving while license invalid", sourceUrl: "https://law.justia.com/codes/texas/section-521-457/" },
   "tx-terroristic-threat": { citation: "Tex. Penal Code § 22.07", confidence: "high", lastVerified: "2026-06", source: "Training data — Texas terroristic threat", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm" },
 
   "va-destruction-of-property": { citation: "Va. Code Ann. § 18.2-137", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-137/" },

@@ -70,7 +70,7 @@ import {
   getInstructionUrl,
   getInstructionPaywall,
 } from "@shared/criminal-charges";
-import { isTexasHeldTheftSelection } from "@shared/texas-reviewed";
+import { needsTexasChargeReselection } from "@shared/texas-reviewed";
 import {
   resolveGuidanceCharge,
   type GuidanceChargeClassification,
@@ -614,7 +614,7 @@ function YourChargesSection({
   // Resolve the canonical entry to carry through the verified citation and
   // jury-instruction metadata required by the "Read the Law" button guard.
   const chargesWithExplanations = chargeClassifications.map(classification => {
-    const authorityUnavailable = isTexasHeldTheftSelection(classification, jurisdiction) || (isAuthorityBacked &&
+    const authorityUnavailable = needsTexasChargeReselection(classification, jurisdiction) || (isAuthorityBacked &&
       !currentAuthorityIds.has(classification.id ?? ""));
     const dbCharge = authorityUnavailable
       ? undefined
@@ -674,7 +674,7 @@ function YourChargesSection({
               <div className="min-w-0">
                 <h4 className="break-words font-semibold text-foreground text-lg">{charge.name}</h4>
               </div>
-              {!(isTexasHeldTheftSelection(charge, jurisdiction) || (normalizedJurisdiction === "OH" && charge.needsReselection)) && (
+              {!(needsTexasChargeReselection(charge, jurisdiction) || (normalizedJurisdiction === "OH" && charge.needsReselection)) && (
                 <Badge
                   variant="outline"
                   className="shrink-0"

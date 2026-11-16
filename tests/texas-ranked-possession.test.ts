@@ -4,6 +4,7 @@ import { getChargeById, getVerifiedCitation, getVerifiedSourceUrl, getInstructio
 import { resolveGuidanceCharge } from "../shared/guidance-charge-resolution";
 import { getChargeExplanation } from "../shared/charge-explanations";
 import rows from "../shared/texas-ranked-possession.json";
+import closeoutRows from "../shared/texas-priority-closeout.json";
 import arrestRows from "../shared/texas-ranked-arrest.json";
 import propertyRows from "../shared/texas-property-access.json";
 import theftRows from "../shared/texas-ranked-theft.json";
@@ -68,8 +69,17 @@ describe("Texas ranked drug possession", () => {
 
   });
 
+  it("withholds the retired weapons identity even when an old run has its full historical link", async () => {
+    const id = "tx-unlawful-carrying-of-weapon";
+    const old = {chargeId:id, sourceKey:"tx:PE:46.02", supportRole:"offense",
+      citation:"Tex. Penal Code § 46.02", subdivision:null, contentHash:"old"};
+    mock.metadata = {selectableChargeIds:[id], catalogRecords:[{chargeId:id,provisions:[old]}]};
+    mock.links = [old];
+    expect(await getCurrentAuthoritySelectableChargeIds("TX")).toEqual(new Set());
+  });
+
   it("withholds each exact charge when any required current link is missing or superseded", async () => {
-    const rankedIds = new Set([...ids, ...theftRows.map(row => row.id), ...propertyRows.map(row => row.id), ...arrestRows.map(row => row.id)]);
+    const rankedIds = new Set([...ids, ...theftRows.map(row => row.id), ...propertyRows.map(row => row.id), ...arrestRows.map(row => row.id), ...closeoutRows.map(row => row.id)]);
     for (const record of manifest.catalogRecords.filter(row => rankedIds.has(row.chargeId))) {
       const all = record.provisions.map(p => ({chargeId:record.chargeId, sourceKey:p.sourceKey,
         contentHash:p.contentHash, subdivision:p.subdivision, supportRole:p.supportRole, citation:p.citation}));

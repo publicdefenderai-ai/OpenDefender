@@ -1,4 +1,4 @@
-import { texasHeldTheftId, texasReviewedRecords } from "./texas-reviewed";
+import { texasHeldCarryId, texasHeldTheftId, texasReviewedRecords } from "./texas-reviewed";
 import { texasDwiRecords } from "./texas-dwi";
 import { floridaRemainingChargeText, floridaRemainingDisplayName } from "./florida-legacy-remaining";
 import { floridaSexualChargeText, floridaSexualDisplayName } from "./florida-legacy-sexual";
@@ -39990,19 +39990,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact criminal defense attorney immediately', 'Do not speak to police without attorney', 'Preserve all evidence']
   },
   {
-    id: 'tx-aggravated-assault',
-    name: 'Aggravated Assault',
-    code: '22.02',
-    jurisdiction: 'TX',
-    category: 'felony',
-    description: 'Assault with intent to cause serious harm under Texas law',
-    maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
-  },
-  {
     id: 'tx-domestic-violence-assault',
     name: 'Domestic Violence Assault',
     code: '22.01',
@@ -40385,8 +40372,8 @@ export const criminalCharges: CriminalCharge[] = [
     code: '46.02',
     jurisdiction: 'TX',
     category: 'misdemeanor',
-    description: 'Carrying weapon without permit under Texas law',
-    maxPenalty: 'Up to 1 year jail and/or fines',
+    description: 'Select the exact statutory branch from the charging document.',
+    maxPenalty: 'Select the exact statutory branch from the charging document.',
     commonDefenses: ['Consult with attorney for applicable defenses'],
     evidenceToGather: ['Gather all relevant documentation and evidence'],
     specificRights: ['Constitutional rights apply to all criminal cases'],
@@ -40602,19 +40589,6 @@ export const criminalCharges: CriminalCharge[] = [
     description: 'Historical selection covering several theft grades. Select the applicable value and prior-conviction branch.',
     maxPenalty: 'The amount alone does not establish the applicable penalty.',
     commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: []
-  },
-  {
-    id: 'tx-driving-while-license-invalid',
-    name: 'Driving While License Invalid (DWLI)',
-    code: '521.457',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Operating a motor vehicle while your license is suspended, revoked, or cancelled under Texas Transportation Code § 521.457. Extremely high volume in Texas courts.',
-    maxPenalty: 'Class C misdemeanor (first offense): up to $500 fine; Class B (subsequent): up to 180 days jail and $2,000 fine',
-    commonDefenses: ['No knowledge of suspension', 'License was valid', 'Improper notification', 'Necessity defense', 'License reinstated before court date'],
-    evidenceToGather: ['DPS driving record', 'Proof of address for notification', 'Documentation of license reinstatement', 'Surcharge payment records'],
-    specificRights: ['Right to challenge notice of suspension', 'Right to occupational license', 'Right to request driving record from DPS'],
-    urgentActions: ['Check license status with DPS', 'Apply for occupational license', 'Contact attorney', 'Work on reinstating license']
   },
   {
     id: 'tx-criminal-mischief',
@@ -62903,19 +62877,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Body camera footage', 'Witness statements', 'Medical records of injuries', 'Officer disciplinary records', 'Cell phone video recordings', 'Dispatch records'],
     specificRights: ['Right to remain silent during arrest', 'Right to know the charge', 'Right to not be subjected to excessive force', 'Right to attorney', 'Right to file complaint against officer'],
     urgentActions: ['Do not physically resist further', 'State clearly you are not resisting', 'Ask for badge number and officer name', 'Contact attorney immediately after arrest', 'Document any injuries with photos']
-  },
-  {
-    id: 'tx-protective-order-violation',
-    name: 'Violation of Protective Order',
-    code: '25.07',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under TX law',
-    maxPenalty: 'Up to 1 year jail, additional protective orders, mandatory counseling, and fines',
-    commonDefenses: ['Lack of knowledge of the order', 'Order was not properly served', 'Contact was initiated by the protected party', 'Accidental or unintentional contact', 'Order had expired or been modified'],
-    evidenceToGather: ['Copy of the protective order', 'Proof of service or lack thereof', 'Communication records (texts, calls, emails)', 'GPS or location data', 'Witness statements about contact circumstances'],
-    specificRights: ['Right to challenge validity of underlying order', 'Right to attorney', 'Right to hearing before sanctions', 'Right to present evidence of compliance'],
-    urgentActions: ['Cease all contact with protected party immediately', 'Contact attorney immediately', 'Review exact terms of the order', 'Document any contact initiated by the other party', 'Stay away from prohibited locations']
   },
   {
     id: 'tx-open-container',
@@ -95027,7 +94988,7 @@ for (const group of ["Drug Offenses", "Drug Crimes"]) {
   const ids = texasReviewedRecords.filter(row => row.references[0].code === "HS").map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
-for (const [group, heading] of [["Public Order", "EVADING ARREST OR DETENTION."], ["Public Order", "FAILURE TO IDENTIFY."], ["Public Order", "RESISTING ARREST, SEARCH, OR TRANSPORTATION."], ["Theft & Property", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "CRIMINAL TRESPASS."], ["Theft & Property", "THEFT."], ["Property Crimes", "THEFT."], ["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
+for (const [group, heading] of [["Violent Crimes", "AGGRAVATED ASSAULT."], ["Assault Crimes", "AGGRAVATED ASSAULT."], ["Weapons", "UNLAWFUL CARRYING WEAPONS."], ["DUI & Traffic", "DRIVING WHILE LICENSE INVALID."], ["Public Order", "VIOLATION OF CERTAIN COURT ORDERS OR CONDITIONS OF BOND IN A FAMILY VIOLENCE, CHILD ABUSE OR NEGLECT, SEXUAL ASSAULT OR ABUSE, INDECENT ASSAULT, STALKING, OR TRAFFICKING CASE."], ["Public Order", "EVADING ARREST OR DETENTION."], ["Public Order", "FAILURE TO IDENTIFY."], ["Public Order", "RESISTING ARREST, SEARCH, OR TRANSPORTATION."], ["Theft & Property", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "CRIMINAL TRESPASS."], ["Theft & Property", "THEFT."], ["Property Crimes", "THEFT."], ["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
   const ids = texasReviewedRecords.filter(row => !heading || row.officialTitle === heading).map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
@@ -95052,7 +95013,7 @@ function withAuthorityDisplayName(charge: CriminalCharge): CriminalCharge {
 export function getChargeById(id: string): CriminalCharge | undefined {
   const normalizedId = normalizeChargeId(id);
   if (
-    normalizedId === texasHeldTheftId ||
+    normalizedId === texasHeldCarryId || normalizedId === texasHeldTheftId ||
     NY_CHARGE_IDS_REQUIRING_RESELECTION.has(normalizedId) ||
     OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(normalizedId)
   ) return undefined;

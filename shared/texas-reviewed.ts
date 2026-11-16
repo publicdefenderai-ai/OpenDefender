@@ -1,3 +1,4 @@
+import closeout from "./texas-priority-closeout.json";
 import arrest from "./texas-ranked-arrest.json";
 import propertyAccess from "./texas-property-access.json";
 import theft from "./texas-ranked-theft.json";
@@ -25,6 +26,7 @@ export const texasReviewedRecords = [
   ...theft,
   ...propertyAccess,
   ...arrest,
+  ...closeout,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 
@@ -36,4 +38,15 @@ export function isTexasHeldTheftSelection(charge: { id?: string; name: string; c
     (!charge.id && /^(TX|Texas)$/i.test(jurisdiction ?? "") &&
       (charge.name.trim().toLowerCase() === "theft (under $2,500)" ||
        /^(?:(?:tex\.\s*)?penal code\s*)?(?:§\s*)?31\.03\.?$/i.test(charge.code?.trim() ?? "")));
+}
+
+// The legacy section-wide weapons identity does not distinguish conduct, age or grading.
+export const texasHeldCarryId = "tx-unlawful-carrying-of-weapon";
+export function isTexasHeldCarrySelection(charge: { id?: string; name: string; code?: string }, jurisdiction?: string) {
+  return charge.id === texasHeldCarryId || (!charge.id && /^(TX|Texas)$/i.test(jurisdiction ?? "") &&
+    (/^unlawful carrying (?:of (?:a )?)?weapons?$/i.test(charge.name.trim()) ||
+      /^(?:(?:tex\.\s*)?penal code\s*)?(?:§\s*)?46\.02(?:\(b\))?\.?$/i.test(charge.code?.trim() ?? "")));
+}
+export function needsTexasChargeReselection(charge: { id?: string; name: string; code?: string }, jurisdiction?: string) {
+  return isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction);
 }
