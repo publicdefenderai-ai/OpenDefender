@@ -48,3 +48,9 @@ For a newly downloaded benchmark page, `--verify-source` distinguishes byte-iden
 The nine new theft choices use independently bound conduct, grades and penalties from thirteen sections in the official 2026 edition. An exact acquisition of §893.135 produced the same legal text hash as the retained trafficking review. Its existing English, Spanish and Chinese explanations preserve all three tiers. This comparison does not renew the trafficking receipt. The original 30-row sample remains frozen.
 
 The current dwelling subdivisions apply to conduct from October 1, 2024. For earlier conduct, consult the version in effect on the offense date. [Laws of Florida, chapter 2024-69, §§1, 5](https://laws.flrules.org/2024/69)
+
+### Controlled-substance prescription follow-up
+
+The level-three chart citation §893.13(7)(a)8. now has a separate configured choice. It requires a request to a practitioner and undisclosed receipt from another practitioner within the previous 30 days of a controlled substance or prescription with like therapeutic use. Five branches, (a)7. through (a)11., use the third-degree grade in (d). The two medically unnecessary supply branches, (a)13. for the requester and (b) for the provider, use (e) only where a Schedule II, III or IV substance is involved. No second-degree grade is assigned here to another schedule. The independent receipt and database eligibility gate still determine availability.
+
+The packet retains (9)'s limited delivery and possession exceptions for medical or scientific use in the ordinary course of authorized work. Subsection (7)(a)12. addresses anhydrous-ammonia storage, while (7)(a)1.–6. cover different regulatory conduct with their own repeat-violation grade. Subsection (8) creates separate prescribing-practitioner offenses. These branches are outside this batch. [Florida Statutes §893.13](https://www.flsenate.gov/Laws/Statutes/2026/893.13)

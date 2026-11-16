@@ -30,6 +30,7 @@ import { FLORIDA_PERSONS_BATCH, FLORIDA_PERSONS_IDS } from "./florida-persons-ba
 import { FLORIDA_ROBBERY_BATCH } from "./florida-robbery-batch";
 import { FLORIDA_FALSE_REPORTS_BATCH } from "./florida-false-reports-batch";
 import { FLORIDA_PAYMENT_FRAUD_BATCH } from "./florida-payment-fraud-batch";
+import { FLORIDA_PRESCRIPTION_FRAUD_BATCH } from "./florida-prescription-fraud-batch";
 import { FLORIDA_THEFT_THRESHOLDS_BATCH } from "./florida-theft-thresholds-batch";
 import { FLORIDA_BOATING_BATCH } from "./florida-boating-batch";
 import { FLORIDA_PROTECTED_PERSONS_BATCH } from "./florida-protected-persons-batch";
@@ -107,7 +108,7 @@ export interface ChargeExplanation {
 
 export const chargeExplanations: ChargeExplanation[] = [
   ...FLORIDA_REVIEWED_BATCH.explanations,
-  ...FLORIDA_PERSONS_BATCH.explanations, ...FLORIDA_ROBBERY_BATCH.explanations, ...FLORIDA_FALSE_REPORTS_BATCH.explanations, ...FLORIDA_PAYMENT_FRAUD_BATCH.explanations, ...FLORIDA_THEFT_THRESHOLDS_BATCH.explanations, ...FLORIDA_BOATING_BATCH.explanations, ...FLORIDA_PROTECTED_PERSONS_BATCH.explanations, ...FLORIDA_LICENSE_DOCUMENTS_BATCH.explanations, ...FLORIDA_PROPERTY_DAMAGE_BATCH.explanations, ...FLORIDA_EXPLOITATION_BATCH.explanations, ...FLORIDA_FORGED_INSTRUMENTS_BATCH.explanations, ...FLORIDA_CORRUPTION_BATCH.explanations, ...FLORIDA_ROAD_RACING_BATCH.explanations, ...FLORIDA_COURT_OFFICIALS_BATCH.explanations, ...FLORIDA_JUSTICE_BATCH.explanations, ...FLORIDA_CREDIT_CARD_BATCH.explanations, ...FLORIDA_RESTRAINT_BATCH.explanations, ...FLORIDA_CRASH_FLIGHT_BATCH.explanations,
+  ...FLORIDA_PERSONS_BATCH.explanations, ...FLORIDA_ROBBERY_BATCH.explanations, ...FLORIDA_FALSE_REPORTS_BATCH.explanations, ...FLORIDA_PAYMENT_FRAUD_BATCH.explanations, ...FLORIDA_PRESCRIPTION_FRAUD_BATCH.explanations, ...FLORIDA_THEFT_THRESHOLDS_BATCH.explanations, ...FLORIDA_BOATING_BATCH.explanations, ...FLORIDA_PROTECTED_PERSONS_BATCH.explanations, ...FLORIDA_LICENSE_DOCUMENTS_BATCH.explanations, ...FLORIDA_PROPERTY_DAMAGE_BATCH.explanations, ...FLORIDA_EXPLOITATION_BATCH.explanations, ...FLORIDA_FORGED_INSTRUMENTS_BATCH.explanations, ...FLORIDA_CORRUPTION_BATCH.explanations, ...FLORIDA_ROAD_RACING_BATCH.explanations, ...FLORIDA_COURT_OFFICIALS_BATCH.explanations, ...FLORIDA_JUSTICE_BATCH.explanations, ...FLORIDA_CREDIT_CARD_BATCH.explanations, ...FLORIDA_RESTRAINT_BATCH.explanations, ...FLORIDA_CRASH_FLIGHT_BATCH.explanations,
   ...FLORIDA_LEGACY_PROPERTY.explanations,
   ...FLORIDA_LEGACY_SEXUAL.explanations,
   ...FLORIDA_LEGACY_REMAINING.explanations,
