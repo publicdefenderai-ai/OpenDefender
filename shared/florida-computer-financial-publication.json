@@ -1,0 +1,1067 @@
+[
+  {
+    "id": "fl-fs-815-04-1-computer-financial",
+    "section": "815.04",
+    "scope": "(1)",
+    "officialTitle": "Offenses against intellectual property",
+    "dependencies": [
+      "815.04",
+      "815.03",
+      "815.06",
+      "812.012",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "815.04": [
+        "(1)",
+        "(4)(a)",
+        "(4)(b)"
+      ],
+      "815.03": [
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(7)",
+        "(8)",
+        "(9)",
+        "(11)",
+        "(12)"
+      ],
+      "815.06": [
+        "(9)"
+      ],
+      "812.012": [
+        "(4)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-815-04-1-computer-financial",
+      "name": "Introducing a computer contaminant or modifying or making data unavailable",
+      "names": {
+        "es": "Introducir un contaminante informático o modificar o inutilizar datos",
+        "zh": "植入计算机污染程序或修改资料、使其无法使用"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "815.04(1)",
+      "slug": "fl-fs-815-04-1-computer-financial",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 815.04(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.06",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.06.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Offenses against intellectual property",
+          "FS 815.04(1)",
+          "F.S. 815.04(1)"
+        ],
+        "es": [
+          "Offenses against intellectual property",
+          "FS 815.04(1)",
+          "F.S. 815.04(1)"
+        ],
+        "zh": [
+          "Offenses against intellectual property",
+          "FS 815.04(1)",
+          "F.S. 815.04(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully, knowingly and without authorization introducing a computer contaminant, or modifying or rendering unavailable data, programs or supporting documentation. The material may reside inside or outside a computer, system, network or electronic device.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If the offense was committed to devise or carry out a scheme to defraud or obtain property, (4)(b) instead provides a second-degree felony, ordinarily up to 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Introducir deliberadamente, a sabiendas y sin autorización un contaminante informático, o modificar o hacer inaccesibles datos, programas o documentación de apoyo. El material puede encontrarse dentro o fuera de una computadora, sistema, red o dispositivo electrónico.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si el hecho tenía por finalidad idear o ejecutar un plan para defraudar u obtener bienes, el apartado (4)(b) prevé un delito grave de segundo grado, normalmente hasta 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "故意、明知且未经授权植入计算机污染程序，或修改数据、程序、辅助文档或使其无法使用。 相关资料可以存在于计算机、系统、网络或电子设备内部或外部。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 如果目的是策划或实施欺诈或获取财物的计划，第(4)(b)项规定为二级重罪，通常最高15年监禁及1万美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(4)(a)"
+  },
+  {
+    "id": "fl-fs-815-04-2-computer-financial",
+    "section": "815.04",
+    "scope": "(2)",
+    "officialTitle": "Offenses against intellectual property",
+    "dependencies": [
+      "815.04",
+      "815.03",
+      "815.06",
+      "812.012",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "815.04": [
+        "(2)",
+        "(4)(a)",
+        "(4)(b)"
+      ],
+      "815.03": [
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(7)",
+        "(8)",
+        "(9)",
+        "(11)",
+        "(12)"
+      ],
+      "815.06": [
+        "(9)"
+      ],
+      "812.012": [
+        "(4)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-815-04-2-computer-financial",
+      "name": "Destroying computer data, programs or supporting documentation",
+      "names": {
+        "es": "Destruir datos, programas o documentación informática de apoyo",
+        "zh": "销毁计算机数据、程序或辅助文档"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "815.04(2)",
+      "slug": "fl-fs-815-04-2-computer-financial",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 815.04(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.06",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.06.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Offenses against intellectual property",
+          "FS 815.04(2)",
+          "F.S. 815.04(2)"
+        ],
+        "es": [
+          "Offenses against intellectual property",
+          "FS 815.04(2)",
+          "F.S. 815.04(2)"
+        ],
+        "zh": [
+          "Offenses against intellectual property",
+          "FS 815.04(2)",
+          "F.S. 815.04(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully, knowingly and without authorization destroying data, programs or their supporting documentation. The material may reside inside or outside a computer, system, network or electronic device.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If the offense was committed to devise or carry out a scheme to defraud or obtain property, (4)(b) instead provides a second-degree felony, ordinarily up to 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Destruir deliberadamente, a sabiendas y sin autorización datos, programas o su documentación de apoyo. El material puede encontrarse dentro o fuera de una computadora, sistema, red o dispositivo electrónico.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si el hecho tenía por finalidad idear o ejecutar un plan para defraudar u obtener bienes, el apartado (4)(b) prevé un delito grave de segundo grado, normalmente hasta 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "故意、明知且未经授权销毁数据、程序或其辅助文档。 相关资料可以存在于计算机、系统、网络或电子设备内部或外部。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 如果目的是策划或实施欺诈或获取财物的计划，第(4)(b)项规定为二级重罪，通常最高15年监禁及1万美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(4)(a)"
+  },
+  {
+    "id": "fl-fs-815-04-3-computer-financial",
+    "section": "815.04",
+    "scope": "(3)",
+    "officialTitle": "Offenses against intellectual property",
+    "dependencies": [
+      "815.04",
+      "815.03",
+      "815.06",
+      "812.012",
+      "812.081",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "815.04": [
+        "(3)",
+        "(4)(a)",
+        "(4)(b)"
+      ],
+      "815.03": [
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(7)",
+        "(8)",
+        "(9)",
+        "(11)",
+        "(12)"
+      ],
+      "815.06": [
+        "(9)"
+      ],
+      "812.012": [
+        "(4)"
+      ],
+      "812.081": [
+        "(1)(f)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-815-04-3-computer-financial",
+      "name": "Disclosing or taking computer trade secrets or legally confidential data",
+      "names": {
+        "es": "Revelar o tomar secretos comerciales o datos informáticos confidenciales por ley",
+        "zh": "披露或获取属于商业秘密或依法保密的计算机资料"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "815.04(3)",
+      "slug": "fl-fs-815-04-3-computer-financial",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 815.04(3)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.06",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.06.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.081",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.081.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Offenses against intellectual property",
+          "FS 815.04(3)",
+          "F.S. 815.04(3)"
+        ],
+        "es": [
+          "Offenses against intellectual property",
+          "FS 815.04(3)",
+          "F.S. 815.04(3)"
+        ],
+        "zh": [
+          "Offenses against intellectual property",
+          "FS 815.04(3)",
+          "F.S. 815.04(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully, knowingly and without authorization disclosing or taking data, programs or supporting documentation that qualify as a trade secret under §812.081 or are confidential by law. Being stored on someone else’s computer alone does not establish confidentiality. The material may reside inside or outside a computer, system, network or electronic device.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If the offense was committed to devise or carry out a scheme to defraud or obtain property, (4)(b) instead provides a second-degree felony, ordinarily up to 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Revelar o tomar deliberadamente, a sabiendas y sin autorización datos, programas o documentación que sean secreto comercial según el §812.081 o confidenciales por ley. Que se guarden en una computadora ajena no basta para establecer la confidencialidad. El material puede encontrarse dentro o fuera de una computadora, sistema, red o dispositivo electrónico.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Si el hecho tenía por finalidad idear o ejecutar un plan para defraudar u obtener bienes, el apartado (4)(b) prevé un delito grave de segundo grado, normalmente hasta 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "故意、明知且未经授权披露或获取第812.081条规定的商业秘密或依法保密的数据、程序或辅助文档。仅存于他人计算机并不证明资料依法保密。 相关资料可以存在于计算机、系统、网络或电子设备内部或外部。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 如果目的是策划或实施欺诈或获取财物的计划，第(4)(b)项规定为二级重罪，通常最高15年监禁及1万美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(4)(a)"
+  },
+  {
+    "id": "fl-fs-815-04-4-b-computer-financial",
+    "section": "815.04",
+    "scope": "(4)(b)",
+    "officialTitle": "Offenses against intellectual property",
+    "dependencies": [
+      "815.04",
+      "815.03",
+      "812.012",
+      "812.081",
+      "815.06",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "815.04": [
+        "(4)(b)",
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "815.03": [
+        "(3)",
+        "(8)",
+        "(11)",
+        "(12)"
+      ],
+      "812.012": [
+        "(4)"
+      ],
+      "812.081": [
+        "(1)(f)"
+      ],
+      "815.06": [
+        "(9)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-815-04-4-b-computer-financial",
+      "name": "Computer intellectual-property offense committed for a fraud or property scheme",
+      "names": {
+        "es": "Delito informático contra la propiedad intelectual con finalidad de fraude u obtención de bienes",
+        "zh": "为欺诈或获取财物计划而实施的计算机知识产权犯罪"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "815.04(4)(b)",
+      "slug": "fl-fs-815-04-4-b-computer-financial",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 815.04(4)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 812.081",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.081.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.06",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.06.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Offenses against intellectual property",
+          "FS 815.04(4)(b)",
+          "F.S. 815.04(4)(b)"
+        ],
+        "es": [
+          "Offenses against intellectual property",
+          "FS 815.04(4)(b)",
+          "F.S. 815.04(4)(b)"
+        ],
+        "zh": [
+          "Offenses against intellectual property",
+          "FS 815.04(4)(b)",
+          "F.S. 815.04(4)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willful, knowing and unauthorized conduct under (1), (2) or (3) must underlie the scheme: introducing a contaminant, modifying, disabling or destroying covered data, programs or documentation, or taking or disclosing materials that are trade secrets or confidential by law. The offense must be committed to devise or execute a scheme to defraud or obtain property. The section states no minimum dollar loss.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine."
+        },
+        "es": {
+          "plainSummary": "El plan debe tener como base una conducta deliberada, a sabiendas y sin autorización de los apartados (1), (2) o (3): introducir un contaminante, modificar, bloquear o destruir datos, programas o documentación, o tomar o revelar materiales que sean secretos comerciales o confidenciales por ley. La finalidad debe ser idear o ejecutar un plan para defraudar u obtener bienes. La sección no exige una pérdida monetaria mínima.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000."
+        },
+        "zh": {
+          "plainSummary": "必须先有第(1)、(2)或(3)款的故意、明知、未经授权行为：植入污染程序，修改、阻断或销毁相关数据、程序或文档，或获取或披露属于商业秘密或依法保密的资料。其目的是策划或实施欺诈或获取财物的计划。本条没有最低损失金额要求。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(4)(b)"
+  },
+  {
+    "id": "fl-fs-815-06-4-computer-financial",
+    "section": "815.06",
+    "scope": "(4)",
+    "officialTitle": "Offenses against users of computers, computer systems, computer networks, and electronic devices",
+    "dependencies": [
+      "815.06",
+      "815.03",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "815.06": [
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(9)"
+      ],
+      "815.03": [
+        "(2)",
+        "(4)",
+        "(7)",
+        "(9)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-815-06-4-computer-financial",
+      "name": "Unauthorized modification of computer equipment or supplies",
+      "names": {
+        "es": "Modificación no autorizada de equipo o suministros informáticos",
+        "zh": "未经授权修改计算机设备或耗材"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "815.06(4)",
+      "slug": "fl-fs-815-06-4-computer-financial",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 815.06(4)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.06.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.06",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.06.html"
+        },
+        {
+          "citation": "Fla. Stat. § 815.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Offenses against users of computers, computer systems, computer networks, and electronic devices",
+          "FS 815.06(4)",
+          "F.S. 815.06(4)"
+        ],
+        "es": [
+          "Offenses against users of computers, computer systems, computer networks, and electronic devices",
+          "FS 815.06(4)",
+          "F.S. 815.06(4)"
+        ],
+        "zh": [
+          "Offenses against users of computers, computer systems, computer networks, and electronic devices",
+          "FS 815.06(4)",
+          "F.S. 815.06(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully, knowingly and without authorization modifying equipment or supplies used or intended for a computer, system, network or electronic device. The section excludes lawful employment, authorized government or business security operations, and actions under a warrant or lawful warrant exception. The owner or lessee may seek compensatory damages after conviction; qualifying property can be subject to forfeiture.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine."
+        },
+        "es": {
+          "plainSummary": "Modificar deliberadamente, a sabiendas y sin autorización equipo o suministros destinados a una computadora, sistema, red o dispositivo electrónico. Se excluyen actos en el ámbito del empleo lícito, operaciones de seguridad autorizadas y actos amparados por orden de registro o excepción legal. Tras la condena el dueño o arrendatario puede reclamar daños compensatorios y los bienes previstos pueden ser objeto de decomiso.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000."
+        },
+        "zh": {
+          "plainSummary": "故意、明知且未经授权修改已用于或拟用于计算机、系统、网络或电子设备的器材或耗材。合法职务范围内的行为、获授权的政府或企业安全操作、依法凭搜查令或法定例外实施的行为均除外。定罪后所有人或承租人可请求赔偿，符合条件的财产可被没收。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(4)"
+  },
+  {
+    "id": "fl-fs-655-50-10-a-computer-financial",
+    "section": "655.50",
+    "scope": "(10)(a)",
+    "officialTitle": "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+    "dependencies": [
+      "655.50",
+      "655.005",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "655.50": [
+        "(10)(a)",
+        "(4)",
+        "(3)(c)",
+        "(9)(d)",
+        "(10)(b)"
+      ],
+      "655.005": [
+        "(1)(i)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-655-50-10-a-computer-financial",
+      "name": "Willful violation of a financial institution’s anti-money-laundering duties",
+      "names": {
+        "es": "Incumplimiento deliberado de las obligaciones institucionales contra el lavado de dinero",
+        "zh": "故意违反金融机构反洗钱义务"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "655.50(10)(a)",
+      "slug": "fl-fs-655-50-10-a-computer-financial",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 655.50(10)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.50.html"
+        },
+        {
+          "citation": "Fla. Stat. § 655.50",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.50.html"
+        },
+        {
+          "citation": "Fla. Stat. § 655.005",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.005.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+          "FS 655.50(10)(a)",
+          "F.S. 655.50(10)(a)"
+        ],
+        "es": [
+          "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+          "FS 655.50(10)(a)",
+          "F.S. 655.50(10)(a)"
+        ],
+        "zh": [
+          "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+          "FS 655.50(10)(a)",
+          "F.S. 655.50(10)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "An example is willfully failing to report a change of the institution’s designated compliance officer to the Office of Financial Regulation. The misdemeanor applies to a willful statutory violation outside the felony provisions of (10)(b). Negligent regulatory noncompliance alone does not establish this crime. An institutional defendant cannot be incarcerated.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine."
+        },
+        "es": {
+          "plainSummary": "Un ejemplo es omitir deliberadamente informar a la Oficina de Regulación Financiera del cambio de responsable de cumplimiento de la institución. El delito menor requiere una infracción deliberada fuera de los supuestos graves de (10)(b). La mera negligencia regulatoria no basta. Una entidad institucional no puede ser encarcelada.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000."
+        },
+        "zh": {
+          "plainSummary": "例如，故意未向金融监管办公室报告机构指定合规负责人的变动。轻罪适用于不属第(10)(b)项重罪情形的故意违法。单纯监管疏忽不足以构成本罪。机构本身不能被监禁。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(10)(a)"
+  },
+  {
+    "id": "fl-fs-655-50-10-b-1-computer-financial",
+    "section": "655.50",
+    "scope": "(10)(b)1.",
+    "officialTitle": "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+    "dependencies": [
+      "655.50",
+      "655.005",
+      "655.89",
+      "895.02",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "655.50": [
+        "(10)(b)1.",
+        "(10)(b)",
+        "(3)",
+        "(5)",
+        "(6)",
+        "(10)(c)",
+        "(10)(d)",
+        "(10)(e)"
+      ],
+      "655.005": [
+        "(1)(i)"
+      ],
+      "655.89": [
+        "(1)(a)"
+      ],
+      "895.02": [
+        "(8)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-655-50-10-b-1-computer-financial",
+      "name": "Financial institution reporting violation, transactions totaling $300 to under $20,000",
+      "names": {
+        "es": "Incumplimiento del deber de informe de una institución financiera, operaciones por un total de $300 a menos de $20,000",
+        "zh": "违反金融机构申报义务，交易总额 300美元至不足2万美元"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "655.50(10)(b)1.",
+      "slug": "fl-fs-655-50-10-b-1-computer-financial",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 655.50(10)(b)1.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.50.html"
+        },
+        {
+          "citation": "Fla. Stat. § 655.50",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.50.html"
+        },
+        {
+          "citation": "Fla. Stat. § 655.005",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.005.html"
+        },
+        {
+          "citation": "Fla. Stat. § 655.89",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.89.html"
+        },
+        {
+          "citation": "Fla. Stat. § 895.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0895/Sections/0895.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+          "FS 655.50(10)(b)1.",
+          "F.S. 655.50(10)(b)1."
+        ],
+        "es": [
+          "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+          "FS 655.50(10)(b)1.",
+          "F.S. 655.50(10)(b)1."
+        ],
+        "zh": [
+          "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+          "FS 655.50(10)(b)1.",
+          "F.S. 655.50(10)(b)1."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The prosecution must establish a willful violation of §655.50 or knowingly causing another to violate it. For a failure-to-report charge, the covered institution must actually owe a report under (5)(d). A large legitimate transfer alone does not create that duty. The statute covers required records of known in-state transactions involving prescribed currency or monetary instruments over $10,000 and specified unlawful proceeds, reporting evasion or reasonably suspected activity. Known cash movements for the same person can aggregate over one business day. Timely qualifying federal filing counts unless federal reports are not regularly and comprehensively sent to Florida. This grade requires transactions totaling $300 to under $20,000 in any 12-month period.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For a natural person the ordinary custody range applies. Under (10)(c) the court may also fine a defendant convicted or pleading guilty or no contest up to the greater of $250,000 or twice the transaction value; on a second or subsequent such conviction or plea, up to the greater of $500,000 or five times the value. Civil and administrative penalties are separate."
+        },
+        "es": {
+          "plainSummary": "Se requiere infringir deliberadamente el §655.50 o causar a sabiendas que otro lo infrinja. Para una acusación por falta de informe, la institución comprendida debe tener el deber de presentarlo conforme a (5)(d). Una transferencia legítima de gran valor por sí sola no lo crea. Deben registrarse las operaciones conocidas en Florida con moneda o instrumentos previstos por más de $10,000 relacionadas con producto ilícito especificado, evasión de informes o actividad razonablemente sospechosa. Movimientos conocidos de efectivo de una misma persona pueden sumarse en un día hábil. La presentación federal oportuna que reúna los requisitos cuenta salvo que los informes federales no se transmitan a Florida regular e integralmente. Este grado exige operaciones que sumen un importe de $300 a menos de $20,000 en cualquier período de 12 meses.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. La prisión ordinaria corresponde a personas físicas. Según (10)(c), tras condena o declaración de culpabilidad o de no oposición, el tribunal puede añadir una multa de hasta la mayor de $250,000 o dos veces el valor de la operación; ante una segunda condena o declaración de esa clase o una posterior, hasta la mayor de $500,000 o cinco veces ese valor. Las sanciones civiles y administrativas son independientes."
+        },
+        "zh": {
+          "plainSummary": "控方须证明故意违反第655.50条，或明知而导致他人违反该条。就未申报指控而言，受规管机构须确有第(5)(d)项的申报义务。合法大额转账本身不足以产生该义务。法规涵盖机构已知的州内交易，涉及超过1万美元的指定货币或金融工具，并涉及指定非法所得、规避申报或有合理理由认为属于可疑活动。同一人或代其进行的已知现金交易可按一个营业日合计。按时提交合格的联邦报告视为合规，但联邦机构未定期完整地向佛州传送报告的情形除外。 本罪级要求任意12个月内交易总额为300美元至不足2万美元。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 通常监禁期限适用于自然人。根据第(10)(c)项，定罪、认罪或不抗辩后，法院还可处罚金，上限为25万美元与交易价值两倍中较高者；第二次或其后此类定罪或答辩，上限为50万美元与交易价值五倍中较高者。民事和行政罚款另计。"
+        }
+      }
+    },
+    "gradingScope": "(10)(b)1."
+  },
+  {
+    "id": "fl-fs-655-50-10-b-2-computer-financial",
+    "section": "655.50",
+    "scope": "(10)(b)2.",
+    "officialTitle": "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+    "dependencies": [
+      "655.50",
+      "655.005",
+      "655.89",
+      "895.02",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "655.50": [
+        "(10)(b)2.",
+        "(10)(b)",
+        "(3)",
+        "(5)",
+        "(6)",
+        "(10)(c)",
+        "(10)(d)",
+        "(10)(e)"
+      ],
+      "655.005": [
+        "(1)(i)"
+      ],
+      "655.89": [
+        "(1)(a)"
+      ],
+      "895.02": [
+        "(8)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-655-50-10-b-2-computer-financial",
+      "name": "Financial institution reporting violation, transactions totaling $20,000 to under $100,000",
+      "names": {
+        "es": "Incumplimiento del deber de informe de una institución financiera, operaciones por un total de $20,000 a menos de $100,000",
+        "zh": "违反金融机构申报义务，交易总额 2万美元至不足10万美元"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "655.50(10)(b)2.",
+      "slug": "fl-fs-655-50-10-b-2-computer-financial",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 655.50(10)(b)2.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.50.html"
+        },
+        {
+          "citation": "Fla. Stat. § 655.50",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.50.html"
+        },
+        {
+          "citation": "Fla. Stat. § 655.005",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.005.html"
+        },
+        {
+          "citation": "Fla. Stat. § 655.89",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.89.html"
+        },
+        {
+          "citation": "Fla. Stat. § 895.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0895/Sections/0895.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+          "FS 655.50(10)(b)2.",
+          "F.S. 655.50(10)(b)2."
+        ],
+        "es": [
+          "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+          "FS 655.50(10)(b)2.",
+          "F.S. 655.50(10)(b)2."
+        ],
+        "zh": [
+          "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+          "FS 655.50(10)(b)2.",
+          "F.S. 655.50(10)(b)2."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The prosecution must establish a willful violation of §655.50 or knowingly causing another to violate it. For a failure-to-report charge, the covered institution must actually owe a report under (5)(d). A large legitimate transfer alone does not create that duty. The statute covers required records of known in-state transactions involving prescribed currency or monetary instruments over $10,000 and specified unlawful proceeds, reporting evasion or reasonably suspected activity. Known cash movements for the same person can aggregate over one business day. Timely qualifying federal filing counts unless federal reports are not regularly and comprehensively sent to Florida. This grade requires transactions totaling $20,000 to under $100,000 in any 12-month period.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. For a natural person the ordinary custody range applies. Under (10)(c) the court may also fine a defendant convicted or pleading guilty or no contest up to the greater of $250,000 or twice the transaction value; on a second or subsequent such conviction or plea, up to the greater of $500,000 or five times the value. Civil and administrative penalties are separate."
+        },
+        "es": {
+          "plainSummary": "Se requiere infringir deliberadamente el §655.50 o causar a sabiendas que otro lo infrinja. Para una acusación por falta de informe, la institución comprendida debe tener el deber de presentarlo conforme a (5)(d). Una transferencia legítima de gran valor por sí sola no lo crea. Deben registrarse las operaciones conocidas en Florida con moneda o instrumentos previstos por más de $10,000 relacionadas con producto ilícito especificado, evasión de informes o actividad razonablemente sospechosa. Movimientos conocidos de efectivo de una misma persona pueden sumarse en un día hábil. La presentación federal oportuna que reúna los requisitos cuenta salvo que los informes federales no se transmitan a Florida regular e integralmente. Este grado exige operaciones que sumen un importe de $20,000 a menos de $100,000 en cualquier período de 12 meses.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. La prisión ordinaria corresponde a personas físicas. Según (10)(c), tras condena o declaración de culpabilidad o de no oposición, el tribunal puede añadir una multa de hasta la mayor de $250,000 o dos veces el valor de la operación; ante una segunda condena o declaración de esa clase o una posterior, hasta la mayor de $500,000 o cinco veces ese valor. Las sanciones civiles y administrativas son independientes."
+        },
+        "zh": {
+          "plainSummary": "控方须证明故意违反第655.50条，或明知而导致他人违反该条。就未申报指控而言，受规管机构须确有第(5)(d)项的申报义务。合法大额转账本身不足以产生该义务。法规涵盖机构已知的州内交易，涉及超过1万美元的指定货币或金融工具，并涉及指定非法所得、规避申报或有合理理由认为属于可疑活动。同一人或代其进行的已知现金交易可按一个营业日合计。按时提交合格的联邦报告视为合规，但联邦机构未定期完整地向佛州传送报告的情形除外。 本罪级要求任意12个月内交易总额为2万美元至不足10万美元。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 通常监禁期限适用于自然人。根据第(10)(c)项，定罪、认罪或不抗辩后，法院还可处罚金，上限为25万美元与交易价值两倍中较高者；第二次或其后此类定罪或答辩，上限为50万美元与交易价值五倍中较高者。民事和行政罚款另计。"
+        }
+      }
+    },
+    "gradingScope": "(10)(b)2."
+  },
+  {
+    "id": "fl-fs-655-50-10-b-3-computer-financial",
+    "section": "655.50",
+    "scope": "(10)(b)3.",
+    "officialTitle": "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+    "dependencies": [
+      "655.50",
+      "655.005",
+      "655.89",
+      "895.02",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "655.50": [
+        "(10)(b)3.",
+        "(10)(b)",
+        "(3)",
+        "(5)",
+        "(6)",
+        "(10)(c)",
+        "(10)(d)",
+        "(10)(e)"
+      ],
+      "655.005": [
+        "(1)(i)"
+      ],
+      "655.89": [
+        "(1)(a)"
+      ],
+      "895.02": [
+        "(8)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-655-50-10-b-3-computer-financial",
+      "name": "Financial institution reporting violation, transactions totaling $100,000 or more",
+      "names": {
+        "es": "Incumplimiento del deber de informe de una institución financiera, operaciones por un total de $100,000 o más",
+        "zh": "违反金融机构申报义务，交易总额 至少10万美元"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "655.50(10)(b)3.",
+      "slug": "fl-fs-655-50-10-b-3-computer-financial",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 655.50(10)(b)3.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.50.html"
+        },
+        {
+          "citation": "Fla. Stat. § 655.50",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.50.html"
+        },
+        {
+          "citation": "Fla. Stat. § 655.005",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.005.html"
+        },
+        {
+          "citation": "Fla. Stat. § 655.89",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0655/Sections/0655.89.html"
+        },
+        {
+          "citation": "Fla. Stat. § 895.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0895/Sections/0895.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+          "FS 655.50(10)(b)3.",
+          "F.S. 655.50(10)(b)3."
+        ],
+        "es": [
+          "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+          "FS 655.50(10)(b)3.",
+          "F.S. 655.50(10)(b)3."
+        ],
+        "zh": [
+          "Florida Control of Money Laundering and Terrorist Financing in Financial Institutions Act",
+          "FS 655.50(10)(b)3.",
+          "F.S. 655.50(10)(b)3."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The prosecution must establish a willful violation of §655.50 or knowingly causing another to violate it. For a failure-to-report charge, the covered institution must actually owe a report under (5)(d). A large legitimate transfer alone does not create that duty. The statute covers required records of known in-state transactions involving prescribed currency or monetary instruments over $10,000 and specified unlawful proceeds, reporting evasion or reasonably suspected activity. Known cash movements for the same person can aggregate over one business day. Timely qualifying federal filing counts unless federal reports are not regularly and comprehensively sent to Florida. This grade requires transactions totaling $100,000 or more in any 12-month period.",
+          "degreeContext": "First-degree felony: for an individual, ordinarily up to 30 years in prison and a $10,000 standard fine. For a natural person the ordinary custody range applies. Under (10)(c) the court may also fine a defendant convicted or pleading guilty or no contest up to the greater of $250,000 or twice the transaction value; on a second or subsequent such conviction or plea, up to the greater of $500,000 or five times the value. Civil and administrative penalties are separate."
+        },
+        "es": {
+          "plainSummary": "Se requiere infringir deliberadamente el §655.50 o causar a sabiendas que otro lo infrinja. Para una acusación por falta de informe, la institución comprendida debe tener el deber de presentarlo conforme a (5)(d). Una transferencia legítima de gran valor por sí sola no lo crea. Deben registrarse las operaciones conocidas en Florida con moneda o instrumentos previstos por más de $10,000 relacionadas con producto ilícito especificado, evasión de informes o actividad razonablemente sospechosa. Movimientos conocidos de efectivo de una misma persona pueden sumarse en un día hábil. La presentación federal oportuna que reúna los requisitos cuenta salvo que los informes federales no se transmitan a Florida regular e integralmente. Este grado exige operaciones que sumen un importe de $100,000 o más en cualquier período de 12 meses.",
+          "degreeContext": "Delito grave de primer grado: para una persona física, normalmente hasta 30 años de prisión y multa ordinaria de $10,000. La prisión ordinaria corresponde a personas físicas. Según (10)(c), tras condena o declaración de culpabilidad o de no oposición, el tribunal puede añadir una multa de hasta la mayor de $250,000 o dos veces el valor de la operación; ante una segunda condena o declaración de esa clase o una posterior, hasta la mayor de $500,000 o cinco veces ese valor. Las sanciones civiles y administrativas son independientes."
+        },
+        "zh": {
+          "plainSummary": "控方须证明故意违反第655.50条，或明知而导致他人违反该条。就未申报指控而言，受规管机构须确有第(5)(d)项的申报义务。合法大额转账本身不足以产生该义务。法规涵盖机构已知的州内交易，涉及超过1万美元的指定货币或金融工具，并涉及指定非法所得、规避申报或有合理理由认为属于可疑活动。同一人或代其进行的已知现金交易可按一个营业日合计。按时提交合格的联邦报告视为合规，但联邦机构未定期完整地向佛州传送报告的情形除外。 本罪级要求任意12个月内交易总额为至少10万美元。",
+          "degreeContext": "一级重罪：对自然人，通常最高30年监禁及1万美元普通罚金。 通常监禁期限适用于自然人。根据第(10)(c)项，定罪、认罪或不抗辩后，法院还可处罚金，上限为25万美元与交易价值两倍中较高者；第二次或其后此类定罪或答辩，上限为50万美元与交易价值五倍中较高者。民事和行政罚款另计。"
+        }
+      }
+    },
+    "gradingScope": "(10)(b)3."
+  }
+]
