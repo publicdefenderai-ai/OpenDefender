@@ -21,6 +21,17 @@ const possession = {
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-10.htm&version=053",
 };
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
+  "tx-pc-31-03-e-1": theft,
+  "tx-pc-31-03-e-2-b": theft,
+  "tx-pc-31-03-e-3": theft,
+  "tx-criminal-trespass": {
+    instructionRef: "CPJC 30.15: Criminal Trespass by Remaining in Building (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F30_Burglary_and_Criminal_Trespass%2FCPJC30-15.htm&version=007",
+  },
+  "tx-pc-31-07-unauthorized-use": {
+    instructionRef: "CPJC 31.9: Unauthorized Use of Vehicle (motor-propelled vehicle, underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F31_Theft%2FCPJC31-9.htm&version=048",
+  },
   "tx-pc-31-03-e-2-a": theft,
   "tx-pc-31-03-e-4-d": theft,
   "tx-hsc-481-115-b": possession,

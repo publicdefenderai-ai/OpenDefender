@@ -4,6 +4,7 @@ import { getChargeById, getVerifiedCitation, getVerifiedSourceUrl, getInstructio
 import { resolveGuidanceCharge } from "../shared/guidance-charge-resolution";
 import { getChargeExplanation } from "../shared/charge-explanations";
 import rows from "../shared/texas-ranked-possession.json";
+import propertyRows from "../shared/texas-property-access.json";
 import theftRows from "../shared/texas-ranked-theft.json";
 import sources from "../scripts/data-review/output/texas-ranked-possession-evidence.json";
 import { loadTexasAuthorityManifest } from "../server/data/texas-manifest-loader";
@@ -67,7 +68,7 @@ describe("Texas ranked drug possession", () => {
   });
 
   it("withholds each exact charge when any required current link is missing or superseded", async () => {
-    const rankedIds = new Set([...ids, ...theftRows.map(row => row.id)]);
+    const rankedIds = new Set([...ids, ...theftRows.map(row => row.id), ...propertyRows.map(row => row.id)]);
     for (const record of manifest.catalogRecords.filter(row => rankedIds.has(row.chargeId))) {
       const all = record.provisions.map(p => ({chargeId:record.chargeId, sourceKey:p.sourceKey,
         contentHash:p.contentHash, subdivision:p.subdivision, supportRole:p.supportRole, citation:p.citation}));

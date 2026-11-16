@@ -12731,13 +12731,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Tennessee criminal trespass (Class C misdemeanor); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/tennessee/section-39-14-405/",
   },
-  "tx-criminal-trespass": {
-    citation: "Tex. Penal Code § 30.05",
-    confidence: "high",
-    lastVerified: "2026-06",
-    source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 30.05",
-    sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.30.htm#30.05",
-  },
+
 
   // criminal-trespass-misdemeanor — remaining states
   "ar-criminal-trespass-misdemeanor": {

@@ -121,6 +121,7 @@ function chargeRows(): string[] {
 /** Minimal valid guidance object */
 function makeGuidance(
   chargeClassifications?: Array<{
+    id?: string;
     name: string;
     classification: string;
     code: string;
@@ -177,6 +178,15 @@ describe('generateGuidancePDF — charge summary row citation logic', () => {
   });
 
   // ── A. verifiedCitation populated ─────────────────────────────────────────
+
+  it.each(["tx-theft-under-2500", undefined])("withholds the ambiguous historical Texas theft grade in the PDF (%s)", async id => {
+    const guidance = makeGuidance([{ id, name: "Theft (Under $2,500)", classification:"misdemeanor",
+      code:"31.03", verifiedCitation:"Texas legacy citation" }]);
+    mockDoc.text.mockClear();
+    await generateGuidancePDF({ ...guidance, caseData:{ ...guidance.caseData, jurisdiction:"TX" } }, "en");
+    expect(chargeRows().join(" ")).not.toMatch(/MISDEMEANOR|Texas legacy citation/);
+    expect(JSON.stringify(mockDoc.text.mock.calls)).toContain("Select the exact Texas theft charge");
+  });
 
   it('A: shows the citation parenthetical when verifiedCitation is populated', () => {
     generateGuidancePDF(

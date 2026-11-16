@@ -29,3 +29,15 @@ test("Texas selector keeps value-based theft and repeat theft distinct", async (
   }
   expect(charges.some((row: {id:string}) => row.id === "tx-theft-under-2500")).toBe(false);
 });
+
+test("Texas property choices replace the ambiguous under-$2,500 guidance", async ({ request }) => {
+  const response = await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");
+  expect(response.ok()).toBe(true);
+  const { charges } = await response.json();
+  for (const [id, code] of [
+    ["tx-pc-31-03-e-1", "31.03(e)(1)"], ["tx-pc-31-03-e-2-b", "31.03(e)(2)(B)"],
+    ["tx-pc-31-03-e-3", "31.03(e)(3)"], ["tx-criminal-trespass", "30.05(d)(1)"],
+    ["tx-pc-31-07-unauthorized-use", "31.07(b)"],
+  ]) expect(charges.find((r:{id:string}) => r.id === id)).toMatchObject({id,code});
+  expect(charges.some((r:{id:string}) => r.id === "tx-theft-under-2500")).toBe(false);
+});
