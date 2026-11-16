@@ -40,8 +40,8 @@ export function resolveGuidanceCharge(
     return resolved ?? criminalCharges.find((charge) => charge.id === classification.id);
   }
 
-  // Older ID-less Texas DWI answers can describe different branches under the same section.
-  if (["TX", "TEXAS"].includes(jurisdiction?.toUpperCase() ?? "") && /^(?:49\.(?:02|04|09)|22\.01)(?:$|\()/.test(classification.code)) return undefined;
+  // Older ID-less Texas answers can describe different branches under the same section.
+  if (["TX", "TEXAS"].includes(jurisdiction?.toUpperCase() ?? "") && /^(?:49\.(?:02|04|09)|22\.01|481\.(?:115|116|121))(?:$|\()/.test(classification.code)) return undefined;
 
   const legacyCharge = criminalCharges.find((charge) => charge.code === classification.code);
   if (!legacyCharge || legacyCharge.jurisdiction === "OH") return undefined;

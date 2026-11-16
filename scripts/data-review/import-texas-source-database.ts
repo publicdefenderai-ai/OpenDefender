@@ -113,7 +113,7 @@ export function extractDocument(
   const block = html.slice(start, next < 0 ? html.length : next);
   const sectionPattern = section.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const heading = block.match(new RegExp(
-    `Sec\\.\\s*${sectionPattern}\\.\\s*([^<]+)</a>`,
+    `${code === "CR" ? "Art" : "Sec"}\\.\\s*${sectionPattern}\\.\\s*([^<]+)</a>`,
     "i",
   ));
   if (!heading) return null;
