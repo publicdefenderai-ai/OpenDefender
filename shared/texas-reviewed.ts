@@ -1,3 +1,4 @@
+import road from "./texas-road-safety.json";
 import justice from "./texas-justice-process.json";
 import family from "./texas-family-safety.json";
 import delivery from "./texas-ranked-delivery.json";
@@ -14,7 +15,7 @@ import additions from "./texas-assault-public-intoxication.json";
 import { texasDwiConduct, texasDwiQualifications, texasDwiRecords } from "./texas-dwi";
 export { texasDwiUrl as texasReviewedUrl } from "./texas-dwi";
 
-const labels: Record<string, string> = { GV: "Gov’t", IN: "Ins.", HS: "Health & Safety", HR: "Hum. Res.", PE: "Penal", TN: "Transp.", FA: "Fam.", AL: "Alco. Bev." };
+const labels: Record<string, string> = { OC: "Occ.", GV: "Gov’t", IN: "Ins.", HS: "Health & Safety", HR: "Hum. Res.", PE: "Penal", TN: "Transp.", FA: "Fam.", AL: "Alco. Bev." };
 
 export function texasReviewedCitation(ref: { code: string; section: string; subdivision?: string | null }) {
   if (ref.code === "CR") return `Tex. Code Crim. Proc. art. ${ref.section}${ref.subdivision ?? ""}`;
@@ -41,6 +42,7 @@ export const texasReviewedRecords = [
   ...delivery,
   ...family,
   ...justice,
+  ...road,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 
@@ -82,7 +84,14 @@ export function isTexasAmbiguousVehicleBurglary(charge: TexasSavedSelection, jur
     /^(?:(?:tex\.\s*)?penal code\s*)?(?:§\s*)?30\.04\.?$/i.test(charge.code?.trim() ?? "");
 }
 
+export const texasHeldRoadId = "tx-hit-and-run";
+export function isTexasAmbiguousCollision(charge: TexasSavedSelection, jurisdiction?: string) {
+  if (charge.id) return charge.id === texasHeldRoadId;
+  return /^(TX|Texas)$/i.test(jurisdiction ?? "") &&
+    (/^(?:(?:Tex\.\s*)?(?:Transp\.|Transportation) Code\s*)?(?:§\s*)?550\.(?:021|022|024)(?:$|\()/.test(charge.code?.trim() ?? "") || /^hit(?:-| )and(?:-| )run$/i.test(charge.name.trim()));
+}
+
 export function needsTexasChargeReselection(charge: TexasSavedSelection, jurisdiction?: string) {
-  return isTexasAmbiguousDelivery(charge, jurisdiction) || isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
+  return isTexasAmbiguousCollision(charge, jurisdiction) || isTexasAmbiguousDelivery(charge, jurisdiction) || isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
     isTexasAmbiguousVehicleBurglary(charge, jurisdiction);
 }

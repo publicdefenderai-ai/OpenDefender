@@ -157,3 +157,14 @@ test("Texas justice-process choices preserve ordinary, corpse and juror grades a
   expect(charges.find((r:{id:string})=>r.id==="tx-pc-37-09-unreported-corpse").category).toBe("misdemeanor");
   expect(charges.find((r:{id:string})=>r.id==="tx-pc-36-06-obstruction-juror").maxPenalty).toContain("Second-degree felony");
 });
+
+test("Texas road-safety choices correct reckless driving and replace generic hit-and-run", async ({request}) => {
+  const response=await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");
+  expect(response.ok()).toBe(true);
+  const {charges}=await response.json();
+  const reviewed=JSON.parse(readFileSync("shared/texas-road-safety.json","utf8"));
+  for(const row of reviewed) expect(charges.find((r:{id:string})=>r.id===row.id)).toMatchObject({name:row.name,code:row.code,description:row.conduct,maxPenalty:row.penalty,category:row.category});
+  expect(charges.find((r:{id:string})=>r.id==="tx-hit-and-run")).toBeUndefined();
+  expect(charges.find((r:{id:string})=>r.id==="tx-reckless-driving").maxPenalty).toContain("30 days");
+  expect(charges.find((r:{id:string})=>r.id==="tx-tn-550-021-other-injury").maxPenalty).toContain("$5,000");
+});

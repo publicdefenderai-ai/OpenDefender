@@ -40,7 +40,11 @@ import familyEvidence from "../output/texas-family-safety-evidence.json";
 import justiceRows from "../../../shared/texas-justice-process.json";
 import justiceEvidence from "../output/texas-justice-process-evidence.json";
 
+import roadRows from "../../../shared/texas-road-safety.json";
+import roadEvidence from "../output/texas-road-safety-evidence.json";
+
 const batches = new Map([
+  ["road-safety", { rows: roadRows, evidence: Object.entries(roadEvidence) }],
   ["justice-process", { rows: justiceRows, evidence: Object.entries(justiceEvidence) }],
   ["family-safety", { rows: familyRows, evidence: Object.entries(familyEvidence) }],
   ["ranked-delivery", { rows: deliveryRows, evidence: Object.entries(deliveryEvidence) }],
