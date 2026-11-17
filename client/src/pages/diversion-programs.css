@@ -1,0 +1,27 @@
+.diversion-directory { max-width: 70rem; margin: auto; padding: 0 clamp(1rem, 5vw, 4rem) 4rem; }
+.diversion-directory header { margin-block: clamp(2rem, 5vw, 4rem) 2rem; }
+.diversion-directory h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 500; letter-spacing: -.04em; line-height: 1.1; }
+.diversion-directory h1 span { display: block; color: var(--primary); }
+.diversion-directory header p, .diversion-empty p { max-width: 68ch; line-height: 1.7; margin-top: 1rem; }
+.diversion-filters, .diversion-details { padding: clamp(1rem, 3vw, 1.75rem); background: var(--muted); }
+.diversion-filter-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)) auto; align-items: end; gap: 1rem; margin-top: 1rem; }
+.diversion-filters label { display: block; font-size: .9rem; }
+.diversion-filters input, .diversion-filters select { width: 100%; margin-top: .4rem; min-height: 44px; background: var(--background); border: 1px solid var(--border); border-radius: .25rem; padding: .65rem; font-size: 1rem; }
+.diversion-filters button { min-height: 44px; text-align: start; color: var(--primary); }
+.diversion-filters button:disabled { color: var(--muted-foreground); }
+.diversion-count, .diversion-result { padding-block: 1.25rem; border-bottom: 1px solid var(--border); }
+.diversion-count, .diversion-notice, .diversion-result small { color: var(--muted-foreground); font-size: .9rem; }
+.diversion-result { display: grid; grid-template-columns: 9rem minmax(0,1fr); gap: 1.5rem; overflow-wrap: anywhere; }
+.diversion-result small { display: block; }
+.diversion-directory h2 { font-size: 1.45rem; font-weight: 500; }
+.diversion-result summary { cursor: pointer; padding-block: .75rem; color: var(--primary); }
+.diversion-details h3 { font-weight: 600; }
+.diversion-details p { margin-bottom: 1rem; line-height: 1.65; }
+.diversion-directory nav, .diversion-contacts { display: flex; gap: .75rem 1.5rem; flex-wrap: wrap; }
+.diversion-directory nav { border-top: 1px solid var(--border); padding-top: 1rem; }
+.diversion-directory a { color: var(--primary); text-decoration: underline; text-underline-offset: .2em; }
+.diversion-empty { padding-block: 2rem; }
+.diversion-notice { margin-block: 2rem 1rem; max-width: 80ch; }
+@media (max-width: 700px) {
+  .diversion-filter-row, .diversion-result { grid-template-columns: minmax(0,1fr); gap: .75rem; }
+}

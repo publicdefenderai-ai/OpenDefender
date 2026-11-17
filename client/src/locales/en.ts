@@ -4784,6 +4784,15 @@ export default {
     }
   },
   "diversionPrograms": {
+    "directory": {
+      "title": "Explore diversion.",
+      "accent": "Understand your options.",
+      "intro": "Find diversion and alternative sentencing programs by location and program type. Review the details with your lawyer to understand what may apply to your case.",
+      "location": "City, county, state, or ZIP code",
+      "details": "Eligibility and contact details",
+      "notice": "Availability, eligibility, requirements, and outcomes vary. Confirm the current details with your lawyer and the program before making a decision.",
+      "related": "Related pages"
+    },
     "hero": {
       "title": "Diversion Programs",
       "subtitle": "Find treatment, community service, and supervision programs that may resolve charges outside of traditional prosecution"
