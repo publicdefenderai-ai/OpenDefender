@@ -11,7 +11,9 @@ NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
 SOURCE = "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx"
 
 
-def rank(path):
+def rank(path, limit=25):
+    if limit < 1:
+        raise ValueError("Ranking length must be positive")
     with ZipFile(path) as archive:
         strings = ["".join(t.text or "" for t in si.iter(NS + "t"))
                    for si in ElementTree.fromstring(archive.read("xl/sharedStrings.xml"))]
@@ -46,15 +48,16 @@ def rank(path):
     return dict(source=SOURCE, sha256=hashlib.sha256(path.read_bytes()).hexdigest(), workbookAsOf=rows[1]["A"],
                 year=2025, statewideAdult=int(rows[-1]["H"]), statewideJuvenile=int(rows[-1]["I"]),
                 eligibleCodes=len(eligible), excludedCodes=len(excluded),
-                excludedAdult=sum(r["adult"] for r in excluded), top25=eligible[:25])
+                excludedAdult=sum(r["adult"] for r in excluded), **{f"top{limit}": eligible[:limit]})
 
 
 if __name__ == "__main__":
     cli = argparse.ArgumentParser(description=__doc__)
     cli.add_argument("workbook", type=Path)
     cli.add_argument("--check", type=Path)
+    cli.add_argument("--limit", type=int, default=25)
     args = cli.parse_args()
-    result = rank(args.workbook)
+    result = rank(args.workbook, args.limit)
     if args.check:
         if result != json.loads(args.check.read_text()):
             raise SystemExit("DPS source, workbook or ranking differs from reviewed result")

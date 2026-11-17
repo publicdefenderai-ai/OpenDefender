@@ -22,7 +22,11 @@ import closeoutEvidence from "../output/texas-priority-closeout-evidence.json";
 import carryRows from "../../../shared/texas-carry-branches.json";
 import carryEvidence from "../output/texas-carry-branches-evidence.json";
 
+import lossRows from "../../../shared/texas-property-loss.json";
+import lossEvidence from "../output/texas-property-loss-evidence.json";
+
 const batches = new Map([
+  ["property-loss", { rows: lossRows, evidence: Object.entries(lossEvidence) }],
   ["carry-branches", { rows: carryRows, evidence: Object.entries(carryEvidence) }],
   ["priority-closeout", { rows: closeoutRows, evidence: Object.entries(closeoutEvidence) }],
   ["assault-intoxication", { rows: assaultRows, evidence: Object.entries(assaultEvidence) }],

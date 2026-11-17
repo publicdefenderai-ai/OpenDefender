@@ -35,10 +35,10 @@ describe("Texas authority manifest", () => {
 
     expect(manifest.catalogRecords).toHaveLength(txCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(txCount);
-    expect(seed.sources).toHaveLength(81);
-    expect(seed.snapshots).toHaveLength(418);
-    expect(seed.links).toHaveLength(418);
-    expect(seed.selectableChargeIds).toHaveLength(81);
+    expect(seed.sources).toHaveLength(82);
+    expect(seed.snapshots).toHaveLength(510);
+    expect(seed.links).toHaveLength(510);
+    expect(seed.selectableChargeIds).toHaveLength(93);
     expect(seed.selectableChargeIds).toContain("tx-aggravated-assault");
     expect(seed.selectableChargeIds).not.toContain("tx-bank-robbery");
     expect(seed.selectableChargeIds).not.toContain("tx-wire-fraud");
@@ -47,10 +47,10 @@ describe("Texas authority manifest", () => {
   });
 
   it("stores TCSS text, hashes, currentness evidence, and official source identity", () => {
-    const charge = criminalCharges.find((candidate) => candidate.id === "tx-criminal-mischief")!;
+    const charge = criminalCharges.find((candidate) => candidate.id === "tx-forgery")!;
     const record = buildTexasManifestRecord(
       charge,
-      [document("PE", "28.03", "CRIMINAL MISCHIEF.")],
+      [document("PE", "32.21", "FORGERY.")],
       importedAt,
     );
     const seed = buildTexasSourceDatabaseSeed({
@@ -62,19 +62,19 @@ describe("Texas authority manifest", () => {
 
     expect(["retain", "exact_alias_rename"]).toContain(record.disposition);
     expect(record.provisions[0]).toMatchObject({
-      section: "28.03",
-      officialTitle: "CRIMINAL MISCHIEF.",
+      section: "32.21",
+      officialTitle: "FORGERY.",
       content: expect.stringContaining("statutory elements"),
       hashBasis: "source_content",
       effectiveDateStart: "September 1, 2025",
     });
     expect(seed.sources[0]).toMatchObject({
       publisher: "Texas Legislative Council TCSS",
-      canonicalUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.28.htm#28.03",
+      canonicalUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.32.htm#32.21",
       accessPolicy: "store_text",
       canStoreContent: true,
     });
-    expect(seed.selectableChargeIds).toEqual(["tx-criminal-mischief"]);
+    expect(seed.selectableChargeIds).toEqual(["tx-forgery"]);
   });
 
   it("extracts the latest complete effective date from amended TCSS text", () => {

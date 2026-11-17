@@ -1,3 +1,4 @@
+import loss from "./texas-property-loss.json";
 import carry from "./texas-carry-branches.json";
 import closeout from "./texas-priority-closeout.json";
 import arrest from "./texas-ranked-arrest.json";
@@ -29,6 +30,7 @@ export const texasReviewedRecords = [
   ...arrest,
   ...closeout,
   ...carry,
+  ...loss,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 
