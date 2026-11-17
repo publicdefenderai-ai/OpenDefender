@@ -41,6 +41,19 @@ const deliveryTransfer = {
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-13.htm&version=048",
 };
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
+  "tx-tn-550-021-death": {
+    instructionRef: "CPJC 80.2: Failure to Stop and Render Aid (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F80_Transportation_Code_Offenses%2FCPJC80-2.htm&version=007",
+  },
+  "tx-tn-550-021-serious-injury": {
+    instructionRef: "CPJC 80.2: Failure to Stop and Render Aid (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F80_Transportation_Code_Offenses%2FCPJC80-2.htm&version=007",
+  },
+  "tx-tn-550-021-other-injury": {
+    instructionRef: "CPJC 80.2: Failure to Stop and Render Aid (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F80_Transportation_Code_Offenses%2FCPJC80-2.htm&version=007",
+  },
+
   "tx-pc-37-09-pending": {
     instructionRef: "CPJC 37.9: Tampering with Physical Evidence Knowing of Pending or Ongoing Investigation or Official Proceeding (underlying conduct only)",
     instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F37_Perjury_and_Other_Falsification%2FCPJC37-9.htm&version=053",

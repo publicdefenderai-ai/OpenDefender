@@ -1,0 +1,1428 @@
+[
+  {
+    "id": "tx-reckless-driving",
+    "name": "Reckless driving",
+    "officialTitle": "RECKLESS DRIVING; OFFENSE.",
+    "category": "misdemeanor",
+    "code": "545.401(a)",
+    "citation": "Tex. Transp. Code § 545.401(a)",
+    "conduct": "Driving a vehicle in wilful or wanton disregard for the safety of persons or property. The statute applies on a highway or other public place and on business customer access/parking areas, but its private-area extension excludes private residential property and garages or lots charging to store or park vehicles. The highway-surface-work exemption does not apply to this offense. A traffic mistake alone does not replace the required wilful or wanton disregard.",
+    "penalty": "Misdemeanor with its own statutory range: up to 30 days in county jail, a fine up to $200, or both. It is not the ordinary one-year Class A range. Qualifying prior-conviction rules require separate review.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "545.401",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "545.401",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.401",
+        "subdivision": "(c), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "542.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "542.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "54990044"
+  },
+  {
+    "id": "tx-tn-545-420-ordinary",
+    "name": "Racing on highway (ordinary grade)",
+    "officialTitle": "RACING ON HIGHWAY; IMPOUNDMENT OF A VEHICLE.",
+    "category": "misdemeanor",
+    "code": "545.420(a)",
+    "citation": "Tex. Transp. Code § 545.420(a)",
+    "conduct": "Participating on a highway in a race, vehicle speed competition or contest, drag race or acceleration contest, operator-endurance test, or an exhibition of speed/acceleration or vehicle speed record in connection with a drag race. The statutory race definition covers one or more vehicles attempting to outgain/outdistance another, prevent passing, reach a destination ahead of another, or test operator endurance over a long-distance route. The drag-race definition includes side-by-side competition and comparison runs over a common selected course. Rapid acceleration alone does not automatically establish the drag-race-connected exhibition branch. This choice excludes the prior-conviction, intoxication/open-container, and injury/death circumstances.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying prior convictions can change punishment under Penal Code §§12.41 and 12.43. Section 521.350 provides automatic license suspension for one year subject to its early-reinstatement provisions, at least ten hours of court-ordered community service, and possible occupational-license eligibility with stricter limits for people under 18. Section 545.420(i) requires vehicle removal/storage unless seized as evidence and makes the owner responsible for removal/storage charges before release.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a), (b), (d), (e), (f), (g), (h), (i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "542.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.350",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "18.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "54990031"
+  },
+  {
+    "id": "tx-tn-545-420-one-prior",
+    "name": "Racing on highway (one prior racing conviction)",
+    "officialTitle": "RACING ON HIGHWAY; IMPOUNDMENT OF A VEHICLE.",
+    "category": "misdemeanor",
+    "code": "545.420(a)",
+    "citation": "Tex. Transp. Code § 545.420(a)",
+    "conduct": "Participating on a highway in a race, vehicle speed competition or contest, drag race or acceleration contest, operator-endurance test, or an exhibition of speed/acceleration or vehicle speed record in connection with a drag race. The statutory race definition covers one or more vehicles attempting to outgain/outdistance another, prevent passing, reach a destination ahead of another, or test operator endurance over a long-distance route. The drag-race definition includes side-by-side competition and comparison runs over a common selected course. Rapid acceleration alone does not automatically establish the drag-race-connected exhibition branch. The person has one prior conviction under §545.420(a), and no higher injury/death grade applies.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying prior convictions can change punishment under Penal Code §§12.41 and 12.43. Section 521.350 provides automatic license suspension for one year subject to its early-reinstatement provisions, at least ten hours of court-ordered community service, and possible occupational-license eligibility with stricter limits for people under 18. Section 545.420(i) requires vehicle removal/storage unless seized as evidence and makes the owner responsible for removal/storage charges before release.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(e)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a), (b), (d), (e), (f), (g), (h), (i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "542.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.350",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "18.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-tn-545-420-intoxicated",
+    "name": "Racing on highway (intoxicated operation)",
+    "officialTitle": "RACING ON HIGHWAY; IMPOUNDMENT OF A VEHICLE.",
+    "category": "misdemeanor",
+    "code": "545.420(a)",
+    "citation": "Tex. Transp. Code § 545.420(a)",
+    "conduct": "Participating on a highway in a race, vehicle speed competition or contest, drag race or acceleration contest, operator-endurance test, or an exhibition of speed/acceleration or vehicle speed record in connection with a drag race. The statutory race definition covers one or more vehicles attempting to outgain/outdistance another, prevent passing, reach a destination ahead of another, or test operator endurance over a long-distance route. The drag-race definition includes side-by-side competition and comparison runs over a common selected course. Rapid acceleration alone does not automatically establish the drag-race-connected exhibition branch. The person operated the vehicle while intoxicated as defined in Penal Code §49.01; a higher prior-conviction or injury/death grade is outside this choice.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying prior convictions can change punishment under Penal Code §§12.41 and 12.43. Section 521.350 provides automatic license suspension for one year subject to its early-reinstatement provisions, at least ten hours of court-ordered community service, and possible occupational-license eligibility with stricter limits for people under 18. Section 545.420(i) requires vehicle removal/storage unless seized as evidence and makes the owner responsible for removal/storage charges before release.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(e)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a), (b), (d), (e), (f), (g), (h), (i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "542.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.350",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "18.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": "(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-tn-545-420-open-container",
+    "name": "Racing on highway (open-container circumstance)",
+    "officialTitle": "RACING ON HIGHWAY; IMPOUNDMENT OF A VEHICLE.",
+    "category": "misdemeanor",
+    "code": "545.420(a)",
+    "citation": "Tex. Transp. Code § 545.420(a)",
+    "conduct": "Participating on a highway in a race, vehicle speed competition or contest, drag race or acceleration contest, operator-endurance test, or an exhibition of speed/acceleration or vehicle speed record in connection with a drag race. The statutory race definition covers one or more vehicles attempting to outgain/outdistance another, prevent passing, reach a destination ahead of another, or test operator endurance over a long-distance route. The drag-race definition includes side-by-side competition and comparison runs over a common selected course. Rapid acceleration alone does not automatically establish the drag-race-connected exhibition branch. The person possessed an open container as defined in Penal Code §49.031; a higher prior-conviction or injury/death grade is outside this choice.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying prior convictions can change punishment under Penal Code §§12.41 and 12.43. Section 521.350 provides automatic license suspension for one year subject to its early-reinstatement provisions, at least ten hours of court-ordered community service, and possible occupational-license eligibility with stricter limits for people under 18. Section 545.420(i) requires vehicle removal/storage unless seized as evidence and makes the owner responsible for removal/storage charges before release.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(e)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a), (b), (d), (e), (f), (g), (h), (i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "542.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.350",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "18.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.031",
+        "subdivision": "(a)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "1.04",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-tn-545-420-two-priors",
+    "name": "Racing on highway (two prior racing convictions)",
+    "officialTitle": "RACING ON HIGHWAY; IMPOUNDMENT OF A VEHICLE.",
+    "category": "felony",
+    "code": "545.420(a)",
+    "citation": "Tex. Transp. Code § 545.420(a)",
+    "conduct": "Participating on a highway in a race, vehicle speed competition or contest, drag race or acceleration contest, operator-endurance test, or an exhibition of speed/acceleration or vehicle speed record in connection with a drag race. The statutory race definition covers one or more vehicles attempting to outgain/outdistance another, prevent passing, reach a destination ahead of another, or test operator endurance over a long-distance route. The drag-race definition includes side-by-side competition and comparison runs over a common selected course. Rapid acceleration alone does not automatically establish the drag-race-connected exhibition branch. The state-jail branch requires two prior convictions under §545.420(a), without a higher injury/death grade.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Qualifying findings or prior convictions can change punishment. Section 521.350 provides automatic license suspension for one year subject to its early-reinstatement provisions, at least ten hours of court-ordered community service, and possible occupational-license eligibility with stricter limits for people under 18. Section 545.420(i) requires vehicle removal/storage unless seized as evidence and makes the owner responsible for removal/storage charges before release.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a), (b), (d), (e), (f), (g), (h), (i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "542.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.350",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "18.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-tn-545-420-bodily-injury",
+    "name": "Racing on highway (resulting bodily injury)",
+    "officialTitle": "RACING ON HIGHWAY; IMPOUNDMENT OF A VEHICLE.",
+    "category": "felony",
+    "code": "545.420(a)",
+    "citation": "Tex. Transp. Code § 545.420(a)",
+    "conduct": "Participating on a highway in a race, vehicle speed competition or contest, drag race or acceleration contest, operator-endurance test, or an exhibition of speed/acceleration or vehicle speed record in connection with a drag race. The statutory race definition covers one or more vehicles attempting to outgain/outdistance another, prevent passing, reach a destination ahead of another, or test operator endurance over a long-distance route. The drag-race definition includes side-by-side competition and comparison runs over a common selected course. Rapid acceleration alone does not automatically establish the drag-race-connected exhibition branch. An individual suffered bodily injury as a result of the offense, without the serious-bodily-injury or death circumstance.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. Section 521.350 provides automatic license suspension for one year subject to its early-reinstatement provisions, at least ten hours of court-ordered community service, and possible occupational-license eligibility with stricter limits for people under 18. Section 545.420(i) requires vehicle removal/storage unless seized as evidence and makes the owner responsible for removal/storage charges before release.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a), (b), (d), (e), (f), (g), (h), (i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "542.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.350",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "18.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-tn-545-420-serious-or-death",
+    "name": "Racing on highway (resulting serious bodily injury or death)",
+    "officialTitle": "RACING ON HIGHWAY; IMPOUNDMENT OF A VEHICLE.",
+    "category": "felony",
+    "code": "545.420(a)",
+    "citation": "Tex. Transp. Code § 545.420(a)",
+    "conduct": "Participating on a highway in a race, vehicle speed competition or contest, drag race or acceleration contest, operator-endurance test, or an exhibition of speed/acceleration or vehicle speed record in connection with a drag race. The statutory race definition covers one or more vehicles attempting to outgain/outdistance another, prevent passing, reach a destination ahead of another, or test operator endurance over a long-distance route. The drag-race definition includes side-by-side competition and comparison runs over a common selected course. Rapid acceleration alone does not automatically establish the drag-race-connected exhibition branch. An individual suffered serious bodily injury or death as a result of the offense.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. Section 521.350 provides automatic license suspension for one year subject to its early-reinstatement provisions, at least ten hours of court-ordered community service, and possible occupational-license eligibility with stricter limits for people under 18. Section 545.420(i) requires vehicle removal/storage unless seized as evidence and makes the owner responsible for removal/storage charges before release.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.420",
+        "subdivision": "(a), (b), (d), (e), (f), (g), (h), (i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "542.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.350",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "18.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-tn-550-021-death",
+    "name": "Collision involving death (failure to stop or comply with duties)",
+    "officialTitle": "COLLISION INVOLVING PERSONAL INJURY OR DEATH.",
+    "category": "felony",
+    "code": "550.021(a)",
+    "citation": "Tex. Transp. Code § 550.021(a)",
+    "conduct": "As the operator of a vehicle involved in a collision, knowing of the collision and that it resulted or was reasonably likely to result in injury or death, failing to comply with the stopping, returning, checking for people needing aid, or remaining-and-assisting duties in §550.021(a). This choice requires a collision actually resulting in death. The duty to stop does not depend on fault for causing the collision. Stop without obstructing traffic more than necessary. The required exchange includes the operator’s name and address, vehicle registration and liability insurer; an available driver’s license must be shown on request. Reasonable aid includes arranging or providing medical transportation when treatment is apparently necessary or requested. Chapter 550 applies to public highways/places, water-control-and-improvement-district roads and specified business-access/parking areas. Its business-area provision excludes private residential property but includes paid vehicle-storage or parking property. Serious bodily injury has the definition in Penal Code §1.07(a)(46).",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. A final conviction also triggers automatic driver-license suspension under §521.341(6); duration and license relief depend on the applicable provisions and case facts.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "550.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "550.021",
+        "subdivision": "(c)(1)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.023",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.401",
+        "subdivision": "(7), (10)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.021",
+        "subdivision": "(a), (b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(23), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.341",
+        "subdivision": "(6)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "521.343",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-tn-550-021-serious-injury",
+    "name": "Collision involving serious bodily injury (failure to stop or comply with duties)",
+    "officialTitle": "COLLISION INVOLVING PERSONAL INJURY OR DEATH.",
+    "category": "felony",
+    "code": "550.021(a)",
+    "citation": "Tex. Transp. Code § 550.021(a)",
+    "conduct": "As the operator of a vehicle involved in a collision, knowing of the collision and that it resulted or was reasonably likely to result in injury or death, failing to comply with the stopping, returning, checking for people needing aid, or remaining-and-assisting duties in §550.021(a). This choice requires a collision actually resulting in serious bodily injury. The duty to stop does not depend on fault for causing the collision. Stop without obstructing traffic more than necessary. The required exchange includes the operator’s name and address, vehicle registration and liability insurer; an available driver’s license must be shown on request. Reasonable aid includes arranging or providing medical transportation when treatment is apparently necessary or requested. Chapter 550 applies to public highways/places, water-control-and-improvement-district roads and specified business-access/parking areas. Its business-area provision excludes private residential property but includes paid vehicle-storage or parking property. Serious bodily injury has the definition in Penal Code §1.07(a)(46).",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. A final conviction also triggers automatic driver-license suspension under §521.341(6); duration and license relief depend on the applicable provisions and case facts.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "550.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "550.021",
+        "subdivision": "(c)(1)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.023",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.401",
+        "subdivision": "(7), (10)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.021",
+        "subdivision": "(a), (b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(23), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.341",
+        "subdivision": "(6)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "521.343",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-tn-550-021-other-injury",
+    "name": "Collision involving injury that is neither serious bodily injury nor death (failure to stop or comply with duties)",
+    "officialTitle": "COLLISION INVOLVING PERSONAL INJURY OR DEATH.",
+    "category": "felony",
+    "code": "550.021(a)",
+    "citation": "Tex. Transp. Code § 550.021(a)",
+    "conduct": "As the operator of a vehicle involved in a collision, knowing of the collision and that it resulted or was reasonably likely to result in injury or death, failing to comply with the stopping, returning, checking for people needing aid, or remaining-and-assisting duties in §550.021(a). This choice requires a collision actually resulting in injury that is neither serious bodily injury nor death. The duty to stop does not depend on fault for causing the collision. Stop without obstructing traffic more than necessary. The required exchange includes the operator’s name and address, vehicle registration and liability insurer; an available driver’s license must be shown on request. Reasonable aid includes arranging or providing medical transportation when treatment is apparently necessary or requested. Chapter 550 applies to public highways/places, water-control-and-improvement-district roads and specified business-access/parking areas. Its business-area provision excludes private residential property but includes paid vehicle-storage or parking property. Serious bodily injury has the definition in Penal Code §1.07(a)(46).",
+    "penalty": "Felony with a special statutory punishment range: up to five years in the Texas Department of Criminal Justice or up to one year in county jail, a fine up to $5,000, or both the fine and custody. The county-jail alternative does not make this a misdemeanor. The ordinary third-degree two-to-ten-year range is not substituted for §550.021(c)(2); qualifying prior convictions require separate review. A final conviction also triggers automatic driver-license suspension under §521.341(6); duration and license relief depend on the applicable provisions and case facts.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "550.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "550.021",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.023",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.401",
+        "subdivision": "(7), (10)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.021",
+        "subdivision": "(a), (b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(23), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.341",
+        "subdivision": "(6)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "521.343",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": "(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-tn-550-022-under-200",
+    "name": "Collision involving attended-vehicle damage (less than $200)",
+    "officialTitle": "COLLISION INVOLVING DAMAGE TO VEHICLE.",
+    "category": "misdemeanor",
+    "code": "550.022(a)",
+    "citation": "Tex. Transp. Code § 550.022(a)",
+    "conduct": "Knowing the vehicle was involved in a collision resulting only in damage to a driven or attended vehicle, failing to stop, return or remain until completing the required information/aid duties under §550.022(a). Damage to all vehicles totals less than $200. The required exchange includes the operator’s name and address, vehicle registration and liability insurer; an available driver’s license must be shown on request. Reasonable aid includes arranging or providing medical transportation when treatment is apparently necessary or requested. The metropolitan-freeway relocation provision in (b) is separate: if all vehicles can normally and safely be driven, operators must promptly relocate to a suitable place to complete the exchange and reduce traffic interference. Chapter 550 applies to public highways/places, water-control-and-improvement-district roads and specified business-access/parking areas. Its business-area provision excludes private residential property but includes paid vehicle-storage or parking property.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, without a jail term as the ordinary punishment. Separate repeat-offense or procedural consequences are not decided by this summary.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "550.022",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "550.022",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.023",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.401",
+        "subdivision": "(7), (10)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.022",
+        "subdivision": "(b), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(3), (4), (10)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-tn-550-022-200-plus",
+    "name": "Collision involving attended-vehicle damage ($200 or more)",
+    "officialTitle": "COLLISION INVOLVING DAMAGE TO VEHICLE.",
+    "category": "misdemeanor",
+    "code": "550.022(a)",
+    "citation": "Tex. Transp. Code § 550.022(a)",
+    "conduct": "Knowing the vehicle was involved in a collision resulting only in damage to a driven or attended vehicle, failing to stop, return or remain until completing the required information/aid duties under §550.022(a). Damage to all vehicles totals $200 or more. The required exchange includes the operator’s name and address, vehicle registration and liability insurer; an available driver’s license must be shown on request. Reasonable aid includes arranging or providing medical transportation when treatment is apparently necessary or requested. The metropolitan-freeway relocation provision in (b) is separate: if all vehicles can normally and safely be driven, operators must promptly relocate to a suitable place to complete the exchange and reduce traffic interference. Chapter 550 applies to public highways/places, water-control-and-improvement-district roads and specified business-access/parking areas. Its business-area provision excludes private residential property but includes paid vehicle-storage or parking property.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying prior convictions can change punishment under Penal Code §§12.41 and 12.43.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "550.022",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "550.022",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.023",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.401",
+        "subdivision": "(7), (10)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.022",
+        "subdivision": "(b), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(3), (4), (10)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "54010010"
+  },
+  {
+    "id": "tx-tn-550-022-freeway-relocation",
+    "name": "Collision involving vehicle damage (failure to relocate on metropolitan freeway)",
+    "officialTitle": "COLLISION INVOLVING DAMAGE TO VEHICLE.",
+    "category": "misdemeanor",
+    "code": "550.022(b)",
+    "citation": "Tex. Transp. Code § 550.022(b)",
+    "conduct": "Failing to move the vehicle as soon as possible after a collision on a main lane, ramp, shoulder, median or adjacent area of a freeway in a metropolitan area when every involved vehicle can normally and safely be driven. The operator must move to an available designated collision-investigation site, frontage road, nearest suitable cross street or other suitable location to complete §550.023 duties and minimize traffic interference. A vehicle must not require towing and must operate under its own power in its usual manner without additional damage or hazard. This is separate from simply leaving the scene. Chapter 550 applies to public highways/places, water-control-and-improvement-district roads and specified business-access/parking areas. Its business-area provision excludes private residential property but includes paid vehicle-storage or parking property.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, without a jail term as the ordinary punishment. Separate repeat-offense or procedural consequences are not decided by this summary.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "550.022",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "550.022",
+        "subdivision": "(c-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.023",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.401",
+        "subdivision": "(7), (10)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.022",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": "(3), (4), (10)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-tn-550-024-under-200",
+    "name": "Duty on striking unattended vehicle (less than $200)",
+    "officialTitle": "DUTY ON STRIKING UNATTENDED VEHICLE.",
+    "category": "misdemeanor",
+    "code": "550.024(a)",
+    "citation": "Tex. Transp. Code § 550.024(a)",
+    "conduct": "As the operator of a vehicle that collides with and damages an unattended vehicle, failing immediately to stop and either locate its operator/owner and give the specified operator/owner names and addresses, or leave a conspicuous or securely attached plainly visible written notice containing those names/addresses and a statement of the collision circumstances. Damage to all vehicles involved totals less than $200. The notice alternative applies to an unattended vehicle; it does not replace the separate duties for an attended vehicle or an injured person. Chapter 550 applies to public highways/places, water-control-and-improvement-district roads and specified business-access/parking areas. Its business-area provision excludes private residential property but includes paid vehicle-storage or parking property.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, without a jail term as the ordinary punishment. Separate repeat-offense or procedural consequences are not decided by this summary.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "550.024",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "550.024",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.401",
+        "subdivision": "(10)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-tn-550-024-200-plus",
+    "name": "Duty on striking unattended vehicle ($200 or more)",
+    "officialTitle": "DUTY ON STRIKING UNATTENDED VEHICLE.",
+    "category": "misdemeanor",
+    "code": "550.024(a)",
+    "citation": "Tex. Transp. Code § 550.024(a)",
+    "conduct": "As the operator of a vehicle that collides with and damages an unattended vehicle, failing immediately to stop and either locate its operator/owner and give the specified operator/owner names and addresses, or leave a conspicuous or securely attached plainly visible written notice containing those names/addresses and a statement of the collision circumstances. Damage to all vehicles involved totals $200 or more. The notice alternative applies to an unattended vehicle; it does not replace the separate duties for an attended vehicle or an injured person. Chapter 550 applies to public highways/places, water-control-and-improvement-district roads and specified business-access/parking areas. Its business-area provision excludes private residential property but includes paid vehicle-storage or parking property.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying prior convictions can change punishment under Penal Code §§12.41 and 12.43.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "550.024",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "550.024",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.401",
+        "subdivision": "(10)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1201.003",
+        "subdivision": "(18)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]

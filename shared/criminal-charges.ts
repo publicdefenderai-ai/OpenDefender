@@ -1,4 +1,4 @@
-import { texasHeldDeliveryIds, texasHeldCarryId, texasHeldTheftId, texasReviewedRecords } from "./texas-reviewed";
+import { texasHeldRoadId, texasHeldDeliveryIds, texasHeldCarryId, texasHeldTheftId, texasReviewedRecords } from "./texas-reviewed";
 import { texasDwiRecords } from "./texas-dwi";
 import { floridaRemainingChargeText, floridaRemainingDisplayName } from "./florida-legacy-remaining";
 import { floridaSexualChargeText, floridaSexualDisplayName } from "./florida-legacy-sexual";
@@ -40548,26 +40548,13 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
-    id: 'tx-reckless-driving',
-    name: 'Reckless Driving',
-    code: '545.401',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Driving with willful disregard for safety under Texas law',
-    maxPenalty: 'Up to 1 year jail and/or fines',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
-  },
-  {
     id: 'tx-hit-and-run',
     name: 'Hit and Run',
     code: '550.021',
     jurisdiction: 'TX',
     category: 'misdemeanor',
-    description: 'Leaving scene of accident with injury under Texas law',
-    maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
+    description: 'Historical collision selection requiring the applicable injury, damage and duty branch.',
+    maxPenalty: 'Select the applicable collision branch to determine the penalty.',
     commonDefenses: ['Consult with attorney for applicable defenses'],
     evidenceToGather: ['Gather all relevant documentation and evidence'],
     specificRights: ['Constitutional rights apply to all criminal cases'],
@@ -94951,6 +94938,10 @@ for (const [group, sections] of [['Violent Crimes', californiaPeopleSections], [
 for (const group of ["TX", "DUI & Traffic", "DUI/Traffic Crimes"]) {
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...texasDwiRecords.map(row => row.id)])];
 }
+for (const group of ["DUI & Traffic", "DUI/Traffic Crimes"]) {
+  const ids = texasReviewedRecords.filter(row => row.references[0].code === "TN").map(row => row.id);
+  chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
+}
 for (const group of ["Drug Offenses", "Drug Crimes"]) {
   const ids = texasReviewedRecords.filter(row => row.references[0].code === "HS").map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
@@ -94980,7 +94971,7 @@ function withAuthorityDisplayName(charge: CriminalCharge): CriminalCharge {
 export function getChargeById(id: string): CriminalCharge | undefined {
   const normalizedId = normalizeChargeId(id);
   if (
-    texasHeldDeliveryIds.has(normalizedId) || normalizedId === texasHeldCarryId || normalizedId === texasHeldTheftId ||
+    normalizedId === texasHeldRoadId || texasHeldDeliveryIds.has(normalizedId) || normalizedId === texasHeldCarryId || normalizedId === texasHeldTheftId ||
     NY_CHARGE_IDS_REQUIRING_RESELECTION.has(normalizedId) ||
     OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(normalizedId)
   ) return undefined;
