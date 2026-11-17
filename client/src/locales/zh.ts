@@ -5484,6 +5484,7 @@ export default {
     }
   },
   "errorRecovery": {"title": "出现了问题", "description": "发生了意外错误。您可以重新加载此页面或返回首页。", "warning": "重新加载或离开此页面可能会丢失尚未保存的输入内容。服务器临时记录的到期方式见隐私政策。", "reload": "重新加载页面", "home": "返回首页", "privacy": "隐私政策"},
+  "missingPage": {"title": "找不到此页面", "description": "您要查找的页面可能已移动，或链接有误。", "home": "返回首页", "resources": "浏览资源"},
   "privacyPolicy": {
     "reader": {"contents": "本页内容 · {{count}} 个类别", "index": "隐私政策目录", "sources": "数据来源"},
     "hero": {

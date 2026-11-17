@@ -713,3 +713,7 @@ The 12-category policy uses the shared reading layout and contents index. Its AI
 ### Application error recovery
 
 The root render-error fallback uses the site palette and a clear warning symbol. English, Spanish and Chinese messages explain recovery and the risk of losing unsaved input. Native reload and homepage actions work independently of the application router. A Privacy Policy link accompanies the existing temporary-records notice. The fallback provides its own main landmark because the failed application is unmounted.
+
+### Missing-page recovery
+
+Unknown URLs use the shared header, appearance controls and footer. A document warning symbol and localized explanation identify the error. Homepage and resource-directory links provide recovery destinations. The route fallback is exercised with keyboard navigation across English, Spanish and Chinese, both themes, and 320px screens.

@@ -109,7 +109,12 @@ export function extractDocument(
   // TCSS places a second numeric/internal anchor immediately after the
   // section anchor. The next section starts at its own paragraph container,
   // not at the next <a name> tag.
-  const next = html.indexOf('<p class="left"><a name="', start + anchor.length);
+  let next = html.indexOf('<p class="left"><a name="', start + anchor.length);
+  // TCSS can publish separate amendment versions under repeated section anchors.
+  // Retain every adjacent version; choosing the first would hide source conflicts.
+  while (next >= 0 && html.startsWith(`<p class="left">${anchor}`, next)) {
+    next = html.indexOf('<p class="left"><a name="', next + `<p class="left">${anchor}`.length);
+  }
   const block = html.slice(start, next < 0 ? html.length : next);
   const sectionPattern = section.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const heading = block.match(new RegExp(

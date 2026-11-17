@@ -5482,6 +5482,7 @@ export default {
     }
   },
   "errorRecovery": {"title": "Something went wrong", "description": "An unexpected error occurred. You can reload this page or return to the homepage.", "warning": "Reloading or leaving this page may lose unsaved input. Temporary server records expire as described in the Privacy Policy.", "reload": "Reload page", "home": "Go to homepage", "privacy": "Privacy Policy"},
+  "missingPage": {"title": "We couldn’t find this page", "description": "The page you’re looking for may have moved, or the link may be incorrect.", "home": "Go to homepage", "resources": "Browse resources"},
   "privacyPolicy": {
     "reader": {"contents": "On this page · {{count}} categories", "index": "Privacy policy contents", "sources": "Data Sources"},
     "hero": {

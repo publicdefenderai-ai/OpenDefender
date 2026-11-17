@@ -5484,6 +5484,7 @@ export default {
     }
   },
   "errorRecovery": {"title": "Algo salió mal", "description": "Se produjo un error inesperado. Puede recargar esta página o volver al inicio.", "warning": "Si recarga o abandona esta página, puede perder los datos que no haya guardado. Los registros temporales del servidor caducan según lo descrito en la Política de Privacidad.", "reload": "Recargar página", "home": "Ir al inicio", "privacy": "Política de Privacidad"},
+  "missingPage": {"title": "No encontramos esta página", "description": "La página que busca puede haberse movido o el enlace puede ser incorrecto.", "home": "Ir al inicio", "resources": "Explorar recursos"},
   "privacyPolicy": {
     "reader": {"contents": "En esta página · {{count}} categorías", "index": "Índice de la política de privacidad", "sources": "Fuentes de datos"},
     "hero": {
