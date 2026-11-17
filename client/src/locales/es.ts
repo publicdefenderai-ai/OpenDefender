@@ -7696,7 +7696,7 @@ export default {
     }
   },
   "howTo": {
-    "design": {"title": "Empiece con lo que necesita ahora.", "screenshot": "La captura de pantalla se añadirá cuando se apruebe el diseño"},
+    "design": {"title": "Empiece con lo que necesita ahora.", "screenshot": "Abrir captura a tamaño completo (nueva pestaña)"},
     "pageTitle": "Guía de Navegación",
     "pageSubtitle": "Encuentre recursos legales, entienda sus derechos y obtenga el apoyo que necesita",
     "hero": {

@@ -2400,14 +2400,15 @@ a:focus-visible,
 .how-path-copy { min-width: 0; }
 .how-path-copy ul { list-style: disc; padding-left: 1.15rem; margin-top: 1.25rem; color: var(--muted-foreground); font-size: .9375rem; line-height: 1.6; }
 .how-path-copy li + li { margin-top: .65rem; }
-.how-shot { position: relative; min-height: 260px; margin: 0; padding: 2.5rem; background: var(--how-soft); border-radius: 5px 30px 5px 5px; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; color: var(--primary); }
-.how-shot::before { content: ''; position: absolute; top: 24px; left: 20px; right: 20px; border-top: 1px solid var(--border); }
+.how-shot { margin: 0; min-width: 0; padding: 1rem; background: var(--how-soft); border-radius: 8px; text-align: center; color: var(--primary); align-self: center; }
+.how-shot > a { display: block; }
+.how-shot img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: 4px; }
 .how-shot figcaption { margin-top: 1rem; font-weight: 600; line-height: 1.5; }
 .how-shot small { display: block; margin-top: .5rem; color: var(--muted-foreground); font-weight: 400; font-size: .875rem; }
 .how-path:nth-child(even) { grid-template-columns: minmax(0,1.1fr) 42px minmax(0,1fr); }
 .how-path:nth-child(even) .how-number { grid-column: 2; grid-row: 1; }
 .how-path:nth-child(even) .how-path-copy { grid-column: 3; grid-row: 1; }
-.how-path:nth-child(even) .how-shot { grid-column: 1; grid-row: 1; background: var(--how-warm); border-radius: 30px 5px 5px 5px; }
+.how-path:nth-child(even) .how-shot { grid-column: 1; grid-row: 1; background: var(--how-warm); border-radius: 8px; }
 .how-journey-band { background: var(--how-soft); margin-top: 3rem; padding: 3rem 0; }
 .how-journey-pair { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 2.5rem; }
 .how-journey { min-width: 0; scroll-margin-top: 110px; }
