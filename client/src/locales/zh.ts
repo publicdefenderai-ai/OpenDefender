@@ -5484,6 +5484,7 @@ export default {
     }
   },
   "privacyPolicy": {
+    "reader": {"contents": "本页内容 · {{count}} 个类别", "index": "隐私政策目录", "sources": "数据来源"},
     "hero": {
       "title": "隐私政策",
       "subtitle": "我们致力于保护您的隐私。本政策说明我们如何处理您的信息。",

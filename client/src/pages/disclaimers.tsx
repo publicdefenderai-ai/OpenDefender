@@ -3,7 +3,7 @@ import { Header } from "@/components/layout/header";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
 import { Link } from "wouter";
-import "./disclaimers.css";
+import "./policy-document.css";
 
 export default function Disclaimers() {
   useScrollToTop();
@@ -336,13 +336,13 @@ export default function Disclaimers() {
   return (
     <>
       <Header />
-      <article className="notice-page" data-skip-content tabIndex={-1}>
+      <article className="notice-page policy-document" data-skip-content tabIndex={-1}>
         <header>
           <h1>{t("disclaimers.hero.title")}</h1>
           <p>{t("disclaimers.hero.subtitle")}</p>
           <small>{t("disclaimers.hero.lastUpdated")}</small>
         </header>
-        <details className="notice-contents">
+        <details className="policy-index">
           <summary>{t("disclaimers.reader.contents", { count: sections.length })}<span aria-hidden="true" /></summary>
           <nav aria-label={t("disclaimers.reader.index")}>
             {sections.map(({ id, title }) => <a key={id} href={`#${id}`}>{title}</a>)}
@@ -358,7 +358,7 @@ export default function Disclaimers() {
           <strong>{t("disclaimers.acknowledgement.label")}</strong>{" "}
           {t("disclaimers.acknowledgement.body")}
         </aside>
-        <div className="notice-related">
+        <div className="policy-related">
           <Link href="/privacy-policy">{t("footer.privacyPolicy")}</Link>
           <Link href="/data-sources">{t("disclaimers.reader.sources")}</Link>
         </div>
