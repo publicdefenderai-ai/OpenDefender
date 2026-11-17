@@ -1,0 +1,1185 @@
+[
+  {
+    "id": "fl-fs-379-407-5-b-1-regulatory",
+    "section": "379.407",
+    "scope": "(5)(b)1.",
+    "officialTitle": "Administration; rules, publications, records; penalties; injunctions",
+    "dependencies": [
+      "379.407",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "379.407": [
+        "(5)(b)1.",
+        "(5)(b)",
+        "(1)",
+        "(2)(a)",
+        "(2)(j)",
+        "(9)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-379-407-5-b-1-regulatory",
+      "name": "Possession of undersized spiny lobster, first violation, fewer than 100",
+      "names": {
+        "es": "Posesión de langosta espinosa de talla inferior a la legal, primera infracción, menos de 100",
+        "zh": "持有未达尺寸的刺龙虾， 初犯且不足100只"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "379.407(5)(b)1.",
+      "slug": "fl-fs-379-407-5-b-1-regulatory",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 379.407(5)(b)1.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0379/Sections/0379.407.html"
+        },
+        {
+          "citation": "Fla. Stat. § 379.407",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0379/Sections/0379.407.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Administration; rules, publications, records; penalties; injunctions",
+          "FS 379.407(5)(b)1.",
+          "F.S. 379.407(5)(b)1."
+        ],
+        "es": [
+          "Administration; rules, publications, records; penalties; injunctions",
+          "FS 379.407(5)(b)1.",
+          "F.S. 379.407(5)(b)1."
+        ],
+        "zh": [
+          "Administration; rules, publications, records; penalties; injunctions",
+          "FS 379.407(5)(b)1.",
+          "F.S. 379.407(5)(b)1."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A recreational or commercial harvester possesses undersized spiny lobster without authorization under a Fish and Wildlife Conservation Commission rule. First violation involving fewer than 100.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine. Each undersized lobster may be charged separately. The total for one scheme or course of conduct under (5)(b)1.–2. cannot exceed four years and $4,000."
+        },
+        "es": {
+          "plainSummary": "Un pescador recreativo o comercial posee langostas espinosas de talla inferior a la legal sin autorización conforme a una regla de la Comisión de Conservación de Pesca y Vida Silvestre. Primera infracción con menos de 100 ejemplares.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500. Cada langosta bajo talla puede dar lugar a un cargo separado. Para un solo plan o curso de conducta, el total según (5)(b)1.–2. no puede superar cuatro años y $4,000."
+        },
+        "zh": {
+          "plainSummary": "休闲或商业捕捞者持有未达法定尺寸的刺龙虾，且不属于鱼类及野生动物保护委员会规则许可的情况。 初次违反，涉及不足100只。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。 每只未达尺寸的龙虾均可单独起诉；同一计划或系列行为依第(5)(b)1至2项合计最高四年监禁及4,000美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(5)(b)1."
+  },
+  {
+    "id": "fl-fs-379-407-5-b-2-regulatory",
+    "section": "379.407",
+    "scope": "(5)(b)2.",
+    "officialTitle": "Administration; rules, publications, records; penalties; injunctions",
+    "dependencies": [
+      "379.407",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "379.407": [
+        "(5)(b)2.",
+        "(5)(b)",
+        "(1)",
+        "(2)(a)",
+        "(2)(j)",
+        "(9)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-379-407-5-b-2-regulatory",
+      "name": "Possession of undersized spiny lobster, repeat violation, fewer than 100",
+      "names": {
+        "es": "Posesión de langosta espinosa de talla inferior a la legal, reincidencia, menos de 100",
+        "zh": "持有未达尺寸的刺龙虾， 再次违反且不足100只"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "379.407(5)(b)2.",
+      "slug": "fl-fs-379-407-5-b-2-regulatory",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 379.407(5)(b)2.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0379/Sections/0379.407.html"
+        },
+        {
+          "citation": "Fla. Stat. § 379.407",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0379/Sections/0379.407.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Administration; rules, publications, records; penalties; injunctions",
+          "FS 379.407(5)(b)2.",
+          "F.S. 379.407(5)(b)2."
+        ],
+        "es": [
+          "Administration; rules, publications, records; penalties; injunctions",
+          "FS 379.407(5)(b)2.",
+          "F.S. 379.407(5)(b)2."
+        ],
+        "zh": [
+          "Administration; rules, publications, records; penalties; injunctions",
+          "FS 379.407(5)(b)2.",
+          "F.S. 379.407(5)(b)2."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A recreational or commercial harvester possesses undersized spiny lobster without authorization under a Fish and Wildlife Conservation Commission rule. Second or later violation involving fewer than 100.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine. Each undersized lobster may be charged separately. The total for one scheme or course of conduct under (5)(b)1.–2. cannot exceed four years and $4,000."
+        },
+        "es": {
+          "plainSummary": "Un pescador recreativo o comercial posee langostas espinosas de talla inferior a la legal sin autorización conforme a una regla de la Comisión de Conservación de Pesca y Vida Silvestre. Segunda infracción o posterior con menos de 100 ejemplares.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000. Cada langosta bajo talla puede dar lugar a un cargo separado. Para un solo plan o curso de conducta, el total según (5)(b)1.–2. no puede superar cuatro años y $4,000."
+        },
+        "zh": {
+          "plainSummary": "休闲或商业捕捞者持有未达法定尺寸的刺龙虾，且不属于鱼类及野生动物保护委员会规则许可的情况。 第二次或之后违反，涉及不足100只。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。 每只未达尺寸的龙虾均可单独起诉；同一计划或系列行为依第(5)(b)1至2项合计最高四年监禁及4,000美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(5)(b)2."
+  },
+  {
+    "id": "fl-fs-379-407-5-b-3-regulatory",
+    "section": "379.407",
+    "scope": "(5)(b)3.",
+    "officialTitle": "Administration; rules, publications, records; penalties; injunctions",
+    "dependencies": [
+      "379.407",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "379.407": [
+        "(5)(b)3.",
+        "(5)(b)",
+        "(1)",
+        "(2)(a)",
+        "(2)(j)",
+        "(9)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-379-407-5-b-3-regulatory",
+      "name": "Possession of undersized spiny lobster, 100 or more",
+      "names": {
+        "es": "Posesión de langosta espinosa de talla inferior a la legal, 100 o más",
+        "zh": "持有未达尺寸的刺龙虾， 至少100只"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "379.407(5)(b)3.",
+      "slug": "fl-fs-379-407-5-b-3-regulatory",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 379.407(5)(b)3.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0379/Sections/0379.407.html"
+        },
+        {
+          "citation": "Fla. Stat. § 379.407",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0379/Sections/0379.407.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Administration; rules, publications, records; penalties; injunctions",
+          "FS 379.407(5)(b)3.",
+          "F.S. 379.407(5)(b)3."
+        ],
+        "es": [
+          "Administration; rules, publications, records; penalties; injunctions",
+          "FS 379.407(5)(b)3.",
+          "F.S. 379.407(5)(b)3."
+        ],
+        "zh": [
+          "Administration; rules, publications, records; penalties; injunctions",
+          "FS 379.407(5)(b)3.",
+          "F.S. 379.407(5)(b)3."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A recreational or commercial harvester possesses undersized spiny lobster without authorization under a Fish and Wildlife Conservation Commission rule. Possession of 100 or more qualifies, even on a first violation.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. There is also a mandatory civil fine of at least $500 and a required administrative penalty of up to $2,000. The commission may suspend license privileges for up to 12 months. For commercial harvesters, (2)(a) has a separate $10 per illegal lobster provision for major violations involving more than 100, a different threshold."
+        },
+        "es": {
+          "plainSummary": "Un pescador recreativo o comercial posee langostas espinosas de talla inferior a la legal sin autorización conforme a una regla de la Comisión de Conservación de Pesca y Vida Silvestre. Basta con poseer al menos 100, incluso en la primera infracción.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. También se impone multa civil obligatoria de al menos $500 y sanción administrativa obligatoria de hasta $2,000. La comisión puede suspender las licencias hasta 12 meses. Para pescadores comerciales, (2)(a) contempla por separado $10 por ejemplar ilegal en infracciones mayores que involucren más de 100."
+        },
+        "zh": {
+          "plainSummary": "休闲或商业捕捞者持有未达法定尺寸的刺龙虾，且不属于鱼类及野生动物保护委员会规则许可的情况。 持有至少100只即适用，即使是首次违反。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 另须至少缴纳500美元民事罚款，并受最高2,000美元的行政处罚。委员会可暂停许可权利最多12个月。针对商业捕捞者，第(2)(a)项另有规定：重大违规涉及超过100只时，每只非法龙虾加罚10美元。"
+        }
+      }
+    },
+    "gradingScope": "(5)(b)3."
+  },
+  {
+    "id": "fl-fs-483-901-7-a-regulatory",
+    "section": "483.901",
+    "scope": "(7)(a)",
+    "officialTitle": "Medical physicists; definitions; licensure",
+    "dependencies": [
+      "483.901",
+      "775.082",
+      "775.083",
+      "775.084",
+      "456.065",
+      "456.001"
+    ],
+    "subdivisions": {
+      "483.901": [
+        "(7)(a)",
+        "(7)",
+        "(3)(i)",
+        "(4)",
+        "(8)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "456.065": [
+        "(2)(d)"
+      ],
+      "456.001": [
+        "(4)",
+        "(7)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-483-901-7-a-regulatory",
+      "name": "Practicing or claiming licensure in medical physics without an active license",
+      "names": {
+        "es": "Ejercer física médica o presentarse como profesional autorizado sin licencia activa",
+        "zh": "无有效执照从事医学物理或自称持有执照"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "483.901(7)(a)",
+      "slug": "fl-fs-483-901-7-a-regulatory",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 483.901(7)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0483/Sections/0483.901.html"
+        },
+        {
+          "citation": "Fla. Stat. § 483.901",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0483/Sections/0483.901.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 456.065",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0456/Sections/0456.065.html"
+        },
+        {
+          "citation": "Fla. Stat. § 456.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0456/Sections/0456.001.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Medical physicists; definitions; licensure",
+          "FS 483.901(7)(a)",
+          "F.S. 483.901(7)(a)"
+        ],
+        "es": [
+          "Medical physicists; definitions; licensure",
+          "FS 483.901(7)(a)",
+          "F.S. 483.901(7)(a)"
+        ],
+        "zh": [
+          "Medical physicists; definitions; licensure",
+          "FS 483.901(7)(a)",
+          "F.S. 483.901(7)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Practicing or attempting to practice medical physics, or holding oneself out as a licensed medical physicist, without an active license. Practice requires the appropriate specialty license and includes using physics protocols to calibrate and deliver the correct radiation for a physician-prescribed procedure. Training certificates and temporary licenses have their own conditions. The law has exemptions with limits: Florida physicians and licensed radiological personnel acting within scope; specified nonhuman-diagnostic or nonhuman-treatment equipment work; regulatory employees on official duty; properly supervised accredited-program students or interns; and dentists or people under their supervision acting within scope.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If separately charged under §456.065(2)(d), other grades or mandatory minimums can apply. For example, conviction under (2)(d)1. carries at least one year of incarceration and a $1,000 fine. License status and timing matter."
+        },
+        "es": {
+          "plainSummary": "Ejercer o intentar ejercer física médica, o presentarse como físico médico autorizado, sin licencia activa. Se exige licencia de la especialidad correspondiente. Comprende aplicar protocolos físicos para asegurar la radiación adecuada en un procedimiento indicado por un médico. Los certificados de formación y las licencias temporales tienen condiciones propias. Hay exenciones limitadas para médicos de Florida y personal radiológico autorizado dentro de su ámbito, trabajos técnicos especificados ajenos al diagnóstico o tratamiento humano, empleados reguladores en funciones, estudiantes o internos debidamente supervisados en programas acreditados y dentistas o personas bajo su supervisión dentro de su ámbito.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Un cargo separado según el §456.065(2)(d) puede implicar otros grados o mínimos obligatorios. Por ejemplo, una condena según (2)(d)1. conlleva al menos un año de encarcelamiento y una multa de $1,000. Importan el estado de la licencia y los plazos."
+        },
+        "zh": {
+          "plainSummary": "未持有效执照从事或试图从事医学物理工作，或自称持证医学物理师。执业须持相应专科执照，包括为医师开具的放射程序应用物理规程以确保辐射剂量和位置正确。培训证和临时执照各有条件。 有条件豁免包括：在执业范围内行事的佛州医师和持证放射技术人员、特定的不涉及人类诊疗的技术工作、履行职责的监管人员、认可项目中受充分监督的学生或实习人员，以及在执业范围内行事的牙医及其监督下的人员。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 若另按第456.065(2)(d)项起诉，可能适用其他罪级或强制最低刑罚。例如依该项第1目定罪，至少监禁一年且罚款至少1,000美元。具体取决于执照状态和时间。"
+        }
+      }
+    },
+    "gradingScope": "(7)"
+  },
+  {
+    "id": "fl-fs-483-901-7-b-regulatory",
+    "section": "483.901",
+    "scope": "(7)(b)",
+    "officialTitle": "Medical physicists; definitions; licensure",
+    "dependencies": [
+      "483.901",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "483.901": [
+        "(7)(b)",
+        "(7)",
+        "(3)(i)",
+        "(4)",
+        "(8)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-483-901-7-b-regulatory",
+      "name": "Practicing medical physics under another name",
+      "names": {
+        "es": "Ejercer física médica bajo otro nombre",
+        "zh": "以他人姓名从事医学物理工作"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "483.901(7)(b)",
+      "slug": "fl-fs-483-901-7-b-regulatory",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 483.901(7)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0483/Sections/0483.901.html"
+        },
+        {
+          "citation": "Fla. Stat. § 483.901",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0483/Sections/0483.901.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Medical physicists; definitions; licensure",
+          "FS 483.901(7)(b)",
+          "F.S. 483.901(7)(b)"
+        ],
+        "es": [
+          "Medical physicists; definitions; licensure",
+          "FS 483.901(7)(b)",
+          "F.S. 483.901(7)(b)"
+        ],
+        "zh": [
+          "Medical physicists; definitions; licensure",
+          "FS 483.901(7)(b)",
+          "F.S. 483.901(7)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Practicing or attempting to practice medical physics under a name other than one’s own. The law has exemptions with limits: Florida physicians and licensed radiological personnel acting within scope; specified nonhuman-diagnostic or nonhuman-treatment equipment work; regulatory employees on official duty; properly supervised accredited-program students or interns; and dentists or people under their supervision acting within scope.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Ejercer o intentar ejercer física médica bajo un nombre distinto del propio. Hay exenciones limitadas para médicos de Florida y personal radiológico autorizado dentro de su ámbito, trabajos técnicos especificados ajenos al diagnóstico o tratamiento humano, empleados reguladores en funciones, estudiantes o internos debidamente supervisados en programas acreditados y dentistas o personas bajo su supervisión dentro de su ámbito.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "以本人姓名以外的名字从事或试图从事医学物理工作。 有条件豁免包括：在执业范围内行事的佛州医师和持证放射技术人员、特定的不涉及人类诊疗的技术工作、履行职责的监管人员、认可项目中受充分监督的学生或实习人员，以及在执业范围内行事的牙医及其监督下的人员。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(7)"
+  },
+  {
+    "id": "fl-fs-483-901-7-c-regulatory",
+    "section": "483.901",
+    "scope": "(7)(c)",
+    "officialTitle": "Medical physicists; definitions; licensure",
+    "dependencies": [
+      "483.901",
+      "775.082",
+      "775.083",
+      "775.084",
+      "456.065",
+      "456.001"
+    ],
+    "subdivisions": {
+      "483.901": [
+        "(7)(c)",
+        "(7)",
+        "(3)(i)",
+        "(4)",
+        "(8)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "456.065": [
+        "(2)(d)"
+      ],
+      "456.001": [
+        "(4)",
+        "(7)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-483-901-7-c-regulatory",
+      "name": "Using a revoked, suspended or another person’s medical physics license",
+      "names": {
+        "es": "Usar una licencia de física médica revocada, suspendida o ajena",
+        "zh": "使用被吊销、暂停或他人的医学物理执照"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "483.901(7)(c)",
+      "slug": "fl-fs-483-901-7-c-regulatory",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 483.901(7)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0483/Sections/0483.901.html"
+        },
+        {
+          "citation": "Fla. Stat. § 483.901",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0483/Sections/0483.901.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 456.065",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0456/Sections/0456.065.html"
+        },
+        {
+          "citation": "Fla. Stat. § 456.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0456/Sections/0456.001.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Medical physicists; definitions; licensure",
+          "FS 483.901(7)(c)",
+          "F.S. 483.901(7)(c)"
+        ],
+        "es": [
+          "Medical physicists; definitions; licensure",
+          "FS 483.901(7)(c)",
+          "F.S. 483.901(7)(c)"
+        ],
+        "zh": [
+          "Medical physicists; definitions; licensure",
+          "FS 483.901(7)(c)",
+          "F.S. 483.901(7)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Using or attempting to use a revoked or suspended medical physics license or someone else’s license. The law has exemptions with limits: Florida physicians and licensed radiological personnel acting within scope; specified nonhuman-diagnostic or nonhuman-treatment equipment work; regulatory employees on official duty; properly supervised accredited-program students or interns; and dentists or people under their supervision acting within scope.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. If separately charged under §456.065(2)(d), other grades or mandatory minimums can apply. For example, conviction under (2)(d)1. carries at least one year of incarceration and a $1,000 fine. License status and timing matter."
+        },
+        "es": {
+          "plainSummary": "Usar o intentar usar una licencia de física médica revocada, suspendida o perteneciente a otra persona. Hay exenciones limitadas para médicos de Florida y personal radiológico autorizado dentro de su ámbito, trabajos técnicos especificados ajenos al diagnóstico o tratamiento humano, empleados reguladores en funciones, estudiantes o internos debidamente supervisados en programas acreditados y dentistas o personas bajo su supervisión dentro de su ámbito.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Un cargo separado según el §456.065(2)(d) puede implicar otros grados o mínimos obligatorios. Por ejemplo, una condena según (2)(d)1. conlleva al menos un año de encarcelamiento y una multa de $1,000. Importan el estado de la licencia y los plazos."
+        },
+        "zh": {
+          "plainSummary": "使用或企图使用已吊销或暂停的医学物理执照或他人的执照。 有条件豁免包括：在执业范围内行事的佛州医师和持证放射技术人员、特定的不涉及人类诊疗的技术工作、履行职责的监管人员、认可项目中受充分监督的学生或实习人员，以及在执业范围内行事的牙医及其监督下的人员。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 若另按第456.065(2)(d)项起诉，可能适用其他罪级或强制最低刑罚。例如依该项第1目定罪，至少监禁一年且罚款至少1,000美元。具体取决于执照状态和时间。"
+        }
+      }
+    },
+    "gradingScope": "(7)"
+  },
+  {
+    "id": "fl-fs-849-15-1-a-regulatory",
+    "section": "849.15",
+    "scope": "(1)(a)",
+    "officialTitle": "Manufacture, sale, possession, etc., of slot machines or devices prohibited",
+    "dependencies": [
+      "849.15",
+      "849.23",
+      "849.16",
+      "849.235",
+      "551.101",
+      "551.109",
+      "546.10",
+      "849.18",
+      "849.19",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "849.15": [
+        "(1)(a)",
+        "(2)"
+      ],
+      "849.23": [
+        ""
+      ],
+      "849.16": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "849.235": [
+        "(1)",
+        "(2)"
+      ],
+      "551.101": [
+        ""
+      ],
+      "551.109": [
+        "(2)"
+      ],
+      "546.10": [
+        "(4)"
+      ],
+      "849.18": [
+        ""
+      ],
+      "849.19": [
+        ""
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-849-15-1-a-regulatory",
+      "name": "Prohibited slot-machine possession or dealings, first conviction",
+      "names": {
+        "es": "Posesión o comercio prohibido de máquinas tragamonedas, primera condena",
+        "zh": "违法持有或交易老虎机，首次定罪"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "849.15(1)(a)",
+      "slug": "fl-fs-849-15-1-a-regulatory",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 849.15(1)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.15.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.15",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.15.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.16",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.16.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.235",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.235.html"
+        },
+        {
+          "citation": "Fla. Stat. § 551.101",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0551/Sections/0551.101.html"
+        },
+        {
+          "citation": "Fla. Stat. § 551.109",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0551/Sections/0551.109.html"
+        },
+        {
+          "citation": "Fla. Stat. § 546.10",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0546/Sections/0546.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.18",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.18.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.19",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.19.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Manufacture, sale, possession, etc., of slot machines or devices prohibited",
+          "FS 849.15(1)(a)",
+          "F.S. 849.15(1)(a)"
+        ],
+        "es": [
+          "Manufacture, sale, possession, etc., of slot machines or devices prohibited",
+          "FS 849.15(1)(a)",
+          "F.S. 849.15(1)(a)"
+        ],
+        "zh": [
+          "Manufacture, sale, possession, etc., of slot machines or devices prohibited",
+          "FS 849.15(1)(a)",
+          "F.S. 849.15(1)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Possessing or dealing in a prohibited slot machine or its parts, permitting its operation, or allowing it on premises one controls. The device must meet §849.16. Licensed gaming, lawful shipments and qualifying amusement games have separate authorizations. Possession of a machine made at least 20 years before prosecution and not used for gambling has a statutory defense.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine. A second qualifying conviction is a first-degree misdemeanor, ordinarily up to one year and $1,000. A new covered violation after two qualifying convictions is a third-degree felony, ordinarily up to five years and $5,000. Upon conviction a court orders forfeiture and destruction of the machine after notice; seized money is disposed of separately."
+        },
+        "es": {
+          "plainSummary": "Poseer o negociar con una máquina tragamonedas prohibida o sus piezas, permitir su operación o su presencia en un local bajo control propio. Debe cumplirse la definición del §849.16. El juego autorizado, ciertos envíos legales y los juegos recreativos que reúnen los requisitos tienen autorizaciones propias. La posesión de una máquina fabricada al menos 20 años antes del proceso y que no se usa para apostar admite defensa legal.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500. Una segunda condena comprendida es delito menor de primer grado, normalmente hasta un año y $1,000. Una nueva infracción después de dos condenas comprendidas es delito grave de tercer grado, normalmente hasta cinco años y $5,000. Tras la condena, el tribunal ordena el decomiso y destrucción de la máquina previa notificación; el dinero incautado se trata por separado."
+        },
+        "zh": {
+          "plainSummary": "持有、交易受禁止的老虎机或其部件，准许其运行，或允许在本人控制的场所放置此设备。设备须符合第849.16条的定义。持牌博彩、合法运输及符合条件的娱乐游戏有专门许可。如机器在起诉前至少20年制造且未用于赌博，法律为单纯持有提供抗辩。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。 第二次符合条件的定罪为一级轻罪，通常最高一年及1,000美元。已有两次符合条件的定罪后又实施所列违法行为为三级重罪，通常最高五年及5,000美元。定罪后，法院经通知下令没收并销毁机器；查扣款项另行处理。"
+        }
+      }
+    },
+    "gradingScope": "",
+    "gradeSection": "849.23",
+    "gradeSentence": 0
+  },
+  {
+    "id": "fl-fs-849-15-1-b-regulatory",
+    "section": "849.15",
+    "scope": "(1)(b)",
+    "officialTitle": "Manufacture, sale, possession, etc., of slot machines or devices prohibited",
+    "dependencies": [
+      "849.15",
+      "849.23",
+      "849.16",
+      "849.235",
+      "551.101",
+      "551.109",
+      "546.10",
+      "849.18",
+      "849.19",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "849.15": [
+        "(1)(b)",
+        "(2)"
+      ],
+      "849.23": [
+        ""
+      ],
+      "849.16": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "849.235": [
+        "(1)",
+        "(2)"
+      ],
+      "551.101": [
+        ""
+      ],
+      "551.109": [
+        "(2)"
+      ],
+      "546.10": [
+        "(4)"
+      ],
+      "849.18": [
+        ""
+      ],
+      "849.19": [
+        ""
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-849-15-1-b-regulatory",
+      "name": "Prohibited slot-machine payout agreement, first conviction",
+      "names": {
+        "es": "Acuerdo prohibido de premios de máquina tragamonedas, primera condena",
+        "zh": "违法订立老虎机奖励协议，首次定罪"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "849.15(1)(b)",
+      "slug": "fl-fs-849-15-1-b-regulatory",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 849.15(1)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.15.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.15",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.15.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.16",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.16.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.235",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.235.html"
+        },
+        {
+          "citation": "Fla. Stat. § 551.101",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0551/Sections/0551.101.html"
+        },
+        {
+          "citation": "Fla. Stat. § 551.109",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0551/Sections/0551.109.html"
+        },
+        {
+          "citation": "Fla. Stat. § 546.10",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0546/Sections/0546.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.18",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.18.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.19",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.19.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Manufacture, sale, possession, etc., of slot machines or devices prohibited",
+          "FS 849.15(1)(b)",
+          "F.S. 849.15(1)(b)"
+        ],
+        "es": [
+          "Manufacture, sale, possession, etc., of slot machines or devices prohibited",
+          "FS 849.15(1)(b)",
+          "F.S. 849.15(1)(b)"
+        ],
+        "zh": [
+          "Manufacture, sale, possession, etc., of slot machines or devices prohibited",
+          "FS 849.15(1)(b)",
+          "F.S. 849.15(1)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Making or permitting an agreement with another about a slot machine under which chance or a result unpredictable to the user may entitle the user to money, credit, something of value, a further chance to play, or a token exchangeable for value. Authorized gaming or lawful amusement games require separate review.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine. A second qualifying conviction is a first-degree misdemeanor, ordinarily up to one year and $1,000. A new covered violation after two qualifying convictions is a third-degree felony, ordinarily up to five years and $5,000. Upon conviction a court orders forfeiture and destruction of the machine after notice; seized money is disposed of separately."
+        },
+        "es": {
+          "plainSummary": "Celebrar o permitir un acuerdo con otra persona respecto de una tragamonedas en que el azar o un resultado imprevisible para el usuario pueda darle derecho a dinero, crédito, algo de valor, otra jugada o una ficha canjeable. El juego autorizado y los juegos recreativos legales requieren evaluación aparte.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500. Una segunda condena comprendida es delito menor de primer grado, normalmente hasta un año y $1,000. Una nueva infracción después de dos condenas comprendidas es delito grave de tercer grado, normalmente hasta cinco años y $5,000. Tras la condena, el tribunal ordena el decomiso y destrucción de la máquina previa notificación; el dinero incautado se trata por separado."
+        },
+        "zh": {
+          "plainSummary": "与他人订立或准许订立涉及老虎机的协议，以机会或使用者无法预知的结果使其可能获得金钱、信用、有价物、额外游玩机会或可兑换有价物的凭据。持牌博彩和合法娱乐游戏须另行判断。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。 第二次符合条件的定罪为一级轻罪，通常最高一年及1,000美元。已有两次符合条件的定罪后又实施所列违法行为为三级重罪，通常最高五年及5,000美元。定罪后，法院经通知下令没收并销毁机器；查扣款项另行处理。"
+        }
+      }
+    },
+    "gradingScope": "",
+    "gradeSection": "849.23",
+    "gradeSentence": 0
+  },
+  {
+    "id": "fl-fs-849-23-regulatory",
+    "section": "849.23",
+    "scope": "",
+    "officialTitle": "Penalty for violations of ss. 849.15-849.22",
+    "dependencies": [
+      "849.15",
+      "849.16",
+      "849.235",
+      "551.101",
+      "551.109",
+      "546.10",
+      "849.18",
+      "849.19",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "849.23": [
+        ""
+      ],
+      "849.15": [
+        "(1)(a)",
+        "(2)"
+      ],
+      "849.16": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "849.235": [
+        "(1)",
+        "(2)"
+      ],
+      "551.101": [
+        ""
+      ],
+      "551.109": [
+        "(2)"
+      ],
+      "546.10": [
+        "(4)"
+      ],
+      "849.18": [
+        ""
+      ],
+      "849.19": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-849-23-regulatory",
+      "name": "Repeat prohibited slot-machine violation after two qualifying convictions",
+      "names": {
+        "es": "Nueva infracción de máquinas tragamonedas tras dos condenas comprendidas",
+        "zh": "两次符合条件的定罪后再犯老虎机违法行为"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "849.23",
+      "slug": "fl-fs-849-23-regulatory",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 849.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.15",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.15.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.16",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.16.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.235",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.235.html"
+        },
+        {
+          "citation": "Fla. Stat. § 551.101",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0551/Sections/0551.101.html"
+        },
+        {
+          "citation": "Fla. Stat. § 551.109",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0551/Sections/0551.109.html"
+        },
+        {
+          "citation": "Fla. Stat. § 546.10",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0546/Sections/0546.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.18",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.18.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.19",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.19.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Penalty for violations of ss. 849.15-849.22",
+          "FS 849.23",
+          "F.S. 849.23"
+        ],
+        "es": [
+          "Penalty for violations of ss. 849.15-849.22",
+          "FS 849.23",
+          "F.S. 849.23"
+        ],
+        "zh": [
+          "Penalty for violations of ss. 849.15-849.22",
+          "FS 849.23",
+          "F.S. 849.23"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A new violation within §§849.15–849.22 must occur after two qualifying convictions. This choice covers §849.15(1)(a) conduct; the statute calls the qualifying repeat violator a common offender. Loss of property rights by itself does not establish a new criminal offense. Possessing or dealing in a prohibited slot machine or its parts, permitting its operation, or allowing it on premises one controls. The device must meet §849.16. Licensed gaming, lawful shipments and qualifying amusement games have separate authorizations. Possession of a machine made at least 20 years before prosecution and not used for gambling has a statutory defense.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. The machine is subject to forfeiture and destruction after conviction and notice under §849.18."
+        },
+        "es": {
+          "plainSummary": "Debe haber una nueva infracción comprendida en los §§849.15–849.22 después de dos condenas comprendidas. Esta opción abarca la conducta del §849.15(1)(a); la ley denomina al reincidente «common offender». La pérdida de derechos de propiedad por sí sola no constituye otro delito. Poseer o negociar con una máquina tragamonedas prohibida o sus piezas, permitir su operación o su presencia en un local bajo control propio. Debe cumplirse la definición del §849.16. El juego autorizado, ciertos envíos legales y los juegos recreativos que reúnen los requisitos tienen autorizaciones propias. La posesión de una máquina fabricada al menos 20 años antes del proceso y que no se usa para apostar admite defensa legal.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. La máquina queda sujeta a decomiso y destrucción tras condena y notificación según el §849.18."
+        },
+        "zh": {
+          "plainSummary": "已有两次符合条件的定罪后，须再实施第849.15至849.22条范围内的违法行为。本选项涵盖第849.15(1)(a)项，法律称此类再犯者为“common offender”。单纯丧失财产权不构成新的犯罪。 持有、交易受禁止的老虎机或其部件，准许其运行，或允许在本人控制的场所放置此设备。设备须符合第849.16条的定义。持牌博彩、合法运输及符合条件的娱乐游戏有专门许可。如机器在起诉前至少20年制造且未用于赌博，法律为单纯持有提供抗辩。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 依第849.18条，定罪并通知后机器可被没收销毁。"
+        }
+      }
+    },
+    "gradingScope": "",
+    "gradeSection": "849.23",
+    "gradeSentence": 2
+  },
+  {
+    "id": "fl-fs-849-231-1-regulatory",
+    "section": "849.231",
+    "scope": "(1)",
+    "officialTitle": "Gambling devices; manufacture, sale, purchase or possession unlawful",
+    "dependencies": [
+      "849.231",
+      "849.233",
+      "849.232",
+      "849.235",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "849.231": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "849.233": [
+        ""
+      ],
+      "849.232": [
+        ""
+      ],
+      "849.235": [
+        "(1)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-849-231-1-regulatory",
+      "name": "Manufacturing, selling or possessing prohibited gambling equipment",
+      "names": {
+        "es": "Fabricación, venta o posesión de equipos de juego prohibidos",
+        "zh": "制造、出售或持有违法赌具"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "849.231(1)",
+      "slug": "fl-fs-849-231-1-regulatory",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 849.231(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.231.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.231",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.231.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.233",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.233.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.232",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.232.html"
+        },
+        {
+          "citation": "Fla. Stat. § 849.235",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.235.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Gambling devices; manufacture, sale, purchase or possession unlawful",
+          "FS 849.231(1)",
+          "F.S. 849.231(1)"
+        ],
+        "es": [
+          "Gambling devices; manufacture, sale, purchase or possession unlawful",
+          "FS 849.231(1)",
+          "F.S. 849.231(1)"
+        ],
+        "zh": [
+          "Gambling devices; manufacture, sale, purchase or possession unlawful",
+          "FS 849.231(1)",
+          "F.S. 849.231(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Manufacturing, selling, transporting, offering for sale, purchasing, owning or possessing equipment listed or ordinarily used or designed for gambling establishments, such as a roulette wheel or marked house chips. Ordinary dice and playing cards are excluded. Authorized destruction, qualifying federally registered operations and the specified foreign vessels have statutory exceptions.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine. In addition, any occupational license held must be suspended for up to five years. Section 849.232 provides for confiscation of the equipment."
+        },
+        "es": {
+          "plainSummary": "Fabricar, vender, transportar, ofrecer, comprar, ser dueño o poseer equipos enumerados o de uso o diseño habitual para locales de apuestas, como ruletas o fichas marcadas por la casa. Se excluyen dados y naipes ordinarios. Hay excepciones para destrucción autorizada, operaciones federales registradas que cumplan los requisitos y los buques extranjeros especificados.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000. Además, toda licencia ocupacional del condenado debe suspenderse por un período de hasta cinco años. El §849.232 dispone la confiscación del equipo."
+        },
+        "zh": {
+          "plainSummary": "制造、出售、运输、提议出售、购买、拥有或持有所列或通常供赌馆使用或设计的设备，例如轮盘或带赌场标记的筹码。普通骰子及纸牌除外。依法销毁、符合条件的联邦登记业务及指定外国船舶适用法定例外。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。 此外须暂停被定罪者持有的职业许可证，期限最长五年；第849.232条规定没收设备。"
+        }
+      }
+    },
+    "gradingScope": "",
+    "gradeSection": "849.233"
+  }
+]
