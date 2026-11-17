@@ -1771,8 +1771,8 @@
         "status": "eligible",
         "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
         "draftHash": "dba678f25eba52dbe2538aef5d7e626a47c28ea1c77ea3b7f29fcbe887101bdd",
-        "definitionHash": "9d8d386cb04f455224d43ff73f1a24cd176318fbd767bf3835660267b8a10114",
-        "approvalHash": "a6f1220359c205475e87362b202118623e09bb6c0c4875d9ed033ca13ebef36e"
+        "definitionHash": "c93ee6e1525b249c2c63cb4ed061ca158b166fb0aa1aa9b9968fa95d839a6520",
+        "approvalHash": "7d470e1fc20977d1ce9476665186705903bcbe83c718c13ed37b443b0f199567"
       },
       {
         "id": "fl-fs-319-33-1-c-identifier",

@@ -1,0 +1,930 @@
+[
+  {
+    "id": "fl-fs-847-011-1-c-obscenity",
+    "section": "847.011",
+    "scope": "(1)(c)",
+    "officialTitle": "Prohibition of certain acts in connection with obscene, lewd, etc., materials; penalty",
+    "dependencies": [
+      "847.011",
+      "847.001",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "847.011": [
+        "(1)(c)",
+        "(1)(a)",
+        "(1)(d)",
+        "(7)",
+        "(11)",
+        ""
+      ],
+      "847.001": [
+        "(7)",
+        "(10)",
+        "(12)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-847-011-1-c-obscenity",
+      "name": "Distributing or offering obscene material depicting a minor, or possessing it for distribution",
+      "names": {
+        "es": "Distribuir u ofrecer material obsceno que representa a un menor o poseerlo para distribuirlo",
+        "zh": "传播、提议传播或意图传播而持有描绘未成年人的淫秽材料"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "847.011(1)(c)",
+      "slug": "fl-fs-847-011-1-c-obscenity",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 847.011(1)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Prohibition of certain acts in connection with obscene, lewd, etc., materials; penalty",
+          "FS 847.011(1)(c)",
+          "F.S. 847.011(1)(c)"
+        ],
+        "es": [
+          "Prohibition of certain acts in connection with obscene, lewd, etc., materials; penalty",
+          "FS 847.011(1)(c)",
+          "F.S. 847.011(1)(c)"
+        ],
+        "zh": [
+          "Prohibition of certain acts in connection with obscene, lewd, etc., materials; penalty",
+          "FS 847.011(1)(c)",
+          "F.S. 847.011(1)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "This choice covers knowing distribution, offering distribution or possession with intent to distribute under (1)(a), when the obscene material depicts a person under 18 engaged in conduct harmful to minors. Age mistake or consent is unavailable as a defense. Private possession without distribution intent is a separate branch. Legal obscenity requires prurient appeal to an average person under contemporary community standards, a patently offensive depiction or description of defined sexual conduct, and lack of serious literary, artistic, political or scientific value when viewed as a whole. The depiction must predominantly appeal to a prurient, shameful or morbid interest, be patently offensive under adult community standards for minors, and lack serious literary, artistic, political or scientific value for minors when taken as a whole. Film exhibitions permitted by §847.013 are excepted.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Esta opción comprende distribuir u ofrecer a sabiendas material obsceno, o poseerlo con intención de distribuirlo según (1)(a), cuando representa a una persona menor de 18 años realizando actos perjudiciales para menores. El error sobre la edad y el consentimiento no sirven de defensa. La posesión privada sin intención de distribuir es otra modalidad. La obscenidad legal exige que la obra en conjunto apele al interés lascivo de una persona promedio según las normas comunitarias actuales, represente de forma manifiestamente ofensiva conducta sexual definida y carezca en conjunto de valor literario, artístico, político o científico serio. La representación debe apelar predominantemente a un interés lascivo, vergonzoso o morboso, ser manifiestamente ofensiva según las normas de la comunidad adulta sobre lo adecuado para menores y carecer en conjunto de valor literario, artístico, político o científico serio para menores. Se exceptúan las exhibiciones cinematográficas permitidas por el §847.013.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "本选项限于第(1)(a)项下明知而传播、提议传播或意图传播而持有淫秽材料，且材料描绘未满18岁者从事法定有害未成年人的行为。年龄认识错误或同意不能作为抗辩。无传播意图的私人持有属于其他分支。 法定淫秽要求作品整体按当代社区标准对普通人具有淫欲吸引力，以明显令人反感的方式表现或描述法定性行为，且整体缺乏严肃的文学、艺术、政治或科学价值。 相关表现须主要迎合淫欲、羞耻或病态兴趣，按成年人社区对未成年人适宜内容的整体标准明显令人反感，并且整体上对未成年人缺乏严肃的文学、艺术、政治或科学价值。 第847.013条允许的影片放映除外。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(1)(c)"
+  },
+  {
+    "id": "fl-fs-847-012-3-a-obscenity",
+    "section": "847.012",
+    "scope": "(3)(a)",
+    "officialTitle": "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+    "dependencies": [
+      "847.012",
+      "847.001",
+      "847.013",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "847.012": [
+        "(3)(a)",
+        "(3)",
+        "(1)",
+        "(2)",
+        "(6)",
+        "(10)",
+        ""
+      ],
+      "847.001": [
+        "(7)",
+        "(10)"
+      ],
+      "847.013": [
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-847-012-3-a-obscenity",
+      "name": "Providing harmful visual images to a minor for payment",
+      "names": {
+        "es": "Proporcionar imágenes visuales perjudiciales a un menor por dinero",
+        "zh": "有偿向未成年人提供有害图像"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "847.012(3)(a)",
+      "slug": "fl-fs-847-012-3-a-obscenity",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 847.012(3)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.013",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.013.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+          "FS 847.012(3)(a)",
+          "F.S. 847.012(3)(a)"
+        ],
+        "es": [
+          "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+          "FS 847.012(3)(a)",
+          "F.S. 847.012(3)(a)"
+        ],
+        "zh": [
+          "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+          "FS 847.012(3)(a)",
+          "F.S. 847.012(3)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly selling, renting or lending for money to a minor a listed visual image depicting nudity or the listed sexual conduct that is harmful to minors. The depiction must predominantly appeal to a prurient, shameful or morbid interest, be patently offensive under adult community standards for minors, and lack serious literary, artistic, political or scientific value for minors when taken as a whole. Exhibitions regulated by §847.013 are excluded. The knowledge standard concerns both content and age. A mistaken belief about age or consent does not furnish a defense.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Vender, alquilar o prestar a sabiendas y por dinero a un menor una imagen de los tipos enumerados que representa desnudez o las conductas sexuales señaladas y es perjudicial para menores. La representación debe apelar predominantemente a un interés lascivo, vergonzoso o morboso, ser manifiestamente ofensiva según las normas de la comunidad adulta sobre lo adecuado para menores y carecer en conjunto de valor literario, artístico, político o científico serio para menores. Se excluyen las exhibiciones reguladas por el §847.013. El conocimiento abarca contenido y edad. El error sobre la edad y el consentimiento no son defensas.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "明知而有偿向未成年人出售、出租或出借法定类型的图像，图像描绘裸体或列举的性行为且达有害未成年人的标准。 相关表现须主要迎合淫欲、羞耻或病态兴趣，按成年人社区对未成年人适宜内容的整体标准明显令人反感，并且整体上对未成年人缺乏严肃的文学、艺术、政治或科学价值。 第847.013条规范的放映或表演除外。 法定认识标准涉及内容与年龄；年龄认识错误或同意不能作为抗辩。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(6)"
+  },
+  {
+    "id": "fl-fs-847-012-3-b-obscenity",
+    "section": "847.012",
+    "scope": "(3)(b)",
+    "officialTitle": "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+    "dependencies": [
+      "847.012",
+      "847.001",
+      "847.013",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "847.012": [
+        "(3)(b)",
+        "(3)",
+        "(1)",
+        "(2)",
+        "(6)",
+        "(10)",
+        ""
+      ],
+      "847.001": [
+        "(7)",
+        "(10)"
+      ],
+      "847.013": [
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-847-012-3-b-obscenity",
+      "name": "Providing harmful publications or recordings to a minor for payment",
+      "names": {
+        "es": "Proporcionar publicaciones o grabaciones perjudiciales a un menor por dinero",
+        "zh": "有偿向未成年人提供有害出版物或录音"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "847.012(3)(b)",
+      "slug": "fl-fs-847-012-3-b-obscenity",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 847.012(3)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.013",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.013.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+          "FS 847.012(3)(b)",
+          "F.S. 847.012(3)(b)"
+        ],
+        "es": [
+          "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+          "FS 847.012(3)(b)",
+          "F.S. 847.012(3)(b)"
+        ],
+        "zh": [
+          "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+          "FS 847.012(3)(b)",
+          "F.S. 847.012(3)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly selling, renting or lending for money to a minor a book, pamphlet, printed matter or sound recording containing covered material or explicit, detailed descriptions or narratives of sexual excitement or conduct, when harmful to minors. The depiction must predominantly appeal to a prurient, shameful or morbid interest, be patently offensive under adult community standards for minors, and lack serious literary, artistic, political or scientific value for minors when taken as a whole. Exhibitions regulated by §847.013 are excluded. The knowledge standard concerns both content and age. A mistaken belief about age or consent does not furnish a defense.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Vender, alquilar o prestar a sabiendas y por dinero a un menor libros, folletos, impresos o grabaciones sonoras con el contenido previsto o descripciones explícitas y detalladas de excitación o conducta sexual, cuando sean perjudiciales para menores. La representación debe apelar predominantemente a un interés lascivo, vergonzoso o morboso, ser manifiestamente ofensiva según las normas de la comunidad adulta sobre lo adecuado para menores y carecer en conjunto de valor literario, artístico, político o científico serio para menores. Se excluyen las exhibiciones reguladas por el §847.013. El conocimiento abarca contenido y edad. El error sobre la edad y el consentimiento no son defensas.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "明知而有偿向未成年人出售、出租或出借书籍、册子、印刷品或录音，其中含法定内容或对性兴奋或性行为的明确详细描述，且达有害未成年人的标准。 相关表现须主要迎合淫欲、羞耻或病态兴趣，按成年人社区对未成年人适宜内容的整体标准明显令人反感，并且整体上对未成年人缺乏严肃的文学、艺术、政治或科学价值。 第847.013条规范的放映或表演除外。 法定认识标准涉及内容与年龄；年龄认识错误或同意不能作为抗辩。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(6)"
+  },
+  {
+    "id": "fl-fs-847-012-4-obscenity",
+    "section": "847.012",
+    "scope": "(4)",
+    "officialTitle": "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+    "dependencies": [
+      "847.012",
+      "847.001",
+      "847.013",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "847.012": [
+        "(4)",
+        "(3)",
+        "(1)",
+        "(2)",
+        "(6)",
+        "(10)",
+        ""
+      ],
+      "847.001": [
+        "(7)",
+        "(10)"
+      ],
+      "847.013": [
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-847-012-4-obscenity",
+      "name": "Using a minor to produce harmful material",
+      "names": {
+        "es": "Utilización de un menor para producir material perjudicial",
+        "zh": "利用未成年人制作有害材料"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "847.012(4)",
+      "slug": "fl-fs-847-012-4-obscenity",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 847.012(4)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.013",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.013.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+          "FS 847.012(4)",
+          "F.S. 847.012(4)"
+        ],
+        "es": [
+          "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+          "FS 847.012(4)",
+          "F.S. 847.012(4)"
+        ],
+        "zh": [
+          "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+          "FS 847.012(4)",
+          "F.S. 847.012(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly using a minor to produce harmful material described in (3). The material need never reach a minor, and no intent to distribute it to minors is required. The depiction must predominantly appeal to a prurient, shameful or morbid interest, be patently offensive under adult community standards for minors, and lack serious literary, artistic, political or scientific value for minors when taken as a whole. Exhibitions regulated by §847.013 are excluded. The knowledge standard concerns both content and age. A mistaken belief about age or consent does not furnish a defense.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Usar a sabiendas a un menor para producir material perjudicial descrito en (3). No se exige que se distribuya a menores ni que exista esa intención. La representación debe apelar predominantemente a un interés lascivo, vergonzoso o morboso, ser manifiestamente ofensiva según las normas de la comunidad adulta sobre lo adecuado para menores y carecer en conjunto de valor literario, artístico, político o científico serio para menores. Se excluyen las exhibiciones reguladas por el §847.013. El conocimiento abarca contenido y edad. El error sobre la edad y el consentimiento no son defensas.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "明知而利用未成年人制作第(3)款规定的有害材料。无需实际向未成年人传播，也无需有此传播目的。 相关表现须主要迎合淫欲、羞耻或病态兴趣，按成年人社区对未成年人适宜内容的整体标准明显令人反感，并且整体上对未成年人缺乏严肃的文学、艺术、政治或科学价值。 第847.013条规范的放映或表演除外。 法定认识标准涉及内容与年龄；年龄认识错误或同意不能作为抗辩。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(6)"
+  },
+  {
+    "id": "fl-fs-847-012-5-obscenity",
+    "section": "847.012",
+    "scope": "(5)",
+    "officialTitle": "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+    "dependencies": [
+      "847.012",
+      "847.001",
+      "847.013",
+      "1012.01",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "847.012": [
+        "(5)",
+        "(3)",
+        "(1)",
+        "(2)",
+        "(6)",
+        "(10)",
+        ""
+      ],
+      "847.001": [
+        "(7)",
+        "(10)"
+      ],
+      "847.013": [
+        "(3)"
+      ],
+      "1012.01": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-847-012-5-obscenity",
+      "name": "Distributing or posting harmful materials on school property",
+      "names": {
+        "es": "Distribución o colocación de material perjudicial en propiedad escolar",
+        "zh": "在学校场所散发或张贴有害材料"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "847.012(5)",
+      "slug": "fl-fs-847-012-5-obscenity",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 847.012(5)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.013",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.013.html"
+        },
+        {
+          "citation": "Fla. Stat. § 1012.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=1000-1099/1012/Sections/1012.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+          "FS 847.012(5)",
+          "F.S. 847.012(5)"
+        ],
+        "es": [
+          "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+          "FS 847.012(5)",
+          "F.S. 847.012(5)"
+        ],
+        "zh": [
+          "Harmful materials; sale or distribution to minors or using minors in production prohibited; penalty",
+          "FS 847.012(5)",
+          "F.S. 847.012(5)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "An adult knowingly distributing the material in (3) to a minor on school property or knowingly posting it there. This covers public and private kindergarten through secondary school. School-approved instructional material designed as a major teaching tool is excepted for instruction by the listed school personnel or volunteers. The depiction must predominantly appeal to a prurient, shameful or morbid interest, be patently offensive under adult community standards for minors, and lack serious literary, artistic, political or scientific value for minors when taken as a whole. Exhibitions regulated by §847.013 are excluded. The knowledge standard concerns both content and age. A mistaken belief about age or consent does not furnish a defense.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Que un adulto distribuya a sabiendas a un menor en propiedad escolar el material de (3), o lo coloque allí. Comprende centros públicos y privados desde kínder hasta secundaria. Se exceptúa el material didáctico aprobado diseñado como instrumento principal de enseñanza, en la instrucción impartida por el personal escolar o los voluntarios enumerados. La representación debe apelar predominantemente a un interés lascivo, vergonzoso o morboso, ser manifiestamente ofensiva según las normas de la comunidad adulta sobre lo adecuado para menores y carecer en conjunto de valor literario, artístico, político o científico serio para menores. Se excluyen las exhibiciones reguladas por el §847.013. El conocimiento abarca contenido y edad. El error sobre la edad y el consentimiento no son defensas.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "成年人明知而在学校场所向未成年人散发第(3)款的材料，或在该处张贴。涵盖公立及私立幼儿园至中学。经学校批准、设计用于协助所列学校人员或志愿者教学的主要教材除外。 相关表现须主要迎合淫欲、羞耻或病态兴趣，按成年人社区对未成年人适宜内容的整体标准明显令人反感，并且整体上对未成年人缺乏严肃的文学、艺术、政治或科学价值。 第847.013条规范的放映或表演除外。 法定认识标准涉及内容与年龄；年龄认识错误或同意不能作为抗辩。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(6)"
+  },
+  {
+    "id": "fl-fs-847-0133-1-obscenity",
+    "section": "847.0133",
+    "scope": "(1)",
+    "officialTitle": "Protection of minors; prohibition of certain acts in connection with obscenity; penalty",
+    "dependencies": [
+      "847.0133",
+      "847.001",
+      "847.012",
+      "943.0435",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "847.0133": [
+        "(1)",
+        "(2)",
+        "(3)",
+        ""
+      ],
+      "847.001": [
+        "(10)",
+        "(12)"
+      ],
+      "847.012": [
+        "(1)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-847-0133-1-obscenity",
+      "name": "Knowingly providing obscene material to a minor",
+      "names": {
+        "es": "Suministro consciente de material obsceno a un menor",
+        "zh": "明知而向未成年人提供淫秽材料"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "847.0133(1)",
+      "slug": "fl-fs-847-0133-1-obscenity",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 847.0133(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.0133.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.0133",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.0133.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Protection of minors; prohibition of certain acts in connection with obscenity; penalty",
+          "FS 847.0133(1)",
+          "F.S. 847.0133(1)"
+        ],
+        "es": [
+          "Protection of minors; prohibition of certain acts in connection with obscenity; penalty",
+          "FS 847.0133(1)",
+          "F.S. 847.0133(1)"
+        ],
+        "zh": [
+          "Protection of minors; prohibition of certain acts in connection with obscenity; penalty",
+          "FS 847.0133(1)",
+          "F.S. 847.0133(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly selling, renting, lending, giving away, distributing, transmitting or showing the listed obscene material to a person under 18. The statutory knowledge standard covers the material and the minor’s age; circumstances warranting inquiry can qualify. Legal obscenity requires prurient appeal to an average person under contemporary community standards, a patently offensive depiction or description of defined sexual conduct, and lack of serious literary, artistic, political or scientific value when viewed as a whole.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. This offense is listed in §943.0435. A qualifying conviction can require sex-offender registration."
+        },
+        "es": {
+          "plainSummary": "Vender, alquilar, prestar, regalar, distribuir, transmitir o mostrar a sabiendas material obsceno de los tipos enumerados a una persona menor de 18 años. El conocimiento incluye el contenido y la edad; pueden bastar circunstancias que justifiquen indagar. La obscenidad legal exige que la obra en conjunto apele al interés lascivo de una persona promedio según las normas comunitarias actuales, represente de forma manifiestamente ofensiva conducta sexual definida y carezca en conjunto de valor literario, artístico, político o científico serio.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. El delito figura en el §943.0435. Una condena que reúna los requisitos puede exigir la inscripción como delincuente sexual."
+        },
+        "zh": {
+          "plainSummary": "明知而向未满18岁者出售、出租、出借、赠送、散发、传输或展示所列淫秽材料。法定认识标准包括材料性质及年龄；足以促使进一步查证的情形也可能符合要求。 法定淫秽要求作品整体按当代社区标准对普通人具有淫欲吸引力，以明显令人反感的方式表现或描述法定性行为，且整体缺乏严肃的文学、艺术、政治或科学价值。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 本罪列入第943.0435条；符合该条条件的定罪可能要求进行性犯罪者登记。"
+        }
+      }
+    },
+    "gradingScope": "(3)"
+  },
+  {
+    "id": "fl-fs-847-0138-2-obscenity",
+    "section": "847.0138",
+    "scope": "(2)",
+    "officialTitle": "Transmission of material harmful to minors to a minor by electronic device or equipment prohibited; penalties",
+    "dependencies": [
+      "847.0138",
+      "847.001",
+      "943.0435",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "847.0138": [
+        "(2)",
+        "(1)",
+        "(3)"
+      ],
+      "847.001": [
+        "(7)",
+        "(10)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-847-0138-2-obscenity",
+      "name": "Sending harmful material electronically to a specific minor",
+      "names": {
+        "es": "Envío electrónico de material perjudicial a un menor específico",
+        "zh": "以电子方式向特定未成年人发送有害材料"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "847.0138(2)",
+      "slug": "fl-fs-847-0138-2-obscenity",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 847.0138(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.0138.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.0138",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.0138.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Transmission of material harmful to minors to a minor by electronic device or equipment prohibited; penalties",
+          "FS 847.0138(2)",
+          "F.S. 847.0138(2)"
+        ],
+        "es": [
+          "Transmission of material harmful to minors to a minor by electronic device or equipment prohibited; penalties",
+          "FS 847.0138(2)",
+          "F.S. 847.0138(2)"
+        ],
+        "zh": [
+          "Transmission of material harmful to minors to a minor by electronic device or equipment prohibited; penalties",
+          "FS 847.0138(2)",
+          "F.S. 847.0138(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Sending images, information or data the sender knows or believes are harmful to minors, by electronic mail including an individually addressed instant message, to a specific person the sender knows or believes is under 18. Subscription transmissions such as mailing lists are excluded. The depiction must predominantly appeal to a prurient, shameful or morbid interest, be patently offensive under adult community standards for minors, and lack serious literary, artistic, political or scientific value for minors when taken as a whole.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. This offense is listed in §943.0435. A qualifying conviction can require sex-offender registration."
+        },
+        "es": {
+          "plainSummary": "Enviar imágenes, información o datos por correo electrónico, incluido un mensaje instantáneo dirigido individualmente, sabiendo o creyendo que son perjudiciales para menores y que el destinatario específico es menor de 18 años. Se excluyen los envíos por suscripción, como las listas de correo. La representación debe apelar predominantemente a un interés lascivo, vergonzoso o morboso, ser manifiestamente ofensiva según las normas de la comunidad adulta sobre lo adecuado para menores y carecer en conjunto de valor literario, artístico, político o científico serio para menores.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. El delito figura en el §943.0435. Una condena que reúna los requisitos puede exigir la inscripción como delincuente sexual."
+        },
+        "zh": {
+          "plainSummary": "向明知或相信未满18岁的特定收件人以电子邮件（包括单独发送的即时消息）传送图像、信息或数据，且明知或相信其对未成年人有害。订阅式发送如邮件列表除外。 相关表现须主要迎合淫欲、羞耻或病态兴趣，按成年人社区对未成年人适宜内容的整体标准明显令人反感，并且整体上对未成年人缺乏严肃的文学、艺术、政治或科学价值。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 本罪列入第943.0435条；符合该条条件的定罪可能要求进行性犯罪者登记。"
+        }
+      }
+    },
+    "gradingScope": "(2)"
+  },
+  {
+    "id": "fl-fs-847-0138-3-obscenity",
+    "section": "847.0138",
+    "scope": "(3)",
+    "officialTitle": "Transmission of material harmful to minors to a minor by electronic device or equipment prohibited; penalties",
+    "dependencies": [
+      "847.0138",
+      "847.001",
+      "943.0435",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "847.0138": [
+        "(3)",
+        "(1)"
+      ],
+      "847.001": [
+        "(7)",
+        "(10)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-847-0138-3-obscenity",
+      "name": "Sending harmful material electronically to a specific minor from outside Florida",
+      "names": {
+        "es": "Envío electrónico de material perjudicial a un menor específico desde fuera de Florida",
+        "zh": "以电子方式向特定未成年人发送有害材料 （从佛州以外发送）"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "847.0138(3)",
+      "slug": "fl-fs-847-0138-3-obscenity",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 847.0138(3)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.0138.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.0138",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.0138.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Transmission of material harmful to minors to a minor by electronic device or equipment prohibited; penalties",
+          "FS 847.0138(3)",
+          "F.S. 847.0138(3)"
+        ],
+        "es": [
+          "Transmission of material harmful to minors to a minor by electronic device or equipment prohibited; penalties",
+          "FS 847.0138(3)",
+          "F.S. 847.0138(3)"
+        ],
+        "zh": [
+          "Transmission of material harmful to minors to a minor by electronic device or equipment prohibited; penalties",
+          "FS 847.0138(3)",
+          "F.S. 847.0138(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The sender is outside Florida. Sending images, information or data the sender knows or believes are harmful to minors, by electronic mail including an individually addressed instant message, to a specific person the sender knows or believes is under 18. Subscription transmissions such as mailing lists are excluded. The depiction must predominantly appeal to a prurient, shameful or morbid interest, be patently offensive under adult community standards for minors, and lack serious literary, artistic, political or scientific value for minors when taken as a whole.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. This offense is listed in §943.0435. A qualifying conviction can require sex-offender registration."
+        },
+        "es": {
+          "plainSummary": "El remitente está fuera de Florida. Enviar imágenes, información o datos por correo electrónico, incluido un mensaje instantáneo dirigido individualmente, sabiendo o creyendo que son perjudiciales para menores y que el destinatario específico es menor de 18 años. Se excluyen los envíos por suscripción, como las listas de correo. La representación debe apelar predominantemente a un interés lascivo, vergonzoso o morboso, ser manifiestamente ofensiva según las normas de la comunidad adulta sobre lo adecuado para menores y carecer en conjunto de valor literario, artístico, político o científico serio para menores.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. El delito figura en el §943.0435. Una condena que reúna los requisitos puede exigir la inscripción como delincuente sexual."
+        },
+        "zh": {
+          "plainSummary": "发送者位于佛州以外。 向明知或相信未满18岁的特定收件人以电子邮件（包括单独发送的即时消息）传送图像、信息或数据，且明知或相信其对未成年人有害。订阅式发送如邮件列表除外。 相关表现须主要迎合淫欲、羞耻或病态兴趣，按成年人社区对未成年人适宜内容的整体标准明显令人反感，并且整体上对未成年人缺乏严肃的文学、艺术、政治或科学价值。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 本罪列入第943.0435条；符合该条条件的定罪可能要求进行性犯罪者登记。"
+        }
+      }
+    },
+    "gradingScope": "(3)"
+  }
+]
