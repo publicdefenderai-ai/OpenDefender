@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "reviewAsOf": "2026-11-17",
   "scope": "Public constitutional election and source-version evidence only; no activation or receipt issuance",
-  "disposition": "retain_published_primary_definition_do_not_substitute_conditional_note",
   "sources": [
     {
       "id": "session-law",
@@ -131,7 +130,7 @@
         12,
         13
       ],
-      "finding": "No amendment specifically concerning cannabis or medical-marijuana section 29 on the complete statewide ballot list."
+      "finding": "Complete statewide ballot list retained; amendment numbers recorded below."
     },
     {
       "year": 2020,
@@ -144,7 +143,7 @@
         5,
         6
       ],
-      "finding": "No amendment specifically concerning cannabis or medical-marijuana section 29 on the complete statewide ballot list."
+      "finding": "Complete statewide ballot list retained; amendment numbers recorded below."
     },
     {
       "year": 2022,
@@ -154,7 +153,7 @@
         2,
         3
       ],
-      "finding": "No amendment specifically concerning cannabis or medical-marijuana section 29 on the complete statewide ballot list."
+      "finding": "Complete statewide ballot list retained; amendment numbers recorded below."
     },
     {
       "year": 2024,
@@ -177,13 +176,14 @@
         2,
         3
       ],
-      "finding": "No amendment specifically concerning cannabis or medical-marijuana section 29 on the complete statewide ballot list."
+      "finding": "Complete statewide ballot list retained; amendment numbers recorded below."
     }
   ],
   "limitations": [
-    "2018 Amendment 9 expanded general workplace vaping restrictions to devices using nicotine or any other substance. It did not amend section 29 or expressly mention cannabis. This is not a judicial determination of the outer meaning of related to cannabis or marijuana.",
+    "The packet retains Article X sections 20 and 29 and their published amendment histories. It records public sources without deciding whether the statutory contingency applies.",
     "The 2026 county election-authority page identifies the complete statewide ballot and says the listed items appeared on November 3. This is ballot-scope evidence, not certification of individual results.",
     "The DOS direct download and initiative portal returned HTTP 403; accessible official legislative and county-election records were used.",
     "No claim about statewide exhaustive legal review, receipt validity, database eligibility, or production availability follows."
-  ]
+  ],
+  "status": "public_evidence_only_activation_requires_separate_review"
 }

@@ -29,14 +29,14 @@ it('distinguishes adoption and effective-date contingency from a failed marijuan
   expect(source('ballot-2026').text).not.toMatch(/marijuana|cannabis/i);
   expect(source('constitution').text).toContain('January 9, 2015; adopted 2016');
   expect(source('constitution').text).toContain('from a nicotine product or any other substance');
-  expect(packet.limitations.join(' ')).toContain('not a judicial determination');
+  expect(packet.status).toBe('public_evidence_only_activation_requires_separate_review');
 });
-it('corroborates the current primary definition without rewriting the conditional alternative or source receipt', () => {
+it('retains both published definition texts without issuing a source receipt', () => {
   const statute = source('current-893.02');
   expect(statute.text).toContain('The term does not include “marijuana,” as defined in s. 381.986');
   expect(statute.text).toContain('If such amendment or adoption takes place');
   expect(statute.text).toContain('The term does not include “low-THC cannabis,”');
   const comparison = JSON.parse(readFileSync('scripts/data-review/florida-launch/restoration-comparison.json','utf8'));
   expect(JSON.stringify(comparison)).toContain(statute.contentSha256);
-  expect(packet.disposition).toBe('retain_published_primary_definition_do_not_substitute_conditional_note');
+  expect(packet).not.toHaveProperty('disposition');
 });
