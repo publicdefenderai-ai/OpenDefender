@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "status": "proposal_only_not_issued_not_activation_approval",
   "comparisonHash": "3a9e32ba2dac6755d32e337ef7b12a62aca7f0fcc01fe28a3d97ff6b85eff571",
-  "constitutionalEvidenceHash": "0c0dab4f5858e38ba54d1d76aade3e9e033bb1c08f79f95ed9bca5b2577b9ab3",
+  "constitutionalEvidenceHash": "2e1b8b4f9f39ef009620daf4200848c2d4eae64fcad83b0c22fde6bbf7b9a80e",
   "baselineFiles": {
     "scripts/data-review/output/florida-reviewed-analysis.json": "fbd7ecd70918356123ddc03ce48063c45b4d282cdc5a3ffce88205bc4fa58c8c",
     "scripts/data-review/output/florida-reviewed-refresh-receipt.json": "cc55a4bdf41f6b1dffefe55f99197927dbecb833aaa96b039cc231aca8f28abe",

@@ -21,7 +21,7 @@ Hashes use SHA-256 over `JSON.stringify(parsedObject)`, matching the runtime val
 ## What still requires review
 
 1. Accept the unchanged-source comparison and the corrected 101-record baseline together; unchanged raw law does not automatically approve changes made since the old receipt.
-2. Review the [constitutional contingency disposition](florida-cannabis-constitutional-trigger.md). It recommends preserving the official primary §893.02 definition after the full election screen, explicitly addresses the general 2018 vaping provision and does not claim a court resolved the phrase “related to.” This condition is not silently removed by a passing technical validator.
+2. Review the [public constitutional-source evidence](florida-cannabis-constitutional-trigger.md). This packet does not decide legal applicability. Activation requires separate review; a passing technical validator does not supply that approval.
 3. Confirm the exact proposal hashes and unchanged decision rows. Any drift must stop preparation and receive a new comparison/reconciliation, rather than rebinding arbitrary changed content.
 4. Separately approve issuance of the reviewed receipt and incorporation of its matching report/eligibility artifacts. This PR does not perform that step.
 
