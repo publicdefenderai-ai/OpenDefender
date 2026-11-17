@@ -1,0 +1,377 @@
+[
+  {
+    "id": "tx-pc-38-03-c",
+    "name": "Resisting arrest, search or transportation (ordinary)",
+    "officialTitle": "RESISTING ARREST, SEARCH, OR TRANSPORTATION.",
+    "category": "misdemeanor",
+    "code": "38.03(c)",
+    "citation": "Tex. Penal Code § 38.03(c)",
+    "conduct": "Intentionally using force against a peace officer or another person to prevent or obstruct a known peace officer, or a person acting in the officer’s presence and at the officer’s direction, from arresting, searching or transporting the person or someone else. Under subsection (b), an unlawful arrest or search is not a defense to this charge.",
+    "penalty": "Class A misdemeanor, punishable by up to one year in jail, a fine up to $4,000, or both. A qualifying prior can raise the minimum to 90 days if jail is imposed. Using a deadly weapon to resist arrest or search is separately graded. Subsection (d) does not list transportation alone.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.03",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "48010006"
+  },
+  {
+    "id": "tx-pc-38-03-d",
+    "name": "Resisting arrest or search using a deadly weapon",
+    "officialTitle": "RESISTING ARREST, SEARCH, OR TRANSPORTATION.",
+    "category": "felony",
+    "code": "38.03(d)",
+    "citation": "Tex. Penal Code § 38.03(d)",
+    "conduct": "Intentionally using force against a peace officer or another person to prevent or obstruct a known peace officer, or a person acting in the officer’s presence and at the officer’s direction, from arresting, searching or transporting the person or someone else. Under subsection (b), an unlawful arrest or search is not a defense to this charge. This felony branch requires use of a deadly weapon to resist the arrest or search.",
+    "penalty": "Third-degree felony, ordinarily punishable by two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.03",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-evading-arrest",
+    "name": "Evading arrest or detention (ordinary)",
+    "officialTitle": "EVADING ARREST OR DETENTION.",
+    "category": "misdemeanor",
+    "code": "38.04(b)",
+    "citation": "Tex. Penal Code § 38.04(b)",
+    "conduct": "Intentionally fleeing from someone the person knows is a peace officer or federal special investigator and knows is attempting to arrest or detain them. The attempted arrest or detention must be lawful.",
+    "penalty": "Class A misdemeanor, punishable by up to one year in jail, a fine up to $4,000, or both. A qualifying prior can raise the minimum to 90 days if jail is imposed. A prior conviction under this section, vehicle use, injury, death, a tire-deflation device or specified smuggling conduct can trigger separate felony rules.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.04",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.04",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "48010017"
+  },
+  {
+    "id": "tx-pc-38-04-prior",
+    "name": "Evading arrest or detention with a prior evading conviction",
+    "officialTitle": "EVADING ARREST OR DETENTION.",
+    "category": "felony",
+    "code": "38.04(b)(1)",
+    "citation": "Tex. Penal Code § 38.04(b)(1)",
+    "conduct": "Intentionally fleeing from someone the person knows is a peace officer or federal special investigator and knows is attempting to arrest or detain them. The attempted arrest or detention must be lawful. This branch requires a previous conviction under §38.04.",
+    "penalty": "State jail felony, ordinarily punishable by 180 days to two years in state jail and a possible fine up to $10,000. Special findings or qualifying felony history can increase punishment. A separate higher-grade circumstance can control. This branch addresses flight without vehicle use or other higher-grade facts.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.04",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.04",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-04-vehicle",
+    "name": "Evading arrest or detention using a vehicle",
+    "officialTitle": "EVADING ARREST OR DETENTION.",
+    "category": "felony",
+    "code": "38.04(b)(2)(A)",
+    "citation": "Tex. Penal Code § 38.04(b)(2)(A)",
+    "conduct": "Intentionally fleeing from someone the person knows is a peace officer or federal special investigator and knows is attempting to arrest or detain them. The attempted arrest or detention must be lawful. A vehicle as defined by Transportation Code §541.201(23) is used during flight.",
+    "penalty": "Third-degree felony, ordinarily punishable by two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions can change punishment. Texas prints two 2011 versions of subsection (b). Texas appellate courts apply the third-degree vehicle provision without requiring a prior evading conviction. This choice covers vehicles. Watercraft, injury, death and other distinct facts require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.04",
+        "subdivision": "(a), (c)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.04",
+        "subdivision": "(b)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(23)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "48010020"
+  },
+  {
+    "id": "tx-failure-to-identify",
+    "name": "Failure to identify (refusing after lawful arrest)",
+    "officialTitle": "FAILURE TO IDENTIFY.",
+    "category": "misdemeanor",
+    "code": "38.02(c)(1)",
+    "citation": "Tex. Penal Code § 38.02(c)(1)",
+    "conduct": "Intentionally refusing to give a name, residence address or date of birth when requested by a peace officer who has lawfully arrested the person. Ordinary detention alone does not satisfy subsection (a). Subsection (b-1) has a separate rule for drivers detained for an alleged violation. If the same conduct also constitutes misrepresentation of age by a minor under Alcoholic Beverage Code §106.07, prosecution is permitted only under that section.",
+    "penalty": "Class C misdemeanor, punishable by a fine up to $500.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.02",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "106.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-02-fugitive-refusal",
+    "name": "Failure to identify (refusing after lawful arrest, fugitive from justice)",
+    "officialTitle": "FAILURE TO IDENTIFY.",
+    "category": "misdemeanor",
+    "code": "38.02(d)(1)",
+    "citation": "Tex. Penal Code § 38.02(d)(1)",
+    "conduct": "Intentionally refusing to give a name, residence address or date of birth when requested by a peace officer who has lawfully arrested the person. Ordinary detention alone does not satisfy subsection (a). Subsection (b-1) has a separate rule for drivers detained for an alleged violation. A valid arrest warrant must already have been issued for the person at the time of the offense. If the same conduct also constitutes misrepresentation of age by a minor under Alcoholic Beverage Code §106.07, prosecution is permitted only under that section.",
+    "penalty": "Class B misdemeanor, punishable by up to 180 days in jail, a fine up to $2,000, or both. A qualifying prior can raise the minimum to 30 days if jail is imposed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.02",
+        "subdivision": "(d)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "106.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.01",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-02-false",
+    "name": "Failure to identify (giving false information)",
+    "officialTitle": "FAILURE TO IDENTIFY.",
+    "category": "misdemeanor",
+    "code": "38.02(c)(2)",
+    "citation": "Tex. Penal Code § 38.02(c)(2)",
+    "conduct": "Intentionally giving a false or fictitious name, residence address or date of birth to a peace officer who lawfully arrested or detained the person, or who requested that information with good cause to believe the person was a witness to a criminal offense. If the same conduct also constitutes misrepresentation of age by a minor under Alcoholic Beverage Code §106.07, prosecution is permitted only under that section.",
+    "penalty": "Class B misdemeanor, punishable by up to 180 days in jail, a fine up to $2,000, or both. A qualifying prior can raise the minimum to 30 days if jail is imposed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.02",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.02",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "106.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-02-fugitive-false",
+    "name": "Failure to identify (giving false information, fugitive from justice)",
+    "officialTitle": "FAILURE TO IDENTIFY.",
+    "category": "misdemeanor",
+    "code": "38.02(d)(2)",
+    "citation": "Tex. Penal Code § 38.02(d)(2)",
+    "conduct": "Intentionally giving a false or fictitious name, residence address or date of birth to a peace officer who lawfully arrested or detained the person, or who requested that information with good cause to believe the person was a witness to a criminal offense. A valid arrest warrant must already have been issued for the person at the time of the offense. If the same conduct also constitutes misrepresentation of age by a minor under Alcoholic Beverage Code §106.07, prosecution is permitted only under that section.",
+    "penalty": "Class A misdemeanor, punishable by up to one year in jail, a fine up to $4,000, or both. A qualifying prior can raise the minimum to 90 days if jail is imposed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.02",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.02",
+        "subdivision": "(d)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "106.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.01",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "48990009"
+  }
+]

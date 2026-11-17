@@ -1,6 +1,6 @@
 {
   "jurisdiction": "TX",
-  "generatedAt": "2026-11-16T20:47:42.831Z",
+  "generatedAt": "2026-11-16T21:17:33.263Z",
   "source": "Texas Legislative Council TCSS static HTML (tcss.legis.texas.gov/resources)",
   "catalogRecords": [
     {
@@ -3106,11 +3106,11 @@
     },
     {
       "chargeId": "tx-evading-arrest",
-      "catalogLabel": "Evading Arrest or Detention",
-      "catalogCode": "38.04",
+      "catalogLabel": "Evading arrest or detention (ordinary)",
+      "catalogCode": "38.04(b)",
       "catalogCategory": "misdemeanor",
-      "disposition": "retain",
-      "dispositionReason": "Catalog label matches the official TCSS title.",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
       "canonicalTitle": "EVADING ARREST OR DETENTION.",
       "provisions": [
         {
@@ -3123,15 +3123,15 @@
           "content": "Sec. 38.04. EVADING ARREST OR DETENTION. (a) A person commits an offense if he intentionally flees from a person he knows is a peace officer or federal special investigator attempting lawfully to arrest or detain him. Text of subsection as amended by Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 4, and Ch. 391 (S.B. 496), Sec. 1 (b) An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if: (A) the actor has been previously convicted under this section; or (B) the actor uses a vehicle or watercraft while the actor is in flight and the actor has not been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle or watercraft while the actor is in flight and the actor has been previously convicted under this section; or (B) another suffers serious bodily injury as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (3) a felony of the second degree if another suffers death as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight. Text of subsection as amended by Acts 2011, 82nd Leg., R.S., Ch. 920 (S.B. 1416), Sec. 3 (b) An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if the actor has been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle while the actor is in flight; (B) another suffers serious bodily injury as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (C) the actor uses a tire deflation device against the officer while the actor is in flight; or (3) a felony of the second degree if: (A) another suffers death as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (B) another suffers serious bodily injury as a direct result of the actor's use of a tire deflation device while the actor is in flight. (b-1) Notwithstanding Subsection (b), an offense under this section is a felony of the third degree if it is shown on the trial of the offense that the actor committed the offense in the course of committing an offense under Section 20.05(a)(2). (c) In this section: (1) \"Vehicle\" has the meaning assigned by Section 541.201, Transportation Code. (2) \"Tire deflation device\" has the meaning assigned by Section 46.01. (3) \"Watercraft\" has the meaning assigned by Section 49.01. (d) A person who is subject to prosecution under both this section and another law may be prosecuted under either or both this section and the other law. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 504, Sec. 1, eff. Sept. 1, 1987. Acts 1989, 71st Leg., ch. 126, Sec. 1, eff. Sept. 1, 1989; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 708, Sec. 1, eff. Sept. 1, 1995; Acts 1997, 75th Leg., ch. 165, Sec. 30.240, eff. Sept. 1, 1997; Acts 2001, 77th Leg., ch. 1334, Sec. 3, eff. Sept. 1, 2001; Acts 2001, 77th Leg., ch. 1480, Sec. 1, eff. Sept. 1, 2001. Amended by: Acts 2009, 81st Leg., R.S., Ch. 1400 (H.B. 221), Sec. 4, eff. September 1, 2009. Acts 2011, 82nd Leg., R.S., Ch. 391 (S.B. 496), Sec. 1, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 4, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 920 (S.B. 1416), Sec. 3, eff. September 1, 2011. Acts 2013, 83rd Leg., R.S., Ch. 161 (S.B. 1093), Sec. 22.001(38), eff. September 1, 2013. Acts 2023, 88th Leg., 3rd C.S., Ch. 2 (S.B. 4), Sec. 11, eff. February 6, 2024.",
           "contentHash": "089c36badd47e19cc7403dbb1b1d7a2a04e8ad8526e841fbbb3726eabb28dc19",
           "hashBasis": "source_content",
-          "retrievedAt": "2026-09-15T05:06:49.968Z",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
           "effectiveDateStart": "February 6, 2024",
           "effectiveDateEnd": null,
           "supportRole": "offense",
-          "subdivision": null,
+          "subdivision": "(a)",
           "metadata": {
             "chargeId": "tx-evading-arrest",
-            "catalogLabel": "Evading Arrest or Detention",
-            "catalogCode": "38.04",
+            "catalogLabel": "Evading arrest or detention (ordinary)",
+            "catalogCode": "38.04(b)",
             "catalogClassification": "misdemeanor",
             "elements": {
               "basis": "verbatim_official_text",
@@ -3150,7 +3150,127 @@
             },
             "attorneyReview": "pending",
             "fingerprint": "e4c08fcaf2e2650ab1c967ba9de6bce6470017850189b938768eeb6da2b010be",
-            "manifestImportedAt": "2026-09-15T05:06:49.968Z"
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:38.04",
+          "lawId": "PE",
+          "section": "38.04",
+          "citation": "Tex. Penal Code § 38.04",
+          "officialTitle": "EVADING ARREST OR DETENTION.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.04",
+          "content": "Sec. 38.04. EVADING ARREST OR DETENTION. (a) A person commits an offense if he intentionally flees from a person he knows is a peace officer or federal special investigator attempting lawfully to arrest or detain him. Text of subsection as amended by Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 4, and Ch. 391 (S.B. 496), Sec. 1 (b) An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if: (A) the actor has been previously convicted under this section; or (B) the actor uses a vehicle or watercraft while the actor is in flight and the actor has not been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle or watercraft while the actor is in flight and the actor has been previously convicted under this section; or (B) another suffers serious bodily injury as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (3) a felony of the second degree if another suffers death as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight. Text of subsection as amended by Acts 2011, 82nd Leg., R.S., Ch. 920 (S.B. 1416), Sec. 3 (b) An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if the actor has been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle while the actor is in flight; (B) another suffers serious bodily injury as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (C) the actor uses a tire deflation device against the officer while the actor is in flight; or (3) a felony of the second degree if: (A) another suffers death as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (B) another suffers serious bodily injury as a direct result of the actor's use of a tire deflation device while the actor is in flight. (b-1) Notwithstanding Subsection (b), an offense under this section is a felony of the third degree if it is shown on the trial of the offense that the actor committed the offense in the course of committing an offense under Section 20.05(a)(2). (c) In this section: (1) \"Vehicle\" has the meaning assigned by Section 541.201, Transportation Code. (2) \"Tire deflation device\" has the meaning assigned by Section 46.01. (3) \"Watercraft\" has the meaning assigned by Section 49.01. (d) A person who is subject to prosecution under both this section and another law may be prosecuted under either or both this section and the other law. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 504, Sec. 1, eff. Sept. 1, 1987. Acts 1989, 71st Leg., ch. 126, Sec. 1, eff. Sept. 1, 1989; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 708, Sec. 1, eff. Sept. 1, 1995; Acts 1997, 75th Leg., ch. 165, Sec. 30.240, eff. Sept. 1, 1997; Acts 2001, 77th Leg., ch. 1334, Sec. 3, eff. Sept. 1, 2001; Acts 2001, 77th Leg., ch. 1480, Sec. 1, eff. Sept. 1, 2001. Amended by: Acts 2009, 81st Leg., R.S., Ch. 1400 (H.B. 221), Sec. 4, eff. September 1, 2009. Acts 2011, 82nd Leg., R.S., Ch. 391 (S.B. 496), Sec. 1, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 4, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 920 (S.B. 1416), Sec. 3, eff. September 1, 2011. Acts 2013, 83rd Leg., R.S., Ch. 161 (S.B. 1093), Sec. 22.001(38), eff. September 1, 2013. Acts 2023, 88th Leg., 3rd C.S., Ch. 2 (S.B. 4), Sec. 11, eff. February 6, 2024.",
+          "contentHash": "089c36badd47e19cc7403dbb1b1d7a2a04e8ad8526e841fbbb3726eabb28dc19",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "February 6, 2024",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(b)",
+          "metadata": {
+            "chargeId": "tx-evading-arrest",
+            "catalogLabel": "Evading arrest or detention (ordinary)",
+            "catalogCode": "38.04(b)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "February 6, 2024"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "e4c08fcaf2e2650ab1c967ba9de6bce6470017850189b938768eeb6da2b010be",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.21",
+          "lawId": "PE",
+          "section": "12.21",
+          "citation": "Tex. Penal Code § 12.21",
+          "officialTitle": "CLASS A MISDEMEANOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.21",
+          "content": "Sec. 12.21. CLASS A MISDEMEANOR. An individual adjudged guilty of a Class A misdemeanor shall be punished by: (1) a fine not to exceed $4,000; (2) confinement in jail for a term not to exceed one year; or (3) both such fine and confinement. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1991, 72nd Leg., ch. 108, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "91fc4df78563d6cee6fc8f4d13af032ff88714a8a6d90fc2e71f74011fe6f9b5",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-evading-arrest",
+            "catalogLabel": "Evading arrest or detention (ordinary)",
+            "catalogCode": "38.04(b)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "04189e5d90bf9395bb72a039ba436134a2c461bfea999e13e496169fd4271be9",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.43",
+          "lawId": "PE",
+          "section": "12.43",
+          "citation": "Tex. Penal Code § 12.43",
+          "officialTitle": "PENALTIES FOR REPEAT AND HABITUAL MISDEMEANOR OFFENDERS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.43",
+          "content": "Sec. 12.43. PENALTIES FOR REPEAT AND HABITUAL MISDEMEANOR OFFENDERS. (a) If it is shown on the trial of a Class A misdemeanor that the defendant has been before convicted of a Class A misdemeanor or any degree of felony, on conviction he shall be punished by: (1) a fine not to exceed $4,000; (2) confinement in jail for any term of not more than one year or less than 90 days; or (3) both such fine and confinement. (b) If it is shown on the trial of a Class B misdemeanor that the defendant has been before convicted of a Class A or Class B misdemeanor or any degree of felony, on conviction he shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for any term of not more than 180 days or less than 30 days; or (3) both such fine and confinement. (c) If it is shown on the trial of an offense punishable as a Class C misdemeanor under Section 42.01 or 49.02 that the defendant has been before convicted under either of those sections three times or three times for any combination of those offenses and each prior offense was committed in the 24 months preceding the date of commission of the instant offense, the defendant shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for a term not to exceed 180 days; or (3) both such fine and confinement. (d) If the punishment scheme for an offense contains a specific enhancement provision increasing punishment for a defendant who has previously been convicted of the offense, the specific enhancement provision controls over this section. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 318, Sec. 2, eff. Sept. 1, 1995; Acts 1999, 76th Leg., ch. 564, Sec. 1, eff. Sept. 1, 1999.",
+          "contentHash": "4120c12a3df195d9c294867112e86f348597a7dc9289538d21c787d37af3b9df",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 1999",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": "(a), (d)",
+          "metadata": {
+            "chargeId": "tx-evading-arrest",
+            "catalogLabel": "Evading arrest or detention (ordinary)",
+            "catalogCode": "38.04(b)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1999"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "45d93b78bf3356be716d400f565d03403420621d228fead2b9aba8b84b4ec620",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
           }
         }
       ],
@@ -3158,11 +3278,11 @@
     },
     {
       "chargeId": "tx-failure-to-identify",
-      "catalogLabel": "Failure to Identify",
-      "catalogCode": "38.02",
+      "catalogLabel": "Failure to identify (refusing after lawful arrest)",
+      "catalogCode": "38.02(c)(1)",
       "catalogCategory": "misdemeanor",
-      "disposition": "retain",
-      "dispositionReason": "Catalog label matches the official TCSS title.",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
       "canonicalTitle": "FAILURE TO IDENTIFY.",
       "provisions": [
         {
@@ -3175,15 +3295,15 @@
           "content": "Sec. 38.02. FAILURE TO IDENTIFY. (a) A person commits an offense if he intentionally refuses to give his name, residence address, or date of birth to a peace officer who has lawfully arrested the person and requested the information. (b) A person commits an offense if he intentionally gives a false or fictitious name, residence address, or date of birth to a peace officer who has: (1) lawfully arrested the person; (2) lawfully detained the person; or (3) requested the information from a person that the peace officer has good cause to believe is a witness to a criminal offense. (b-1) A person commits an offense if the person: (1) is an operator of a motor vehicle, as defined by Section 32.34, who is lawfully detained by a peace officer for an alleged violation of a law; (2) fails to provide or display the person's driver's license on the officer's request for the license; and (3) intentionally refuses to give the person's name, driver's license number, residence address, or date of birth to the peace officer on the officer's request for that information. (b-2) For purposes of Subsection (b-1)(3), giving a peace officer a residence address that is different from the address associated with the person's driver's license does not constitute a refusal to give the person's residence address in violation of that provision if the address given to the officer is the person's actual residence address. (c) Except as provided by Subsections (d) and (d-1), an offense under this section is: (1) a Class C misdemeanor if the offense is committed under Subsection (a) or (b-1); or (2) a Class B misdemeanor if the offense is committed under Subsection (b). (d) If it is shown on the trial of an offense under this section that the defendant was a fugitive from justice at the time of the offense, the offense is: (1) a Class B misdemeanor if the offense is committed under Subsection (a); or (2) a Class A misdemeanor if the offense is committed under Subsection (b). (d-1) An offense under Subsection (b-1) is a Class B misdemeanor if it is shown on the trial of the offense that the actor gave a false or fictitious name to the peace officer during the commission of the offense. (e) If conduct that constitutes an offense under this section also constitutes an offense under Section 106.07, Alcoholic Beverage Code, the actor may be prosecuted only under Section 106.07. (f) Subject to Subsection (e), if conduct that constitutes an offense under Subsection (b-1) also constitutes an offense under any other law, the actor may be prosecuted under that subsection, the other law, or both. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 869, Sec. 1, eff. Sept. 1, 1987. Acts 1991, 72nd Leg., ch. 821, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 2003, 78th Leg., ch. 1009, Sec. 1, eff. Sept. 1, 2003. Amended by: Acts 2023, 88th Leg., R.S., Ch. 1164 (S.B. 1551), Sec. 1, eff. September 1, 2023.",
           "contentHash": "97a82c989b5fab44be1a9e6f728860220f192e6ec941e0ad9148ff047bf26754",
           "hashBasis": "source_content",
-          "retrievedAt": "2026-09-15T05:06:49.968Z",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
           "effectiveDateStart": "September 1, 2023",
           "effectiveDateEnd": null,
           "supportRole": "offense",
-          "subdivision": null,
+          "subdivision": "(a)",
           "metadata": {
             "chargeId": "tx-failure-to-identify",
-            "catalogLabel": "Failure to Identify",
-            "catalogCode": "38.02",
+            "catalogLabel": "Failure to identify (refusing after lawful arrest)",
+            "catalogCode": "38.02(c)(1)",
             "catalogClassification": "misdemeanor",
             "elements": {
               "basis": "verbatim_official_text",
@@ -3202,7 +3322,127 @@
             },
             "attorneyReview": "pending",
             "fingerprint": "b2917a25217ab44ab5deb41e40e9cdc9c2b5dc68be35ccc654729d28add20229",
-            "manifestImportedAt": "2026-09-15T05:06:49.968Z"
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:38.02",
+          "lawId": "PE",
+          "section": "38.02",
+          "citation": "Tex. Penal Code § 38.02",
+          "officialTitle": "FAILURE TO IDENTIFY.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.02",
+          "content": "Sec. 38.02. FAILURE TO IDENTIFY. (a) A person commits an offense if he intentionally refuses to give his name, residence address, or date of birth to a peace officer who has lawfully arrested the person and requested the information. (b) A person commits an offense if he intentionally gives a false or fictitious name, residence address, or date of birth to a peace officer who has: (1) lawfully arrested the person; (2) lawfully detained the person; or (3) requested the information from a person that the peace officer has good cause to believe is a witness to a criminal offense. (b-1) A person commits an offense if the person: (1) is an operator of a motor vehicle, as defined by Section 32.34, who is lawfully detained by a peace officer for an alleged violation of a law; (2) fails to provide or display the person's driver's license on the officer's request for the license; and (3) intentionally refuses to give the person's name, driver's license number, residence address, or date of birth to the peace officer on the officer's request for that information. (b-2) For purposes of Subsection (b-1)(3), giving a peace officer a residence address that is different from the address associated with the person's driver's license does not constitute a refusal to give the person's residence address in violation of that provision if the address given to the officer is the person's actual residence address. (c) Except as provided by Subsections (d) and (d-1), an offense under this section is: (1) a Class C misdemeanor if the offense is committed under Subsection (a) or (b-1); or (2) a Class B misdemeanor if the offense is committed under Subsection (b). (d) If it is shown on the trial of an offense under this section that the defendant was a fugitive from justice at the time of the offense, the offense is: (1) a Class B misdemeanor if the offense is committed under Subsection (a); or (2) a Class A misdemeanor if the offense is committed under Subsection (b). (d-1) An offense under Subsection (b-1) is a Class B misdemeanor if it is shown on the trial of the offense that the actor gave a false or fictitious name to the peace officer during the commission of the offense. (e) If conduct that constitutes an offense under this section also constitutes an offense under Section 106.07, Alcoholic Beverage Code, the actor may be prosecuted only under Section 106.07. (f) Subject to Subsection (e), if conduct that constitutes an offense under Subsection (b-1) also constitutes an offense under any other law, the actor may be prosecuted under that subsection, the other law, or both. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 869, Sec. 1, eff. Sept. 1, 1987. Acts 1991, 72nd Leg., ch. 821, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 2003, 78th Leg., ch. 1009, Sec. 1, eff. Sept. 1, 2003. Amended by: Acts 2023, 88th Leg., R.S., Ch. 1164 (S.B. 1551), Sec. 1, eff. September 1, 2023.",
+          "contentHash": "97a82c989b5fab44be1a9e6f728860220f192e6ec941e0ad9148ff047bf26754",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 2023",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(c)(1)",
+          "metadata": {
+            "chargeId": "tx-failure-to-identify",
+            "catalogLabel": "Failure to identify (refusing after lawful arrest)",
+            "catalogCode": "38.02(c)(1)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2023"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "b2917a25217ab44ab5deb41e40e9cdc9c2b5dc68be35ccc654729d28add20229",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:AL:106.07",
+          "lawId": "AL",
+          "section": "106.07",
+          "citation": "Tex. Alco. Bev. Code § 106.07",
+          "officialTitle": "MISREPRESENTATION OF AGE BY A MINOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/AL/htm/AL.106.htm#106.07",
+          "content": "Sec. 106.07. MISREPRESENTATION OF AGE BY A MINOR. (a) A minor commits an offense if he falsely states that he is 21 years of age or older or presents any document that indicates he is 21 years of age or older to a person engaged in selling or serving alcoholic beverages. (b) An offense under this section is punishable as provided by Section 106.071. Acts 1977, 65th Leg., p. 514, ch. 194, Sec. 1, eff. Sept. 1, 1977. Amended by Acts 1981, 67th Leg., p. 257, ch. 107, Sec. 10, eff. Sept. 1, 1981; Acts 1985, 69th Leg., ch. 285, Sec. 10, eff. Sept. 1, 1986; Acts 1985, 69th Leg., ch. 462, Sec. 11, eff. Sept. 1, 1986; Acts 1997, 75th Leg., ch. 1013, Sec. 8, eff. Sept. 1, 1997.",
+          "contentHash": "1995332d847cb7dd98be7cdb491bd668efd30cd67dbf124fac9f48012b22e1ce",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:17:33.263Z",
+          "effectiveDateStart": "September 1, 1997",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-failure-to-identify",
+            "catalogLabel": "Failure to identify (refusing after lawful arrest)",
+            "catalogCode": "38.02(c)(1)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1997"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "160d9af466d4b01f3944f965f3c6f91bc466eaf760db76aca328b90f33f856a1",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.23",
+          "lawId": "PE",
+          "section": "12.23",
+          "citation": "Tex. Penal Code § 12.23",
+          "officialTitle": "CLASS C MISDEMEANOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.23",
+          "content": "Sec. 12.23. CLASS C MISDEMEANOR. An individual adjudged guilty of a Class C misdemeanor shall be punished by a fine not to exceed $500. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1991, 72nd Leg., ch. 108, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "5934ace2833dc777d82b70ccf0d361abf2761b0a7692b550a85aebc8b8e7c7fa",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-failure-to-identify",
+            "catalogLabel": "Failure to identify (refusing after lawful arrest)",
+            "catalogCode": "38.02(c)(1)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "8aeb216b7b2f0365c4f8e02e724f8150ff8aed5a7715e4bf679b12c1005bbd4a",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
           }
         }
       ],
@@ -9779,6 +10019,1490 @@
             "attorneyReview": "pending",
             "fingerprint": "0467870051d27beafacac7557857d7b78f0ffa4f71f8b46ed18f5645947e9dad",
             "manifestImportedAt": "2026-11-16T20:47:42.831Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "tx-pc-38-03-c",
+      "catalogLabel": "Resisting arrest, search or transportation (ordinary)",
+      "catalogCode": "38.03(c)",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
+      "canonicalTitle": "RESISTING ARREST, SEARCH, OR TRANSPORTATION.",
+      "provisions": [
+        {
+          "sourceKey": "tx:PE:38.03",
+          "lawId": "PE",
+          "section": "38.03",
+          "citation": "Tex. Penal Code § 38.03",
+          "officialTitle": "RESISTING ARREST, SEARCH, OR TRANSPORTATION.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.03",
+          "content": "Sec. 38.03. RESISTING ARREST, SEARCH, OR TRANSPORTATION. (a) A person commits an offense if he intentionally prevents or obstructs a person he knows is a peace officer or a person acting in a peace officer's presence and at his direction from effecting an arrest, search, or transportation of the actor or another by using force against the peace officer or another. (b) It is no defense to prosecution under this section that the arrest or search was unlawful. (c) Except as provided in Subsection (d), an offense under this section is a Class A misdemeanor. (d) An offense under this section is a felony of the third degree if the actor uses a deadly weapon to resist the arrest or search. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Acts 1991, 72nd Leg., ch. 277, Sec. 1, 2, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "8116d5416253e237cc68a9abfd1f20c1b677a1b0daa2f34419e973dfae70f6a4",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": "(a), (b)",
+          "metadata": {
+            "chargeId": "tx-pc-38-03-c",
+            "catalogLabel": "Resisting arrest, search or transportation (ordinary)",
+            "catalogCode": "38.03(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "274749fa20d09ef14c862f5474726b5b6bdac7a60d220b496329ee480b3056ec",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:38.03",
+          "lawId": "PE",
+          "section": "38.03",
+          "citation": "Tex. Penal Code § 38.03",
+          "officialTitle": "RESISTING ARREST, SEARCH, OR TRANSPORTATION.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.03",
+          "content": "Sec. 38.03. RESISTING ARREST, SEARCH, OR TRANSPORTATION. (a) A person commits an offense if he intentionally prevents or obstructs a person he knows is a peace officer or a person acting in a peace officer's presence and at his direction from effecting an arrest, search, or transportation of the actor or another by using force against the peace officer or another. (b) It is no defense to prosecution under this section that the arrest or search was unlawful. (c) Except as provided in Subsection (d), an offense under this section is a Class A misdemeanor. (d) An offense under this section is a felony of the third degree if the actor uses a deadly weapon to resist the arrest or search. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Acts 1991, 72nd Leg., ch. 277, Sec. 1, 2, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "8116d5416253e237cc68a9abfd1f20c1b677a1b0daa2f34419e973dfae70f6a4",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(c)",
+          "metadata": {
+            "chargeId": "tx-pc-38-03-c",
+            "catalogLabel": "Resisting arrest, search or transportation (ordinary)",
+            "catalogCode": "38.03(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "274749fa20d09ef14c862f5474726b5b6bdac7a60d220b496329ee480b3056ec",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.21",
+          "lawId": "PE",
+          "section": "12.21",
+          "citation": "Tex. Penal Code § 12.21",
+          "officialTitle": "CLASS A MISDEMEANOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.21",
+          "content": "Sec. 12.21. CLASS A MISDEMEANOR. An individual adjudged guilty of a Class A misdemeanor shall be punished by: (1) a fine not to exceed $4,000; (2) confinement in jail for a term not to exceed one year; or (3) both such fine and confinement. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1991, 72nd Leg., ch. 108, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "91fc4df78563d6cee6fc8f4d13af032ff88714a8a6d90fc2e71f74011fe6f9b5",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-03-c",
+            "catalogLabel": "Resisting arrest, search or transportation (ordinary)",
+            "catalogCode": "38.03(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "04189e5d90bf9395bb72a039ba436134a2c461bfea999e13e496169fd4271be9",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.43",
+          "lawId": "PE",
+          "section": "12.43",
+          "citation": "Tex. Penal Code § 12.43",
+          "officialTitle": "PENALTIES FOR REPEAT AND HABITUAL MISDEMEANOR OFFENDERS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.43",
+          "content": "Sec. 12.43. PENALTIES FOR REPEAT AND HABITUAL MISDEMEANOR OFFENDERS. (a) If it is shown on the trial of a Class A misdemeanor that the defendant has been before convicted of a Class A misdemeanor or any degree of felony, on conviction he shall be punished by: (1) a fine not to exceed $4,000; (2) confinement in jail for any term of not more than one year or less than 90 days; or (3) both such fine and confinement. (b) If it is shown on the trial of a Class B misdemeanor that the defendant has been before convicted of a Class A or Class B misdemeanor or any degree of felony, on conviction he shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for any term of not more than 180 days or less than 30 days; or (3) both such fine and confinement. (c) If it is shown on the trial of an offense punishable as a Class C misdemeanor under Section 42.01 or 49.02 that the defendant has been before convicted under either of those sections three times or three times for any combination of those offenses and each prior offense was committed in the 24 months preceding the date of commission of the instant offense, the defendant shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for a term not to exceed 180 days; or (3) both such fine and confinement. (d) If the punishment scheme for an offense contains a specific enhancement provision increasing punishment for a defendant who has previously been convicted of the offense, the specific enhancement provision controls over this section. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 318, Sec. 2, eff. Sept. 1, 1995; Acts 1999, 76th Leg., ch. 564, Sec. 1, eff. Sept. 1, 1999.",
+          "contentHash": "4120c12a3df195d9c294867112e86f348597a7dc9289538d21c787d37af3b9df",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 1999",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": "(a), (d)",
+          "metadata": {
+            "chargeId": "tx-pc-38-03-c",
+            "catalogLabel": "Resisting arrest, search or transportation (ordinary)",
+            "catalogCode": "38.03(c)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1999"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "45d93b78bf3356be716d400f565d03403420621d228fead2b9aba8b84b4ec620",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "tx-pc-38-03-d",
+      "catalogLabel": "Resisting arrest or search using a deadly weapon",
+      "catalogCode": "38.03(d)",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
+      "canonicalTitle": "RESISTING ARREST, SEARCH, OR TRANSPORTATION.",
+      "provisions": [
+        {
+          "sourceKey": "tx:PE:38.03",
+          "lawId": "PE",
+          "section": "38.03",
+          "citation": "Tex. Penal Code § 38.03",
+          "officialTitle": "RESISTING ARREST, SEARCH, OR TRANSPORTATION.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.03",
+          "content": "Sec. 38.03. RESISTING ARREST, SEARCH, OR TRANSPORTATION. (a) A person commits an offense if he intentionally prevents or obstructs a person he knows is a peace officer or a person acting in a peace officer's presence and at his direction from effecting an arrest, search, or transportation of the actor or another by using force against the peace officer or another. (b) It is no defense to prosecution under this section that the arrest or search was unlawful. (c) Except as provided in Subsection (d), an offense under this section is a Class A misdemeanor. (d) An offense under this section is a felony of the third degree if the actor uses a deadly weapon to resist the arrest or search. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Acts 1991, 72nd Leg., ch. 277, Sec. 1, 2, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "8116d5416253e237cc68a9abfd1f20c1b677a1b0daa2f34419e973dfae70f6a4",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": "(a), (b)",
+          "metadata": {
+            "chargeId": "tx-pc-38-03-d",
+            "catalogLabel": "Resisting arrest or search using a deadly weapon",
+            "catalogCode": "38.03(d)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "274749fa20d09ef14c862f5474726b5b6bdac7a60d220b496329ee480b3056ec",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:38.03",
+          "lawId": "PE",
+          "section": "38.03",
+          "citation": "Tex. Penal Code § 38.03",
+          "officialTitle": "RESISTING ARREST, SEARCH, OR TRANSPORTATION.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.03",
+          "content": "Sec. 38.03. RESISTING ARREST, SEARCH, OR TRANSPORTATION. (a) A person commits an offense if he intentionally prevents or obstructs a person he knows is a peace officer or a person acting in a peace officer's presence and at his direction from effecting an arrest, search, or transportation of the actor or another by using force against the peace officer or another. (b) It is no defense to prosecution under this section that the arrest or search was unlawful. (c) Except as provided in Subsection (d), an offense under this section is a Class A misdemeanor. (d) An offense under this section is a felony of the third degree if the actor uses a deadly weapon to resist the arrest or search. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Acts 1991, 72nd Leg., ch. 277, Sec. 1, 2, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "8116d5416253e237cc68a9abfd1f20c1b677a1b0daa2f34419e973dfae70f6a4",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(d)",
+          "metadata": {
+            "chargeId": "tx-pc-38-03-d",
+            "catalogLabel": "Resisting arrest or search using a deadly weapon",
+            "catalogCode": "38.03(d)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "274749fa20d09ef14c862f5474726b5b6bdac7a60d220b496329ee480b3056ec",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:1.07",
+          "lawId": "PE",
+          "section": "1.07",
+          "citation": "Tex. Penal Code § 1.07",
+          "officialTitle": "DEFINITIONS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.1.htm#1.07",
+          "content": "Sec. 1.07. DEFINITIONS. (a) In this code: (1) \"Act\" means a bodily movement, whether voluntary or involuntary, and includes speech. (2) \"Actor\" means a person whose criminal responsibility is in issue in a criminal action. Whenever the term \"suspect\" is used in this code, it means \"actor.\" (3) \"Agency\" includes authority, board, bureau, commission, committee, council, department, district, division, and office. (4) \"Alcoholic beverage\" has the meaning assigned by Section 1.04, Alcoholic Beverage Code. (5) \"Another\" means a person other than the actor. (6) \"Association\" means a government or governmental subdivision or agency, trust, partnership, or two or more persons having a joint or common economic interest. (7) \"Benefit\" means anything reasonably regarded as economic gain or advantage, including benefit to any other person in whose welfare the beneficiary is interested. (8) \"Bodily injury\" means physical pain, illness, or any impairment of physical condition. (8-a) \"Civil commitment facility\" means a facility owned, leased, or operated by the state, or by a vendor under contract with the state, that houses only persons who have been civilly committed as sexually violent predators under Chapter 841, Health and Safety Code. (9) \"Coercion\" means a threat, however communicated: (A) to commit an offense; (B) to inflict bodily injury in the future on the person threatened or another; (C) to accuse a person of any offense; (D) to expose a person to hatred, contempt, or ridicule; (E) to harm the credit or business repute of any person; or (F) to take or withhold action as a public servant, or to cause a public servant to take or withhold action. (10) \"Conduct\" means an act or omission and its accompanying mental state. (11) \"Consent\" means assent in fact, whether express or apparent. (12) \"Controlled substance\" has the meaning assigned by Section 481.002, Health and Safety Code. (13) \"Corporation\" includes nonprofit corporations, professional associations created pursuant to statute, and joint stock companies. (14) \"Correctional facility\" means a place designated by law for the confinement of a person arrested for, charged with, or convicted of a criminal offense. The term includes: (A) a municipal or county jail; (B) a confinement facility operated by the Texas Department of Criminal Justice; (C) a confinement facility operated under contract with any division of the Texas Department of Criminal Justice; and (D) a community corrections facility operated by a community supervision and corrections department. (15) \"Criminal negligence\" is defined in Section 6.03 (Culpable Mental States). (16) \"Dangerous drug\" has the meaning assigned by Section 483.001, Health and Safety Code. (17) \"Deadly weapon\" means: (A) a firearm or anything manifestly designed, made, or adapted for the purpose of inflicting death or serious bodily injury; or (B) anything that in the manner of its use or intended use is capable of causing death or serious bodily injury. (18) \"Drug\" has the meaning assigned by Section 481.002, Health and Safety Code. (19) \"Effective consent\" includes consent by a person legally authorized to act for the owner. Consent is not effective if: (A) induced by force, threat, or fraud; (B) given by a person the actor knows is not legally authorized to act for the owner; (C) given by a person who by reason of youth, mental disease or defect, or intoxication is known by the actor to be unable to make reasonable decisions; or (D) given solely to detect the commission of an offense. (20) \"Electric generating plant\" means a facility that generates electric energy for distribution to the public. (21) \"Electric utility substation\" means a facility used to switch or change voltage in connection with the transmission of electric energy for distribution to the public. (22) \"Element of offense\" means: (A) the forbidden conduct; (B) the required culpability; (C) any required result; and (D) the negation of any exception to the offense. (23) \"Felony\" means an offense so designated by law or punishable by death or confinement in a penitentiary. (24) \"Government\" means: (A) the state; (B) a county, municipality, or political subdivision of the state; or (C) any branch or agency of the state, a county, municipality, or political subdivision. (25) \"Harm\" means anything reasonably regarded as loss, disadvantage, or injury, including harm to another person in whose welfare the person affected is interested. (26) \"Individual\" means a human being who is alive, including an unborn child at every stage of gestation from fertilization until birth. (27) Repealed by Acts 2009, 81st Leg., R.S., Ch. 87, Sec. 25.144, eff. September 1, 2009. (28) \"Intentional\" is defined in Section 6.03 (Culpable Mental States). (29) \"Knowing\" is defined in Section 6.03 (Culpable Mental States). (30) \"Law\" means the constitution or a statute of this state or of the United States, a written opinion of a court of record, a municipal ordinance, an order of a county commissioners court, or a rule authorized by and lawfully adopted under a statute. (30-a) \"Mass shooting\" means a person's discharge of a firearm to cause serious bodily injury or death, or to attempt to cause serious bodily injury or death, to four or more persons: (A) during the same criminal transaction; or (B) during different criminal transactions but pursuant to the same scheme or course of conduct. (31) \"Misdemeanor\" means an offense so designated by law or punishable by fine, by confinement in jail, or by both fine and confinement in jail. (32) \"Oath\" includes affirmation. (33) \"Official proceeding\" means any type of administrative, executive, legislative, or judicial proceeding that may be conducted before a public servant. (34) \"Omission\" means failure to act. (35) \"Owner\" means a person who: (A) has title to the property, possession of the property, whether lawful or not, or a greater right to possession of the property than the actor; or (B) is a holder in due course of a negotiable instrument. (36) \"Peace officer\" means a person elected, employed, or appointed as a peace officer under Article 2A.001, Code of Criminal Procedure, Section 51.212 or 51.214, Education Code, or other law. (37) \"Penal institution\" means a place designated by law for confinement of persons arrested for, charged with, or convicted of an offense. (38) \"Person\" means an individual or a corporation, association, limited liability company, or other entity or organization governed by the Business Organizations Code. (39) \"Possession\" means actual care, custody, control, or management. (40) \"Public place\" means any place to which the public or a substantial group of the public has access and includes, but is not limited to, streets, highways, and the common areas of schools, hospitals, apartment houses, office buildings, transport facilities, and shops. (41) \"Public servant\" means a person elected, selected, appointed, employed, or otherwise designated as one of the following, even if he has not yet qualified for office or assumed his duties: (A) an officer, employee, or agent of government; (B) a juror or grand juror; or (C) an arbitrator, referee, or other person who is authorized by law or private written agreement to hear or determine a cause or controversy; or (D) an attorney at law or notary public when participating in the performance of a governmental function; or (E) a candidate for nomination or election to public office; or (F) a person who is performing a governmental function under a claim of right although he is not legally qualified to do so. (42) \"Reasonable belief\" means a belief that would be held by an ordinary and prudent man in the same circumstances as the actor. (43) \"Reckless\" is defined in Section 6.03 (Culpable Mental States). (44) \"Rule\" includes regulation. (45) \"Secure correctional facility\" means: (A) a municipal or county jail; or (B) a confinement facility operated by or under a contract with any division of the Texas Department of Criminal Justice. (46) \"Serious bodily injury\" means bodily injury that creates a substantial risk of death or that causes death, serious permanent disfigurement, or protracted loss or impairment of the function of any bodily member or organ. (46-a) \"Sight order\" means a written or electronic instruction to pay money that is authorized by the person giving the instruction and that is payable on demand or at a definite time by the person being instructed to pay. The term includes a check, an electronic debit, or an automatic bank draft. (46-b) \"Federal special investigator\" means a person described by Article 2A.002, Code of Criminal Procedure. (47) \"Swear\" includes affirm. (48) \"Unlawful\" means criminal or tortious or both and includes what would be criminal or tortious but for a defense not amounting to justification or privilege. (49) \"Death\" includes, for an individual who is an unborn child, the failure to be born alive. (b) The definition of a term in this code applies to each grammatical variation of the term. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1975, 64th Leg., p. 912, ch. 342, Sec. 1, eff. Sept. 1, 1975; Acts 1977, 65th Leg., p. 2123, ch. 848, Sec. 1, eff. Aug. 29, 1977; Acts 1979, 66th Leg., p. 1113, ch. 530, Sec. 1, eff. Aug. 27, 1979; Acts 1979, 66th Leg., p. 1520, ch. 655, Sec. 1, eff. Sept. 1, 1979; Acts 1987, 70th Leg., ch. 167, Sec. 5.01(a)(43), eff. Sept. 1, 1987; Acts 1989, 71st Leg., ch. 997, Sec. 1, eff. Aug. 28, 1989; Acts 1991, 72nd Leg., ch. 543, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 2003, 78th Leg., ch. 822, Sec. 2.01, eff. Sept. 1, 2003. Amended by: Acts 2009, 81st Leg., R.S., Ch. 87 (S.B. 1969), Sec. 25.144, eff. September 1, 2009. Acts 2009, 81st Leg., R.S., Ch. 421 (H.B. 2031), Sec. 1, eff. September 1, 2009. Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 1, eff. September 1, 2011. Acts 2017, 85th Leg., R.S., Ch. 34 (S.B. 1576), Sec. 26, eff. September 1, 2017. Acts 2019, 86th Leg., R.S., Ch. 112 (S.B. 1258), Sec. 1, eff. September 1, 2019. Acts 2023, 88th Leg., R.S., Ch. 467 (H.B. 165), Sec. 1, eff. September 1, 2023. Acts 2023, 88th Leg., R.S., Ch. 765 (H.B. 4504), Sec. 2.153, eff. January 1, 2025.",
+          "contentHash": "2aa9be85a9fd432ed5e775259fbe3501824dbaaacc1408de1d4f067bdca0c1d1",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T20:47:42.831Z",
+          "effectiveDateStart": "January 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(a)(17)",
+          "metadata": {
+            "chargeId": "tx-pc-38-03-d",
+            "catalogLabel": "Resisting arrest or search using a deadly weapon",
+            "catalogCode": "38.03(d)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "January 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "a1665b89c5420bc0ed5b24f1a9cb1eeabe227c3fe61241828364c7e4afa577e4",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.34",
+          "lawId": "PE",
+          "section": "12.34",
+          "citation": "Tex. Penal Code § 12.34",
+          "officialTitle": "THIRD DEGREE FELONY PUNISHMENT.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.34",
+          "content": "Sec. 12.34. THIRD DEGREE FELONY PUNISHMENT. (a) An individual adjudged guilty of a felony of the third degree shall be punished by imprisonment in the Texas Department of Criminal Justice for any term of not more than 10 years or less than 2 years. (b) In addition to imprisonment, an individual adjudged guilty of a felony of the third degree may be punished by a fine not to exceed $10,000. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Renumbered from Penal Code Sec. 12.33 by Acts 1973, 63rd Leg., p. 1124, ch. 426, art. 2, Sec. 2, eff. Jan. 1,1974. Amended by Acts 1989, 71st Leg., ch. 785, Sec. 4.01, eff. Sept. 1, 1989; Acts 1990, 71st Leg., 6th C.S., ch. 25, Sec. 7, eff. June 18, 1990; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by: Acts 2009, 81st Leg., R.S., Ch. 87 (S.B. 1969), Sec. 25.148, eff. September 1, 2009.",
+          "contentHash": "7c842e178170bf3846088cba1bb0911a3b78ad857be64b411a9141ed031fc879",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 2009",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-03-d",
+            "catalogLabel": "Resisting arrest or search using a deadly weapon",
+            "catalogCode": "38.03(d)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2009"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "bf08cec564036de34be806d6e5fbd3ea496050dfe91ad5cbe6c36b89ad2290b5",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.42",
+          "lawId": "PE",
+          "section": "12.42",
+          "citation": "Tex. Penal Code § 12.42",
+          "officialTitle": "PENALTIES FOR REPEAT AND HABITUAL FELONY OFFENDERS ON TRIAL FOR FIRST, SECOND, OR THIRD DEGREE FELONY.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.42",
+          "content": "Sec. 12.42. PENALTIES FOR REPEAT AND HABITUAL FELONY OFFENDERS ON TRIAL FOR FIRST, SECOND, OR THIRD DEGREE FELONY. (a) Except as provided by Subsection (c)(2), if it is shown on the trial of a felony of the third degree that the defendant has previously been finally convicted of a felony other than a state jail felony punishable under Section 12.35(a), on conviction the defendant shall be punished for a felony of the second degree. (b) Except as provided by Subsection (c)(2) or (c)(4), if it is shown on the trial of a felony of the second degree that the defendant has previously been finally convicted of a felony other than a state jail felony punishable under Section 12.35(a), on conviction the defendant shall be punished for a felony of the first degree. (c)(1) If it is shown on the trial of a felony of the first degree that the defendant has previously been finally convicted of a felony other than a state jail felony punishable under Section 12.35(a), on conviction the defendant shall be punished by imprisonment in the Texas Department of Criminal Justice for life, or for any term of not more than 99 years or less than 15 years. In addition to imprisonment, an individual may be punished by a fine not to exceed $10,000. (2) Notwithstanding Subdivision (1), a defendant shall be punished by imprisonment in the Texas Department of Criminal Justice for life if: (A) the defendant is convicted of an offense: (i) under Section 20A.02(a)(7) or (8), 21.11(a)(1), 22.021, or 22.011, Penal Code; (ii) under Section 20.04(a)(4), Penal Code, if the defendant committed the offense with the intent to violate or abuse the victim sexually; or (iii) under Section 30.02, Penal Code, punishable under Subsection (d) of that section, if the defendant committed the offense with the intent to commit a felony described by Subparagraph (i) or (ii) or a felony under Section 21.11, Penal Code; and (B) the defendant has been previously convicted of an offense: (i) under Section 43.25 or 43.26, Penal Code, or an offense under Section 43.23, Penal Code, punishable under Subsection (h) of that section; (ii) under Section 20A.02(a)(7) or (8), 21.02, 21.03, 21.11, 22.011, 22.021, or 25.02, Penal Code; (iii) under Section 20.04(a)(4), Penal Code, if the defendant committed the offense with the intent to violate or abuse the victim sexually; (iv) under Section 30.02, Penal Code, punishable under Subsection (d) of that section, if the defendant committed the offense with the intent to commit a felony described by Subparagraph (ii) or (iii); or (v) under the laws of another state containing elements that are substantially similar to the elements of an offense listed in Subparagraph (i), (ii), (iii), or (iv). (3) Notwithstanding Subdivision (1) or (2), a defendant shall be punished for a capital felony if it is shown on the trial of an offense under Section 22.021 otherwise punishable under Subsection (f) of that section that the defendant has previously been finally convicted of: (A) an offense under Section 22.021 that was committed against a victim described by Section 22.021(f)(1) or was committed against a victim described by Section 22.021(f)(2) and in a manner described by Section 22.021(a)(2)(A); or (B) an offense that was committed under the laws of another state that: (i) contains elements that are substantially similar to the elements of an offense under Section 22.021; and (ii) was committed against a victim described by Section 22.021(f)(1) or was committed against a victim described by Section 22.021(f)(2) and in a manner substantially similar to a manner described by Section 22.021(a)(2)(A). (4) Notwithstanding Subdivision (1) or (2), and except as provided by Subdivision (3) for the trial of an offense under Section 22.021 as described by that subdivision, a defendant shall be punished by imprisonment in the Texas Department of Criminal Justice for life without parole if it is shown on the trial of an offense under Section 20A.03 or of a sexually violent offense, committed by the defendant on or after the defendant's 18th birthday, that the defendant has previously been finally convicted of: (A) an offense under Section 20A.03 or of a sexually violent offense; or (B) an offense that was committed under the laws of another state and that contains elements that are substantially similar to the elements of an offense under Section 20A.03 or of a sexually violent offense. (5) A previous conviction for a state jail felony punishable under Section 12.35(a) may not be used for enhancement purposes under Subdivision (2). (d) Except as provided by Subsection (c)(2), (c)(4), or (e), if it is shown on the trial of a felony offense other than a state jail felony punishable under Section 12.35(a) that the defendant has previously been finally convicted of two felony offenses, and the second previous felony conviction is for an offense that occurred subsequent to the first previous conviction having become final, on conviction the defendant shall be punished by imprisonment in the Texas Department of Criminal Justice for life, or for any term of not more than 99 years or less than 25 years. A previous conviction for a state jail felony punishable under Section 12.35(a) may not be used for enhancement purposes under this subsection. (e) Notwithstanding Subsection (c) or (d), if it is shown on the trial of a felony offense other than a state jail felony punishable under Section 12.35(a) that the defendant was civilly committed as a sexually violent predator under Chapter 841, Health and Safety Code, at the time of the offense, on conviction the defendant shall be punished by imprisonment in the Texas Department of Criminal Justice for life, or for any term of not more than 99 years or less than 25 years. (f) For the purposes of Subsections (a), (b), and (c)(1), an adjudication by a juvenile court under Section 54.03, Family Code, that a child engaged in delinquent conduct on or after January 1, 1996, constituting a felony offense for which the child is committed to the Texas Juvenile Justice Department under Section 54.04(d)(2), (d)(3), or (m), Family Code, or Section 54.05(f), Family Code, or to a post-adjudication secure correctional facility under Section 54.04011, Family Code, is a final felony conviction. (g) For the purposes of Subsection (c)(2): (1) a defendant has been previously convicted of an offense listed under Subsection (c)(2)(B) if the defendant was adjudged guilty of the offense or entered a plea of guilty or nolo contendere in return for a grant of deferred adjudication, regardless of whether the sentence for the offense was ever imposed or whether the sentence was probated and the defendant was subsequently discharged from community supervision; and (2) a conviction under the laws of another state for an offense containing elements that are substantially similar to the elements of an offense listed under Subsection (c)(2)(B) is a conviction of an offense listed under Subsection (c)(2)(B). (h) In this section, \"sexually violent offense\" means an offense: (1) described by Article 62.001(6), Code of Criminal Procedure; and (2) for which an affirmative finding has been entered under Article 42.015(b) or 42A.105(a), Code of Criminal Procedure, for an offense other than an offense under Section 21.02 or 22.021. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1983, 68th Leg., p. 1750, ch. 339, Sec. 1, eff. Sept. 1, 1983; Acts 1985, 69th Leg., ch. 582, Sec. 1, eff. Sept. 1, 1985; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 250, Sec. 1, eff. Sept. 1, 1995; Acts 1995, 74th Leg., ch. 262, Sec. 78, eff. Jan. 1, 1996; Acts 1995, 74th Leg., ch. 318, Sec. 1, eff. Jan. 1, 1996; Acts 1997, 75th Leg., ch. 665, Sec. 1, 2, eff. Sept. 1, 1997; Acts 1997, 75th Leg., ch. 667, Sec. 4, eff. Sept. 1, 1997; Acts 1999, 76th Leg., ch. 62, Sec. 15.01, eff. Sept. 1, 1999; Acts 2003, 78th Leg., ch. 283, Sec. 53, eff. Sept. 1, 2003; Acts 2003, 78th Leg., ch. 1005, Sec. 2, eff. Sept. 1, 2003. Amended by: Acts 2007, 80th Leg., R.S., Ch. 340 (S.B. 75), Sec. 1, eff. September 1, 2007. Acts 2007, 80th Leg., R.S., Ch. 340 (S.B. 75), Sec. 2, eff. September 1, 2007. Acts 2007, 80th Leg., R.S., Ch. 340 (S.B. 75), Sec. 3, eff. September 1, 2007. Acts 2007, 80th Leg., R.S., Ch. 340 (S.B. 75), Sec. 4, eff. September 1, 2007. Acts 2007, 80th Leg., R.S., Ch. 593 (H.B. 8), Sec. 1.14, eff. September 1, 2007. Acts 2007, 80th Leg., R.S., Ch. 593 (H.B. 8), Sec. 1.15, eff. September 1, 2007. Acts 2009, 81st Leg., R.S., Ch. 87 (S.B. 1969), Sec. 25.150, eff. September 1, 2009. Acts 2011, 82nd Leg., R.S., Ch. 1 (S.B. 24), Sec. 6.02, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 122 (H.B. 3000), Sec. 14, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 834 (H.B. 3384), Sec. 1, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 834 (H.B. 3384), Sec. 2, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 834 (H.B. 3384), Sec. 3, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 834 (H.B. 3384), Sec. 4, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 834 (H.B. 3384), Sec. 6, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 1119 (H.B. 3), Sec. 3, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 1119 (H.B. 3), Sec. 4, eff. September 1, 2011. Acts 2013, 83rd Leg., R.S., Ch. 161 (S.B. 1093), Sec. 16.003, eff. September 1, 2013. Acts 2013, 83rd Leg., R.S., Ch. 663 (H.B. 1302), Sec. 7, eff. September 1, 2013. Acts 2013, 83rd Leg., R.S., Ch. 663 (H.B. 1302), Sec. 8, eff. September 1, 2013. Acts 2013, 83rd Leg., R.S., Ch. 663 (H.B. 1302), Sec. 9, eff. September 1, 2013. Acts 2013, 83rd Leg., R.S., Ch. 1323 (S.B. 511), Sec. 11, eff. December 1, 2013. Acts 2015, 84th Leg., R.S., Ch. 770 (H.B. 2299), Sec. 2.82, eff. January 1, 2017. Acts 2025, 89th Leg., R.S., Ch. 557 (H.B. 1422), Sec. 14, eff. September 1, 2025. Acts 2025, 89th Leg., R.S., Ch. 1145 (S.B. 1610), Sec. 1, eff. September 1, 2025.",
+          "contentHash": "194da94062eafd983638136b59168256fd6210ba4cd3e60adc425bb9471291dd",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-03-d",
+            "catalogLabel": "Resisting arrest or search using a deadly weapon",
+            "catalogCode": "38.03(d)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "c16a77589e758ace1fd9fe9cbfe281b96aed09be22cc693c0d9e5699adb4549e",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "tx-pc-38-04-prior",
+      "catalogLabel": "Evading arrest or detention with a prior evading conviction",
+      "catalogCode": "38.04(b)(1)",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
+      "canonicalTitle": "EVADING ARREST OR DETENTION.",
+      "provisions": [
+        {
+          "sourceKey": "tx:PE:38.04",
+          "lawId": "PE",
+          "section": "38.04",
+          "citation": "Tex. Penal Code § 38.04",
+          "officialTitle": "EVADING ARREST OR DETENTION.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.04",
+          "content": "Sec. 38.04. EVADING ARREST OR DETENTION. (a) A person commits an offense if he intentionally flees from a person he knows is a peace officer or federal special investigator attempting lawfully to arrest or detain him. Text of subsection as amended by Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 4, and Ch. 391 (S.B. 496), Sec. 1 (b) An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if: (A) the actor has been previously convicted under this section; or (B) the actor uses a vehicle or watercraft while the actor is in flight and the actor has not been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle or watercraft while the actor is in flight and the actor has been previously convicted under this section; or (B) another suffers serious bodily injury as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (3) a felony of the second degree if another suffers death as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight. Text of subsection as amended by Acts 2011, 82nd Leg., R.S., Ch. 920 (S.B. 1416), Sec. 3 (b) An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if the actor has been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle while the actor is in flight; (B) another suffers serious bodily injury as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (C) the actor uses a tire deflation device against the officer while the actor is in flight; or (3) a felony of the second degree if: (A) another suffers death as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (B) another suffers serious bodily injury as a direct result of the actor's use of a tire deflation device while the actor is in flight. (b-1) Notwithstanding Subsection (b), an offense under this section is a felony of the third degree if it is shown on the trial of the offense that the actor committed the offense in the course of committing an offense under Section 20.05(a)(2). (c) In this section: (1) \"Vehicle\" has the meaning assigned by Section 541.201, Transportation Code. (2) \"Tire deflation device\" has the meaning assigned by Section 46.01. (3) \"Watercraft\" has the meaning assigned by Section 49.01. (d) A person who is subject to prosecution under both this section and another law may be prosecuted under either or both this section and the other law. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 504, Sec. 1, eff. Sept. 1, 1987. Acts 1989, 71st Leg., ch. 126, Sec. 1, eff. Sept. 1, 1989; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 708, Sec. 1, eff. Sept. 1, 1995; Acts 1997, 75th Leg., ch. 165, Sec. 30.240, eff. Sept. 1, 1997; Acts 2001, 77th Leg., ch. 1334, Sec. 3, eff. Sept. 1, 2001; Acts 2001, 77th Leg., ch. 1480, Sec. 1, eff. Sept. 1, 2001. Amended by: Acts 2009, 81st Leg., R.S., Ch. 1400 (H.B. 221), Sec. 4, eff. September 1, 2009. Acts 2011, 82nd Leg., R.S., Ch. 391 (S.B. 496), Sec. 1, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 4, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 920 (S.B. 1416), Sec. 3, eff. September 1, 2011. Acts 2013, 83rd Leg., R.S., Ch. 161 (S.B. 1093), Sec. 22.001(38), eff. September 1, 2013. Acts 2023, 88th Leg., 3rd C.S., Ch. 2 (S.B. 4), Sec. 11, eff. February 6, 2024.",
+          "contentHash": "089c36badd47e19cc7403dbb1b1d7a2a04e8ad8526e841fbbb3726eabb28dc19",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "February 6, 2024",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": "(a)",
+          "metadata": {
+            "chargeId": "tx-pc-38-04-prior",
+            "catalogLabel": "Evading arrest or detention with a prior evading conviction",
+            "catalogCode": "38.04(b)(1)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "February 6, 2024"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "e4c08fcaf2e2650ab1c967ba9de6bce6470017850189b938768eeb6da2b010be",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:38.04",
+          "lawId": "PE",
+          "section": "38.04",
+          "citation": "Tex. Penal Code § 38.04",
+          "officialTitle": "EVADING ARREST OR DETENTION.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.04",
+          "content": "Sec. 38.04. EVADING ARREST OR DETENTION. (a) A person commits an offense if he intentionally flees from a person he knows is a peace officer or federal special investigator attempting lawfully to arrest or detain him. Text of subsection as amended by Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 4, and Ch. 391 (S.B. 496), Sec. 1 (b) An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if: (A) the actor has been previously convicted under this section; or (B) the actor uses a vehicle or watercraft while the actor is in flight and the actor has not been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle or watercraft while the actor is in flight and the actor has been previously convicted under this section; or (B) another suffers serious bodily injury as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (3) a felony of the second degree if another suffers death as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight. Text of subsection as amended by Acts 2011, 82nd Leg., R.S., Ch. 920 (S.B. 1416), Sec. 3 (b) An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if the actor has been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle while the actor is in flight; (B) another suffers serious bodily injury as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (C) the actor uses a tire deflation device against the officer while the actor is in flight; or (3) a felony of the second degree if: (A) another suffers death as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (B) another suffers serious bodily injury as a direct result of the actor's use of a tire deflation device while the actor is in flight. (b-1) Notwithstanding Subsection (b), an offense under this section is a felony of the third degree if it is shown on the trial of the offense that the actor committed the offense in the course of committing an offense under Section 20.05(a)(2). (c) In this section: (1) \"Vehicle\" has the meaning assigned by Section 541.201, Transportation Code. (2) \"Tire deflation device\" has the meaning assigned by Section 46.01. (3) \"Watercraft\" has the meaning assigned by Section 49.01. (d) A person who is subject to prosecution under both this section and another law may be prosecuted under either or both this section and the other law. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 504, Sec. 1, eff. Sept. 1, 1987. Acts 1989, 71st Leg., ch. 126, Sec. 1, eff. Sept. 1, 1989; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 708, Sec. 1, eff. Sept. 1, 1995; Acts 1997, 75th Leg., ch. 165, Sec. 30.240, eff. Sept. 1, 1997; Acts 2001, 77th Leg., ch. 1334, Sec. 3, eff. Sept. 1, 2001; Acts 2001, 77th Leg., ch. 1480, Sec. 1, eff. Sept. 1, 2001. Amended by: Acts 2009, 81st Leg., R.S., Ch. 1400 (H.B. 221), Sec. 4, eff. September 1, 2009. Acts 2011, 82nd Leg., R.S., Ch. 391 (S.B. 496), Sec. 1, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 4, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 920 (S.B. 1416), Sec. 3, eff. September 1, 2011. Acts 2013, 83rd Leg., R.S., Ch. 161 (S.B. 1093), Sec. 22.001(38), eff. September 1, 2013. Acts 2023, 88th Leg., 3rd C.S., Ch. 2 (S.B. 4), Sec. 11, eff. February 6, 2024.",
+          "contentHash": "089c36badd47e19cc7403dbb1b1d7a2a04e8ad8526e841fbbb3726eabb28dc19",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "February 6, 2024",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(b)(1)",
+          "metadata": {
+            "chargeId": "tx-pc-38-04-prior",
+            "catalogLabel": "Evading arrest or detention with a prior evading conviction",
+            "catalogCode": "38.04(b)(1)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "February 6, 2024"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "e4c08fcaf2e2650ab1c967ba9de6bce6470017850189b938768eeb6da2b010be",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.35",
+          "lawId": "PE",
+          "section": "12.35",
+          "citation": "Tex. Penal Code § 12.35",
+          "officialTitle": "STATE JAIL FELONY PUNISHMENT.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.35",
+          "content": "Sec. 12.35. STATE JAIL FELONY PUNISHMENT. (a) Except as provided by Subsection (c), an individual adjudged guilty of a state jail felony shall be punished by confinement in a state jail for any term of not more than two years or less than 180 days. (b) In addition to confinement, an individual adjudged guilty of a state jail felony may be punished by a fine not to exceed $10,000. (c) An individual adjudged guilty of a state jail felony shall be punished for a third degree felony if it is shown on the trial of the offense that: (1) a deadly weapon as defined by Section 1.07 was used or exhibited during the commission of the offense or during immediate flight following the commission of the offense, and that the individual used or exhibited the deadly weapon or was a party to the offense and knew that a deadly weapon would be used or exhibited; or (2) the individual has previously been finally convicted of any felony: (A) under Section 21.02 or 21.03 or listed in Article 42A.054(a), Code of Criminal Procedure; or (B) for which the judgment contains an affirmative finding under Article 42A.054(c) or (d), Code of Criminal Procedure. Added by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by: Acts 2007, 80th Leg., R.S., Ch. 593 (H.B. 8), Sec. 3.48, eff. September 1, 2007. Acts 2011, 82nd Leg., R.S., Ch. 122 (H.B. 3000), Sec. 13, eff. September 1, 2011. Acts 2015, 84th Leg., R.S., Ch. 770 (H.B. 2299), Sec. 2.81, eff. January 1, 2017. Acts 2023, 88th Leg., R.S., Ch. 768 (H.B. 4595), Sec. 17.001, eff. September 1, 2023. Acts 2025, 89th Leg., R.S., Ch. 557 (H.B. 1422), Sec. 13, eff. September 1, 2025.",
+          "contentHash": "53dacc4399276a3edbb002d233f4e4a2fd174d509e433e10989d96d91f9f7d87",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-04-prior",
+            "catalogLabel": "Evading arrest or detention with a prior evading conviction",
+            "catalogCode": "38.04(b)(1)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "9fe792f2d5eca942e908c5d1edd264b5feccfe0368747fd73c193f731890c4b8",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.425",
+          "lawId": "PE",
+          "section": "12.425",
+          "citation": "Tex. Penal Code § 12.425",
+          "officialTitle": "PENALTIES FOR REPEAT AND HABITUAL FELONY OFFENDERS ON TRIAL FOR STATE JAIL FELONY.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.425",
+          "content": "Sec. 12.425. PENALTIES FOR REPEAT AND HABITUAL FELONY OFFENDERS ON TRIAL FOR STATE JAIL FELONY. (a) If it is shown on the trial of a state jail felony punishable under Section 12.35(a) that the defendant has previously been finally convicted of two state jail felonies punishable under Section 12.35(a), on conviction the defendant shall be punished for a felony of the third degree. (b) If it is shown on the trial of a state jail felony punishable under Section 12.35(a) that the defendant has previously been finally convicted of two felonies other than a state jail felony punishable under Section 12.35(a), and the second previous felony conviction is for an offense that occurred subsequent to the first previous conviction having become final, on conviction the defendant shall be punished for a felony of the second degree. (c) If it is shown on the trial of a state jail felony for which punishment may be enhanced under Section 12.35(c) that the defendant has previously been finally convicted of a felony other than a state jail felony punishable under Section 12.35(a), on conviction the defendant shall be punished for a felony of the second degree. Added by Acts 2011, 82nd Leg., R.S., Ch. 834 (H.B. 3384), Sec. 5, eff. September 1, 2011.",
+          "contentHash": "7b1252b7989cdd79adac6959634352d53bc0870f842d2a2877e6e6f85d8d4a9d",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 2011",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-04-prior",
+            "catalogLabel": "Evading arrest or detention with a prior evading conviction",
+            "catalogCode": "38.04(b)(1)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2011"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "0467870051d27beafacac7557857d7b78f0ffa4f71f8b46ed18f5645947e9dad",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "tx-pc-38-04-vehicle",
+      "catalogLabel": "Evading arrest or detention using a vehicle",
+      "catalogCode": "38.04(b)(2)(A)",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
+      "canonicalTitle": "EVADING ARREST OR DETENTION.",
+      "provisions": [
+        {
+          "sourceKey": "tx:PE:38.04",
+          "lawId": "PE",
+          "section": "38.04",
+          "citation": "Tex. Penal Code § 38.04",
+          "officialTitle": "EVADING ARREST OR DETENTION.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.04",
+          "content": "Sec. 38.04. EVADING ARREST OR DETENTION. (a) A person commits an offense if he intentionally flees from a person he knows is a peace officer or federal special investigator attempting lawfully to arrest or detain him. Text of subsection as amended by Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 4, and Ch. 391 (S.B. 496), Sec. 1 (b) An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if: (A) the actor has been previously convicted under this section; or (B) the actor uses a vehicle or watercraft while the actor is in flight and the actor has not been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle or watercraft while the actor is in flight and the actor has been previously convicted under this section; or (B) another suffers serious bodily injury as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (3) a felony of the second degree if another suffers death as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight. Text of subsection as amended by Acts 2011, 82nd Leg., R.S., Ch. 920 (S.B. 1416), Sec. 3 (b) An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if the actor has been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle while the actor is in flight; (B) another suffers serious bodily injury as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (C) the actor uses a tire deflation device against the officer while the actor is in flight; or (3) a felony of the second degree if: (A) another suffers death as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (B) another suffers serious bodily injury as a direct result of the actor's use of a tire deflation device while the actor is in flight. (b-1) Notwithstanding Subsection (b), an offense under this section is a felony of the third degree if it is shown on the trial of the offense that the actor committed the offense in the course of committing an offense under Section 20.05(a)(2). (c) In this section: (1) \"Vehicle\" has the meaning assigned by Section 541.201, Transportation Code. (2) \"Tire deflation device\" has the meaning assigned by Section 46.01. (3) \"Watercraft\" has the meaning assigned by Section 49.01. (d) A person who is subject to prosecution under both this section and another law may be prosecuted under either or both this section and the other law. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 504, Sec. 1, eff. Sept. 1, 1987. Acts 1989, 71st Leg., ch. 126, Sec. 1, eff. Sept. 1, 1989; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 708, Sec. 1, eff. Sept. 1, 1995; Acts 1997, 75th Leg., ch. 165, Sec. 30.240, eff. Sept. 1, 1997; Acts 2001, 77th Leg., ch. 1334, Sec. 3, eff. Sept. 1, 2001; Acts 2001, 77th Leg., ch. 1480, Sec. 1, eff. Sept. 1, 2001. Amended by: Acts 2009, 81st Leg., R.S., Ch. 1400 (H.B. 221), Sec. 4, eff. September 1, 2009. Acts 2011, 82nd Leg., R.S., Ch. 391 (S.B. 496), Sec. 1, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 4, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 920 (S.B. 1416), Sec. 3, eff. September 1, 2011. Acts 2013, 83rd Leg., R.S., Ch. 161 (S.B. 1093), Sec. 22.001(38), eff. September 1, 2013. Acts 2023, 88th Leg., 3rd C.S., Ch. 2 (S.B. 4), Sec. 11, eff. February 6, 2024.",
+          "contentHash": "089c36badd47e19cc7403dbb1b1d7a2a04e8ad8526e841fbbb3726eabb28dc19",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "February 6, 2024",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": "(a), (c)(1)",
+          "metadata": {
+            "chargeId": "tx-pc-38-04-vehicle",
+            "catalogLabel": "Evading arrest or detention using a vehicle",
+            "catalogCode": "38.04(b)(2)(A)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "February 6, 2024"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "e4c08fcaf2e2650ab1c967ba9de6bce6470017850189b938768eeb6da2b010be",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:38.04",
+          "lawId": "PE",
+          "section": "38.04",
+          "citation": "Tex. Penal Code § 38.04",
+          "officialTitle": "EVADING ARREST OR DETENTION.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.04",
+          "content": "Sec. 38.04. EVADING ARREST OR DETENTION. (a) A person commits an offense if he intentionally flees from a person he knows is a peace officer or federal special investigator attempting lawfully to arrest or detain him. Text of subsection as amended by Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 4, and Ch. 391 (S.B. 496), Sec. 1 (b) An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if: (A) the actor has been previously convicted under this section; or (B) the actor uses a vehicle or watercraft while the actor is in flight and the actor has not been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle or watercraft while the actor is in flight and the actor has been previously convicted under this section; or (B) another suffers serious bodily injury as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (3) a felony of the second degree if another suffers death as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight. Text of subsection as amended by Acts 2011, 82nd Leg., R.S., Ch. 920 (S.B. 1416), Sec. 3 (b) An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if the actor has been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle while the actor is in flight; (B) another suffers serious bodily injury as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (C) the actor uses a tire deflation device against the officer while the actor is in flight; or (3) a felony of the second degree if: (A) another suffers death as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (B) another suffers serious bodily injury as a direct result of the actor's use of a tire deflation device while the actor is in flight. (b-1) Notwithstanding Subsection (b), an offense under this section is a felony of the third degree if it is shown on the trial of the offense that the actor committed the offense in the course of committing an offense under Section 20.05(a)(2). (c) In this section: (1) \"Vehicle\" has the meaning assigned by Section 541.201, Transportation Code. (2) \"Tire deflation device\" has the meaning assigned by Section 46.01. (3) \"Watercraft\" has the meaning assigned by Section 49.01. (d) A person who is subject to prosecution under both this section and another law may be prosecuted under either or both this section and the other law. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 504, Sec. 1, eff. Sept. 1, 1987. Acts 1989, 71st Leg., ch. 126, Sec. 1, eff. Sept. 1, 1989; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 708, Sec. 1, eff. Sept. 1, 1995; Acts 1997, 75th Leg., ch. 165, Sec. 30.240, eff. Sept. 1, 1997; Acts 2001, 77th Leg., ch. 1334, Sec. 3, eff. Sept. 1, 2001; Acts 2001, 77th Leg., ch. 1480, Sec. 1, eff. Sept. 1, 2001. Amended by: Acts 2009, 81st Leg., R.S., Ch. 1400 (H.B. 221), Sec. 4, eff. September 1, 2009. Acts 2011, 82nd Leg., R.S., Ch. 391 (S.B. 496), Sec. 1, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 839 (H.B. 3423), Sec. 4, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 920 (S.B. 1416), Sec. 3, eff. September 1, 2011. Acts 2013, 83rd Leg., R.S., Ch. 161 (S.B. 1093), Sec. 22.001(38), eff. September 1, 2013. Acts 2023, 88th Leg., 3rd C.S., Ch. 2 (S.B. 4), Sec. 11, eff. February 6, 2024.",
+          "contentHash": "089c36badd47e19cc7403dbb1b1d7a2a04e8ad8526e841fbbb3726eabb28dc19",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "February 6, 2024",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(b)(2)(A)",
+          "metadata": {
+            "chargeId": "tx-pc-38-04-vehicle",
+            "catalogLabel": "Evading arrest or detention using a vehicle",
+            "catalogCode": "38.04(b)(2)(A)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "February 6, 2024"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "e4c08fcaf2e2650ab1c967ba9de6bce6470017850189b938768eeb6da2b010be",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:TN:541.201",
+          "lawId": "TN",
+          "section": "541.201",
+          "citation": "Tex. Transp. Code § 541.201",
+          "officialTitle": "VEHICLES.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/TN/htm/TN.541.htm#541.201",
+          "content": "Sec. 541.201. VEHICLES. In this subtitle: (1) \"Authorized emergency vehicle\" means: (A) a fire department or police vehicle; (B) a public or private ambulance operated by a person who has been issued a license by the Department of State Health Services; (C) an emergency medical services vehicle: (i) authorized under an emergency medical services provider license issued by the Department of State Health Services under Chapter 773, Health and Safety Code; and (ii) operating under a contract with an emergency services district that requires the emergency medical services provider to respond to emergency calls with the vehicle; (D) a municipal department or public service corporation emergency vehicle that has been designated or authorized by the governing body of a municipality; (E) a county-owned or county-leased emergency management vehicle that has been designated or authorized by the commissioners court; (F) a vehicle that has been designated by the department under Section 546.0065; (G) a private vehicle of a volunteer firefighter or a certified emergency medical services employee or volunteer when responding to a fire alarm or medical emergency; (H) an industrial emergency response vehicle, including an industrial ambulance, when responding to an emergency, but only if the vehicle is operated in compliance with criteria in effect September 1, 1989, and established by the predecessor of the Texas Industrial Emergency Services Board of the State Firefighters' and Fire Marshals' Association of Texas; (I) a vehicle of a blood bank or tissue bank, accredited or approved under the laws of this state or the United States, when making emergency deliveries of blood, drugs, medicines, or organs; (J) a vehicle used for law enforcement purposes that is owned or leased by a federal governmental entity; or (K) a private vehicle of an employee or volunteer of a county emergency management division in a county with a population of more than 52,600 and less than 55,000 that is designated as an authorized emergency vehicle by the commissioners court of that county. (2) \"Bicycle\" means a device, excluding a moped, that is capable of being ridden solely using human power and has either: (A) two tandem wheels at least one of which is more than 14 inches in diameter; (B) three wheels, two of which are in parallel, and at least one of the three wheels is more than 14 inches in diameter; or (C) any number of wheels and adaptive technology that allows the device to be ridden by a person with a disability. (3) \"Bus\" means: (A) a motor vehicle used to transport persons and designed to accommodate more than 10 passengers, including the operator; or (B) a motor vehicle, other than a taxicab, designed and used to transport persons for compensation. (4) \"Farm tractor\" means a motor vehicle designed and used primarily as a farm implement to draw an implement of husbandry, including a plow or a mowing machine. (5) \"House trailer\" means a trailer or semitrailer, other than a towable recreational vehicle, that: (A) is transportable on a highway in one or more sections; (B) is less than 45 feet in length, excluding tow bar, while in the traveling mode; (C) is built on a permanent chassis; (D) is designed to be used as a dwelling or for commercial purposes if connected to required utilities; and (E) includes plumbing, heating, air-conditioning, and electrical systems. (6) \"Implement of husbandry\" means: (A) a vehicle, other than a passenger car or truck, that is designed and adapted for use as a farm implement, machinery, or tool for tilling the soil; (B) a towed vehicle that transports to the field and spreads fertilizer or agricultural chemicals; or (C) a motor vehicle designed and adapted to deliver feed to livestock. (7) \"Light truck\" means a truck, including a pickup truck, panel delivery truck, or carryall truck, that has a manufacturer's rated carrying capacity of 2,000 pounds or less. (8) \"Moped\" means a motor vehicle that is equipped with a rider's saddle and designed to have when propelled not more than three wheels on the ground, that cannot attain a speed in one mile of more than 30 miles per hour, and the engine of which: (A) cannot produce more than five-brake horsepower; and (B) if an internal combustion engine, has a piston displacement of 50 cubic centimeters or less and connects to a power drive system that does not require the operator to shift gears. (9) \"Motorcycle\" means a motor vehicle, other than a tractor or moped, that is equipped with a rider's saddle and designed to have when propelled not more than three wheels on the ground. (10) Repealed by Acts 2019, 86th Leg., R.S., Ch. 882 (H.B. 3171), Sec. 3.01(3), eff. September 1, 2019. (11) \"Motor vehicle\" means a self-propelled vehicle or a vehicle that is propelled by electric power from overhead trolley wires. The term does not include an electric bicycle or an electric personal assistive mobility device, as defined by Section 551.201. (11-a) \"Multifunction school activity bus\" means a motor vehicle that was manufactured in compliance with the federal motor vehicle safety standards for school buses in effect on the date of manufacture other than the standards requiring the bus to display alternately flashing red lights and to be equipped with movable stop arms, and that is used to transport preprimary, primary, or secondary students on a school-related activity trip other than on routes to and from school. The term does not include a school bus, a school activity bus, a school-chartered bus, or a bus operated by a mass transit authority. (12) \"Passenger car\" means a motor vehicle, other than a motorcycle, used to transport persons and designed to accommodate 10 or fewer passengers, including the operator. (13) \"Pole trailer\" means a vehicle without motive power: (A) designed to be drawn by another vehicle and secured to the other vehicle by pole, reach, boom, or other security device; and (B) ordinarily used to transport a long or irregularly shaped load, including poles, pipes, or structural members, generally capable of sustaining themselves as beams between the supporting connections. (13-a) \"Police vehicle\" means a vehicle used by a peace officer, as defined by Article 2A.001, Code of Criminal Procedure, for law enforcement purposes that: (A) is owned or leased by a governmental entity; (B) is owned or leased by the police department of a private institution of higher education that commissions peace officers under Section 51.212, Education Code; or (C) is: (i) a private vehicle owned or leased by the peace officer; and (ii) approved for use for law enforcement purposes by the head of the law enforcement agency that employs the peace officer, or by that person's designee, provided that use of the private vehicle must, if applicable, comply with any rule adopted by the commissioners court of a county under Section 170.001, Local Government Code, and that the private vehicle may not be considered an authorized emergency vehicle for exemption purposes under Section 228.054, 284.070, 366.178, or 370.177 of this code unless the vehicle is marked. (14) \"Road tractor\" means a motor vehicle designed and used to draw another vehicle but not constructed to carry a load independently or a part of the weight of the other vehicle or its load. (15) \"School activity bus\" means a bus designed to accommodate more than 15 passengers, including the operator, that is owned, operated, rented, or leased by a school district, county school, open-enrollment charter school, regional education service center, or shared services arrangement and that is used to transport public school students on a school-related activity trip, other than on routes to and from school. The term does not include a chartered bus, a bus operated by a mass transit authority, a school bus, or a multifunction school activity bus. (16) \"School bus\" means a motor vehicle that was manufactured in compliance with the federal motor vehicle safety standards for school buses in effect on the date of manufacture and that is used to transport pre-primary, primary, or secondary students on a route to or from school or on a school-related activity trip other than on routes to and from school. The term does not include a school-chartered bus or a bus operated by a mass transit authority. (17) \"Semitrailer\" means a vehicle with or without motive power, other than a pole trailer: (A) designed to be drawn by a motor vehicle and to transport persons or property; and (B) constructed so that part of the vehicle's weight and load rests on or is carried by another vehicle. (18) \"Special mobile equipment\" means a vehicle that is not designed or used primarily to transport persons or property and that is only incidentally operated on a highway. The term: (A) includes ditchdigging apparatus, well boring apparatus, and road construction and maintenance machinery, including an asphalt spreader, bituminous mixer, bucket loader, tractor other than a truck tractor, ditcher, levelling grader, finishing machine, motor grader, road roller, scarifier, earth-moving carryall and scraper, power shovel or dragline, or self-propelled crane and earth-moving equipment; and (B) excludes a vehicle that is designed to transport persons or property and that has machinery attached, including a house trailer, dump truck, truck-mounted transit mixer, crane, and shovel. (19) \"Towable recreational vehicle\" means a nonmotorized vehicle that: (A) is designed: (i) to be towable by a motor vehicle; and (ii) for temporary human habitation for uses including recreational camping or seasonal use; (B) is permanently built on a single chassis; (C) may contain one or more life-support systems; and (D) may be used permanently or temporarily for advertising, selling, displaying, or promoting merchandise or services, but is not used for transporting property for hire or for distribution by a private carrier. (20) \"Trailer\" means a vehicle, other than a pole trailer, with or without motive power: (A) designed to be drawn by a motor vehicle and to transport persons or property; and (B) constructed so that no part of the vehicle's weight and load rests on the motor vehicle. (21) \"Truck\" means a motor vehicle designed, used, or maintained primarily to transport property. (22) \"Truck tractor\" means a motor vehicle designed and used primarily to draw another vehicle but not constructed to carry a load other than a part of the weight of the other vehicle and its load. (23) \"Vehicle\" means a device that can be used to transport or draw persons or property on a highway. The term does not include: (A) a device exclusively used on stationary rails or tracks; or (B) manufactured housing as that term is defined by Chapter 1201, Occupations Code. (24) \"Electric bicycle\" has the meaning assigned by Section 664.001. Acts 1995, 74th Leg., ch. 165, Sec. 1, eff. Sept. 1, 1995. Amended by Acts, 75th Leg., ch. 1020, Sec. 1, eff. Sept. 1, 1997; Acts 1997, 75th Leg., ch. 1438, Sec. 8, eff. Sept. 1, 1997; Acts 1999, 76th Leg., ch. 663, Sec. 1, eff. June 18, 1999; Acts 1999, 76th Leg., ch. 797, Sec. 3, eff. Sept. 1, 1999; Acts 2001, 77th Leg., ch. 1085, Sec. 5, eff. Sept. 1, 2001; Acts 2003, 78th Leg., ch. 1318, Sec. 2, eff. Sept. 1, 2003; Acts 2003, 78th Leg., ch. 1276, Sec. 14A.833, eff. Sept. 1, 2003. Amended by: Acts 2005, 79th Leg., Ch. 558 (H.B. 1267), Sec. 3, eff. September 1, 2005. Acts 2007, 80th Leg., R.S., Ch. 258 (S.B. 11), Sec. 4.06, eff. September 1, 2007. Acts 2007, 80th Leg., R.S., Ch. 923 (H.B. 3190), Sec. 2, eff. September 1, 2007. Acts 2009, 81st Leg., R.S., Ch. 1280 (H.B. 1831), Sec. 1.20, eff. September 1, 2009. Acts 2013, 83rd Leg., R.S., Ch. 17 (S.B. 223), Sec. 1, eff. May 10, 2013. Acts 2013, 83rd Leg., R.S., Ch. 254 (H.B. 567), Sec. 1, eff. June 14, 2013. Acts 2013, 83rd Leg., R.S., Ch. 275 (H.B. 802), Sec. 1, eff. June 14, 2013. Acts 2013, 83rd Leg., R.S., Ch. 630 (S.B. 1917), Sec. 1, eff. June 14, 2013. Acts 2015, 84th Leg., R.S., Ch. 78 (S.B. 971), Sec. 1, eff. September 1, 2015. Acts 2015, 84th Leg., R.S., Ch. 1236 (S.B. 1296), Sec. 17.007, eff. September 1, 2015. Acts 2017, 85th Leg., R.S., Ch. 969 (S.B. 2076), Sec. 25, eff. September 1, 2017. Acts 2019, 86th Leg., R.S., Ch. 485 (H.B. 2188), Sec. 2, eff. September 1, 2019. Acts 2019, 86th Leg., R.S., Ch. 882 (H.B. 3171), Sec. 1.07, eff. September 1, 2019. Acts 2019, 86th Leg., R.S., Ch. 882 (H.B. 3171), Sec. 3.01(3), eff. September 1, 2019. Acts 2021, 87th Leg., R.S., Ch. 721 (H.B. 3665), Sec. 1, eff. September 1, 2021. Acts 2023, 88th Leg., R.S., Ch. 644 (H.B. 4559), Sec. 266, eff. September 1, 2023. Acts 2023, 88th Leg., R.S., Ch. 765 (H.B. 4504), Sec. 2.171, eff. January 1, 2025.",
+          "contentHash": "0a7c3f89467a6eb049623c3ae922c8f7ff379cc42273c0cf64488c22c52fd3ec",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:17:32.710Z",
+          "effectiveDateStart": "January 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(23)",
+          "metadata": {
+            "chargeId": "tx-pc-38-04-vehicle",
+            "catalogLabel": "Evading arrest or detention using a vehicle",
+            "catalogCode": "38.04(b)(2)(A)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "January 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "2a39df86b984b8ab1bd3ce0a29858bd518cb583b1ac63a2c7cccc0700a657ffd",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.34",
+          "lawId": "PE",
+          "section": "12.34",
+          "citation": "Tex. Penal Code § 12.34",
+          "officialTitle": "THIRD DEGREE FELONY PUNISHMENT.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.34",
+          "content": "Sec. 12.34. THIRD DEGREE FELONY PUNISHMENT. (a) An individual adjudged guilty of a felony of the third degree shall be punished by imprisonment in the Texas Department of Criminal Justice for any term of not more than 10 years or less than 2 years. (b) In addition to imprisonment, an individual adjudged guilty of a felony of the third degree may be punished by a fine not to exceed $10,000. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Renumbered from Penal Code Sec. 12.33 by Acts 1973, 63rd Leg., p. 1124, ch. 426, art. 2, Sec. 2, eff. Jan. 1,1974. Amended by Acts 1989, 71st Leg., ch. 785, Sec. 4.01, eff. Sept. 1, 1989; Acts 1990, 71st Leg., 6th C.S., ch. 25, Sec. 7, eff. June 18, 1990; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. Amended by: Acts 2009, 81st Leg., R.S., Ch. 87 (S.B. 1969), Sec. 25.148, eff. September 1, 2009.",
+          "contentHash": "7c842e178170bf3846088cba1bb0911a3b78ad857be64b411a9141ed031fc879",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 2009",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-04-vehicle",
+            "catalogLabel": "Evading arrest or detention using a vehicle",
+            "catalogCode": "38.04(b)(2)(A)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2009"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "bf08cec564036de34be806d6e5fbd3ea496050dfe91ad5cbe6c36b89ad2290b5",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.42",
+          "lawId": "PE",
+          "section": "12.42",
+          "citation": "Tex. Penal Code § 12.42",
+          "officialTitle": "PENALTIES FOR REPEAT AND HABITUAL FELONY OFFENDERS ON TRIAL FOR FIRST, SECOND, OR THIRD DEGREE FELONY.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.42",
+          "content": "Sec. 12.42. PENALTIES FOR REPEAT AND HABITUAL FELONY OFFENDERS ON TRIAL FOR FIRST, SECOND, OR THIRD DEGREE FELONY. (a) Except as provided by Subsection (c)(2), if it is shown on the trial of a felony of the third degree that the defendant has previously been finally convicted of a felony other than a state jail felony punishable under Section 12.35(a), on conviction the defendant shall be punished for a felony of the second degree. (b) Except as provided by Subsection (c)(2) or (c)(4), if it is shown on the trial of a felony of the second degree that the defendant has previously been finally convicted of a felony other than a state jail felony punishable under Section 12.35(a), on conviction the defendant shall be punished for a felony of the first degree. (c)(1) If it is shown on the trial of a felony of the first degree that the defendant has previously been finally convicted of a felony other than a state jail felony punishable under Section 12.35(a), on conviction the defendant shall be punished by imprisonment in the Texas Department of Criminal Justice for life, or for any term of not more than 99 years or less than 15 years. In addition to imprisonment, an individual may be punished by a fine not to exceed $10,000. (2) Notwithstanding Subdivision (1), a defendant shall be punished by imprisonment in the Texas Department of Criminal Justice for life if: (A) the defendant is convicted of an offense: (i) under Section 20A.02(a)(7) or (8), 21.11(a)(1), 22.021, or 22.011, Penal Code; (ii) under Section 20.04(a)(4), Penal Code, if the defendant committed the offense with the intent to violate or abuse the victim sexually; or (iii) under Section 30.02, Penal Code, punishable under Subsection (d) of that section, if the defendant committed the offense with the intent to commit a felony described by Subparagraph (i) or (ii) or a felony under Section 21.11, Penal Code; and (B) the defendant has been previously convicted of an offense: (i) under Section 43.25 or 43.26, Penal Code, or an offense under Section 43.23, Penal Code, punishable under Subsection (h) of that section; (ii) under Section 20A.02(a)(7) or (8), 21.02, 21.03, 21.11, 22.011, 22.021, or 25.02, Penal Code; (iii) under Section 20.04(a)(4), Penal Code, if the defendant committed the offense with the intent to violate or abuse the victim sexually; (iv) under Section 30.02, Penal Code, punishable under Subsection (d) of that section, if the defendant committed the offense with the intent to commit a felony described by Subparagraph (ii) or (iii); or (v) under the laws of another state containing elements that are substantially similar to the elements of an offense listed in Subparagraph (i), (ii), (iii), or (iv). (3) Notwithstanding Subdivision (1) or (2), a defendant shall be punished for a capital felony if it is shown on the trial of an offense under Section 22.021 otherwise punishable under Subsection (f) of that section that the defendant has previously been finally convicted of: (A) an offense under Section 22.021 that was committed against a victim described by Section 22.021(f)(1) or was committed against a victim described by Section 22.021(f)(2) and in a manner described by Section 22.021(a)(2)(A); or (B) an offense that was committed under the laws of another state that: (i) contains elements that are substantially similar to the elements of an offense under Section 22.021; and (ii) was committed against a victim described by Section 22.021(f)(1) or was committed against a victim described by Section 22.021(f)(2) and in a manner substantially similar to a manner described by Section 22.021(a)(2)(A). (4) Notwithstanding Subdivision (1) or (2), and except as provided by Subdivision (3) for the trial of an offense under Section 22.021 as described by that subdivision, a defendant shall be punished by imprisonment in the Texas Department of Criminal Justice for life without parole if it is shown on the trial of an offense under Section 20A.03 or of a sexually violent offense, committed by the defendant on or after the defendant's 18th birthday, that the defendant has previously been finally convicted of: (A) an offense under Section 20A.03 or of a sexually violent offense; or (B) an offense that was committed under the laws of another state and that contains elements that are substantially similar to the elements of an offense under Section 20A.03 or of a sexually violent offense. (5) A previous conviction for a state jail felony punishable under Section 12.35(a) may not be used for enhancement purposes under Subdivision (2). (d) Except as provided by Subsection (c)(2), (c)(4), or (e), if it is shown on the trial of a felony offense other than a state jail felony punishable under Section 12.35(a) that the defendant has previously been finally convicted of two felony offenses, and the second previous felony conviction is for an offense that occurred subsequent to the first previous conviction having become final, on conviction the defendant shall be punished by imprisonment in the Texas Department of Criminal Justice for life, or for any term of not more than 99 years or less than 25 years. A previous conviction for a state jail felony punishable under Section 12.35(a) may not be used for enhancement purposes under this subsection. (e) Notwithstanding Subsection (c) or (d), if it is shown on the trial of a felony offense other than a state jail felony punishable under Section 12.35(a) that the defendant was civilly committed as a sexually violent predator under Chapter 841, Health and Safety Code, at the time of the offense, on conviction the defendant shall be punished by imprisonment in the Texas Department of Criminal Justice for life, or for any term of not more than 99 years or less than 25 years. (f) For the purposes of Subsections (a), (b), and (c)(1), an adjudication by a juvenile court under Section 54.03, Family Code, that a child engaged in delinquent conduct on or after January 1, 1996, constituting a felony offense for which the child is committed to the Texas Juvenile Justice Department under Section 54.04(d)(2), (d)(3), or (m), Family Code, or Section 54.05(f), Family Code, or to a post-adjudication secure correctional facility under Section 54.04011, Family Code, is a final felony conviction. (g) For the purposes of Subsection (c)(2): (1) a defendant has been previously convicted of an offense listed under Subsection (c)(2)(B) if the defendant was adjudged guilty of the offense or entered a plea of guilty or nolo contendere in return for a grant of deferred adjudication, regardless of whether the sentence for the offense was ever imposed or whether the sentence was probated and the defendant was subsequently discharged from community supervision; and (2) a conviction under the laws of another state for an offense containing elements that are substantially similar to the elements of an offense listed under Subsection (c)(2)(B) is a conviction of an offense listed under Subsection (c)(2)(B). (h) In this section, \"sexually violent offense\" means an offense: (1) described by Article 62.001(6), Code of Criminal Procedure; and (2) for which an affirmative finding has been entered under Article 42.015(b) or 42A.105(a), Code of Criminal Procedure, for an offense other than an offense under Section 21.02 or 22.021. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1983, 68th Leg., p. 1750, ch. 339, Sec. 1, eff. Sept. 1, 1983; Acts 1985, 69th Leg., ch. 582, Sec. 1, eff. Sept. 1, 1985; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 250, Sec. 1, eff. Sept. 1, 1995; Acts 1995, 74th Leg., ch. 262, Sec. 78, eff. Jan. 1, 1996; Acts 1995, 74th Leg., ch. 318, Sec. 1, eff. Jan. 1, 1996; Acts 1997, 75th Leg., ch. 665, Sec. 1, 2, eff. Sept. 1, 1997; Acts 1997, 75th Leg., ch. 667, Sec. 4, eff. Sept. 1, 1997; Acts 1999, 76th Leg., ch. 62, Sec. 15.01, eff. Sept. 1, 1999; Acts 2003, 78th Leg., ch. 283, Sec. 53, eff. Sept. 1, 2003; Acts 2003, 78th Leg., ch. 1005, Sec. 2, eff. Sept. 1, 2003. Amended by: Acts 2007, 80th Leg., R.S., Ch. 340 (S.B. 75), Sec. 1, eff. September 1, 2007. Acts 2007, 80th Leg., R.S., Ch. 340 (S.B. 75), Sec. 2, eff. September 1, 2007. Acts 2007, 80th Leg., R.S., Ch. 340 (S.B. 75), Sec. 3, eff. September 1, 2007. Acts 2007, 80th Leg., R.S., Ch. 340 (S.B. 75), Sec. 4, eff. September 1, 2007. Acts 2007, 80th Leg., R.S., Ch. 593 (H.B. 8), Sec. 1.14, eff. September 1, 2007. Acts 2007, 80th Leg., R.S., Ch. 593 (H.B. 8), Sec. 1.15, eff. September 1, 2007. Acts 2009, 81st Leg., R.S., Ch. 87 (S.B. 1969), Sec. 25.150, eff. September 1, 2009. Acts 2011, 82nd Leg., R.S., Ch. 1 (S.B. 24), Sec. 6.02, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 122 (H.B. 3000), Sec. 14, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 834 (H.B. 3384), Sec. 1, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 834 (H.B. 3384), Sec. 2, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 834 (H.B. 3384), Sec. 3, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 834 (H.B. 3384), Sec. 4, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 834 (H.B. 3384), Sec. 6, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 1119 (H.B. 3), Sec. 3, eff. September 1, 2011. Acts 2011, 82nd Leg., R.S., Ch. 1119 (H.B. 3), Sec. 4, eff. September 1, 2011. Acts 2013, 83rd Leg., R.S., Ch. 161 (S.B. 1093), Sec. 16.003, eff. September 1, 2013. Acts 2013, 83rd Leg., R.S., Ch. 663 (H.B. 1302), Sec. 7, eff. September 1, 2013. Acts 2013, 83rd Leg., R.S., Ch. 663 (H.B. 1302), Sec. 8, eff. September 1, 2013. Acts 2013, 83rd Leg., R.S., Ch. 663 (H.B. 1302), Sec. 9, eff. September 1, 2013. Acts 2013, 83rd Leg., R.S., Ch. 1323 (S.B. 511), Sec. 11, eff. December 1, 2013. Acts 2015, 84th Leg., R.S., Ch. 770 (H.B. 2299), Sec. 2.82, eff. January 1, 2017. Acts 2025, 89th Leg., R.S., Ch. 557 (H.B. 1422), Sec. 14, eff. September 1, 2025. Acts 2025, 89th Leg., R.S., Ch. 1145 (S.B. 1610), Sec. 1, eff. September 1, 2025.",
+          "contentHash": "194da94062eafd983638136b59168256fd6210ba4cd3e60adc425bb9471291dd",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 2025",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-04-vehicle",
+            "catalogLabel": "Evading arrest or detention using a vehicle",
+            "catalogCode": "38.04(b)(2)(A)",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2025"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "c16a77589e758ace1fd9fe9cbfe281b96aed09be22cc693c0d9e5699adb4549e",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "tx-pc-38-02-fugitive-refusal",
+      "catalogLabel": "Failure to identify (refusing after lawful arrest, fugitive from justice)",
+      "catalogCode": "38.02(d)(1)",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
+      "canonicalTitle": "FAILURE TO IDENTIFY.",
+      "provisions": [
+        {
+          "sourceKey": "tx:PE:38.02",
+          "lawId": "PE",
+          "section": "38.02",
+          "citation": "Tex. Penal Code § 38.02",
+          "officialTitle": "FAILURE TO IDENTIFY.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.02",
+          "content": "Sec. 38.02. FAILURE TO IDENTIFY. (a) A person commits an offense if he intentionally refuses to give his name, residence address, or date of birth to a peace officer who has lawfully arrested the person and requested the information. (b) A person commits an offense if he intentionally gives a false or fictitious name, residence address, or date of birth to a peace officer who has: (1) lawfully arrested the person; (2) lawfully detained the person; or (3) requested the information from a person that the peace officer has good cause to believe is a witness to a criminal offense. (b-1) A person commits an offense if the person: (1) is an operator of a motor vehicle, as defined by Section 32.34, who is lawfully detained by a peace officer for an alleged violation of a law; (2) fails to provide or display the person's driver's license on the officer's request for the license; and (3) intentionally refuses to give the person's name, driver's license number, residence address, or date of birth to the peace officer on the officer's request for that information. (b-2) For purposes of Subsection (b-1)(3), giving a peace officer a residence address that is different from the address associated with the person's driver's license does not constitute a refusal to give the person's residence address in violation of that provision if the address given to the officer is the person's actual residence address. (c) Except as provided by Subsections (d) and (d-1), an offense under this section is: (1) a Class C misdemeanor if the offense is committed under Subsection (a) or (b-1); or (2) a Class B misdemeanor if the offense is committed under Subsection (b). (d) If it is shown on the trial of an offense under this section that the defendant was a fugitive from justice at the time of the offense, the offense is: (1) a Class B misdemeanor if the offense is committed under Subsection (a); or (2) a Class A misdemeanor if the offense is committed under Subsection (b). (d-1) An offense under Subsection (b-1) is a Class B misdemeanor if it is shown on the trial of the offense that the actor gave a false or fictitious name to the peace officer during the commission of the offense. (e) If conduct that constitutes an offense under this section also constitutes an offense under Section 106.07, Alcoholic Beverage Code, the actor may be prosecuted only under Section 106.07. (f) Subject to Subsection (e), if conduct that constitutes an offense under Subsection (b-1) also constitutes an offense under any other law, the actor may be prosecuted under that subsection, the other law, or both. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 869, Sec. 1, eff. Sept. 1, 1987. Acts 1991, 72nd Leg., ch. 821, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 2003, 78th Leg., ch. 1009, Sec. 1, eff. Sept. 1, 2003. Amended by: Acts 2023, 88th Leg., R.S., Ch. 1164 (S.B. 1551), Sec. 1, eff. September 1, 2023.",
+          "contentHash": "97a82c989b5fab44be1a9e6f728860220f192e6ec941e0ad9148ff047bf26754",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 2023",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": "(a)",
+          "metadata": {
+            "chargeId": "tx-pc-38-02-fugitive-refusal",
+            "catalogLabel": "Failure to identify (refusing after lawful arrest, fugitive from justice)",
+            "catalogCode": "38.02(d)(1)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2023"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "b2917a25217ab44ab5deb41e40e9cdc9c2b5dc68be35ccc654729d28add20229",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:38.02",
+          "lawId": "PE",
+          "section": "38.02",
+          "citation": "Tex. Penal Code § 38.02",
+          "officialTitle": "FAILURE TO IDENTIFY.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.02",
+          "content": "Sec. 38.02. FAILURE TO IDENTIFY. (a) A person commits an offense if he intentionally refuses to give his name, residence address, or date of birth to a peace officer who has lawfully arrested the person and requested the information. (b) A person commits an offense if he intentionally gives a false or fictitious name, residence address, or date of birth to a peace officer who has: (1) lawfully arrested the person; (2) lawfully detained the person; or (3) requested the information from a person that the peace officer has good cause to believe is a witness to a criminal offense. (b-1) A person commits an offense if the person: (1) is an operator of a motor vehicle, as defined by Section 32.34, who is lawfully detained by a peace officer for an alleged violation of a law; (2) fails to provide or display the person's driver's license on the officer's request for the license; and (3) intentionally refuses to give the person's name, driver's license number, residence address, or date of birth to the peace officer on the officer's request for that information. (b-2) For purposes of Subsection (b-1)(3), giving a peace officer a residence address that is different from the address associated with the person's driver's license does not constitute a refusal to give the person's residence address in violation of that provision if the address given to the officer is the person's actual residence address. (c) Except as provided by Subsections (d) and (d-1), an offense under this section is: (1) a Class C misdemeanor if the offense is committed under Subsection (a) or (b-1); or (2) a Class B misdemeanor if the offense is committed under Subsection (b). (d) If it is shown on the trial of an offense under this section that the defendant was a fugitive from justice at the time of the offense, the offense is: (1) a Class B misdemeanor if the offense is committed under Subsection (a); or (2) a Class A misdemeanor if the offense is committed under Subsection (b). (d-1) An offense under Subsection (b-1) is a Class B misdemeanor if it is shown on the trial of the offense that the actor gave a false or fictitious name to the peace officer during the commission of the offense. (e) If conduct that constitutes an offense under this section also constitutes an offense under Section 106.07, Alcoholic Beverage Code, the actor may be prosecuted only under Section 106.07. (f) Subject to Subsection (e), if conduct that constitutes an offense under Subsection (b-1) also constitutes an offense under any other law, the actor may be prosecuted under that subsection, the other law, or both. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 869, Sec. 1, eff. Sept. 1, 1987. Acts 1991, 72nd Leg., ch. 821, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 2003, 78th Leg., ch. 1009, Sec. 1, eff. Sept. 1, 2003. Amended by: Acts 2023, 88th Leg., R.S., Ch. 1164 (S.B. 1551), Sec. 1, eff. September 1, 2023.",
+          "contentHash": "97a82c989b5fab44be1a9e6f728860220f192e6ec941e0ad9148ff047bf26754",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 2023",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(d)(1)",
+          "metadata": {
+            "chargeId": "tx-pc-38-02-fugitive-refusal",
+            "catalogLabel": "Failure to identify (refusing after lawful arrest, fugitive from justice)",
+            "catalogCode": "38.02(d)(1)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2023"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "b2917a25217ab44ab5deb41e40e9cdc9c2b5dc68be35ccc654729d28add20229",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:AL:106.07",
+          "lawId": "AL",
+          "section": "106.07",
+          "citation": "Tex. Alco. Bev. Code § 106.07",
+          "officialTitle": "MISREPRESENTATION OF AGE BY A MINOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/AL/htm/AL.106.htm#106.07",
+          "content": "Sec. 106.07. MISREPRESENTATION OF AGE BY A MINOR. (a) A minor commits an offense if he falsely states that he is 21 years of age or older or presents any document that indicates he is 21 years of age or older to a person engaged in selling or serving alcoholic beverages. (b) An offense under this section is punishable as provided by Section 106.071. Acts 1977, 65th Leg., p. 514, ch. 194, Sec. 1, eff. Sept. 1, 1977. Amended by Acts 1981, 67th Leg., p. 257, ch. 107, Sec. 10, eff. Sept. 1, 1981; Acts 1985, 69th Leg., ch. 285, Sec. 10, eff. Sept. 1, 1986; Acts 1985, 69th Leg., ch. 462, Sec. 11, eff. Sept. 1, 1986; Acts 1997, 75th Leg., ch. 1013, Sec. 8, eff. Sept. 1, 1997.",
+          "contentHash": "1995332d847cb7dd98be7cdb491bd668efd30cd67dbf124fac9f48012b22e1ce",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:17:33.263Z",
+          "effectiveDateStart": "September 1, 1997",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-02-fugitive-refusal",
+            "catalogLabel": "Failure to identify (refusing after lawful arrest, fugitive from justice)",
+            "catalogCode": "38.02(d)(1)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1997"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "160d9af466d4b01f3944f965f3c6f91bc466eaf760db76aca328b90f33f856a1",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:38.01",
+          "lawId": "PE",
+          "section": "38.01",
+          "citation": "Tex. Penal Code § 38.01",
+          "officialTitle": "DEFINITIONS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.01",
+          "content": "Sec. 38.01. DEFINITIONS. In this chapter: (1) \"Custody\" means: (A) under arrest by a peace officer or under restraint by a public servant pursuant to an order of a court of this state or another state of the United States; or (B) under restraint by an agent or employee of a facility that is operated by or under contract with the United States and that confines persons arrested for, charged with, or convicted of criminal offenses. (2) \"Escape\" means unauthorized departure from custody or failure to return to custody following temporary leave for a specific purpose or limited period or leave that is part of an intermittent sentence, but does not include a violation of conditions of community supervision or parole other than conditions that impose a period of confinement in a secure correctional facility. (3) \"Economic benefit\" means anything reasonably regarded as an economic gain or advantage, including accepting or offering to accept employment for a fee, accepting or offering to accept a fee, entering into a fee contract, or accepting or agreeing to accept money or anything of value. (4) \"Finance\" means to provide funds or capital or to furnish with necessary funds. (5) \"Fugitive from justice\" means a person for whom a valid arrest warrant has been issued. (6) \"Governmental function\" includes any activity that a public servant is lawfully authorized to undertake on behalf of government. (7) \"Invest funds\" means to commit money to earn a financial return. (8) \"Member of the family\" means anyone related within the third degree of consanguinity or affinity, as determined under Chapter 573, Government Code. (9) \"Qualified nonprofit organization\" means a nonprofit organization that meets the following conditions: (A) the primary purposes of the organization do not include the rendition of legal services or education regarding legal services; (B) the recommending, furnishing, paying for, or educating persons regarding legal services is incidental and reasonably related to the primary purposes of the organization; (C) the organization does not derive a financial benefit from the rendition of legal services by a lawyer; and (D) the person for whom the legal services are rendered, and not the organization, is recognized as the client of a lawyer. (10) \"Public media\" means a telephone directory or legal directory, newspaper or other periodical, billboard or other sign, radio or television broadcast, recorded message the public may access by dialing a telephone number, or a written communication not prohibited by Section 38.12(d). (11) \"Solicit employment\" means to communicate in person or by telephone with a prospective client or a member of the prospective client's family concerning professional employment within the scope of a professional's license, registration, or certification arising out of a particular occurrence or event, or series of occurrences or events, or concerning an existing problem of the prospective client within the scope of the professional's license, registration, or certification, for the purpose of providing professional services to the prospective client, when neither the person receiving the communication nor anyone acting on that person's behalf has requested the communication. The term does not include a communication initiated by a family member of the person receiving a communication, a communication by a professional who has a prior or existing professional-client relationship with the person receiving the communication, or communication by an attorney for a qualified nonprofit organization with the organization's members for the purpose of educating the organization's members to understand the law, to recognize legal problems, to make intelligent selection of legal counsel, or to use available legal services. The term does not include an advertisement by a professional through public media. (12) \"Professional\" means an attorney, chiropractor, physician, surgeon, private investigator, or any other person licensed, certified, or registered by a state agency that regulates a health care profession. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1989, 71st Leg., ch. 866, Sec. 1, eff. Sept. 1, 1989; Acts 1991, 72nd Leg., ch. 14, Sec. 284(14), eff. Sept. 1, 1991; Acts 1991, 72nd Leg., ch. 561, Sec. 42, eff. Aug. 26, 1991; Acts 1993, 73rd Leg., ch. 723, Sec. 1, eff. Sept. 1, 1993; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 76, Sec. 5.95(27), eff. Sept. 1, 1995; Acts 1995, 74th Leg., ch. 321, Sec. 1.103, eff. Sept. 1, 1995; Acts 1997, 75th Leg., ch. 293, Sec. 2, eff. Sept. 1, 1997; Acts 1997, 75th Leg., ch. 750, Sec. 1, eff. Sept. 1, 1997.",
+          "contentHash": "e9086b38a1937526c8d47dc31b32cab3d6ec0aad929924554a6517679a2b50da",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 1997",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(5)",
+          "metadata": {
+            "chargeId": "tx-pc-38-02-fugitive-refusal",
+            "catalogLabel": "Failure to identify (refusing after lawful arrest, fugitive from justice)",
+            "catalogCode": "38.02(d)(1)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1997"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "4be0acd5effef3e3b216ceb9701f05ae67b9184bd17b7cb54be954f70728c47b",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.22",
+          "lawId": "PE",
+          "section": "12.22",
+          "citation": "Tex. Penal Code § 12.22",
+          "officialTitle": "CLASS B MISDEMEANOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.22",
+          "content": "Sec. 12.22. CLASS B MISDEMEANOR. An individual adjudged guilty of a Class B misdemeanor shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for a term not to exceed 180 days; or (3) both such fine and confinement. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1991, 72nd Leg., ch. 108, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "450184b5e5fc88750f6cf9623888a22c92797b995ce67e4fa45f575cbe31d21b",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-02-fugitive-refusal",
+            "catalogLabel": "Failure to identify (refusing after lawful arrest, fugitive from justice)",
+            "catalogCode": "38.02(d)(1)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "05183e453580afd0bf7d0f018f492ab689186c702be194c8008e5e6fed66224e",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.43",
+          "lawId": "PE",
+          "section": "12.43",
+          "citation": "Tex. Penal Code § 12.43",
+          "officialTitle": "PENALTIES FOR REPEAT AND HABITUAL MISDEMEANOR OFFENDERS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.43",
+          "content": "Sec. 12.43. PENALTIES FOR REPEAT AND HABITUAL MISDEMEANOR OFFENDERS. (a) If it is shown on the trial of a Class A misdemeanor that the defendant has been before convicted of a Class A misdemeanor or any degree of felony, on conviction he shall be punished by: (1) a fine not to exceed $4,000; (2) confinement in jail for any term of not more than one year or less than 90 days; or (3) both such fine and confinement. (b) If it is shown on the trial of a Class B misdemeanor that the defendant has been before convicted of a Class A or Class B misdemeanor or any degree of felony, on conviction he shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for any term of not more than 180 days or less than 30 days; or (3) both such fine and confinement. (c) If it is shown on the trial of an offense punishable as a Class C misdemeanor under Section 42.01 or 49.02 that the defendant has been before convicted under either of those sections three times or three times for any combination of those offenses and each prior offense was committed in the 24 months preceding the date of commission of the instant offense, the defendant shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for a term not to exceed 180 days; or (3) both such fine and confinement. (d) If the punishment scheme for an offense contains a specific enhancement provision increasing punishment for a defendant who has previously been convicted of the offense, the specific enhancement provision controls over this section. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 318, Sec. 2, eff. Sept. 1, 1995; Acts 1999, 76th Leg., ch. 564, Sec. 1, eff. Sept. 1, 1999.",
+          "contentHash": "4120c12a3df195d9c294867112e86f348597a7dc9289538d21c787d37af3b9df",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 1999",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": "(b), (d)",
+          "metadata": {
+            "chargeId": "tx-pc-38-02-fugitive-refusal",
+            "catalogLabel": "Failure to identify (refusing after lawful arrest, fugitive from justice)",
+            "catalogCode": "38.02(d)(1)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1999"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "45d93b78bf3356be716d400f565d03403420621d228fead2b9aba8b84b4ec620",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "tx-pc-38-02-false",
+      "catalogLabel": "Failure to identify (giving false information)",
+      "catalogCode": "38.02(c)(2)",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
+      "canonicalTitle": "FAILURE TO IDENTIFY.",
+      "provisions": [
+        {
+          "sourceKey": "tx:PE:38.02",
+          "lawId": "PE",
+          "section": "38.02",
+          "citation": "Tex. Penal Code § 38.02",
+          "officialTitle": "FAILURE TO IDENTIFY.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.02",
+          "content": "Sec. 38.02. FAILURE TO IDENTIFY. (a) A person commits an offense if he intentionally refuses to give his name, residence address, or date of birth to a peace officer who has lawfully arrested the person and requested the information. (b) A person commits an offense if he intentionally gives a false or fictitious name, residence address, or date of birth to a peace officer who has: (1) lawfully arrested the person; (2) lawfully detained the person; or (3) requested the information from a person that the peace officer has good cause to believe is a witness to a criminal offense. (b-1) A person commits an offense if the person: (1) is an operator of a motor vehicle, as defined by Section 32.34, who is lawfully detained by a peace officer for an alleged violation of a law; (2) fails to provide or display the person's driver's license on the officer's request for the license; and (3) intentionally refuses to give the person's name, driver's license number, residence address, or date of birth to the peace officer on the officer's request for that information. (b-2) For purposes of Subsection (b-1)(3), giving a peace officer a residence address that is different from the address associated with the person's driver's license does not constitute a refusal to give the person's residence address in violation of that provision if the address given to the officer is the person's actual residence address. (c) Except as provided by Subsections (d) and (d-1), an offense under this section is: (1) a Class C misdemeanor if the offense is committed under Subsection (a) or (b-1); or (2) a Class B misdemeanor if the offense is committed under Subsection (b). (d) If it is shown on the trial of an offense under this section that the defendant was a fugitive from justice at the time of the offense, the offense is: (1) a Class B misdemeanor if the offense is committed under Subsection (a); or (2) a Class A misdemeanor if the offense is committed under Subsection (b). (d-1) An offense under Subsection (b-1) is a Class B misdemeanor if it is shown on the trial of the offense that the actor gave a false or fictitious name to the peace officer during the commission of the offense. (e) If conduct that constitutes an offense under this section also constitutes an offense under Section 106.07, Alcoholic Beverage Code, the actor may be prosecuted only under Section 106.07. (f) Subject to Subsection (e), if conduct that constitutes an offense under Subsection (b-1) also constitutes an offense under any other law, the actor may be prosecuted under that subsection, the other law, or both. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 869, Sec. 1, eff. Sept. 1, 1987. Acts 1991, 72nd Leg., ch. 821, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 2003, 78th Leg., ch. 1009, Sec. 1, eff. Sept. 1, 2003. Amended by: Acts 2023, 88th Leg., R.S., Ch. 1164 (S.B. 1551), Sec. 1, eff. September 1, 2023.",
+          "contentHash": "97a82c989b5fab44be1a9e6f728860220f192e6ec941e0ad9148ff047bf26754",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 2023",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": "(b)",
+          "metadata": {
+            "chargeId": "tx-pc-38-02-false",
+            "catalogLabel": "Failure to identify (giving false information)",
+            "catalogCode": "38.02(c)(2)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2023"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "b2917a25217ab44ab5deb41e40e9cdc9c2b5dc68be35ccc654729d28add20229",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:38.02",
+          "lawId": "PE",
+          "section": "38.02",
+          "citation": "Tex. Penal Code § 38.02",
+          "officialTitle": "FAILURE TO IDENTIFY.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.02",
+          "content": "Sec. 38.02. FAILURE TO IDENTIFY. (a) A person commits an offense if he intentionally refuses to give his name, residence address, or date of birth to a peace officer who has lawfully arrested the person and requested the information. (b) A person commits an offense if he intentionally gives a false or fictitious name, residence address, or date of birth to a peace officer who has: (1) lawfully arrested the person; (2) lawfully detained the person; or (3) requested the information from a person that the peace officer has good cause to believe is a witness to a criminal offense. (b-1) A person commits an offense if the person: (1) is an operator of a motor vehicle, as defined by Section 32.34, who is lawfully detained by a peace officer for an alleged violation of a law; (2) fails to provide or display the person's driver's license on the officer's request for the license; and (3) intentionally refuses to give the person's name, driver's license number, residence address, or date of birth to the peace officer on the officer's request for that information. (b-2) For purposes of Subsection (b-1)(3), giving a peace officer a residence address that is different from the address associated with the person's driver's license does not constitute a refusal to give the person's residence address in violation of that provision if the address given to the officer is the person's actual residence address. (c) Except as provided by Subsections (d) and (d-1), an offense under this section is: (1) a Class C misdemeanor if the offense is committed under Subsection (a) or (b-1); or (2) a Class B misdemeanor if the offense is committed under Subsection (b). (d) If it is shown on the trial of an offense under this section that the defendant was a fugitive from justice at the time of the offense, the offense is: (1) a Class B misdemeanor if the offense is committed under Subsection (a); or (2) a Class A misdemeanor if the offense is committed under Subsection (b). (d-1) An offense under Subsection (b-1) is a Class B misdemeanor if it is shown on the trial of the offense that the actor gave a false or fictitious name to the peace officer during the commission of the offense. (e) If conduct that constitutes an offense under this section also constitutes an offense under Section 106.07, Alcoholic Beverage Code, the actor may be prosecuted only under Section 106.07. (f) Subject to Subsection (e), if conduct that constitutes an offense under Subsection (b-1) also constitutes an offense under any other law, the actor may be prosecuted under that subsection, the other law, or both. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 869, Sec. 1, eff. Sept. 1, 1987. Acts 1991, 72nd Leg., ch. 821, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 2003, 78th Leg., ch. 1009, Sec. 1, eff. Sept. 1, 2003. Amended by: Acts 2023, 88th Leg., R.S., Ch. 1164 (S.B. 1551), Sec. 1, eff. September 1, 2023.",
+          "contentHash": "97a82c989b5fab44be1a9e6f728860220f192e6ec941e0ad9148ff047bf26754",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 2023",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(c)(2)",
+          "metadata": {
+            "chargeId": "tx-pc-38-02-false",
+            "catalogLabel": "Failure to identify (giving false information)",
+            "catalogCode": "38.02(c)(2)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2023"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "b2917a25217ab44ab5deb41e40e9cdc9c2b5dc68be35ccc654729d28add20229",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:AL:106.07",
+          "lawId": "AL",
+          "section": "106.07",
+          "citation": "Tex. Alco. Bev. Code § 106.07",
+          "officialTitle": "MISREPRESENTATION OF AGE BY A MINOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/AL/htm/AL.106.htm#106.07",
+          "content": "Sec. 106.07. MISREPRESENTATION OF AGE BY A MINOR. (a) A minor commits an offense if he falsely states that he is 21 years of age or older or presents any document that indicates he is 21 years of age or older to a person engaged in selling or serving alcoholic beverages. (b) An offense under this section is punishable as provided by Section 106.071. Acts 1977, 65th Leg., p. 514, ch. 194, Sec. 1, eff. Sept. 1, 1977. Amended by Acts 1981, 67th Leg., p. 257, ch. 107, Sec. 10, eff. Sept. 1, 1981; Acts 1985, 69th Leg., ch. 285, Sec. 10, eff. Sept. 1, 1986; Acts 1985, 69th Leg., ch. 462, Sec. 11, eff. Sept. 1, 1986; Acts 1997, 75th Leg., ch. 1013, Sec. 8, eff. Sept. 1, 1997.",
+          "contentHash": "1995332d847cb7dd98be7cdb491bd668efd30cd67dbf124fac9f48012b22e1ce",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:17:33.263Z",
+          "effectiveDateStart": "September 1, 1997",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-02-false",
+            "catalogLabel": "Failure to identify (giving false information)",
+            "catalogCode": "38.02(c)(2)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1997"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "160d9af466d4b01f3944f965f3c6f91bc466eaf760db76aca328b90f33f856a1",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.22",
+          "lawId": "PE",
+          "section": "12.22",
+          "citation": "Tex. Penal Code § 12.22",
+          "officialTitle": "CLASS B MISDEMEANOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.22",
+          "content": "Sec. 12.22. CLASS B MISDEMEANOR. An individual adjudged guilty of a Class B misdemeanor shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for a term not to exceed 180 days; or (3) both such fine and confinement. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1991, 72nd Leg., ch. 108, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "450184b5e5fc88750f6cf9623888a22c92797b995ce67e4fa45f575cbe31d21b",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-02-false",
+            "catalogLabel": "Failure to identify (giving false information)",
+            "catalogCode": "38.02(c)(2)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "05183e453580afd0bf7d0f018f492ab689186c702be194c8008e5e6fed66224e",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.43",
+          "lawId": "PE",
+          "section": "12.43",
+          "citation": "Tex. Penal Code § 12.43",
+          "officialTitle": "PENALTIES FOR REPEAT AND HABITUAL MISDEMEANOR OFFENDERS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.43",
+          "content": "Sec. 12.43. PENALTIES FOR REPEAT AND HABITUAL MISDEMEANOR OFFENDERS. (a) If it is shown on the trial of a Class A misdemeanor that the defendant has been before convicted of a Class A misdemeanor or any degree of felony, on conviction he shall be punished by: (1) a fine not to exceed $4,000; (2) confinement in jail for any term of not more than one year or less than 90 days; or (3) both such fine and confinement. (b) If it is shown on the trial of a Class B misdemeanor that the defendant has been before convicted of a Class A or Class B misdemeanor or any degree of felony, on conviction he shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for any term of not more than 180 days or less than 30 days; or (3) both such fine and confinement. (c) If it is shown on the trial of an offense punishable as a Class C misdemeanor under Section 42.01 or 49.02 that the defendant has been before convicted under either of those sections three times or three times for any combination of those offenses and each prior offense was committed in the 24 months preceding the date of commission of the instant offense, the defendant shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for a term not to exceed 180 days; or (3) both such fine and confinement. (d) If the punishment scheme for an offense contains a specific enhancement provision increasing punishment for a defendant who has previously been convicted of the offense, the specific enhancement provision controls over this section. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 318, Sec. 2, eff. Sept. 1, 1995; Acts 1999, 76th Leg., ch. 564, Sec. 1, eff. Sept. 1, 1999.",
+          "contentHash": "4120c12a3df195d9c294867112e86f348597a7dc9289538d21c787d37af3b9df",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 1999",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": "(b), (d)",
+          "metadata": {
+            "chargeId": "tx-pc-38-02-false",
+            "catalogLabel": "Failure to identify (giving false information)",
+            "catalogCode": "38.02(c)(2)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1999"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "45d93b78bf3356be716d400f565d03403420621d228fead2b9aba8b84b4ec620",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "tx-pc-38-02-fugitive-false",
+      "catalogLabel": "Failure to identify (giving false information, fugitive from justice)",
+      "catalogCode": "38.02(d)(2)",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The official TCSS title is supported by an explicit reviewed Texas alias mapping.",
+      "canonicalTitle": "FAILURE TO IDENTIFY.",
+      "provisions": [
+        {
+          "sourceKey": "tx:PE:38.02",
+          "lawId": "PE",
+          "section": "38.02",
+          "citation": "Tex. Penal Code § 38.02",
+          "officialTitle": "FAILURE TO IDENTIFY.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.02",
+          "content": "Sec. 38.02. FAILURE TO IDENTIFY. (a) A person commits an offense if he intentionally refuses to give his name, residence address, or date of birth to a peace officer who has lawfully arrested the person and requested the information. (b) A person commits an offense if he intentionally gives a false or fictitious name, residence address, or date of birth to a peace officer who has: (1) lawfully arrested the person; (2) lawfully detained the person; or (3) requested the information from a person that the peace officer has good cause to believe is a witness to a criminal offense. (b-1) A person commits an offense if the person: (1) is an operator of a motor vehicle, as defined by Section 32.34, who is lawfully detained by a peace officer for an alleged violation of a law; (2) fails to provide or display the person's driver's license on the officer's request for the license; and (3) intentionally refuses to give the person's name, driver's license number, residence address, or date of birth to the peace officer on the officer's request for that information. (b-2) For purposes of Subsection (b-1)(3), giving a peace officer a residence address that is different from the address associated with the person's driver's license does not constitute a refusal to give the person's residence address in violation of that provision if the address given to the officer is the person's actual residence address. (c) Except as provided by Subsections (d) and (d-1), an offense under this section is: (1) a Class C misdemeanor if the offense is committed under Subsection (a) or (b-1); or (2) a Class B misdemeanor if the offense is committed under Subsection (b). (d) If it is shown on the trial of an offense under this section that the defendant was a fugitive from justice at the time of the offense, the offense is: (1) a Class B misdemeanor if the offense is committed under Subsection (a); or (2) a Class A misdemeanor if the offense is committed under Subsection (b). (d-1) An offense under Subsection (b-1) is a Class B misdemeanor if it is shown on the trial of the offense that the actor gave a false or fictitious name to the peace officer during the commission of the offense. (e) If conduct that constitutes an offense under this section also constitutes an offense under Section 106.07, Alcoholic Beverage Code, the actor may be prosecuted only under Section 106.07. (f) Subject to Subsection (e), if conduct that constitutes an offense under Subsection (b-1) also constitutes an offense under any other law, the actor may be prosecuted under that subsection, the other law, or both. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 869, Sec. 1, eff. Sept. 1, 1987. Acts 1991, 72nd Leg., ch. 821, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 2003, 78th Leg., ch. 1009, Sec. 1, eff. Sept. 1, 2003. Amended by: Acts 2023, 88th Leg., R.S., Ch. 1164 (S.B. 1551), Sec. 1, eff. September 1, 2023.",
+          "contentHash": "97a82c989b5fab44be1a9e6f728860220f192e6ec941e0ad9148ff047bf26754",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 2023",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": "(b)",
+          "metadata": {
+            "chargeId": "tx-pc-38-02-fugitive-false",
+            "catalogLabel": "Failure to identify (giving false information, fugitive from justice)",
+            "catalogCode": "38.02(d)(2)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2023"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "b2917a25217ab44ab5deb41e40e9cdc9c2b5dc68be35ccc654729d28add20229",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:38.02",
+          "lawId": "PE",
+          "section": "38.02",
+          "citation": "Tex. Penal Code § 38.02",
+          "officialTitle": "FAILURE TO IDENTIFY.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.02",
+          "content": "Sec. 38.02. FAILURE TO IDENTIFY. (a) A person commits an offense if he intentionally refuses to give his name, residence address, or date of birth to a peace officer who has lawfully arrested the person and requested the information. (b) A person commits an offense if he intentionally gives a false or fictitious name, residence address, or date of birth to a peace officer who has: (1) lawfully arrested the person; (2) lawfully detained the person; or (3) requested the information from a person that the peace officer has good cause to believe is a witness to a criminal offense. (b-1) A person commits an offense if the person: (1) is an operator of a motor vehicle, as defined by Section 32.34, who is lawfully detained by a peace officer for an alleged violation of a law; (2) fails to provide or display the person's driver's license on the officer's request for the license; and (3) intentionally refuses to give the person's name, driver's license number, residence address, or date of birth to the peace officer on the officer's request for that information. (b-2) For purposes of Subsection (b-1)(3), giving a peace officer a residence address that is different from the address associated with the person's driver's license does not constitute a refusal to give the person's residence address in violation of that provision if the address given to the officer is the person's actual residence address. (c) Except as provided by Subsections (d) and (d-1), an offense under this section is: (1) a Class C misdemeanor if the offense is committed under Subsection (a) or (b-1); or (2) a Class B misdemeanor if the offense is committed under Subsection (b). (d) If it is shown on the trial of an offense under this section that the defendant was a fugitive from justice at the time of the offense, the offense is: (1) a Class B misdemeanor if the offense is committed under Subsection (a); or (2) a Class A misdemeanor if the offense is committed under Subsection (b). (d-1) An offense under Subsection (b-1) is a Class B misdemeanor if it is shown on the trial of the offense that the actor gave a false or fictitious name to the peace officer during the commission of the offense. (e) If conduct that constitutes an offense under this section also constitutes an offense under Section 106.07, Alcoholic Beverage Code, the actor may be prosecuted only under Section 106.07. (f) Subject to Subsection (e), if conduct that constitutes an offense under Subsection (b-1) also constitutes an offense under any other law, the actor may be prosecuted under that subsection, the other law, or both. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1987, 70th Leg., ch. 869, Sec. 1, eff. Sept. 1, 1987. Acts 1991, 72nd Leg., ch. 821, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 2003, 78th Leg., ch. 1009, Sec. 1, eff. Sept. 1, 2003. Amended by: Acts 2023, 88th Leg., R.S., Ch. 1164 (S.B. 1551), Sec. 1, eff. September 1, 2023.",
+          "contentHash": "97a82c989b5fab44be1a9e6f728860220f192e6ec941e0ad9148ff047bf26754",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 2023",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(d)(2)",
+          "metadata": {
+            "chargeId": "tx-pc-38-02-fugitive-false",
+            "catalogLabel": "Failure to identify (giving false information, fugitive from justice)",
+            "catalogCode": "38.02(d)(2)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 2023"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "b2917a25217ab44ab5deb41e40e9cdc9c2b5dc68be35ccc654729d28add20229",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:AL:106.07",
+          "lawId": "AL",
+          "section": "106.07",
+          "citation": "Tex. Alco. Bev. Code § 106.07",
+          "officialTitle": "MISREPRESENTATION OF AGE BY A MINOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/AL/htm/AL.106.htm#106.07",
+          "content": "Sec. 106.07. MISREPRESENTATION OF AGE BY A MINOR. (a) A minor commits an offense if he falsely states that he is 21 years of age or older or presents any document that indicates he is 21 years of age or older to a person engaged in selling or serving alcoholic beverages. (b) An offense under this section is punishable as provided by Section 106.071. Acts 1977, 65th Leg., p. 514, ch. 194, Sec. 1, eff. Sept. 1, 1977. Amended by Acts 1981, 67th Leg., p. 257, ch. 107, Sec. 10, eff. Sept. 1, 1981; Acts 1985, 69th Leg., ch. 285, Sec. 10, eff. Sept. 1, 1986; Acts 1985, 69th Leg., ch. 462, Sec. 11, eff. Sept. 1, 1986; Acts 1997, 75th Leg., ch. 1013, Sec. 8, eff. Sept. 1, 1997.",
+          "contentHash": "1995332d847cb7dd98be7cdb491bd668efd30cd67dbf124fac9f48012b22e1ce",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:17:33.263Z",
+          "effectiveDateStart": "September 1, 1997",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-02-fugitive-false",
+            "catalogLabel": "Failure to identify (giving false information, fugitive from justice)",
+            "catalogCode": "38.02(d)(2)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1997"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "160d9af466d4b01f3944f965f3c6f91bc466eaf760db76aca328b90f33f856a1",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:38.01",
+          "lawId": "PE",
+          "section": "38.01",
+          "citation": "Tex. Penal Code § 38.01",
+          "officialTitle": "DEFINITIONS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.01",
+          "content": "Sec. 38.01. DEFINITIONS. In this chapter: (1) \"Custody\" means: (A) under arrest by a peace officer or under restraint by a public servant pursuant to an order of a court of this state or another state of the United States; or (B) under restraint by an agent or employee of a facility that is operated by or under contract with the United States and that confines persons arrested for, charged with, or convicted of criminal offenses. (2) \"Escape\" means unauthorized departure from custody or failure to return to custody following temporary leave for a specific purpose or limited period or leave that is part of an intermittent sentence, but does not include a violation of conditions of community supervision or parole other than conditions that impose a period of confinement in a secure correctional facility. (3) \"Economic benefit\" means anything reasonably regarded as an economic gain or advantage, including accepting or offering to accept employment for a fee, accepting or offering to accept a fee, entering into a fee contract, or accepting or agreeing to accept money or anything of value. (4) \"Finance\" means to provide funds or capital or to furnish with necessary funds. (5) \"Fugitive from justice\" means a person for whom a valid arrest warrant has been issued. (6) \"Governmental function\" includes any activity that a public servant is lawfully authorized to undertake on behalf of government. (7) \"Invest funds\" means to commit money to earn a financial return. (8) \"Member of the family\" means anyone related within the third degree of consanguinity or affinity, as determined under Chapter 573, Government Code. (9) \"Qualified nonprofit organization\" means a nonprofit organization that meets the following conditions: (A) the primary purposes of the organization do not include the rendition of legal services or education regarding legal services; (B) the recommending, furnishing, paying for, or educating persons regarding legal services is incidental and reasonably related to the primary purposes of the organization; (C) the organization does not derive a financial benefit from the rendition of legal services by a lawyer; and (D) the person for whom the legal services are rendered, and not the organization, is recognized as the client of a lawyer. (10) \"Public media\" means a telephone directory or legal directory, newspaper or other periodical, billboard or other sign, radio or television broadcast, recorded message the public may access by dialing a telephone number, or a written communication not prohibited by Section 38.12(d). (11) \"Solicit employment\" means to communicate in person or by telephone with a prospective client or a member of the prospective client's family concerning professional employment within the scope of a professional's license, registration, or certification arising out of a particular occurrence or event, or series of occurrences or events, or concerning an existing problem of the prospective client within the scope of the professional's license, registration, or certification, for the purpose of providing professional services to the prospective client, when neither the person receiving the communication nor anyone acting on that person's behalf has requested the communication. The term does not include a communication initiated by a family member of the person receiving a communication, a communication by a professional who has a prior or existing professional-client relationship with the person receiving the communication, or communication by an attorney for a qualified nonprofit organization with the organization's members for the purpose of educating the organization's members to understand the law, to recognize legal problems, to make intelligent selection of legal counsel, or to use available legal services. The term does not include an advertisement by a professional through public media. (12) \"Professional\" means an attorney, chiropractor, physician, surgeon, private investigator, or any other person licensed, certified, or registered by a state agency that regulates a health care profession. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1989, 71st Leg., ch. 866, Sec. 1, eff. Sept. 1, 1989; Acts 1991, 72nd Leg., ch. 14, Sec. 284(14), eff. Sept. 1, 1991; Acts 1991, 72nd Leg., ch. 561, Sec. 42, eff. Aug. 26, 1991; Acts 1993, 73rd Leg., ch. 723, Sec. 1, eff. Sept. 1, 1993; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 76, Sec. 5.95(27), eff. Sept. 1, 1995; Acts 1995, 74th Leg., ch. 321, Sec. 1.103, eff. Sept. 1, 1995; Acts 1997, 75th Leg., ch. 293, Sec. 2, eff. Sept. 1, 1997; Acts 1997, 75th Leg., ch. 750, Sec. 1, eff. Sept. 1, 1997.",
+          "contentHash": "e9086b38a1937526c8d47dc31b32cab3d6ec0aad929924554a6517679a2b50da",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T21:16:17.911Z",
+          "effectiveDateStart": "September 1, 1997",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": "(5)",
+          "metadata": {
+            "chargeId": "tx-pc-38-02-fugitive-false",
+            "catalogLabel": "Failure to identify (giving false information, fugitive from justice)",
+            "catalogCode": "38.02(d)(2)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1997"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "4be0acd5effef3e3b216ceb9701f05ae67b9184bd17b7cb54be954f70728c47b",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.21",
+          "lawId": "PE",
+          "section": "12.21",
+          "citation": "Tex. Penal Code § 12.21",
+          "officialTitle": "CLASS A MISDEMEANOR.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.21",
+          "content": "Sec. 12.21. CLASS A MISDEMEANOR. An individual adjudged guilty of a Class A misdemeanor shall be punished by: (1) a fine not to exceed $4,000; (2) confinement in jail for a term not to exceed one year; or (3) both such fine and confinement. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1991, 72nd Leg., ch. 108, Sec. 1, eff. Sept. 1, 1991; Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994.",
+          "contentHash": "91fc4df78563d6cee6fc8f4d13af032ff88714a8a6d90fc2e71f74011fe6f9b5",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 1994",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "tx-pc-38-02-fugitive-false",
+            "catalogLabel": "Failure to identify (giving false information, fugitive from justice)",
+            "catalogCode": "38.02(d)(2)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1994"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "04189e5d90bf9395bb72a039ba436134a2c461bfea999e13e496169fd4271be9",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
+          }
+        },
+        {
+          "sourceKey": "tx:PE:12.43",
+          "lawId": "PE",
+          "section": "12.43",
+          "citation": "Tex. Penal Code § 12.43",
+          "officialTitle": "PENALTIES FOR REPEAT AND HABITUAL MISDEMEANOR OFFENDERS.",
+          "sourceUrl": "https://tcss.legis.texas.gov/resources/PE/htm/PE.12.htm#12.43",
+          "content": "Sec. 12.43. PENALTIES FOR REPEAT AND HABITUAL MISDEMEANOR OFFENDERS. (a) If it is shown on the trial of a Class A misdemeanor that the defendant has been before convicted of a Class A misdemeanor or any degree of felony, on conviction he shall be punished by: (1) a fine not to exceed $4,000; (2) confinement in jail for any term of not more than one year or less than 90 days; or (3) both such fine and confinement. (b) If it is shown on the trial of a Class B misdemeanor that the defendant has been before convicted of a Class A or Class B misdemeanor or any degree of felony, on conviction he shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for any term of not more than 180 days or less than 30 days; or (3) both such fine and confinement. (c) If it is shown on the trial of an offense punishable as a Class C misdemeanor under Section 42.01 or 49.02 that the defendant has been before convicted under either of those sections three times or three times for any combination of those offenses and each prior offense was committed in the 24 months preceding the date of commission of the instant offense, the defendant shall be punished by: (1) a fine not to exceed $2,000; (2) confinement in jail for a term not to exceed 180 days; or (3) both such fine and confinement. (d) If the punishment scheme for an offense contains a specific enhancement provision increasing punishment for a defendant who has previously been convicted of the offense, the specific enhancement provision controls over this section. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994; Acts 1995, 74th Leg., ch. 318, Sec. 2, eff. Sept. 1, 1995; Acts 1999, 76th Leg., ch. 564, Sec. 1, eff. Sept. 1, 1999.",
+          "contentHash": "4120c12a3df195d9c294867112e86f348597a7dc9289538d21c787d37af3b9df",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-11-16T06:45:09.073Z",
+          "effectiveDateStart": "September 1, 1999",
+          "effectiveDateEnd": null,
+          "supportRole": "penalty",
+          "subdivision": "(a), (d)",
+          "metadata": {
+            "chargeId": "tx-pc-38-02-fugitive-false",
+            "catalogLabel": "Failure to identify (giving false information, fugitive from justice)",
+            "catalogCode": "38.02(d)(2)",
+            "catalogClassification": "misdemeanor",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "tcss_html"
+            },
+            "currentnessEvidence": {
+              "effectiveDateStart": "September 1, 1999"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "45d93b78bf3356be716d400f565d03403420621d228fead2b9aba8b84b4ec620",
+            "manifestImportedAt": "2026-11-16T21:17:33.263Z"
           }
         }
       ],

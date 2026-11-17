@@ -3821,7 +3821,13 @@ export function getChargeExplanation(
     return {
       canonicalChargeId: reviewed.id, jurisdiction: "TX", chargePattern: /$^/, slug: reviewed.id,
       plainSummary: reviewed.conduct, keyTerms: [], degreeContext: penalty,
-      sources: reviewed.references.map(ref => ({ citation: texasReviewedCitation(ref), url: texasReviewedUrl(ref), jurisdiction: "TX" })),
+      sources: [
+        ...reviewed.references.map(ref => ({ citation: texasReviewedCitation(ref), url: texasReviewedUrl(ref), jurisdiction: "TX" })),
+        ...(reviewed.id === "tx-pc-38-04-vehicle" ? [{
+          citation: "Fuller v. State, No. 03-18-00709-CR, pp. 7-10 (Tex. App. Austin, June 25, 2020), applying Adetomiwa v. State, 421 S.W.3d 922",
+          url: "https://www.txcourts.gov/media/1448063/03-18-00709-cr-opinion.pdf", jurisdiction: "TX",
+        }] : []),
+      ],
       jurisdictionDetail: { citation: reviewed.citation, keyRule: reviewed.conduct,
         penaltyClass: penalty, source: "Texas Legislative Council TCSS", sourceUrl: texasReviewedUrl(reviewed.references[1]),
         dataConfidence: "high", lastVerified: "2026-11" },
