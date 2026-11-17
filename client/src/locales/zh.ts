@@ -7696,7 +7696,7 @@ export default {
     }
   },
   "howTo": {
-    "design": {"title": "从您现在最需要的帮助开始。", "screenshot": "设计获批后将添加页面截图"},
+    "design": {"title": "从您现在最需要的帮助开始。", "screenshot": "打开完整截图（新标签页）"},
     "pageTitle": "使用指南",
     "pageSubtitle": "查找法律资源，了解您的权利，获取所需的支持",
     "hero": {

@@ -24,8 +24,13 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
       for (const key of ['badge', 'headline', 'subhead', 'bullet1', 'bullet2', 'bullet3', 'bullet4', 'cta'] as const) {
         await expect(path).toContainText(text[key]);
       }
-      await expect(path.locator('a')).toHaveAttribute('href', destinations[n - 1]);
+      await expect(path.locator('.how-path-copy a')).toHaveAttribute('href', destinations[n - 1]);
       await expect(path.locator('small')).toHaveText(copy.design.screenshot);
+      const image = path.locator('.how-shot img');
+      await image.scrollIntoViewIfNeeded();
+      await expect.poll(() => image.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth === 1280)).toBe(true);
+      await expect(image).toHaveAttribute('src', `/images/how-to/${language}-${n}.webp`);
+      await expect(path.locator('.how-shot a')).toHaveAttribute('href', `/images/how-to/${language}-${n}.webp`);
     }
     for (const [selector, text, count] of [
       ['#how-to-journey', copy.flow, 4], ['#how-to-family', copy.familyNote, 2],

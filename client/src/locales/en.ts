@@ -7690,7 +7690,7 @@ export default {
     }
   },
   "howTo": {
-    "design": {"title": "Start with what you need right now.", "screenshot": "Screenshot to follow after design approval"},
+    "design": {"title": "Start with what you need right now.", "screenshot": "Open full-size screenshot (new tab)"},
     "pageTitle": "Navigate This Tool",
     "pageSubtitle": "Find legal resources, understand your rights, and get the support you need",
     "hero": {
