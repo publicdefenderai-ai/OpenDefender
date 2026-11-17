@@ -28,6 +28,10 @@ const evadingArrest = {
   instructionRef: "CPJC 38.4: Evading Detention or Arrest in a motor vehicle (underlying conduct only)",
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F38_Obstructing_Governmental_Operation%2FCPJC38-4.htm&version=026",
 };
+const vehicleBurglary = {
+  instructionRef: "CPJC 30.8: Burglary of a Vehicle (underlying conduct only)",
+  instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F30_Burglary_and_Criminal_Trespass%2FCPJC30-8.htm&version=007",
+};
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
   "tx-pc-38-03-c": resistingArrest,
   "tx-pc-38-03-d": resistingArrest,
@@ -53,6 +57,19 @@ export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInj
   "tx-pc-31-03-e-5": theft,
   "tx-pc-31-03-e-6-a": theft,
   "tx-pc-31-03-e-7": theft,
+  "tx-auto-burglary": vehicleBurglary,
+  "tx-pc-30-04-one-prior": vehicleBurglary,
+  "tx-pc-30-04-two-priors": vehicleBurglary,
+  "tx-pc-30-04-rail": vehicleBurglary,
+  "tx-pc-30-04-prescription": vehicleBurglary,
+  "tx-pc-30-02-building": {
+    instructionRef: "CPJC 30.3: Burglary of Building by Entry with Intent (entry-with-intent theory; underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F30_Burglary_and_Criminal_Trespass%2FCPJC30-3.htm&version=007",
+  },
+  "tx-pc-30-02-habitation": {
+    instructionRef: "CPJC 30.5: Burglary of Habitation by Entry with Intent (entry-with-intent theory; underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F30_Burglary_and_Criminal_Trespass%2FCPJC30-5.htm&version=007",
+  },
   "tx-pc-31-03-e-1": theft,
   "tx-pc-31-03-e-2-b": theft,
   "tx-pc-31-03-e-3": theft,

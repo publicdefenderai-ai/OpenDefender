@@ -204,6 +204,15 @@ describe('generateGuidancePDF — charge summary row citation logic', () => {
     expect(JSON.stringify(mockDoc.text.mock.calls)).toContain("Select the specific Texas weapons charge");
   });
 
+  it("requires reselection for a saved Texas auto-burglary blanket felony", async () => {
+    const guidance = makeGuidance([{ id:"tx-auto-burglary", name:"Auto Burglary", classification:"felony",
+      code:"30.04", verifiedCitation:"Old Texas citation" }]);
+    mockDoc.text.mockClear();
+    await generateGuidancePDF({...guidance, caseData:{...guidance.caseData,jurisdiction:"TX"}}, "en");
+    expect(chargeRows().join(" ")).not.toMatch(/FELONY|Old Texas citation/);
+    expect(JSON.stringify(mockDoc.text.mock.calls)).toContain("Select the specific Texas vehicle burglary charge");
+  });
+
   it('A: shows the citation parenthetical when verifiedCitation is populated', () => {
     generateGuidancePDF(
       makeGuidance([

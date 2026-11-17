@@ -1,0 +1,801 @@
+[
+  {
+    "id": "tx-pc-30-02-building",
+    "name": "Burglary (building other than a habitation)",
+    "officialTitle": "BURGLARY.",
+    "category": "felony",
+    "code": "30.02(c)(1)",
+    "citation": "Tex. Penal Code § 30.02(c)(1)",
+    "conduct": "Without the owner’s effective consent, a person enters a habitation or a building (or part) not then open to the public intending to commit a felony, theft or assault; remains concealed in a building or habitation with that intent; or enters and commits or attempts a felony, theft or assault. Entry includes any part of the body or any object connected to it. This choice covers a building other than a habitation.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Specified controlled-substance premises and a separately proved §20.05(a)(2) predicate have distinct grading rules. Qualifying prior convictions or a declared disaster or evacuation area can increase punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.02",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.02",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.05",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(7), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "22990001"
+  },
+  {
+    "id": "tx-pc-30-02-habitation",
+    "name": "Burglary (habitation)",
+    "officialTitle": "BURGLARY.",
+    "category": "felony",
+    "code": "30.02(c)(2)",
+    "citation": "Tex. Penal Code § 30.02(c)(2)",
+    "conduct": "Without the owner’s effective consent, a person enters a habitation or a building (or part) not then open to the public intending to commit a felony, theft or assault; remains concealed in a building or habitation with that intent; or enters and commits or attempts a felony, theft or assault. Entry includes any part of the body or any object connected to it. A habitation is a structure or vehicle adapted for overnight accommodation and includes the separately secured portions or connected or appurtenant structures described in §30.01(1).",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Subsection (d) supplies a separate first-degree rule when a party intended, committed or attempted a felony other than felony theft as specified there. Qualifying prior convictions or a declared disaster or evacuation area can increase punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.02",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.02",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(7), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "22990002"
+  },
+  {
+    "id": "tx-pc-30-02-prescription",
+    "name": "Burglary (commercial building storing controlled substances)",
+    "officialTitle": "BURGLARY.",
+    "category": "felony",
+    "code": "30.02(c-1)",
+    "citation": "Tex. Penal Code § 30.02(c-1)",
+    "conduct": "Without the owner’s effective consent, a person enters a habitation or a building (or part) not then open to the public intending to commit a felony, theft or assault; remains concealed in a building or habitation with that intent; or enters and commits or attempts a felony, theft or assault. Entry includes any part of the body or any object connected to it. The premises must be a commercial building where controlled substances are generally stored. The person must enter or remain concealed there intending to steal a controlled substance. The statute gives pharmacies, clinics, hospitals, nursing facilities and warehouses as examples.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Mere presence in one of these buildings does not establish this grading circumstance. Qualifying prior convictions or a declared disaster or evacuation area can increase punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.02",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.02",
+        "subdivision": "(c-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(7), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-30-02-other-felony",
+    "name": "Burglary (habitation and felony other than felony theft)",
+    "officialTitle": "BURGLARY.",
+    "category": "felony",
+    "code": "30.02(d)",
+    "citation": "Tex. Penal Code § 30.02(d)",
+    "conduct": "Without the owner’s effective consent, a person enters a habitation or a building (or part) not then open to the public intending to commit a felony, theft or assault; remains concealed in a building or habitation with that intent; or enters and commits or attempts a felony, theft or assault. Entry includes any part of the body or any object connected to it. The premises must be a habitation and any party to the offense must enter with intent to commit a felony other than felony theft, or commit or attempt such a felony.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Felony theft alone does not meet this higher-grade condition. Qualifying prior convictions can affect punishment. Section 12.50 does not raise the grade of first-degree burglary.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.02",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.02",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(7), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "22990003"
+  },
+  {
+    "id": "tx-auto-burglary",
+    "name": "Burglary of Vehicles",
+    "officialTitle": "BURGLARY OF VEHICLES.",
+    "category": "misdemeanor",
+    "code": "30.04",
+    "citation": "Tex. Penal Code § 30.04",
+    "conduct": "Without the owner’s effective consent, breaking into or entering a vehicle or any part of one with intent to commit any felony or theft. Entry includes intrusion of any part of the body or any physical object connected to it. A device qualifying as a habitation is excluded from the Chapter 30 definition of vehicle. A prior under this section includes a guilty adjudication or a guilty or no-contest plea in exchange for deferred adjudication, even if sentence was never imposed or probation ended in discharge. Subsection (e) provides a defense for an employee or employee representative entering a rail car while exercising a right under the Railway Labor Act.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. One qualifying prior carries a six-month minimum term of confinement. Two or more priors or entry of a rail car can make this a state jail felony (ordinarily 180 days to two years). The wholesale-drug vehicle and separate §20.05(a)(2) circumstances can make it a third-degree felony (ordinarily two to ten years). Both felony grades allow a fine up to $10,000. Qualifying priors can affect minimum jail time. A qualifying declared disaster or evacuation area can raise the minimum jail term to 180 days.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.04",
+        "subdivision": "(a), (b), (c), (e)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.04",
+        "subdivision": "(d), (d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "20.05",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(9), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "22990011"
+  },
+  {
+    "id": "tx-pc-30-04-one-prior",
+    "name": "Burglary of vehicles (one prior conviction)",
+    "officialTitle": "BURGLARY OF VEHICLES.",
+    "category": "misdemeanor",
+    "code": "30.04(d)(1)",
+    "citation": "Tex. Penal Code § 30.04(d)(1)",
+    "conduct": "Without the owner’s effective consent, breaking into or entering a vehicle or any part of one with intent to commit any felony or theft. Entry includes intrusion of any part of the body or any physical object connected to it. A device qualifying as a habitation is excluded from the Chapter 30 definition of vehicle. One qualifying prior under this section must be proved. A prior under this section includes a guilty adjudication or a guilty or no-contest plea in exchange for deferred adjudication, even if sentence was never imposed or probation ended in discharge.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. This branch requires a minimum term of confinement of six months. Qualifying priors can affect minimum jail time. A qualifying declared disaster or evacuation area can raise the minimum jail term to 180 days.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.04",
+        "subdivision": "(a), (b), (c), (e)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.04",
+        "subdivision": "(d)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(9), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-30-04-two-priors",
+    "name": "Burglary of vehicles (two or more prior convictions)",
+    "officialTitle": "BURGLARY OF VEHICLES.",
+    "category": "felony",
+    "code": "30.04(d)(2)(A)",
+    "citation": "Tex. Penal Code § 30.04(d)(2)(A)",
+    "conduct": "Without the owner’s effective consent, breaking into or entering a vehicle or any part of one with intent to commit any felony or theft. Entry includes intrusion of any part of the body or any physical object connected to it. A device qualifying as a habitation is excluded from the Chapter 30 definition of vehicle. Two or more qualifying priors under this section must be proved. A prior under this section includes a guilty adjudication or a guilty or no-contest plea in exchange for deferred adjudication, even if sentence was never imposed or probation ended in discharge.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The required additional circumstance must be established. Qualifying prior convictions or a declared disaster or evacuation area can increase punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.04",
+        "subdivision": "(a), (b), (c), (e)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.04",
+        "subdivision": "(d)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(9), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-30-04-rail",
+    "name": "Burglary of vehicles (rail car)",
+    "officialTitle": "BURGLARY OF VEHICLES.",
+    "category": "felony",
+    "code": "30.04(d)(2)(B)",
+    "citation": "Tex. Penal Code § 30.04(d)(2)(B)",
+    "conduct": "Without the owner’s effective consent, breaking into or entering a vehicle or any part of one with intent to commit any felony or theft. Entry includes intrusion of any part of the body or any physical object connected to it. A device qualifying as a habitation is excluded from the Chapter 30 definition of vehicle. The vehicle or part entered or broken into must be a rail car. A container or trailer carried on it is part of the rail car. Subsection (e) provides a defense for an employee or employee representative entering a rail car while exercising a right under the Railway Labor Act.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The required additional circumstance must be established. Qualifying prior convictions or a declared disaster or evacuation area can increase punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.04",
+        "subdivision": "(a), (b), (c), (e)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.04",
+        "subdivision": "(d)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(9), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-30-04-prescription",
+    "name": "Burglary of vehicles (wholesale prescription-drug vehicle)",
+    "officialTitle": "BURGLARY OF VEHICLES.",
+    "category": "felony",
+    "code": "30.04(d)(3)(A)",
+    "citation": "Tex. Penal Code § 30.04(d)(3)(A)",
+    "conduct": "Without the owner’s effective consent, breaking into or entering a vehicle or any part of one with intent to commit any felony or theft. Entry includes intrusion of any part of the body or any physical object connected to it. A device qualifying as a habitation is excluded from the Chapter 30 definition of vehicle. The vehicle must be owned or operated by a wholesale distributor of prescription drugs and the person must intend to steal a controlled substance.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The required additional circumstance must be established. Qualifying prior convictions or a declared disaster or evacuation area can increase punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.04",
+        "subdivision": "(a), (b), (c), (e)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.04",
+        "subdivision": "(d)(3)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "431.401",
+        "subdivision": "(12)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(9), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-30-05-habitation",
+    "name": "Criminal trespass (habitation)",
+    "officialTitle": "CRIMINAL TRESPASS.",
+    "category": "misdemeanor",
+    "code": "30.05(d)(3)(A)(i)",
+    "citation": "Tex. Penal Code § 30.05(d)(3)(A)(i)",
+    "conduct": "Entering or remaining on or in someone else’s property without effective consent after notice that entry was forbidden, or receiving notice to depart and failing to do so. Entry requires the entire body. Notice can include communication from the owner or someone with apparent authority, qualifying fencing or signs, or markings and other conditions specified in §30.05(b). The statute provides exceptions and defenses for particular circumstances, including certain authorized work and firearm-related conduct. The offense must occur in a habitation as defined in §30.01(1).",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. This is the specified-location grade. If a weapon prohibition is the sole reason entry was forbidden, (d-3) instead ordinarily caps the Class C fine at $200. It provides a Class A exception when, after entry, the person receives the required personal notice and then fails to depart. The separately stated (d)(4) predicate has its own grading rule. Qualifying priors can affect minimum jail time. A qualifying declared disaster or evacuation area can raise the minimum jail term to 180 days.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.05",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.05",
+        "subdivision": "(d)(3)(A)(i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.05",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(10), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-30-05-superfund",
+    "name": "Criminal trespass (Superfund site)",
+    "officialTitle": "CRIMINAL TRESPASS.",
+    "category": "misdemeanor",
+    "code": "30.05(d)(3)(A)(ii)",
+    "citation": "Tex. Penal Code § 30.05(d)(3)(A)(ii)",
+    "conduct": "Entering or remaining on or in someone else’s property without effective consent after notice that entry was forbidden, or receiving notice to depart and failing to do so. Entry requires the entire body. Notice can include communication from the owner or someone with apparent authority, qualifying fencing or signs, or markings and other conditions specified in §30.05(b). The statute provides exceptions and defenses for particular circumstances, including certain authorized work and firearm-related conduct. The facility must be on the federal National Priorities List or the state registry described in §30.05(b)(6). Actual listing must be established.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. This is the specified-location grade. If a weapon prohibition is the sole reason entry was forbidden, (d-3) instead ordinarily caps the Class C fine at $200. It provides a Class A exception when, after entry, the person receives the required personal notice and then fails to depart. The separately stated (d)(4) predicate has its own grading rule. Qualifying priors can affect minimum jail time. A qualifying declared disaster or evacuation area can raise the minimum jail term to 180 days.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.05",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.05",
+        "subdivision": "(d)(3)(A)(ii)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.05",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(10), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-30-05-infrastructure",
+    "name": "Criminal trespass (critical infrastructure)",
+    "officialTitle": "CRIMINAL TRESPASS.",
+    "category": "misdemeanor",
+    "code": "30.05(d)(3)(A)(iii)",
+    "citation": "Tex. Penal Code § 30.05(d)(3)(A)(iii)",
+    "conduct": "Entering or remaining on or in someone else’s property without effective consent after notice that entry was forbidden, or receiving notice to depart and failing to do so. Entry requires the entire body. Notice can include communication from the owner or someone with apparent authority, qualifying fencing or signs, or markings and other conditions specified in §30.05(b). The statute provides exceptions and defenses for particular circumstances, including certain authorized work and firearm-related conduct. The offense must occur on or in a facility listed in §30.05(b)(7), completely enclosed by a fence or other physical barrier obviously designed to exclude intruders.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. This is the specified-location grade. If a weapon prohibition is the sole reason entry was forbidden, (d-3) instead ordinarily caps the Class C fine at $200. It provides a Class A exception when, after entry, the person receives the required personal notice and then fails to depart. The separately stated (d)(4) predicate has its own grading rule. Qualifying priors can affect minimum jail time. A qualifying declared disaster or evacuation area can raise the minimum jail term to 180 days.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.05",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.05",
+        "subdivision": "(d)(3)(A)(iii)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.05",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(10), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trespass-after-warning",
+    "name": "Criminal trespass (after warning or notice)",
+    "officialTitle": "CRIMINAL TRESPASS.",
+    "category": "misdemeanor",
+    "code": "30.05",
+    "citation": "Tex. Penal Code § 30.05",
+    "conduct": "Entering or remaining on or in someone else’s property without effective consent after notice that entry was forbidden, or receiving notice to depart and failing to do so. Entry requires the entire body. Notice can include communication from the owner or someone with apparent authority, qualifying fencing or signs, or markings and other conditions specified in §30.05(b). The statute provides exceptions and defenses for particular circumstances, including certain authorized work and firearm-related conduct.",
+    "penalty": "Ordinarily a Class B misdemeanor: up to 180 days in jail and a possible $2,000 fine. Specific land and distance conditions can make it Class C; specified locations, a deadly weapon or qualifying repeat campus trespass can make it Class A (up to one year and $4,000). A qualifying §20.05(a)(2) circumstance can make it a third-degree felony (ordinarily two to ten years and a possible $10,000 fine). If a weapon prohibition is the sole reason entry was forbidden, (d-3) instead ordinarily caps the Class C fine at $200. It provides a Class A exception when, after entry, the person receives the required personal notice and then fails to depart. The separately stated (d)(4) predicate has its own grading rule. Qualifying prior convictions or a disaster or evacuation area can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.05",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.05",
+        "subdivision": "(d), (d-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(10), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "20.05",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  }
+]

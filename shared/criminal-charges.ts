@@ -40225,19 +40225,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
-    id: 'tx-auto-burglary',
-    name: 'Auto Burglary',
-    code: '30.04',
-    jurisdiction: 'TX',
-    category: 'felony',
-    description: 'Unlawful entry of vehicle under Texas law',
-    maxPenalty: 'Up to 5 years imprisonment and/or substantial fines',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
-  },
-  {
     id: 'tx-robbery-in-the-first-degree',
     name: 'Aggravated Robbery',
     code: '29.03',
@@ -73125,19 +73112,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact parent or guardian immediately', 'Document the reason for being out during curfew', 'Ask about community service alternatives to fines', 'Inquire about record sealing for juvenile offenses']
   },
   {
-    id: 'tx-trespass-after-warning',
-    name: 'Trespass After Warning / Return After Ban',
-    code: '30.05',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under TX law',
-    maxPenalty: 'Up to 1 year jail and/or $1,000 fine',
-    commonDefenses: ['Trespass warning was not properly served', 'Warning had expired', 'Entered a different part of the property not covered by warning', 'Necessity or emergency required entry', 'Warning was issued improperly or by unauthorized person'],
-    evidenceToGather: ['Copy of the trespass warning', 'Proof of proper service', 'Expiration date of the warning', 'Maps or photos showing property boundaries', 'Witness statements about the circumstances'],
-    specificRights: ['Right to receive a copy of the trespass warning', 'Right to challenge the validity of the warning', 'Right to attorney', 'Right to trial'],
-    urgentActions: ['Leave the property immediately if you receive a warning', 'Keep a copy of any trespass warning you receive', 'Do not return to the property until the warning expires or is lifted', 'Contact an attorney if you believe the warning was improper']
-  },
-  {
     id: 'tx-defective-vehicle-equipment',
     name: 'Defective Vehicle Equipment / Broken Taillight',
     code: '547.004',
@@ -94976,7 +94950,7 @@ for (const group of ["Drug Offenses", "Drug Crimes"]) {
   const ids = texasReviewedRecords.filter(row => row.references[0].code === "HS").map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
-for (const [group, heading] of [["Property Crimes", "CRIMINAL MISCHIEF."], ["Theft & Property", "CRIMINAL MISCHIEF."], ["Violent Crimes", "AGGRAVATED ASSAULT."], ["Assault Crimes", "AGGRAVATED ASSAULT."], ["Weapons", "UNLAWFUL CARRYING WEAPONS."], ["DUI & Traffic", "DRIVING WHILE LICENSE INVALID."], ["Public Order", "VIOLATION OF CERTAIN COURT ORDERS OR CONDITIONS OF BOND IN A FAMILY VIOLENCE, CHILD ABUSE OR NEGLECT, SEXUAL ASSAULT OR ABUSE, INDECENT ASSAULT, STALKING, OR TRAFFICKING CASE."], ["Public Order", "EVADING ARREST OR DETENTION."], ["Public Order", "FAILURE TO IDENTIFY."], ["Public Order", "RESISTING ARREST, SEARCH, OR TRANSPORTATION."], ["Theft & Property", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "CRIMINAL TRESPASS."], ["Theft & Property", "THEFT."], ["Property Crimes", "THEFT."], ["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
+for (const [group, heading] of [["Property Crimes", "BURGLARY."], ["Property Crimes", "BURGLARY OF VEHICLES."], ["Theft & Property", "BURGLARY."], ["Theft & Property", "BURGLARY OF VEHICLES."], ["Property Crimes", "CRIMINAL MISCHIEF."], ["Theft & Property", "CRIMINAL MISCHIEF."], ["Violent Crimes", "AGGRAVATED ASSAULT."], ["Assault Crimes", "AGGRAVATED ASSAULT."], ["Weapons", "UNLAWFUL CARRYING WEAPONS."], ["DUI & Traffic", "DRIVING WHILE LICENSE INVALID."], ["Public Order", "VIOLATION OF CERTAIN COURT ORDERS OR CONDITIONS OF BOND IN A FAMILY VIOLENCE, CHILD ABUSE OR NEGLECT, SEXUAL ASSAULT OR ABUSE, INDECENT ASSAULT, STALKING, OR TRAFFICKING CASE."], ["Public Order", "EVADING ARREST OR DETENTION."], ["Public Order", "FAILURE TO IDENTIFY."], ["Public Order", "RESISTING ARREST, SEARCH, OR TRANSPORTATION."], ["Theft & Property", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "CRIMINAL TRESPASS."], ["Theft & Property", "THEFT."], ["Property Crimes", "THEFT."], ["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
   const ids = texasReviewedRecords.filter(row => !heading || row.officialTitle === heading).map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }

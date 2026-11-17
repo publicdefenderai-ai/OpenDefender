@@ -1,0 +1,53 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "year": 2025,
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "rows": [
+    {
+      "rank": 38,
+      "code": "22990001",
+      "label": "BURGLARY OF BUILDING",
+      "law": "PC",
+      "citation": "30.02(c)(1)",
+      "adult": 5039,
+      "juvenile": 625
+    },
+    {
+      "rank": 39,
+      "code": "22990002",
+      "label": "BURGLARY OF HABITATION",
+      "law": "PC",
+      "citation": "30.02(c)(2)",
+      "adult": 4950,
+      "juvenile": 276
+    },
+    {
+      "rank": 47,
+      "code": "22990011",
+      "label": "BURGLARY OF VEHICLES",
+      "law": "PC",
+      "citation": "30.04(d)",
+      "adult": 3897,
+      "juvenile": 932
+    },
+    {
+      "rank": 50,
+      "code": "57070019",
+      "label": "CRIM TRESPASS HABIT/SHLTR/SUPRFUND/INFSTRT",
+      "law": "PC",
+      "citation": "30.05(d)(3)(A)",
+      "adult": 3703,
+      "juvenile": 157
+    },
+    {
+      "rank": 102,
+      "code": "22990003",
+      "label": "BURGLARY HABITATION INTEND OTHER FELONY",
+      "law": "PC",
+      "citation": "30.02(d)",
+      "adult": 1073,
+      "juvenile": 42
+    }
+  ]
+}

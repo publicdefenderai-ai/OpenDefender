@@ -6,7 +6,7 @@ import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, knownCasePhase, type LegalDocument } from "@shared/legal-documents";
 import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
-import { isTexasHeldCarrySelection, needsTexasChargeReselection } from "@shared/texas-reviewed";
+import { isTexasAmbiguousVehicleBurglary, isTexasHeldCarrySelection, needsTexasChargeReselection } from "@shared/texas-reviewed";
 import { resolveGuidanceCharge } from "@shared/guidance-charge-resolution";
 
 // jsPDF's built-in fonts (helvetica, times, courier) only cover Latin/WinAnsi glyphs. Chinese
@@ -799,15 +799,25 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       doc.setFont(FONT_NAME, 'bold');
       doc.setTextColor(0, 0, 0);
       if (needsTexasChargeReselection(charge, caseData.jurisdiction)) {
-        const notice = isTexasHeldCarrySelection(charge, caseData.jurisdiction) ? {
-          zh: "请根据指控文件重新选择具体的德克萨斯州携带武器罪名。",
-          es: "Seleccione el cargo específico de portación de armas de Texas que figura en su acusación.",
-          en: "Select the specific Texas weapons charge listed on your charging document.",
-        } : {
-          zh: "请重新选择确切的德克萨斯州盗窃罪名。财产价值和以往定罪会影响刑罚。",
-          es: "Seleccione el cargo exacto de hurto en Texas. El valor del bien y las condenas previas pueden cambiar la pena.",
-          en: "Select the exact Texas theft charge. Property value and prior convictions can change the penalty.",
+        const messages = {
+          weapons: {
+            zh: "请根据指控文件重新选择具体的德克萨斯州携带武器罪名。",
+            es: "Seleccione el cargo específico de portación de armas de Texas que figura en su acusación.",
+            en: "Select the specific Texas weapons charge listed on your charging document.",
+          },
+          theft: {
+            zh: "请重新选择确切的德克萨斯州盗窃罪名。财产价值和以往定罪会影响刑罚。",
+            es: "Seleccione el cargo exacto de hurto en Texas. El valor del bien y las condenas previas pueden cambiar la pena.",
+            en: "Select the exact Texas theft charge. Property value and prior convictions can change the penalty.",
+          },
+          vehicle: {
+            zh: "请根据指控文件重新选择具体的德克萨斯州车辆入室盗窃罪名。",
+            es: "Seleccione el cargo específico de allanamiento de vehículo en Texas que figura en su acusación.",
+            en: "Select the specific Texas vehicle burglary charge listed on your charging document.",
+          },
         };
+        const notice = messages[isTexasAmbiguousVehicleBurglary(charge, caseData.jurisdiction) ? "vehicle" :
+          isTexasHeldCarrySelection(charge, caseData.jurisdiction) ? "weapons" : "theft"];
         yPosition = addText(formatChargeName(charge.name), margin, yPosition);
         yPosition = addText(notice[isChinese ? "zh" : isSpanish ? "es" : "en"], margin, yPosition + 6) + 6;
         return;
