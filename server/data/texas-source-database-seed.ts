@@ -34,6 +34,8 @@ export interface TexasSourceDocument {
 }
 
 const CODE_MAP: Array<[string, string]> = [
+  ["Gov’t Code", "GV"],
+  ["Government Code", "GV"],
   ["Ins. Code", "IN"],
   ["Insurance Code", "IN"],
   ["Penal Code", "PE"],
@@ -59,6 +61,7 @@ const CODE_MAP: Array<[string, string]> = [
 ];
 
 const CODE_PREFIX: Record<string, string> = {
+  GV: "Tex. Gov’t Code",
   IN: "Tex. Ins. Code",
   PE: "Tex. Penal Code",
   TN: "Tex. Transp. Code",
@@ -262,8 +265,15 @@ export function buildTexasManifestRecord(
     if (doc.code !== ref.code || doc.section !== ref.section || doc.sourceUrl !== texasReviewedUrl(ref)) return true;
     if (!reviewed) return false;
     const digest = createHash("sha256").update(doc.text).digest("hex");
+    const header = `${ref.code === "CR" ? "Art." : "Sec."} ${ref.section}. ${doc.title} `;
+    // This reviewed dependency deliberately retains both unharmonized 2025 versions.
+    // The exact reviewed hash remains mandatory; this is not a generic preamble bypass.
+    const retainedOfficerVersions = ref.code === "CR" && ref.section === "2A.001"
+      && doc.title === "PEACE OFFICERS GENERALLY."
+      && doc.text.startsWith("Text of article as amended by Acts 2025,")
+      && doc.text.split(header).length === 3;
     return digest !== texasReviewedTextHashes[`${ref.code}:${ref.section}`]
-      || !doc.text.startsWith(`${ref.code === "CR" ? "Art." : "Sec."} ${ref.section}. ${doc.title} `)
+      || !(doc.text.startsWith(header) || retainedOfficerVersions)
       || !Number.isFinite(doc.retrievedAt.getTime()) || doc.effectiveDateStart === null
       || (doc.effectiveDateStart !== null && !(Date.parse(doc.effectiveDateStart) <= doc.retrievedAt.getTime()));
   })) {

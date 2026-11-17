@@ -146,3 +146,14 @@ test("Texas family-safety choices distinguish mental states, duties and repeat g
   expect(charges.find((c:{id:string})=>c.id==="tx-pc-22-041-endanger").instructionRef).toContain("child and act theory only");
   expect(charges.find((c:{id:string})=>c.id==="tx-pc-25-11-continuous").instructionRef).toContain("CPJC 25.22");
 });
+
+test("Texas justice-process choices preserve ordinary, corpse and juror grades and speech defenses", async ({request}) => {
+  const response=await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");
+  expect(response.ok()).toBe(true);
+  const {charges}=await response.json();
+  const reviewed=JSON.parse(readFileSync("shared/texas-justice-process.json","utf8"));
+  for (const row of reviewed) expect(charges.find((r:{id:string})=>r.id===row.id)).toMatchObject({name:row.name,code:row.code,description:row.conduct,maxPenalty:row.penalty,category:row.category});
+  expect(charges.find((r:{id:string})=>r.id==="tx-pc-38-15-a-1").description).toContain("speech only");
+  expect(charges.find((r:{id:string})=>r.id==="tx-pc-37-09-unreported-corpse").category).toBe("misdemeanor");
+  expect(charges.find((r:{id:string})=>r.id==="tx-pc-36-06-obstruction-juror").maxPenalty).toContain("Second-degree felony");
+});
