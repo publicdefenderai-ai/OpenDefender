@@ -1,0 +1,1273 @@
+[
+  {
+    "id": "tx-hsc-481-115-e",
+    "name": "Possession of a Penalty Group 1 or 1-B controlled substance (200 to under 400 grams)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 1 OR 1-B.",
+    "category": "felony",
+    "code": "481.115(e)",
+    "citation": "Tex. Health & Safety Code § 481.115(e)",
+    "conduct": "Knowingly or intentionally possessing a substance listed in Penalty Group 1 or 1-B, in an aggregate amount of 200 to under 400 grams, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life and a possible fine up to $10,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.115",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.115",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-115-f",
+    "name": "Possession of a Penalty Group 1 or 1-B controlled substance (400 grams or more)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 1 OR 1-B.",
+    "category": "felony",
+    "code": "481.115(f)",
+    "citation": "Tex. Health & Safety Code § 481.115(f)",
+    "conduct": "Knowingly or intentionally possessing a substance listed in Penalty Group 1 or 1-B, in an aggregate amount of 400 grams or more, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management.",
+    "penalty": "First-degree felony with a special range: ten to 99 years or life in prison and a fine up to $100,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.115",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.115",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-116-d",
+    "name": "Possession of a Penalty Group 2 controlled substance (4 to under 400 grams)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 2.",
+    "category": "felony",
+    "code": "481.116(d)",
+    "citation": "Tex. Health & Safety Code § 481.116(d)",
+    "conduct": "Knowingly or intentionally possessing a substance listed in Penalty Group 2, in an aggregate amount of 4 to under 400 grams, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.116",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.116",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.103",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990021"
+  },
+  {
+    "id": "tx-hsc-481-116-e",
+    "name": "Possession of a Penalty Group 2 controlled substance (400 grams or more)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 2.",
+    "category": "felony",
+    "code": "481.116(e)",
+    "citation": "Tex. Health & Safety Code § 481.116(e)",
+    "conduct": "Knowingly or intentionally possessing a substance listed in Penalty Group 2, in an aggregate amount of 400 grams or more, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management.",
+    "penalty": "First-degree felony with a special range: five to 99 years or life in prison and a fine up to $50,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.116",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.116",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.103",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-117-b",
+    "name": "Possession of a Penalty Group 3 controlled substance (under 28 grams)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 3.",
+    "category": "misdemeanor",
+    "code": "481.117(b)",
+    "citation": "Tex. Health & Safety Code § 481.117(b)",
+    "conduct": "Knowingly or intentionally possessing a substance listed in Penalty Group 3, in an aggregate amount of under 28 grams, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management. A limited overdose defense can apply to the first caller who requests emergency medical help for another during an ongoing medical emergency, remains and cooperates, or to the overdose victim when help is requested. Arrest or warrant activity, other offenses outside the statutory exceptions, specified prior dispositions or a request during the preceding 18 months can defeat this defense.",
+    "penalty": "Class A misdemeanor: up to one year in jail, a fine up to $4,000, or both. Qualifying priors may raise minimum jail time when jail is imposed. A qualifying §481.134(e) drug-free-zone finding makes this a state jail felony (ordinarily 180 days to two years and a possible fine up to $10,000). Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.117",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.117",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.104",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(e), (h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990023"
+  },
+  {
+    "id": "tx-hsc-481-117-c",
+    "name": "Possession of a Penalty Group 3 controlled substance (28 to under 200 grams)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 3.",
+    "category": "felony",
+    "code": "481.117(c)",
+    "citation": "Tex. Health & Safety Code § 481.117(c)",
+    "conduct": "Knowingly or intentionally possessing a substance listed in Penalty Group 3, in an aggregate amount of 28 to under 200 grams, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.117",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.117",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.104",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-117-d",
+    "name": "Possession of a Penalty Group 3 controlled substance (200 to under 400 grams)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 3.",
+    "category": "felony",
+    "code": "481.117(d)",
+    "citation": "Tex. Health & Safety Code § 481.117(d)",
+    "conduct": "Knowingly or intentionally possessing a substance listed in Penalty Group 3, in an aggregate amount of 200 to under 400 grams, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.117",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.117",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.104",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-117-e",
+    "name": "Possession of a Penalty Group 3 controlled substance (400 grams or more)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 3.",
+    "category": "felony",
+    "code": "481.117(e)",
+    "citation": "Tex. Health & Safety Code § 481.117(e)",
+    "conduct": "Knowingly or intentionally possessing a substance listed in Penalty Group 3, in an aggregate amount of 400 grams or more, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management.",
+    "penalty": "First-degree felony with a special range: five to 99 years or life in prison and a fine up to $50,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.117",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.117",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.104",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-1161-b-1",
+    "name": "Possession of a Penalty Group 2-A controlled substance (two ounces or less)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 2-A.",
+    "category": "misdemeanor",
+    "code": "481.1161(b)(1)",
+    "citation": "Tex. Health & Safety Code § 481.1161(b)(1)",
+    "conduct": "Knowingly possessing a substance listed in Penalty Group 2-A, in an aggregate amount of two ounces or less, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management. A limited overdose defense can apply to the first caller who requests emergency medical help for another during an ongoing medical emergency, remains and cooperates, or to the overdose victim when help is requested. Arrest or warrant activity, other offenses outside the statutory exceptions, specified prior dispositions or a request during the preceding 18 months can defeat this defense.",
+    "penalty": "Class B misdemeanor: up to 180 days in jail, a fine up to $2,000, or both. Qualifying priors may raise minimum jail time when jail is imposed.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.1161",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.1161",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1031",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990213"
+  },
+  {
+    "id": "tx-hsc-481-1161-b-2",
+    "name": "Possession of a Penalty Group 2-A controlled substance (over two through four ounces)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 2-A.",
+    "category": "misdemeanor",
+    "code": "481.1161(b)(2)",
+    "citation": "Tex. Health & Safety Code § 481.1161(b)(2)",
+    "conduct": "Knowingly possessing a substance listed in Penalty Group 2-A, in an aggregate amount of over two through four ounces, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management. A limited overdose defense can apply to the first caller who requests emergency medical help for another during an ongoing medical emergency, remains and cooperates, or to the overdose victim when help is requested. Arrest or warrant activity, other offenses outside the statutory exceptions, specified prior dispositions or a request during the preceding 18 months can defeat this defense.",
+    "penalty": "Class A misdemeanor: up to one year in jail, a fine up to $4,000, or both. Qualifying priors may raise minimum jail time when jail is imposed.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.1161",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.1161",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1031",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-1161-b-3",
+    "name": "Possession of a Penalty Group 2-A controlled substance (over four ounces through five pounds)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 2-A.",
+    "category": "felony",
+    "code": "481.1161(b)(3)",
+    "citation": "Tex. Health & Safety Code § 481.1161(b)(3)",
+    "conduct": "Knowingly possessing a substance listed in Penalty Group 2-A, in an aggregate amount of over four ounces through five pounds, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. If the amount possessed was one pound or less and punishment is under §12.35(a), article 42A.551 generally requires the judge to suspend the sentence and order community supervision. A qualifying prior felony or adjudication of guilt after deferred adjudication for this offense gives the judge discretion; above one pound the mandatory rule does not apply. A jury’s recommendation governs if the jury assesses punishment. Special findings and qualifying felony history can raise punishment. A qualifying §481.134(d) drug-free-zone finding makes this a third-degree felony (ordinarily two to ten years and a possible fine up to $10,000). Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.1161",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.1161",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1031",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.551",
+        "subdivision": "(a), (b), (c), (d), (e)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(d), (h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-1161-b-4",
+    "name": "Possession of a Penalty Group 2-A controlled substance (over five through 50 pounds)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 2-A.",
+    "category": "felony",
+    "code": "481.1161(b)(4)",
+    "citation": "Tex. Health & Safety Code § 481.1161(b)(4)",
+    "conduct": "Knowingly possessing a substance listed in Penalty Group 2-A, in an aggregate amount of over five through 50 pounds, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.1161",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.1161",
+        "subdivision": "(b)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1031",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-1161-b-5",
+    "name": "Possession of a Penalty Group 2-A controlled substance (over 50 through 2,000 pounds)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 2-A.",
+    "category": "felony",
+    "code": "481.1161(b)(5)",
+    "citation": "Tex. Health & Safety Code § 481.1161(b)(5)",
+    "conduct": "Knowingly possessing a substance listed in Penalty Group 2-A, in an aggregate amount of over 50 through 2,000 pounds, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.1161",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.1161",
+        "subdivision": "(b)(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1031",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-1161-b-6",
+    "name": "Possession of a Penalty Group 2-A controlled substance (over 2,000 pounds)",
+    "officialTitle": "OFFENSE: POSSESSION OF SUBSTANCE IN PENALTY GROUP 2-A.",
+    "category": "felony",
+    "code": "481.1161(b)(6)",
+    "citation": "Tex. Health & Safety Code § 481.1161(b)(6)",
+    "conduct": "Knowingly possessing a substance listed in Penalty Group 2-A, in an aggregate amount of over 2,000 pounds, including adulterants and dilutants. Chapter 481 authorizations apply, including obtaining it directly from or under a valid prescription or order of a practitioner acting in professional practice. Possession means actual care, custody, control or management.",
+    "penalty": "First-degree felony with a special range: five to 99 years or life in prison and a fine up to $50,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.1161",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.1161",
+        "subdivision": "(b)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1031",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-121-b-2",
+    "name": "Possession of marijuana (over two through four ounces)",
+    "officialTitle": "OFFENSE: POSSESSION OF MARIHUANA.",
+    "category": "misdemeanor",
+    "code": "481.121(b)(2)",
+    "citation": "Tex. Health & Safety Code § 481.121(b)(2)",
+    "conduct": "Except as authorized under Chapter 481, knowingly or intentionally possessing a usable quantity of marihuana weighing over two through four ounces. The statutory definition excludes hemp. Possession means actual care, custody, control or management. A limited overdose defense can apply to the first caller who requests emergency medical help for another during an ongoing medical emergency, remains and cooperates, or to the overdose victim when help is requested. Arrest or warrant activity, other offenses outside the statutory exceptions, specified prior dispositions or a request during the preceding 18 months can defeat this defense.",
+    "penalty": "Class A misdemeanor: up to one year in jail, a fine up to $4,000, or both. Qualifying priors may raise minimum jail time when jail is imposed. A qualifying §481.134(e) drug-free-zone finding makes this a state jail felony (ordinarily 180 days to two years and a possible fine up to $10,000). Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.121",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.121",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(26), (38)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(e), (h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35620009"
+  },
+  {
+    "id": "tx-hsc-481-121-b-3",
+    "name": "Possession of marijuana (over four ounces through five pounds)",
+    "officialTitle": "OFFENSE: POSSESSION OF MARIHUANA.",
+    "category": "felony",
+    "code": "481.121(b)(3)",
+    "citation": "Tex. Health & Safety Code § 481.121(b)(3)",
+    "conduct": "Except as authorized under Chapter 481, knowingly or intentionally possessing a usable quantity of marihuana weighing over four ounces through five pounds. The statutory definition excludes hemp. Possession means actual care, custody, control or management.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. If the amount possessed was one pound or less and punishment is under §12.35(a), article 42A.551 generally requires the judge to suspend the sentence and order community supervision. A qualifying prior felony or adjudication of guilt after deferred adjudication for this offense gives the judge discretion; above one pound the mandatory rule does not apply. A jury’s recommendation governs if the jury assesses punishment. Special findings and qualifying felony history can raise punishment. A qualifying §481.134(d) drug-free-zone finding makes this a third-degree felony (ordinarily two to ten years and a possible fine up to $10,000). Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.121",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.121",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(26), (38)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.551",
+        "subdivision": "(a), (b), (c), (d), (e)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(d), (h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35620010"
+  },
+  {
+    "id": "tx-hsc-481-121-b-4",
+    "name": "Possession of marijuana (over five through 50 pounds)",
+    "officialTitle": "OFFENSE: POSSESSION OF MARIHUANA.",
+    "category": "felony",
+    "code": "481.121(b)(4)",
+    "citation": "Tex. Health & Safety Code § 481.121(b)(4)",
+    "conduct": "Except as authorized under Chapter 481, knowingly or intentionally possessing a usable quantity of marihuana weighing over five through 50 pounds. The statutory definition excludes hemp. Possession means actual care, custody, control or management.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.121",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.121",
+        "subdivision": "(b)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(26), (38)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-121-b-5",
+    "name": "Possession of marijuana (over 50 through 2,000 pounds)",
+    "officialTitle": "OFFENSE: POSSESSION OF MARIHUANA.",
+    "category": "felony",
+    "code": "481.121(b)(5)",
+    "citation": "Tex. Health & Safety Code § 481.121(b)(5)",
+    "conduct": "Except as authorized under Chapter 481, knowingly or intentionally possessing a usable quantity of marihuana weighing over 50 through 2,000 pounds. The statutory definition excludes hemp. Possession means actual care, custody, control or management.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.121",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.121",
+        "subdivision": "(b)(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(26), (38)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-481-121-b-6",
+    "name": "Possession of marijuana (over 2,000 pounds)",
+    "officialTitle": "OFFENSE: POSSESSION OF MARIHUANA.",
+    "category": "felony",
+    "code": "481.121(b)(6)",
+    "citation": "Tex. Health & Safety Code § 481.121(b)(6)",
+    "conduct": "Except as authorized under Chapter 481, knowingly or intentionally possessing a usable quantity of marihuana weighing over 2,000 pounds. The statutory definition excludes hemp. Possession means actual care, custody, control or management.",
+    "penalty": "First-degree felony with a special range: five to 99 years or life in prison and a fine up to $50,000. Qualifying felony history may change punishment. A qualifying §481.134(c) drug-free-zone finding increases the minimum prison term by five years and doubles the maximum fine. Punishment increased under §481.134 may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.121",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.121",
+        "subdivision": "(b)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(26), (38)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-hsc-483-041-possession",
+    "name": "Possession of dangerous drug (unauthorized possession)",
+    "officialTitle": "POSSESSION OF DANGEROUS DRUG.",
+    "category": "misdemeanor",
+    "code": "483.041(a)",
+    "citation": "Tex. Health & Safety Code § 483.041(a)",
+    "conduct": "Possessing a dangerous drug unless it was obtained from a pharmacist or practitioner in the manner §483.042(a)(1) or (2) specifies. Section 483.041(c) excepts listed persons and their agents or employees acting in their usual business, practice or official duties. A limited overdose defense can apply to the first caller who requests emergency medical help for another during an ongoing medical emergency, remains and cooperates, or to the overdose victim when help is requested. Arrest or warrant activity, other offenses outside the statutory exceptions, specified prior dispositions or a request during the preceding 18 months can defeat this defense. A dangerous drug is a device or drug unsafe for self-medication outside the controlled-substance schedules and penalty groups specified in §483.001(2). This charge requires knowing possession or sufficient awareness of control under Penal Code §6.01(b); §6.02 supplies the general rules for culpability.",
+    "penalty": "Class A misdemeanor: up to one year in jail, a fine up to $4,000, or both. Qualifying priors may increase minimum jail time when jail is imposed.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "483.041",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "483.041",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.001",
+        "subdivision": "(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.042",
+        "subdivision": "(a)(1), (a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990133"
+  },
+  {
+    "id": "tx-hsc-483-041-sale",
+    "name": "Possession of dangerous drug (for purpose of sale)",
+    "officialTitle": "POSSESSION OF DANGEROUS DRUG.",
+    "category": "misdemeanor",
+    "code": "483.041(b)",
+    "citation": "Tex. Health & Safety Code § 483.041(b)",
+    "conduct": "Possessing a dangerous drug for the purpose of selling it, except as permitted by Chapter 483. A dangerous drug is a device or drug unsafe for self-medication outside the controlled-substance schedules and penalty groups specified in §483.001(2). This charge requires knowing possession or sufficient awareness of control under Penal Code §6.01(b); §6.02 supplies the general rules for culpability.",
+    "penalty": "Class A misdemeanor: up to one year in jail, a fine up to $4,000, or both. Qualifying priors may increase minimum jail time when jail is imposed.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "483.041",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "483.041",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.001",
+        "subdivision": "(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.042",
+        "subdivision": "(a)(1), (a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990133"
+  },
+  {
+    "id": "tx-hsc-481-121-zone-two-ounces",
+    "name": "Possession of marijuana (two ounces or less, qualifying drug-free zone)",
+    "officialTitle": "OFFENSE: POSSESSION OF MARIHUANA.",
+    "category": "misdemeanor",
+    "code": "481.134(f)",
+    "citation": "Tex. Health & Safety Code § 481.134(f)",
+    "conduct": "Knowingly or intentionally possessing a usable quantity of marihuana weighing two ounces or less, except as authorized under Chapter 481. The statutory definition excludes hemp. Possession means actual care, custody, control or management. Under §481.121(c) through (e), a limited overdose defense may apply to the first caller who requests emergency help, stays and cooperates, or to the overdose victim. Arrest or warrant activity, other offenses, specified prior outcomes and a request in the preceding 18 months can disqualify a person. Under §481.134(f), the qualifying location must be shown at trial: in, on or within 1,000 feet of the school, school board, youth center or playground property described there; on a school bus; or, for an unauthorized person age 18 or older, in, on or within 1,000 feet of the specified residential-treatment property. Section 481.134(g) excludes an offense inside a private residence when no minor was present.",
+    "penalty": "Class A misdemeanor on a qualifying zone finding: up to one year in jail, a fine up to $4,000, or both. A qualifying prior may increase minimum jail time if jail is imposed. Enhanced punishment may not run concurrently with punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.121",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(26), (38)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(f), (g), (h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.121",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35620020"
+  },
+  {
+    "id": "tx-pc-30-05-residential-treatment",
+    "name": "Criminal trespass (general residential operation operating as a residential treatment center)",
+    "officialTitle": "CRIMINAL TRESPASS.",
+    "category": "misdemeanor",
+    "code": "30.05(d)(3)(D)",
+    "citation": "Tex. Penal Code § 30.05(d)(3)(D)",
+    "conduct": "Entering or remaining on or in someone else’s property without effective consent after notice that entry was forbidden, or receiving notice to depart and failing to do so. Entry requires the entire body. Notice can include communication from the owner or someone with apparent authority, qualifying fencing or signs, or markings and other conditions specified in §30.05(b). The statute provides exceptions and defenses for particular circumstances, including certain authorized work and firearm-related conduct. The offense must occur on the property of or within a general residential operation actually operating as a residential treatment center. Under Human Resources Code §42.002(4), a general residential operation provides care for seven or more children, 24 hours a day. Other residential programs do not qualify merely because they provide overnight care.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. This is the specified-location grade. If a weapon prohibition is the sole reason entry was forbidden, (d-3) instead ordinarily caps the Class C fine at $200. It provides a Class A exception when, after entry, the person receives the required personal notice and then fails to depart. The separately stated (d)(4) predicate has its own grading rule. Qualifying priors can affect minimum jail time. A qualifying declared disaster or evacuation area can raise the minimum jail term to 180 days.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "30.05",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "30.05",
+        "subdivision": "(d)(3)(D)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.05",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(10), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HR",
+        "section": "42.002",
+        "subdivision": "(4)",
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  }
+]

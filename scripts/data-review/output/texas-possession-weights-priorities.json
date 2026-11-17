@@ -1,0 +1,71 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "year": 2025,
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "rows": [
+    {
+      "rank": 29,
+      "code": "35990021",
+      "label": "POSS CS PG 2 >= 4G < 400G",
+      "law": "HSC",
+      "citation": "481.116(d)",
+      "adult": 6466,
+      "juvenile": 515
+    },
+    {
+      "rank": 34,
+      "code": "35990023",
+      "label": "POSS CS PG 3< 28G",
+      "law": "HSC",
+      "citation": "481.117(b)",
+      "adult": 5478,
+      "juvenile": 115
+    },
+    {
+      "rank": 46,
+      "code": "35990133",
+      "label": "POSS DANGEROUS DRUG",
+      "law": "HSC",
+      "citation": "483.041(d)",
+      "adult": 3978,
+      "juvenile": 32
+    },
+    {
+      "rank": 55,
+      "code": "35620010",
+      "label": "POSS MARIJ <= 5LBS > 4OZ",
+      "law": "HSC",
+      "citation": "481.121(b)(3)",
+      "adult": 2918,
+      "juvenile": 25
+    },
+    {
+      "rank": 70,
+      "code": "35620009",
+      "label": "POSS MARIJ <= 4OZ > 2OZ",
+      "law": "HSC",
+      "citation": "481.121(b)(2)",
+      "adult": 1842,
+      "juvenile": 26
+    },
+    {
+      "rank": 88,
+      "code": "35990213",
+      "label": "POSS CS PG 2-A <= 2OZ",
+      "law": "HSC",
+      "citation": "481.1161(b)(1)",
+      "adult": 1286,
+      "juvenile": 11
+    },
+    {
+      "rank": 113,
+      "code": "35620020",
+      "label": "POSS MARJ <2OZ DFZ IAT 481.121",
+      "law": "HSC",
+      "citation": "481.134(f)",
+      "adult": 856,
+      "juvenile": 266
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import weights from "./texas-possession-weights.json";
 import burglary from "./texas-ranked-burglary.json";
 import loss from "./texas-property-loss.json";
 import carry from "./texas-carry-branches.json";
@@ -10,7 +11,7 @@ import additions from "./texas-assault-public-intoxication.json";
 import { texasDwiConduct, texasDwiQualifications, texasDwiRecords } from "./texas-dwi";
 export { texasDwiUrl as texasReviewedUrl } from "./texas-dwi";
 
-const labels: Record<string, string> = { HS: "Health & Safety", PE: "Penal", TN: "Transp.", FA: "Fam.", AL: "Alco. Bev." };
+const labels: Record<string, string> = { HS: "Health & Safety", HR: "Hum. Res.", PE: "Penal", TN: "Transp.", FA: "Fam.", AL: "Alco. Bev." };
 
 export function texasReviewedCitation(ref: { code: string; section: string; subdivision?: string | null }) {
   if (ref.code === "CR") return `Tex. Code Crim. Proc. art. ${ref.section}${ref.subdivision ?? ""}`;
@@ -33,6 +34,7 @@ export const texasReviewedRecords = [
   ...carry,
   ...loss,
   ...burglary,
+  ...weights,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 

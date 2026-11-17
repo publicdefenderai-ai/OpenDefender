@@ -32,6 +32,10 @@ const vehicleBurglary = {
   instructionRef: "CPJC 30.8: Burglary of a Vehicle (underlying conduct only)",
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F30_Burglary_and_Criminal_Trespass%2FCPJC30-8.htm&version=007",
 };
+const otherMarijuanaGrades = {
+  instructionRef: "CPJC 81.9: Possession of Marijuana, Other Grades (underlying conduct only)",
+  instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-9.htm&version=048",
+};
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
   "tx-pc-38-03-c": resistingArrest,
   "tx-pc-38-03-d": resistingArrest,
@@ -83,6 +87,19 @@ export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInj
   },
   "tx-pc-31-03-e-2-a": theft,
   "tx-pc-31-03-e-4-d": theft,
+  "tx-hsc-481-115-e": possession,
+  "tx-hsc-481-115-f": possession,
+  "tx-hsc-481-116-d": possession,
+  "tx-hsc-481-116-e": possession,
+  "tx-hsc-481-117-b": possession,
+  "tx-hsc-481-117-c": possession,
+  "tx-hsc-481-117-d": possession,
+  "tx-hsc-481-117-e": possession,
+  "tx-hsc-481-121-b-2": otherMarijuanaGrades,
+  "tx-hsc-481-121-b-3": otherMarijuanaGrades,
+  "tx-hsc-481-121-b-4": otherMarijuanaGrades,
+  "tx-hsc-481-121-b-5": otherMarijuanaGrades,
+  "tx-hsc-481-121-b-6": otherMarijuanaGrades,
   "tx-hsc-481-115-b": possession,
   "tx-hsc-481-115-c": possession,
   "tx-hsc-481-116-b": possession,
