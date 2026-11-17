@@ -1,0 +1,20 @@
+.privacy-reader h3 { color: var(--foreground); font-size: 1.125rem; font-weight: 600; margin-top: 1.5rem; }
+.privacy-reader section:has(#government-requests) p,
+.privacy-reader section:has(#privilege) p {
+  border-inline-start: 3px solid var(--primary);
+  padding: 1rem 1.25rem;
+  background: var(--muted);
+  color: var(--foreground);
+}
+.privacy-reader table { width: 100%; border-collapse: collapse; margin-block: 1.5rem; font-size: .95rem; }
+.privacy-reader th, .privacy-reader td { padding: .875rem; border-bottom: 1px solid var(--border); text-align: start; vertical-align: top; }
+.privacy-reader th { color: var(--foreground); font-weight: 600; }
+.privacy-reader th:first-child { padding-inline-start: 0; width: 22%; }
+.privacy-reader td span { display: none; }
+@media screen and (max-width: 700px) {
+  .privacy-reader table, .privacy-reader tbody, .privacy-reader tr { display: block; }
+  .privacy-reader thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .privacy-reader tbody tr { padding-block: 1rem; border-bottom: 1px solid var(--border); }
+  .privacy-reader tbody th[scope="row"], .privacy-reader td { display: block; width: auto; padding: .375rem 0; border: 0; }
+  .privacy-reader td span { display: block; font-size: .85rem; font-weight: 600; color: var(--foreground); }
+}

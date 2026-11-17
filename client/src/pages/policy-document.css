@@ -1,0 +1,49 @@
+.policy-document {
+  max-width: 66rem;
+  margin: auto;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 5vw, 3.5rem);
+  overflow-wrap: anywhere;
+}
+.policy-document header { margin-bottom: 2rem; }
+.policy-document h1 {
+  font-size: clamp(2.25rem, 5vw, 3.625rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -.04em;
+}
+.policy-document header p { margin: 1rem 0 .65rem; font-size: 1.125rem; }
+.policy-document small, .policy-document section { color: var(--muted-foreground); }
+.policy-index { border-block: 1px solid var(--border); }
+.policy-index summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.policy-index summary::-webkit-details-marker { display: none; }
+.policy-index summary span::after { content: "+"; font-size: .95rem; }
+.policy-index[open] summary span::after { content: "−"; }
+.policy-index nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding-bottom: 1rem;
+  column-gap: 2rem;
+}
+.policy-index nav a { padding-block: .55rem; align-content: center; min-height: 44px; }
+.policy-document section { max-width: 78ch; border-bottom: 1px solid var(--border); padding-block: 1.75rem; line-height: 1.75; }
+.policy-document h2 { font-weight: 500; color: var(--foreground); font-size: 1.55rem; line-height: 1.3; scroll-margin-top: 6rem; }
+.policy-document section p, .policy-document section ul { margin-top: .875rem; }
+.policy-document section ul { list-style: disc; padding-inline-start: 1.5rem; }
+.policy-document section li + li { margin-top: .5rem; }
+.policy-document a { color: var(--primary); }
+.policy-document section a, .policy-related a, .policy-index a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.policy-document aside { max-width: 78ch; padding: 1.5rem; margin-top: 2rem; background: var(--muted); line-height: 1.65; }
+.policy-related { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem; }
+@media (max-width: 700px) { .policy-index nav { grid-template-columns: minmax(0, 1fr); } }
+@media print {
+  .policy-index, .policy-related { display: none; }
+  .policy-document { max-width: none; padding: 0; }
+  .policy-document h2 { break-after: avoid; }
+}
