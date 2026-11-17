@@ -13,6 +13,7 @@ vi.mock('../server/data/florida-obscenity-source',async original=>({...await ori
 vi.mock('../server/data/florida-computer-financial-source',async original=>({...await original<typeof import('../server/data/florida-computer-financial-source')>(),isFloridaComputerFinancialSourceFresh:()=>false}));
 vi.mock('../server/data/florida-fire-riot-source',async original=>({...await original<typeof import('../server/data/florida-fire-riot-source')>(),isFloridaFireRiotSourceFresh:()=>false}));
 vi.mock('../server/data/florida-regulatory-source',async original=>({...await original<typeof import('../server/data/florida-regulatory-source')>(),isFloridaRegulatorySourceFresh:()=>false}));
+vi.mock('../server/data/florida-child-restraint-source',async original=>({...await original<typeof import('../server/data/florida-child-restraint-source')>(),isFloridaChildRestraintSourceFresh:()=>false}));
 vi.mock('../server/data/florida-child-victims-source',async original=>({...await original<typeof import('../server/data/florida-child-victims-source')>(),isFloridaChildVictimsSourceFresh:()=>false}));
 vi.mock('../server/data/florida-vehicle-identifiers-source',async original=>({...await original<typeof import('../server/data/florida-vehicle-identifiers-source')>(),isFloridaVehicleIdentifiersSourceFresh:()=>false}));
 vi.mock('../server/data/florida-payment-fraud-source',async original=>({...await original<typeof import('../server/data/florida-payment-fraud-source')>(),isFloridaPaymentFraudSourceFresh:()=>false}));
