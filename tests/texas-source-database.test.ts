@@ -35,10 +35,10 @@ describe("Texas authority manifest", () => {
 
     expect(manifest.catalogRecords).toHaveLength(txCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(txCount);
-    expect(seed.sources).toHaveLength(78);
-    expect(seed.snapshots).toHaveLength(335);
-    expect(seed.links).toHaveLength(335);
-    expect(seed.selectableChargeIds).toHaveLength(71);
+    expect(seed.sources).toHaveLength(81);
+    expect(seed.snapshots).toHaveLength(418);
+    expect(seed.links).toHaveLength(418);
+    expect(seed.selectableChargeIds).toHaveLength(81);
     expect(seed.selectableChargeIds).toContain("tx-aggravated-assault");
     expect(seed.selectableChargeIds).not.toContain("tx-bank-robbery");
     expect(seed.selectableChargeIds).not.toContain("tx-wire-fraud");

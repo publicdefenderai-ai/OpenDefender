@@ -1,3 +1,4 @@
+import carry from "./texas-carry-branches.json";
 import closeout from "./texas-priority-closeout.json";
 import arrest from "./texas-ranked-arrest.json";
 import propertyAccess from "./texas-property-access.json";
@@ -27,6 +28,7 @@ export const texasReviewedRecords = [
   ...propertyAccess,
   ...arrest,
   ...closeout,
+  ...carry,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 

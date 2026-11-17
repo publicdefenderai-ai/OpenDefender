@@ -66,3 +66,17 @@ test("Texas selector requires a specific weapons branch and returns the three ra
   }
   expect(charges.find((r: {id: string}) => r.id === "tx-unlawful-carrying-of-weapon")).toBeUndefined();
 });
+
+test("Texas offers only the reviewed handgun carrying branches", async ({request}) => {
+  const response = await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");
+  expect(response.ok()).toBe(true);
+  const {charges} = await response.json();
+  const reviewed = JSON.parse(readFileSync("shared/texas-carry-branches.json", "utf8"));
+  for (const row of reviewed) {
+    expect(charges.find((charge: {id: string}) => charge.id === row.id)).toMatchObject({
+      id: row.id, code: row.code, category: row.category, maxPenalty: row.penalty,
+    });
+  }
+  expect(charges.some((charge: {code: string}) => charge.code === "46.02(a)(2)(A)")).toBe(false);
+  expect(charges.some((charge: {id: string}) => charge.id === "tx-unlawful-carrying-of-weapon")).toBe(false);
+});
