@@ -43,7 +43,7 @@ export function resolveGuidanceCharge(
   }
 
   // Older ID-less Texas answers can describe different branches under the same section.
-  if (["TX", "TEXAS"].includes(jurisdiction?.toUpperCase() ?? "") && /^(?:49\.(?:02|04|09)|22\.(?:01|02)|46\.02|25\.07|521\.457|38\.(?:02|03|04)|30\.05|31\.(?:03|07)|481\.(?:115|116|121))(?:$|\()/.test(classification.code)) return undefined;
+  if (["TX", "TEXAS"].includes(jurisdiction?.toUpperCase() ?? "") && /^(?:49\.(?:02|04|09)|22\.(?:01|02)|46\.02|25\.07|521\.457|38\.(?:02|03|04)|28\.03|30\.05|31\.(?:03|07)|481\.(?:115|116|121))(?:$|\()/.test(classification.code)) return undefined;
 
   const legacyCharge = criminalCharges.find((charge) => charge.code === classification.code);
   if (!legacyCharge || legacyCharge.jurisdiction === "OH") return undefined;

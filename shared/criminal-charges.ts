@@ -40592,19 +40592,6 @@ export const criminalCharges: CriminalCharge[] = [
     commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: []
   },
   {
-    id: 'tx-criminal-mischief',
-    name: 'Criminal Mischief (Vandalism)',
-    code: '28.03',
-    jurisdiction: 'TX',
-    category: 'misdemeanor',
-    description: 'Intentionally or knowingly damaging or destroying another person\'s property under Texas Penal Code § 28.03',
-    maxPenalty: 'Class C ($100 or less) to Class A ($2,500 or less): fines up to $4,000 and/or up to 1 year jail',
-    commonDefenses: ['Accidental damage', 'Consent of owner', 'Mistaken identity', 'Dispute over property ownership', 'Value dispute'],
-    evidenceToGather: ['Photos of damage', 'Repair estimates', 'Witness statements', 'Surveillance footage', 'Communication records'],
-    specificRights: ['Right to challenge damage valuation', 'Right to negotiate restitution', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Do not return to the property', 'Document the condition of the property']
-  },
-  {
     id: 'tx-terroristic-threat',
     name: 'Terroristic Threat',
     code: '22.07',
@@ -94989,7 +94976,7 @@ for (const group of ["Drug Offenses", "Drug Crimes"]) {
   const ids = texasReviewedRecords.filter(row => row.references[0].code === "HS").map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
-for (const [group, heading] of [["Violent Crimes", "AGGRAVATED ASSAULT."], ["Assault Crimes", "AGGRAVATED ASSAULT."], ["Weapons", "UNLAWFUL CARRYING WEAPONS."], ["DUI & Traffic", "DRIVING WHILE LICENSE INVALID."], ["Public Order", "VIOLATION OF CERTAIN COURT ORDERS OR CONDITIONS OF BOND IN A FAMILY VIOLENCE, CHILD ABUSE OR NEGLECT, SEXUAL ASSAULT OR ABUSE, INDECENT ASSAULT, STALKING, OR TRAFFICKING CASE."], ["Public Order", "EVADING ARREST OR DETENTION."], ["Public Order", "FAILURE TO IDENTIFY."], ["Public Order", "RESISTING ARREST, SEARCH, OR TRANSPORTATION."], ["Theft & Property", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "CRIMINAL TRESPASS."], ["Theft & Property", "THEFT."], ["Property Crimes", "THEFT."], ["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
+for (const [group, heading] of [["Property Crimes", "CRIMINAL MISCHIEF."], ["Theft & Property", "CRIMINAL MISCHIEF."], ["Violent Crimes", "AGGRAVATED ASSAULT."], ["Assault Crimes", "AGGRAVATED ASSAULT."], ["Weapons", "UNLAWFUL CARRYING WEAPONS."], ["DUI & Traffic", "DRIVING WHILE LICENSE INVALID."], ["Public Order", "VIOLATION OF CERTAIN COURT ORDERS OR CONDITIONS OF BOND IN A FAMILY VIOLENCE, CHILD ABUSE OR NEGLECT, SEXUAL ASSAULT OR ABUSE, INDECENT ASSAULT, STALKING, OR TRAFFICKING CASE."], ["Public Order", "EVADING ARREST OR DETENTION."], ["Public Order", "FAILURE TO IDENTIFY."], ["Public Order", "RESISTING ARREST, SEARCH, OR TRANSPORTATION."], ["Theft & Property", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "UNAUTHORIZED USE OF A VEHICLE."], ["Property Crimes", "CRIMINAL TRESPASS."], ["Theft & Property", "THEFT."], ["Property Crimes", "THEFT."], ["Violent Crimes", "ASSAULT."], ["Public Order", "PUBLIC INTOXICATION."], ["TX", ""]]) {
   const ids = texasReviewedRecords.filter(row => !heading || row.officialTitle === heading).map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }

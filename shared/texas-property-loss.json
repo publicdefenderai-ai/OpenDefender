@@ -1,0 +1,729 @@
+[
+  {
+    "id": "tx-criminal-mischief",
+    "name": "Criminal mischief",
+    "officialTitle": "CRIMINAL MISCHIEF.",
+    "category": "misdemeanor",
+    "code": "28.03",
+    "citation": "Tex. Penal Code § 28.03",
+    "conduct": "Without the owner’s effective consent, intentionally or knowingly damaging or destroying their tangible property, tampering with it and causing financial loss or substantial inconvenience to the owner or a third person, or making markings on it. Loss ordinarily means fair market value at the time and place of destruction, or reasonable replacement cost if that value cannot be determined. Damaged property uses reasonable-time repair or restoration cost. Documents and proven ownership interests have special rules. If loss cannot be determined by the criteria in §28.06(a)–(c), subsection (d) places it above $750 and below $2,500. Section 28.03(e) permits combining losses under one scheme or continuing course of conduct.",
+    "penalty": "The amount of loss and the facts charged determine the grade. Ordinary loss under $100 is a fine-only Class C misdemeanor. Higher losses can bring jail or prison, up to a first-degree felony for loss of $300,000 or more (five to 99 years or life and a possible fine up to $10,000). Substantial inconvenience and special property or circumstances have separate grading rules.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(b), (e), (f), (h), (i), (j), (k), (l)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "28.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-28-03-b-1-a",
+    "name": "Criminal mischief (financial loss under $100)",
+    "officialTitle": "CRIMINAL MISCHIEF.",
+    "category": "misdemeanor",
+    "code": "28.03(b)(1)(A)",
+    "citation": "Tex. Penal Code § 28.03(b)(1)(A)",
+    "conduct": "Without the owner’s effective consent, intentionally or knowingly damaging or destroying their tangible property, tampering with it and causing financial loss or substantial inconvenience to the owner or a third person, or making markings on it. This choice requires financial loss of under $100. Loss ordinarily means fair market value at the time and place of destruction, or reasonable replacement cost if that value cannot be determined. Damaged property uses reasonable-time repair or restoration cost. Documents and proven ownership interests have special rules. If loss cannot be determined by the criteria in §28.06(a)–(c), subsection (d) places it above $750 and below $2,500. Section 28.03(e) permits combining losses under one scheme or continuing course of conduct.",
+    "penalty": "Class C misdemeanor: a fine up to $500. Special property, locations, interruption of services and other facts in §28.03(b), (f), (h)–(l) can change the result. This choice covers the ordinary financial-loss branch.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(b)(1)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "28.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-28-03-b-2",
+    "name": "Criminal mischief (financial loss $100 to under $750)",
+    "officialTitle": "CRIMINAL MISCHIEF.",
+    "category": "misdemeanor",
+    "code": "28.03(b)(2)",
+    "citation": "Tex. Penal Code § 28.03(b)(2)",
+    "conduct": "Without the owner’s effective consent, intentionally or knowingly damaging or destroying their tangible property, tampering with it and causing financial loss or substantial inconvenience to the owner or a third person, or making markings on it. This choice requires financial loss of $100 to under $750. Loss ordinarily means fair market value at the time and place of destruction, or reasonable replacement cost if that value cannot be determined. Damaged property uses reasonable-time repair or restoration cost. Documents and proven ownership interests have special rules. If loss cannot be determined by the criteria in §28.06(a)–(c), subsection (d) places it above $750 and below $2,500. Section 28.03(e) permits combining losses under one scheme or continuing course of conduct.",
+    "penalty": "Class B misdemeanor: up to 180 days in jail, a fine up to $2,000, or both. A qualifying prior can increase minimum jail time if jail is imposed. Special property, locations, interruption of services and other facts in §28.03(b), (f), (h)–(l) can change the result. This choice covers the ordinary financial-loss branch.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "28.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "29990042"
+  },
+  {
+    "id": "tx-pc-28-03-b-3-a",
+    "name": "Criminal mischief (financial loss $750 to under $2,500)",
+    "officialTitle": "CRIMINAL MISCHIEF.",
+    "category": "misdemeanor",
+    "code": "28.03(b)(3)(A)",
+    "citation": "Tex. Penal Code § 28.03(b)(3)(A)",
+    "conduct": "Without the owner’s effective consent, intentionally or knowingly damaging or destroying their tangible property, tampering with it and causing financial loss or substantial inconvenience to the owner or a third person, or making markings on it. This choice requires financial loss of $750 to under $2,500. Loss ordinarily means fair market value at the time and place of destruction, or reasonable replacement cost if that value cannot be determined. Damaged property uses reasonable-time repair or restoration cost. Documents and proven ownership interests have special rules. If loss cannot be determined by the criteria in §28.06(a)–(c), subsection (d) places it above $750 and below $2,500. Section 28.03(e) permits combining losses under one scheme or continuing course of conduct.",
+    "penalty": "Class A misdemeanor: up to one year in jail, a fine up to $4,000, or both. A qualifying prior can increase minimum jail time if jail is imposed. Special property, locations, interruption of services and other facts in §28.03(b), (f), (h)–(l) can change the result. This choice covers the ordinary financial-loss branch.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(b)(3)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "28.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "29990043"
+  },
+  {
+    "id": "tx-pc-28-03-b-4-a",
+    "name": "Criminal mischief (financial loss $2,500 to under $30,000)",
+    "officialTitle": "CRIMINAL MISCHIEF.",
+    "category": "felony",
+    "code": "28.03(b)(4)(A)",
+    "citation": "Tex. Penal Code § 28.03(b)(4)(A)",
+    "conduct": "Without the owner’s effective consent, intentionally or knowingly damaging or destroying their tangible property, tampering with it and causing financial loss or substantial inconvenience to the owner or a third person, or making markings on it. This choice requires financial loss of $2,500 to under $30,000. Loss ordinarily means fair market value at the time and place of destruction, or reasonable replacement cost if that value cannot be determined. Damaged property uses reasonable-time repair or restoration cost. Documents and proven ownership interests have special rules. If loss cannot be determined by the criteria in §28.06(a)–(c), subsection (d) places it above $750 and below $2,500. Section 28.03(e) permits combining losses under one scheme or continuing course of conduct.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Special findings or qualifying prior convictions can increase punishment. Special property, locations, interruption of services and other facts in §28.03(b), (f), (h)–(l) can change the result. This choice covers the ordinary financial-loss branch.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(b)(4)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "28.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "29990044"
+  },
+  {
+    "id": "tx-pc-28-03-b-5-a",
+    "name": "Criminal mischief (financial loss $30,000 to under $150,000)",
+    "officialTitle": "CRIMINAL MISCHIEF.",
+    "category": "felony",
+    "code": "28.03(b)(5)(A)",
+    "citation": "Tex. Penal Code § 28.03(b)(5)(A)",
+    "conduct": "Without the owner’s effective consent, intentionally or knowingly damaging or destroying their tangible property, tampering with it and causing financial loss or substantial inconvenience to the owner or a third person, or making markings on it. This choice requires financial loss of $30,000 to under $150,000. Loss ordinarily means fair market value at the time and place of destruction, or reasonable replacement cost if that value cannot be determined. Damaged property uses reasonable-time repair or restoration cost. Documents and proven ownership interests have special rules. If loss cannot be determined by the criteria in §28.06(a)–(c), subsection (d) places it above $750 and below $2,500. Section 28.03(e) permits combining losses under one scheme or continuing course of conduct.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions can affect punishment. Special property, locations, interruption of services and other facts in §28.03(b), (f), (h)–(l) can change the result. This choice covers the ordinary financial-loss branch.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(b)(5)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "28.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-28-03-b-6-a",
+    "name": "Criminal mischief (financial loss $150,000 to under $300,000)",
+    "officialTitle": "CRIMINAL MISCHIEF.",
+    "category": "felony",
+    "code": "28.03(b)(6)(A)",
+    "citation": "Tex. Penal Code § 28.03(b)(6)(A)",
+    "conduct": "Without the owner’s effective consent, intentionally or knowingly damaging or destroying their tangible property, tampering with it and causing financial loss or substantial inconvenience to the owner or a third person, or making markings on it. This choice requires financial loss of $150,000 to under $300,000. Loss ordinarily means fair market value at the time and place of destruction, or reasonable replacement cost if that value cannot be determined. Damaged property uses reasonable-time repair or restoration cost. Documents and proven ownership interests have special rules. If loss cannot be determined by the criteria in §28.06(a)–(c), subsection (d) places it above $750 and below $2,500. Section 28.03(e) permits combining losses under one scheme or continuing course of conduct.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying prior convictions can affect punishment. Special property, locations, interruption of services and other facts in §28.03(b), (f), (h)–(l) can change the result. This choice covers the ordinary financial-loss branch.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(b)(6)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "28.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-28-03-b-7",
+    "name": "Criminal mischief (financial loss $300,000 or more)",
+    "officialTitle": "CRIMINAL MISCHIEF.",
+    "category": "felony",
+    "code": "28.03(b)(7)",
+    "citation": "Tex. Penal Code § 28.03(b)(7)",
+    "conduct": "Without the owner’s effective consent, intentionally or knowingly damaging or destroying their tangible property, tampering with it and causing financial loss or substantial inconvenience to the owner or a third person, or making markings on it. This choice requires financial loss of $300,000 or more. Loss ordinarily means fair market value at the time and place of destruction, or reasonable replacement cost if that value cannot be determined. Damaged property uses reasonable-time repair or restoration cost. Documents and proven ownership interests have special rules. If loss cannot be determined by the criteria in §28.06(a)–(c), subsection (d) places it above $750 and below $2,500. Section 28.03(e) permits combining losses under one scheme or continuing course of conduct.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Qualifying prior convictions can affect punishment. Special property, locations, interruption of services and other facts in §28.03(b), (f), (h)–(l) can change the result. This choice covers the ordinary financial-loss branch.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "28.03",
+        "subdivision": "(b)(7)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "28.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (35)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-31-03-e-4-a",
+    "name": "Theft (property worth $2,500 to under $30,000)",
+    "officialTitle": "THEFT.",
+    "category": "felony",
+    "code": "31.03(e)(4)(A)",
+    "citation": "Tex. Penal Code § 31.03(e)(4)(A)",
+    "conduct": "Theft requires unlawful appropriation of property with intent to deprive its owner. Under §31.03(b), appropriation is unlawful when the owner did not effectively consent, the person knew another had stolen the property, or a law enforcement agent explicitly represented property in agency custody as stolen and the person believed another had stolen it. Section 31.08 ordinarily measures fair market value at the time and place of the theft, with reasonable replacement cost when fair market value cannot be determined. It also provides special valuation rules and deductions. Amounts under one scheme or continuing course of conduct may be combined under §31.09. This choice covers the value branch. Subsection (e)(4)(A) also names certain livestock separately.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Special findings or qualifying prior convictions can increase punishment. Under §31.03(f), specified circumstances can raise offenses in (e)(1)–(6) one category. For grades (e)(4)–(6), (f-1) and (f-2) also increase the grade for specified catalytic-converter theft while armed or copper or brass stolen from qualifying critical infrastructure. Section 12.50 can increase punishment for qualifying disaster- or evacuation-area theft, subject to §31.03(f-3).",
+    "references": [
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(e)(4)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": "(2), (3), (4), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.08",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(11), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "23990194"
+  },
+  {
+    "id": "tx-pc-31-03-e-4-c",
+    "name": "Theft (firearm)",
+    "officialTitle": "THEFT.",
+    "category": "felony",
+    "code": "31.03(e)(4)(C)",
+    "citation": "Tex. Penal Code § 31.03(e)(4)(C)",
+    "conduct": "Theft requires unlawful appropriation of property with intent to deprive its owner. Under §31.03(b), appropriation is unlawful when the owner did not effectively consent, the person knew another had stolen the property, or a law enforcement agent explicitly represented property in agency custody as stolen and the person believed another had stolen it. Section 31.08 ordinarily measures fair market value at the time and place of the theft, with reasonable replacement cost when fair market value cannot be determined. It also provides special valuation rules and deductions. Amounts under one scheme or continuing course of conduct may be combined under §31.09. The stolen property must be a firearm. This provision states no minimum value.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Special findings or qualifying prior convictions can increase punishment. Under §31.03(f), specified circumstances can raise offenses in (e)(1)–(6) one category. For grades (e)(4)–(6), (f-1) and (f-2) also increase the grade for specified catalytic-converter theft while armed or copper or brass stolen from qualifying critical infrastructure. Section 12.50 can increase punishment for qualifying disaster- or evacuation-area theft, subject to §31.03(f-3).",
+    "references": [
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(e)(4)(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": "(2), (3), (4), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.08",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(11), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": "23990008"
+  },
+  {
+    "id": "tx-pc-31-03-e-5",
+    "name": "Theft (property worth $30,000 to under $150,000)",
+    "officialTitle": "THEFT.",
+    "category": "felony",
+    "code": "31.03(e)(5)",
+    "citation": "Tex. Penal Code § 31.03(e)(5)",
+    "conduct": "Theft requires unlawful appropriation of property with intent to deprive its owner. Under §31.03(b), appropriation is unlawful when the owner did not effectively consent, the person knew another had stolen the property, or a law enforcement agent explicitly represented property in agency custody as stolen and the person believed another had stolen it. Section 31.08 ordinarily measures fair market value at the time and place of the theft, with reasonable replacement cost when fair market value cannot be determined. It also provides special valuation rules and deductions. Amounts under one scheme or continuing course of conduct may be combined under §31.09. This choice covers the value branch. Subsection (e)(5)(A)–(C) separately grades specified livestock and controlled substances.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions can affect punishment. Under §31.03(f), specified circumstances can raise offenses in (e)(1)–(6) one category. For grades (e)(4)–(6), (f-1) and (f-2) also increase the grade for specified catalytic-converter theft while armed or copper or brass stolen from qualifying critical infrastructure. Section 12.50 can increase punishment for qualifying disaster- or evacuation-area theft, subject to §31.03(f-3).",
+    "references": [
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(e)(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": "(2), (3), (4), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.08",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(11), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "23990198"
+  },
+  {
+    "id": "tx-pc-31-03-e-6-a",
+    "name": "Theft (property worth $150,000 to under $300,000)",
+    "officialTitle": "THEFT.",
+    "category": "felony",
+    "code": "31.03(e)(6)(A)",
+    "citation": "Tex. Penal Code § 31.03(e)(6)(A)",
+    "conduct": "Theft requires unlawful appropriation of property with intent to deprive its owner. Under §31.03(b), appropriation is unlawful when the owner did not effectively consent, the person knew another had stolen the property, or a law enforcement agent explicitly represented property in agency custody as stolen and the person believed another had stolen it. Section 31.08 ordinarily measures fair market value at the time and place of the theft, with reasonable replacement cost when fair market value cannot be determined. It also provides special valuation rules and deductions. Amounts under one scheme or continuing course of conduct may be combined under §31.09. This choice covers the value branch. Subsection (e)(6)(B) separately addresses an ATM or its contents or components.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying prior convictions can affect punishment. Under §31.03(f), specified circumstances can raise offenses in (e)(1)–(6) one category. For grades (e)(4)–(6), (f-1) and (f-2) also increase the grade for specified catalytic-converter theft while armed or copper or brass stolen from qualifying critical infrastructure. Section 12.50 can increase punishment for qualifying disaster- or evacuation-area theft, subject to §31.03(f-3).",
+    "references": [
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(e)(6)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": "(2), (3), (4), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.08",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(11), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-31-03-e-7",
+    "name": "Theft (property worth $300,000 or more)",
+    "officialTitle": "THEFT.",
+    "category": "felony",
+    "code": "31.03(e)(7)",
+    "citation": "Tex. Penal Code § 31.03(e)(7)",
+    "conduct": "Theft requires unlawful appropriation of property with intent to deprive its owner. Under §31.03(b), appropriation is unlawful when the owner did not effectively consent, the person knew another had stolen the property, or a law enforcement agent explicitly represented property in agency custody as stolen and the person believed another had stolen it. Section 31.08 ordinarily measures fair market value at the time and place of the theft, with reasonable replacement cost when fair market value cannot be determined. It also provides special valuation rules and deductions. Amounts under one scheme or continuing course of conduct may be combined under §31.09. This choice covers the value branch.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Qualifying prior convictions can affect punishment. The one-category increase in §31.03(f) covers grades in (e)(1)–(6). The disaster-area increase does not apply to first-degree theft.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(e)(7)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": "(2), (3), (4), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.08",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.50",
+        "subdivision": "(a), (b)(11), (c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]
