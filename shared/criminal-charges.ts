@@ -1,4 +1,4 @@
-import { texasHeldCarryId, texasHeldTheftId, texasReviewedRecords } from "./texas-reviewed";
+import { texasHeldDeliveryIds, texasHeldCarryId, texasHeldTheftId, texasReviewedRecords } from "./texas-reviewed";
 import { texasDwiRecords } from "./texas-dwi";
 import { floridaRemainingChargeText, floridaRemainingDisplayName } from "./florida-legacy-remaining";
 import { floridaSexualChargeText, floridaSexualDisplayName } from "./florida-legacy-sexual";
@@ -94980,7 +94980,7 @@ function withAuthorityDisplayName(charge: CriminalCharge): CriminalCharge {
 export function getChargeById(id: string): CriminalCharge | undefined {
   const normalizedId = normalizeChargeId(id);
   if (
-    normalizedId === texasHeldCarryId || normalizedId === texasHeldTheftId ||
+    texasHeldDeliveryIds.has(normalizedId) || normalizedId === texasHeldCarryId || normalizedId === texasHeldTheftId ||
     NY_CHARGE_IDS_REQUIRING_RESELECTION.has(normalizedId) ||
     OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(normalizedId)
   ) return undefined;

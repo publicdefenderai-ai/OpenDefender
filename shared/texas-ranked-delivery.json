@@ -1,0 +1,952 @@
+[
+  {
+    "id": "tx-hsc-481-112-b",
+    "name": "Manufacture or delivery of a Penalty Group 1 controlled substance (under one gram)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 1.",
+    "category": "felony",
+    "code": "481.112(b)",
+    "citation": "Tex. Health & Safety Code § 481.112(b)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 1, in an aggregate amount of under one gram, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Qualifying deadly-weapon or prior-conviction findings can change punishment. A qualifying drug-free-zone finding under §481.134(b) or (d) increases punishment to a third-degree felony. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute. Under §481.140, using or attempting to use a person under 18 to commit or assist the offense raises punishment by one degree, or to first-degree felony punishment if force was used or threatened to gain the child’s assistance. Under §481.141, a finding that consumption of the substance manufactured or delivered caused death or serious bodily injury raises punishment by one degree. This increase is barred if the defendant is also prosecuted for §19.02(b)(4) murder in the same criminal episode. Either enhancement requires consecutive sentences. These conditions require their own findings.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.112",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.112",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (b), (d), (h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.140",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.141",
+        "subdivision": "(a), (b), (c), (d)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "19.02",
+        "subdivision": "(b)(4)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990001"
+  },
+  {
+    "id": "tx-hsc-481-112-c",
+    "name": "Manufacture or delivery of a Penalty Group 1 controlled substance (one to under four grams)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 1.",
+    "category": "felony",
+    "code": "481.112(c)",
+    "citation": "Tex. Health & Safety Code § 481.112(c)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 1, in an aggregate amount of one to under four grams, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. Depending on the drug-free-zone location and required findings, §481.134(b) increases punishment by one degree, while §481.134(c) adds five years to the minimum prison term and doubles the maximum fine. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute. Under §481.140, using or attempting to use a person under 18 to commit or assist the offense raises punishment by one degree, or to first-degree felony punishment if force was used or threatened to gain the child’s assistance. Under §481.141, a finding that consumption of the substance manufactured or delivered caused death or serious bodily injury raises punishment by one degree. This increase is barred if the defendant is also prosecuted for §19.02(b)(4) murder in the same criminal episode. Either enhancement requires consecutive sentences. These conditions require their own findings.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.112",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.112",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (b), (c), (h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.140",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.141",
+        "subdivision": "(a), (b), (c), (d)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "19.02",
+        "subdivision": "(b)(4)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990002"
+  },
+  {
+    "id": "tx-hsc-481-112-d",
+    "name": "Manufacture or delivery of a Penalty Group 1 controlled substance (four to under 200 grams)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 1.",
+    "category": "felony",
+    "code": "481.112(d)",
+    "citation": "Tex. Health & Safety Code § 481.112(d)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 1, in an aggregate amount of four to under 200 grams, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. A qualifying §481.134(c) drug-free-zone finding adds five years to the minimum prison term and doubles the maximum fine. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.112",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.112",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990003"
+  },
+  {
+    "id": "tx-hsc-481-112-e",
+    "name": "Manufacture or delivery of a Penalty Group 1 controlled substance (200 to under 400 grams)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 1.",
+    "category": "felony",
+    "code": "481.112(e)",
+    "citation": "Tex. Health & Safety Code § 481.112(e)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 1, in an aggregate amount of 200 to under 400 grams, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct.",
+    "penalty": "First-degree felony with a special range: ten to 99 years or life in prison and a fine up to $100,000. Qualifying felony history can change punishment. A qualifying §481.134(c) drug-free-zone finding adds five years to the minimum prison term and doubles the maximum fine. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.112",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.112",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990275"
+  },
+  {
+    "id": "tx-hsc-481-112-f",
+    "name": "Manufacture or delivery of a Penalty Group 1 controlled substance (400 grams or more)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 1.",
+    "category": "felony",
+    "code": "481.112(f)",
+    "citation": "Tex. Health & Safety Code § 481.112(f)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 1, in an aggregate amount of 400 grams or more, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct.",
+    "penalty": "First-degree felony with a special range: 15 to 99 years or life in prison and a fine up to $250,000. Qualifying felony history can change punishment. A qualifying §481.134(c) drug-free-zone finding adds five years to the minimum prison term and doubles the maximum fine. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.112",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.112",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990276"
+  },
+  {
+    "id": "tx-hsc-481-1123-b",
+    "name": "Manufacture or delivery of a Penalty Group 1-B controlled substance (under one gram)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 1-B.",
+    "category": "felony",
+    "code": "481.1123(b)",
+    "citation": "Tex. Health & Safety Code § 481.1123(b)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 1-B, in an aggregate amount of under one gram, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct. Penalty Group 1-B includes fentanyl and the substances specified in §481.1022. The listed punishment reflects the September 1, 2023 amendment. Earlier offenses require the prior statutory version.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. Depending on the drug-free-zone location and required findings, §481.134(b) increases punishment by one degree, while §481.134(c) adds five years to the minimum prison term and doubles the maximum fine. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute. Under §481.140, using or attempting to use a person under 18 to commit or assist the offense raises punishment by one degree, or to first-degree felony punishment if force was used or threatened to gain the child’s assistance. Under §481.141, a finding that consumption of the substance manufactured or delivered caused death or serious bodily injury raises punishment by one degree. This increase is barred if the defendant is also prosecuted for §19.02(b)(4) murder in the same criminal episode. Either enhancement requires consecutive sentences. These conditions require their own findings.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.1123",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.1123",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (b), (c), (h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.140",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.141",
+        "subdivision": "(a), (b), (c), (d)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "19.02",
+        "subdivision": "(b)(4)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990280"
+  },
+  {
+    "id": "tx-hsc-481-1123-c",
+    "name": "Manufacture or delivery of a Penalty Group 1-B controlled substance (one to under four grams)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 1-B.",
+    "category": "felony",
+    "code": "481.1123(c)",
+    "citation": "Tex. Health & Safety Code § 481.1123(c)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 1-B, in an aggregate amount of one to under four grams, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct. Penalty Group 1-B includes fentanyl and the substances specified in §481.1022. The listed punishment reflects the September 1, 2023 amendment. Earlier offenses require the prior statutory version.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. Depending on the drug-free-zone location and required findings, §481.134(b) increases punishment by one degree, while §481.134(c) adds five years to the minimum prison term and doubles the maximum fine. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute. Under §481.140, using or attempting to use a person under 18 to commit or assist the offense raises punishment by one degree, or to first-degree felony punishment if force was used or threatened to gain the child’s assistance. Under §481.141, a finding that consumption of the substance manufactured or delivered caused death or serious bodily injury raises punishment by one degree. This increase is barred if the defendant is also prosecuted for §19.02(b)(4) murder in the same criminal episode. Either enhancement requires consecutive sentences. These conditions require their own findings.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.1123",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.1123",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (b), (c), (h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.140",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.141",
+        "subdivision": "(a), (b), (c), (d)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "19.02",
+        "subdivision": "(b)(4)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990243"
+  },
+  {
+    "id": "tx-hsc-481-1123-d",
+    "name": "Manufacture or delivery of a Penalty Group 1-B controlled substance (four to under 200 grams)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 1-B.",
+    "category": "felony",
+    "code": "481.1123(d)",
+    "citation": "Tex. Health & Safety Code § 481.1123(d)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 1-B, in an aggregate amount of four to under 200 grams, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct. Penalty Group 1-B includes fentanyl and the substances specified in §481.1022. The listed punishment reflects the September 1, 2023 amendment. Earlier offenses require the prior statutory version.",
+    "penalty": "First-degree felony with a special range: ten to 99 years or life in prison and a fine up to $20,000. Qualifying felony history can change punishment. A qualifying §481.134(c) drug-free-zone finding adds five years to the minimum prison term and doubles the maximum fine. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.1123",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.1123",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990281"
+  },
+  {
+    "id": "tx-hsc-481-1123-e",
+    "name": "Manufacture or delivery of a Penalty Group 1-B controlled substance (200 to under 400 grams)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 1-B.",
+    "category": "felony",
+    "code": "481.1123(e)",
+    "citation": "Tex. Health & Safety Code § 481.1123(e)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 1-B, in an aggregate amount of 200 to under 400 grams, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct. Penalty Group 1-B includes fentanyl and the substances specified in §481.1022. The listed punishment reflects the September 1, 2023 amendment. Earlier offenses require the prior statutory version.",
+    "penalty": "First-degree felony with a special range: 15 to 99 years or life in prison and a fine up to $200,000. Qualifying felony history can change punishment. A qualifying §481.134(c) drug-free-zone finding adds five years to the minimum prison term and doubles the maximum fine. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.1123",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.1123",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990282"
+  },
+  {
+    "id": "tx-hsc-481-1123-f",
+    "name": "Manufacture or delivery of a Penalty Group 1-B controlled substance (400 grams or more)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 1-B.",
+    "category": "felony",
+    "code": "481.1123(f)",
+    "citation": "Tex. Health & Safety Code § 481.1123(f)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 1-B, in an aggregate amount of 400 grams or more, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct. Penalty Group 1-B includes fentanyl and the substances specified in §481.1022. The listed punishment reflects the September 1, 2023 amendment. Earlier offenses require the prior statutory version.",
+    "penalty": "First-degree felony with a special range: 20 to 99 years or life in prison and a fine up to $500,000. Qualifying felony history can change punishment. A qualifying §481.134(c) drug-free-zone finding adds five years to the minimum prison term and doubles the maximum fine. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.1123",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.1123",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990283"
+  },
+  {
+    "id": "tx-hsc-481-113-b",
+    "name": "Manufacture or delivery of a Penalty Group 2 or 2-A controlled substance (under one gram)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 2 OR 2-A.",
+    "category": "felony",
+    "code": "481.113(b)",
+    "citation": "Tex. Health & Safety Code § 481.113(b)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 2 or 2-A, in an aggregate amount of under one gram, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Qualifying deadly-weapon or prior-conviction findings can change punishment. A qualifying drug-free-zone finding under §481.134(b) or (d) increases punishment to a third-degree felony. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute. Under §481.140, using or attempting to use a person under 18 to commit or assist the offense raises punishment by one degree, or to first-degree felony punishment if force was used or threatened to gain the child’s assistance. Under §481.141, a finding that consumption of the substance manufactured or delivered caused death or serious bodily injury raises punishment by one degree. This increase is barred if the defendant is also prosecuted for §19.02(b)(4) murder in the same criminal episode. Either enhancement requires consecutive sentences. These conditions require their own findings.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.113",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.113",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.103",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1031",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (b), (d), (h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.140",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.141",
+        "subdivision": "(a), (b), (c), (d)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "19.02",
+        "subdivision": "(b)(4)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990006"
+  },
+  {
+    "id": "tx-hsc-481-113-c",
+    "name": "Manufacture or delivery of a Penalty Group 2 or 2-A controlled substance (one to under four grams)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 2 OR 2-A.",
+    "category": "felony",
+    "code": "481.113(c)",
+    "citation": "Tex. Health & Safety Code § 481.113(c)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 2 or 2-A, in an aggregate amount of one to under four grams, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. Depending on the drug-free-zone location and required findings, §481.134(b) increases punishment by one degree, while §481.134(c) adds five years to the minimum prison term and doubles the maximum fine. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute. Under §481.140, using or attempting to use a person under 18 to commit or assist the offense raises punishment by one degree, or to first-degree felony punishment if force was used or threatened to gain the child’s assistance. Under §481.141, a finding that consumption of the substance manufactured or delivered caused death or serious bodily injury raises punishment by one degree. This increase is barred if the defendant is also prosecuted for §19.02(b)(4) murder in the same criminal episode. Either enhancement requires consecutive sentences. These conditions require their own findings.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.113",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.113",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.103",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1031",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (b), (c), (h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.140",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.141",
+        "subdivision": "(a), (b), (c), (d)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "19.02",
+        "subdivision": "(b)(4)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990007"
+  },
+  {
+    "id": "tx-hsc-481-113-d",
+    "name": "Manufacture or delivery of a Penalty Group 2 or 2-A controlled substance (four to under 400 grams)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 2 OR 2-A.",
+    "category": "felony",
+    "code": "481.113(d)",
+    "citation": "Tex. Health & Safety Code § 481.113(d)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 2 or 2-A, in an aggregate amount of four to under 400 grams, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. A qualifying §481.134(c) drug-free-zone finding adds five years to the minimum prison term and doubles the maximum fine. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.113",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.113",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.103",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1031",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990008"
+  },
+  {
+    "id": "tx-hsc-481-113-e",
+    "name": "Manufacture or delivery of a Penalty Group 2 or 2-A controlled substance (400 grams or more)",
+    "officialTitle": "OFFENSE: MANUFACTURE OR DELIVERY OF SUBSTANCE IN PENALTY GROUP 2 OR 2-A.",
+    "category": "felony",
+    "code": "481.113(e)",
+    "citation": "Tex. Health & Safety Code § 481.113(e)",
+    "conduct": "Knowingly manufacturing, delivering, or possessing with intent to deliver a controlled substance listed in Penalty Group 2 or 2-A, in an aggregate amount of 400 grams or more, including adulterants and dilutants. Chapter 481 authorizations apply. Delivery includes an actual or constructive transfer and an offer to sell. An offer-to-sell conviction requires corroboration by someone other than the offeree or by other evidence. Manufacture includes production, preparation, processing, packaging or labeling, subject to the practitioner exceptions in §481.002(25). Possession means actual care, custody, control or management. The substance, weight, alleged conduct and offense date must be established. The current drug schedules and punishment cannot automatically be applied to earlier conduct.",
+    "penalty": "First-degree felony with a special range: ten to 99 years or life in prison and a fine up to $100,000. Qualifying felony history can change punishment. A qualifying §481.134(c) drug-free-zone finding adds five years to the minimum prison term and doubles the maximum fine. Punishment increased under §481.134 must run consecutively to punishment for a conviction under another criminal statute.",
+    "references": [
+      {
+        "code": "HS",
+        "section": "481.113",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "HS",
+        "section": "481.113",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(5), (8), (25), (38), (49)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.103",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1031",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.182",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a), (c), (h)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "35990284"
+  }
+]

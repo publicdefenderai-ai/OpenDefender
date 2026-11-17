@@ -6,7 +6,7 @@ import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, knownCasePhase, type LegalDocument } from "@shared/legal-documents";
 import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
-import { isTexasAmbiguousVehicleBurglary, isTexasHeldCarrySelection, needsTexasChargeReselection } from "@shared/texas-reviewed";
+import { isTexasAmbiguousDelivery, isTexasAmbiguousVehicleBurglary, isTexasHeldCarrySelection, needsTexasChargeReselection } from "@shared/texas-reviewed";
 import { resolveGuidanceCharge } from "@shared/guidance-charge-resolution";
 
 // jsPDF's built-in fonts (helvetica, times, courier) only cover Latin/WinAnsi glyphs. Chinese
@@ -800,6 +800,11 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       doc.setTextColor(0, 0, 0);
       if (needsTexasChargeReselection(charge, caseData.jurisdiction)) {
         const messages = {
+          delivery: {
+            zh: "请选择具体的德克萨斯州管制药物罪名。物质类别、重量和被指控的行为会影响处罚。",
+            es: "Seleccione el cargo exacto por sustancias controladas en Texas. El grupo de la sustancia, el peso y la conducta imputada determinan la pena aplicable.",
+            en: "Select the exact Texas controlled-substance charge. The substance group, weight and alleged conduct determine the applicable penalty.",
+          },
           weapons: {
             zh: "请根据指控文件重新选择具体的德克萨斯州携带武器罪名。",
             es: "Seleccione el cargo específico de portación de armas de Texas que figura en su acusación.",
@@ -816,7 +821,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
             en: "Select the specific Texas vehicle burglary charge listed on your charging document.",
           },
         };
-        const notice = messages[isTexasAmbiguousVehicleBurglary(charge, caseData.jurisdiction) ? "vehicle" :
+        const notice = messages[isTexasAmbiguousDelivery(charge, caseData.jurisdiction) ? "delivery" : isTexasAmbiguousVehicleBurglary(charge, caseData.jurisdiction) ? "vehicle" :
           isTexasHeldCarrySelection(charge, caseData.jurisdiction) ? "weapons" : "theft"];
         yPosition = addText(formatChargeName(charge.name), margin, yPosition);
         yPosition = addText(notice[isChinese ? "zh" : isSpanish ? "es" : "en"], margin, yPosition + 6) + 6;

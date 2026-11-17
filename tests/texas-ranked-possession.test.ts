@@ -4,6 +4,7 @@ import { getChargeById, getVerifiedCitation, getVerifiedSourceUrl, getInstructio
 import { resolveGuidanceCharge } from "../shared/guidance-charge-resolution";
 import { getChargeExplanation } from "../shared/charge-explanations";
 import rows from "../shared/texas-ranked-possession.json";
+import delivery from "../shared/texas-ranked-delivery.json";
 import weights from "../shared/texas-possession-weights.json";
 import burglaryRows from "../shared/texas-ranked-burglary.json";
 import lossRows from "../shared/texas-property-loss.json";
@@ -82,8 +83,17 @@ describe("Texas ranked drug possession", () => {
     expect(await getCurrentAuthoritySelectableChargeIds("TX")).toEqual(new Set());
   });
 
+  it("rejects historical generic manufacture/delivery identities even with complete old links", async () => {
+    for (const id of ["tx-possession-with-intent-to-distribute", "tx-distribution-of-controlled-substance", "tx-manufacturing-controlled-substance", "tx-drug-trafficking"]) {
+      const old = {chargeId:id,sourceKey:"tx:HS:481.112",supportRole:"offense",citation:"Tex. Health & Safety Code § 481.112",subdivision:null,contentHash:"old"};
+      mock.metadata = {selectableChargeIds:[id],catalogRecords:[{chargeId:id,provisions:[old]}]};
+      mock.links = [old];
+      expect(await getCurrentAuthoritySelectableChargeIds("TX")).toEqual(new Set());
+    }
+  });
+
   it("withholds each exact charge when any required current link is missing or superseded", async () => {
-    const rankedIds = new Set([...ids, ...theftRows.map(row => row.id), ...propertyRows.map(row => row.id), ...arrestRows.map(row => row.id), ...closeoutRows.map(row => row.id), ...carryRows.map(row => row.id), ...lossRows.map(row => row.id), ...burglaryRows.map(row => row.id), ...weights.map(row => row.id)]);
+    const rankedIds = new Set([...ids, ...theftRows.map(row => row.id), ...propertyRows.map(row => row.id), ...arrestRows.map(row => row.id), ...closeoutRows.map(row => row.id), ...carryRows.map(row => row.id), ...lossRows.map(row => row.id), ...burglaryRows.map(row => row.id), ...weights.map(row => row.id), ...delivery.map(row => row.id)]);
     for (const record of manifest.catalogRecords.filter(row => rankedIds.has(row.chargeId))) {
       const all = record.provisions.map(p => ({chargeId:record.chargeId, sourceKey:p.sourceKey,
         contentHash:p.contentHash, subdivision:p.subdivision, supportRole:p.supportRole, citation:p.citation}));

@@ -117,3 +117,19 @@ test("Texas selector exposes source-bound possession grades and the residential 
   }
   expect(charges.find((r:{id:string})=>r.id==="tx-pc-30-05-shelter")).toBeUndefined();
 });
+
+test("Texas manufacturing and delivery choices preserve group-specific weight penalties", async ({request}) => {
+  const response=await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");
+  expect(response.ok()).toBe(true);
+  const {charges}=await response.json();
+  const delivery=JSON.parse(readFileSync("shared/texas-ranked-delivery.json","utf8"));
+  for (const row of delivery) {
+    const choice=charges.find((charge:{id:string})=>charge.id===row.id);
+    expect(choice).toMatchObject({id:row.id,name:row.name,code:row.code,description:row.conduct,maxPenalty:row.penalty,category:"felony"});
+    expect(choice.instructionRef).toContain("transfer theory only");
+    expect(choice.searchAliases).toContain(row.dpsCode);
+  }
+  for (const id of ["tx-possession-with-intent-to-distribute","tx-distribution-of-controlled-substance","tx-manufacturing-controlled-substance","tx-drug-trafficking"]) {
+    expect(charges.some((charge:{id:string})=>charge.id===id)).toBe(false);
+  }
+});

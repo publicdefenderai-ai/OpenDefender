@@ -1,3 +1,4 @@
+import delivery from "./texas-ranked-delivery.json";
 import weights from "./texas-possession-weights.json";
 import burglary from "./texas-ranked-burglary.json";
 import loss from "./texas-property-loss.json";
@@ -35,6 +36,7 @@ export const texasReviewedRecords = [
   ...loss,
   ...burglary,
   ...weights,
+  ...delivery,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 
@@ -55,6 +57,18 @@ export function isTexasHeldCarrySelection(charge: { id?: string; name: string; c
     (/^unlawful carrying (?:of (?:a )?)?weapons?$/i.test(charge.name.trim()) ||
       /^(?:(?:tex\.\s*)?penal code\s*)?(?:§\s*)?46\.02(?:\(b\))?\.?$/i.test(charge.code?.trim() ?? "")));
 }
+export const texasHeldDeliveryIds = new Set([
+  "tx-possession-with-intent-to-distribute", "tx-distribution-of-controlled-substance",
+  "tx-manufacturing-controlled-substance", "tx-drug-trafficking",
+]);
+
+export function isTexasAmbiguousDelivery(charge: { id?: string; name: string; code?: string }, jurisdiction?: string) {
+  if (charge.id) return texasHeldDeliveryIds.has(charge.id);
+  return /^(TX|Texas)$/i.test(jurisdiction ?? "") &&
+    (/^(?:(?:Tex\.\s*)?Health\s*&\s*Safety Code\s*)?(?:§\s*)?481\.(?:1123?|113)(?:$|\()/.test(charge.code?.trim() ?? "") ||
+     /^(?:Possession with Intent to Distribute|Distribution of Controlled Substance|Manufacturing Controlled Substance|Drug Trafficking)$/i.test(charge.name.trim()));
+}
+
 type TexasSavedSelection = { id?: string; name: string; code?: string; classification?: string };
 
 // The old vehicle identity assigned a felony even when the ordinary Class A branch applied.
@@ -65,6 +79,6 @@ export function isTexasAmbiguousVehicleBurglary(charge: TexasSavedSelection, jur
 }
 
 export function needsTexasChargeReselection(charge: TexasSavedSelection, jurisdiction?: string) {
-  return isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
+  return isTexasAmbiguousDelivery(charge, jurisdiction) || isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
     isTexasAmbiguousVehicleBurglary(charge, jurisdiction);
 }
