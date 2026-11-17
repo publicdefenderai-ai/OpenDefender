@@ -1,3 +1,4 @@
+import { stateCourtWebsites } from "@shared/state-court-websites";
 import { type Ref, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useSearch } from "wouter";
@@ -5,7 +6,6 @@ import {
   ChevronLeft,
   ChevronRight,
   ExternalLink,
-  ShieldCheck,
   Scale,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
@@ -18,26 +18,12 @@ import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
   getExpungementByState,
-  hasAutomaticClearance,
-  automaticClearanceData,
 } from "@/lib/expungement-data";
 
 type Step = 1 | 2 | 3 | 4;
 type RecordType = "arrest" | "misdemeanor" | "felony" | "marijuana";
-type TimeframeType = "lt1" | "1to3" | "3to7" | "gt7";
-type SentenceType = "complete" | "fines" | "probation";
-
-type ResultType = "A" | "B" | "C" | "D";
-
-// Lower-bound months for each timeframe bucket, checked against each state's
-// real waitingPeriods data (client/src/lib/expungement-data.ts) — conservative
-// on purpose so the tool never tells someone they're eligible before they are.
-const TIMEFRAME_MONTHS: Record<TimeframeType, number> = {
-  lt1: 0,
-  "1to3": 12,
-  "3to7": 36,
-  gt7: 84,
-};
+type TimeframeType = "short" | "long" | "unknown" | "dismissed" | "acquitted" | "pending" | "convicted";
+type SentenceType = "complete" | "fines" | "probation" | "unknown";
 
 interface Answers {
   state: string;
@@ -100,80 +86,28 @@ const US_STATES = [
   { code: "WY", name: "Wyoming" },
 ];
 
-// Determines the coarse A/B/C/D bucket for the result headline, backed by
-// each state's real waitingPeriods/automatic-clearance data instead of
-// hardcoded, uncited state lists. The full state-specific overview,
-// exclusions, and sources (from getExpungementByState) are shown alongside
-// this bucket in ResultCard — the bucket is a starting signal, not the
-// whole answer.
-function determineResult(answers: Answers): ResultType {
-  const { state, recordType, timeframe, sentence } = answers;
-  if (!state || !recordType || !timeframe || !sentence) return "C";
+const nyPetitionGuide = "https://www.nycourts.gov/help/criminal/sealed-records-after-10-years-cpl-16059";
+const automaticSources: Record<string, string> = {
+  CA: "https://oag.ca.gov/fingerprints/automatic-record-relief-penal-code-sections-851.93-and-1203.425",
+  NY: "https://www.nycourts.gov/cleanslate",
+  IL: "https://isp.illinois.gov/BureauOfIdentification/Faqs",
+  CT: "https://portal.ct.gov/cleanslate/clean-slate-eligibility",
+  MI: "https://www.michigan.gov/ag/initiatives/Expungement-Assistance",
+  DE: "https://courts.delaware.gov/forms/download.aspx?id=227598",
+  NJ: "https://www.njcourts.gov/sites/default/files/notices/2021/07/n210702h.pdf",
+  PA: "https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/18/00.091.022.002..HTM",
+};
 
-  const rule = getExpungementByState(state);
-  const autoInfo = automaticClearanceData[state];
-  const monthsSince = TIMEFRAME_MONTHS[timeframe];
-
-  // Automatic clearance — only when the state's program actually covers this
-  // offense type (client/src/lib/expungement-data.ts automaticClearanceData).
-  if (hasAutomaticClearance(state) && autoInfo) {
-    const types = autoInfo.offenseTypes.map((o) => o.toLowerCase());
-    if (recordType === "marijuana" && types.some((t) => t.includes("marijuana") || t.includes("cannabis"))) {
-      return "A";
-    }
-    if (recordType === "arrest") {
-      return "A";
-    }
-    if (
-      sentence === "complete" &&
-      ((recordType === "misdemeanor" && types.some((t) => t.includes("misdemeanor"))) ||
-        (recordType === "felony" && types.some((t) => t.includes("felon"))))
-    ) {
-      return "A";
-    }
-  }
-
-  // Still under supervision
-  if (sentence === "probation") {
-    return "C";
-  }
-
-  const waitingPeriods = rule?.waitingPeriods as
-    | { misdemeanorMonths?: number; felonyMonths?: number }
-    | undefined;
-  const requiredMonths =
-    recordType === "felony"
-      ? waitingPeriods?.felonyMonths
-      : recordType === "misdemeanor"
-        ? waitingPeriods?.misdemeanorMonths
-        : 0; // arrests and marijuana-only records without an automatic program are treated as petition-eligible once complete
-
-  // Our data shows no defined felony waiting period for this state — limited
-  // or no pathway, rather than guessing.
-  if (recordType === "felony" && !requiredMonths) {
-    return "D";
-  }
-
-  if (sentence === "fines") {
-    return "C";
-  }
-
-  if (requiredMonths !== undefined && monthsSince < requiredMonths) {
-    return "C";
-  }
-
-  return "B";
-}
-
-function ResultCard({ result, state, recordType, headingRef }: { headingRef: Ref<HTMLHeadingElement>; result: ResultType; state: string; recordType: RecordType | "" }) {
+function ResultCard({ answers, headingRef }: { headingRef: Ref<HTMLHeadingElement>; answers: Answers }) {
+  const { state, recordType, timeframe } = answers;
   const { t } = useTranslation();
   const rule = getExpungementByState(state);
-  const autoInfo = automaticClearanceData[state];
-  const showAutoClearance =
-    hasAutomaticClearance(state) &&
-    autoInfo &&
-    (result === "A" ||
-      (recordType === "marijuana" && autoInfo.offenseTypes.some((o) => o.toLowerCase().includes("marijuana") || o.toLowerCase().includes("cannabis"))));
+  const nyConviction = state === "NY" && (recordType === "misdemeanor" || recordType === "felony");
+  const nyAcquittal = state === "NY" && timeframe === "acquitted";
+  const reason = nyAcquittal ? "acquittalResult" : nyConviction && timeframe === "short" ? "nyWait"
+    : nyConviction && timeframe === "long" ? "nyCheck"
+    : timeframe === "pending" ? "pendingCheck" : timeframe === "dismissed" || timeframe === "acquitted" ? "closedCheck"
+    : recordType === "arrest" || recordType === "marijuana" ? "dispositionCheck" : "check";
   const stateName = US_STATES.find((s) => s.code === state)?.name ?? state;
   const visibleExclusions = rule?.exclusions?.slice(0, 5) ?? [];
   const remainingExclusions = (rule?.exclusions?.length ?? 0) - visibleExclusions.length;
@@ -181,50 +115,13 @@ function ResultCard({ result, state, recordType, headingRef }: { headingRef: Ref
   return (
     <div className="clearance-results space-y-6">
       <section className="clearance-outcome">
-        <h2 ref={headingRef} tabIndex={-1}>{t(`screener.results.${result}.title`)}</h2>
-        <p>{t(`screener.results.${result}.message`)}</p>
+        <h2 ref={headingRef} tabIndex={-1}>{t(nyAcquittal ? "screener.review.sealing" : reason === "nyWait" ? "screener.review.waitTitle" : "screener.review.unknownResult")}</h2>
+        <p>{t(`screener.review.${reason}`)}</p>
+        {nyAcquittal && <a className="underline" href="https://www.nycourts.gov/help/criminal/sealed-records-good-result-favorable-disposition-cpl-ss16050">CPL 160.50</a>}
+        {nyConviction && <a href={nyPetitionGuide} className="underline">CPL 160.59</a>}
+        <p><a href={stateCourtWebsites[state].courtWebsite} className="underline">{t("screener.review.stateSource", { state: stateName })}</a></p>
+        {automaticSources[state] && <p><a className="underline" href={automaticSources[state]}>{t("screener.review.automaticSource")}</a></p>}
       </section>
-
-      {showAutoClearance && autoInfo && (
-        <Card className="clearance-result-section">
-          <CardHeader className="pb-3">
-            <CardTitle className="text-base flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-primary shrink-0" />
-              {t("screener.autoClearance.heading", { state: stateName })}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-2 text-sm">
-            {autoInfo.legislation && (
-              <p>
-                <span className="font-semibold text-foreground">{t("screener.autoClearance.legislationLabel")}</span>{" "}
-                <span lang="en" className="text-muted-foreground">{autoInfo.legislation}</span>
-              </p>
-            )}
-            <p>
-              <span className="font-semibold text-foreground">{t("screener.autoClearance.offenseTypesLabel")}</span>{" "}
-              <span lang="en" className="text-muted-foreground">{autoInfo.offenseTypes.join(", ")}</span>
-            </p>
-            {autoInfo.waitingPeriodNote && (
-              <p>
-                <span className="font-semibold text-foreground">{t("screener.autoClearance.waitingPeriodLabel")}</span>{" "}
-                <span lang="en" className="text-muted-foreground">{autoInfo.waitingPeriodNote}</span>
-              </p>
-            )}
-            {autoInfo.notes && <p lang="en" className="text-muted-foreground">{autoInfo.notes}</p>}
-            {autoInfo.link && (
-              <a
-                href={autoInfo.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-primary font-medium hover:underline"
-              >
-                <ExternalLink className="h-3.5 w-3.5" />
-                {t("screener.autoClearance.linkLabel")}
-              </a>
-            )}
-          </CardContent>
-        </Card>
-      )}
 
       {rule ? (
         <Card className="clearance-result-section">
@@ -355,7 +252,9 @@ export default function RecordClearanceScreener() {
   });
   const [showResult, setShowResult] = useState(false);
 
-  const totalSteps = 4;
+  const disposition = answers.recordType === "arrest" || answers.recordType === "marijuana";
+  const totalSteps = disposition && answers.timeframe !== "convicted" ? 3 : 4;
+  const nyTiming = !disposition && answers.state === "NY";
   const question = useRef<HTMLHeadingElement>(null);
   const view = showResult ? "result" : step;
   const previousView = useRef(view);
@@ -365,7 +264,7 @@ export default function RecordClearanceScreener() {
   }, [view]);
 
   const handleStateChange = (state: string) => {
-    setAnswers((prev) => ({ ...prev, state }));
+    setAnswers((prev) => ({ ...prev, state, timeframe: "", sentence: "" }));
   };
 
   const handleNext = () => {
@@ -394,16 +293,16 @@ export default function RecordClearanceScreener() {
   const canProceed = () => {
     if (step === 1) return answers.state !== "";
     if (step === 2) return answers.recordType !== "";
-    if (step === 3) return answers.timeframe !== "";
+    if (step === 3) return (!nyTiming && !disposition) || answers.timeframe !== "";
     if (step === 4) return answers.sentence !== "";
     return false;
   };
 
-  const result = showResult ? determineResult(answers) : null;
+
 
   const choices = step === 2 ? ["arrest", "misdemeanor", "felony", "marijuana"] as const
-    : step === 3 ? ["lt1", "1to3", "3to7", "gt7"] as const
-    : ["complete", "fines", "probation"] as const;
+    : step === 3 ? (disposition ? ["dismissed","acquitted","pending","convicted","unknown"] as const : nyTiming ? ["short","long","unknown"] as const : ["unknown"] as const)
+    : ["complete", "fines", "probation", "unknown"] as const;
   const field = step === 2 ? "recordType" : step === 3 ? "timeframe" : "sentence";
 
   return (
@@ -417,27 +316,27 @@ export default function RecordClearanceScreener() {
           {!showResult ? (
             <>
               <ol className="clearance-progress">
-                {(["state", "recordType", "timeframe", "sentence"] as const).map((key, index) => (
-                  <li key={key} aria-current={step === index + 1 ? "step" : undefined}>{labels[key]}</li>
+                {(["state", "recordType", "timeframe", "sentence"] as const).slice(0, totalSteps).map((key, index) => (
+                  <li key={key} aria-current={step === index + 1 ? "step" : undefined}>{key === "timeframe" && disposition ? t("screener.review.outcome") : labels[key]}</li>
                 ))}
               </ol>
               <p className="clearance-step">{t("screener.stepIndicator", { current: step, total: totalSteps })}</p>
-              <h2 id="clearance-question" ref={question} tabIndex={-1}>{t(`screener.step${step}.question`)}</h2>
-              {step !== 2 && <p id="clearance-hint" className="clearance-hint">{t(`screener.step${step}.hint`)}</p>}
+              <h2 id="clearance-question" ref={question} tabIndex={-1}>{step === 3 ? t(`screener.review.${disposition ? "outcome" : nyTiming ? "nyTiming" : "noTiming"}`) : t(`screener.step${step}.question`)}</h2>
+              {step !== 2 && step !== 3 && <p id="clearance-hint" className="clearance-hint">{t(`screener.step${step}.hint`)}</p>}
               {step === 1 ? (
                 <select data-testid="record-clearance-state" aria-labelledby="clearance-question" aria-describedby="clearance-hint"
                   value={answers.state} onChange={event => handleStateChange(event.target.value)}>
                   <option value="">{t("screener.step1.placeholder")}</option>
                   {US_STATES.map(state => <option key={state.code} value={state.code}>{state.name}</option>)}
                 </select>
-              ) : (
+              ) : step === 3 && !nyTiming && !disposition ? null : (
                 <div className="clearance-choices" role="radiogroup" aria-labelledby="clearance-question"
-                  aria-describedby={step === 2 ? undefined : "clearance-hint"}>
-                  {choices.map(value => (
+                  aria-describedby={step === 2 || step === 3 ? undefined : "clearance-hint"}>
+                  {choices.filter(value => !(value === "convicted" && answers.recordType === "arrest")).map(value => (
                     <label key={value}>
                       <input type="radio" name={field} value={value} checked={answers[field] === value}
-                        onChange={() => setAnswers(prev => ({ ...prev, [field]: value }))} />
-                      {t(`screener.step${step}.options.${value}`)}
+                        onChange={() => setAnswers(prev => ({ ...prev, ...(field === "recordType" ? { timeframe: "", sentence: "" } : {}), [field]: value }))} />
+                      {step === 3 || value === "unknown" ? t(`screener.review.${value}`) : t(`screener.step${step}.options.${value}`)}
                     </label>
                   ))}
                 </div>
@@ -453,9 +352,9 @@ export default function RecordClearanceScreener() {
               </div>
               <p className="clearance-note">{t("screener.disclaimer")}</p>
             </>
-          ) : result && (
+          ) : (
             <>
-              <ResultCard headingRef={question} result={result} state={answers.state} recordType={answers.recordType} />
+              <ResultCard headingRef={question} answers={answers} />
               <div className="clearance-controls">
                 <Button variant="outline" onClick={handleBack}>{t("screener.back")}</Button>
                 <Button variant="outline" onClick={handleReset}>{t("screener.startOver")}</Button>

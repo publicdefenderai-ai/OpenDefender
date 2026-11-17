@@ -1,3 +1,4 @@
+import { reliefResources } from "@/locales/relief-resources";
 import { useRef, useState } from "react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
@@ -50,10 +51,11 @@ export default function Directory() {
       title: t("howTo.sections.findResources.title"),
       description: t("howTo.sections.findResources.description"),
       resources: [
+        ...reliefResources[i18n.language.startsWith("es") ? "es" : i18n.language.startsWith("zh") ? "zh" : "en"],
         ...nrrc.resources.map(resource => ({ ...resource, description: `${resource.description} ${nrrc.copy.note}` })),
         { title: t("howTo.sections.findResources.legalAid.title"),                description: t("howTo.sections.findResources.legalAid.description"),                link: "/legal-aid" },
         { title: t("howTo.sections.findResources.diversionPrograms.title"),       description: t("howTo.sections.findResources.diversionPrograms.description"),       link: "/diversion-programs" },
-        { title: t("howTo.sections.findResources.recordExpungement.title"),       description: t("howTo.sections.findResources.recordExpungement.description"),       link: "/support/reputation" },
+        { title: t("howTo.sections.findResources.recordExpungement.title"),       description: t("howTo.sections.findResources.recordExpungement.description"),       link: "/record-expungement" },
         { title: t("howTo.sections.findResources.recordClearanceScreener.title"), description: t("howTo.sections.findResources.recordClearanceScreener.description"), link: "/support/reputation/eligibility" },
       ],
     },

@@ -1,407 +1,48 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { 
-  FileX, 
-  ArrowLeft,
-  CheckCircle,
-  AlertCircle,
-  XCircle,
-  Calendar,
-  FileText,
-  Scale,
-  ExternalLink
-} from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { 
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Link } from "wouter";
-
 import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
+import { recordReliefCopy } from "@/locales/record-relief-design";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { 
-  expungementRules, 
-  getExpungementByState, 
-  getAvailableExpungementStates,
-  assessEligibility
-} from "@/lib/expungement-data";
-
-interface EligibilityResultProps {
-  result: {
-    eligibility: "likely" | "possible" | "unlikely";
-    reason: string;
-    nextSteps: string[];
-  };
-  selectedState: string;
-}
-
-function EligibilityResult({ result, selectedState }: EligibilityResultProps) {
-  const { t } = useTranslation();
-  
-  const getIcon = () => {
-    switch (result.eligibility) {
-      case "likely":
-        return <CheckCircle className="h-8 w-8 text-green-600" />;
-      case "possible":
-        return <AlertCircle className="h-8 w-8 text-yellow-600" />;
-      case "unlikely":
-        return <XCircle className="h-8 w-8 text-red-600" />;
-    }
-  };
-
-  const getColor = () => {
-    switch (result.eligibility) {
-      case "likely":
-        return "bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800";
-      case "possible":
-        return "bg-yellow-50 dark:bg-yellow-950/20 border-yellow-200 dark:border-yellow-800";
-      case "unlikely":
-        return "bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800";
-    }
-  };
-
-  const getTitle = () => {
-    switch (result.eligibility) {
-      case "likely":
-        return t('recordExpungement.eligibilityResult.likelyEligible');
-      case "possible":
-        return t('recordExpungement.eligibilityResult.possiblyEligible');
-      case "unlikely":
-        return t('recordExpungement.eligibilityResult.unlikelyEligible');
-    }
-  };
-
-  const rule = getExpungementByState(selectedState);
-
-  return (
-    <Card className={getColor()}>
-      <CardContent className="p-6">
-        <div className="space-y-6">
-          {/* Result Header */}
-          <div className="flex items-center gap-3">
-            {getIcon()}
-            <div>
-              <h3 className="text-lg font-semibold">{getTitle()}</h3>
-              <p className="text-sm text-muted-foreground">{result.reason}</p>
-            </div>
-          </div>
-
-          {/* Next Steps */}
-          <div>
-            <h4 className="font-semibold mb-3 flex items-center gap-2">
-              <FileText className="h-4 w-4" />
-              {t('recordExpungement.eligibilityResult.nextSteps')}
-            </h4>
-            <ul className="space-y-2">
-              {result.nextSteps.map((step, index) => (
-                <li key={index} className="flex items-start gap-2 text-sm">
-                  <span className="w-5 h-5 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-medium flex-shrink-0 mt-0.5">
-                    {index + 1}
-                  </span>
-                  {step}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* State Information */}
-          {rule && (
-            <div className="border-t pt-6">
-              <h4 className="font-semibold mb-3 flex items-center gap-2">
-                <Scale className="h-4 w-4" />
-                {t('recordExpungement.eligibilityResult.stateInfo', { state: selectedState })}
-              </h4>
-              <div className="space-y-4">
-                <div>
-                  <h5 className="font-medium text-sm mb-2">{t('recordExpungement.eligibilityResult.overview')}</h5>
-                  <p className="text-sm text-muted-foreground">{rule.overview}</p>
-                </div>
-
-                {rule.exclusions && rule.exclusions.length > 0 && (
-                  <div>
-                    <h5 className="font-medium text-sm mb-2">{t('recordExpungement.eligibilityResult.commonExclusions')}</h5>
-                    <div className="flex flex-wrap gap-1">
-                      {rule.exclusions.slice(0, 5).map((exclusion, index) => (
-                        <Badge key={index} variant="outline" className="text-xs">
-                          {exclusion}
-                        </Badge>
-                      ))}
-                      {rule.exclusions.length > 5 && (
-                        <Badge variant="outline" className="text-xs">
-                          {t('recordExpungement.eligibilityResult.moreExclusions', { count: rule.exclusions.length - 5 })}
-                        </Badge>
-                      )}
-                    </div>
-                  </div>
-                )}
-
-                {rule.sources && rule.sources.length > 0 && (
-                  <div>
-                    <h5 className="font-medium text-sm mb-2">{t('recordExpungement.eligibilityResult.legalSources')}</h5>
-                    <div className="flex flex-wrap gap-2">
-                      {rule.sources.map((source, index) => (
-                        <span key={index} className="text-xs text-muted-foreground">
-                          {source}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-
-          {/* Disclaimer */}
-          <Alert>
-            <AlertCircle className="h-4 w-4" />
-            <AlertDescription className="text-xs">
-              <strong>{t('recordExpungement.eligibilityResult.disclaimerTitle')}</strong> {t('recordExpungement.eligibilityResult.disclaimerText')}
-            </AlertDescription>
-          </Alert>
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
 
 export default function RecordExpungement() {
   useScrollToTop();
-  const { t } = useTranslation();
-  const [selectedState, setSelectedState] = useState("");
-  const [offenseType, setOffenseType] = useState<"misdemeanor" | "felony" | "">("");
-  const [completionDate, setCompletionDate] = useState("");
-  const [hasMultipleConvictions, setHasMultipleConvictions] = useState(false);
-  const [offenseCategory, setOffenseCategory] = useState("");
-  const [showResults, setShowResults] = useState(false);
-
-  const availableStates = getAvailableExpungementStates();
-
-  const handleCheckEligibility = () => {
-    if (!selectedState || !offenseType || !completionDate || !offenseCategory) {
-      return;
-    }
-    setShowResults(true);
-  };
-
-  const resetForm = () => {
-    setSelectedState("");
-    setOffenseType("");
-    setCompletionDate("");
-    setHasMultipleConvictions(false);
-    setOffenseCategory("");
-    setShowResults(false);
-  };
-
-  const isFormComplete = selectedState && offenseType && completionDate && offenseCategory;
-
-  let eligibilityResult;
-  if (showResults && isFormComplete) {
-    eligibilityResult = assessEligibility(
-      selectedState,
-      offenseType,
-      new Date(completionDate),
-      hasMultipleConvictions,
-      offenseCategory
-    );
-  }
-
+  const { t, i18n } = useTranslation();
+  const lang = i18n.resolvedLanguage ?? i18n.language;
+  const copy = recordReliefCopy[lang.startsWith("es") ? "es" : lang.startsWith("zh") ? "zh" : "en"];
+  const [checked, setChecked] = useState<number[]>([]);
+  const screener = "/support/reputation/eligibility";
   return (
     <ScanFirstPageFrame>
-
-      {/* Hero Section - Amber Vivid Header */}
-      <section className="vivid-header-green py-10 lg:py-14">
-        <div className="max-w-7xl mx-auto px-4 vivid-header-content">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <FileX className="h-6 w-6 text-white" />
-            </div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-3 text-white">
-              {t('recordExpungement.hero.title')}
-            </h1>
-            <p className="text-base md:text-lg mb-2 text-white/85 max-w-2xl mx-auto leading-relaxed">
-              {t('recordExpungement.hero.subtitle')}
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <section id="expungement-check" className="py-10 md:py-12 scroll-mt-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <ScrollReveal>
-            <div className="flex items-center gap-4 mb-8">
-              <Link href="/">
-                <Button variant="outline" size="sm">
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  {t('recordExpungement.navigation.backToHome')}
-                </Button>
-              </Link>
-            </div>
-          </ScrollReveal>
-
-          {/* Information Banner */}
-          <ScrollReveal delay={0.1}>
-            <Card className="mb-8 bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
-                      {t('recordExpungement.infoBanner.title')}
-                    </h3>
-                    <p className="text-sm text-blue-700 dark:text-blue-300 mb-2">
-                      {t('recordExpungement.infoBanner.description')}
-                    </p>
-                    <p className="text-xs text-blue-600 dark:text-blue-400">
-                      {t('recordExpungement.infoBanner.stateNote')}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </ScrollReveal>
-
-          {/* Eligibility Form */}
-          <ScrollReveal delay={0.2}>
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <FileX className="h-5 w-5" />
-                  {t('recordExpungement.eligibilityForm.title')}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                {/* State Selection */}
-                <div>
-                  <Label htmlFor="state">{t('recordExpungement.eligibilityForm.stateQuestion')}</Label>
-                  <Select
-                    value={selectedState}
-                    onValueChange={setSelectedState}
-                  >
-                    <SelectTrigger data-testid="select-state">
-                      <SelectValue placeholder={t('recordExpungement.eligibilityForm.statePlaceholder')} />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {availableStates.map(state => (
-                        <SelectItem key={state} value={state}>
-                          {state === "Federal" ? t('recordExpungement.eligibilityForm.federalCourt') : state}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                {/* Offense Type */}
-                <div>
-                  <Label>{t('recordExpungement.eligibilityForm.offenseTypeQuestion')}</Label>
-                  <RadioGroup
-                    value={offenseType}
-                    onValueChange={(value) => setOffenseType(value as "misdemeanor" | "felony")}
-                    className="mt-2"
-                  >
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="misdemeanor" id="misdemeanor" data-testid="radio-misdemeanor" />
-                      <Label htmlFor="misdemeanor">{t('recordExpungement.eligibilityForm.misdemeanor')}</Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="felony" id="felony" data-testid="radio-felony" />
-                      <Label htmlFor="felony">{t('recordExpungement.eligibilityForm.felony')}</Label>
-                    </div>
-                  </RadioGroup>
-                </div>
-
-                {/* Completion Date */}
-                <div>
-                  <Label htmlFor="completion-date">{t('recordExpungement.eligibilityForm.completionDateQuestion')}</Label>
-                  <Input
-                    id="completion-date"
-                    type="date"
-                    value={completionDate}
-                    onChange={(e) => setCompletionDate(e.target.value)}
-                    max={new Date().toISOString().split('T')[0]}
-                    data-testid="input-completion-date"
-                  />
-                </div>
-
-                {/* Offense Category */}
-                <div>
-                  <Label htmlFor="offense-category">{t('recordExpungement.eligibilityForm.offenseCategoryQuestion')}</Label>
-                  <Input
-                    id="offense-category"
-                    value={offenseCategory}
-                    onChange={(e) => setOffenseCategory(e.target.value)}
-                    placeholder={t('recordExpungement.eligibilityForm.offenseCategoryPlaceholder')}
-                    data-testid="input-offense-category"
-                  />
-                </div>
-
-                {/* Multiple Convictions */}
-                <div className="flex items-center space-x-2">
-                  <Checkbox
-                    id="multiple-convictions"
-                    checked={hasMultipleConvictions}
-                    onCheckedChange={(checked) => setHasMultipleConvictions(checked === true)}
-                    data-testid="checkbox-multiple-convictions"
-                  />
-                  <Label htmlFor="multiple-convictions" className="text-sm">
-                    {t('recordExpungement.eligibilityForm.multipleConvictions')}
-                  </Label>
-                </div>
-
-                {/* Submit Button */}
-                <div className="flex gap-3">
-                  <Button
-                    onClick={handleCheckEligibility}
-                    disabled={!isFormComplete}
-                    className="flex-1"
-                    data-testid="button-check-eligibility"
-                  >
-                    {t('recordExpungement.eligibilityForm.checkEligibility')}
-                  </Button>
-                  {showResults && (
-                    <Button
-                      variant="outline"
-                      onClick={resetForm}
-                      data-testid="button-reset-form"
-                    >
-                      {t('recordExpungement.eligibilityForm.reset')}
-                    </Button>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-          </ScrollReveal>
-
-          {/* Results */}
-          {showResults && eligibilityResult && (
-            <ScrollReveal delay={0.3}>
-              <EligibilityResult 
-                result={eligibilityResult} 
-                selectedState={selectedState}
-              />
-            </ScrollReveal>
-          )}
-        </div>
-      </section>
-
+      <PageBreadcrumb items={[{ label: t("breadcrumb.home"), href: "/" }]} currentPage={t("recordExpungement.hero.title")} />
+      <div className="mx-auto max-w-4xl px-5 pb-16 sm:px-10">
+        <header className="py-12" id="expungement-check">
+          <h1 className="max-w-2xl text-4xl font-medium tracking-tight sm:text-6xl">{copy.title}</h1>
+          <p className="my-5 max-w-prose leading-relaxed">{copy.intro}</p>
+          <Link className="inline-block rounded-md bg-primary px-5 py-3 font-semibold text-primary-foreground" href={screener}>{copy.start}</Link>
+        </header>
+        <nav className="flex flex-wrap gap-x-6 gap-y-2 border-y py-3 text-primary">
+          {(["paths","gather","questions","help"] as const).map(key => <a key={key} href={`#${key}`}>{copy[key]}</a>)}
+        </nav>
+        <section id="paths" className="scroll-mt-24 py-8">
+          <h2 className="mb-5 text-2xl">{copy.paths}</h2>
+          {copy.topics.map(([title, body]) => <div key={title} className="grid gap-2 border-t py-4 sm:grid-cols-[1fr_2fr]"><h3 className="font-semibold">{title}</h3><p>{body}</p></div>)}
+        </section>
+        <section id="gather" className="scroll-mt-24 bg-muted p-6">
+          <h2 className="text-2xl">{copy.gather}</h2><p className="my-4">{copy.materials}</p>
+          {copy.items.map((item, index) => <label key={index} className="flex min-h-11 items-center gap-3"><input type="checkbox" checked={checked.includes(index)} onChange={event => setChecked(event.target.checked ? [...checked,index] : checked.filter(id => id !== index))} />{item}</label>)}
+        </section>
+        <section id="questions" className="scroll-mt-24 py-8">
+          <h2 className="mb-4 text-2xl">{copy.questions}</h2>
+          {copy.prompts.map(([title,body]) => <details className="group border-t" key={title}><summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-medium [&::-webkit-details-marker]:hidden">{title}<span aria-hidden="true" className="text-sm text-primary group-open:hidden">+</span><span aria-hidden="true" className="hidden text-sm text-primary group-open:inline">−</span></summary><p className="max-w-prose pb-4">{body}</p></details>)}
+        </section>
+        <section id="help" className="scroll-mt-24 border-t pt-6">
+          <h2 className="text-2xl">{copy.help}</h2>
+          <div className="my-4 flex flex-wrap gap-5 text-primary underline"><Link href="/legal-aid">{copy.legal}</Link><Link href="/support/reputation">{copy.reputation}</Link><Link href={screener}>{copy.start}</Link></div>
+          <p className="text-sm text-muted-foreground">{copy.note}</p>
+        </section>
+      </div>
     </ScanFirstPageFrame>
   );
 }

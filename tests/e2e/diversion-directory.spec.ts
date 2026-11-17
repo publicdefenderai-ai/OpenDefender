@@ -44,3 +44,12 @@ test("ZIP lookup discloses statewide expansion", async ({ page }) => {
   await expect(page.locator(".diversion-count")).toContainText("California");
   await expect(page.locator(".diversion-result")).toHaveCount(diversionPrograms.filter(p => p.state === "CA").length);
 });
+
+test("expanded program card shows its supporting source alongside a single contact link", async ({ page }) => {
+  await page.goto("/diversion-programs");
+  await page.getByTestId("select-state-filter").selectOption("PA");
+  const card = page.getByRole("article").filter({ has: page.getByRole("heading", { name: "Philadelphia Veterans Court", exact: true }) });
+  await card.locator("summary").click();
+  await expect(card.getByRole("link", { name: "www.pacodeandbulletin.gov" })).toHaveAttribute("href", /s790\.html$/);
+  await expect(card.locator('a[href*="phillyda.org"]')).toHaveCount(1);
+});

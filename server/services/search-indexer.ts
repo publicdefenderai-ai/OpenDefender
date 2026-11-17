@@ -1046,7 +1046,7 @@ export function buildSearchIndex(): void {
       content: 'Learn how to clear your criminal record. Expungement eligibility by state. Record sealing. Certificates of rehabilitation. Clean slate laws. Start fresh after a conviction.',
       tags: ['expungement', 'record clearing', 'record sealing', 'clean slate', 'rehabilitation'],
       aliases: ['clear record', 'erase criminal record', 'second chance', 'record removal'],
-      url: '/support/reputation'
+      url: '/record-expungement'
     },
     {
       id: 'legal-glossary-hub',

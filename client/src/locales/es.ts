@@ -641,7 +641,7 @@ export default {
           "collateral": { "title": "Consecuencias colaterales", "summary": "Información estatal sobre voto, empleo, beneficios, vivienda, licencias, inmigración, registros y plazos.", "freshness": "La mayoría de los registros están fechados en marzo de 2026; revise la ley actual.", "limitation": "Las consecuencias dependen del delito, la sentencia, supervisión, agencias y hechos no representados aquí.", "evidence": "Los registros mantenidos cubren 51 claves jurisdiccionales en varias familias, con confianza mixta." },
           "rights": { "title": "Derechos constitucionales", "summary": "Resúmenes educativos generales sobre silencio, abogado, registros y juicio rápido.", "freshness": "Contenido editorial estático; no se afirma vigencia universal.", "limitation": "Los resúmenes amplios tienen excepciones y procedimientos estatales. No son una base completa de derecho constitucional.", "evidence": "Se enlazan materiales constitucionales públicos; confirme la regla en la jurisdicción aplicable." },
           "expungement": { "title": "Eliminación y alivio de antecedentes", "summary": "Resúmenes jurisdiccionales distinguen eliminación, sellado, anulación y otras formas de alivio.", "freshness": "Cada entrada tiene su fecha; los registros antiguos necesitan revisión.", "limitation": "Cambian elegibilidad, tarifas, plazos y formularios. Una regla listada no determina elegibilidad.", "evidence": "El registro mantenido tiene 52 jurisdicciones y conserva citas y fechas cuando están disponibles." },
-          "diversion": { "title": "Programas de desvío", "summary": "Directorio de programas estatales y locales de desvío o tribunales especializados.", "freshness": "El encabezado indica abril de 2026; algunos registros pueden ser anteriores.", "limitation": "Los 111 registros no son un directorio completo. Revisar URL no confirma elegibilidad, fondos, admisión, horarios ni operación.", "evidence": "110 registros están marcados como activos. Las fuentes incluyen NADCP, NDAA, tribunales, fiscales y agencias públicas." },
+          "diversion": { "title": "Programas de desvío", "summary": "Directorio de programas estatales y locales de desvío o tribunales especializados.", "freshness": "Algunas fichas se revisaron en noviembre de 2026. Otros registros pueden ser anteriores.", "limitation": "Los 110 registros no son un directorio completo. Revisar URL no confirma elegibilidad, fondos, admisión, horarios ni operación.", "evidence": "108 registros están marcados como activos. Las fuentes incluyen NADCP, NDAA, tribunales, fiscales y agencias públicas." },
           "legalAid": { "title": "Organizaciones de ayuda legal", "summary": "Registros iniciales de defensores públicos, inmigración, ayuda civil y defensores federales.", "freshness": "El encabezado indica última actualización en marzo de 2026; contacte a la organización.", "limitation": "Un registro o enlace activo no significa que acepte el caso, atienda a la persona o tenga capacidad.", "evidence": "El registro tiene 198 organizaciones en 55 etiquetas jurisdiccionales y usa fuentes EOIR, LSC y defensorías." },
           "glossary": { "title": "Glosario legal", "summary": "Definiciones en lenguaje sencillo de términos usados en el producto.", "freshness": "El conteo y los términos se leen del glosario mantenido.", "limitation": "Son resúmenes educativos y pueden omitir significados o excepciones jurisdiccionales.", "evidence": "El glosario contiene 50 términos con enlaces opcionales y fechas por término." },
           "courtServices": { "title": "Servicios judiciales y enlaces", "summary": "Sitios y localizadores oficiales ayudan a encontrar información judicial local.", "freshness": "El mapa judicial figura verificado en enero de 2025; los enlaces pueden cambiar.", "limitation": "Una página o localizador no es una base de reglas locales ni confirma un plazo o servicio.", "evidence": "El registro tiene 52 sistemas judiciales. Confirme reglas y trámites con el tribunal." },
@@ -2050,7 +2050,7 @@ export default {
       "actions": {
         "controlNarrative": {
           "title": "Decida a quién le cuenta — y qué dice",
-          "description": "No está obligado/a a divulgar sus cargos a nadie. Ser intencional sobre a quién confía le protege de rumores y le permite construir una red de apoyo de personas que conocen el panorama completo. Comparta de manera selectiva y con propósito — amigos cercanos y familiares que le apoyarán, no que hablarán. Las plantillas a continuación pueden ayudarle a iniciar esas conversaciones en sus propios términos.",
+          "description": "Compartir información con familiares o amistades es una decisión personal. Las solicitudes de empleo, licencias y otros trámites pueden tener reglas específicas. Revise qué puede preguntarse legalmente y qué registros abarca la pregunta.",
           "timeframe": "Esta semana",
           "priority": "high"
         },
@@ -2097,14 +2097,14 @@ export default {
             "body": "Hola [Nombre],\n\nQuería escribirte porque prefiero que lo escuches de mí que de otra persona.\n\nEstoy enfrentando una situación legal en este momento. No voy a entrar en todos los detalles, pero quiero que sepas que la estoy tomando en serio y trabajando en ella con mi abogado. Este ha sido uno de los períodos más difíciles de mi vida y estoy haciendo lo mejor que puedo para manejarlo responsablemente.\n\nNo busco lástima — simplemente no quería que hubiera una barrera entre nosotros, y confío en ti. Si tienes preguntas, estoy dispuesto/a a hablar, aunque hay límites en lo que puedo compartir ahora mismo.\n\nSobre todo, solo quería que lo supieras. Tener personas de mi lado significa todo.\n\n[Tu Nombre]"
           },
           "professional": {
-            "label": "Respuesta Escrita para un Empleador o Consulta de Verificación de Antecedentes",
+            "label": "Si un empleador pregunta por un caso pendiente",
             "subject": "Asunto: Regarding Background Check Results — [Su Nombre]",
             "body": "Estimado/a [Gerente de Contratación / Departamento de Recursos Humanos],\n\nLe escribo para abordar el asunto legal pendiente que puede aparecer en los resultados de mi verificación de antecedentes.\n\nQuiero ser transparente: actualmente enfrento [un cargo / cargos] que estoy contestando con la asistencia de asesoría legal. El asunto no está resuelto y no puedo compartir detalles específicos en este momento. Quiero enfatizar que este es un caso pendiente — no una condena — y estoy comprometido/a a resolverlo a través del proceso legal apropiado.\n\nHe desempeñado [a un alto nivel / con integridad / responsablemente] en mi vida profesional y estoy dispuesto/a a proporcionar referencias que puedan hablar de mi carácter y ética de trabajo. Agradecería la oportunidad de hablar sobre esto más si lo considera necesario.\n\nGracias por su consideración.\n\nAtentamente,\n[Su Nombre]\n[Su Información de Contacto]"
           },
           "mugshot": {
             "label": "Solicitud de Eliminación de una Foto de Arresto o Registro de un Sitio Web",
             "subject": "Asunto: Solicitud de Eliminación — [Su Nombre Completo] — [Fecha de Arresto]",
-            "body": "A quien corresponda,\n\nLe escribo para solicitar formalmente la eliminación de mi información personal y fotografía de su sitio web.\n\nNombre: [Su Nombre Completo]\nFecha de nacimiento: [Fecha]\nFecha de arresto: [Fecha]\nURL de la página con mi información: [URL]\n\nEsta publicación está causando un daño significativo a mi reputación profesional y personal. [Si aplica: La ley de mi estado (cite el estado y ley, ej. California Civil Code § 1798.91.1) requiere la eliminación de este contenido a solicitud sin cargo alguno.]\n\nSolicito que elimine este contenido en un plazo de [30 días / el plazo requerido por la ley]. Por favor confirme la recepción de esta solicitud y la fecha esperada de eliminación.\n\nSi requiere información adicional, puede contactarme en [su correo / teléfono].\n\nAtentamente,\n[Su Nombre Completo]\n[Su Información de Contacto]"
+            "body": "Hola:\n\nSolicito que retiren mi fotografía de arresto de [URL]. El nombre en el registro es [nombre] y la fecha de arresto es [fecha]. Les agradecería que me confirmaran por escrito cuando la hayan retirado.\n\nGracias,\n[Nombre]"
           }
         },
         "callScripts": {
@@ -2140,7 +2140,7 @@ export default {
           "description": "La EEOC proporciona orientación sobre cuándo los empleadores pueden y no pueden usar los resultados de verificaciones de antecedentes penales bajo la ley federal antidiscriminación."
         },
         "mugRemoval": {
-          "description": "Muchos estados han aprobado leyes que requieren que los sitios web de fotos de arresto eliminen fotos a solicitud. Busque 'ley de eliminación de fotos de arresto [su estado]' para encontrar el proceso."
+          "description": "Puede solicitar la retirada al editor. El Código Civil de California § 1798.91.1 prohíbe a los editores cubiertos cobrar a la persona por retirar la foto. Esa disposición no exige retirarla ni fija un plazo."
         },
         "repDefender": {
           "description": "Los servicios de gestión de reputación en línea pueden ayudar a suprimir o eliminar resultados de búsqueda perjudiciales. Los costos varían — las opciones gratuitas incluyen solicitudes directas a sitios web y motores de búsqueda."
@@ -2160,11 +2160,11 @@ export default {
         },
         "q3": {
           "question": "¿Qué digo cuando alguien me pregunta sobre mi caso?",
-          "answer": "No está obligado/a a discutir su caso con nadie más que su abogado. Una respuesta calmada y breve — 'Estoy manejando un asunto legal y no puedo entrar en detalles ahora mismo' — es completa y profesional. En contextos de empleo, puede ser requerido/a a divulgar cargos pendientes en ciertas solicitudes, pero puede enmarcar su respuesta objetivamente: está pendiente, no es una condena, y lo está manejando adecuadamente."
+          "answer": "En conversaciones personales puede elegir qué compartir. Una solicitud puede preguntar por ciertos registros. La obligación depende del puesto, la jurisdicción, la pregunta y cualquier orden de sellado. Si tiene dudas, consulte a un abogado."
         },
         "q4": {
           "question": "¿Puedo hacer que eliminen mi foto de arresto de internet?",
-          "answer": "Muchos estados han aprobado leyes que requieren que los sitios web de fotos de arresto eliminen fotos a solicitud, a menudo sin cobrar una tarifa. Busque la ley de eliminación de fotos de arresto de su estado. Para sitios que no cumplen o no están cubiertos por la ley estatal, puede enviar solicitudes de eliminación directamente a Google para desindexar páginas. Las organizaciones listadas a continuación también pueden ayudar. Esto no borrará los registros de los sistemas oficiales de la policía, pero puede reducir significativamente lo que las personas encuentran en búsquedas generales."
+          "answer": "Puede pedir al editor que retire la página o foto original. Si ya cambió, una solicitud separada al buscador puede actualizar un resultado obsoleto. Retirar un resultado de búsqueda deja intactos el original y los registros oficiales."
         }
       },
       "tips": {
@@ -2180,19 +2180,19 @@ export default {
         "gapLabel": "La brecha de la segunda oportunidad",
         "gapBody": "La investigación muestra que menos del 10% de las personas elegibles para sellar sus antecedentes lo hacen a través de sistemas basados en peticiones. El papeleo es confuso, la ayuda legal es difícil de encontrar y muchas personas no saben que califican. La eliminación automática cierra esta brecha haciendo que el gobierno inicie el proceso.",
         "autoLabel": "Cómo funciona la eliminación automática",
-        "autoBody": "En los estados con leyes de Pizarra Limpia, los sistemas gubernamentales escanean periódicamente los registros para identificar a las personas que califican. Cuando cumple los criterios, generalmente completar su sentencia y esperar el tiempo requerido, su registro se sella o se borra sin ninguna acción de su parte. No presenta nada, no paga una tarifa ni comparece ante el tribunal.",
+        "autoBody": "Algunos estados tramitan automáticamente los expedientes que cumplen los requisitos. La cobertura depende del expediente y de la ley. Consulte al tribunal o al organismo estatal de registros para confirmar el resultado.",
         "petitionLabel": "Sistemas basados en peticiones (mayoría de estados)",
-        "petitionBody": "En los estados sin eliminación automática, usted presenta una petición al tribunal para que su registro sea sellado o eliminado. Las organizaciones de ayuda legal pueden ayudar con este proceso sin costo. El evaluador de elegibilidad a continuación puede decirle si su estado tiene un programa automático o requiere una petición.",
+        "petitionBody": "Una petición solicita al tribunal una medida de alivio. Algunos estados ofrecen tanto trámites por petición como automáticos. Una organización de asistencia legal puede ayudarle a identificar los requisitos.",
         "statesTitle": "Estados con programas activos de eliminación automática (hasta 2026)",
         "statesList": [
-          "California: condenas por marihuana y cannabis (AB 1599, 2024)",
-          "Illinois: condenas por cannabis (Ley de Regulación y Tributación del Cannabis)",
-          "Nueva York: condenas por marihuana (Ley de Regulación y Tributación de la Marihuana, 2021)",
-          "Pensilvania: faltas menores no violentas después de 10 años (Ley de Pizarra Limpia, 2018)",
-          "Michigan: ciertas ofensas después de 7 años (legislación de Pizarra Limpia, 2021)",
-          "Connecticut: ciertas faltas menores (legislación de Pizarra Limpia, 2021)",
-          "Delaware: ciertas faltas menores (legislación de Pizarra Limpia, 2021)",
-          "Nueva Jersey: condenas por marihuana y cannabis"
+          "California",
+          "Illinois",
+          "Nueva York",
+          "Pensilvania",
+          "Michigan",
+          "Connecticut",
+          "Delaware",
+          "Nueva Jersey"
         ],
         "statesNote": "Otros estados están implementando legislación de Pizarra Limpia. Consulte el rastreador de la Iniciativa de Pizarra Limpia a continuación para conocer el estado actual.",
         "checkTitle": "Cómo verificar si su registro ha sido eliminado",
@@ -2202,7 +2202,7 @@ export default {
           "En California, use la herramienta Clear My Record de Code for America directamente"
         ],
         "screenerLabel": "Verifique su elegibilidad",
-        "screenerDesc": "Responda cuatro preguntas para saber si la eliminación automática o una petición puede aplicar a su situación.",
+        "screenerDesc": "Explore su expediente y las preguntas que debe verificar con una fuente estatal.",
         "screenerCta": "Abrir Evaluador de Elegibilidad",
         "cfaLabel": "Code for America: Clear My Record",
         "cfaDesc": "La plataforma líder para la eliminación automática de antecedentes. Incluye herramientas para California y orientación para otros estados.",
@@ -2215,18 +2215,18 @@ export default {
         "sectionTitle": "Sus Derechos Cuando Se Realiza una Verificación de Antecedentes",
         "sectionSubtitle": "La ley federal le otorga derechos específicos antes de que un empleador pueda usar una verificación de antecedentes en su contra. La mayoría de las personas nunca son informadas de que estos derechos existen.",
         "adverseActionTitle": "Los empleadores deben notificarle antes de actuar",
-        "adverseActionBody": "Antes de que un empleador pueda rechazarle basándose en una verificación de antecedentes, la ley federal (la Ley de Informes de Crédito Justos) les exige que le proporcionen un aviso previo a la acción adversa. Esto incluye una copia del informe y un resumen escrito de sus derechos. Tiene tiempo para revisar el informe y disputar cualquier error antes de que se tome la decisión final. Muchos empleadores omiten este paso — si lo hicieron, eso es una violación de la ley federal.",
+        "adverseActionBody": "Antes de una decisión adversa basada en un informe externo, el procedimiento habitual de la FCRA exige que el empleador entregue una copia y un resumen escrito de sus derechos, con oportunidad de responder antes de la decisión final. El plazo de la agencia no fija una espera específica para el empleador.",
         "disputeTitle": "Puede disputar información inexacta",
-        "disputeBody": "Si una verificación de antecedentes contiene errores — cargos incorrectos, el historial de otra persona, información desactualizada — tiene derecho a disputarla. La empresa de verificación de antecedentes debe investigar en un plazo de 30 días y corregir o eliminar la información inexacta. Presente su disputa por escrito y conserve una copia. Incluya cualquier documentación que respalde su reclamación.",
+        "disputeBody": "Si disputa un error, la agencia que elaboró el informe generalmente tiene 30 días para volver a investigar. Puede disponer de hasta 15 días adicionales si usted aporta información pertinente durante ese plazo. Es el plazo de la agencia. El proceso previo a una decisión adversa del empleador es distinto.",
         "lookbackTitle": "La regla de los 7 años",
-        "lookbackBody": "Según la ley federal, la mayoría de la información negativa, incluidos muchos antecedentes penales, solo puede reportarse durante 7 años para empleos con salario inferior a aproximadamente $75,000 al año. Este límite no se aplica a las condenas en todos los casos, y varios estados tienen reglas más estrictas. Si aparecen registros más antiguos en su informe, puede valer la pena disputarlo.",
+        "lookbackBody": "La ley federal no fija un límite de siete años para informar condenas penales. Para arrestos sin condena y muchos otros datos adversos, generalmente rige un límite de siete años, con excepciones. Si se prevé un salario anual de al menos $75,000, normalmente no se aplican esos límites federales. La ley estatal puede ser más restrictiva. Véase 15 U.S.C. § 1681c(a)–(b).",
         "rapSheetNote": "¿No sabe qué aparece en su historial? Puede solicitar su Resumen de Historia de Identidad del FBI de forma gratuita en IdentityHistory.fbi.gov. Muchos estados también le permiten solicitar su historial penal estatal a través de la policía estatal o el administrador de tribunales.",
         "whatToDoTitle": "Si se usa una verificación de antecedentes en su contra",
         "whatToDoSteps": [
           "Solicite al empleador el aviso previo a la acción adversa y una copia del informe",
           "Revise el informe cuidadosamente en busca de errores — nombres incorrectos, cargos desestimados que aún aparecen como condenas, registros de otra persona",
           "Si encuentra errores, presente una disputa por escrito directamente a la empresa de verificación de antecedentes indicada en el informe",
-          "La empresa debe investigar en 30 días y responder por escrito",
+          "Conserve la disputa y la respuesta escrita de la agencia.",
           "Si el empleador ya tomó una decisión final sin darle el aviso, eso puede ser una violación que puede reportar a la CFPB o perseguir a través de un abogado de protección al consumidor"
         ],
         "cfpbLabel": "CFPB: Verificaciones de Antecedentes y Sus Derechos",
@@ -2275,17 +2275,13 @@ export default {
         "vsExpungementBody": "La eliminación borra el historial. Un certificado deja el historial pero elimina consecuencias específicas. Los certificados suelen estar disponibles para personas que no son elegibles para la eliminación, incluidas personas con condenas más graves, personas que aún no han esperado el período requerido, o personas que necesitan alivio más rápido de lo que permite la eliminación.",
         "statesTitle": "Estados con programas de certificados activos",
         "statesList": [
-          "Nueva York: Certificado de Alivio de Discapacidades y Certificado de Buena Conducta",
-          "Ohio: Certificado de Calificación para el Empleo (disponible 6 meses después de la condena)",
-          "Illinois: Certificado de Alivio de Consecuencias Colaterales",
-          "Carolina del Norte: Certificado de Alivio",
-          "Nueva Jersey: Certificado de Rehabilitación",
-          "California: Certificado de Rehabilitación (condenas por delitos graves; solicitud automática de indulto)",
-          "Tennessee: Certificado de Empleabilidad",
-          "Colorado: Certificado de Alivio (2021)",
-          "Nevada: Certificado de Alivio"
+
+          "El certificado de empleo de Ohio suele requerir seis meses para delitos menores o un año para delitos graves desde la liberación final y el fin de la supervisión, o desde el fin de las sanciones si no hubo encarcelamiento. Puede haber excepciones para presentar antes. Existe otro certificado para vivienda.",
+
+          "En California, el certificado de rehabilitación genera automáticamente una solicitud de indulto. El gobernador decide si lo concede.",
+
         ],
-        "statesNote": "Aproximadamente 20 estados tienen algún tipo de programa de certificados bajo varios nombres. El Centro de Recursos de Consecuencias Colaterales mantiene el inventario estatal más completo.",
+        "statesNote": "Los nombres, las restricciones y la disponibilidad varían. Consulte la fuente estatal vigente para el obstáculo y el registro específicos.",
         "howTitle": "Cómo saber si califica",
         "howSteps": [
           "Consulte el inventario estatal del CCRC para ver si su estado tiene un programa de certificados y qué delitos califican",
@@ -8287,6 +8283,34 @@ export default {
     }
   },
   "screener": {
+    "review": {
+      "sealing": "El sellado automático podría aplicarse a este caso",
+      "acquittalResult": "En Nueva York, la absolución de todos los cargos es un resultado favorable según CPL 160.50. La secretaría del tribunal puede ayudarle a confirmar el resultado registrado y si el expediente está sellado.",
+      "waitTitle": "Aún no se cumple el plazo para una petición bajo CPL 160.59",
+      "offense": "¿Qué delito relacionado con cannabis figura en el expediente?",
+      "possession": "Posesión",
+      "sale": "Venta o distribución",
+      "other": "Otro delito",
+      "pendingCheck": "El caso sigue abierto. Revise el resultado final antes de evaluar una vía que requiera desestimación o absolución.",
+      "closedCheck": "El resultado es relevante para medidas sobre registros sin condena. La orden judicial, el cargo exacto y las normas estatales determinan el trámite.",
+      "unknownResult": "Esta evaluación no permite determinar si su registro reúne los requisitos.",
+      "nyWait": "Según su respuesta, aún no han pasado diez años para solicitar el sellado bajo CPL 160.59. Otras vías tienen reglas distintas.",
+      "nyCheck": "El transcurso de diez años por sí solo no establece la elegibilidad. Consulte los antecedentes, delitos excluidos y otros requisitos en la guía judicial.",
+      "check": "Hay que verificar la vía aplicable, el plazo y el efecto de la supervisión con las normas estatales y su expediente.",
+      "dispositionCheck": "Revise el delito específico y el resultado final en el expediente. Un arresto o cargo relacionado con cannabis por sí solo no establece la elegibilidad.",
+      "stateSource": "Recursos judiciales de {{state}}",
+      "automaticSource": "Información estatal sobre el alivio automático",
+      "outcome": "¿Cómo terminó el caso?",
+      "nyTiming": "Para una petición bajo CPL 160.59 en Nueva York, ¿han pasado diez años desde su última condena o su salida de prisión, lo que ocurrió después?",
+      "noTiming": "El hecho que inicia el plazo depende del trámite. Esta evaluación no dispone de un plazo verificado para este registro.",
+      "unknown": "No estoy seguro/a",
+      "short": "Menos de diez años",
+      "long": "Diez años o más",
+      "dismissed": "Desestimado o sin cargos presentados",
+      "acquitted": "Absolución de todos los cargos del caso",
+      "pending": "Caso pendiente",
+      "convicted": "Condena"
+    },
     "title": "Evaluador de Elegibilidad para Eliminación de Antecedentes",
     "subtitle": "Responda cuatro preguntas para saber si sus antecedentes pueden ser elegibles para expungement, sellado o eliminación automática. Esta herramienta solo proporciona información general. No es asesoramiento legal.",
     "backToReputation": "Volver a Reputación y Registro",

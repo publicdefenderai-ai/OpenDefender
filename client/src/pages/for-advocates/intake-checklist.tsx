@@ -774,7 +774,7 @@ export default function IntakeChecklist() {
                 {[
                   { href: '/for-advocates/mitigation-builder', label: 'Build mitigation summary', desc: 'For bail, diversion, and sentencing' },
                   { href: '/support/court-logistics/bail-preparation', label: 'Bail preparation tool', desc: 'If client is detained' },
-                  { href: '/diversion-programs', label: 'Diversion programs', desc: '111 programs across all 50 states + DC' },
+                  { href: '/diversion-programs', label: 'Diversion programs', desc: 'Programs across all 50 states + DC' },
                   { href: '/immigration-guidance', label: 'Immigration guidance', desc: 'If Padilla flag fired' },
                   { href: '/support/reputation/eligibility', label: 'Expungement screener', desc: 'Post-resolution record relief' },
                 ].map(({ href, label, desc }) => (

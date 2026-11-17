@@ -639,7 +639,7 @@ export default {
           "collateral": { "title": "Collateral consequences", "summary": "State-level voting, employment, benefits, housing, licensing, immigration, registry, and deadline information.", "freshness": "Most maintained records are dated March 2026; check the record and current law.", "limitation": "Consequences can depend on offense, sentence, supervision, agency rules, and facts not represented here.", "evidence": "The maintained exports cover 51 jurisdiction keys across multiple consequence families with mixed confidence." },
           "rights": { "title": "Constitutional rights", "summary": "General educational summaries of rights such as silence, counsel, search, and speedy trial.", "freshness": "Static editorial content; no universal currentness claim.", "limitation": "Broad summaries have exceptions and state-specific procedures. They are not a complete constitutional or case-law database.", "evidence": "The page points to Constitution Congress and related public legal materials; users should confirm the rule in the governing jurisdiction." },
           "expungement": { "title": "Expungement and record relief", "summary": "Jurisdiction-specific eligibility summaries distinguish expungement, sealing, set-aside, and other forms of record relief.", "freshness": "Entries carry individual update dates; older records need re-checking.", "limitation": "Eligibility, fees, waiting periods, and forms change. A listed rule is not an eligibility determination.", "evidence": "The maintained export has 52 jurisdiction records and records the source citations and update date where available." },
-          "diversion": { "title": "Diversion programs", "summary": "A directory of statewide and local diversion or problem-solving programs used in resource searches.", "freshness": "Dataset header says April 2026; individual records may be older.", "limitation": "The 111 records are not a complete directory. URL checks cannot establish eligibility, funding, intake, hours, or continued operation.", "evidence": "110 records are currently marked active in the export. Sources include NADCP, NDAA, courts, prosecutors, and other public agencies." },
+          "diversion": { "title": "Diversion programs", "summary": "A directory of statewide and local diversion or problem-solving programs used in resource searches.", "freshness": "Selected listings were reviewed in November 2026. Other records may be older.", "limitation": "The 110 records are not a complete directory. URL checks cannot establish eligibility, funding, intake, hours, or continued operation.", "evidence": "108 records are currently marked active in the export. Sources include NADCP, NDAA, courts, prosecutors, and other public agencies." },
           "legalAid": { "title": "Legal-aid organizations", "summary": "Seeded public-defender, immigration, civil legal-aid, and federal defender directory records.", "freshness": "Dataset header says last updated March 2026; check the organization directly.", "limitation": "A directory record or working link does not mean the organization accepts this case, serves this person, or has capacity.", "evidence": "The maintained seed contains 198 organizations across 55 jurisdiction labels and draws on EOIR, LSC, public defender, and federal defender sources." },
           "glossary": { "title": "Legal glossary", "summary": "Plain-language definitions for legal terms used in the product.", "freshness": "Count and terms are read from the maintained glossary export.", "limitation": "Definitions are educational summaries and may omit jurisdiction-specific meanings or exceptions.", "evidence": "The maintained glossary contains 50 terms with optional source links and per-term dates." },
           "courtServices": { "title": "Court services and locator links", "summary": "Official court-system websites and locator paths help users find local court information.", "freshness": "The maintained court map is documented as verified January 2025; links can change.", "limitation": "A court homepage or locator is not a local-rule database and does not confirm a deadline or service availability.", "evidence": "The export has 52 court-system entries. Local rules and clerk instructions must be confirmed with the court." },
@@ -2048,7 +2048,7 @@ export default {
       "actions": {
         "controlNarrative": {
           "title": "Decide who you tell and what you say",
-          "description": "You are not obligated to disclose your charges to anyone. Being intentional about who you confide in protects you from rumors and lets you build a support network of people who know the full picture. Share selectively and purposefully: close friends and family who will support you, not gossip. The templates below can help you start those conversations on your own terms.",
+          "description": "Sharing with friends or family is a personal choice. Employment, licensing and other applications can have specific disclosure rules. Check what the question lawfully asks and which records it covers.",
           "timeframe": "This week",
           "priority": "high"
         },
@@ -2095,14 +2095,14 @@ export default {
             "body": "Hi [Name],\n\nI wanted to reach out because I'd rather you hear this from me than through someone else.\n\nI'm dealing with a legal matter right now. I'm not going to go into all the details, but I want you to know that I'm taking it seriously and working through it with my attorney. This has been one of the hardest periods of my life and I'm doing my best to handle it responsibly.\n\nI'm not looking for pity. I just didn't want there to be a wall between us, and I trust you. If you have questions, I'm happy to talk, though there are limits to what I can share right now.\n\nMost of all, I just wanted you to know. Having people in my corner means everything.\n\n[Your Name]"
           },
           "professional": {
-            "label": "Written Response for an Employer or Background Check Inquiry",
+            "label": "If an employer asks about a pending case",
             "subject": "Subject: Regarding Background Check Results, [Your Name]",
             "body": "Dear [Hiring Manager / HR Department],\n\nI am writing to address the pending legal matter that may appear in my background check results.\n\nI want to be transparent: I am currently facing [a charge / charges] that I am contesting with the assistance of legal counsel. The matter is unresolved and I am not able to share specifics at this time. I want to emphasize that this is a pending case, not a conviction, and I am committed to resolving it through the proper legal process.\n\nI have consistently performed [at a high level / with integrity / responsibly] in my professional life and I am happy to provide references who can speak to my character and work ethic. I would welcome the opportunity to discuss this further if you feel it is necessary.\n\nThank you for your consideration.\n\nSincerely,\n[Your Name]\n[Your Contact Information]"
           },
           "mugshot": {
             "label": "Request to Remove a Mugshot or Record from a Website",
             "subject": "Subject: Removal Request | [Your Full Name] | [Date of Arrest]",
-            "body": "To Whom It May Concern,\n\nI am writing to formally request the removal of my personal information and photograph from your website.\n\nName: [Your Full Name]\nDate of birth: [DOB]\nDate of arrest: [Date]\nURL of the page containing my information: [URL]\n\nThis listing is causing significant harm to my professional and personal reputation. [If applicable: My state's law (cite state, e.g., California Civil Code § 1798.91.1) requires the removal of this content upon request without a fee.]\n\nI request that you remove this content within [30 days / the timeframe required by law]. Please confirm receipt of this request and the expected removal date.\n\nIf you require any additional information, please contact me at [your email / phone].\n\nSincerely,\n[Your Full Name]\n[Your Contact Information]"
+            "body": "Hello,\n\nPlease remove my booking photograph from [page URL]. The name on the record is [name] and the arrest date is [date]. Please confirm in writing when the photograph has been removed.\n\nThank you,\n[Name]"
           }
         },
         "callScripts": {
@@ -2138,7 +2138,7 @@ export default {
           "description": "The EEOC provides guidance on when employers can and cannot use criminal background check results under federal anti-discrimination law."
         },
         "mugRemoval": {
-          "description": "Many states now require mugshot websites to remove photos upon request. Search '[your state] mugshot removal law' to find the process and whether fees can be charged."
+          "description": "A publisher can receive a removal request. California Civil Code § 1798.91.1 prohibits covered publishers from charging the subject for removal. That provision does not require removal or set a deadline."
         },
         "repDefender": {
           "description": "Online reputation management services can help suppress or remove harmful search results. Costs vary. Free options include direct requests to websites and search engines."
@@ -2158,11 +2158,11 @@ export default {
         },
         "q3": {
           "question": "What do I say when someone asks about my case?",
-          "answer": "You are not required to discuss your case with anyone other than your attorney. A calm, brief response such as 'I'm dealing with a legal matter and I can't get into the details right now' is complete and professional. In employment contexts, you may be required to disclose pending charges on certain applications, but you can frame your response factually: it's pending, it's not a conviction, and you're handling it properly."
+          "answer": "In personal conversations you can choose what to share. An application may ask about particular records. Disclosure depends on the role, the jurisdiction, the wording of the question and any sealing order. Ask a lawyer if you are unsure what must be included."
         },
         "q4": {
           "question": "Can I get my mugshot removed from the internet?",
-          "answer": "Many states have passed laws requiring mugshot websites to remove photos upon request, often without charging a fee. Search for your state's mugshot removal law. For sites that don't comply or aren't covered by state law, you can submit removal requests directly to Google to de-index pages. Organizations like those listed below can also assist. This won't erase records from official law enforcement systems, but it can significantly reduce what people find through general searches."
+          "answer": "Ask the publisher about removing the original page or photo. If the original has changed, a separate search-engine request can refresh an outdated result. Removing a search result leaves the publisher’s page and official records intact."
         }
       },
       "tips": {
@@ -2178,19 +2178,19 @@ export default {
         "gapLabel": "The second chance gap",
         "gapBody": "Research shows that fewer than 10% of people eligible to seal their records actually do so through petition-based systems. The paperwork is confusing, legal help is hard to find, and many people do not know they qualify. Automatic clearance closes this gap by having the government initiate the process.",
         "autoLabel": "How automatic clearance works",
-        "autoBody": "In states with Clean Slate laws, government systems periodically scan records to identify people who qualify. When you meet the criteria, typically completing your sentence and waiting the required time, your record is sealed or cleared without any action from you. You do not file anything, pay a fee, or appear in court.",
+        "autoBody": "Some states process eligible records automatically. Coverage depends on the record and the law. Check with the court or state records agency to confirm whether relief has been recorded.",
         "petitionLabel": "Petition-based systems (most states)",
-        "petitionBody": "In states without automatic clearance, you file a petition with the court to have your record sealed or expunged. Legal aid organizations can help with this process at no cost. The eligibility screener below can tell you whether your state has an automatic program or requires a petition.",
+        "petitionBody": "A petition asks the court for relief. Some states offer both petition and automatic pathways. Legal aid can help identify which requirements apply.",
         "statesTitle": "States with active automatic clearance programs (as of 2026)",
         "statesList": [
-          "California: marijuana and cannabis convictions (AB 1599, 2024)",
-          "Illinois: cannabis convictions (Cannabis Regulation and Tax Act)",
-          "New York: marijuana convictions (Marijuana Regulation and Taxation Act, 2021)",
-          "Pennsylvania: non-violent misdemeanors after 10 years (Clean Slate Act, 2018)",
-          "Michigan: certain offenses after 7 years (Clean Slate legislation, 2021)",
-          "Connecticut: certain misdemeanors (Clean Slate legislation, 2021)",
-          "Delaware: certain misdemeanors (Clean Slate legislation, 2021)",
-          "New Jersey: marijuana and cannabis convictions"
+          "California",
+          "Illinois",
+          "New York",
+          "Pennsylvania",
+          "Michigan",
+          "Connecticut",
+          "Delaware",
+          "New Jersey"
         ],
         "statesNote": "Other states are implementing Clean Slate legislation. Check the Clean Slate Initiative tracker below for the latest status.",
         "checkTitle": "How to check whether your record has been cleared",
@@ -2200,7 +2200,7 @@ export default {
           "In California, use Code for America's Clear My Record tool directly"
         ],
         "screenerLabel": "Check your eligibility",
-        "screenerDesc": "Answer four questions to find out whether automatic clearance or a petition may apply to your situation.",
+        "screenerDesc": "Explore your record and questions to verify with a state source.",
         "screenerCta": "Open Eligibility Screener",
         "cfaLabel": "Code for America: Clear My Record",
         "cfaDesc": "The leading platform for automatic record clearance. Includes tools for California and guidance for other states.",
@@ -2213,18 +2213,18 @@ export default {
         "sectionTitle": "Your Rights When a Background Check Is Run",
         "sectionSubtitle": "Federal law gives you specific rights before an employer can use a background check against you. Most people are never told these rights exist.",
         "adverseActionTitle": "Employers must notify you before acting",
-        "adverseActionBody": "Before an employer can reject you based on a background check, federal law (the Fair Credit Reporting Act) requires them to give you a pre-adverse action notice. This includes a copy of the report and a written summary of your rights. You have time to review the report and dispute any errors before the decision is final. Many employers skip this step. If they did, that is a violation of federal law.",
+        "adverseActionBody": "Before an employer takes adverse action based on a third-party background report, the usual FCRA process requires giving you a copy of the report and a written summary of your rights, with an opportunity to respond before the decision is final. The agency’s dispute deadline does not set a fixed employer waiting period.",
         "disputeTitle": "You can dispute inaccurate information",
-        "disputeBody": "If a background check contains errors, such as wrong charges, someone else's record, or outdated information, you have the right to dispute it. The background check company must investigate within 30 days and correct or remove inaccurate information. Submit your dispute in writing and keep a copy. Include any documentation that supports your claim.",
+        "disputeBody": "If you dispute an error, the reporting agency generally has 30 days to reinvestigate. It may have up to 15 additional days if you provide relevant new information during that period. This is the agency’s deadline. An employer’s pre-adverse-action process is separate.",
         "lookbackTitle": "The 7-year rule",
-        "lookbackBody": "Under federal law, most negative information, including many criminal records, can only be reported for 7 years for jobs paying under roughly $75,000 per year. This limit does not apply to convictions in all cases, and several states have stricter rules. If older records are appearing on your report, this may be worth disputing.",
+        "lookbackBody": "Federal law sets no seven-year limit for criminal convictions on consumer background reports. Arrests without conviction and many other adverse items generally have a seven-year limit, subject to exceptions. For employment expected to pay at least $75,000 annually, the federal age limits generally do not apply. State law may restrict reporting further. See 15 U.S.C. § 1681c(a)–(b).",
         "rapSheetNote": "Not sure what is on your record? You can request your FBI Identity History Summary for free at IdentityHistory.fbi.gov. Many states also allow you to request your state criminal history through the state police or court administrator.",
         "whatToDoTitle": "If a background check is used against you",
         "whatToDoSteps": [
           "Ask the employer for the pre-adverse action notice and a copy of the report",
           "Review the report carefully for errors: wrong names, dismissed charges still listed as convictions, records from another person",
           "If you find errors, submit a written dispute directly to the background check company listed on the report",
-          "The company must investigate within 30 days and respond in writing",
+          "Keep the dispute and the reporting agency’s written response.",
           "If the employer already made a final decision without giving you the notice, that may be a violation you can report to the CFPB or pursue through a consumer protection attorney"
         ],
         "cfpbLabel": "CFPB: Background Checks and Your Rights",
@@ -2273,17 +2273,13 @@ export default {
         "vsExpungementBody": "Expungement clears the record. A certificate leaves the record but removes specific consequences. Certificates are often available to people who are not eligible for expungement, including people with more serious convictions, people who have not yet waited out the required period, or people who need relief faster than expungement allows.",
         "statesTitle": "States with active certificate programs",
         "statesList": [
-          "New York: Certificate of Relief from Disabilities and Certificate of Good Conduct",
-          "Ohio: Certificate of Qualification for Employment (available 6 months after conviction)",
-          "Illinois: Certificate of Relief from Collateral Consequences",
-          "North Carolina: Certificate of Relief",
-          "New Jersey: Certificate of Rehabilitation",
-          "California: Certificate of Rehabilitation (felony convictions; automatic application to pardon)",
-          "Tennessee: Certificate of Employability",
-          "Colorado: Certificate of Relief (2021)",
-          "Nevada: Certificate of Relief"
+
+          "Ohio’s employment certificate usually requires six months for a misdemeanor or one year for a felony after final release from incarceration and supervision, or from all sanctions if there was no incarceration. Early filing criteria may apply. Housing has a separate certificate.",
+
+          "California’s Certificate of Rehabilitation automatically submits a pardon application. The Governor decides whether to grant a pardon.",
+
         ],
-        "statesNote": "Approximately 20 states have some form of certificate program under various names. The Collateral Consequences Resource Center maintains the most complete state-by-state inventory.",
+        "statesNote": "Certificate names, restrictions and availability vary. Check the current state source for the specific barrier and record.",
         "howTitle": "How to find out if you qualify",
         "howSteps": [
           "Check the CCRC state inventory to see if your state has a certificate program and what offenses qualify",
@@ -8281,6 +8277,34 @@ export default {
     }
   },
   "screener": {
+    "review": {
+      "sealing": "Automatic sealing may apply to this case",
+      "acquittalResult": "New York courts identify acquittal on all charges as a favorable disposition under CPL 160.50. The clerk can help confirm how the final disposition is recorded and whether sealing has occurred.",
+      "waitTitle": "The waiting period for a CPL 160.59 petition has not passed",
+      "offense": "Which cannabis offense appears on the record?",
+      "possession": "Possession",
+      "sale": "Sale or distribution",
+      "other": "Another offense",
+      "pendingCheck": "The case is still open. Check the docket for a final disposition before evaluating relief that depends on dismissal or acquittal.",
+      "closedCheck": "The disposition is relevant to nonconviction relief. The court order, exact charge and state rules determine which process applies.",
+      "unknownResult": "We can’t determine from this screening whether your record qualifies.",
+      "nyWait": "For sealing under CPL 160.59, the ten-year interval has not yet passed based on your answer. Other pathways have different rules.",
+      "nyCheck": "Ten years alone does not establish eligibility. Check criminal history, excluded offenses and other conditions in the court guide.",
+      "check": "The applicable pathway, waiting period and effect of supervision need to be checked against the state rules and your court records.",
+      "dispositionCheck": "Check the exact offense and final disposition on the court record. An arrest or cannabis-related charge alone does not establish coverage.",
+      "stateSource": "{{state}} court resources",
+      "automaticSource": "State information about automatic record relief",
+      "outcome": "How did this case end?",
+      "nyTiming": "For New York’s CPL 160.59 petition, have ten years passed since your most recent conviction or release from incarceration, whichever was later?",
+      "noTiming": "The starting event depends on the relief pathway. This screener has no verified waiting period for this record.",
+      "unknown": "I’m not sure",
+      "short": "Less than ten years",
+      "long": "Ten years or more",
+      "dismissed": "Dismissed or no charges filed",
+      "acquitted": "Acquitted on every charge in this case",
+      "pending": "Case still pending",
+      "convicted": "Conviction"
+    },
     "title": "Record Clearance Eligibility Screener",
     "subtitle": "Answer four questions to find out if your record may be eligible for expungement, sealing, or automatic clearance. This tool gives general information only. It is not legal advice.",
     "backToReputation": "Back to Reputation and Record Support",

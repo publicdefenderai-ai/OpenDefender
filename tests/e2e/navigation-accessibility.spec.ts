@@ -316,12 +316,12 @@ test.describe("intent navigation and accessibility", () => {
 
     await page.getByRole("radio", { name: "Misdemeanor conviction" }).click();
     await page.getByRole("button", { name: "Next" }).click();
-    await page.getByRole("radio", { name: "More than 7 years ago" }).click();
+    await expect(page.getByText("This screener has no verified waiting period", { exact: false })).toBeVisible();
     await page.getByRole("button", { name: "Next" }).click();
     await page.getByRole("radio", { name: "Yes, everything is complete" }).click();
     await page.getByRole("button", { name: "See My Result" }).click();
 
-    await expect(page.getByText(/may be eligible|may apply|not eligible/i).first()).toBeVisible();
+    await expect(page.getByRole("heading", { name: "We can’t determine from this screening whether your record qualifies." })).toBeVisible();
     await expect(page.getByRole("button", { name: "Start Over" })).toBeVisible();
     await page.getByRole("button", { name: "Start Over" }).click();
     await expect(page.getByRole("button", { name: "Next" })).toBeDisabled();
