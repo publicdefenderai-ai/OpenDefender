@@ -1,0 +1,1852 @@
+[
+  {
+    "id": "tx-pc-22-04-serious-intentional",
+    "name": "Injury to a child, elderly or disabled individual (intentional or knowing serious injury)",
+    "officialTitle": "INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.04(a)(1), (a)(2)",
+    "citation": "Tex. Penal Code § 22.04(a)(1), (a)(2)",
+    "conduct": "Intentionally or knowingly causing serious bodily injury or serious mental deficiency, impairment or injury to a child, elderly individual or disabled individual by an act, or by an omission that breaches a legal or statutory duty or assumed care, custody or control. For an assumed-care omission, the person’s acts, words or course of conduct must lead a reasonable person to conclude that responsibility for protection, food, shelter or medical care was accepted. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. Section 22.04(k) provides defenses for qualifying physician-directed or good-faith emergency medical care. Subsection (l) provides conditional affirmative defenses involving qualifying religious treatment and a minimal age difference when the victim is a child. The limited family-violence-victim omission defense in (l)(2), and the prior-notice defense for a charge under (b)(2), require their specified conditions. For the disabled-victim branch under (a), (m) provides an affirmative defense if the person did not know and could not reasonably have known of the qualifying disability.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. If the same criminal episode is prosecuted under §22.04 and another Penal Code section and sentences are assessed for both, §22.04(h) requires concurrent sentences.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(a)(1), (a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(b), (c), (d), (i), (j), (k), (l), (m)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "FA",
+        "section": "71.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-04-serious-reckless",
+    "name": "Injury to a child, elderly or disabled individual (reckless serious injury)",
+    "officialTitle": "INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.04(a)(1), (a)(2)",
+    "citation": "Tex. Penal Code § 22.04(a)(1), (a)(2)",
+    "conduct": "Recklessly causing serious bodily injury or serious mental deficiency, impairment or injury to a child, elderly individual or disabled individual by an act, or by an omission that breaches a legal or statutory duty or assumed care, custody or control. For an assumed-care omission, the person’s acts, words or course of conduct must lead a reasonable person to conclude that responsibility for protection, food, shelter or medical care was accepted. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. Section 22.04(k) provides defenses for qualifying physician-directed or good-faith emergency medical care. Subsection (l) provides conditional affirmative defenses involving qualifying religious treatment and a minimal age difference when the victim is a child. The limited family-violence-victim omission defense in (l)(2), and the prior-notice defense for a charge under (b)(2), require their specified conditions. For the disabled-victim branch under (a), (m) provides an affirmative defense if the person did not know and could not reasonably have known of the qualifying disability.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. If the same criminal episode is prosecuted under §22.04 and another Penal Code section and sentences are assessed for both, §22.04(h) requires concurrent sentences.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(a)(1), (a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(b), (c), (d), (i), (j), (k), (l), (m)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "FA",
+        "section": "71.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-04-bodily-intentional",
+    "name": "Injury to a child, elderly or disabled individual (intentional or knowing bodily injury)",
+    "officialTitle": "INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.04(a)(3)",
+    "citation": "Tex. Penal Code § 22.04(a)(3)",
+    "conduct": "Intentionally or knowingly causing bodily injury to a child, elderly individual or disabled individual by an act, or by an omission that breaches a legal or statutory duty or assumed care, custody or control. For an assumed-care omission, the person’s acts, words or course of conduct must lead a reasonable person to conclude that responsibility for protection, food, shelter or medical care was accepted. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. Section 22.04(k) provides defenses for qualifying physician-directed or good-faith emergency medical care. Subsection (l) provides conditional affirmative defenses involving qualifying religious treatment and a minimal age difference when the victim is a child. The limited family-violence-victim omission defense in (l)(2), and the prior-notice defense for a charge under (b)(2), require their specified conditions. For the disabled-victim branch under (a), (m) provides an affirmative defense if the person did not know and could not reasonably have known of the qualifying disability.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. If the same criminal episode is prosecuted under §22.04 and another Penal Code section and sentences are assessed for both, §22.04(h) requires concurrent sentences. The separately listed direct-care-employee branch involving a qualifying disabled resident is a second-degree felony.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(b), (c), (d), (i), (j), (k), (l), (m)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "FA",
+        "section": "71.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13990043"
+  },
+  {
+    "id": "tx-pc-22-04-bodily-reckless",
+    "name": "Injury to a child, elderly or disabled individual (reckless bodily injury)",
+    "officialTitle": "INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.04(a)(3)",
+    "citation": "Tex. Penal Code § 22.04(a)(3)",
+    "conduct": "Recklessly causing bodily injury to a child, elderly individual or disabled individual by an act, or by an omission that breaches a legal or statutory duty or assumed care, custody or control. For an assumed-care omission, the person’s acts, words or course of conduct must lead a reasonable person to conclude that responsibility for protection, food, shelter or medical care was accepted. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. Section 22.04(k) provides defenses for qualifying physician-directed or good-faith emergency medical care. Subsection (l) provides conditional affirmative defenses involving qualifying religious treatment and a minimal age difference when the victim is a child. The limited family-violence-victim omission defense in (l)(2), and the prior-notice defense for a charge under (b)(2), require their specified conditions. For the disabled-victim branch under (a), (m) provides an affirmative defense if the person did not know and could not reasonably have known of the qualifying disability.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Qualifying deadly-weapon or prior-conviction findings can change punishment. If the same criminal episode is prosecuted under §22.04 and another Penal Code section and sentences are assessed for both, §22.04(h) requires concurrent sentences.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(b), (c), (d), (i), (j), (k), (l), (m)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "FA",
+        "section": "71.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-04-negligent",
+    "name": "Injury to a child, elderly or disabled individual (criminally negligent injury)",
+    "officialTitle": "INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.04(a)(1), (a)(2), (a)(3)",
+    "citation": "Tex. Penal Code § 22.04(a)(1), (a)(2), (a)(3)",
+    "conduct": "With criminal negligence, causing serious bodily injury, serious mental deficiency, impairment or injury, or bodily injury to a child, elderly individual or disabled individual by an act. The separate institutional-care provision addresses criminally negligent omissions. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. Section 22.04(k) provides defenses for qualifying physician-directed or good-faith emergency medical care. Subsection (l) provides conditional affirmative defenses involving qualifying religious treatment and a minimal age difference when the victim is a child. For the disabled-victim branch under (a), (m) provides an affirmative defense if the person did not know and could not reasonably have known of the qualifying disability.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Qualifying deadly-weapon or prior-conviction findings can change punishment. If the same criminal episode is prosecuted under §22.04 and another Penal Code section and sentences are assessed for both, §22.04(h) requires concurrent sentences.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(a)(1), (a)(2), (a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(b), (c), (d), (i), (j), (k), (l), (m)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-04-institutional-serious-intentional",
+    "name": "Injury to a child, elderly or disabled individual (institutional omission, intentional or knowing serious injury)",
+    "officialTitle": "INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.04(a-1)(1), (a-1)(2)",
+    "citation": "Tex. Penal Code § 22.04(a-1)(1), (a-1)(2)",
+    "conduct": "As an owner, operator or employee of a group home or institutional care facility listed in §22.04(a-1), intentionally or knowingly causing serious bodily injury or serious mental deficiency, impairment or injury by omission to a child, elderly individual or disabled individual who resides there. The omission must breach a legal or statutory duty, or assumed care, custody or control. When acting in that institutional capacity, the person is considered to have accepted responsibility for the resident’s protection, food, shelter or medical care. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. Section 22.04(k) provides defenses for qualifying physician-directed or good-faith emergency medical care. Subsection (l) provides conditional affirmative defenses involving qualifying religious treatment and a minimal age difference when the victim is a child.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. If the same criminal episode is prosecuted under §22.04 and another Penal Code section and sentences are assessed for both, §22.04(h) requires concurrent sentences.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(a-1)(1), (a-1)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(b), (c), (d), (i), (j), (k), (l), (m)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-04-institutional-serious-reckless",
+    "name": "Injury to a child, elderly or disabled individual (institutional omission, reckless serious injury)",
+    "officialTitle": "INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.04(a-1)(1), (a-1)(2)",
+    "citation": "Tex. Penal Code § 22.04(a-1)(1), (a-1)(2)",
+    "conduct": "As an owner, operator or employee of a group home or institutional care facility listed in §22.04(a-1), recklessly causing serious bodily injury or serious mental deficiency, impairment or injury by omission to a child, elderly individual or disabled individual who resides there. The omission must breach a legal or statutory duty, or assumed care, custody or control. When acting in that institutional capacity, the person is considered to have accepted responsibility for the resident’s protection, food, shelter or medical care. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. Section 22.04(k) provides defenses for qualifying physician-directed or good-faith emergency medical care. Subsection (l) provides conditional affirmative defenses involving qualifying religious treatment and a minimal age difference when the victim is a child.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. If the same criminal episode is prosecuted under §22.04 and another Penal Code section and sentences are assessed for both, §22.04(h) requires concurrent sentences.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(a-1)(1), (a-1)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(b), (c), (d), (i), (j), (k), (l), (m)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-04-institutional-bodily-intentional",
+    "name": "Injury to a child, elderly or disabled individual (institutional omission, intentional or knowing bodily injury)",
+    "officialTitle": "INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.04(a-1)(3)",
+    "citation": "Tex. Penal Code § 22.04(a-1)(3)",
+    "conduct": "As an owner, operator or employee of a group home or institutional care facility listed in §22.04(a-1), intentionally or knowingly causing bodily injury by omission to a child, elderly individual or disabled individual who resides there. The omission must breach a legal or statutory duty, or assumed care, custody or control. When acting in that institutional capacity, the person is considered to have accepted responsibility for the resident’s protection, food, shelter or medical care. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. Section 22.04(k) provides defenses for qualifying physician-directed or good-faith emergency medical care. Subsection (l) provides conditional affirmative defenses involving qualifying religious treatment and a minimal age difference when the victim is a child.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. If the same criminal episode is prosecuted under §22.04 and another Penal Code section and sentences are assessed for both, §22.04(h) requires concurrent sentences.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(a-1)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(b), (c), (d), (i), (j), (k), (l), (m)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-04-institutional-bodily-reckless",
+    "name": "Injury to a child, elderly or disabled individual (institutional omission, reckless bodily injury)",
+    "officialTitle": "INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.04(a-1)(3)",
+    "citation": "Tex. Penal Code § 22.04(a-1)(3)",
+    "conduct": "As an owner, operator or employee of a group home or institutional care facility listed in §22.04(a-1), recklessly causing bodily injury by omission to a child, elderly individual or disabled individual who resides there. The omission must breach a legal or statutory duty, or assumed care, custody or control. When acting in that institutional capacity, the person is considered to have accepted responsibility for the resident’s protection, food, shelter or medical care. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. Section 22.04(k) provides defenses for qualifying physician-directed or good-faith emergency medical care. Subsection (l) provides conditional affirmative defenses involving qualifying religious treatment and a minimal age difference when the victim is a child.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Qualifying deadly-weapon or prior-conviction findings can change punishment. If the same criminal episode is prosecuted under §22.04 and another Penal Code section and sentences are assessed for both, §22.04(h) requires concurrent sentences.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(a-1)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(b), (c), (d), (i), (j), (k), (l), (m)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-04-institutional-negligent",
+    "name": "Injury to a child, elderly or disabled individual (institutional omission, criminally negligent injury)",
+    "officialTitle": "INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.04(a-1)(1), (a-1)(2), (a-1)(3)",
+    "citation": "Tex. Penal Code § 22.04(a-1)(1), (a-1)(2), (a-1)(3)",
+    "conduct": "As an owner, operator or employee of a group home or institutional care facility listed in §22.04(a-1), with criminal negligence causing serious bodily injury, serious mental deficiency, impairment or injury, or bodily injury by omission to a child, elderly individual or disabled individual who resides there. The omission must breach a legal or statutory duty, or assumed care, custody or control. When acting in that institutional capacity, the person is considered to have accepted responsibility for the resident’s protection, food, shelter or medical care. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. Section 22.04(k) provides defenses for qualifying physician-directed or good-faith emergency medical care. Subsection (l) provides conditional affirmative defenses involving qualifying religious treatment and a minimal age difference when the victim is a child.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Qualifying deadly-weapon or prior-conviction findings can change punishment. If the same criminal episode is prosecuted under §22.04 and another Penal Code section and sentences are assessed for both, §22.04(h) requires concurrent sentences.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(a-1)(1), (a-1)(2), (a-1)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(b), (c), (d), (i), (j), (k), (l), (m)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-04-direct-care",
+    "name": "Injury to a disabled resident (intentional or knowing bodily injury by a direct-care employee)",
+    "officialTitle": "INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.04(a)(3)",
+    "citation": "Tex. Penal Code § 22.04(a)(3)",
+    "conduct": "Intentionally or knowingly causing bodily injury to a disabled individual residing in a center defined by Health and Safety Code §555.001 or a facility licensed under Chapter 252, when the actor is an employee whose employment involved providing direct care for that resident. An omission must satisfy §22.04(b) and (d). A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. The qualifying medical-care defenses and conditional affirmative defenses in (i) through (m) require their stated circumstances.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment. When §22.04(h) applies to convictions under this section and another Penal Code section in the same criminal episode, the sentences must run concurrently.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(b), (c), (d), (i), (j), (k), (l), (m)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(h)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "555.001",
+        "subdivision": "(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "252.002",
+        "subdivision": "(4), (7)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "252.031",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-041-abandon-return",
+    "name": "Abandoning a child, elderly or disabled individual (with intent to return)",
+    "officialTitle": "ABANDONING OR ENDANGERING A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.041(b)",
+    "citation": "Tex. Penal Code § 22.041(b)",
+    "conduct": "Having custody, care or control of a child, elderly individual or disabled individual, intentionally abandoning that person in circumstances exposing them to an unreasonable risk of harm. Abandonment means leaving without reasonable and necessary care in circumstances where no reasonable similarly situated person would leave a person of that age and ability. The person intended to return, and the higher imminent-danger abandonment circumstance in (e) does not apply. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. The exception in §22.041(h) covers voluntary delivery of a child to a designated emergency infant care provider under Family Code §262.302, subject to that section’s conditions. The current §22.041 text is effective September 1, 2025. Earlier conduct requires the applicable version.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Qualifying deadly-weapon or prior-conviction findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.041",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.041",
+        "subdivision": "(d)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.041",
+        "subdivision": "(a), (d), (e), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "262.301",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "262.302",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-041-abandon-no-return",
+    "name": "Abandoning a child, elderly or disabled individual (without intent to return)",
+    "officialTitle": "ABANDONING OR ENDANGERING A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.041(b)",
+    "citation": "Tex. Penal Code § 22.041(b)",
+    "conduct": "Having custody, care or control of a child, elderly individual or disabled individual, intentionally abandoning that person in circumstances exposing them to an unreasonable risk of harm. Abandonment means leaving without reasonable and necessary care in circumstances where no reasonable similarly situated person would leave a person of that age and ability. The person did not intend to return, and the higher imminent-danger abandonment circumstance in (e) does not apply. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. The exception in §22.041(h) covers voluntary delivery of a child to a designated emergency infant care provider under Family Code §262.302, subject to that section’s conditions. The current §22.041 text is effective September 1, 2025. Earlier conduct requires the applicable version.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.041",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.041",
+        "subdivision": "(d)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.041",
+        "subdivision": "(a), (d), (e), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "262.301",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "262.302",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-041-abandon-imminent-danger",
+    "name": "Abandoning a child, elderly or disabled individual (imminent danger)",
+    "officialTitle": "ABANDONING OR ENDANGERING A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.041(b)",
+    "citation": "Tex. Penal Code § 22.041(b)",
+    "conduct": "Having custody, care or control of a child, elderly individual or disabled individual, intentionally abandoning that person in circumstances exposing them to an unreasonable risk of harm. Abandonment means leaving without reasonable and necessary care in circumstances where no reasonable similarly situated person would leave a person of that age and ability. The abandonment occurred in circumstances a reasonable person would believe placed the child or individual in imminent danger of death, bodily injury, or physical or mental impairment, regardless of intent to return. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. The exception in §22.041(h) covers voluntary delivery of a child to a designated emergency infant care provider under Family Code §262.302, subject to that section’s conditions. The current §22.041 text is effective September 1, 2025. Earlier conduct requires the applicable version.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.041",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.041",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.041",
+        "subdivision": "(a), (d), (e), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "262.301",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "262.302",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-041-endanger",
+    "name": "Endangering a child, elderly or disabled individual",
+    "officialTitle": "ABANDONING OR ENDANGERING A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL.",
+    "category": "felony",
+    "code": "22.041(c)",
+    "citation": "Tex. Penal Code § 22.041(c)",
+    "conduct": "Intentionally, knowingly, recklessly or with criminal negligence, by act or omission, engaging in conduct that places a child, elderly individual or disabled individual in imminent danger of death, bodily injury, or physical or mental impairment. A child is 14 or younger and an elderly individual is 65 or older. Disability must meet §22.04(c)(3), including its incorporated definitions. That definition covers specified conditions or substantial inability, because of age or physical or mental condition, to protect oneself or provide food, shelter or medical care. Subsection (c-1) supplies specified methamphetamine and controlled-substance presumptions. A presumption requires the statutory predicate facts and does not compel a finding or relieve the state of proving the remaining elements. Subsection (g) provides a defense for enabling participation or practice in an organized athletic event with appropriate safety equipment and procedures. The exception in §22.041(h) covers voluntary delivery of a child to a designated emergency infant care provider under Family Code §262.302, subject to that section’s conditions. The current §22.041 text is effective September 1, 2025. Earlier conduct requires the applicable version.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Qualifying deadly-weapon or prior-conviction findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.041",
+        "subdivision": "(c)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.041",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.041",
+        "subdivision": "(a), (c-1), (g), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.1022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": "(24)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": "(3), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": "(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": "(7-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "262.301",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "262.302",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "38990042"
+  },
+  {
+    "id": "tx-pc-25-11-continuous",
+    "name": "Continuous violence against the family",
+    "officialTitle": "CONTINUOUS VIOLENCE AGAINST THE FAMILY.",
+    "category": "felony",
+    "code": "25.11(a)",
+    "citation": "Tex. Penal Code § 25.11(a)",
+    "conduct": "During a period of twelve months or less, committing bodily-injury assault under §22.01(a)(1) two or more times against one or more people with the specified dating, family or household relationship to the defendant. Each assault requires intentional, knowing or reckless causation of bodily injury. A casual acquaintance alone does not establish a dating relationship. Prior convictions are not required for this course-of-conduct offense. The jury must unanimously find the repeated course of conduct within the statutory period, although §25.11(b) does not require agreement on each particular act, date or county. Subsections (c) and (d) restrict overlapping convictions and multiple counts.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "25.11",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "25.11",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.11",
+        "subdivision": "(b), (c), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": "(b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13990078"
+  },
+  {
+    "id": "tx-pc-42-062-a",
+    "name": "Interference with emergency assistance (knowingly preventing or interfering with an emergency request)",
+    "officialTitle": "INTERFERENCE WITH EMERGENCY REQUEST FOR ASSISTANCE.",
+    "category": "misdemeanor",
+    "code": "42.062(a)",
+    "citation": "Tex. Penal Code § 42.062(a)",
+    "conduct": "Knowingly preventing or interfering with another person’s ability to make an emergency call or request assistance, including through an electronic communications device, from law enforcement, a medical facility or another entity primarily providing for people’s safety. An emergency includes circumstances where any individual is, or the person making the call or request reasonably believes any individual is, in fear of imminent assault, or property is, or that person reasonably believes it is, in imminent danger of damage or destruction. This choice addresses the ordinary grade without a previous conviction under §42.062.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. If §12.43(a) applies and confinement is imposed, the minimum is 90 days. A previous conviction under §42.062 instead makes the offense a state jail felony.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.062",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.062",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.062",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "53990010"
+  },
+  {
+    "id": "tx-pc-42-062-a-prior",
+    "name": "Interference with emergency assistance (knowingly preventing or interfering with an emergency request, prior conviction)",
+    "officialTitle": "INTERFERENCE WITH EMERGENCY REQUEST FOR ASSISTANCE.",
+    "category": "felony",
+    "code": "42.062(a)",
+    "citation": "Tex. Penal Code § 42.062(a)",
+    "conduct": "Knowingly preventing or interfering with another person’s ability to make an emergency call or request assistance, including through an electronic communications device, from law enforcement, a medical facility or another entity primarily providing for people’s safety. An emergency includes circumstances where any individual is, or the person making the call or request reasonably believes any individual is, in fear of imminent assault, or property is, or that person reasonably believes it is, in imminent danger of damage or destruction. The state-jail branch requires a previous conviction under §42.062.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Qualifying deadly-weapon or prior-conviction findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.062",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.062",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.062",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-062-b",
+    "name": "Interference with emergency assistance (recklessly disabling a device used for an emergency request)",
+    "officialTitle": "INTERFERENCE WITH EMERGENCY REQUEST FOR ASSISTANCE.",
+    "category": "misdemeanor",
+    "code": "42.062(b)",
+    "citation": "Tex. Penal Code § 42.062(b)",
+    "conduct": "Recklessly making an electronic communications device, including a telephone, unusable when it would otherwise be used by another person to make an emergency call or request assistance from law enforcement, a medical facility or another entity primarily providing for people’s safety. An emergency includes circumstances where any individual is, or the person making the call or request reasonably believes any individual is, in fear of imminent assault, or property is, or that person reasonably believes it is, in imminent danger of damage or destruction. This choice addresses the ordinary grade without a previous conviction under §42.062.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. If §12.43(a) applies and confinement is imposed, the minimum is 90 days. A previous conviction under §42.062 instead makes the offense a state jail felony.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.062",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.062",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.062",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "53990010"
+  },
+  {
+    "id": "tx-pc-42-062-b-prior",
+    "name": "Interference with emergency assistance (recklessly disabling a device used for an emergency request, prior conviction)",
+    "officialTitle": "INTERFERENCE WITH EMERGENCY REQUEST FOR ASSISTANCE.",
+    "category": "felony",
+    "code": "42.062(b)",
+    "citation": "Tex. Penal Code § 42.062(b)",
+    "conduct": "Recklessly making an electronic communications device, including a telephone, unusable when it would otherwise be used by another person to make an emergency call or request assistance from law enforcement, a medical facility or another entity primarily providing for people’s safety. An emergency includes circumstances where any individual is, or the person making the call or request reasonably believes any individual is, in fear of imminent assault, or property is, or that person reasonably believes it is, in imminent danger of damage or destruction. The state-jail branch requires a previous conviction under §42.062.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Qualifying deadly-weapon or prior-conviction findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.062",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.062",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.062",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]
