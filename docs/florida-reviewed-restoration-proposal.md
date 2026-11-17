@@ -1,5 +1,7 @@
 # Florida: proposed restoration of 101 reviewed choices
 
+Historical proposal: the [activation candidate](florida-reviewed-activation.md) incorporates the exact artifacts in a separate change. The generator reports original versus installed input state separately; the frozen summary below retains proposal-time observations.
+
 This is a candidate for review, not an issued receipt or permission to activate. The existing expired receipt and all active report, eligibility, cache, definitions and pins remain unchanged. The 101 choices remain withheld under that receipt.
 
 ## Concrete proposed change

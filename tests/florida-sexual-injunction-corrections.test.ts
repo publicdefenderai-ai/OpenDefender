@@ -84,11 +84,12 @@ describe('Florida sexual battery and injunction corrective evidence', () => {
       }
     }
   });
-  it('rejects corrupted evidence and does not mistake the old receipt for approval of corrected records', () => {
+  it('rejects corrupted evidence and checks matching receipt approval and expiry', () => {
     const broken=structuredClone(packet.report);broken.drafts[0].requiredDependencies.pop();
     expect(()=>buildFloridaReviewedSourceRecords(packet.definitions as any,broken as any,packet.eligibility as any)).toThrow();
     const all=buildFloridaReviewedSourceRecords(FLORIDA_REVIEWED_DEFINITIONS,report as any,eligibility as any);
-    expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,eligibility as any,all,new Date(receipt.checkedAt))).not.toBeNull();
+    expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,eligibility as any,all,new Date(receipt.checkedAt))).toBeNull();
+  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,eligibility as any,all,new Date(receipt.expiresAt))).not.toBeNull();
   });
   it('allows an existing held identity to retain judicial evidence without breaking other Florida choices', async () => {
     vi.resetModules();

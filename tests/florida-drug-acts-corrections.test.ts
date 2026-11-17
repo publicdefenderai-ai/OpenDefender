@@ -47,8 +47,9 @@ it('limits overdose-assistance immunity and object classification to the applica
  const syringe=row('893.147(3)(b)');expect(syringe.text.en.degreeContext).toContain('valid prescription');expect(syringe.citations.some(c=>c.citation==='Fla. Stat. § 893.146')).toBe(false);
  expect(row('893.147(1)').text.en.degreeContext).toContain('July 1, 2026');expect(row('893.147(4)(b)').text.en.degreeContext).toContain('probable cause of a nexus');
 });
-it('retains original receipt and publication holds after correction',()=>{
+it('accepts the matching receipt while retaining publication holds and expiry',()=>{
  const all=buildFloridaReviewedSourceRecords(FLORIDA_REVIEWED_DEFINITIONS,report as any,ledger as any);expect(all).toHaveLength(101);
- expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.checkedAt))).not.toBeNull();expect(FLORIDA_REVIEWED_DEFINITIONS.some(d=>d.code==='893.147(7)')).toBe(false);
+ expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.checkedAt))).toBeNull();
+  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.expiresAt))).not.toBeNull();expect(FLORIDA_REVIEWED_DEFINITIONS.some(d=>d.code==='893.147(7)')).toBe(false);
  expect(packet.definitions.filter(d=>d.code.startsWith('893.13(')).every(d=>d.text.en.degreeContext.includes('non-cannabis applications'))).toBe(true);
 });
