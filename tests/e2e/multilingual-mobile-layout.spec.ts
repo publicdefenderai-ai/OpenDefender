@@ -55,7 +55,7 @@ async function expectMobileNavigationTargets(page: Page, route: string) {
       ),
     ).filter((element) => {
       const style = window.getComputedStyle(element);
-      return style.display !== "none" && style.visibility !== "hidden";
+      return element.checkVisibility() && style.display !== "none" && style.visibility !== "hidden";
     });
 
     return targets

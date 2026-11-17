@@ -75,6 +75,7 @@ for (const language of ["en", "es", "zh"] as const) {
       await expect.poll(() => art.evaluate((img: HTMLImageElement) => img.naturalWidth)).toBeGreaterThan(0);
       for (const width of [1280, 320]) {
         await page.setViewportSize({ width, height: 900 });
+        expect(await main.evaluate(node => node.getBoundingClientRect().right)).toBeLessThanOrEqual(width + 1);
         expect(await main.locator("h1,h2,p,summary,a,button,pre").evaluateAll(nodes => nodes.filter(node => {
           const rect = node.getBoundingClientRect();
           return rect.width && (rect.left < -1 || rect.right > innerWidth + 1);
