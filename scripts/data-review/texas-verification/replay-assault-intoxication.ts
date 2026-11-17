@@ -28,7 +28,11 @@ import lossEvidence from "../output/texas-property-loss-evidence.json";
 import burglaryRows from "../../../shared/texas-ranked-burglary.json";
 import burglaryEvidence from "../output/texas-ranked-burglary-evidence.json";
 
+import weightRows from "../../../shared/texas-possession-weights.json";
+import weightEvidence from "../output/texas-possession-weights-evidence.json";
+
 const batches = new Map([
+  ["possession-weights", { rows: weightRows, evidence: Object.entries(weightEvidence) }],
   ["ranked-burglary", { rows: burglaryRows, evidence: Object.entries(burglaryEvidence) }],
   ["property-loss", { rows: lossRows, evidence: Object.entries(lossEvidence) }],
   ["carry-branches", { rows: carryRows, evidence: Object.entries(carryEvidence) }],

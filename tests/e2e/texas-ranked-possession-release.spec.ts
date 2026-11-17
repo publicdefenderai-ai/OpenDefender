@@ -104,3 +104,16 @@ test("Texas selector exposes specific burglary and trespass branches and preserv
   }
   expect(charges.some((r: {id:string}) => r.id==="tx-commercial-burglary")).toBe(false);
 });
+
+test("Texas selector exposes source-bound possession grades and the residential treatment center choice", async ({request}) => {
+  const response=await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");
+  expect(response.ok()).toBe(true);
+  const {charges}=await response.json();
+  const reviewed=JSON.parse(readFileSync("shared/texas-possession-weights.json","utf8"));
+  for (const row of reviewed) {
+    expect(charges.find((r:{id:string})=>r.id===row.id)).toMatchObject({
+      id:row.id,code:row.code,category:row.category,maxPenalty:row.penalty,
+    });
+  }
+  expect(charges.find((r:{id:string})=>r.id==="tx-pc-30-05-shelter")).toBeUndefined();
+});
