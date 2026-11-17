@@ -1,0 +1,1044 @@
+[
+  {
+    "id": "fl-fs-590-28-1-fire-riot",
+    "section": "590.28",
+    "scope": "(1)",
+    "officialTitle": "Intentional or reckless burning of lands",
+    "dependencies": [
+      "590.28",
+      "590.015",
+      "590.14",
+      "590.125",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "590.28": [
+        "(1)"
+      ],
+      "590.015": [
+        "(5)",
+        "(6)"
+      ],
+      "590.14": [
+        "(2)"
+      ],
+      "590.125": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(6)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-590-28-1-fire-riot",
+      "name": "Intentional burning of wild land or vegetative land-clearing debris",
+      "names": {
+        "es": "Quema intencional de terrenos silvestres o restos vegetales de desmonte",
+        "zh": "故意焚烧野地或清理土地的植物残余物"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "590.28(1)",
+      "slug": "fl-fs-590-28-1-fire-riot",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 590.28(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.015",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.015.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.14",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.14.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.125",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.125.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Intentional or reckless burning of lands",
+          "FS 590.28(1)",
+          "F.S. 590.28(1)"
+        ],
+        "es": [
+          "Intentional or reckless burning of lands",
+          "FS 590.28(1)",
+          "F.S. 590.28(1)"
+        ],
+        "zh": [
+          "Intentional or reckless burning of lands",
+          "FS 590.28(1)",
+          "F.S. 590.28(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Intentionally burning, setting fire to or causing the burning or ignition of wild land or vegetative land-clearing debris that the person neither owns nor lawfully possesses, without complying with §590.125. That section sets conditions for authorized burning, including specific landowner consent and advance authorization for covered burns.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Causing a wildfire, or allowing an authorized fire to escape its boundaries or burn beyond its authorized time, also creates liability for reasonable suppression costs or $150, whichever is greater."
+        },
+        "es": {
+          "plainSummary": "Quemar, prender fuego o hacer que se quemen o prendan intencionalmente terrenos silvestres o restos vegetales de desmonte que la persona no posee legalmente ni tiene en propiedad, sin cumplir el §590.125. Para las quemas cubiertas se exige, entre otras condiciones, consentimiento específico del propietario y autorización previa.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Causar un incendio forestal o permitir que un fuego autorizado escape de sus límites o arda después del plazo autorizado también genera responsabilidad por el mayor de los costos razonables de extinción o $150."
+        },
+        "zh": {
+          "plainSummary": "对本人既不拥有也不合法占有的野地或清理土地的植物残余物，故意焚烧、点燃或使其被焚烧或点燃，且未遵守第590.125条。该条所涉燃烧活动须满足具体条件，包括土地所有者明确同意和事先获得许可。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 造成野火，或让获准燃烧的火越过许可边界或超过许可时限，还须承担合理扑救费用或150美元，以较高者为准。"
+        }
+      }
+    },
+    "gradingScope": "(1)"
+  },
+  {
+    "id": "fl-fs-590-28-2-fire-riot",
+    "section": "590.28",
+    "scope": "(2)",
+    "officialTitle": "Intentional or reckless burning of lands",
+    "dependencies": [
+      "590.28",
+      "590.015",
+      "590.14",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "590.28": [
+        "(2)"
+      ],
+      "590.015": [
+        "(5)",
+        "(6)"
+      ],
+      "590.14": [
+        "(2)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-590-28-2-fire-riot",
+      "name": "Reckless burning of wild lands",
+      "names": {
+        "es": "Quema temeraria de terrenos silvestres",
+        "zh": "鲁莽焚烧野地"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "590.28(2)",
+      "slug": "fl-fs-590-28-2-fire-riot",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 590.28(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.015",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.015.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.14",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.14.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Intentional or reckless burning of lands",
+          "FS 590.28(2)",
+          "F.S. 590.28(2)"
+        ],
+        "es": [
+          "Intentional or reckless burning of lands",
+          "FS 590.28(2)",
+          "F.S. 590.28(2)"
+        ],
+        "zh": [
+          "Intentional or reckless burning of lands",
+          "FS 590.28(2)",
+          "F.S. 590.28(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Recklessly burning, setting fire to, or causing the burning of wild lands the person neither owns nor lawfully possesses. This branch specifies wild lands; it does not separately list land-clearing debris.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine. Causing a wildfire, or allowing an authorized fire to escape its boundaries or burn beyond its authorized time, also creates liability for reasonable suppression costs or $150, whichever is greater."
+        },
+        "es": {
+          "plainSummary": "Quemar, prender fuego o causar temerariamente la quema de terrenos silvestres que la persona no tiene en propiedad ni posee legalmente. Esta modalidad menciona terrenos silvestres sin enumerar por separado los restos de desmonte.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500. Causar un incendio forestal o permitir que un fuego autorizado escape de sus límites o arda después del plazo autorizado también genera responsabilidad por el mayor de los costos razonables de extinción o $150."
+        },
+        "zh": {
+          "plainSummary": "鲁莽地焚烧、点燃或使本人既不拥有也不合法占有的野地被焚烧。本款规定的对象是野地，并未另行列出清理土地的残余物。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。 造成野火，或让获准燃烧的火越过许可边界或超过许可时限，还须承担合理扑救费用或150美元，以较高者为准。"
+        }
+      }
+    },
+    "gradingScope": "(2)"
+  },
+  {
+    "id": "fl-fs-590-10-1-fire-riot",
+    "section": "590.10",
+    "scope": "(1)",
+    "officialTitle": "Disposing of lighted substances, etc",
+    "dependencies": [
+      "590.10",
+      "590.015",
+      "590.14",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "590.10": [
+        "(1)",
+        "(2)"
+      ],
+      "590.015": [
+        "(5)",
+        "(6)"
+      ],
+      "590.14": [
+        "(2)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-590-10-1-fire-riot",
+      "name": "Disposing of lighted substances or things that may cause wildfire",
+      "names": {
+        "es": "Desechar sustancias encendidas u objetos que puedan causar incendios forestales",
+        "zh": "丢弃燃烧物或可能引发野火的物品"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "590.10(1)",
+      "slug": "fl-fs-590-10-1-fire-riot",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 590.10(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.10",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.10.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.015",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.015.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.14",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.14.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Disposing of lighted substances, etc",
+          "FS 590.10(1)",
+          "F.S. 590.10(1)"
+        ],
+        "es": [
+          "Disposing of lighted substances, etc",
+          "FS 590.10(1)",
+          "F.S. 590.10(1)"
+        ],
+        "zh": [
+          "Disposing of lighted substances, etc",
+          "FS 590.10(1)",
+          "F.S. 590.10(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Throwing, dropping or disposing of a lighted match, cigarette, cigar, ashes, another flaming or glowing substance, or something that may cause or does cause a wildfire. An actual wildfire is not required for the listed lighted-substance conduct.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine. Causing a wildfire, or allowing an authorized fire to escape its boundaries or burn beyond its authorized time, also creates liability for reasonable suppression costs or $150, whichever is greater."
+        },
+        "es": {
+          "plainSummary": "Arrojar, dejar caer o desechar un fósforo, cigarrillo o puro encendido, cenizas, otra sustancia en llamas o incandescente, o algo que pueda causar o cause incendio forestal. Para la conducta relativa a sustancias encendidas no se exige que haya incendio.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000. Causar un incendio forestal o permitir que un fuego autorizado escape de sus límites o arda después del plazo autorizado también genera responsabilidad por el mayor de los costos razonables de extinción o $150."
+        },
+        "zh": {
+          "plainSummary": "投掷、丢下或弃置点燃的火柴、香烟、雪茄、灰烬、其他燃烧或发红的物质，或可能或实际引发野火的物品。就丢弃所列燃烧物而言，无须实际发生野火。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。 造成野火，或让获准燃烧的火越过许可边界或超过许可时限，还须承担合理扑救费用或150美元，以较高者为准。"
+        }
+      }
+    },
+    "gradingScope": "(2)"
+  },
+  {
+    "id": "fl-fs-590-11-1-fire-riot",
+    "section": "590.11",
+    "scope": "(1)",
+    "officialTitle": "Recreational fires",
+    "dependencies": [
+      "590.11",
+      "590.015",
+      "590.14",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "590.11": [
+        "(1)",
+        "(2)"
+      ],
+      "590.015": [
+        "(5)",
+        "(6)"
+      ],
+      "590.14": [
+        "(2)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-590-11-1-fire-riot",
+      "name": "Leaving a recreational fire unattended",
+      "names": {
+        "es": "Dejar un fuego recreativo sin vigilancia",
+        "zh": "无人看管休闲用火"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "590.11(1)",
+      "slug": "fl-fs-590-11-1-fire-riot",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 590.11(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.11.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.11",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.11.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.015",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.015.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.14",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.14.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Recreational fires",
+          "FS 590.11(1)",
+          "F.S. 590.11(1)"
+        ],
+        "es": [
+          "Recreational fires",
+          "FS 590.11(1)",
+          "F.S. 590.11(1)"
+        ],
+        "zh": [
+          "Recreational fires",
+          "FS 590.11(1)",
+          "F.S. 590.11(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Building a warming fire, bonfire or campfire and leaving it unattended while visible flame, smoke or emissions remain. The provision covers an individual or group that built the fire.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine. Causing a wildfire, or allowing an authorized fire to escape its boundaries or burn beyond its authorized time, also creates liability for reasonable suppression costs or $150, whichever is greater."
+        },
+        "es": {
+          "plainSummary": "Encender un fuego para calentarse, una hoguera o fogata y dejarlo sin vigilancia mientras haya llama, humo o emisiones visibles. Se aplica a la persona o grupo que hizo el fuego.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500. Causar un incendio forestal o permitir que un fuego autorizado escape de sus límites o arda después del plazo autorizado también genera responsabilidad por el mayor de los costos razonables de extinción o $150."
+        },
+        "zh": {
+          "plainSummary": "生取暖火、篝火或营火后，在仍有可见火焰、烟或排放物时离开而无人看管。适用于生火的个人或群体。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。 造成野火，或让获准燃烧的火越过许可边界或超过许可时限，还须承担合理扑救费用或150美元，以较高者为准。"
+        }
+      }
+    },
+    "gradingScope": "(2)"
+  },
+  {
+    "id": "fl-fs-590-25-fire-riot",
+    "section": "590.25",
+    "scope": "",
+    "officialTitle": "Penalty for obstructing the prevention, detection, or suppression of wildfires",
+    "dependencies": [
+      "590.015",
+      "590.14",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "590.25": [
+        ""
+      ],
+      "590.015": [
+        "(5)",
+        "(6)"
+      ],
+      "590.14": [
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-590-25-fire-riot",
+      "name": "Obstructing wildfire prevention, detection or suppression",
+      "names": {
+        "es": "Obstruir la prevención, detección o extinción de incendios forestales",
+        "zh": "妨碍野火预防、侦测或扑救"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "590.25",
+      "slug": "fl-fs-590-25-fire-riot",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 590.25",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.25.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.015",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.015.html"
+        },
+        {
+          "citation": "Fla. Stat. § 590.14",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.14.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Penalty for obstructing the prevention, detection, or suppression of wildfires",
+          "FS 590.25",
+          "F.S. 590.25"
+        ],
+        "es": [
+          "Penalty for obstructing the prevention, detection, or suppression of wildfires",
+          "FS 590.25",
+          "F.S. 590.25"
+        ],
+        "zh": [
+          "Penalty for obstructing the prevention, detection, or suppression of wildfires",
+          "FS 590.25",
+          "F.S. 590.25"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Interfering with, obstructing or acting to obstruct wildfire prevention, detection or suppression by Florida Forest Service employees or others carrying out that work, or damaging or destroying equipment being used for it.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Causing a wildfire, or allowing an authorized fire to escape its boundaries or burn beyond its authorized time, also creates liability for reasonable suppression costs or $150, whichever is greater."
+        },
+        "es": {
+          "plainSummary": "Interferir, obstruir o realizar actos dirigidos a obstruir la prevención, detección o extinción de incendios forestales por empleados del Servicio Forestal de Florida u otras personas dedicadas a esa labor, o dañar o destruir el equipo utilizado.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Causar un incendio forestal o permitir que un fuego autorizado escape de sus límites o arda después del plazo autorizado también genera responsabilidad por el mayor de los costos razonables de extinción o $150."
+        },
+        "zh": {
+          "plainSummary": "干扰、阻碍或采取旨在阻碍佛州林务局人员或其他从事野火预防、侦测或扑救工作的人员工作的行动，或损坏、毁坏正在用于这些工作的设备。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 造成野火，或让获准燃烧的火越过许可边界或超过许可时限，还须承担合理扑救费用或150美元，以较高者为准。"
+        }
+      }
+    },
+    "gradingScope": ""
+  },
+  {
+    "id": "fl-fs-870-01-1-fire-riot",
+    "section": "870.01",
+    "scope": "(1)",
+    "officialTitle": "Affrays and riots",
+    "dependencies": [
+      "870.01",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "870.01": [
+        "(1)",
+        "(6)",
+        "(7)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-870-01-1-fire-riot",
+      "name": "Affray",
+      "names": {
+        "es": "Riña pública",
+        "zh": "公开斗殴"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "870.01(1)",
+      "slug": "fl-fs-870-01-1-fire-riot",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 870.01(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 870.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Affrays and riots",
+          "FS 870.01(1)",
+          "F.S. 870.01(1)"
+        ],
+        "es": [
+          "Affrays and riots",
+          "FS 870.01(1)",
+          "F.S. 870.01(1)"
+        ],
+        "zh": [
+          "Affrays and riots",
+          "FS 870.01(1)",
+          "F.S. 870.01(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Fighting another person by mutual consent in a public place, to the terror of the people. The special hold-until-court rule for riot arrests excludes this offense.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine."
+        },
+        "es": {
+          "plainSummary": "Pelear con otra persona de mutuo acuerdo en un lugar público, causando terror a la gente. La regla especial de detención hasta la comparecencia prevista para el motín excluye esta infracción.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000."
+        },
+        "zh": {
+          "plainSummary": "双方同意在公共场所打斗，引起公众恐惧。本条有关暴乱被捕后羁押至到庭的特殊规则不适用于此罪。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    },
+    "gradingScope": "(1)"
+  },
+  {
+    "id": "fl-fs-870-01-2-fire-riot",
+    "section": "870.01",
+    "scope": "(2)",
+    "officialTitle": "Affrays and riots",
+    "dependencies": [
+      "870.01",
+      "903.046",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "870.01": [
+        "(2)",
+        "(6)",
+        "(7)"
+      ],
+      "903.046": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-870-01-2-fire-riot",
+      "name": "Riot",
+      "names": {
+        "es": "Motín",
+        "zh": "暴乱"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "870.01(2)",
+      "slug": "fl-fs-870-01-2-fire-riot",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 870.01(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 870.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 903.046",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0903/Sections/0903.046.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Affrays and riots",
+          "FS 870.01(2)",
+          "F.S. 870.01(2)"
+        ],
+        "es": [
+          "Affrays and riots",
+          "FS 870.01(2)",
+          "F.S. 870.01(2)"
+        ],
+        "zh": [
+          "Affrays and riots",
+          "FS 870.01(2)",
+          "F.S. 870.01(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully taking part in a violent public disturbance of at least three people, knowing of the violence and sharing an intent to help one another engage in violent and disorderly conduct. The disturbance must injure another, damage property or create imminent danger of either. Peaceful attendance, including staying to observe violence, does not by itself establish participation.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. After arrest for this offense the person is held until brought before the court for a bail decision. The statute does not require denial of bail."
+        },
+        "es": {
+          "plainSummary": "Participar deliberadamente en un disturbio público violento de al menos tres personas, con conocimiento de la violencia e intención común de ayudarse a realizar actos violentos y desordenados. Debe causar lesiones a otra persona, daños materiales o peligro inminente de alguno de esos resultados. La presencia pacífica, incluso para observar la violencia, por sí sola no establece participación.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Tras el arresto por este delito, se mantiene a la persona bajo custodia hasta comparecer ante el tribunal para la decisión sobre fianza. La ley no exige denegarla."
+        },
+        "zh": {
+          "plainSummary": "有意参与至少三人的暴力公共骚乱，明知发生暴力，且具有互相协助实施暴力扰乱行为的共同意图。骚乱须造成他人受伤、财产损害或发生其中任何一种结果的迫切危险。和平在场，包括留下观察暴力，本身不足以构成参与。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 因本罪被捕后须羁押至到庭，由法院裁定保释；法律并不要求拒绝保释。"
+        }
+      }
+    },
+    "gradingScope": "(2)"
+  },
+  {
+    "id": "fl-fs-870-01-3-fire-riot",
+    "section": "870.01",
+    "scope": "(3)",
+    "officialTitle": "Affrays and riots",
+    "dependencies": [
+      "870.01",
+      "903.046",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "870.01": [
+        "(3)",
+        "(2)",
+        "(6)",
+        "(7)"
+      ],
+      "903.046": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-870-01-3-fire-riot",
+      "name": "Aggravated rioting",
+      "names": {
+        "es": "Motín agravado",
+        "zh": "加重暴乱"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "870.01(3)",
+      "slug": "fl-fs-870-01-3-fire-riot",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 870.01(3)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 870.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 903.046",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0903/Sections/0903.046.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Affrays and riots",
+          "FS 870.01(3)",
+          "F.S. 870.01(3)"
+        ],
+        "es": [
+          "Affrays and riots",
+          "FS 870.01(3)",
+          "F.S. 870.01(3)"
+        ],
+        "zh": [
+          "Affrays and riots",
+          "FS 870.01(3)",
+          "F.S. 870.01(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully taking part in a violent public disturbance of at least three people, knowing of the violence and sharing an intent to help one another engage in violent and disorderly conduct. The disturbance must injure another, damage property or create imminent danger of either. Peaceful attendance, including staying to observe violence, does not by itself establish participation. While committing that riot, the accused must also participate with at least 25 other people, cause great bodily harm to a nonparticipant, cause more than $5,000 in property damage, display, use, threaten or attempt to use a deadly weapon, or by force or threat of force endanger the safe movement of a vehicle traveling on a public road.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. After arrest for this offense the person is held until brought before the court for a bail decision. The statute does not require denial of bail."
+        },
+        "es": {
+          "plainSummary": "Participar deliberadamente en un disturbio público violento de al menos tres personas, con conocimiento de la violencia e intención común de ayudarse a realizar actos violentos y desordenados. Debe causar lesiones a otra persona, daños materiales o peligro inminente de alguno de esos resultados. La presencia pacífica, incluso para observar la violencia, por sí sola no establece participación. Durante el motín el acusado además debe participar con al menos otras 25 personas, causar lesiones graves a alguien que no participe, causar daños materiales superiores a $5,000, exhibir, usar, amenazar con usar o intentar usar un arma mortal, o mediante fuerza o amenaza poner en peligro la circulación segura de un vehículo que transita por una vía pública.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. Tras el arresto por este delito, se mantiene a la persona bajo custodia hasta comparecer ante el tribunal para la decisión sobre fianza. La ley no exige denegarla."
+        },
+        "zh": {
+          "plainSummary": "有意参与至少三人的暴力公共骚乱，明知发生暴力，且具有互相协助实施暴力扰乱行为的共同意图。骚乱须造成他人受伤、财产损害或发生其中任何一种结果的迫切危险。和平在场，包括留下观察暴力，本身不足以构成参与。 参与暴乱时，被告还须与至少另外25人一起参与，致未参与者身体重伤，造成超过5,000美元财损，展示、使用、威胁或试图使用致命武器，或以武力或武力威胁危及正在公共道路行驶的车辆安全通行；具备其中一项即可。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 因本罪被捕后须羁押至到庭，由法院裁定保释；法律并不要求拒绝保释。"
+        }
+      }
+    },
+    "gradingScope": "(3)"
+  },
+  {
+    "id": "fl-fs-870-01-4-fire-riot",
+    "section": "870.01",
+    "scope": "(4)",
+    "officialTitle": "Affrays and riots",
+    "dependencies": [
+      "870.01",
+      "903.046",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "870.01": [
+        "(4)",
+        "(2)",
+        "(6)",
+        "(7)"
+      ],
+      "903.046": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-870-01-4-fire-riot",
+      "name": "Inciting a riot",
+      "names": {
+        "es": "Incitación a un motín",
+        "zh": "煽动暴乱"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "870.01(4)",
+      "slug": "fl-fs-870-01-4-fire-riot",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 870.01(4)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 870.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 903.046",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0903/Sections/0903.046.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Affrays and riots",
+          "FS 870.01(4)",
+          "F.S. 870.01(4)"
+        ],
+        "es": [
+          "Affrays and riots",
+          "FS 870.01(4)",
+          "F.S. 870.01(4)"
+        ],
+        "zh": [
+          "Affrays and riots",
+          "FS 870.01(4)",
+          "F.S. 870.01(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully urging another to take part in a riot, resulting in a riot or imminent danger of one. Peaceful protest and protected advocacy are excluded.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. After arrest for this offense the person is held until brought before the court for a bail decision. The statute does not require denial of bail."
+        },
+        "es": {
+          "plainSummary": "Instigar deliberadamente a otra persona a participar en un motín, provocando un motín o peligro inminente de que ocurra. Se excluyen la protesta pacífica y la expresión protegida.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Tras el arresto por este delito, se mantiene a la persona bajo custodia hasta comparecer ante el tribunal para la decisión sobre fianza. La ley no exige denegarla."
+        },
+        "zh": {
+          "plainSummary": "有意煽动他人参与暴乱，并因此发生暴乱或造成即将暴乱的危险；和平抗议及受保护的表达除外。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 因本罪被捕后须羁押至到庭，由法院裁定保释；法律并不要求拒绝保释。"
+        }
+      }
+    },
+    "gradingScope": "(4)"
+  },
+  {
+    "id": "fl-fs-870-01-5-fire-riot",
+    "section": "870.01",
+    "scope": "(5)",
+    "officialTitle": "Affrays and riots",
+    "dependencies": [
+      "870.01",
+      "903.046",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "870.01": [
+        "(5)",
+        "(2)",
+        "(4)",
+        "(6)",
+        "(7)"
+      ],
+      "903.046": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-870-01-5-fire-riot",
+      "name": "Aggravated inciting a riot",
+      "names": {
+        "es": "Incitación agravada a un motín",
+        "zh": "加重煽动暴乱"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "870.01(5)",
+      "slug": "fl-fs-870-01-5-fire-riot",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 870.01(5)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 870.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 903.046",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0903/Sections/0903.046.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Affrays and riots",
+          "FS 870.01(5)",
+          "F.S. 870.01(5)"
+        ],
+        "es": [
+          "Affrays and riots",
+          "FS 870.01(5)",
+          "F.S. 870.01(5)"
+        ],
+        "zh": [
+          "Affrays and riots",
+          "FS 870.01(5)",
+          "F.S. 870.01(5)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Inciting a riot that causes great bodily harm to a nonparticipant or more than $5,000 in property damage. Another branch covers supplying someone a deadly weapon or teaching someone to prepare one with intent that it be used unlawfully in a riot. Peaceful protest and protected advocacy are excluded.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. After arrest for this offense the person is held until brought before the court for a bail decision. The statute does not require denial of bail."
+        },
+        "es": {
+          "plainSummary": "Instigar un motín que cause lesiones graves a una persona que no participa o daños materiales superiores a $5,000. Otra modalidad consiste en suministrar a otra persona un arma mortal o enseñarle a prepararla con intención de que se use ilegalmente en un motín. Se excluyen la protesta pacífica y la expresión protegida.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. Tras el arresto por este delito, se mantiene a la persona bajo custodia hasta comparecer ante el tribunal para la decisión sobre fianza. La ley no exige denegarla."
+        },
+        "zh": {
+          "plainSummary": "煽动暴乱并导致未参与者身体重伤或超过5,000美元的财产损失。另一种情形是向他人提供致命武器或教人制备致命武器，意图使其在暴乱中被非法使用。和平抗议及受保护的表达除外。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 因本罪被捕后须羁押至到庭，由法院裁定保释；法律并不要求拒绝保释。"
+        }
+      }
+    },
+    "gradingScope": "(5)"
+  }
+]
