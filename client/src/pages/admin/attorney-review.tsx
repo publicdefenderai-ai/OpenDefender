@@ -236,9 +236,9 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
     risk: "medium",
     title: "Diversion Programs Directory",
     description:
-      "Lists 111 diversion programs with self-reported eligibility criteria across all 50 states + DC + Federal. Users may rely on this when deciding whether to request a diversion program.",
+      "Lists diversion programs with self-reported eligibility criteria across all 50 states + DC + Federal. Users may rely on this when deciding whether to request a diversion program.",
     sourceFiles: [
-      { label: "diversion-programs-data.ts", path: "shared/diversion-programs-data.ts", note: "Program data (111 entries) — path corrected, moved from server/data/" },
+      { label: "diversion-programs-data.ts", path: "shared/diversion-programs-data.ts", note: "Program data (110 entries) — path corrected, moved from server/data/" },
       { label: "diversion-programs.tsx", path: "client/src/pages/diversion-programs.tsx" },
       { label: "en.ts:4150", path: "client/src/locales/en.ts", note: "Directory disclaimer" },
     ],

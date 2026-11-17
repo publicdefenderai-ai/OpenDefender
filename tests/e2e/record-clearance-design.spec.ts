@@ -5,10 +5,12 @@ import zh from "../../client/src/locales/zh";
 import { getExpungementByState } from "../../shared/expungement-data";
 
 const scenarios = [
-  { state: "CA", type: "arrest", sentence: "complete", result: "A" },
-  { state: "AK", type: "arrest", sentence: "complete", result: "B" },
-  { state: "AK", type: "misdemeanor", sentence: "probation", result: "C" },
-  { state: "AK", type: "felony", sentence: "complete", result: "D" },
+  { state: "NY", type: "arrest", answer: "acquitted", reason: "acquittalResult" },
+  { state: "CA", type: "arrest", answer: "dismissed", reason: "closedCheck" },
+  { state: "AK", type: "felony", answer: "", reason: "check" },
+  { state: "NY", type: "misdemeanor", answer: "short", reason: "nyWait" },
+  { state: "NY", type: "felony", answer: "unknown", reason: "check" },
+  { state: "CA", type: "marijuana", answer: "pending", reason: "pendingCheck" },
 ] as const;
 
 for (const language of ["en", "es", "zh"] as const) {
@@ -21,6 +23,14 @@ for (const language of ["en", "es", "zh"] as const) {
       }, { language, theme });
       await page.emulateMedia({ reducedMotion: "reduce" });
       await page.setViewportSize({ width: theme === "light" ? 1280 : 320, height: 900 });
+      await page.goto("/record-expungement");
+      await page.getByRole("checkbox").first().check();
+      await expect(page.getByRole("checkbox").first()).toBeChecked();
+      await expect(page.locator("#questions summary")).toHaveCount(5);
+      await page.locator("#questions summary").last().click();
+      await expect(page.locator("#questions details").last()).toHaveAttribute("open", "");
+      await page.locator('header a[href="/support/reputation/eligibility"]').last().click();
+      await expect(page).toHaveURL(/support\/reputation\/eligibility/);
       await page.goto("/support/reputation/eligibility?state=invalid");
       const main = page.locator(".clearance-page");
       const next = main.getByRole("button", { name: copy.next, exact: true });
@@ -37,22 +47,16 @@ for (const language of ["en", "es", "zh"] as const) {
         await record.focus();
         await page.keyboard.press("Space");
         await expect(record).toBeChecked();
-        if (scenario.result === "A") {
-          await page.screenshot({ path: info.outputPath("record-options.png") });
-          await back.click();
-          await expect(state).toHaveValue(scenario.state);
+        await next.click();
+        if (scenario.type === "marijuana") await expect(main.getByRole("combobox")).toHaveCount(0);
+        if (scenario.answer) await main.locator(`input[value="${scenario.answer}"]`).check();
+        if (scenario.type !== "arrest" && scenario.type !== "marijuana") {
           await next.click();
-          await expect(record).toBeChecked();
+          await main.locator('input[value="probation"]').check();
         }
-        await next.click();
-        await expect(main.getByRole("radio")).toHaveCount(4);
-        await main.getByRole("radio", { name: copy.step3.options.gt7 }).check();
-        await next.click();
-        await expect(main.getByRole("radio")).toHaveCount(3);
-        await main.getByRole("radio", { name: copy.step4.options[scenario.sentence] }).check();
         await main.getByRole("button", { name: copy.seeResult }).click();
-        await expect(main.getByRole("heading", { name: copy.results[scenario.result].title })).toBeFocused();
-        await expect(main).toContainText(copy.results[scenario.result].message);
+        await expect(main.getByRole("heading", { name: scenario.reason === "nyWait" ? copy.review.waitTitle : scenario.reason === "acquittalResult" ? copy.review.sealing : copy.review.unknownResult })).toBeFocused();
+        await expect(main).toContainText(copy.review[scenario.reason]);
         const rule = getExpungementByState(scenario.state)!;
         await expect(main).toContainText(rule.overview);
         for (const source of rule.sources) await expect(main).toContainText(source);
@@ -62,7 +66,7 @@ for (const language of ["en", "es", "zh"] as const) {
           return rect.width && (rect.left < -1 || rect.right > innerWidth + 1);
         }).map(node => node.textContent))).toEqual([]);
         await back.click();
-        await expect(main.getByRole("radio", { checked: true })).toHaveValue(scenario.sentence);
+        await expect(main.getByRole("radio", { checked: true })).toHaveValue(scenario.type === "arrest" || scenario.type === "marijuana" ? scenario.answer : "probation");
         await main.getByRole("button", { name: copy.seeResult }).click();
         await main.getByRole("button", { name: copy.startOver }).click();
         await expect(state).toHaveValue("");

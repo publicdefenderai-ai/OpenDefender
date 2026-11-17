@@ -9,6 +9,7 @@ export interface DiversionProgramCardProps {
     jurisdictionType: string;
     programTypes: string[];
     eligibilityNotes?: string;
+    sources?: string[] | null;
     contact?: {
       phone?: string;
       email?: string;
@@ -21,6 +22,7 @@ export function DiversionProgramCard({ program }: DiversionProgramCardProps) {
   const { t } = useTranslation();
 
   const { contact } = program;
+  const sourceLinks = Array.from(new Set(program.sources ?? [])).filter(source => /^https?:\/\//i.test(source) && URL.canParse(source) && source !== contact?.url);
   return (
     <article className="diversion-result">
       <div lang="en">{program.state}<small>{[program.county, program.jurisdictionType].filter(Boolean).join(" · ")}</small></div>
@@ -41,6 +43,12 @@ export function DiversionProgramCard({ program }: DiversionProgramCardProps) {
               {contact?.email && <a href={`mailto:${contact.email}`}>{contact.email}</a>}
               {contact?.url && <a href={contact.url} target="_blank" rel="noopener noreferrer">{t("diversionPrograms.programCard.visitWebsite")}</a>}
             </div>
+            {sourceLinks.length > 0 && <>
+              <h3>{t("screener.stateInfo.sourcesLabel")}</h3>
+              <ul className="diversion-contacts">
+                {sourceLinks.map(source => <li key={source}><a href={source}>{new URL(source).hostname}</a></li>)}
+              </ul>
+            </>}
           </div>
         </details>
       </div>

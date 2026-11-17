@@ -32,7 +32,7 @@ export default {
         },
         {
           "title": "Arrest-Stage Risk Screener",
-          "description": "An arrest can immediately put housing, employment, and other vital systems at risk, even before any conviction. Answer 7 quick yes-or-no questions to see what may need attention right now.",
+          "description": "Answer seven questions about your circumstances to see what may need attention. You can choose “I’m not sure” for any question.",
           "link": "/collateral-consequences"
         }
       ]
@@ -90,7 +90,7 @@ export default {
         {
           "title": "Record Expungement",
           "description": "Learn about sealing criminal records.",
-          "link": "/support/reputation"
+          "link": "/record-expungement"
         },
         {
           "title": "Record Clearance Screener",
@@ -331,7 +331,7 @@ export default {
         },
         {
           "title": "Verificador de Riesgos al Momento del Arresto",
-          "description": "Un arresto puede poner en riesgo inmediatamente la vivienda, el empleo y otros sistemas vitales, incluso antes de una condena. Responda 7 preguntas rápidas para ver qué puede necesitar atención ahora mismo.",
+          "description": "Responda siete preguntas sobre su situación para ver qué temas podrían requerir atención. Puede elegir «No estoy seguro/a» en cualquier pregunta.",
           "link": "/collateral-consequences"
         }
       ]
@@ -389,7 +389,7 @@ export default {
         {
           "title": "Limpieza de Antecedentes",
           "description": "Aprenda sobre el sellado de antecedentes penales.",
-          "link": "/support/reputation"
+          "link": "/record-expungement"
         },
         {
           "title": "Evaluador de Elegibilidad para Limpieza de Antecedentes",
@@ -630,7 +630,7 @@ export default {
         },
         {
           "title": "逮捕阶段风险筛查",
-          "description": "逮捕可能立即对住房、就业和其他重要方面产生影响，甚至在定罪之前。回答7个简短的是否问题，了解现在需要关注什么。",
+          "description": "回答七个有关您情况的问题，了解可能需要关注的事项。每个问题都可以选择“不确定”。",
           "link": "/collateral-consequences"
         }
       ]
@@ -688,7 +688,7 @@ export default {
         {
           "title": "记录清除",
           "description": "了解如何封存犯罪记录。",
-          "link": "/support/reputation"
+          "link": "/record-expungement"
         },
         {
           "title": "犯罪记录清除资格评估",

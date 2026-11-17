@@ -103,7 +103,7 @@ const contentPages = [
       {
         route: "/support/reputation",
         title: "Record Clearance & Reputation",
-        description: "Expungement and sealing eligibility rules for all 50 states + DC, organized by state. Covers the long-term collateral consequences of a conviction on employment, housing, voting rights, professional licenses, immigration, and public benefits. Includes a record clearance eligibility screener at /support/reputation/eligibility. The legacy /record-expungement route redirects here.",
+        description: "Expungement and sealing eligibility rules for all 50 states + DC, organized by state. Covers the long-term collateral consequences of a conviction on employment, housing, voting rights, professional licenses, immigration, and public benefits. Includes a record clearance eligibility screener at /support/reputation/eligibility. The /record-expungement guide helps readers prepare for legal review.",
       },
       {
         route: "/support/reentry",
@@ -133,7 +133,7 @@ const contentPages = [
       {
         route: "/diversion-programs",
         title: "Diversion Programs",
-        description: "111 pre-trial diversion and alternative sentencing programs covering all 50 states + DC + Federal. Includes metro-area drug courts and statewide specialty court portals. Filterable by state, county, and program type.",
+        description: "State and local pre-trial diversion and alternative sentencing programs covering all 50 states + DC + Federal. Includes metro-area drug courts and statewide specialty court portals. Filterable by state, county, and program type.",
       },
     ],
   },
@@ -533,8 +533,8 @@ export default function TechDocs() {
                 <p>
                   <strong className="text-foreground">Reputation & Record Clearance</strong> (<code className="bg-muted px-1 rounded text-xs">/support/reputation</code>) consolidates
                   expungement eligibility rules for all 50 states + DC with the collateral consequences guide. A record clearance eligibility screener lives at
-                  <code className="bg-muted px-1 rounded text-xs"> /support/reputation/eligibility</code>. The legacy route <code className="bg-muted px-1 rounded text-xs">/record-expungement</code> redirects
-                  permanently to the eligibility screener. <code className="bg-muted px-1 rounded text-xs">/collateral-consequences</code> is a separate, live page (the consequence-risk screener), not a redirect.
+                  <code className="bg-muted px-1 rounded text-xs"> /support/reputation/eligibility</code>. The guide at <code className="bg-muted px-1 rounded text-xs">/record-expungement</code> links
+                  to the eligibility screener. <code className="bg-muted px-1 rounded text-xs">/collateral-consequences</code> is a separate, live page (the consequence-risk screener), not a redirect.
                 </p>
                 <p>No AI, no login required for any page in this section.</p>
               </div>
@@ -867,7 +867,7 @@ export default function TechDocs() {
               </div>
               <div className="developer-maintenance-row">
                 <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">check-diversion-programs.ts</code>
-                <span>HEAD/GET checks all 111 diversion program contact URLs. Treats 403/999 CDN bot-blocks as live; exits non-zero on true 404/error. Outputs <code className="bg-background px-1 rounded text-xs">diversion-link-report.json</code>.</span>
+                <span>HEAD/GET checks the diversion program contact URLs. Treats 403/999 CDN bot-blocks as live; exits non-zero on true 404/error. Outputs <code className="bg-background px-1 rounded text-xs">diversion-link-report.json</code>.</span>
               </div>
               <div className="developer-maintenance-row">
                 <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">check-detention-facilities.ts</code>

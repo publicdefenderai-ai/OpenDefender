@@ -641,7 +641,7 @@ export default {
           "collateral": { "title": "附带后果", "summary": "州级投票、就业、福利、住房、执照、移民、登记和期限信息。", "freshness": "大多数记录日期为 2026 年 3 月；请核对记录和现行法律。", "limitation": "后果可能取决于罪名、判决、监督、机构规则和此处未表示的事实。", "evidence": "维护数据覆盖 51 个司法辖区键和多个后果类别，可信度混合。" },
           "rights": { "title": "宪法权利", "summary": "关于沉默、律师、搜查和快速审判等权利的一般教育性摘要。", "freshness": "静态编辑内容；不宣称普遍保持最新。", "limitation": "概括性摘要存在例外和州级程序，并非完整的宪法或判例数据库。", "evidence": "页面指向 Congress.gov Constitution 和其他公共法律资料；请在适用司法辖区核实。" },
           "expungement": { "title": "记录清除与救济", "summary": "按司法辖区说明清除、封存、撤销及其他记录救济之间的区别。", "freshness": "每条记录有自己的更新日期；较旧记录需要重新检查。", "limitation": "资格、费用、等待期和表格会变化。列出的规则不是资格判定。", "evidence": "维护数据有 52 条司法辖区记录，并在可用时保存法条来源和日期。" },
-          "diversion": { "title": "转介项目", "summary": "用于资源搜索的州级和地方转介或问题解决项目目录。", "freshness": "数据集标头显示 2026 年 4 月；单条记录可能更早。", "limitation": "111 条记录不是完整目录。链接检查不能确认资格、资金、受理、时间或项目仍在运行。", "evidence": "导出数据中 110 条记录目前标为活跃。来源包括 NADCP、NDAA、法院、检察机关和公共机构。" },
+          "diversion": { "title": "转介项目", "summary": "用于资源搜索的州级和地方转介或问题解决项目目录。", "freshness": "部分条目已于2026年11月审核。其他记录可能较早。", "limitation": "110 条记录不是完整目录。链接检查不能确认资格、资金、受理、时间或项目仍在运行。", "evidence": "导出数据中 108 条记录目前标为活跃。来源包括 NADCP、NDAA、法院、检察机关和公共机构。" },
           "legalAid": { "title": "法律援助组织", "summary": "公共辩护、移民、民事法律援助和联邦辩护机构的初始目录记录。", "freshness": "数据集标头显示最后更新于 2026 年 3 月；请直接联系组织。", "limitation": "目录记录或可用链接不代表组织会接案、服务特定人员或有接待能力。", "evidence": "维护种子数据有 198 个组织，分布在 55 个司法辖区标签，来源包括 EOIR、LSC 和辩护机构。" },
           "glossary": { "title": "法律术语表", "summary": "产品使用的法律术语的通俗定义。", "freshness": "数量和术语直接读取维护中的术语表。", "limitation": "定义是教育性摘要，可能省略司法辖区特定含义或例外。", "evidence": "维护术语表有 50 个术语，包含可选来源链接和单条日期。" },
           "courtServices": { "title": "法院服务与定位链接", "summary": "官方法院系统网站和定位路径帮助用户寻找地方司法信息。", "freshness": "维护的法院地图标为 2025 年 1 月核验；链接可能变化。", "limitation": "法院主页或定位器不是地方规则数据库，也不能确认期限或服务可用性。", "evidence": "导出数据有 52 条法院系统记录。地方规则和书记官指引需向法院确认。" },
@@ -2050,7 +2050,7 @@ export default {
       "actions": {
         "controlNarrative": {
           "title": "决定告诉谁——以及说什么",
-          "description": "你没有义务向任何人披露你的指控。有意识地选择信任的对象，可以保护你免受谣言影响，让你建立一个了解全貌的支持网络。有选择性地、有目的性地分享——与会支持你的亲密朋友和家人，而非流言蜚语者。下面的模板可以帮助你按照自己的方式开始这些对话。",
+          "description": "是否向亲友透露由您决定。求职、执照及其他申请可能有具体披露规定。请确认哪些问题可以依法询问，以及涉及哪些记录。",
           "timeframe": "本周",
           "priority": "high"
         },
@@ -2097,14 +2097,14 @@ export default {
             "body": "Hi [Name],\n\nI wanted to reach out because I'd rather you hear this from me than through someone else.\n\nI'm dealing with a legal matter right now. I'm not going to go into all the details, but I want you to know that I'm taking it seriously and working through it with my attorney. This has been one of the hardest periods of my life and I'm doing my best to handle it responsibly.\n\nI'm not looking for pity — I just didn't want there to be a wall between us, and I trust you. If you have questions, I'm happy to talk, though there are limits to what I can share right now.\n\nMost of all, I just wanted you to know. Having people in my corner means everything.\n\n[Your Name]"
           },
           "professional": {
-            "label": "致雇主或背景调查询问的书面回应",
+            "label": "雇主询问待决案件时",
             "subject": "Subject: Regarding Background Check Results — [Your Name]",
             "body": "Dear [Hiring Manager / HR Department],\n\nI am writing to address the pending legal matter that may appear in my background check results.\n\nI want to be transparent: I am currently facing [a charge / charges] that I am contesting with the assistance of legal counsel. The matter is unresolved and I am not able to share specifics at this time. I want to emphasize that this is a pending case — not a conviction — and I am committed to resolving it through the proper legal process.\n\nI have consistently performed [at a high level / with integrity / responsibly] in my professional life and I am happy to provide references who can speak to my character and work ethic. I would welcome the opportunity to discuss this further if you feel it is necessary.\n\nThank you for your consideration.\n\nSincerely,\n[Your Name]\n[Your Contact Information]"
           },
           "mugshot": {
             "label": "申请从网站删除照片或记录",
             "subject": "Subject: Removal Request — [Your Full Name] — [Date of Arrest]",
-            "body": "To Whom It May Concern,\n\nI am writing to formally request the removal of my personal information and photograph from your website.\n\nName: [Your Full Name]\nDate of birth: [DOB]\nDate of arrest: [Date]\nURL of the page containing my information: [URL]\n\nThis listing is causing significant harm to my professional and personal reputation. [If applicable: My state's law (cite state, e.g., California Civil Code § 1798.91.1) requires the removal of this content upon request without a fee.]\n\nI request that you remove this content within [30 days / the timeframe required by law]. Please confirm receipt of this request and the expected removal date.\n\nIf you require any additional information, please contact me at [your email / phone].\n\nSincerely,\n[Your Full Name]\n[Your Contact Information]"
+            "body": "您好：\n\n请删除[网址]上的我的逮捕照片。记录上的姓名为[姓名]，逮捕日期为[日期]。删除后烦请书面确认。\n\n谢谢！\n[姓名]"
           }
         },
         "callScripts": {
@@ -2140,7 +2140,7 @@ export default {
           "description": "EEOC就雇主何时可以及不可以根据联邦反歧视法律使用犯罪背景调查结果提供指导。"
         },
         "mugRemoval": {
-          "description": "许多州现在要求照片网站应要求删除照片，通常不收取费用。搜索'[你的州] mugshot removal law'了解流程和是否可以收取费用。"
+          "description": "可以向发布网站申请删除。加州民法第1798.91.1条禁止受该法约束的发布者向当事人收取删除费用。该条款并未强制删除或规定时限。"
         },
         "repDefender": {
           "description": "在线声誉管理服务可以帮助压制或删除有害搜索结果。费用不同——免费选项包括直接向网站和搜索引擎提出请求。"
@@ -2160,11 +2160,11 @@ export default {
         },
         "q3": {
           "question": "当有人询问我的案件时我该说什么？",
-          "answer": "你没有义务与律师以外的任何人讨论你的案件。一个冷静、简短的回应——'我正在处理一个法律事项，现在无法详细说明'——是完整和专业的。在就业环境中，你可能需要在某些申请中披露未决指控，但你可以客观地表述：这是未决的，不是定罪，你正在正当处理。"
+          "answer": "在私人谈话中可以自行决定透露什么。申请表可能询问特定记录。披露要求取决于职位、管辖地、问题措辞和封存令。如有疑问，可咨询律师。"
         },
         "q4": {
           "question": "我可以让我的照片从互联网上删除吗？",
-          "answer": "许多州已通过法律要求照片网站应要求删除照片，通常不收取费用。搜索你所在州的照片删除法律。对于不合规或不在州法律覆盖范围内的网站，你可以直接向谷歌提交删除请求以取消索引页面。以下列出的组织也可以提供帮助。这不会从官方执法系统中删除记录，但可以显著减少人们通过一般搜索找到的内容。"
+          "answer": "可以请求发布者删除原网页或照片。原页面变更后，可另行请求搜索引擎更新过时结果。删除搜索结果不会删除原网页或官方记录。"
         }
       },
       "tips": {
@@ -2180,19 +2180,19 @@ export default {
         "gapLabel": "第二次机会的差距",
         "gapBody": "研究表明，有资格封存记录的人中，不到10%的人通过基于申请的系统实际这样做。文件繁琐，法律援助难以获得，许多人不知道自己有资格。自动清除通过让政府启动流程来弥合这一差距。",
         "autoLabel": "自动清除如何运作",
-        "autoBody": "在具有净板法的州，政府系统会定期扫描记录以识别符合条件的人。当您满足标准，通常是完成刑期并等待所需时间后，您的记录将在您无需任何行动的情况下被封存或清除。您无需提交任何文件、支付费用或出庭。",
+        "autoBody": "部分州会自动处理符合条件的记录。适用范围取决于记录和法律。请向法院或州记录机构确认处理结果。",
         "petitionLabel": "基于申请的系统（大多数州）",
-        "petitionBody": "在没有自动清除的州，您需要向法院提交申请以封存或消除您的记录。法律援助组织可以免费帮助完成此流程。以下资格评估工具可以告诉您所在州是否有自动程序或需要申请。",
+        "petitionBody": "您可以提出申请，请法院处理记录。有些州同时提供申请和自动处理两种途径。法律援助机构可协助您了解适用条件。",
         "statesTitle": "拥有活跃自动清除项目的州（截至2026年）",
         "statesList": [
-          "加利福尼亚州：大麻定罪（AB 1599，2024年）",
-          "伊利诺伊州：大麻定罪（大麻监管和税收法）",
-          "纽约州：大麻定罪（大麻监管和税收法，2021年）",
-          "宾夕法尼亚州：10年后非暴力轻罪（净板法，2018年）",
-          "密歇根州：7年后的某些罪行（净板立法，2021年）",
-          "康涅狄格州：某些轻罪（净板立法，2021年）",
-          "特拉华州：某些轻罪（净板立法，2021年）",
-          "新泽西州：大麻定罪"
+          "加利福尼亚州",
+          "伊利诺伊州",
+          "纽约州",
+          "宾夕法尼亚州",
+          "密歇根州",
+          "康涅狄格州",
+          "特拉华州",
+          "新泽西州"
         ],
         "statesNote": "其他州正在实施净板立法。查看下方净板倡议追踪器了解最新状态。",
         "checkTitle": "如何检查您的记录是否已被清除",
@@ -2202,7 +2202,7 @@ export default {
           "在加利福尼亚州，直接使用Code for America的Clear My Record工具"
         ],
         "screenerLabel": "检查您的资格",
-        "screenerDesc": "回答四个问题，了解自动清除或申请是否适用于您的情况。",
+        "screenerDesc": "了解您的记录，以及需要通过州级来源核实的问题。",
         "screenerCta": "打开资格评估工具",
         "cfaLabel": "Code for America：清除我的记录",
         "cfaDesc": "自动记录清除的领先平台。包括加利福尼亚州的工具和其他州的指导。",
@@ -2215,18 +2215,18 @@ export default {
         "sectionTitle": "背景调查时您的权利",
         "sectionSubtitle": "联邦法律在雇主将背景调查用于对您不利之前赋予您特定权利。大多数人从未被告知这些权利的存在。",
         "adverseActionTitle": "雇主在采取行动前必须通知您",
-        "adverseActionBody": "在雇主根据背景调查拒绝您之前，联邦法律（公平信用报告法）要求他们向您提供预不利行动通知。这包括报告副本和书面权利摘要。在最终决定作出之前，您有时间审查报告并对任何错误提出异议。许多雇主跳过这一步骤——如果他们这样做，就违反了联邦法律。",
+        "adverseActionBody": "雇主根据第三方背景报告作出不利决定前，通常需按 FCRA 提供报告副本和书面权利摘要，并在最终决定前给予回应机会。报告机构处理异议的期限并非雇主的固定等待期。",
         "disputeTitle": "您可以对不准确信息提出异议",
-        "disputeBody": "如果背景调查包含错误——错误的指控、他人的记录、过时的信息——您有权提出异议。背景调查公司必须在30天内调查并更正或删除不准确信息。以书面形式提交异议并保留副本，附上支持您主张的任何文件。",
+        "disputeBody": "提出异议后，报告机构通常有30天重新调查。如果您在此期间提供有关的新信息，期限可能延长最多15天。这是报告机构的期限。雇主作出不利决定前的程序另有规定。",
         "lookbackTitle": "7年规则",
-        "lookbackBody": "根据联邦法律，对于年薪约75,000美元以下的职位，大多数负面信息（包括许多刑事记录）只能报告7年。此限制并非适用于所有定罪情况，且几个州有更严格的规定。如果较旧的记录出现在您的报告中，这可能值得提出异议。",
+        "lookbackBody": "联邦法律对消费者背景报告中的刑事定罪没有七年期限。未导致定罪的逮捕及许多其他不利信息通常受七年限制，但有例外。预计年薪至少为75,000美元的工作通常不受这些联邦年限限制。州法可能另有限制。见 15 U.S.C. § 1681c(a)–(b)。",
         "rapSheetNote": "不确定您的记录上有什么？您可以在 IdentityHistory.fbi.gov 免费申请您的FBI身份历史摘要。许多州还允许您通过州警察或法院管理员申请您的州刑事历史记录。",
         "whatToDoTitle": "如果背景调查被用于对您不利",
         "whatToDoSteps": [
           "向雇主索取预不利行动通知和报告副本",
           "仔细审查报告中的错误——错误姓名、已撤销指控仍被列为定罪、他人记录",
           "如果发现错误，直接向报告中列出的背景调查公司提交书面异议",
-          "该公司必须在30天内调查并以书面形式回复",
+          "请保存异议材料及报告机构的书面回复。",
           "如果雇主在未给您通知的情况下已作出最终决定，这可能是您可以向CFPB举报或通过消费者保护律师追究的违规行为"
         ],
         "cfpbLabel": "CFPB：背景调查和您的权利",
@@ -2275,17 +2275,13 @@ export default {
         "vsExpungementBody": "消除记录会清除记录。证书保留记录但消除特定后果。证书通常适用于不符合消除资格的人，包括有更严重定罪的人、尚未等满所需期限的人，或需要比消除记录更快获得救济的人。",
         "statesTitle": "拥有有效证书计划的州",
         "statesList": [
-          "纽约州：残疾救济证书和良好行为证书",
-          "俄亥俄州：就业资格证书（定罪后6个月可申请）",
-          "伊利诺伊州：附带后果救济证书",
-          "北卡罗来纳州：救济证书",
-          "新泽西州：康复证书",
-          "加利福尼亚州：康复证书（重罪定罪；自动申请赦免）",
-          "田纳西州：就业能力证书",
-          "科罗拉多州：救济证书（2021年）",
-          "内华达州：救济证书"
+
+          "俄亥俄州就业资格证明的通常等待期为轻罪六个月、重罪一年，从刑满获释并结束监管时起算；如未被监禁，则从全部制裁结束时起算。特定条件下可提前申请。住房另有证明。",
+
+          "加州康复证明会自动成为赦免申请。是否批准由州长决定。",
+
         ],
-        "statesNote": "约20个州以各种名称设有某种形式的证书计划。附带后果资源中心维护着最完整的逐州清单。",
+        "statesNote": "各州证明的名称、限制和可用性不同。请根据具体障碍和记录查询该州现行规定。",
         "howTitle": "如何了解您是否符合条件",
         "howSteps": [
           "查看CCRC州清单，了解您所在州是否有证书计划以及哪些犯罪符合条件",
@@ -8287,6 +8283,34 @@ export default {
     }
   },
   "screener": {
+    "review": {
+      "sealing": "此案可能适用自动封存",
+      "acquittalResult": "根据纽约州 CPL 160.50，所有指控均获无罪判决属于有利结案结果。请向法院书记员确认最终记录和封存状态。",
+      "waitTitle": "CPL 160.59 申请的等待期尚未届满",
+      "offense": "记录上列明的大麻相关罪名是什么？",
+      "possession": "持有",
+      "sale": "出售或分销",
+      "other": "其他罪名",
+      "pendingCheck": "案件仍在审理中。考虑要求撤诉或无罪判决的途径前，请核实最终结果。",
+      "closedCheck": "案件结果有助于判断未定罪记录的救济途径。适用程序取决于法院命令、具体指控和州规则。",
+      "unknownResult": "本次筛查无法确定您的记录是否符合条件。",
+      "nyWait": "根据您的回答，CPL 160.59 规定的十年期限尚未届满。其他途径的规则不同。",
+      "nyCheck": "仅经过十年无法确定资格。请查阅法院指南中的犯罪记录、排除的罪名和其他条件。",
+      "check": "需要结合州规则和法院记录核对适用的程序、等待期及监管情况。",
+      "dispositionCheck": "请核对法院记录中的具体罪名和最终结果。仅有逮捕或大麻相关指控无法确定资格。",
+      "stateSource": "{{state}} 法院资源",
+      "automaticSource": "州政府关于自动清除记录的信息",
+      "outcome": "案件结果如何？",
+      "nyTiming": "对于纽约州 CPL 160.59 申请，自最近一次定罪或获释（以较晚者为准）是否已过十年？",
+      "noTiming": "起算事件取决于救济途径。本筛查没有经核实的适用等待期。",
+      "unknown": "我不确定",
+      "short": "不足十年",
+      "long": "十年或以上",
+      "dismissed": "案件被撤销或未提出指控",
+      "acquitted": "本案所有指控均获无罪判决",
+      "pending": "案件仍在审理中",
+      "convicted": "定罪"
+    },
     "title": "记录清除资格评估",
     "subtitle": "回答四个问题，了解您的记录是否符合清除、封存或自动清除的条件。此工具仅提供一般信息，不是法律建议。",
     "backToReputation": "返回声誉和记录支持",

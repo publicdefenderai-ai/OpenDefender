@@ -4,7 +4,7 @@ export const expungementRules: ExpungementRule[] = [
   {
     id: "ca-expungement",
     state: "CA",
-    overview: "California allows expungement (dismissal) under Penal Code § 1203.4 for most misdemeanors and many felonies after completing probation or serving sentence. AB 1599 (2024) expanded automatic expungement for marijuana-related convictions under HS § 11361.9. Note: even after expungement, an employer who specifically asks may still be entitled to know about the conviction in some licensing contexts.",
+    overview: "California has separate procedures for dismissal, sealing and automatic record relief. The available procedure depends on the disposition and sentence. Confirm the current status with the court or state records agency.",
     waitingPeriods: {
       misdemeanorMonths: 12,
       felonyMonths: 12
@@ -33,7 +33,7 @@ export const expungementRules: ExpungementRule[] = [
     ],
     sources: [
       "California Penal Code Section 1203.4",
-      "AB 1599 (2024) — Expanded Marijuana Expungement",
+      "California Department of Justice, Automatic Record Relief (PC §§ 851.93 and 1203.425)",
       "California Courts Self-Help Center"
     ],
     lastUpdated: new Date("2026-04-01"),
@@ -1989,9 +1989,9 @@ export const automaticClearanceData: Record<string, AutomaticClearanceEntry> = {
     state: "CA",
     hasActive: true,
     offenseTypes: ["marijuana", "cannabis"],
-    legislation: "AB 1599 (2024); HS § 11361.9",
+    legislation: "Health and Safety Code § 11361.9",
     link: "https://www.codeforamerica.org/programs/clear-my-record/",
-    notes: "Code for America's Clear My Record tool serves California. Petition-based expungement under PC § 1203.4 is still required for most non-cannabis offenses.",
+    notes: "California also has automatic record relief under Penal Code §§ 851.93 and 1203.425. Coverage depends on the record.",
   },
   IL: {
     state: "IL",

@@ -47,7 +47,7 @@ const RaidsToolkit = lazy(() => import("@/pages/immigration/raids-toolkit"));
 const AfterDeportation = lazy(() => import("@/pages/immigration/after-deportation"));
 const DiversionPrograms = lazy(() => import("@/pages/diversion-programs"));
 const CollateralConsequences = lazy(() => import("@/pages/collateral-consequences"));
-// RecordExpungement redirects to /support/reputation — import no longer needed
+const RecordExpungement = lazy(() => import("@/pages/record-expungement"));
 const MissionStatement = lazy(() => import("@/pages/mission-statement"));
 const CourtRecords = lazy(() => import("@/pages/court-records"));
 const RecapExtensions = lazy(() => import("@/pages/recap-extensions"));
@@ -149,7 +149,7 @@ function Router() {
       <Route path="/immigration-guidance/after-deportation" component={AfterDeportation} />
       <Route path="/legal-glossary" component={LegalGlossaryPage} />
       <Route path="/diversion-programs" component={DiversionPrograms} />
-      <Route path="/record-expungement"><Redirect to="/support/reputation/eligibility" /></Route>
+      <Route path="/record-expungement" component={RecordExpungement} />
       <Route path="/mission-statement" component={MissionStatement} />
       <Route path="/court-records" component={CourtRecords} />
       <Route path="/recap-extensions" component={RecapExtensions} />
