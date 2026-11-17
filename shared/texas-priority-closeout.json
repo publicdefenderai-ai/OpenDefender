@@ -1,0 +1,712 @@
+[
+  {
+    "id": "tx-aggravated-assault",
+    "name": "Aggravated assault",
+    "officialTitle": "AGGRAVATED ASSAULT.",
+    "category": "felony",
+    "code": "22.02",
+    "citation": "Tex. Penal Code § 22.02",
+    "conduct": "Assault under §22.01(a) means intentionally, knowingly or recklessly causing bodily injury, intentionally or knowingly threatening imminent bodily injury, or intentionally or knowingly making physical contact the actor knows or should reasonably believe will be regarded as offensive or provocative. During the assault the actor causes serious bodily injury to another person or uses or exhibits a deadly weapon.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying prior convictions can increase punishment. Section 22.02(b)(1)–(4) raises the charge to a first-degree felony in specified circumstances, including certain serious injuries with a deadly weapon, specified public-service or retaliation circumstances, qualifying vehicle shootings, or assault as part of a mass shooting. The first-degree range is five to 99 years or life and a possible fine up to $10,000.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-02-a-2",
+    "name": "Aggravated assault (using or exhibiting a deadly weapon)",
+    "officialTitle": "AGGRAVATED ASSAULT.",
+    "category": "felony",
+    "code": "22.02(a)(2)",
+    "citation": "Tex. Penal Code § 22.02(a)(2)",
+    "conduct": "Assault under §22.01(a) means intentionally, knowingly or recklessly causing bodily injury, intentionally or knowingly threatening imminent bodily injury, or intentionally or knowingly making physical contact the actor knows or should reasonably believe will be regarded as offensive or provocative. The actor must use or exhibit a deadly weapon during the assault. Serious bodily injury is a separate ground and is not required under this branch.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying prior convictions can increase punishment. Section 22.02(b)(1)–(4) raises the charge to a first-degree felony in specified circumstances, including certain serious injuries with a deadly weapon, specified public-service or retaliation circumstances, qualifying vehicle shootings, or assault as part of a mass shooting. The first-degree range is five to 99 years or life and a possible fine up to $10,000.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.02",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13150005"
+  },
+  {
+    "id": "tx-driving-while-license-invalid",
+    "name": "Driving while license invalid",
+    "officialTitle": "DRIVING WHILE LICENSE INVALID.",
+    "category": "misdemeanor",
+    "code": "521.457",
+    "citation": "Tex. Transp. Code § 521.457",
+    "conduct": "Operating a motor vehicle on a highway after cancellation without a subsequently issued license, during a Texas suspension or revocation, on a license that expired during suspension, after renewal was denied without a subsequently issued license, or under an order prohibiting obtaining a license. Section 521.457(c)–(d) limits the actual-notice defense. Lawfully sent notice is presumed received.",
+    "penalty": "Ordinarily a Class C misdemeanor with a fine up to $500. A qualifying prior conviction, a financial-responsibility violation, or a previous intoxication-related suspension can make this a Class B misdemeanor (up to 180 days and $2,000). A financial-responsibility violation together with a collision the driver caused or was at fault in that killed or seriously injured another person is a Class A misdemeanor (up to one year and $4,000). Jail and fine can be imposed together. A qualifying prior may affect minimum jail time.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "521.457",
+        "subdivision": "(a), (b), (c), (d)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "521.457",
+        "subdivision": "(e), (f), (f-1), (f-2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.341",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "601.191",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "601.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-driving-while-license-invalid-prior",
+    "name": "Driving while license invalid (qualifying prior conviction)",
+    "officialTitle": "DRIVING WHILE LICENSE INVALID.",
+    "category": "misdemeanor",
+    "code": "521.457(f)(1)",
+    "citation": "Tex. Transp. Code § 521.457(f)(1)",
+    "conduct": "Operating a motor vehicle on a highway after cancellation without a subsequently issued license, during a Texas suspension or revocation, on a license that expired during suspension, after renewal was denied without a subsequently issued license, or under an order prohibiting obtaining a license. Section 521.457(c)–(d) limits the actual-notice defense. Lawfully sent notice is presumed received. A prior conviction under this section or under the pre-September 1, 2003 version of §601.371(a) must be shown. Subsection (g) addresses when a conviction is final.",
+    "penalty": "Class B misdemeanor: up to 180 days in jail, a fine up to $2,000, or both. A qualifying prior may increase the minimum if jail is imposed. The serious-collision facts in subsection (f-2) carry a separate Class A grade.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "521.457",
+        "subdivision": "(a), (b), (c), (d)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "521.457",
+        "subdivision": "(f)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.341",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "54990067"
+  },
+  {
+    "id": "tx-driving-while-license-invalid-financial",
+    "name": "Driving while license invalid (financial responsibility violation)",
+    "officialTitle": "DRIVING WHILE LICENSE INVALID.",
+    "category": "misdemeanor",
+    "code": "521.457(f)(2)",
+    "citation": "Tex. Transp. Code § 521.457(f)(2)",
+    "conduct": "Operating a motor vehicle on a highway after cancellation without a subsequently issued license, during a Texas suspension or revocation, on a license that expired during suspension, after renewal was denied without a subsequently issued license, or under an order prohibiting obtaining a license. Section 521.457(c)–(d) limits the actual-notice defense. Lawfully sent notice is presumed received. The driver also operated in violation of §601.191. Financial responsibility can be established by methods other than an insurance policy.",
+    "penalty": "Class B misdemeanor: up to 180 days in jail, a fine up to $2,000, or both. A qualifying prior may increase the minimum if jail is imposed. The serious-collision facts in subsection (f-2) carry a separate Class A grade.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "521.457",
+        "subdivision": "(a), (b), (c), (d)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "521.457",
+        "subdivision": "(f)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.341",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "601.191",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "601.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "54990067"
+  },
+  {
+    "id": "tx-driving-while-license-invalid-intoxication",
+    "name": "Driving while license invalid (previous intoxication-related suspension)",
+    "officialTitle": "DRIVING WHILE LICENSE INVALID.",
+    "category": "misdemeanor",
+    "code": "521.457(f-1)",
+    "citation": "Tex. Transp. Code § 521.457(f-1)",
+    "conduct": "Operating a motor vehicle on a highway after cancellation without a subsequently issued license, during a Texas suspension or revocation, on a license that expired during suspension, after renewal was denied without a subsequently issued license, or under an order prohibiting obtaining a license. Section 521.457(c)–(d) limits the actual-notice defense. Lawfully sent notice is presumed received. The license had previously been suspended as a result of an offense involving operation of a motor vehicle while intoxicated.",
+    "penalty": "Class B misdemeanor: up to 180 days in jail, a fine up to $2,000, or both. A qualifying prior may increase the minimum if jail is imposed. The serious-collision facts in subsection (f-2) carry a separate Class A grade.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "521.457",
+        "subdivision": "(a), (b), (c), (d)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "521.457",
+        "subdivision": "(f-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.341",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "54990067"
+  },
+  {
+    "id": "tx-driving-while-license-invalid-collision",
+    "name": "Driving while license invalid (financial responsibility violation and serious collision)",
+    "officialTitle": "DRIVING WHILE LICENSE INVALID.",
+    "category": "misdemeanor",
+    "code": "521.457(f-2)",
+    "citation": "Tex. Transp. Code § 521.457(f-2)",
+    "conduct": "Operating a motor vehicle on a highway after cancellation without a subsequently issued license, during a Texas suspension or revocation, on a license that expired during suspension, after renewal was denied without a subsequently issued license, or under an order prohibiting obtaining a license. Section 521.457(c)–(d) limits the actual-notice defense. Lawfully sent notice is presumed received. The driver violated §601.191 and caused or was at fault in a motor vehicle collision resulting in serious bodily injury to or death of another person.",
+    "penalty": "Class A misdemeanor: up to one year in jail, a fine up to $4,000, or both. A qualifying prior may increase the minimum if jail is imposed.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "521.457",
+        "subdivision": "(a), (b), (c), (d)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "521.457",
+        "subdivision": "(f-2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "521.341",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "601.191",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "601.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-protective-order-violation",
+    "name": "Violation of certain court orders or conditions of bond",
+    "officialTitle": "VIOLATION OF CERTAIN COURT ORDERS OR CONDITIONS OF BOND IN A FAMILY VIOLENCE, CHILD ABUSE OR NEGLECT, SEXUAL ASSAULT OR ABUSE, INDECENT ASSAULT, STALKING, OR TRAFFICKING CASE.",
+    "category": "misdemeanor",
+    "code": "25.07(g)",
+    "citation": "Tex. Penal Code § 25.07(g)",
+    "conduct": "Knowingly or intentionally violating a victim- or community-safety bond condition in a case listed in §25.07(a), or a qualifying Texas or out-of-state order, by conduct specified in (a)(1)–(7). The listed conduct includes family violence or furthering specified offenses, prohibited communications or proximity, firearm possession, interfering with a protected animal, GPS tampering, or nonconsensual tracking. The order or condition and the particular conduct must both qualify. A Chapter 83 temporary ex parte order must have been served. Reconciliation does not end an order.",
+    "penalty": "Class A misdemeanor: up to one year in jail, a fine up to $4,000, or both. A qualifying prior may increase the minimum if jail is imposed. A qualifying post-conviction victim order or possession of a deadly weapon during specified violations can raise the charge to a state jail felony (ordinarily 180 days to two years and up to $10,000). Two qualifying prior convictions, or violating the order or condition by committing assault or stalking, can make it a third-degree felony (ordinarily two to ten years and up to $10,000). The third-degree grounds control when applicable.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "25.07",
+        "subdivision": "(a), (a-1), (b), (d)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "25.07",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "25.072",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "38990027"
+  },
+  {
+    "id": "tx-protective-order-violation-victim",
+    "name": "Violation of certain court orders or conditions of bond (post-conviction victim order)",
+    "officialTitle": "VIOLATION OF CERTAIN COURT ORDERS OR CONDITIONS OF BOND IN A FAMILY VIOLENCE, CHILD ABUSE OR NEGLECT, SEXUAL ASSAULT OR ABUSE, INDECENT ASSAULT, STALKING, OR TRAFFICKING CASE.",
+    "category": "felony",
+    "code": "25.07(g)(1)(A)",
+    "citation": "Tex. Penal Code § 25.07(g)(1)(A)",
+    "conduct": "Knowingly or intentionally violating a victim- or community-safety bond condition in a case listed in §25.07(a), or a qualifying Texas or out-of-state order, by conduct specified in (a)(1)–(7). The listed conduct includes family violence or furthering specified offenses, prohibited communications or proximity, firearm possession, interfering with a protected animal, GPS tampering, or nonconsensual tracking. The order or condition and the particular conduct must both qualify. A Chapter 83 temporary ex parte order must have been served. Reconciliation does not end an order. The defendant violated a Criminal Procedure Chapter 7B, Subchapter A order issued for the victim after conviction or placement on deferred adjudication for that offense.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Special findings or qualifying prior convictions can increase punishment. The third-degree circumstances in (g)(2) take priority.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "25.07",
+        "subdivision": "(a), (a-1), (b), (d)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "25.07",
+        "subdivision": "(g)(1)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "38990027"
+  },
+  {
+    "id": "tx-protective-order-violation-weapon",
+    "name": "Violation of certain court orders or conditions of bond (possession of deadly weapon)",
+    "officialTitle": "VIOLATION OF CERTAIN COURT ORDERS OR CONDITIONS OF BOND IN A FAMILY VIOLENCE, CHILD ABUSE OR NEGLECT, SEXUAL ASSAULT OR ABUSE, INDECENT ASSAULT, STALKING, OR TRAFFICKING CASE.",
+    "category": "felony",
+    "code": "25.07(g)(1)(B)",
+    "citation": "Tex. Penal Code § 25.07(g)(1)(B)",
+    "conduct": "Knowingly or intentionally violating a victim- or community-safety bond condition in a case listed in §25.07(a), or a qualifying Texas or out-of-state order, by conduct specified in (a)(1)–(7). The listed conduct includes family violence or furthering specified offenses, prohibited communications or proximity, firearm possession, interfering with a protected animal, GPS tampering, or nonconsensual tracking. The order or condition and the particular conduct must both qualify. A Chapter 83 temporary ex parte order must have been served. Reconciliation does not end an order. The defendant possessed a deadly weapon while violating (a)(1), (2), (3), (5), (6) or (7). Subsection (a)(4) firearm possession alone does not satisfy this enhancement.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Special findings or qualifying prior convictions can increase punishment. The third-degree circumstances in (g)(2) take priority.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "25.07",
+        "subdivision": "(a), (a-1), (b), (d)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "25.07",
+        "subdivision": "(g)(1)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "38990027"
+  },
+  {
+    "id": "tx-protective-order-violation-priors",
+    "name": "Violation of certain court orders or conditions of bond (two qualifying convictions)",
+    "officialTitle": "VIOLATION OF CERTAIN COURT ORDERS OR CONDITIONS OF BOND IN A FAMILY VIOLENCE, CHILD ABUSE OR NEGLECT, SEXUAL ASSAULT OR ABUSE, INDECENT ASSAULT, STALKING, OR TRAFFICKING CASE.",
+    "category": "felony",
+    "code": "25.07(g)(2)(A)",
+    "citation": "Tex. Penal Code § 25.07(g)(2)(A)",
+    "conduct": "Knowingly or intentionally violating a victim- or community-safety bond condition in a case listed in §25.07(a), or a qualifying Texas or out-of-state order, by conduct specified in (a)(1)–(7). The listed conduct includes family violence or furthering specified offenses, prohibited communications or proximity, firearm possession, interfering with a protected animal, GPS tampering, or nonconsensual tracking. The order or condition and the particular conduct must both qualify. A Chapter 83 temporary ex parte order must have been served. Reconciliation does not end an order. Two previous convictions under §25.07, §25.072, or one under each must be shown. Substantially similar out-of-state offenses can count under (h).",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions can increase punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "25.07",
+        "subdivision": "(a), (a-1), (b), (d)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "25.07",
+        "subdivision": "(g)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.072",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "38990027"
+  },
+  {
+    "id": "tx-protective-order-violation-assault-stalking",
+    "name": "Violation of certain court orders or conditions of bond (assault or stalking)",
+    "officialTitle": "VIOLATION OF CERTAIN COURT ORDERS OR CONDITIONS OF BOND IN A FAMILY VIOLENCE, CHILD ABUSE OR NEGLECT, SEXUAL ASSAULT OR ABUSE, INDECENT ASSAULT, STALKING, OR TRAFFICKING CASE.",
+    "category": "felony",
+    "code": "25.07(g)(2)(B)",
+    "citation": "Tex. Penal Code § 25.07(g)(2)(B)",
+    "conduct": "Knowingly or intentionally violating a victim- or community-safety bond condition in a case listed in §25.07(a), or a qualifying Texas or out-of-state order, by conduct specified in (a)(1)–(7). The listed conduct includes family violence or furthering specified offenses, prohibited communications or proximity, firearm possession, interfering with a protected animal, GPS tampering, or nonconsensual tracking. The order or condition and the particular conduct must both qualify. A Chapter 83 temporary ex parte order must have been served. Reconciliation does not end an order. The defendant violated the qualifying order or condition by committing assault or stalking.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions can increase punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "25.07",
+        "subdivision": "(a), (a-1), (b), (d)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "25.07",
+        "subdivision": "(g)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "38990027"
+  },
+  {
+    "id": "tx-pc-46-02-a-5",
+    "name": "Unlawful carrying weapons (intentional public display)",
+    "officialTitle": "UNLAWFUL CARRYING WEAPONS.",
+    "category": "misdemeanor",
+    "code": "46.02(a-5)",
+    "citation": "Tex. Penal Code § 46.02(a-5)",
+    "conduct": "Carrying a handgun and intentionally displaying it in plain view of another person in a public place. A partially or wholly visible handgun carried in a holster is expressly excepted. Check the specific nonapplicability provisions of §46.15 for the person and circumstances involved.",
+    "penalty": "Class A misdemeanor: up to one year in jail, a fine up to $4,000, or both. A qualifying prior may increase the minimum if jail is imposed. This choice does not rely on age alone.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a-5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.15",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-02-a-6",
+    "name": "Unlawful carrying weapons (carrying while intoxicated)",
+    "officialTitle": "UNLAWFUL CARRYING WEAPONS.",
+    "category": "misdemeanor",
+    "code": "46.02(a-6)",
+    "citation": "Tex. Penal Code § 46.02(a-6)",
+    "conduct": "Carrying a handgun while intoxicated, away from the person’s own or controlled property or private property used with the owner’s consent, and neither inside nor directly en route to a motor vehicle or watercraft owned or controlled by the person or used with the consent of its owner or operator. Check the specific nonapplicability provisions of §46.15 for the person and circumstances involved.",
+    "penalty": "Class A misdemeanor: up to one year in jail, a fine up to $4,000, or both. A qualifying prior may increase the minimum if jail is imposed. This choice does not rely on age alone.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a-6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.15",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]

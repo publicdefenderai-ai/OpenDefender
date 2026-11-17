@@ -192,6 +192,18 @@ describe('generateGuidancePDF — charge summary row citation logic', () => {
     expect(JSON.stringify(mockDoc.text.mock.calls)).toContain("Select the exact Texas theft charge");
   });
 
+  it.each([
+    ["tx-unlawful-carrying-of-weapon", "Unlawful Carrying Weapons", "46.02"],
+    [undefined, "Old charging label", "Tex. Penal Code § 46.02(b)"],
+  ])("withholds the historical Texas weapons grade and citation (%s)", async (id, name, code) => {
+    const guidance = makeGuidance([{id, name: name!, classification:"misdemeanor",
+      code:code!, verifiedCitation:"Stale Texas citation"}]);
+    mockDoc.text.mockClear();
+    await generateGuidancePDF({...guidance, caseData:{...guidance.caseData, jurisdiction:"TX"}}, "en");
+    expect(chargeRows().join(" ")).not.toMatch(/MISDEMEANOR|Stale Texas citation/);
+    expect(JSON.stringify(mockDoc.text.mock.calls)).toContain("Select the specific Texas weapons charge");
+  });
+
   it('A: shows the citation parenthetical when verifiedCitation is populated', () => {
     generateGuidancePDF(
       makeGuidance([

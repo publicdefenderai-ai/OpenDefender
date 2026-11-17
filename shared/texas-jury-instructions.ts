@@ -32,6 +32,10 @@ export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInj
   "tx-pc-38-03-c": resistingArrest,
   "tx-pc-38-03-d": resistingArrest,
   "tx-pc-38-04-vehicle": evadingArrest,
+  "tx-pc-22-02-a-2": {
+    instructionRef: "CPJC 22.6: Aggravated Assault Using or Exhibiting a Deadly Weapon (bodily-injury theory only) — underlying conduct only",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-6.htm&version=013",
+  },
   "tx-pc-31-03-e-1": theft,
   "tx-pc-31-03-e-2-b": theft,
   "tx-pc-31-03-e-3": theft,

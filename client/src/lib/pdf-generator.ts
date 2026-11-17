@@ -6,7 +6,7 @@ import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, knownCasePhase, type LegalDocument } from "@shared/legal-documents";
 import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
-import { isTexasHeldTheftSelection } from "@shared/texas-reviewed";
+import { isTexasHeldCarrySelection, needsTexasChargeReselection } from "@shared/texas-reviewed";
 import { resolveGuidanceCharge } from "@shared/guidance-charge-resolution";
 
 // jsPDF's built-in fonts (helvetica, times, courier) only cover Latin/WinAnsi glyphs. Chinese
@@ -523,7 +523,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     guidance.chargeClassifications.forEach((charge, idx) => {
       summaryData.push([
         idx === 0 ? labels.charges : '',
-        isTexasHeldTheftSelection(charge, caseData.jurisdiction) ? formatChargeName(charge.name) : charge.verifiedCitation
+        needsTexasChargeReselection(charge, caseData.jurisdiction) ? formatChargeName(charge.name) : charge.verifiedCitation
           ? `${formatChargeName(charge.name)} (${charge.verifiedCitation}) - ${charge.classification.toUpperCase()}`
           : `${formatChargeName(charge.name)} - ${charge.classification.toUpperCase()}`
       ]);
@@ -798,14 +798,18 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       doc.setFontSize(11);
       doc.setFont(FONT_NAME, 'bold');
       doc.setTextColor(0, 0, 0);
-      if (isTexasHeldTheftSelection(charge, caseData.jurisdiction)) {
-        const notice = isChinese
-          ? "请重新选择确切的德克萨斯州盗窃罪名。财产价值和以往定罪会影响刑罚。"
-          : isSpanish
-            ? "Seleccione el cargo exacto de hurto en Texas. El valor del bien y las condenas previas pueden cambiar la pena."
-            : "Select the exact Texas theft charge. Property value and prior convictions can change the penalty.";
+      if (needsTexasChargeReselection(charge, caseData.jurisdiction)) {
+        const notice = isTexasHeldCarrySelection(charge, caseData.jurisdiction) ? {
+          zh: "请根据指控文件重新选择具体的德克萨斯州携带武器罪名。",
+          es: "Seleccione el cargo específico de portación de armas de Texas que figura en su acusación.",
+          en: "Select the specific Texas weapons charge listed on your charging document.",
+        } : {
+          zh: "请重新选择确切的德克萨斯州盗窃罪名。财产价值和以往定罪会影响刑罚。",
+          es: "Seleccione el cargo exacto de hurto en Texas. El valor del bien y las condenas previas pueden cambiar la pena.",
+          en: "Select the exact Texas theft charge. Property value and prior convictions can change the penalty.",
+        };
         yPosition = addText(formatChargeName(charge.name), margin, yPosition);
-        yPosition = addText(notice, margin, yPosition + 6) + 6;
+        yPosition = addText(notice[isChinese ? "zh" : isSpanish ? "es" : "en"], margin, yPosition + 6) + 6;
         return;
       }
       const chargeHeader = `${formatChargeName(charge.name)} - ${charge.classification.toUpperCase()}`;

@@ -1,4 +1,4 @@
-import { texasReviewedById, texasReviewedRecords, texasReviewedCitation } from "@shared/texas-reviewed";
+import { texasHeldCarryId, texasReviewedById, texasReviewedRecords, texasReviewedCitation } from "@shared/texas-reviewed";
 import { texasReviewedSnapshotHashes } from "../data/texas-reviewed-hashes";
 import { OHIO_ODOMETER_FRAUD_SOURCES, isOhioOdometerFraudSourceFresh } from "../data/ohio-odometer-fraud-source";
 import { OHIO_TRANSIT_VENUES_SOURCES, isOhioTransitVenuesSourceFresh } from "../data/ohio-transit-venues-source";
@@ -479,6 +479,7 @@ export async function getCurrentAuthoritySelectableChargeIds(
   }
 
   if (jurisdiction === "TX") {
+    selectable.delete(texasHeldCarryId);
     for (const row of texasReviewedRecords) {
       const required = expected.get(row.id);
       if (!required) continue;

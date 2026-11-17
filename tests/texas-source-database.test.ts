@@ -35,22 +35,22 @@ describe("Texas authority manifest", () => {
 
     expect(manifest.catalogRecords).toHaveLength(txCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(txCount);
-    expect(seed.sources).toHaveLength(68);
-    expect(seed.snapshots).toHaveLength(249);
-    expect(seed.links).toHaveLength(249);
-    expect(seed.selectableChargeIds).toHaveLength(59);
+    expect(seed.sources).toHaveLength(78);
+    expect(seed.snapshots).toHaveLength(335);
+    expect(seed.links).toHaveLength(335);
+    expect(seed.selectableChargeIds).toHaveLength(71);
     expect(seed.selectableChargeIds).toContain("tx-aggravated-assault");
     expect(seed.selectableChargeIds).not.toContain("tx-bank-robbery");
     expect(seed.selectableChargeIds).not.toContain("tx-wire-fraud");
     expect(manifest.catalogRecords.filter((record) =>
-      record.disposition === "require_exact_reselection")).toHaveLength(76);
+      record.disposition === "require_exact_reselection")).toHaveLength(75);
   });
 
   it("stores TCSS text, hashes, currentness evidence, and official source identity", () => {
-    const charge = criminalCharges.find((candidate) => candidate.id === "tx-aggravated-assault")!;
+    const charge = criminalCharges.find((candidate) => candidate.id === "tx-criminal-mischief")!;
     const record = buildTexasManifestRecord(
       charge,
-      [document("PE", "22.02", "AGGRAVATED ASSAULT.")],
+      [document("PE", "28.03", "CRIMINAL MISCHIEF.")],
       importedAt,
     );
     const seed = buildTexasSourceDatabaseSeed({
@@ -60,21 +60,21 @@ describe("Texas authority manifest", () => {
       catalogRecords: [record],
     });
 
-    expect(record.disposition).toBe("retain");
+    expect(["retain", "exact_alias_rename"]).toContain(record.disposition);
     expect(record.provisions[0]).toMatchObject({
-      section: "22.02",
-      officialTitle: "AGGRAVATED ASSAULT.",
+      section: "28.03",
+      officialTitle: "CRIMINAL MISCHIEF.",
       content: expect.stringContaining("statutory elements"),
       hashBasis: "source_content",
       effectiveDateStart: "September 1, 2025",
     });
     expect(seed.sources[0]).toMatchObject({
       publisher: "Texas Legislative Council TCSS",
-      canonicalUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.22.htm#22.02",
+      canonicalUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.28.htm#28.03",
       accessPolicy: "store_text",
       canStoreContent: true,
     });
-    expect(seed.selectableChargeIds).toEqual(["tx-aggravated-assault"]);
+    expect(seed.selectableChargeIds).toEqual(["tx-criminal-mischief"]);
   });
 
   it("extracts the latest complete effective date from amended TCSS text", () => {

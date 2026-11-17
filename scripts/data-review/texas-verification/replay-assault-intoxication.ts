@@ -16,7 +16,11 @@ import propertyEvidence from "../output/texas-property-access-evidence.json";
 import arrestRows from "../../../shared/texas-ranked-arrest.json";
 import arrestEvidence from "../output/texas-ranked-arrest-evidence.json";
 
+import closeoutRows from "../../../shared/texas-priority-closeout.json";
+import closeoutEvidence from "../output/texas-priority-closeout-evidence.json";
+
 const batches = new Map([
+  ["priority-closeout", { rows: closeoutRows, evidence: Object.entries(closeoutEvidence) }],
   ["assault-intoxication", { rows: assaultRows, evidence: Object.entries(assaultEvidence) }],
   ["ranked-possession", { rows: possessionRows, evidence: Object.entries(possessionEvidence) }],
   ["ranked-arrest", { rows: arrestRows, evidence: Object.entries(arrestEvidence) }],
