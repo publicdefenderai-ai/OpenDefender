@@ -5484,6 +5484,7 @@ export default {
     }
   },
   "privacyPolicy": {
+    "reader": {"contents": "En esta página · {{count}} categorías", "index": "Índice de la política de privacidad", "sources": "Fuentes de datos"},
     "hero": {
       "title": "Política de Privacidad",
       "subtitle": "Estamos comprometidos a proteger su privacidad. Esta política explica cómo manejamos su información.",
