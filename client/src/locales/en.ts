@@ -5481,6 +5481,7 @@ export default {
       "disclaimer": "OpenDefender is not a substitute for a licensed attorney. It is an orientation tool, designed to help you understand what is happening, what your options are, and where to find the right support, whether that is legal, logistical, or personal."
     }
   },
+  "errorRecovery": {"title": "Something went wrong", "description": "An unexpected error occurred. You can reload this page or return to the homepage.", "warning": "Reloading or leaving this page may lose unsaved input. Temporary server records expire as described in the Privacy Policy.", "reload": "Reload page", "home": "Go to homepage", "privacy": "Privacy Policy"},
   "privacyPolicy": {
     "reader": {"contents": "On this page · {{count}} categories", "index": "Privacy policy contents", "sources": "Data Sources"},
     "hero": {

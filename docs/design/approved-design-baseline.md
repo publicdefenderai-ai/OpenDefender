@@ -709,3 +709,7 @@ The notice uses the approved notice-layout.html reading layout. A keyboard-opera
 ### Privacy Policy
 
 The 12-category policy uses the shared reading layout and contents index. Its AI inventory compares five features, the data sent and the published retention limits. On narrow screens each feature keeps its own labeled fields. The policy text, publication date, provider terms links and privilege disclosure are preserved in all three languages.
+
+### Application error recovery
+
+The root render-error fallback uses the site palette and a clear warning symbol. English, Spanish and Chinese messages explain recovery and the risk of losing unsaved input. Native reload and homepage actions work independently of the application router. A Privacy Policy link accompanies the existing temporary-records notice. The fallback provides its own main landmark because the failed application is unmounted.

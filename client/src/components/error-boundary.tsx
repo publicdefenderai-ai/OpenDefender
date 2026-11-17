@@ -1,5 +1,5 @@
-import { Component, ReactNode } from "react";
-import { Button } from "@/components/ui/button";
+import React, { Component, ReactNode } from "react";
+import i18n from "i18next";
 import { AlertTriangle } from "lucide-react";
 
 interface Props {
@@ -43,22 +43,31 @@ export class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center p-6 bg-background">
-          <div className="text-center max-w-md">
-            <div className="flex justify-center mb-4">
-              <AlertTriangle className="h-12 w-12 text-amber-500" />
-            </div>
-            <h2 className="text-xl font-semibold text-foreground mb-2">
-              Something went wrong
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              An unexpected error occurred. Reload the page to continue. Unsaved browser input may be lost; temporary server records expire as described in the Privacy Policy.
+        <main className="min-h-screen bg-background text-foreground" id="main-content">
+          <section className="mx-auto w-full max-w-3xl px-5 py-16 sm:px-10 sm:py-24" aria-labelledby="recovery-title">
+            <AlertTriangle aria-hidden="true" className="mb-8 h-16 w-16 text-primary" strokeWidth={1.25} />
+            <h1 id="recovery-title" className="text-4xl font-medium tracking-tight sm:text-5xl">
+              {i18n.t("errorRecovery.title", "Something went wrong")}
+            </h1>
+            <p className="mb-5 mt-5 max-w-prose text-lg leading-relaxed text-muted-foreground">
+              {i18n.t("errorRecovery.description", "An unexpected error occurred. You can reload this page or return to the homepage.")}
             </p>
-            <Button onClick={() => window.location.reload()}>
-              Reload Page
-            </Button>
-          </div>
-        </div>
+            <p className="mb-8 max-w-prose border-l-2 border-primary pl-4 leading-relaxed">
+              {i18n.t("errorRecovery.warning", "Reloading or leaving this page may lose unsaved input. Temporary server records expire as described in the Privacy Policy.")}
+            </p>
+            <div className="flex flex-wrap items-center gap-5">
+              <button type="button" onClick={() => window.location.reload()} className="min-h-11 rounded-md bg-primary px-5 py-3 font-semibold text-primary-foreground hover:opacity-90">
+                {i18n.t("errorRecovery.reload", "Reload page")}
+              </button>
+              <a href="/" className="inline-flex min-h-11 items-center py-3 text-primary underline underline-offset-4">
+                {i18n.t("errorRecovery.home", "Go to homepage")}
+              </a>
+            </div>
+            <a href="/privacy-policy" className="mt-6 inline-flex min-h-11 items-center text-primary underline underline-offset-4">
+              {i18n.t("errorRecovery.privacy", "Privacy Policy")}
+            </a>
+          </section>
+        </main>
       );
     }
 
