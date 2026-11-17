@@ -96,7 +96,7 @@ it("requires reselection of old distribution/manufacture labels rather than rest
     expect(selectable).not.toContain(id);
     expect(getChargeById(id)).toBeUndefined();
     expect(getChargeExplanation(charge.name,"TX","en",id)).toBeNull();
-    expect(getChargeExplanation(charge.name,"Texas","en")).toBeNull();
+    expect(needsTexasChargeReselection({name:charge.name,code:charge.code},"Texas")).toBe(true);
     expect(resolveGuidanceCharge({id,name:charge.name,code:charge.code,classification:"felony"},"TX")).toBeUndefined();
     expect(needsTexasChargeReselection({name:charge.name,code:charge.code},"TX")).toBe(true);
     const record=manifest.catalogRecords.find(r=>r.chargeId===id)!;
