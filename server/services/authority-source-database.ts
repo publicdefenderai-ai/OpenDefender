@@ -32,6 +32,7 @@ import { FLORIDA_OBSCENITY_SOURCES, isFloridaObscenitySourceFresh } from "../dat
 import { FLORIDA_COMPUTER_FINANCIAL_SOURCES, isFloridaComputerFinancialSourceFresh } from "../data/florida-computer-financial-source";
 import { FLORIDA_FIRE_RIOT_SOURCES, isFloridaFireRiotSourceFresh } from "../data/florida-fire-riot-source";
 import { FLORIDA_REGULATORY_SOURCES, isFloridaRegulatorySourceFresh } from "../data/florida-regulatory-source";
+import { FLORIDA_CHILD_VICTIMS_SOURCES, isFloridaChildVictimsSourceFresh } from "../data/florida-child-victims-source";
 import { FLORIDA_VEHICLE_IDENTIFIERS_SOURCES, isFloridaVehicleIdentifiersSourceFresh } from "../data/florida-vehicle-identifiers-source";
 import { FLORIDA_PAYMENT_FRAUD_SOURCES, isFloridaPaymentFraudSourceFresh } from "../data/florida-payment-fraud-source";
 import { FLORIDA_PRESCRIPTION_FRAUD_SOURCES, isFloridaPrescriptionFraudSourceFresh } from "../data/florida-prescription-fraud-source";
@@ -403,6 +404,9 @@ export async function getCurrentAuthoritySelectableChargeIds(
   }
   if (jurisdiction === "FL" && !isFloridaRegulatorySourceFresh()) {
     for (const source of FLORIDA_REGULATORY_SOURCES) selectable.delete(source.chargeId);
+  }
+  if (jurisdiction === "FL" && !isFloridaChildVictimsSourceFresh()) {
+    for (const source of FLORIDA_CHILD_VICTIMS_SOURCES) selectable.delete(source.chargeId);
   }
   if (jurisdiction === "FL" && !isFloridaVehicleIdentifiersSourceFresh()) {
     for (const source of FLORIDA_VEHICLE_IDENTIFIERS_SOURCES) selectable.delete(source.chargeId);
