@@ -3525,7 +3525,7 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
   .reentry-topics > [role="alert"] { grid-column: 1; }
 }
 
-.reputation-page { max-width: 1120px; margin: auto; padding: 32px clamp(20px, 4vw, 40px) 56px; }
+.reputation-page { width: 100%; max-width: 1120px; margin: auto; padding: 32px clamp(20px, 4vw, 40px) 56px; }
 .reputation-back { color: var(--primary); font-weight: 600; }
 .reputation-back:hover { text-decoration: underline; }
 .reputation-hero { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 48px; align-items: center; margin: 36px 0; }
