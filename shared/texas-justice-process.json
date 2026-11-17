@@ -1,0 +1,1087 @@
+[
+  {
+    "id": "tx-pc-37-09-pending",
+    "name": "Tampering with physical evidence (pending investigation)",
+    "officialTitle": "TAMPERING WITH OR FABRICATING PHYSICAL EVIDENCE.",
+    "category": "felony",
+    "code": "37.09(a)(1)",
+    "citation": "Tex. Penal Code § 37.09(a)(1)",
+    "conduct": "Knowing that an investigation or official proceeding is pending or in progress, altering, destroying or concealing a record, document or thing with intent to impair its truthfulness, legibility or availability as evidence in that investigation or proceeding. This ordinary grade excludes the human-corpse circumstance. Section 37.09(b) excludes concealed material that is privileged or the parties’ work product. Section 37.09(c-1) supplies a defense when prohibited visual material under §43.261 was destroyed as described by §43.261(f)(3); it is not a general defense for destroying evidence.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(33), (41)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(b), (c-1), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.261",
+        "subdivision": "(a), (b), (b-1), (f)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.25",
+        "subdivision": "(a)(2), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.26",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.08",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "48040003"
+  },
+  {
+    "id": "tx-pc-37-09-pending-corpse",
+    "name": "Tampering with physical evidence (human corpse, pending investigation)",
+    "officialTitle": "TAMPERING WITH OR FABRICATING PHYSICAL EVIDENCE.",
+    "category": "felony",
+    "code": "37.09(a)(1)",
+    "citation": "Tex. Penal Code § 37.09(a)(1)",
+    "conduct": "Knowing that an investigation or official proceeding is pending or in progress, altering, destroying or concealing a record, document or thing with intent to impair its truthfulness, legibility or availability as evidence in that investigation or proceeding. This choice requires that the item altered, destroyed or concealed was a human corpse, including a portion or cremated remains under §42.08(c). This corpse-specific choice does not apply the separate prohibited-visual-material destruction defense.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(33), (41)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.08",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-09-subsequent",
+    "name": "Tampering with physical evidence (subsequent investigation)",
+    "officialTitle": "TAMPERING WITH OR FABRICATING PHYSICAL EVIDENCE.",
+    "category": "felony",
+    "code": "37.09(d)(1)",
+    "citation": "Tex. Penal Code § 37.09(d)(1)",
+    "conduct": "Knowing that an offense has been committed, altering, destroying or concealing a record, document or thing with intent to impair its truthfulness, legibility or availability as evidence in a subsequent investigation or official proceeding related to that offense. The investigation need not already be pending or in progress. This ordinary grade excludes the human-corpse circumstance. Section 37.09(b) excludes concealed material that is privileged or the parties’ work product. Section 37.09(c-1) supplies a defense when prohibited visual material under §43.261 was destroyed as described by §43.261(f)(3); it is not a general defense for destroying evidence.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(d)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(33), (41)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(b), (c-1), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.261",
+        "subdivision": "(a), (b), (b-1), (f)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.25",
+        "subdivision": "(a)(2), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.26",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.08",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "48040003"
+  },
+  {
+    "id": "tx-pc-37-09-subsequent-corpse",
+    "name": "Tampering with physical evidence (human corpse, subsequent investigation)",
+    "officialTitle": "TAMPERING WITH OR FABRICATING PHYSICAL EVIDENCE.",
+    "category": "felony",
+    "code": "37.09(d)(1)",
+    "citation": "Tex. Penal Code § 37.09(d)(1)",
+    "conduct": "Knowing that an offense has been committed, altering, destroying or concealing a record, document or thing with intent to impair its truthfulness, legibility or availability as evidence in a subsequent investigation or official proceeding related to that offense. The investigation need not already be pending or in progress. This choice requires that the item altered, destroyed or concealed was a human corpse, including a portion or cremated remains under §42.08(c). This corpse-specific choice does not apply the separate prohibited-visual-material destruction defense.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(d)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(33), (41)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.08",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-09-fabricating",
+    "name": "Fabricating physical evidence (pending investigation or proceeding)",
+    "officialTitle": "TAMPERING WITH OR FABRICATING PHYSICAL EVIDENCE.",
+    "category": "felony",
+    "code": "37.09(a)(2)",
+    "citation": "Tex. Penal Code § 37.09(a)(2)",
+    "conduct": "Knowing that an investigation or official proceeding is pending or in progress, making, presenting or using a record, document or thing with knowledge of its falsity and with intent to affect the course or outcome of the investigation or proceeding. This choice does not cover altering, destroying or concealing a human corpse. Concealing privileged material is not itself the false-making, presentation or use addressed by this choice.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(33), (41)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "48040003"
+  },
+  {
+    "id": "tx-pc-37-09-unreported-corpse",
+    "name": "Tampering with physical evidence (failure to report a human corpse)",
+    "officialTitle": "TAMPERING WITH OR FABRICATING PHYSICAL EVIDENCE.",
+    "category": "misdemeanor",
+    "code": "37.09(d)(2)",
+    "citation": "Tex. Penal Code § 37.09(d)(2)",
+    "conduct": "Observing a human corpse under circumstances in which a reasonable person would believe an offense had been committed, knowing or reasonably being expected to know that a law enforcement agency is unaware of its existence or location, and failing to report its existence and location to a law enforcement agency. Human corpse includes a portion or cremated remains. Mere observation without the specified circumstances and awareness standard does not establish this offense. The privileged or work-product exclusion in (b) remains part of the section.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. If §12.43(a) applies and confinement is imposed, the minimum is 90 days.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(d)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.09",
+        "subdivision": "(b), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.08",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(42)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-36-06-retaliation",
+    "name": "Retaliation (ordinary grade)",
+    "officialTitle": "OBSTRUCTION OR RETALIATION.",
+    "category": "felony",
+    "code": "36.06(a)(1)",
+    "citation": "Tex. Penal Code § 36.06(a)(1)",
+    "conduct": "Intentionally or knowingly harming or threatening to harm another by an unlawful act in retaliation for or on account of another person’s protected service or status. Protected roles include public servants, witnesses, prospective witnesses, informants and people who have reported a crime or whom the actor knows intend to report one. Public servant includes the roles in §1.07(a)(41), qualifying honorably retired peace officers and specified civil-commitment contractors and employees. An informant has communicated information to government in connection with a governmental function. The required link to service or status must be proved; criticism or an unpleasant statement alone is not enough. This choice excludes the higher juror circumstance. Unlawful includes criminal or tortious acts, subject to the definition in §1.07(a)(48). The current section includes amendments effective September 1, 2025; earlier conduct requires its applicable version. The separate honorably-retired-peace-officer branch is limited here to former sheriff/deputy, constable/deputy, municipal-police/marshal and DPS roles common to both published versions of article 2A.001, with the retirement qualifications in §36.06(b)(1-a). Other disputed retired-officer classifications are not resolved. The independently defined public-servant, witness and other applicable protected-role bases remain separate.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (16), (25), (41), (48)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "(1), (2), (3), (4) in both published versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "50990041"
+  },
+  {
+    "id": "tx-pc-36-06-retaliation-juror",
+    "name": "Retaliation (juror circumstance)",
+    "officialTitle": "OBSTRUCTION OR RETALIATION.",
+    "category": "felony",
+    "code": "36.06(a)(1)",
+    "citation": "Tex. Penal Code § 36.06(a)(1)",
+    "conduct": "Intentionally or knowingly harming or threatening to harm another by an unlawful act in retaliation for or on account of another person’s protected service or status. Protected roles include public servants, witnesses, prospective witnesses, informants and people who have reported a crime or whom the actor knows intend to report one. Public servant includes the roles in §1.07(a)(41), qualifying honorably retired peace officers and specified civil-commitment contractors and employees. An informant has communicated information to government in connection with a governmental function. The required link to service or status must be proved; criticism or an unpleasant statement alone is not enough. This higher grade requires harm or a threat because of the victim’s service or status as a juror. Unlawful includes criminal or tortious acts, subject to the definition in §1.07(a)(48). The current section includes amendments effective September 1, 2025; earlier conduct requires its applicable version. The separate honorably-retired-peace-officer branch is limited here to former sheriff/deputy, constable/deputy, municipal-police/marshal and DPS roles common to both published versions of article 2A.001, with the retirement qualifications in §36.06(b)(1-a). Other disputed retired-officer classifications are not resolved. The independently defined public-servant, witness and other applicable protected-role bases remain separate.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (16), (25), (41), (48)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "(1), (2), (3), (4) in both published versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-36-06-obstruction",
+    "name": "Obstruction (ordinary grade)",
+    "officialTitle": "OBSTRUCTION OR RETALIATION.",
+    "category": "felony",
+    "code": "36.06(a)(2)",
+    "citation": "Tex. Penal Code § 36.06(a)(2)",
+    "conduct": "Intentionally or knowingly harming or threatening to harm another by an unlawful act to prevent or delay another person’s protected service. Protected roles include public servants, witnesses, prospective witnesses, informants and people who have reported a crime or whom the actor knows intend to report one. Public servant includes the roles in §1.07(a)(41), qualifying honorably retired peace officers and specified civil-commitment contractors and employees. An informant has communicated information to government in connection with a governmental function. The required link to service or status must be proved; criticism or an unpleasant statement alone is not enough. This choice excludes the higher juror circumstance. Unlawful includes criminal or tortious acts, subject to the definition in §1.07(a)(48). The current section includes amendments effective September 1, 2025; earlier conduct requires its applicable version. The separate honorably-retired-peace-officer branch is limited here to former sheriff/deputy, constable/deputy, municipal-police/marshal and DPS roles common to both published versions of article 2A.001, with the retirement qualifications in §36.06(b)(1-a). Other disputed retired-officer classifications are not resolved. The independently defined public-servant, witness and other applicable protected-role bases remain separate.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (16), (25), (41), (48)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "(1), (2), (3), (4) in both published versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "50990041"
+  },
+  {
+    "id": "tx-pc-36-06-obstruction-juror",
+    "name": "Obstruction (juror circumstance)",
+    "officialTitle": "OBSTRUCTION OR RETALIATION.",
+    "category": "felony",
+    "code": "36.06(a)(2)",
+    "citation": "Tex. Penal Code § 36.06(a)(2)",
+    "conduct": "Intentionally or knowingly harming or threatening to harm another by an unlawful act to prevent or delay another person’s protected service. Protected roles include public servants, witnesses, prospective witnesses, informants and people who have reported a crime or whom the actor knows intend to report one. Public servant includes the roles in §1.07(a)(41), qualifying honorably retired peace officers and specified civil-commitment contractors and employees. An informant has communicated information to government in connection with a governmental function. The required link to service or status must be proved; criticism or an unpleasant statement alone is not enough. This higher grade requires harm or a threat because of the victim’s service or status as a juror. Unlawful includes criminal or tortious acts, subject to the definition in §1.07(a)(48). The current section includes amendments effective September 1, 2025; earlier conduct requires its applicable version. The separate honorably-retired-peace-officer branch is limited here to former sheriff/deputy, constable/deputy, municipal-police/marshal and DPS roles common to both published versions of article 2A.001, with the retirement qualifications in §36.06(b)(1-a). Other disputed retired-officer classifications are not resolved. The independently defined public-servant, witness and other applicable protected-role bases remain separate.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (16), (25), (41), (48)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "(1), (2), (3), (4) in both published versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-36-06-disclosure",
+    "name": "Retaliatory disclosure of a public servant’s address or telephone number (ordinary grade)",
+    "officialTitle": "OBSTRUCTION OR RETALIATION.",
+    "category": "felony",
+    "code": "36.06(a-1)",
+    "citation": "Tex. Penal Code § 36.06(a-1)",
+    "conduct": "Posting on a publicly accessible website or disclosing through an electronic communication the residence address or telephone number of someone the actor knows is a public servant or a member of a public servant’s family or household, with intent to cause harm or a threat of harm to that individual or their family or household, in retaliation for or on account of the individual’s public service or status. Public availability alone does not establish the required intent and retaliatory connection. This choice excludes the higher juror and resulting-bodily-injury circumstances. For website postings, subsection (d) supplies a specific evidentiary rule after a written safety demand: failure to remove within 48 hours, or republication within four years. It is not automatic guilt and does not eliminate the other elements. Electronic communication is defined by §42.07(b)(1). The current text includes amendments effective September 1, 2025; earlier conduct requires its applicable version. The separate honorably-retired-peace-officer branch is limited here to former sheriff/deputy, constable/deputy, municipal-police/marshal and DPS roles common to both published versions of article 2A.001, with the retirement qualifications in §36.06(b)(1-a). Other disputed retired-officer classifications are not resolved. The independently defined public-servant, witness and other applicable protected-role bases remain separate.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(a-1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(b), (c), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (8-a), (16), (25), (41)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "(1), (2), (3), (4) in both published versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "50990041"
+  },
+  {
+    "id": "tx-pc-36-06-disclosure-injury",
+    "name": "Retaliatory disclosure of a public servant’s address or telephone number (resulting bodily injury)",
+    "officialTitle": "OBSTRUCTION OR RETALIATION.",
+    "category": "felony",
+    "code": "36.06(a-1)",
+    "citation": "Tex. Penal Code § 36.06(a-1)",
+    "conduct": "Posting on a publicly accessible website or disclosing through an electronic communication the residence address or telephone number of someone the actor knows is a public servant or a member of a public servant’s family or household, with intent to cause harm or a threat of harm to that individual or their family or household, in retaliation for or on account of the individual’s public service or status. Public availability alone does not establish the required intent and retaliatory connection. This higher grade requires resulting bodily injury to a public servant or their family or household member. For website postings, subsection (d) supplies a specific evidentiary rule after a written safety demand: failure to remove within 48 hours, or republication within four years. It is not automatic guilt and does not eliminate the other elements. Electronic communication is defined by §42.07(b)(1). The current text includes amendments effective September 1, 2025; earlier conduct requires its applicable version. The separate honorably-retired-peace-officer branch is limited here to former sheriff/deputy, constable/deputy, municipal-police/marshal and DPS roles common to both published versions of article 2A.001, with the retirement qualifications in §36.06(b)(1-a). Other disputed retired-officer classifications are not resolved. The independently defined public-servant, witness and other applicable protected-role bases remain separate.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying felony history can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(a-1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "36.06",
+        "subdivision": "(b), (c), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (8-a), (16), (25), (41)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "(1), (2), (3), (4) in both published versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-15-a-1",
+    "name": "Interference with public duties (sheriff, constable, municipal police or DPS)",
+    "officialTitle": "INTERFERENCE WITH PUBLIC DUTIES.",
+    "category": "misdemeanor",
+    "code": "38.15(a)(1)",
+    "citation": "Tex. Penal Code § 38.15(a)(1)",
+    "conduct": "With criminal negligence, interrupting, disrupting, impeding or otherwise interfering with a peace officer who is performing a duty or exercising authority imposed or granted by law. Criminal negligence requires that the person ought to be aware of a substantial and unjustifiable risk and that failing to perceive it is a gross deviation from ordinary care under the circumstances viewed from the actor’s standpoint.  It is a defense under §38.15(d) that the alleged interference consisted of speech only. The specific warning defense in (c) applies when the conduct was intended to warn a motorist of an officer enforcing the specified Transportation Code traffic laws. Subsection (d-1) creates a rebuttable presumption for intentional dissemination of specified personal information about an officer or family member; (d-2) excludes qualifying radio/television stations and newspapers from that presumption. The speech-only defense remains. A presumption requires its predicate facts and does not compel guilt or remove the state’s remaining burden. The current section includes amendments effective September 1, 2025; earlier conduct requires its applicable version. Any peace-officer status in this choice is limited to sheriff/deputy, constable/deputy, municipal-police/marshal and DPS roles that meet the conditions in article 2A.001(1)-(4), unchanged in both published versions. Other peace-officer categories are not resolved here.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. If §12.43(b) applies and confinement is imposed, the minimum is 30 days.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(c), (d-1), (d-2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "(1), (2), (3), (4) in both published versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "552.117",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73991084"
+  },
+  {
+    "id": "tx-pc-38-15-a-2",
+    "name": "Interference with public duties (emergency medical worker)",
+    "officialTitle": "INTERFERENCE WITH PUBLIC DUTIES.",
+    "category": "misdemeanor",
+    "code": "38.15(a)(2)",
+    "citation": "Tex. Penal Code § 38.15(a)(2)",
+    "conduct": "With criminal negligence, interrupting, disrupting, impeding or otherwise interfering with a person employed to provide emergency medical services, including transportation of ill or injured people, while performing that duty. Criminal negligence requires that the person ought to be aware of a substantial and unjustifiable risk and that failing to perceive it is a gross deviation from ordinary care under the circumstances viewed from the actor’s standpoint.  It is a defense under §38.15(d) that the alleged interference consisted of speech only. The current section includes amendments effective September 1, 2025; earlier conduct requires its applicable version.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. If §12.43(b) applies and confinement is imposed, the minimum is 30 days.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73991084"
+  },
+  {
+    "id": "tx-pc-38-15-a-3",
+    "name": "Interference with public duties (fire fighter)",
+    "officialTitle": "INTERFERENCE WITH PUBLIC DUTIES.",
+    "category": "misdemeanor",
+    "code": "38.15(a)(3)",
+    "citation": "Tex. Penal Code § 38.15(a)(3)",
+    "conduct": "With criminal negligence, interrupting, disrupting, impeding or otherwise interfering with a fire fighter who is fighting a fire or investigating its cause. Criminal negligence requires that the person ought to be aware of a substantial and unjustifiable risk and that failing to perceive it is a gross deviation from ordinary care under the circumstances viewed from the actor’s standpoint.  It is a defense under §38.15(d) that the alleged interference consisted of speech only. The current section includes amendments effective September 1, 2025; earlier conduct requires its applicable version.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. If §12.43(b) applies and confinement is imposed, the minimum is 30 days.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73991084"
+  },
+  {
+    "id": "tx-pc-38-15-a-4",
+    "name": "Interference with public duties (working animal; specified supervision)",
+    "officialTitle": "INTERFERENCE WITH PUBLIC DUTIES.",
+    "category": "misdemeanor",
+    "code": "38.15(a)(4)",
+    "citation": "Tex. Penal Code § 38.15(a)(4)",
+    "conduct": "With criminal negligence, interrupting, disrupting, impeding or otherwise interfering with an animal supervised by a peace officer, corrections officer or jailer, with knowledge that the animal is being used for law enforcement, corrections, prison or jail security, or investigative purposes. Criminal negligence requires that the person ought to be aware of a substantial and unjustifiable risk and that failing to perceive it is a gross deviation from ordinary care under the circumstances viewed from the actor’s standpoint.  It is a defense under §38.15(d) that the alleged interference consisted of speech only. The current section includes amendments effective September 1, 2025; earlier conduct requires its applicable version. Any peace-officer status in this choice is limited to sheriff/deputy, constable/deputy, municipal-police/marshal and DPS roles that meet the conditions in article 2A.001(1)-(4), unchanged in both published versions. Other peace-officer categories are not resolved here.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. If §12.43(b) applies and confinement is imposed, the minimum is 30 days.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "(1), (2), (3), (4) in both published versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73991084"
+  },
+  {
+    "id": "tx-pc-38-15-a-5",
+    "name": "Interference with public duties (emergency citizens-band radio communication)",
+    "officialTitle": "INTERFERENCE WITH PUBLIC DUTIES.",
+    "category": "misdemeanor",
+    "code": "38.15(a)(5)",
+    "citation": "Tex. Penal Code § 38.15(a)(5)",
+    "conduct": "With criminal negligence, interrupting, disrupting, impeding or otherwise interfering with the transmission of a communication on a citizens-band radio channel intended to inform or inquire about an emergency. Criminal negligence requires that the person ought to be aware of a substantial and unjustifiable risk and that failing to perceive it is a gross deviation from ordinary care under the circumstances viewed from the actor’s standpoint.  It is a defense under §38.15(d) that the alleged interference consisted of speech only. Emergency means actual or reasonably believed imminent danger of serious bodily injury to an individual, or damage or destruction to property, judged through the person transmitting the communication. The current section includes amendments effective September 1, 2025; earlier conduct requires its applicable version.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. If §12.43(b) applies and confinement is imposed, the minimum is 30 days.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.15",
+        "subdivision": "(e)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73991084"
+  }
+]

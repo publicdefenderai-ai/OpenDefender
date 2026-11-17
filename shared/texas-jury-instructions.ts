@@ -41,6 +41,47 @@ const deliveryTransfer = {
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-13.htm&version=048",
 };
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
+  "tx-pc-37-09-pending": {
+    instructionRef: "CPJC 37.9: Tampering with Physical Evidence Knowing of Pending or Ongoing Investigation or Official Proceeding (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F37_Perjury_and_Other_Falsification%2FCPJC37-9.htm&version=053",
+  },
+  "tx-pc-37-09-pending-corpse": {
+    instructionRef: "CPJC 37.9: Tampering with Physical Evidence Knowing of Pending or Ongoing Investigation or Official Proceeding (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F37_Perjury_and_Other_Falsification%2FCPJC37-9.htm&version=053",
+  },
+  "tx-pc-37-09-fabricating": {
+    instructionRef: "CPJC 37.10: Tampering with Physical Evidence with Intent to Affect Pending or Ongoing Investigation or Official Proceeding (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F37_Perjury_and_Other_Falsification%2FCPJC37-10.htm&version=053",
+  },
+  "tx-pc-37-09-subsequent": {
+    instructionRef: "CPJC 37.11: Knowingly Tampering with Physical Evidence with Intent to Affect Any Subsequent Investigation or Official Proceeding (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F37_Perjury_and_Other_Falsification%2FCPJC37-11.htm&version=053",
+  },
+  "tx-pc-37-09-subsequent-corpse": {
+    instructionRef: "CPJC 37.11: Knowingly Tampering with Physical Evidence with Intent to Affect Any Subsequent Investigation or Official Proceeding (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F37_Perjury_and_Other_Falsification%2FCPJC37-11.htm&version=053",
+  },
+  "tx-pc-37-09-unreported-corpse": {
+    instructionRef: "CPJC 37.12: Tampering with Physical Evidence by Failing to Report a Corpse (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F37_Perjury_and_Other_Falsification%2FCPJC37-12.htm&version=053",
+  },
+  "tx-pc-36-06-retaliation": {
+    instructionRef: "CPJC 36.9: Retaliation (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F36_Bribery_and_Corrupt_Influence%2FCPJC36-9.htm&version=037",
+  },
+  "tx-pc-36-06-retaliation-juror": {
+    instructionRef: "CPJC 36.9: Retaliation (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F36_Bribery_and_Corrupt_Influence%2FCPJC36-9.htm&version=037",
+  },
+  "tx-pc-36-06-obstruction": {
+    instructionRef: "CPJC 36.10: Obstruction (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F36_Bribery_and_Corrupt_Influence%2FCPJC36-10.htm&version=037",
+  },
+  "tx-pc-36-06-obstruction-juror": {
+    instructionRef: "CPJC 36.10: Obstruction (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F36_Bribery_and_Corrupt_Influence%2FCPJC36-10.htm&version=037",
+  },
+
   "tx-hsc-481-112-b": deliveryTransfer,
   "tx-hsc-481-112-c": deliveryTransfer,
   "tx-hsc-481-112-d": deliveryTransfer,

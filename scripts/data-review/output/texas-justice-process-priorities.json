@@ -1,0 +1,40 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "year": 2025,
+  "statewideAdult": 831210,
+  "statewideJuvenile": 44782,
+  "eligibleCodes": 2378,
+  "excludedCodes": 57,
+  "excludedAdult": 71549,
+  "rows": [
+    {
+      "rank": 26,
+      "code": "48040003",
+      "label": "TAMPER/FABRICATE PHYS EVID W/INTENT TO IMPAIR",
+      "law": "PC",
+      "citation": "37.09(c)",
+      "adult": 7281,
+      "juvenile": 211
+    },
+    {
+      "rank": 41,
+      "code": "73991084",
+      "label": "INTERFER W/PUBLIC DUTIES",
+      "law": "PC",
+      "citation": "38.15(b)",
+      "adult": 4517,
+      "juvenile": 184
+    },
+    {
+      "rank": 63,
+      "code": "50990041",
+      "label": "OBSTRUCTION OR RETALIATION",
+      "law": "PC",
+      "citation": "36.06(c)",
+      "adult": 2370,
+      "juvenile": 142
+    }
+  ]
+}
