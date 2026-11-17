@@ -36,7 +36,25 @@ const otherMarijuanaGrades = {
   instructionRef: "CPJC 81.9: Possession of Marijuana, Other Grades (underlying conduct only)",
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-9.htm&version=048",
 };
+const deliveryTransfer = {
+  instructionRef: "CPJC 81.13: Delivery of Controlled Substance by Actual or Constructive Transfer (transfer theory only, underlying conduct only)",
+  instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-13.htm&version=048",
+};
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
+  "tx-hsc-481-112-b": deliveryTransfer,
+  "tx-hsc-481-112-c": deliveryTransfer,
+  "tx-hsc-481-112-d": deliveryTransfer,
+  "tx-hsc-481-112-e": deliveryTransfer,
+  "tx-hsc-481-112-f": deliveryTransfer,
+  "tx-hsc-481-1123-b": deliveryTransfer,
+  "tx-hsc-481-1123-c": deliveryTransfer,
+  "tx-hsc-481-1123-d": deliveryTransfer,
+  "tx-hsc-481-1123-e": deliveryTransfer,
+  "tx-hsc-481-1123-f": deliveryTransfer,
+  "tx-hsc-481-113-b": deliveryTransfer,
+  "tx-hsc-481-113-c": deliveryTransfer,
+  "tx-hsc-481-113-d": deliveryTransfer,
+  "tx-hsc-481-113-e": deliveryTransfer,
   "tx-pc-38-03-c": resistingArrest,
   "tx-pc-38-03-d": resistingArrest,
   "tx-pc-38-04-vehicle": evadingArrest,

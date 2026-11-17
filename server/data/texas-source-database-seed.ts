@@ -1,4 +1,4 @@
-import { texasHeldCarryId, texasReviewedById, texasReviewedUrl } from "@shared/texas-reviewed";
+import { texasHeldDeliveryIds, texasHeldCarryId, texasReviewedById, texasReviewedUrl } from "@shared/texas-reviewed";
 import { texasReviewedTextHashes } from "./texas-reviewed-hashes";
 import { createHash } from "node:crypto";
 import { criminalCharges, type CriminalCharge } from "@shared/criminal-charges";
@@ -223,7 +223,7 @@ function provisionFromDocument(
 }
 
 export function texasReferencesForCharge(charge: CriminalCharge) {
-  if (charge.id === texasHeldCarryId) return [];
+  if (charge.id === texasHeldCarryId || texasHeldDeliveryIds.has(charge.id)) return [];
   const reviewed = texasReviewedById.get(charge.id);
   if (reviewed) return reviewed.references;
   return parseTexasCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "").map((ref, i) => ({
@@ -246,7 +246,7 @@ export function buildTexasManifestRecord(
       catalogCode: charge.code,
       catalogCategory: charge.category,
       disposition: "require_exact_reselection",
-      dispositionReason: error ?? (charge.id === texasHeldCarryId ? "The section-wide carrying-weapons identity requires selection of the applicable conduct and grading branch." :
+      dispositionReason: error ?? (texasHeldDeliveryIds.has(charge.id) ? "The section-wide drug identity requires selection of the applicable substance group and weight branch." : charge.id === texasHeldCarryId ? "The section-wide carrying-weapons identity requires selection of the applicable conduct and grading branch." :
         "The catalog citation is not a Texas statutory citation supported by TCSS; do not infer a state-law replacement."),
       canonicalTitle: null,
       provisions: [],
@@ -337,6 +337,9 @@ export function buildTexasSourceDatabaseSeed(
   for (const record of manifest.catalogRecords) {
     if (record.chargeId === texasHeldCarryId && ["retain", "exact_alias_rename"].includes(record.disposition)) {
       throw new Error("Legacy Texas carrying-weapons identity requires reselection");
+    }
+    if (texasHeldDeliveryIds.has(record.chargeId) && ["retain", "exact_alias_rename"].includes(record.disposition)) {
+      throw new Error("Legacy Texas manufacture or delivery identity requires exact reselection");
     }
     const reviewed = texasReviewedById.get(record.chargeId);
     if (!reviewed || !["retain", "exact_alias_rename"].includes(record.disposition)) continue;

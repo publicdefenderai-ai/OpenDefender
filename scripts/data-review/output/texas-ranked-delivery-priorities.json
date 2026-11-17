@@ -1,0 +1,139 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "year": 2025,
+  "statewideAdult": 831210,
+  "statewideJuvenile": 44782,
+  "eligibleCodes": 2378,
+  "excludedCodes": 57,
+  "excludedAdult": 71549,
+  "rows": [
+    {
+      "rank": 32,
+      "code": "35990003",
+      "label": "MAN/DEL CS PG 1 >= 4G < 200G",
+      "law": "HSC",
+      "citation": "481.112(d)",
+      "adult": 5599,
+      "juvenile": 11
+    },
+    {
+      "rank": 74,
+      "code": "35990002",
+      "label": "MAN/DEL CS PG 1 >= 1G < 4G",
+      "law": "HSC",
+      "citation": "481.112(c)",
+      "adult": 1602,
+      "juvenile": 7
+    },
+    {
+      "rank": 77,
+      "code": "35990008",
+      "label": "MAN/DEL CS PG 2 OR 2-A >= 4G <400G",
+      "law": "HSC",
+      "citation": "481.113(d)",
+      "adult": 1563,
+      "juvenile": 79
+    },
+    {
+      "rank": 87,
+      "code": "35990281",
+      "label": "MAN DEL CS PG 1-B >=4G<200G",
+      "law": "HSC",
+      "citation": "481.1123(d)",
+      "adult": 1327,
+      "juvenile": 2
+    },
+    {
+      "rank": 115,
+      "code": "35990001",
+      "label": "MAN/DEL CS PG 1 < 1 G",
+      "law": "HSC",
+      "citation": "481.112(b)",
+      "adult": 830,
+      "juvenile": 4
+    },
+    {
+      "rank": 135,
+      "code": "35990276",
+      "label": "MAN/DEL CS PG 1 >= 400G",
+      "law": "HSC",
+      "citation": "481.112(f)",
+      "adult": 608,
+      "juvenile": 2
+    },
+    {
+      "rank": 165,
+      "code": "35990243",
+      "label": "MAN DEL CS PG 1-B >=1G<4G",
+      "law": "HSC",
+      "citation": "481.1123(c)",
+      "adult": 364,
+      "juvenile": 0
+    },
+    {
+      "rank": 184,
+      "code": "35990275",
+      "label": "MAN/DEL CS PG 1 >= 200G < 400G",
+      "law": "HSC",
+      "citation": "481.112(e)",
+      "adult": 289,
+      "juvenile": 1
+    },
+    {
+      "rank": 196,
+      "code": "35990284",
+      "label": "MAN/DEL CS PG 2 OR 2-A >= 400G",
+      "law": "HSC",
+      "citation": "481.113(e)",
+      "adult": 262,
+      "juvenile": 8
+    },
+    {
+      "rank": 220,
+      "code": "35990007",
+      "label": "MAN/DEL CS PG 2 OR 2-A >= 1G < 4G",
+      "law": "HSC",
+      "citation": "481.113(c)",
+      "adult": 224,
+      "juvenile": 31
+    },
+    {
+      "rank": 229,
+      "code": "35990283",
+      "label": "MAN DEL CS PG 1-B >=400G",
+      "law": "HSC",
+      "citation": "481.1123(f)",
+      "adult": 203,
+      "juvenile": 1
+    },
+    {
+      "rank": 280,
+      "code": "35990280",
+      "label": "MAN DEL CS PG 1-B <1G",
+      "law": "HSC",
+      "citation": "481.1123(b)",
+      "adult": 132,
+      "juvenile": 0
+    },
+    {
+      "rank": 286,
+      "code": "35990282",
+      "label": "MAN DEL CS PG 1-B >=200<400G",
+      "law": "HSC",
+      "citation": "481.1123(e)",
+      "adult": 126,
+      "juvenile": 4
+    },
+    {
+      "rank": 369,
+      "code": "35990006",
+      "label": "MAN/DEL CS PG 2 OR 2-A < 1G",
+      "law": "HSC",
+      "citation": "481.113(b)",
+      "adult": 70,
+      "juvenile": 23
+    }
+  ]
+}

@@ -204,6 +204,21 @@ describe('generateGuidancePDF — charge summary row citation logic', () => {
     expect(JSON.stringify(mockDoc.text.mock.calls)).toContain("Select the specific Texas weapons charge");
   });
 
+  it.each([
+    ["tx-possession-with-intent-to-distribute", "Possession with Intent to Distribute", "481.112"],
+    ["tx-distribution-of-controlled-substance", "Distribution of Controlled Substance", "481.112"],
+    ["tx-manufacturing-controlled-substance", "Manufacturing Controlled Substance", "481.112"],
+    ["tx-drug-trafficking", "Drug Trafficking", "481.112"],
+    [undefined, "AI drug label", "Tex. Health & Safety Code § 481.112(d)"],
+  ])("withholds the historical Texas drug ceiling and citation (%s)", async (id,name,code) => {
+    const guidance=makeGuidance([{id,name:name!,classification:"felony",code:code!,verifiedCitation:"Stale drug citation"}]);
+    mockDoc.text.mockClear();
+    await generateGuidancePDF({...guidance,caseData:{...guidance.caseData,jurisdiction:"TX"}},"en");
+    expect(chargeRows().join(" ")).not.toMatch(/FELONY|Stale drug citation/);
+    expect(JSON.stringify(mockDoc.text.mock.calls)).toContain("Select the exact Texas controlled-substance charge");
+    expect(JSON.stringify(mockDoc.text.mock.calls)).not.toContain("Select the exact Texas theft charge");
+  });
+
   it("requires reselection for a saved Texas auto-burglary blanket felony", async () => {
     const guidance = makeGuidance([{ id:"tx-auto-burglary", name:"Auto Burglary", classification:"felony",
       code:"30.04", verifiedCitation:"Old Texas citation" }]);

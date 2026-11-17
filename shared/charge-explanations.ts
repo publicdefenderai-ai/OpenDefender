@@ -1,4 +1,4 @@
-import { texasHeldCarryId, texasHeldTheftId, texasReviewedById, texasReviewedRecords, texasReviewedCitation, texasReviewedUrl } from "./texas-reviewed";
+import { isTexasAmbiguousDelivery, texasHeldCarryId, texasHeldTheftId, texasReviewedById, texasReviewedRecords, texasReviewedCitation, texasReviewedUrl } from "./texas-reviewed";
 import { FLORIDA_LEGACY_REMAINING } from "./florida-legacy-remaining";
 import { FLORIDA_LEGACY_SEXUAL } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
@@ -3817,6 +3817,7 @@ export function getChargeExplanation(
   language?: string,
   canonicalChargeId?: string,
 ): ChargeExplanationWithJurisdiction | null {
+  if (isTexasAmbiguousDelivery({ id: canonicalChargeId, name: chargeName }, jurisdiction)) return null;
   if (canonicalChargeId === texasHeldCarryId || canonicalChargeId === texasHeldTheftId) return null;
   const reviewed = jurisdiction?.toUpperCase() === "TX"
     ? canonicalChargeId ? texasReviewedById.get(canonicalChargeId)
