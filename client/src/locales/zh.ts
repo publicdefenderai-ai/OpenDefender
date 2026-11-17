@@ -8648,6 +8648,7 @@ export default {
     }
   },
   "disclaimers": {
+    "reader": {"contents": "本页内容 · {{count}} 个类别", "index": "法律声明目录", "sources": "数据来源"},
     "hero": {
       "title": "法律声明与免责条款",
       "subtitle": "关于使用 OpenDefender 的重要信息",

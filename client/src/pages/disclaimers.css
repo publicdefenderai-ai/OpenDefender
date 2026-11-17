@@ -1,0 +1,49 @@
+.notice-page {
+  max-width: 66rem;
+  margin: auto;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 5vw, 3.5rem);
+  overflow-wrap: anywhere;
+}
+.notice-page header { margin-bottom: 2rem; }
+.notice-page h1 {
+  font-size: clamp(2.25rem, 5vw, 3.625rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -.04em;
+}
+.notice-page header p { margin: 1rem 0 .65rem; font-size: 1.125rem; }
+.notice-page small, .notice-page section { color: var(--muted-foreground); }
+.notice-contents { border-block: 1px solid var(--border); }
+.notice-contents summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.notice-contents summary::-webkit-details-marker { display: none; }
+.notice-contents summary span::after { content: "+"; font-size: .95rem; }
+.notice-contents[open] summary span::after { content: "−"; }
+.notice-contents nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding-bottom: 1rem;
+  column-gap: 2rem;
+}
+.notice-contents nav a { padding-block: .55rem; align-content: center; min-height: 44px; }
+.notice-page section { max-width: 78ch; border-bottom: 1px solid var(--border); padding-block: 1.75rem; line-height: 1.75; }
+.notice-page h2 { font-weight: 500; color: var(--foreground); font-size: 1.55rem; line-height: 1.3; scroll-margin-top: 6rem; }
+.notice-page section p, .notice-page section ul { margin-top: .875rem; }
+.notice-page section ul { list-style: disc; padding-inline-start: 1.5rem; }
+.notice-page section li + li { margin-top: .5rem; }
+.notice-page a { color: var(--primary); }
+.notice-page section a, .notice-related a, .notice-contents a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.notice-page aside { max-width: 78ch; padding: 1.5rem; margin-top: 2rem; background: var(--muted); line-height: 1.65; }
+.notice-related { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem; }
+@media (max-width: 700px) { .notice-contents nav { grid-template-columns: minmax(0, 1fr); } }
+@media print {
+  .notice-contents, .notice-related { display: none; }
+  .notice-page { max-width: none; padding: 0; }
+  .notice-page h2 { break-after: avoid; }
+}
