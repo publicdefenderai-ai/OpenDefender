@@ -8624,6 +8624,7 @@ export default {
     }
   },
   "disclaimers": {
+    "reader": {"contents": "En esta página · {{count}} categorías", "index": "Índice del aviso", "sources": "Fuentes de datos"},
     "hero": {
       "title": "Aviso Legal y Exenciones de Responsabilidad",
       "subtitle": "Información importante sobre el uso de OpenDefender",

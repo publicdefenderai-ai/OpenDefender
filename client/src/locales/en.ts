@@ -8618,6 +8618,7 @@ export default {
     }
   },
   "disclaimers": {
+    "reader": {"contents": "On this page · {{count}} categories", "index": "Notice contents", "sources": "Data Sources"},
     "hero": {
       "title": "Legal Notice & Disclaimers",
       "subtitle": "Important information about using OpenDefender",

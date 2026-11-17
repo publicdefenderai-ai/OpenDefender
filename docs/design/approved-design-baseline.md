@@ -701,3 +701,7 @@ The quick-reference-content.html design uses a printable reference sheet for eac
 ### Diversion Programs
 
 The diversion-content.html design opens with location, state and program type filters. Program rows disclose eligibility notes, locations and available contact methods. ZIP searches retain statewide expansion through the existing location service. The approved variability notice appears above the related links. Program records remain subject to the separate L12 review.
+
+### Notice & Disclaimers
+
+The notice uses the approved notice-layout.html reading layout. A keyboard-operable contents index links to the 18 published categories. All sections remain expanded for reading, searching and printing. The acknowledgement and related Privacy Policy and Data Sources links follow the article. The existing publication date and legal copy are retained in all three languages.
