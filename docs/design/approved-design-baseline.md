@@ -705,3 +705,7 @@ The diversion-content.html design opens with location, state and program type fi
 ### Notice & Disclaimers
 
 The notice uses the approved notice-layout.html reading layout. A keyboard-operable contents index links to the 18 published categories. All sections remain expanded for reading, searching and printing. The acknowledgement and related Privacy Policy and Data Sources links follow the article. The existing publication date and legal copy are retained in all three languages.
+
+### Privacy Policy
+
+The 12-category policy uses the shared reading layout and contents index. Its AI inventory compares five features, the data sent and the published retention limits. On narrow screens each feature keeps its own labeled fields. The policy text, publication date, provider terms links and privilege disclosure are preserved in all three languages.

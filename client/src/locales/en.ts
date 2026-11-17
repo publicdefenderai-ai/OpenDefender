@@ -5482,6 +5482,7 @@ export default {
     }
   },
   "privacyPolicy": {
+    "reader": {"contents": "On this page · {{count}} categories", "index": "Privacy policy contents", "sources": "Data Sources"},
     "hero": {
       "title": "Privacy Policy",
       "subtitle": "We are committed to protecting your privacy. This policy explains how we handle your information.",
