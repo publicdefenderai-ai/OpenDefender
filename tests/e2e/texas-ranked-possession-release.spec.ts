@@ -133,3 +133,16 @@ test("Texas manufacturing and delivery choices preserve group-specific weight pe
     expect(charges.some((charge:{id:string})=>charge.id===id)).toBe(false);
   }
 });
+
+test("Texas family-safety choices distinguish mental states, duties and repeat grades", async ({request}) => {
+  const result=await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");
+  expect(result.ok()).toBe(true);
+  const {charges}=await result.json();
+  const family=JSON.parse(readFileSync("shared/texas-family-safety.json","utf8"));
+  for (const r of family) {
+    const choice=charges.find((c:{id:string})=>c.id===r.id);
+    expect(choice).toMatchObject({id:r.id,name:r.name,code:r.code,description:r.conduct,maxPenalty:r.penalty,category:r.category});
+  }
+  expect(charges.find((c:{id:string})=>c.id==="tx-pc-22-041-endanger").instructionRef).toContain("child and act theory only");
+  expect(charges.find((c:{id:string})=>c.id==="tx-pc-25-11-continuous").instructionRef).toContain("CPJC 25.22");
+});

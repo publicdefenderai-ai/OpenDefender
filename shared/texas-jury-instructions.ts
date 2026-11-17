@@ -55,6 +55,26 @@ export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInj
   "tx-hsc-481-113-c": deliveryTransfer,
   "tx-hsc-481-113-d": deliveryTransfer,
   "tx-hsc-481-113-e": deliveryTransfer,
+  "tx-pc-22-04-serious-intentional": {
+    instructionRef: "CPJC 22.9: Serious Bodily Injury to Child by Act (intentional or knowing child/act/serious-bodily-injury theory only, underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-9.htm&version=026",
+  },
+  "tx-pc-22-041-abandon-return": {
+    instructionRef: "CPJC 22.18: Abandoning Child, State Jail Felony (child branch only, underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-18.htm&version=048",
+  },
+  "tx-pc-22-041-abandon-imminent-danger": {
+    instructionRef: "CPJC 22.20: Abandoning Child, Second-Degree Felony (child branch only, underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-20.htm&version=026",
+  },
+  "tx-pc-22-041-endanger": {
+    instructionRef: "CPJC 22.17: Endangering Child by Act (child and act theory only, underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-17.htm&version=048",
+  },
+  "tx-pc-25-11-continuous": {
+    instructionRef: "CPJC 25.22: Continuous Violence against the Family (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F25_Offenses_against_the_Family%2FCPJC25-22.htm&version=055",
+  },
   "tx-pc-38-03-c": resistingArrest,
   "tx-pc-38-03-d": resistingArrest,
   "tx-pc-38-04-vehicle": evadingArrest,

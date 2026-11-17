@@ -34,6 +34,8 @@ export interface TexasSourceDocument {
 }
 
 const CODE_MAP: Array<[string, string]> = [
+  ["Ins. Code", "IN"],
+  ["Insurance Code", "IN"],
   ["Penal Code", "PE"],
   ["Transportation Code", "TN"],
   ["Transp. Code", "TN"],
@@ -57,6 +59,7 @@ const CODE_MAP: Array<[string, string]> = [
 ];
 
 const CODE_PREFIX: Record<string, string> = {
+  IN: "Tex. Ins. Code",
   PE: "Tex. Penal Code",
   TN: "Tex. Transp. Code",
   HS: "Tex. Health & Safety Code",
