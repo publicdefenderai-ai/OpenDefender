@@ -36,6 +36,18 @@ export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInj
     instructionRef: "CPJC 22.6: Aggravated Assault Using or Exhibiting a Deadly Weapon (bodily-injury theory only) — underlying conduct only",
     instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-6.htm&version=013",
   },
+  "tx-pc-46-02-recent-assault": {
+    instructionRef: "CPJC 46.6: Carrying a Handgun with a Prior Conviction for Assault (misdemeanor bodily-injury predicate; underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F46_Weapons_Offenses%2FCPJC46-6.htm&version=055",
+  },
+  "tx-pc-46-02-vehicle-criminal-activity": {
+    instructionRef: "CPJC 46.8: Carrying a Handgun in a Motor Vehicle (criminal activity, motor vehicle only; underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F46_Weapons_Offenses%2FCPJC46-8.htm&version=048",
+  },
+  "tx-pc-46-02-a-5": {
+    instructionRef: "CPJC 46.9: Carrying a Handgun in Plain View (intentional public display; underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F46_Weapons_Offenses%2FCPJC46-9.htm&version=055",
+  },
   "tx-pc-31-03-e-1": theft,
   "tx-pc-31-03-e-2-b": theft,
   "tx-pc-31-03-e-3": theft,

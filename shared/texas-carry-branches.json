@@ -1,0 +1,630 @@
+[
+  {
+    "id": "tx-pc-46-02-recent-assault",
+    "name": "Unlawful carrying weapons (recent bodily-injury assault conviction)",
+    "officialTitle": "UNLAWFUL CARRYING WEAPONS.",
+    "category": "misdemeanor",
+    "code": "46.02(a)(2)(B)",
+    "citation": "Tex. Penal Code § 46.02(a)(2)(B)",
+    "conduct": "Intentionally, knowingly or recklessly carrying a handgun on or about the person. At the time of carrying the person must already have been convicted of assault causing bodily injury under §22.01(a)(1). The prior offense must have been committed during the preceding five years. The person must be away from their own or controlled premises and neither inside nor directly en route to a motor vehicle or watercraft they own or control. This ground does not depend on age. Section 46.15 limits when §46.02 applies, including specified activities and the exception in §46.15(b)(6) for someone carrying the specified license and a concealed or holstered handgun.",
+    "penalty": "Class A misdemeanor under §46.02(b): up to one year in jail, a fine up to $4,000, or both. If a qualifying prior conviction is proved, §12.43(a) and (d) can raise the minimum to 90 days if jail is imposed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.15",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a)(1), (a)(3), (a-2), (a-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-02-recent-deadly-conduct",
+    "name": "Unlawful carrying weapons (recent deadly conduct conviction)",
+    "officialTitle": "UNLAWFUL CARRYING WEAPONS.",
+    "category": "misdemeanor",
+    "code": "46.02(a)(2)(B)",
+    "citation": "Tex. Penal Code § 46.02(a)(2)(B)",
+    "conduct": "Intentionally, knowingly or recklessly carrying a handgun on or about the person. At the time of carrying the person must already have been convicted of deadly conduct under §22.05. The prior offense must have been committed during the preceding five years. The person must be away from their own or controlled premises and neither inside nor directly en route to a motor vehicle or watercraft they own or control. This ground does not depend on age. Section 46.15 limits when §46.02 applies, including specified activities and the exception in §46.15(b)(6) for someone carrying the specified license and a concealed or holstered handgun.",
+    "penalty": "Class A misdemeanor under §46.02(b): up to one year in jail, a fine up to $4,000, or both. If a qualifying prior conviction is proved, §12.43(a) and (d) can raise the minimum to 90 days if jail is imposed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.15",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a)(1), (a)(3), (a-2), (a-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-02-recent-threat",
+    "name": "Unlawful carrying weapons (recent terroristic threat conviction)",
+    "officialTitle": "UNLAWFUL CARRYING WEAPONS.",
+    "category": "misdemeanor",
+    "code": "46.02(a)(2)(B)",
+    "citation": "Tex. Penal Code § 46.02(a)(2)(B)",
+    "conduct": "Intentionally, knowingly or recklessly carrying a handgun on or about the person. At the time of carrying the person must already have been convicted of terroristic threat under §22.07. The prior offense must have been committed during the preceding five years. The person must be away from their own or controlled premises and neither inside nor directly en route to a motor vehicle or watercraft they own or control. This ground does not depend on age. Section 46.15 limits when §46.02 applies, including specified activities and the exception in §46.15(b)(6) for someone carrying the specified license and a concealed or holstered handgun.",
+    "penalty": "Class A misdemeanor under §46.02(b): up to one year in jail, a fine up to $4,000, or both. If a qualifying prior conviction is proved, §12.43(a) and (d) can raise the minimum to 90 days if jail is imposed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.15",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a)(1), (a)(3), (a-2), (a-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-02-recent-discharge",
+    "name": "Unlawful carrying weapons (recent public firearm discharge conviction)",
+    "officialTitle": "UNLAWFUL CARRYING WEAPONS.",
+    "category": "misdemeanor",
+    "code": "46.02(a)(2)(B)",
+    "citation": "Tex. Penal Code § 46.02(a)(2)(B)",
+    "conduct": "Intentionally, knowingly or recklessly carrying a handgun on or about the person. At the time of carrying the person must already have been convicted of disorderly conduct by discharging a firearm in a public place other than a public road or sport shooting range under §42.01(a)(7). The prior offense must have been committed during the preceding five years. The person must be away from their own or controlled premises and neither inside nor directly en route to a motor vehicle or watercraft they own or control. This ground does not depend on age. Section 46.15 limits when §46.02 applies, including specified activities and the exception in §46.15(b)(6) for someone carrying the specified license and a concealed or holstered handgun.",
+    "penalty": "Class A misdemeanor under §46.02(b): up to one year in jail, a fine up to $4,000, or both. If a qualifying prior conviction is proved, §12.43(a) and (d) can raise the minimum to 90 days if jail is imposed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.15",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a)(1), (a)(3), (a-2), (a-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(7)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-02-recent-display",
+    "name": "Unlawful carrying weapons (recent alarming display conviction)",
+    "officialTitle": "UNLAWFUL CARRYING WEAPONS.",
+    "category": "misdemeanor",
+    "code": "46.02(a)(2)(B)",
+    "citation": "Tex. Penal Code § 46.02(a)(2)(B)",
+    "conduct": "Intentionally, knowingly or recklessly carrying a handgun on or about the person. At the time of carrying the person must already have been convicted of disorderly conduct by displaying a firearm or other deadly weapon in public in a manner calculated to alarm under §42.01(a)(8). The prior offense must have been committed during the preceding five years. The person must be away from their own or controlled premises and neither inside nor directly en route to a motor vehicle or watercraft they own or control. This ground does not depend on age. Section 46.15 limits when §46.02 applies, including specified activities and the exception in §46.15(b)(6) for someone carrying the specified license and a concealed or holstered handgun.",
+    "penalty": "Class A misdemeanor under §46.02(b): up to one year in jail, a fine up to $4,000, or both. If a qualifying prior conviction is proved, §12.43(a) and (d) can raise the minimum to 90 days if jail is imposed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.15",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a)(1), (a)(3), (a-2), (a-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-02-vehicle-plain-view",
+    "name": "Unlawful carrying weapons (unholstered in plain view in vehicle or watercraft, age 21 or older)",
+    "officialTitle": "UNLAWFUL CARRYING WEAPONS.",
+    "category": "misdemeanor",
+    "code": "46.02(a-1)(1)",
+    "citation": "Tex. Penal Code § 46.02(a-1)(1)",
+    "conduct": "Intentionally, knowingly or recklessly carrying a handgun on or about the person in a motor vehicle or watercraft they own or control. This choice covers a person age 21 or older whose handgun is in plain view and is not carried in a holster. It does not address people under 21 or treat lack of a license as an independent violation. Section 46.15 limits when §46.02 applies, including specified activities and the exception in §46.15(b)(6) for someone carrying the specified license and a concealed or holstered handgun.",
+    "penalty": "Class A misdemeanor under §46.02(b): up to one year in jail, a fine up to $4,000, or both. If a qualifying prior conviction is proved, §12.43(a) and (d) can raise the minimum to 90 days if jail is imposed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a-1)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.15",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-02-vehicle-criminal-activity",
+    "name": "Unlawful carrying weapons (criminal activity in vehicle or watercraft)",
+    "officialTitle": "UNLAWFUL CARRYING WEAPONS.",
+    "category": "misdemeanor",
+    "code": "46.02(a-1)(2)(A)",
+    "citation": "Tex. Penal Code § 46.02(a-1)(2)(A)",
+    "conduct": "Intentionally, knowingly or recklessly carrying a handgun on or about the person in a motor vehicle or watercraft they own or control. The person must be engaged in criminal activity at that time. The statute excludes a Class C misdemeanor that violates a law or ordinance regulating traffic or boating. Section 46.15 limits when §46.02 applies, including specified activities and the exception in §46.15(b)(6) for someone carrying the specified license and a concealed or holstered handgun.",
+    "penalty": "Class A misdemeanor under §46.02(b): up to one year in jail, a fine up to $4,000, or both. If a qualifying prior conviction is proved, §12.43(a) and (d) can raise the minimum to 90 days if jail is imposed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a-1)(2)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.15",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-02-vehicle-prohibition-felony",
+    "name": "Unlawful carrying weapons (felony firearm prohibition in vehicle or watercraft)",
+    "officialTitle": "UNLAWFUL CARRYING WEAPONS.",
+    "category": "misdemeanor",
+    "code": "46.02(a-1)(2)(B)",
+    "citation": "Tex. Penal Code § 46.02(a-1)(2)(B)",
+    "conduct": "Intentionally, knowingly or recklessly carrying a handgun on or about the person in a motor vehicle or watercraft they own or control. The person must then be legally prohibited from possessing a firearm. A qualifying felony conviction under §46.04(a), (f) and (g) prohibits firearm possession before the fifth anniversary of the later release from confinement or from community supervision, parole or mandatory supervision. After that period, the prohibition applies away from the premises where the person lives. Section 46.15 limits when §46.02 applies, including specified activities and the exception in §46.15(b)(6) for someone carrying the specified license and a concealed or holstered handgun.",
+    "penalty": "Class A misdemeanor under §46.02(b): up to one year in jail, a fine up to $4,000, or both. If a qualifying prior conviction is proved, §12.43(a) and (d) can raise the minimum to 90 days if jail is imposed. The separate felony carrying provision in (a-7) has different location requirements. Its felony grade is not assigned to this vehicle branch.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a-1)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.15",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(a), (f), (g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a-3), (a-7), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-02-vehicle-prohibition-family",
+    "name": "Unlawful carrying weapons (family or household assault firearm prohibition in vehicle or watercraft)",
+    "officialTitle": "UNLAWFUL CARRYING WEAPONS.",
+    "category": "misdemeanor",
+    "code": "46.02(a-1)(2)(B)",
+    "citation": "Tex. Penal Code § 46.02(a-1)(2)(B)",
+    "conduct": "Intentionally, knowingly or recklessly carrying a handgun on or about the person in a motor vehicle or watercraft they own or control. The person must then be legally prohibited from possessing a firearm. The person must have been convicted of an assault under §22.01 punishable as a Class A misdemeanor involving a member of their family or household, and the firearm possession must occur before the fifth anniversary of the later of release from confinement or release from community supervision following that conviction. Section 46.15 limits when §46.02 applies, including specified activities and the exception in §46.15(b)(6) for someone carrying the specified license and a concealed or holstered handgun.",
+    "penalty": "Class A misdemeanor under §46.02(b): up to one year in jail, a fine up to $4,000, or both. If a qualifying prior conviction is proved, §12.43(a) and (d) can raise the minimum to 90 days if jail is imposed. The separate felony carrying provision in (a-7) has different location requirements. Its felony grade is not assigned to this vehicle branch.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a-1)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.15",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(b), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a-3), (a-7), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-02-vehicle-prohibition-order",
+    "name": "Unlawful carrying weapons (firearm prohibition under a qualifying order in vehicle or watercraft)",
+    "officialTitle": "UNLAWFUL CARRYING WEAPONS.",
+    "category": "misdemeanor",
+    "code": "46.02(a-1)(2)(B)",
+    "citation": "Tex. Penal Code § 46.02(a-1)(2)(B)",
+    "conduct": "Intentionally, knowingly or recklessly carrying a handgun on or about the person in a motor vehicle or watercraft they own or control. The person must then be legally prohibited from possessing a firearm. Section 46.04(c) requires actual receipt of notice of a qualifying order and possession before it expires. Only orders under the authorities listed there qualify. The subsection excludes a peace officer actively employed as a sworn full-time paid employee of a state agency or political subdivision. The particular order, notice and continued legal effect must be checked. Section 46.15 limits when §46.02 applies, including specified activities and the exception in §46.15(b)(6) for someone carrying the specified license and a concealed or holstered handgun.",
+    "penalty": "Class A misdemeanor under §46.02(b): up to one year in jail, a fine up to $4,000, or both. If a qualifying prior conviction is proved, §12.43(a) and (d) can raise the minimum to 90 days if jail is imposed. The separate felony carrying provision in (a-7) has different location requirements. Its felony grade is not assigned to this vehicle branch.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a-1)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.15",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.02",
+        "subdivision": "(a-3), (a-7), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(a), (d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]
