@@ -23,3 +23,17 @@ it('refuses corrupt baselines and examines every retained version',()=>{
 it('rejects the active checkout as a candidate destination before writing',async()=>{
   await expect(compareFloridaReviewedSources(process.cwd())).rejects.toThrow('outside the checkout');
 });
+
+it('accounts for all reviewed identities and every required dependency binding in the completed candidate report',async()=>{
+  const {readFileSync}=await import('node:fs');
+  const {FLORIDA_REVIEWED_SOURCE_RECORDS:records}=await import('../server/data/florida-reviewed-source-records');
+  const report=JSON.parse(readFileSync('scripts/data-review/florida-launch/restoration-comparison.json','utf8'));
+  expect(report.recordCoverage.map((r:{id:string})=>r.id).sort()).toEqual(records.map(r=>r.chargeId).sort());
+  for(const record of records){
+    const coverage=report.recordCoverage.find((r:{id:string})=>r.id===record.chargeId);
+    expect(coverage.complete).toBe(true);
+    expect(coverage.bindings.map((r:{sourceKey:string})=>r.sourceKey)).toEqual(record.dependencies.map(r=>r.sourceKey));
+    for(const dependency of record.dependencies)expect(coverage.bindings).toContainEqual(expect.objectContaining({sourceKey:dependency.sourceKey,retainedHash:dependency.contentHash,candidateHash:dependency.contentHash}));
+  }
+  expect(report.activeBefore).toEqual(report.activeAfter);
+});

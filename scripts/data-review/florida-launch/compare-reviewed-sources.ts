@@ -68,12 +68,24 @@ export async function compareFloridaReviewedSources(directory: string, replay = 
       currentnessReview:'Text/metadata comparison alone does not approve legal applicability or receipt issuance'});
     if (!replay) await pause(400);
   }
+  const recordCoverage = FLORIDA_REVIEWED_SOURCE_RECORDS.map(record => {
+    const bindings = record.dependencies.map(dependency => {
+      const retained = report.sourceEvidence[dependency.sourceKey];
+      const comparison = rows.find(row => row.section === dependency.section);
+      if (!retained || retained.contentHash !== dependency.contentHash || !comparison
+          || !comparison.affectedChargeIds.includes(record.chargeId)) throw Error('Incomplete dependency coverage for '+record.chargeId);
+      return {sourceKey:dependency.sourceKey,section:dependency.section,retainedHash:dependency.contentHash,
+        classification:comparison.classification,candidateHash:comparison.candidateHash};
+    });
+    return {id:record.chargeId,complete:bindings.every(binding=>binding.classification==='matching_text_and_retained_metadata'),bindings};
+  });
+  if (new Set(recordCoverage.map(record=>record.id)).size!==FLORIDA_REVIEWED_SOURCE_RECORDS.length) throw Error('Duplicate reviewed identity');
   const after = Object.fromEntries(active.map(path=>[path,hash(readFileSync(path))]));
   if (JSON.stringify(before)!==JSON.stringify(after)) throw Error('Active inputs changed during candidate comparison');
   const result = {schemaVersion:1,scope:'candidate_only_florida_reviewed_restoration',checkedAt:new Date().toISOString(),
     baselineCommit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),activeBefore:before,activeAfter:after,
     summary:rows.reduce((counts:Record<string,number>,row)=>({...counts,[row.classification]:(counts[row.classification]??0)+1}),{}),
-    sectionCount:sections.length,chargeCount:FLORIDA_REVIEWED_SOURCE_RECORDS.length,rows};
+    sectionCount:sections.length,chargeCount:FLORIDA_REVIEWED_SOURCE_RECORDS.length,recordCoverage,rows};
   writeFileSync(resolve(output,'comparison.json'),JSON.stringify(result,null,2)+'\n');
   return result;
 }
