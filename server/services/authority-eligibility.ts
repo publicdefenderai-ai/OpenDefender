@@ -54,6 +54,7 @@ import { FLORIDA_OBSCENITY_IDS } from "@shared/florida-obscenity-batch";
 import { FLORIDA_COMPUTER_FINANCIAL_IDS } from "@shared/florida-computer-financial-batch";
 import { FLORIDA_FIRE_RIOT_IDS } from "@shared/florida-fire-riot-batch";
 import { FLORIDA_REGULATORY_IDS } from "@shared/florida-regulatory-batch";
+import { FLORIDA_CHILD_VICTIMS_IDS } from "@shared/florida-child-victims-batch";
 import { FLORIDA_VEHICLE_IDENTIFIERS_IDS } from "@shared/florida-vehicle-identifiers-batch";
 import { FLORIDA_PAYMENT_FRAUD_IDS } from "@shared/florida-payment-fraud-batch";
 import { FLORIDA_PRESCRIPTION_FRAUD_IDS } from "@shared/florida-prescription-fraud-batch";
@@ -78,6 +79,7 @@ import { isFloridaObscenitySourceFresh } from "../data/florida-obscenity-source"
 import { isFloridaComputerFinancialSourceFresh } from "../data/florida-computer-financial-source";
 import { isFloridaFireRiotSourceFresh } from "../data/florida-fire-riot-source";
 import { isFloridaRegulatorySourceFresh } from "../data/florida-regulatory-source";
+import { isFloridaChildVictimsSourceFresh } from "../data/florida-child-victims-source";
 import { isFloridaVehicleIdentifiersSourceFresh } from "../data/florida-vehicle-identifiers-source";
 import { isFloridaPaymentFraudSourceFresh } from "../data/florida-payment-fraud-source";
 import { isFloridaPrescriptionFraudSourceFresh } from "../data/florida-prescription-fraud-source";
@@ -131,6 +133,7 @@ function createAuthorityChargeGate() {
     if (charge.jurisdiction === "FL" && FLORIDA_COMPUTER_FINANCIAL_IDS.has(charge.id) && !fresh(isFloridaComputerFinancialSourceFresh)) return false;
     if (charge.jurisdiction === "FL" && FLORIDA_FIRE_RIOT_IDS.has(charge.id) && !fresh(isFloridaFireRiotSourceFresh)) return false;
     if (charge.jurisdiction === "FL" && FLORIDA_REGULATORY_IDS.has(charge.id) && !fresh(isFloridaRegulatorySourceFresh)) return false;
+    if (charge.jurisdiction === "FL" && FLORIDA_CHILD_VICTIMS_IDS.has(charge.id) && !fresh(isFloridaChildVictimsSourceFresh)) return false;
     if (charge.jurisdiction === "FL" && FLORIDA_VEHICLE_IDENTIFIERS_IDS.has(charge.id) && !fresh(isFloridaVehicleIdentifiersSourceFresh)) return false;
     if (charge.jurisdiction === "FL" && FLORIDA_PAYMENT_FRAUD_IDS.has(charge.id) && !fresh(isFloridaPaymentFraudSourceFresh)) return false;
     if (charge.jurisdiction === "FL" && FLORIDA_PRESCRIPTION_FRAUD_IDS.has(charge.id) && !fresh(isFloridaPrescriptionFraudSourceFresh)) return false;

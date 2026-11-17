@@ -1,0 +1,331 @@
+[
+  {
+    "id": "fl-fs-794-011-8-b-child-victims",
+    "section": "794.011",
+    "scope": "(8)(b)",
+    "officialTitle": "Sexual battery",
+    "dependencies": [
+      "794.011",
+      "794.021",
+      "794.023",
+      "741.28",
+      "741.2801",
+      "794.0115",
+      "943.0435",
+      "921.1401",
+      "921.1402",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "794.011": [
+        "(1)(j)",
+        "(8)",
+        "(8)(b)"
+      ],
+      "794.021": [
+        ""
+      ],
+      "794.023": [
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "794.0115": [
+        "(2)",
+        "(4)",
+        "(6)",
+        "(7)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "921.1401": [
+        "(1)"
+      ],
+      "921.1402": [
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-794-011-8-b-child-victims",
+      "name": "Sexual battery by a person in familial or custodial authority on a person aged 12 through 17",
+      "names": {
+        "es": "Agresión sexual por una persona con autoridad familiar o de custodia sobre una persona de 12 a 17 años",
+        "zh": "对12至17岁者实施性侵犯的家庭权威或监护人员"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "794.011(8)(b)",
+      "slug": "fl-fs-794-011-8-b-child-victims",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 794.011(8)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 794.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 794.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 794.023",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.023.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 794.0115",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0115.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1401",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1401.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1402",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1402.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Sexual battery",
+          "FS 794.011(8)(b)",
+          "F.S. 794.011(8)(b)"
+        ],
+        "es": [
+          "Sexual battery",
+          "FS 794.011(8)(b)",
+          "F.S. 794.011(8)(b)"
+        ],
+        "zh": [
+          "Sexual battery",
+          "FS 794.011(8)(b)",
+          "F.S. 794.011(8)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The accused held familial or custodial authority over a person aged 12 through 17 and committed sexual battery against that person. The definition covers the sexual penetration or union specified in §794.011(1)(j) and excludes acts done for a bona fide medical purpose. Willingness or consent and a mistaken belief about age are not defenses.",
+          "degreeContext": "First-degree felony punishable by a term of years up to life and ordinarily a fine up to $10,000. Reclassification to a life felony (ordinary fine up to $15,000) applies when the state charges and proves multiple perpetrators committed sexual battery on the same victim in the same episode. For offenses from July 1, 2026 it can also apply to qualifying domestic violence with a qualifying prior domestic violence conviction. An adult meeting the dangerous sexual felony offender predicates in §794.0115(2) faces a 50-year minimum for offenses from October 1, 2014, or 25 years for an earlier qualifying offense. Registration and juvenile sentencing have separate criteria."
+        },
+        "es": {
+          "plainSummary": "La persona acusada tenía autoridad familiar o de custodia sobre una persona de 12 a 17 años y cometió agresión sexual contra ella. La definición abarca la penetración o unión sexual descrita en §794.011(1)(j) y excluye actos con un fin médico legítimo. La voluntad o consentimiento de la víctima y el error sobre su edad no constituyen defensas.",
+          "degreeContext": "Delito grave de primer grado punible con una pena de años hasta cadena perpetua y normalmente una multa de hasta $10,000. Hay reclasificación a delito grave de categoría perpetua (multa ordinaria de hasta $15,000) si el estado acusa y prueba que varios autores cometieron agresión sexual contra la misma víctima en el mismo episodio. Desde el 1 de julio de 2026 también puede aplicarse por violencia doméstica con condena previa pertinente. Un adulto que cumple los requisitos de delincuente sexual peligroso del §794.0115(2) enfrenta un mínimo de 50 años para hechos desde el 1 de octubre de 2014, o 25 años para hechos anteriores que califiquen. El registro y las penas juveniles tienen requisitos distintos."
+        },
+        "zh": {
+          "plainSummary": "被告对12至17岁的受害者具有家庭权威或监护权，并对其实施性侵犯。第794.011(1)(j)条规定了构成该罪的性侵入或性器官接触，并排除出于真实医疗目的的行为。受害者自愿或同意，以及误认年龄，均不能用作抗辩。",
+          "degreeContext": "一级重罪，可判有期监禁直至终身，通常最高罚款10,000美元。 若检方指控并证明多名行为人在同一事件中对同一受害者实施性侵犯，升为终身级重罪（普通罚金最高15,000美元）。2026年7月1日起，符合法定条件的家庭暴力犯罪且有相应前科也可能升级。实施行为时已成年且符合第794.0115(2)条规定者，若犯罪发生在2014年10月1日或之后，最低刑期为50年；符合条件的较早犯罪为25年。登记和未成年人量刑另有条件。"
+        }
+      }
+    },
+    "gradingScope": "(8)(b)"
+  },
+  {
+    "id": "fl-fs-787-01-3-a-child-victims",
+    "section": "787.01",
+    "scope": "(3)(a)",
+    "officialTitle": "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+    "dependencies": [
+      "787.01",
+      "827.03",
+      "794.011",
+      "800.04",
+      "847.0135",
+      "775.021",
+      "943.0435",
+      "921.1401",
+      "921.1402",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.01": [
+        "(1)",
+        "(3)(a)",
+        "(3)(a)1.",
+        "(3)(a)2.",
+        "(3)(a)3.",
+        "(3)(b)"
+      ],
+      "827.03": [
+        "(1)(a)"
+      ],
+      "794.011": [
+        "(1)(j)"
+      ],
+      "800.04": [
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "847.0135": [
+        "(5)"
+      ],
+      "775.021": [
+        "(4)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "921.1401": [
+        "(1)"
+      ],
+      "921.1402": [
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-01-3-a-child-victims",
+      "name": "Kidnapping a child under 13 with aggravated child abuse, sexual battery or a listed lewd act",
+      "names": {
+        "es": "Secuestro de menor de 13 años con maltrato agravado, agresión sexual o un acto lascivo previsto",
+        "zh": "绑架不满13岁儿童并实施加重虐待、性侵犯或列明的猥亵行为"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.01(3)(a)",
+      "slug": "fl-fs-787-01-3-a-child-victims",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.01(3)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 827.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 794.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 800.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.0135",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.0135.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1401",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1401.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1402",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1402.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(3)(a)",
+          "F.S. 787.01(3)(a)"
+        ],
+        "es": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(3)(a)",
+          "F.S. 787.01(3)(a)"
+        ],
+        "zh": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(3)(a)",
+          "F.S. 787.01(3)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Forcibly, secretly or by threat confining, abducting or imprisoning a child under 13 against the child’s will, without lawful authority, for ransom, reward, a shield or hostage, to commit or facilitate a felony, to harm or terrorize someone, or to interfere with a governmental or political function. Confinement without a parent’s or legal guardian’s consent qualifies as against the child’s will. During the kidnapping the accused must also commit aggravated child abuse, sexual battery against the child, or a listed lewd or lascivious act under §800.04 or §847.0135(5). For felony facilitation, the restraint must exceed merely incidental restraint, be unnecessary to the underlying felony and independently help commit it or avoid detection.",
+          "degreeContext": "Life felony. For a current offense, imprisonment may be for life or a term of years up to life, ordinarily with a fine up to $15,000. Separate convictions and sentences for the qualifying acts are permitted. Juvenile sentencing and registration depend on the applicable statutory conditions."
+        },
+        "es": {
+          "plainSummary": "Restringir, llevarse o encerrar mediante fuerza, en secreto o con amenazas a un menor de 13 años contra su voluntad y sin autoridad legal, para obtener rescate o recompensa, utilizarlo como escudo o rehén, cometer o facilitar un delito grave, dañar o aterrorizar a alguien o interferir con una función gubernamental o política. El confinamiento sin consentimiento del padre, madre o tutor cuenta como contrario a la voluntad del menor. Durante el secuestro debe cometerse además maltrato infantil agravado, agresión sexual contra el menor o un acto lascivo previsto en §800.04 o §847.0135(5). Para facilitar un delito grave, la restricción debe superar la incidental, ser innecesaria para ese delito y facilitarlo de manera independiente o dificultar la detección.",
+          "degreeContext": "Delito grave de categoría perpetua. Para un delito actual se permite cadena perpetua o una pena de años hasta perpetua, normalmente con una multa de hasta $15,000. Se permiten condenas y penas separadas por los actos que califican. Las penas para menores y el registro dependen de los requisitos legales aplicables."
+        },
+        "zh": {
+          "plainSummary": "以武力、秘密或威胁手段，无法定权限且违背不满13岁儿童的意愿限制其自由、劫持或拘禁，意图索取赎金或报酬、用作人盾或人质、实施或便利重罪、伤害或恐吓他人，或妨碍政府或政治职能。未经父母或法定监护人同意的拘禁，属于违背儿童意愿。绑架过程中还须实施加重虐童、针对该儿童的性侵犯，或第800.04条或第847.0135(5)条所列猥亵行为。若目的是便利重罪，对自由的限制须超出附带行为，并非该重罪本身所必需，且能独立便利犯罪或逃避侦查。",
+          "degreeContext": "终身级重罪。现行法律允许判处终身监禁或不超过终身的有期徒刑，通常最高罚款15,000美元。符合条件的行为可另行定罪量刑。未成年人量刑和登记义务取决于相应法定条件。"
+        }
+      }
+    },
+    "gradingScope": "(3)(a)"
+  }
+]

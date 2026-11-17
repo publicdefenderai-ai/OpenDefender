@@ -1,0 +1,9 @@
+# Florida launch citation scope review
+
+Eleven citations in the 30-row legislative sentencing-chart sample previously matched only by section number. Comparing each sampled description and degree with the operative conduct and charging branches identified nine existing mappings and two missing choices. The charge-level decisions, source versions, hashes and specific comparison scopes appear in [the crosswalk](../scripts/data-review/florida-launch/scope-crosswalk.json).
+
+The two additions address familial or custodial sexual battery against a person aged 12 through 17 and kidnapping a child under 13 while committing the abuse, sexual battery or lewd acts specified in the sampled description. The kidnapping choice is limited to §787.01(3)(a)1.–3. For the felony-facilitation purpose, the confinement must independently facilitate the felony or reduce the risk of detection, exceed what is incidental and be unnecessary to commit the underlying felony. [Florida Supreme Court kidnapping jury instruction](https://supremecourt.flcourts.gov/content/download/323071/opinion/sc14-364.pdf)
+
+The nine existing mappings include two trafficking records in the separately gated reviewed family. Matching the statutory grade and weight threshold establishes the scope of their reviewed descriptions. It does not restore their availability. Other branches outside the sampled descriptions, including kidnapping predicates 4 through 6, receive no clearance from this comparison. The chart sample measures these particular citations and does not supply a statewide offense denominator or a production availability count.
+
+Replay the new packet with `node --import tsx scripts/data-review/florida-child-victims/prepare.ts --check`. The crosswalk test independently matches the sampled descriptions and grades, finds the catalog choices, checks the official text hashes and locates every cited subdivision in retained text.
