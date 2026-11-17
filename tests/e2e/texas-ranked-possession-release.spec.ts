@@ -91,3 +91,16 @@ test("Texas selector returns the reviewed theft and criminal-mischief loss branc
       .toMatchObject({id:row.id,code:row.code,maxPenalty:row.penalty,category:row.category});
   }
 });
+
+test("Texas selector exposes specific burglary and trespass branches and preserves the legacy holds", async ({request}) => {
+  const response = await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");
+  expect(response.ok()).toBe(true);
+  const {charges} = await response.json();
+  const reviewed = JSON.parse(readFileSync("shared/texas-ranked-burglary.json","utf8"));
+  for (const row of reviewed) {
+    expect(charges.find((r: {id:string}) => r.id===row.id)).toMatchObject({
+      id:row.id, code:row.code, category:row.category, maxPenalty:row.penalty,
+    });
+  }
+  expect(charges.some((r: {id:string}) => r.id==="tx-commercial-burglary")).toBe(false);
+});

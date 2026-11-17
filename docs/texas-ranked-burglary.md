@@ -1,0 +1,21 @@
+# Texas burglary and special-location trespass
+
+The 2025 DPS ranking identifies four additional supported codes accounting for 14,959 adult arrest records. A fifth code has partial coverage. The workbook counts arrests and can include a person more than once. It gives no subdivision breakdown for the four locations combined under the trespass code. [Ranked entries and workbook hash](../scripts/data-review/output/texas-ranked-burglary-priorities.json)
+
+| Rank | DPS code | Adult arrests | Candidate |
+|---:|---|---:|---|
+| 38 | 22990001 | 5,039 | Burglary of a building other than a habitation, §30.02(c)(1). |
+| 39 | 22990002 | 4,950 | Burglary of a habitation, §30.02(c)(2). |
+| 47 | 22990011 | 3,897 | Burglary of vehicles, §30.04(d). The corrected section-wide identity covers ordinary misdemeanor and conditional felony grades. |
+| 50 | 57070019 | 3,703 | Partial. Habitation, Superfund site and qualifying enclosed critical infrastructure have individual choices. The shelter-center branch is held. |
+| 102 | 22990003 | 1,073 | §30.02(d), a habitation with the specified intent, commission or attempt of a felony other than felony theft by any party. |
+
+Burglary can involve entry with intent, remaining concealed with intent, or entry and commission or attempted commission. Intrusion by any body part or connected object is sufficient for burglary. Criminal trespass requires entry of the entire body, or remaining after notice to leave. A vehicle adapted for overnight accommodation may be a habitation. The first-degree habitation branch expressly excludes felony theft as its additional felony. Prescription-drug burglary requires the particular premises or vehicle and intent to steal a controlled substance. [Definitions and operative subdivisions](https://tcss.legis.texas.gov/resources/PE/htm/PE.30.htm#30.01)
+
+The existing vehicle identity previously assigned a generic felony and a five-year maximum. The ordinary offense is a Class A misdemeanor. The reviewed section-wide record describes the separate minimum for one prior, felony conditions for two priors or a rail car, and third-degree circumstances. The one-prior rule includes a qualifying plea resulting in deferred adjudication. An older saved blanket felony requires reselection before the dashboard or PDF displays a classification. A vehicle burglary instruction concerns the conduct, without proving any enhanced grade. [§30.04](https://tcss.legis.texas.gov/resources/PE/htm/PE.30.htm#30.04) · [CPJC 30.8](https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F30_Burglary_and_Criminal_Trespass%2FCPJC30-8.htm&version=007)
+
+The historical after-warning trespass ID now reflects both notice theories and the statutory grading range. Special-location choices preserve the weapons-only notice exception in §30.05(d-3). The critical-infrastructure definition requires the listed facility and the specified complete enclosure. The Superfund branch requires an actual qualifying registry listing. Section 30.05(b)(3) refers to Human Resources Code §51.002 for “shelter center.” The current referenced text separately defines “family violence shelter center” and other services. The candidate makes no substitution and supplies no shelter-only selection. Other unreviewed enhancements, including case-specific application of §20.05(a)(2), have no standalone choice here. [§30.05](https://tcss.legis.texas.gov/resources/PE/htm/PE.30.htm#30.05) · [Human Resources Code §51.002](https://tcss.legis.texas.gov/resources/HR/htm/HR.51.htm#51.002)
+
+The thirteen records use 105 links to 19 official sections. Two IDs receive corrected content and eleven are new. Four previously held building-burglary labels retain their dispositions. Sections 30.02 and 30.04 report February 6, 2024 as their latest effective date; §30.05 reports January 1, 2025. The offense date controls. The isolated candidate has 104 eligible of 179 configured Texas IDs with complete current evidence. Production requires separate verification.
+
+Offline replay uses `node --import tsx scripts/data-review/texas-verification/replay-assault-intoxication.ts ranked-burglary`. Reproduce the worksheet ranks with `python3 scripts/data-review/texas-verification/rank_arrests.py WORKBOOK --limit 102`, then read ranks 38, 39, 47, 50 and 102. The preceding 75 match the frozen ranking.

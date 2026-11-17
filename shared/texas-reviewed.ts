@@ -1,3 +1,4 @@
+import burglary from "./texas-ranked-burglary.json";
 import loss from "./texas-property-loss.json";
 import carry from "./texas-carry-branches.json";
 import closeout from "./texas-priority-closeout.json";
@@ -31,6 +32,7 @@ export const texasReviewedRecords = [
   ...closeout,
   ...carry,
   ...loss,
+  ...burglary,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 
@@ -51,6 +53,16 @@ export function isTexasHeldCarrySelection(charge: { id?: string; name: string; c
     (/^unlawful carrying (?:of (?:a )?)?weapons?$/i.test(charge.name.trim()) ||
       /^(?:(?:tex\.\s*)?penal code\s*)?(?:§\s*)?46\.02(?:\(b\))?\.?$/i.test(charge.code?.trim() ?? "")));
 }
-export function needsTexasChargeReselection(charge: { id?: string; name: string; code?: string }, jurisdiction?: string) {
-  return isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction);
+type TexasSavedSelection = { id?: string; name: string; code?: string; classification?: string };
+
+// The old vehicle identity assigned a felony even when the ordinary Class A branch applied.
+export function isTexasAmbiguousVehicleBurglary(charge: TexasSavedSelection, jurisdiction?: string) {
+  if (charge.id) return charge.id === "tx-auto-burglary" && charge.classification?.toLowerCase() === "felony";
+  return /^(TX|Texas)$/i.test(jurisdiction ?? "") &&
+    /^(?:(?:tex\.\s*)?penal code\s*)?(?:§\s*)?30\.04\.?$/i.test(charge.code?.trim() ?? "");
+}
+
+export function needsTexasChargeReselection(charge: TexasSavedSelection, jurisdiction?: string) {
+  return isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
+    isTexasAmbiguousVehicleBurglary(charge, jurisdiction);
 }
