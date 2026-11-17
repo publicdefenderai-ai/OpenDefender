@@ -1,0 +1,1911 @@
+{
+  "schemaVersion": 1,
+  "scope": "florida_fire_riot_publication",
+  "acquisitionMetadata": {
+    "590.015": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.015.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "590.10": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.10.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "590.11": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.11.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "590.125": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.125.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "590.14": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.14.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "590.25": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.25.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "590.28": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.28.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "775.082": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "775.083": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "775.084": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "870.01": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "903.046": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0903/Sections/0903.046.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    }
+  },
+  "supportingSpans": [
+    {
+      "id": "fl-fs-590-28-1-fire-riot",
+      "sections": [
+        {
+          "section": "590.28",
+          "scope": "(1)",
+          "start": 53,
+          "end": 495,
+          "sourceHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274",
+          "quoteHash": "e28bca7febf287a4f2ecbbbe8b1750c32a48e2cd89df218d96d0af6255133b3e"
+        },
+        {
+          "section": "590.015",
+          "scope": "(5)",
+          "start": 848,
+          "end": 955,
+          "sourceHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335",
+          "quoteHash": "b3d184ab7719681c54832a85c18db5cc0f9b9a12d66d29064bf70a3c0085c4df"
+        },
+        {
+          "section": "590.015",
+          "scope": "(6)",
+          "start": 955,
+          "end": 1221,
+          "sourceHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335",
+          "quoteHash": "43f8b3201b085e0aff38a68871c984f471b5ab5f64625247ad54a26e1c385e9c"
+        },
+        {
+          "section": "590.14",
+          "scope": "(2)",
+          "start": 567,
+          "end": 1310,
+          "sourceHash": "70a681a1fde0e819c2bdb03a00a6aa05d11a6e7ceb66dc3e4592c2927a537d2a",
+          "quoteHash": "d7fc82217e968105ea0196bd1e089ba64f4c4ed5493591862c5d86f2d8bb0f5c"
+        },
+        {
+          "section": "590.125",
+          "scope": "(1)",
+          "start": 67,
+          "end": 2802,
+          "sourceHash": "929587e3be1b8c7dbd5fc0d6e8b0982d17a4e99d485afbf733bf14d4f915d1ce",
+          "quoteHash": "c89e9956273149af227846bc1e8bde9c6eb9304bdf6c0e3ce3f4d0070c9720a2"
+        },
+        {
+          "section": "590.125",
+          "scope": "(2)",
+          "start": 2802,
+          "end": 4211,
+          "sourceHash": "929587e3be1b8c7dbd5fc0d6e8b0982d17a4e99d485afbf733bf14d4f915d1ce",
+          "quoteHash": "98828c15ec23b2b9c29169ff45767c91c6724427ecf9a74d583ad74ff572f020"
+        },
+        {
+          "section": "590.125",
+          "scope": "(3)",
+          "start": 4211,
+          "end": 9729,
+          "sourceHash": "929587e3be1b8c7dbd5fc0d6e8b0982d17a4e99d485afbf733bf14d4f915d1ce",
+          "quoteHash": "4a6fe36f06f64dd1321b7d331927a374ae3982075777c6d519d8749d0c91ecea"
+        },
+        {
+          "section": "590.125",
+          "scope": "(4)",
+          "start": 9729,
+          "end": 11803,
+          "sourceHash": "929587e3be1b8c7dbd5fc0d6e8b0982d17a4e99d485afbf733bf14d4f915d1ce",
+          "quoteHash": "9a16aecf2972326213da6a0c1ed686618f6ccc7438a18cc2153ea464d010b0ef"
+        },
+        {
+          "section": "590.125",
+          "scope": "(6)",
+          "start": 13602,
+          "end": 15799,
+          "sourceHash": "929587e3be1b8c7dbd5fc0d6e8b0982d17a4e99d485afbf733bf14d4f915d1ce",
+          "quoteHash": "282c38ac47c5dbfb567b55ea3f4bec5c2610fc9014cd465ef88489b716a56ba7"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-590-28-2-fire-riot",
+      "sections": [
+        {
+          "section": "590.28",
+          "scope": "(2)",
+          "start": 495,
+          "end": 896,
+          "sourceHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274",
+          "quoteHash": "95630806081095df9fc89a7e80050aecf4fce7e940170d055aef812bdf43949f"
+        },
+        {
+          "section": "590.015",
+          "scope": "(5)",
+          "start": 848,
+          "end": 955,
+          "sourceHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335",
+          "quoteHash": "b3d184ab7719681c54832a85c18db5cc0f9b9a12d66d29064bf70a3c0085c4df"
+        },
+        {
+          "section": "590.015",
+          "scope": "(6)",
+          "start": 955,
+          "end": 1221,
+          "sourceHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335",
+          "quoteHash": "43f8b3201b085e0aff38a68871c984f471b5ab5f64625247ad54a26e1c385e9c"
+        },
+        {
+          "section": "590.14",
+          "scope": "(2)",
+          "start": 567,
+          "end": 1310,
+          "sourceHash": "70a681a1fde0e819c2bdb03a00a6aa05d11a6e7ceb66dc3e4592c2927a537d2a",
+          "quoteHash": "d7fc82217e968105ea0196bd1e089ba64f4c4ed5493591862c5d86f2d8bb0f5c"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-590-10-1-fire-riot",
+      "sections": [
+        {
+          "section": "590.10",
+          "scope": "(1)",
+          "start": 49,
+          "end": 258,
+          "sourceHash": "7314a45fe263de2a67b2105814159364996eb29cd0fd900708913f35edcd35de",
+          "quoteHash": "7ec416409cd238a55abba2d8bbb960f3ebdce34f9b74a178801c0ecfc98ec3b9"
+        },
+        {
+          "section": "590.10",
+          "scope": "(2)",
+          "start": 258,
+          "end": 472,
+          "sourceHash": "7314a45fe263de2a67b2105814159364996eb29cd0fd900708913f35edcd35de",
+          "quoteHash": "21a1e6f928cb8735de7b24c1c60b4cfb5bf61f78992517a8aa5e2f04d86e57fd"
+        },
+        {
+          "section": "590.015",
+          "scope": "(5)",
+          "start": 848,
+          "end": 955,
+          "sourceHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335",
+          "quoteHash": "b3d184ab7719681c54832a85c18db5cc0f9b9a12d66d29064bf70a3c0085c4df"
+        },
+        {
+          "section": "590.015",
+          "scope": "(6)",
+          "start": 955,
+          "end": 1221,
+          "sourceHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335",
+          "quoteHash": "43f8b3201b085e0aff38a68871c984f471b5ab5f64625247ad54a26e1c385e9c"
+        },
+        {
+          "section": "590.14",
+          "scope": "(2)",
+          "start": 567,
+          "end": 1310,
+          "sourceHash": "70a681a1fde0e819c2bdb03a00a6aa05d11a6e7ceb66dc3e4592c2927a537d2a",
+          "quoteHash": "d7fc82217e968105ea0196bd1e089ba64f4c4ed5493591862c5d86f2d8bb0f5c"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-590-11-1-fire-riot",
+      "sections": [
+        {
+          "section": "590.11",
+          "scope": "(1)",
+          "start": 31,
+          "end": 213,
+          "sourceHash": "9e6083921aa4856caea2d741bf89e5a072d81eb1c321e448e80624a024f3db7e",
+          "quoteHash": "efbe86d5d1aafc1ed590f885784ba35d4eea4ab5a2db0d67a9d2d3704561a61f"
+        },
+        {
+          "section": "590.11",
+          "scope": "(2)",
+          "start": 213,
+          "end": 470,
+          "sourceHash": "9e6083921aa4856caea2d741bf89e5a072d81eb1c321e448e80624a024f3db7e",
+          "quoteHash": "9e43231a0e821036f3b825af62de826a637c61f2495d40b5e39890eee2421431"
+        },
+        {
+          "section": "590.015",
+          "scope": "(5)",
+          "start": 848,
+          "end": 955,
+          "sourceHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335",
+          "quoteHash": "b3d184ab7719681c54832a85c18db5cc0f9b9a12d66d29064bf70a3c0085c4df"
+        },
+        {
+          "section": "590.015",
+          "scope": "(6)",
+          "start": 955,
+          "end": 1221,
+          "sourceHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335",
+          "quoteHash": "43f8b3201b085e0aff38a68871c984f471b5ab5f64625247ad54a26e1c385e9c"
+        },
+        {
+          "section": "590.14",
+          "scope": "(2)",
+          "start": 567,
+          "end": 1310,
+          "sourceHash": "70a681a1fde0e819c2bdb03a00a6aa05d11a6e7ceb66dc3e4592c2927a537d2a",
+          "quoteHash": "d7fc82217e968105ea0196bd1e089ba64f4c4ed5493591862c5d86f2d8bb0f5c"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-590-25-fire-riot",
+      "sections": [
+        {
+          "section": "590.25",
+          "scope": "",
+          "start": 0,
+          "end": 663,
+          "sourceHash": "08577f6a804181414459838364a5956f3340e13a69b825ed27b7f4590c1ded7d",
+          "quoteHash": "08577f6a804181414459838364a5956f3340e13a69b825ed27b7f4590c1ded7d"
+        },
+        {
+          "section": "590.015",
+          "scope": "(5)",
+          "start": 848,
+          "end": 955,
+          "sourceHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335",
+          "quoteHash": "b3d184ab7719681c54832a85c18db5cc0f9b9a12d66d29064bf70a3c0085c4df"
+        },
+        {
+          "section": "590.015",
+          "scope": "(6)",
+          "start": 955,
+          "end": 1221,
+          "sourceHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335",
+          "quoteHash": "43f8b3201b085e0aff38a68871c984f471b5ab5f64625247ad54a26e1c385e9c"
+        },
+        {
+          "section": "590.14",
+          "scope": "(2)",
+          "start": 567,
+          "end": 1310,
+          "sourceHash": "70a681a1fde0e819c2bdb03a00a6aa05d11a6e7ceb66dc3e4592c2927a537d2a",
+          "quoteHash": "d7fc82217e968105ea0196bd1e089ba64f4c4ed5493591862c5d86f2d8bb0f5c"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-870-01-1-fire-riot",
+      "sections": [
+        {
+          "section": "870.01",
+          "scope": "(1)",
+          "start": 30,
+          "end": 309,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "7c3824aa55d692e87b739423a34a4bab36b81ce5cc561563d960200fd1d77ece"
+        },
+        {
+          "section": "870.01",
+          "scope": "(6)",
+          "start": 2305,
+          "end": 2514,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "85cbc7e6de4298629f74cff6fbb903791a2537dd6a499017dc7e5a8eb98b04a1"
+        },
+        {
+          "section": "870.01",
+          "scope": "(7)",
+          "start": 2514,
+          "end": 2762,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "dd84a2db12a01def27033e5e716108ed9ad41a97a88842c9f30dcfb3c0588ac7"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-870-01-2-fire-riot",
+      "sections": [
+        {
+          "section": "870.01",
+          "scope": "(2)",
+          "start": 309,
+          "end": 818,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "cd458ae67f3f990e2cf8a579c963b4305002a6eeac921f596c291d0b7e6fa217"
+        },
+        {
+          "section": "870.01",
+          "scope": "(6)",
+          "start": 2305,
+          "end": 2514,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "85cbc7e6de4298629f74cff6fbb903791a2537dd6a499017dc7e5a8eb98b04a1"
+        },
+        {
+          "section": "870.01",
+          "scope": "(7)",
+          "start": 2514,
+          "end": 2762,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "dd84a2db12a01def27033e5e716108ed9ad41a97a88842c9f30dcfb3c0588ac7"
+        },
+        {
+          "section": "903.046",
+          "scope": "(1)",
+          "start": 60,
+          "end": 292,
+          "sourceHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64",
+          "quoteHash": "6fc566fbc82653ea45b46ce0d1c1bc5ac68d82404a42a2c9c2ccf1b0b4b732d9"
+        },
+        {
+          "section": "903.046",
+          "scope": "(2)",
+          "start": 292,
+          "end": 4827,
+          "sourceHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64",
+          "quoteHash": "17e073ed7db9b30956fbf2a915cff7b014d3f8866e7a82ce13a4e30c4b05968c"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-870-01-3-fire-riot",
+      "sections": [
+        {
+          "section": "870.01",
+          "scope": "(3)",
+          "start": 818,
+          "end": 1433,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "c06d37f4423b8dc35083bb01f43a827b1ad27a18fa26cfaec97c0c4e53128fd5"
+        },
+        {
+          "section": "870.01",
+          "scope": "(2)",
+          "start": 309,
+          "end": 818,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "cd458ae67f3f990e2cf8a579c963b4305002a6eeac921f596c291d0b7e6fa217"
+        },
+        {
+          "section": "870.01",
+          "scope": "(6)",
+          "start": 2305,
+          "end": 2514,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "85cbc7e6de4298629f74cff6fbb903791a2537dd6a499017dc7e5a8eb98b04a1"
+        },
+        {
+          "section": "870.01",
+          "scope": "(7)",
+          "start": 2514,
+          "end": 2762,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "dd84a2db12a01def27033e5e716108ed9ad41a97a88842c9f30dcfb3c0588ac7"
+        },
+        {
+          "section": "903.046",
+          "scope": "(1)",
+          "start": 60,
+          "end": 292,
+          "sourceHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64",
+          "quoteHash": "6fc566fbc82653ea45b46ce0d1c1bc5ac68d82404a42a2c9c2ccf1b0b4b732d9"
+        },
+        {
+          "section": "903.046",
+          "scope": "(2)",
+          "start": 292,
+          "end": 4827,
+          "sourceHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64",
+          "quoteHash": "17e073ed7db9b30956fbf2a915cff7b014d3f8866e7a82ce13a4e30c4b05968c"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-870-01-4-fire-riot",
+      "sections": [
+        {
+          "section": "870.01",
+          "scope": "(4)",
+          "start": 1433,
+          "end": 1734,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "2523ce93d50604157dda49d3b66441e6ca31208f30eecda343ccf81387d417a6"
+        },
+        {
+          "section": "870.01",
+          "scope": "(2)",
+          "start": 309,
+          "end": 818,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "cd458ae67f3f990e2cf8a579c963b4305002a6eeac921f596c291d0b7e6fa217"
+        },
+        {
+          "section": "870.01",
+          "scope": "(6)",
+          "start": 2305,
+          "end": 2514,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "85cbc7e6de4298629f74cff6fbb903791a2537dd6a499017dc7e5a8eb98b04a1"
+        },
+        {
+          "section": "870.01",
+          "scope": "(7)",
+          "start": 2514,
+          "end": 2762,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "dd84a2db12a01def27033e5e716108ed9ad41a97a88842c9f30dcfb3c0588ac7"
+        },
+        {
+          "section": "903.046",
+          "scope": "(1)",
+          "start": 60,
+          "end": 292,
+          "sourceHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64",
+          "quoteHash": "6fc566fbc82653ea45b46ce0d1c1bc5ac68d82404a42a2c9c2ccf1b0b4b732d9"
+        },
+        {
+          "section": "903.046",
+          "scope": "(2)",
+          "start": 292,
+          "end": 4827,
+          "sourceHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64",
+          "quoteHash": "17e073ed7db9b30956fbf2a915cff7b014d3f8866e7a82ce13a4e30c4b05968c"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-870-01-5-fire-riot",
+      "sections": [
+        {
+          "section": "870.01",
+          "scope": "(5)",
+          "start": 1734,
+          "end": 2305,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "7091aa653fe640879a4e1c5ab533ba48c050323e8cb5dac7c82408ade06ee6af"
+        },
+        {
+          "section": "870.01",
+          "scope": "(2)",
+          "start": 309,
+          "end": 818,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "cd458ae67f3f990e2cf8a579c963b4305002a6eeac921f596c291d0b7e6fa217"
+        },
+        {
+          "section": "870.01",
+          "scope": "(4)",
+          "start": 1433,
+          "end": 1734,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "2523ce93d50604157dda49d3b66441e6ca31208f30eecda343ccf81387d417a6"
+        },
+        {
+          "section": "870.01",
+          "scope": "(6)",
+          "start": 2305,
+          "end": 2514,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "85cbc7e6de4298629f74cff6fbb903791a2537dd6a499017dc7e5a8eb98b04a1"
+        },
+        {
+          "section": "870.01",
+          "scope": "(7)",
+          "start": 2514,
+          "end": 2762,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+          "quoteHash": "dd84a2db12a01def27033e5e716108ed9ad41a97a88842c9f30dcfb3c0588ac7"
+        },
+        {
+          "section": "903.046",
+          "scope": "(1)",
+          "start": 60,
+          "end": 292,
+          "sourceHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64",
+          "quoteHash": "6fc566fbc82653ea45b46ce0d1c1bc5ac68d82404a42a2c9c2ccf1b0b4b732d9"
+        },
+        {
+          "section": "903.046",
+          "scope": "(2)",
+          "start": 292,
+          "end": 4827,
+          "sourceHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64",
+          "quoteHash": "17e073ed7db9b30956fbf2a915cff7b014d3f8866e7a82ce13a4e30c4b05968c"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    }
+  ],
+  "report": {
+    "schemaVersion": 1,
+    "kind": "florida_source_first_review",
+    "drafts": [
+      {
+        "id": "fl-fs-590-28-1-fire-riot",
+        "name": "Intentional burning of wild land or vegetative land-clearing debris",
+        "code": "590.28(1)",
+        "citation": "Fla. Stat. § 590.28(1)",
+        "primarySourceKey": "fl:statute:590.28:1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:590.28:1",
+          "target": "title",
+          "text": "Intentional or reckless burning of lands",
+          "start": 0,
+          "end": 40,
+          "sourceHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:590.28:1",
+            "target": "text",
+            "text": "(1) \nWhoever intentionally burns, sets fire to, or causes to be burned or causes any fire to be set to, any wild land or vegetative land clearing debris not owned by, or in the lawful possession of, the person setting such fire or burning such lands or causing such fire to be set or lands to be burned without complying with s. 590.125, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 53,
+            "end": 493,
+            "sourceHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:590.28:1",
+            "target": "text",
+            "text": "(1) \nWhoever intentionally burns, sets fire to, or causes to be burned or causes any fire to be set to, any wild land or vegetative land clearing debris not owned by, or in the lawful possession of, the person setting such fire or burning such lands or causing such fire to be set or lands to be burned without complying with s. 590.125, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 53,
+            "end": 493,
+            "sourceHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:590.28:1",
+            "role": "offense",
+            "contentHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274"
+          },
+          {
+            "sourceKey": "fl:statute:590.28",
+            "role": "grading",
+            "contentHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274"
+          },
+          {
+            "sourceKey": "fl:statute:590.015",
+            "role": "definition",
+            "contentHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335"
+          },
+          {
+            "sourceKey": "fl:statute:590.14",
+            "role": "definition",
+            "contentHash": "70a681a1fde0e819c2bdb03a00a6aa05d11a6e7ceb66dc3e4592c2927a537d2a"
+          },
+          {
+            "sourceKey": "fl:statute:590.125",
+            "role": "definition",
+            "contentHash": "929587e3be1b8c7dbd5fc0d6e8b0982d17a4e99d485afbf733bf14d4f915d1ce"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(1) \nWhoever intentionally burns, sets fire to, or causes to be burned or causes any fire to be set to, any wild land or vegetative land clearing debris not owned by, or in the lawful possession of, the person setting such fire or burning such lands or causing such fire to be set or lands to be burned without complying with s. 590.125, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(1) \nWhoever intentionally burns, sets fire to, or causes to be burned or causes any fire to be set to, any wild land or vegetative land clearing debris not owned by, or in the lawful possession of, the person setting such fire or burning such lands or causing such fire to be set or lands to be burned without complying with s. 590.125, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 590.28(1). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-590-28-2-fire-riot",
+        "name": "Reckless burning of wild lands",
+        "code": "590.28(2)",
+        "citation": "Fla. Stat. § 590.28(2)",
+        "primarySourceKey": "fl:statute:590.28:2",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:590.28:2",
+          "target": "title",
+          "text": "Intentional or reckless burning of lands",
+          "start": 0,
+          "end": 40,
+          "sourceHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:590.28:2",
+            "target": "text",
+            "text": "(2) \nWhoever recklessly burns, sets fire to, or causes to be burned any wild lands not owned by, or in the lawful possession of, the person setting the fire or burning the lands or causing the fire to be set or lands to be burned, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 1, ch. 29919, 1955; s. 15, ch. 99-292; s. 33, ch. 2000-308.",
+            "start": 495,
+            "end": 896,
+            "sourceHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:590.28:2",
+            "target": "text",
+            "text": "(2) \nWhoever recklessly burns, sets fire to, or causes to be burned any wild lands not owned by, or in the lawful possession of, the person setting the fire or burning the lands or causing the fire to be set or lands to be burned, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 1, ch. 29919, 1955; s. 15, ch. 99-292; s. 33, ch. 2000-308.",
+            "start": 495,
+            "end": 896,
+            "sourceHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274",
+            "category": "misdemeanor"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:590.28:2",
+            "role": "offense",
+            "contentHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274"
+          },
+          {
+            "sourceKey": "fl:statute:590.28",
+            "role": "grading",
+            "contentHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274"
+          },
+          {
+            "sourceKey": "fl:statute:590.015",
+            "role": "definition",
+            "contentHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335"
+          },
+          {
+            "sourceKey": "fl:statute:590.14",
+            "role": "definition",
+            "contentHash": "70a681a1fde0e819c2bdb03a00a6aa05d11a6e7ceb66dc3e4592c2927a537d2a"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          }
+        ],
+        "conduct": "(2) \nWhoever recklessly burns, sets fire to, or causes to be burned any wild lands not owned by, or in the lawful possession of, the person setting the fire or burning the lands or causing the fire to be set or lands to be burned, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 1, ch. 29919, 1955; s. 15, ch. 99-292; s. 33, ch. 2000-308.",
+        "grading": "(2) \nWhoever recklessly burns, sets fire to, or causes to be burned any wild lands not owned by, or in the lawful possession of, the person setting the fire or burning the lands or causing the fire to be set or lands to be burned, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 1, ch. 29919, 1955; s. 15, ch. 99-292; s. 33, ch. 2000-308.",
+        "interpretation": "Scope 590.28(2). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-590-10-1-fire-riot",
+        "name": "Disposing of lighted substances or things that may cause wildfire",
+        "code": "590.10(1)",
+        "citation": "Fla. Stat. § 590.10(1)",
+        "primarySourceKey": "fl:statute:590.10:1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:590.10:1",
+          "target": "title",
+          "text": "Disposing of lighted substances, etc",
+          "start": 0,
+          "end": 36,
+          "sourceHash": "7314a45fe263de2a67b2105814159364996eb29cd0fd900708913f35edcd35de"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:590.10:1",
+            "target": "text",
+            "text": "(1) \nIt is unlawful for any person to throw, drop, or dispose of a lighted match, cigarette, cigar, ashes, or other flaming or glowing substance, or any substance or thing which may or does cause a wildfire.",
+            "start": 49,
+            "end": 256,
+            "sourceHash": "7314a45fe263de2a67b2105814159364996eb29cd0fd900708913f35edcd35de"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:590.10",
+            "target": "text",
+            "text": "(2) \nAnyone who violates this section commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 11, ch. 17029, 1935; CGL 1936 Supp. 4151(10-pp); s. 7, ch. 99-292.",
+            "start": 258,
+            "end": 472,
+            "sourceHash": "7314a45fe263de2a67b2105814159364996eb29cd0fd900708913f35edcd35de",
+            "category": "misdemeanor"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:590.10:1",
+            "role": "offense",
+            "contentHash": "7314a45fe263de2a67b2105814159364996eb29cd0fd900708913f35edcd35de"
+          },
+          {
+            "sourceKey": "fl:statute:590.10",
+            "role": "grading",
+            "contentHash": "7314a45fe263de2a67b2105814159364996eb29cd0fd900708913f35edcd35de"
+          },
+          {
+            "sourceKey": "fl:statute:590.015",
+            "role": "definition",
+            "contentHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335"
+          },
+          {
+            "sourceKey": "fl:statute:590.14",
+            "role": "definition",
+            "contentHash": "70a681a1fde0e819c2bdb03a00a6aa05d11a6e7ceb66dc3e4592c2927a537d2a"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          }
+        ],
+        "conduct": "(1) \nIt is unlawful for any person to throw, drop, or dispose of a lighted match, cigarette, cigar, ashes, or other flaming or glowing substance, or any substance or thing which may or does cause a wildfire.",
+        "grading": "(2) \nAnyone who violates this section commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 11, ch. 17029, 1935; CGL 1936 Supp. 4151(10-pp); s. 7, ch. 99-292.",
+        "interpretation": "Scope 590.10(1). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-590-11-1-fire-riot",
+        "name": "Leaving a recreational fire unattended",
+        "code": "590.11(1)",
+        "citation": "Fla. Stat. § 590.11(1)",
+        "primarySourceKey": "fl:statute:590.11:1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:590.11:1",
+          "target": "title",
+          "text": "Recreational fires",
+          "start": 0,
+          "end": 18,
+          "sourceHash": "9e6083921aa4856caea2d741bf89e5a072d81eb1c321e448e80624a024f3db7e"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:590.11:1",
+            "target": "text",
+            "text": "(1) \nIt is unlawful for any individual or group of individuals to build a warming fire, bonfire, or campfire and leave it unattended while visible flame, smoke, or emissions exist.",
+            "start": 31,
+            "end": 211,
+            "sourceHash": "9e6083921aa4856caea2d741bf89e5a072d81eb1c321e448e80624a024f3db7e"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:590.11",
+            "target": "text",
+            "text": "(2) \nAnyone who violates this section commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 12, ch. 17029, 1935; CGL 1936 Supp. 4151(10-qq); s. 8, ch. 99-292; s. 40, ch. 2002-295; s. 24, ch. 2013-226.",
+            "start": 213,
+            "end": 470,
+            "sourceHash": "9e6083921aa4856caea2d741bf89e5a072d81eb1c321e448e80624a024f3db7e",
+            "category": "misdemeanor"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:590.11:1",
+            "role": "offense",
+            "contentHash": "9e6083921aa4856caea2d741bf89e5a072d81eb1c321e448e80624a024f3db7e"
+          },
+          {
+            "sourceKey": "fl:statute:590.11",
+            "role": "grading",
+            "contentHash": "9e6083921aa4856caea2d741bf89e5a072d81eb1c321e448e80624a024f3db7e"
+          },
+          {
+            "sourceKey": "fl:statute:590.015",
+            "role": "definition",
+            "contentHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335"
+          },
+          {
+            "sourceKey": "fl:statute:590.14",
+            "role": "definition",
+            "contentHash": "70a681a1fde0e819c2bdb03a00a6aa05d11a6e7ceb66dc3e4592c2927a537d2a"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          }
+        ],
+        "conduct": "(1) \nIt is unlawful for any individual or group of individuals to build a warming fire, bonfire, or campfire and leave it unattended while visible flame, smoke, or emissions exist.",
+        "grading": "(2) \nAnyone who violates this section commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 12, ch. 17029, 1935; CGL 1936 Supp. 4151(10-qq); s. 8, ch. 99-292; s. 40, ch. 2002-295; s. 24, ch. 2013-226.",
+        "interpretation": "Scope 590.11(1). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-590-25-fire-riot",
+        "name": "Obstructing wildfire prevention, detection or suppression",
+        "code": "590.25",
+        "citation": "Fla. Stat. § 590.25",
+        "primarySourceKey": "fl:statute:590.25",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:590.25",
+          "target": "title",
+          "text": "Penalty for obstructing the prevention, detection, or suppression of wildfires",
+          "start": 0,
+          "end": 78,
+          "sourceHash": "08577f6a804181414459838364a5956f3340e13a69b825ed27b7f4590c1ded7d"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:590.25",
+            "target": "text",
+            "text": "Whoever interferes with, obstructs or commits any act aimed to obstruct the prevention, detection, or suppression of wildfires by the employees of the Florida Forest Service or any other person engaged in the prevention, detection, or suppression of a wildfire, or who damages or destroys any equipment being used for such purpose, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 91,
+            "end": 525,
+            "sourceHash": "08577f6a804181414459838364a5956f3340e13a69b825ed27b7f4590c1ded7d"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:590.25",
+            "target": "text",
+            "text": "Whoever interferes with, obstructs or commits any act aimed to obstruct the prevention, detection, or suppression of wildfires by the employees of the Florida Forest Service or any other person engaged in the prevention, detection, or suppression of a wildfire, or who damages or destroys any equipment being used for such purpose, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 91,
+            "end": 525,
+            "sourceHash": "08577f6a804181414459838364a5956f3340e13a69b825ed27b7f4590c1ded7d",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:590.25",
+            "role": "offense",
+            "contentHash": "08577f6a804181414459838364a5956f3340e13a69b825ed27b7f4590c1ded7d"
+          },
+          {
+            "sourceKey": "fl:statute:590.015",
+            "role": "definition",
+            "contentHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335"
+          },
+          {
+            "sourceKey": "fl:statute:590.14",
+            "role": "definition",
+            "contentHash": "70a681a1fde0e819c2bdb03a00a6aa05d11a6e7ceb66dc3e4592c2927a537d2a"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "Whoever interferes with, obstructs or commits any act aimed to obstruct the prevention, detection, or suppression of wildfires by the employees of the Florida Forest Service or any other person engaged in the prevention, detection, or suppression of a wildfire, or who damages or destroys any equipment being used for such purpose, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "Whoever interferes with, obstructs or commits any act aimed to obstruct the prevention, detection, or suppression of wildfires by the employees of the Florida Forest Service or any other person engaged in the prevention, detection, or suppression of a wildfire, or who damages or destroys any equipment being used for such purpose, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 590.25. Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-870-01-1-fire-riot",
+        "name": "Affray",
+        "code": "870.01(1)",
+        "citation": "Fla. Stat. § 870.01(1)",
+        "primarySourceKey": "fl:statute:870.01:1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:870.01:1",
+          "target": "title",
+          "text": "Affrays and riots",
+          "start": 0,
+          "end": 17,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:870.01:1",
+            "target": "text",
+            "text": "(1) \nA person commits an affray if he or she engages, by mutual consent, in fighting with another person in a public place to the terror of the people. A person who commits an affray commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+            "start": 30,
+            "end": 307,
+            "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:870.01:1",
+            "target": "text",
+            "text": "(1) \nA person commits an affray if he or she engages, by mutual consent, in fighting with another person in a public place to the terror of the people. A person who commits an affray commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+            "start": 30,
+            "end": 307,
+            "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+            "category": "misdemeanor"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:870.01:1",
+            "role": "offense",
+            "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          },
+          {
+            "sourceKey": "fl:statute:870.01",
+            "role": "grading",
+            "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          }
+        ],
+        "conduct": "(1) \nA person commits an affray if he or she engages, by mutual consent, in fighting with another person in a public place to the terror of the people. A person who commits an affray commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "grading": "(1) \nA person commits an affray if he or she engages, by mutual consent, in fighting with another person in a public place to the terror of the people. A person who commits an affray commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "interpretation": "Scope 870.01(1). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-870-01-2-fire-riot",
+        "name": "Riot",
+        "code": "870.01(2)",
+        "citation": "Fla. Stat. § 870.01(2)",
+        "primarySourceKey": "fl:statute:870.01:2",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:870.01:2",
+          "target": "title",
+          "text": "Affrays and riots",
+          "start": 0,
+          "end": 17,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:870.01:2",
+            "target": "text",
+            "text": "(2) \nA person commits a riot if he or she willfully participates in a violent public disturbance involving an assembly of three or more persons, acting with a common intent to assist each other in violent and disorderly conduct, resulting in:\n(a) \nInjury to another person;\n\n(b) \nDamage to property; or\n\n(c) \nImminent danger of injury to another person or damage to property.\n\nA person who commits a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 309,
+            "end": 816,
+            "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:870.01:2",
+            "target": "text",
+            "text": "(2) \nA person commits a riot if he or she willfully participates in a violent public disturbance involving an assembly of three or more persons, acting with a common intent to assist each other in violent and disorderly conduct, resulting in:\n(a) \nInjury to another person;\n\n(b) \nDamage to property; or\n\n(c) \nImminent danger of injury to another person or damage to property.\n\nA person who commits a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 309,
+            "end": 816,
+            "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:870.01:2",
+            "role": "offense",
+            "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          },
+          {
+            "sourceKey": "fl:statute:870.01",
+            "role": "grading",
+            "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          },
+          {
+            "sourceKey": "fl:statute:903.046",
+            "role": "definition",
+            "contentHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(2) \nA person commits a riot if he or she willfully participates in a violent public disturbance involving an assembly of three or more persons, acting with a common intent to assist each other in violent and disorderly conduct, resulting in:\n(a) \nInjury to another person;\n\n(b) \nDamage to property; or\n\n(c) \nImminent danger of injury to another person or damage to property.\n\nA person who commits a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(2) \nA person commits a riot if he or she willfully participates in a violent public disturbance involving an assembly of three or more persons, acting with a common intent to assist each other in violent and disorderly conduct, resulting in:\n(a) \nInjury to another person;\n\n(b) \nDamage to property; or\n\n(c) \nImminent danger of injury to another person or damage to property.\n\nA person who commits a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 870.01(2). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-870-01-3-fire-riot",
+        "name": "Aggravated rioting",
+        "code": "870.01(3)",
+        "citation": "Fla. Stat. § 870.01(3)",
+        "primarySourceKey": "fl:statute:870.01:3",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:870.01:3",
+          "target": "title",
+          "text": "Affrays and riots",
+          "start": 0,
+          "end": 17,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:870.01:3",
+            "target": "text",
+            "text": "(3) \nA person commits aggravated rioting if, in the course of committing a riot, he or she:\n(a) \nParticipates with 25 or more other persons;\n\n(b) \nCauses great bodily harm to a person not participating in the riot;\n\n(c) \nCauses property damage in excess of $5,000;\n\n(d) \nDisplays, uses, threatens to use, or attempts to use a deadly weapon; or\n\n(e) \nBy force, or threat of force, endangers the safe movement of a vehicle traveling on a public street, highway, or road.\n\nA person who commits aggravated rioting commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 818,
+            "end": 1431,
+            "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:870.01:3",
+            "target": "text",
+            "text": "(3) \nA person commits aggravated rioting if, in the course of committing a riot, he or she:\n(a) \nParticipates with 25 or more other persons;\n\n(b) \nCauses great bodily harm to a person not participating in the riot;\n\n(c) \nCauses property damage in excess of $5,000;\n\n(d) \nDisplays, uses, threatens to use, or attempts to use a deadly weapon; or\n\n(e) \nBy force, or threat of force, endangers the safe movement of a vehicle traveling on a public street, highway, or road.\n\nA person who commits aggravated rioting commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 818,
+            "end": 1431,
+            "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:870.01:3",
+            "role": "offense",
+            "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          },
+          {
+            "sourceKey": "fl:statute:870.01",
+            "role": "grading",
+            "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          },
+          {
+            "sourceKey": "fl:statute:903.046",
+            "role": "definition",
+            "contentHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(3) \nA person commits aggravated rioting if, in the course of committing a riot, he or she:\n(a) \nParticipates with 25 or more other persons;\n\n(b) \nCauses great bodily harm to a person not participating in the riot;\n\n(c) \nCauses property damage in excess of $5,000;\n\n(d) \nDisplays, uses, threatens to use, or attempts to use a deadly weapon; or\n\n(e) \nBy force, or threat of force, endangers the safe movement of a vehicle traveling on a public street, highway, or road.\n\nA person who commits aggravated rioting commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(3) \nA person commits aggravated rioting if, in the course of committing a riot, he or she:\n(a) \nParticipates with 25 or more other persons;\n\n(b) \nCauses great bodily harm to a person not participating in the riot;\n\n(c) \nCauses property damage in excess of $5,000;\n\n(d) \nDisplays, uses, threatens to use, or attempts to use a deadly weapon; or\n\n(e) \nBy force, or threat of force, endangers the safe movement of a vehicle traveling on a public street, highway, or road.\n\nA person who commits aggravated rioting commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 870.01(3). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-870-01-4-fire-riot",
+        "name": "Inciting a riot",
+        "code": "870.01(4)",
+        "citation": "Fla. Stat. § 870.01(4)",
+        "primarySourceKey": "fl:statute:870.01:4",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:870.01:4",
+          "target": "title",
+          "text": "Affrays and riots",
+          "start": 0,
+          "end": 17,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:870.01:4",
+            "target": "text",
+            "text": "(4) \nA person commits inciting a riot if he or she willfully incites another person to participate in a riot, resulting in a riot or imminent danger of a riot. A person who commits inciting a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 1433,
+            "end": 1732,
+            "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:870.01:4",
+            "target": "text",
+            "text": "(4) \nA person commits inciting a riot if he or she willfully incites another person to participate in a riot, resulting in a riot or imminent danger of a riot. A person who commits inciting a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 1433,
+            "end": 1732,
+            "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:870.01:4",
+            "role": "offense",
+            "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          },
+          {
+            "sourceKey": "fl:statute:870.01",
+            "role": "grading",
+            "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          },
+          {
+            "sourceKey": "fl:statute:903.046",
+            "role": "definition",
+            "contentHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(4) \nA person commits inciting a riot if he or she willfully incites another person to participate in a riot, resulting in a riot or imminent danger of a riot. A person who commits inciting a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(4) \nA person commits inciting a riot if he or she willfully incites another person to participate in a riot, resulting in a riot or imminent danger of a riot. A person who commits inciting a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 870.01(4). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-870-01-5-fire-riot",
+        "name": "Aggravated inciting a riot",
+        "code": "870.01(5)",
+        "citation": "Fla. Stat. § 870.01(5)",
+        "primarySourceKey": "fl:statute:870.01:5",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:870.01:5",
+          "target": "title",
+          "text": "Affrays and riots",
+          "start": 0,
+          "end": 17,
+          "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:870.01:5",
+            "target": "text",
+            "text": "(5) \nA person commits aggravated inciting a riot if he or she:\n(a) \nIncites a riot resulting in great bodily harm to another person not participating in the riot;\n\n(b) \nIncites a riot resulting in property damage in excess of $5,000; or\n\n(c) \nSupplies a deadly weapon to another person or teaches another person to prepare a deadly weapon with intent that the deadly weapon be used in a riot for an unlawful purpose.\n\nA person who commits aggravated inciting a riot commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 1734,
+            "end": 2303,
+            "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:870.01:5",
+            "target": "text",
+            "text": "(5) \nA person commits aggravated inciting a riot if he or she:\n(a) \nIncites a riot resulting in great bodily harm to another person not participating in the riot;\n\n(b) \nIncites a riot resulting in property damage in excess of $5,000; or\n\n(c) \nSupplies a deadly weapon to another person or teaches another person to prepare a deadly weapon with intent that the deadly weapon be used in a riot for an unlawful purpose.\n\nA person who commits aggravated inciting a riot commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 1734,
+            "end": 2303,
+            "sourceHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:870.01:5",
+            "role": "offense",
+            "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          },
+          {
+            "sourceKey": "fl:statute:870.01",
+            "role": "grading",
+            "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+          },
+          {
+            "sourceKey": "fl:statute:903.046",
+            "role": "definition",
+            "contentHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(5) \nA person commits aggravated inciting a riot if he or she:\n(a) \nIncites a riot resulting in great bodily harm to another person not participating in the riot;\n\n(b) \nIncites a riot resulting in property damage in excess of $5,000; or\n\n(c) \nSupplies a deadly weapon to another person or teaches another person to prepare a deadly weapon with intent that the deadly weapon be used in a riot for an unlawful purpose.\n\nA person who commits aggravated inciting a riot commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(5) \nA person commits aggravated inciting a riot if he or she:\n(a) \nIncites a riot resulting in great bodily harm to another person not participating in the riot;\n\n(b) \nIncites a riot resulting in property damage in excess of $5,000; or\n\n(c) \nSupplies a deadly weapon to another person or teaches another person to prepare a deadly weapon with intent that the deadly weapon be used in a riot for an unlawful purpose.\n\nA person who commits aggravated inciting a riot commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 870.01(5). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      }
+    ],
+    "sourceEvidence": {
+      "fl:statute:590.28:1": {
+        "sourceKey": "fl:statute:590.28:1",
+        "section": "590.28",
+        "subdivision": "(1)",
+        "citation": "Fla. Stat. § 590.28(1)",
+        "title": "Intentional or reckless burning of lands",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.28.html",
+        "text": "590.28 \nIntentional or reckless burning of lands.\n—\n\n(1) \nWhoever intentionally burns, sets fire to, or causes to be burned or causes any fire to be set to, any wild land or vegetative land clearing debris not owned by, or in the lawful possession of, the person setting such fire or burning such lands or causing such fire to be set or lands to be burned without complying with s. 590.125, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nWhoever recklessly burns, sets fire to, or causes to be burned any wild lands not owned by, or in the lawful possession of, the person setting the fire or burning the lands or causing the fire to be set or lands to be burned, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 1, ch. 29919, 1955; s. 15, ch. 99-292; s. 33, ch. 2000-308.",
+        "contentHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274",
+        "retrievedAt": "2026-11-17T05:59:51.480Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(1)",
+            "start": 53,
+            "end": 495
+          }
+        ]
+      },
+      "fl:statute:590.28": {
+        "sourceKey": "fl:statute:590.28",
+        "section": "590.28",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 590.28",
+        "title": "Intentional or reckless burning of lands",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.28.html",
+        "text": "590.28 \nIntentional or reckless burning of lands.\n—\n\n(1) \nWhoever intentionally burns, sets fire to, or causes to be burned or causes any fire to be set to, any wild land or vegetative land clearing debris not owned by, or in the lawful possession of, the person setting such fire or burning such lands or causing such fire to be set or lands to be burned without complying with s. 590.125, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nWhoever recklessly burns, sets fire to, or causes to be burned any wild lands not owned by, or in the lawful possession of, the person setting the fire or burning the lands or causing the fire to be set or lands to be burned, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 1, ch. 29919, 1955; s. 15, ch. 99-292; s. 33, ch. 2000-308.",
+        "contentHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274",
+        "retrievedAt": "2026-11-17T05:59:51.480Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:590.015": {
+        "sourceKey": "fl:statute:590.015",
+        "section": "590.015",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 590.015",
+        "title": "Definitions",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.015.html",
+        "text": "590.015 \nDefinitions.\n—\n\nAs used in this chapter, the term:\n(1) \n“Broadcast burning” means the burning of agricultural or natural vegetation by allowing fire to move across a predetermined area of land. The term does not include the burning of vegetative debris that is piled or stacked.\n\n(2) \n“Fire management services” means presuppression fireline plowing, prescribed burning assistance, contract prescribed burning, prescribed and wildfire management training, and other activities associated with prevention, detection, and suppression of wildfires.\n\n(3) \n“Fuel reduction” means the application of techniques that reduce vegetative fuels, and may include prescribed burning, manual and mechanical clearing, and the use of herbicides.\n\n(4) \n“Open burning” means any outdoor fire or open combustion of material that produces visible emissions.\n\n(5) \n“Wildfire” means any vegetative fire that threatens to destroy life, property, or natural resources.\n\n(6) \n“Wild land” means any public or private managed or unmanaged forest, urban/interface, pasture or range land, recreation lands, or any other land at risk of wildfire.\n\nHistory.\n—\ns. 2, ch. 99-292; s. 31, ch. 2000-308; ss. 54, 71, ch. 2011-206; s. 57, ch. 2012-7.",
+        "contentHash": "1ef5d0446faaeb11b67af0dd6674c9623ea54d5805cc293988867f02c63db335",
+        "retrievedAt": "2026-11-17T05:59:53.524Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:590.14": {
+        "sourceKey": "fl:statute:590.14",
+        "section": "590.14",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 590.14",
+        "title": "Notice of violation; penalties; legislative intent",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.14.html",
+        "text": "590.14 \nNotice of violation; penalties; legislative intent.\n—\n\n(1) \nIf a Florida Forest Service employee determines that a person has violated chapter 589, this chapter, or any rule adopted by the Florida Forest Service to administer provisions of law conferring duties upon the Florida Forest Service, the Florida Forest Service employee may issue a notice of violation indicating the statute or rule violated. This notice will be filed with the Florida Forest Service and a copy forwarded to the appropriate law enforcement entity for further action if necessary.\n\n(2) \nIn addition to any penalties provided by law, any person who causes a wildfire or permits any authorized fire to escape the boundaries of the authorization or to burn past the time of the authorization is liable for the payment of all reasonable costs and expenses incurred in suppressing the fire or $150, whichever is greater. All costs and expenses incurred by the Florida Forest Service shall be payable to the Florida Forest Service. When such costs and expenses are not paid within 30 days after demand, the Florida Forest Service may take proper legal proceedings for the collection of the costs and expenses. Those costs incurred by an agency acting at the direction of the Florida Forest Service are recoverable by that agency.\n\n(3) \nThe department may also impose an administrative fine in the Class I category pursuant to s. 570.971 for each violation of chapter 589 or this chapter or violation of any rule adopted by the Florida Forest Service to administer law conferring duties upon the Florida Forest Service. The fine shall be based upon the degree of damage, the prior violation record of the person, and whether the person knowingly provided false information to obtain an authorization. The fines shall be deposited in the Incidental Trust Fund of the Florida Forest Service.\n\n(4) \nA person commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083, if the person:\n(a) \nFails to comply with any rule or order adopted by the Florida Forest Service to administer provisions of law conferring duties upon it; or\n\n(b) \nKnowingly makes any false statement or representation in any application, record, plan, or other document required by this chapter or any rules adopted under this chapter.\n\n(5) \nIt is the intent of the Legislature that a penalty imposed by a court under subsection (4) be of a severity that ensures immediate and continued compliance with this section.\n\n(6) \nThe penalties provided in this section shall extend to both the actual violator and the person or persons, firm, or corporation causing, directing, or permitting the violation.\n\nHistory.\n—\ns. 15, ch. 17029, 1935; CGL 1936 Supp. 7404(2); s. 1, ch. 20898, 1941; s. 2, ch. 26915, 1951; s. 615, ch. 71-136; s. 82, ch. 93-169; s. 11, ch. 99-292; s. 32, ch. 2000-308; s. 49, ch. 2002-295; s. 57, ch. 2011-206; s. 62, ch. 2012-7; s. 151, ch. 2014-150.",
+        "contentHash": "70a681a1fde0e819c2bdb03a00a6aa05d11a6e7ceb66dc3e4592c2927a537d2a",
+        "retrievedAt": "2026-11-17T06:00:23.994Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:590.125": {
+        "sourceKey": "fl:statute:590.125",
+        "section": "590.125",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 590.125",
+        "title": "Open burning authorized by the Florida Forest Service",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.125.html",
+        "text": "590.125 \nOpen burning authorized by the Florida Forest Service.\n—\n\n(1) \nDEFINITIONS.—\nAs used in this section, the term:\n(a) \n“Certified pile burner” means an individual who successfully completes the pile burning certification program of the Florida Forest Service and possesses a valid pile burner certification number.\n\n(b) \n“Certified pile burning” means a pile burn conducted in accordance with a written pile burning plan by a certified pile burner.\n\n(c) \n“Certified prescribed burn manager” means an individual who successfully completes the certified prescribed burning program of the Florida Forest Service and possesses a valid certification number.\n\n(d) \n“Certified prescribed burning” means prescribed burning in accordance with a written prescription conducted by a certified prescribed burn manager.\n\n(e) \n“Contained” means that fire and smoldering exist entirely within established or natural firebreaks.\n\n(f) \n“Completed” means that for:\n1. \nBroadcast burning, no continued lateral movement of fire across the authorized area into entirely unburned fuels within the authorized area.\n\n2. \nCertified pile burning or pile burning, no visible flames exist.\n\n3. \nCertified pile burning or pile burning in an area designated as smoke sensitive by the Florida Forest Service, no visible flames, smoke, or emissions exist.\n\n(g) \n“Gross negligence” means conduct so reckless or wanting in care that it constitutes a conscious disregard or indifference to the life, safety, or rights of persons exposed to such conduct.\n\n(h) \n“Pile burning” means the burning of silvicultural, agricultural, land-clearing, or tree-cutting debris originating onsite, which is stacked together in a round or linear fashion, including, but not limited to, a windrow. Pile burning authorized by the Florida Forest Service is a temporary procedure, which operates on the same site for 6 months or less.\n\n(i) \n“Pile burn plan” means a written plan establishing the method of conducting a certified pile burn.\n\n(j) \n“Prescribed burning” means the application of fire by broadcast burning for vegetative fuels under specified environmental conditions, while following appropriate measures to guard against the spread of fire beyond the predetermined area to accomplish the planned fire or land management objectives.\n\n(k) \n“Prescription” means a written plan establishing the conditions and methods for conducting a certified prescribed burn.\n\n(l) \n“Smoldering” means the continued consumption of fuels, which may emit flames and smoke, after a fire is contained.\n\n(m) \n“Yard trash” means vegetative matter resulting from landscaping and yard maintenance operations and other such routine property cleanup activities. The term includes materials such as leaves, shrub trimmings, grass clippings, brush, and palm fronds.\n\n(2) \nNONCERTIFIED BURNING.—\n\n(a) \nPersons may be authorized to broadcast burn or pile burn pursuant to this subsection if:\n1. \nThere is specific consent of the landowner or his or her designee;\n\n2. \nAuthorization has been obtained from the Florida Forest Service or its designated agent before starting the burn;\n\n3. \nThere are adequate firebreaks at the burn site and sufficient personnel and firefighting equipment for the containment of the fire;\n\n4. \nThe fire remains within the boundary of the authorized area;\n\n5. \nThe person named responsible in the burn authorization or a designee is present at the burn site until the fire is completed;\n\n6. \nThe Florida Forest Service does not cancel the authorization; and\n\n7. \nThe Florida Forest Service determines that air quality and fire danger are favorable for safe burning.\n\n(b) \nA new authorization is not required for smoldering that occurs within the authorized burn area unless new ignitions are conducted by the person named responsible in the burn authorization or a designee.\n\n(c) \nMonitoring the smoldering activity of a burn does not require an additional authorization even if flames begin to spread within the authorized burn area due to ongoing smoldering.\n\n(d) \nA person who broadcast burns or pile burns in a manner that violates this subsection commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(3) \nCERTIFIED PRESCRIBED BURNING; LEGISLATIVE FINDINGS AND PURPOSE.—\n\n(a) \nThe application of prescribed burning is a land management tool that benefits the safety of the public, the environment, and the economy of the state. The Legislature finds that:\n1. \nPrescribed burning reduces vegetative fuels within wild land areas. Reduction of the fuel load reduces the risk and severity of wildfire, thereby reducing the threat of loss of life and property, particularly in urban areas.\n\n2. \nMost of Florida’s natural communities require periodic fire for maintenance of their ecological integrity. Prescribed burning is essential to the perpetuation, restoration, and management of many plant and animal communities. Significant loss of the state’s biological diversity will occur if fire is excluded from fire-dependent systems.\n\n3. \nForestland and rangeland constitute significant economic, biological, and aesthetic resources of statewide importance. Prescribed burning on forestland prepares sites for reforestation, removes undesirable competing vegetation, expedites nutrient cycling, and controls or eliminates certain forest pathogens. On rangeland, prescribed burning improves the quality and quantity of herbaceous vegetation necessary for livestock production.\n\n4. \nThe state purchased hundreds of thousands of acres of land for parks, preserves, wildlife management areas, forests, and other public purposes. The use of prescribed burning for management of public lands is essential to maintain the specific resource values for which these lands were acquired.\n\n5. \nA public education program is necessary to make citizens and visitors aware of the public safety, resource, and economic benefits of prescribed burning.\n\n6. \nProper training in the use of prescribed burning is necessary to ensure maximum benefits and protection for the public.\n\n7. \nAs Florida’s population continues to grow, pressures from liability issues and nuisance complaints inhibit the use of prescribed burning. Therefore, the Florida Forest Service is urged to maximize the opportunities for prescribed burning conducted during its daytime and nighttime authorization process.\n\n(b) \nCertified prescribed burning pertains only to broadcast burning for purposes of silviculture, wildland fire hazard reduction, wildlife management, ecological maintenance and restoration, and agriculture. It must be conducted in accordance with this subsection and:\n1. \nMay be accomplished only when a certified prescribed burn manager is present on site with a copy of the prescription and directly supervises the certified prescribed burn until the burn is completed, after which the certified prescribed burn manager is not required to be present.\n\n2. \nRequires that a written prescription be prepared before receiving authorization to burn from the Florida Forest Service.\na. \nA new prescription or authorization is not required for smoldering that occurs within the authorized burn area unless new ignitions are conducted by the certified prescribed burn manager.\n\nb. \nMonitoring the smoldering activity of a certified prescribed burn does not require a prescription or an additional authorization even if flames begin to spread within the authorized burn area due to ongoing smoldering.\n\n3. \nRequires that the specific consent of the landowner or his or her designee be obtained before requesting an authorization.\n\n4. \nRequires that an authorization to burn be obtained from the Florida Forest Service before igniting the burn.\n\n5. \nRequires that there be adequate firebreaks at the burn site and sufficient personnel and firefighting equipment to contain the fire within the authorized burn area.\na. \nFire spreading outside the authorized burn area on the day of the certified prescribed burn ignition does not constitute conclusive proof of inadequate firebreaks, insufficient personnel, or a lack of firefighting equipment.\n\nb. \nIf the certified prescribed burn is contained within the authorized burn area during the authorized period, a strong rebuttable presumption shall exist that adequate firebreaks, sufficient personnel, and sufficient firefighting equipment were present.\n\nc. \nContinued smoldering of a certified prescribed burn resulting in a subsequent wildfire does not by itself constitute evidence of gross negligence under this section.\n\n6. \nIs considered to be in the public interest and does not constitute a public or private nuisance when conducted under applicable state air pollution statutes and rules.\n\n7. \nIs considered to be a property right of the property owner if vegetative fuels are burned as required in this subsection.\n\n(c) \nA property owner or leaseholder or his or her agent, contractor, or legally authorized designee is not liable pursuant to s. 590.13 for damage or injury caused by the fire, including the reignition of a smoldering, previously contained burn, or resulting smoke or considered to be in violation of subsection (2) for burns conducted in accordance with this subsection, unless gross negligence is proven. The Florida Forest Service is not liable for burns for which it issues authorizations.\n\n(d) \nAny certified burner who violates this section commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(e) \nThe Florida Forest Service shall adopt rules for the use of prescribed burning and for certifying and decertifying certified prescribed burn managers based on their past experience, training, and record of compliance with this section.\n\n(4) \nCERTIFIED PILE BURNING.—\n\n(a) \nCertified pile burning pertains to the disposal of piled, naturally occurring debris from agricultural, silvicultural, land-clearing, or tree-cutting debris originating onsite. Certified pile burning must be conducted in accordance with the following:\n1. \nA certified pile burner must ensure, before ignition, that the piles are properly placed and that the content of the piles is conducive to efficient burning.\n\n2. \nA certified pile burner must ensure that the authorized burn is completed no later than 1 hour after sunset. If the burn is conducted in an area designated by the Florida Forest Service as smoke sensitive, a certified pile burner must ensure that the authorized burn is completed at least 1 hour before sunset.\n\n3. \nA written pile burning plan must be prepared before receiving authorization from the Florida Forest Service to burn and must be onsite and available for inspection by a department representative.\n\n4. \nThe specific consent of the landowner or his or her agent must be obtained before requesting authorization to burn.\n\n5. \nAn authorization to burn must be obtained from the Florida Forest Service or its designated agent before igniting the burn.\n\n6. \nThere must be adequate firebreaks and sufficient personnel and firefighting equipment at the burn site to contain the burn to the piles authorized.\n\n(b) \nIf a burn is conducted in accordance with paragraph (a), the property owner and his or her agent are not liable under s. 590.13 for damage or injury caused by the fire or resulting smoke, and are not in violation of subsection (2), unless gross negligence is proven.\n\n(c) \nA certified pile burner who violates this subsection commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(d) \nThe Florida Forest Service shall adopt rules regulating certified pile burning. The rules shall include procedures and criteria for certifying and decertifying certified pile burn managers based on past experience, training, and record of compliance with this section.\n\n(5) \nWILDFIRE HAZARD REDUCTION TREATMENT BY THE FLORIDA FOREST SERVICE.—\nThe Florida Forest Service may conduct fuel reduction initiatives, including, but not limited to, burning and mechanical and chemical treatment, on any area of wild land within the state which is reasonably determined to be in danger of wildfire in accordance with the following procedures:\n(a) \nDescribe the areas that will receive fuels treatment to the affected local governmental entity.\n\n(b) \nPublish a treatment notice, including a description of the area to be treated, in a conspicuous manner in at least one newspaper of general circulation in the area of the treatment not less than 10 days before the treatment.\n\n(c) \nPrepare and send a notice to all landowners in each area designated by the Florida Forest Service as a wildfire hazard area. The notice must describe particularly the area to be treated and the tentative date or dates of the treatment and must list the reasons for and the expected benefits from the wildfire hazard reduction.\n\n(d) \nConsider any landowner objections to the fuels treatment of his or her property. The landowner may apply to the director of the Florida Forest Service for a review of alternative methods of fuel reduction on the property. If the director or his or her designee does not resolve the landowner objection, the director shall convene a panel made up of the local forestry unit manager, the fire chief of the jurisdiction, and the affected county or city manager, or any of their designees. If the panel’s recommendation is not acceptable to the landowner, the landowner may request further consideration by the Commissioner of Agriculture or his or her designee and shall thereafter be entitled to an administrative hearing pursuant to the provisions of chapter 120.\n\n(6) \nFLORIDA FOREST SERVICE APPROVAL OF LOCAL GOVERNMENT OPEN BURNING AUTHORIZATION PROGRAMS.—\n\n(a) \nA county or municipality may exercise the authority of the Florida Forest Service, if delegated by the Florida Forest Service under this subsection, to issue authorizations for the burning of yard trash or debris from land-clearing operations. A county’s or municipality’s existing or proposed open burning authorization program must:\n1. \nBe approved by the Florida Forest Service. The Florida Forest Service may not approve a program if it fails to meet the requirements of subsections (2) and (4) and any rules adopted under those subsections.\n\n2. \nProvide by ordinance or local law the requirements for obtaining and performing a burn authorization that complies with subsections (2) and (4) and any rules adopted under those subsections.\n\n3. \nProvide for the enforcement of the program’s requirements.\n\n4. \nProvide financial, personnel, and other resources needed to carry out the program.\n\n(b) \nIf the Florida Forest Service determines that a county’s or municipality’s open burning authorization program does not comply with subsections (2) and (4) and any rules adopted under those subsections, the Florida Forest Service shall require the county or municipality to take necessary corrective actions within 90 days after receiving notice from the Florida Forest Service of its determination.\n1. \nIf the county or municipality fails to take the necessary corrective actions within the required period, the Florida Forest Service shall resume administration of the open burning authorization program in the county or municipality and the county or municipality shall cease administration of its program.\n\n2. \nEach county and municipality administering an open burning authorization program must cooperate with and assist the Florida Forest Service in carrying out the powers, duties, and functions of the Florida Forest Service.\n\n3. \nA person who violates the requirements of a county’s or municipality’s open burning authorization program, as provided by ordinance or local law enacted pursuant to this subsection, commits a violation of this chapter, punishable as provided in s. 590.14.\n\n(7) \nDUTIES OF AGENCIES.—\nThe Department of Education shall incorporate, where feasible and appropriate, the issues of fuels treatment, including prescribed burning, into its educational materials.\n\nHistory.\n—\ns. 9, ch. 99-292; s. 41, ch. 2002-295; s. 21, ch. 2005-210; s. 56, ch. 2011-206; s. 61, ch. 2012-7; s. 25, ch. 2013-226; s. 150, ch. 2014-150.",
+        "contentHash": "929587e3be1b8c7dbd5fc0d6e8b0982d17a4e99d485afbf733bf14d4f915d1ce",
+        "retrievedAt": "2026-11-17T06:00:21.315Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:775.082": {
+        "sourceKey": "fl:statute:775.082",
+        "section": "775.082",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 775.082",
+        "title": "Penalties; applicability of sentencing structures; mandatory minimum sentences for certain reoffenders previously released from prison",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html",
+        "text": "775.082 \nPenalties; applicability of sentencing structures; mandatory minimum sentences for certain reoffenders previously released from prison.\n—\n\n(1)(a) \nExcept as provided in paragraph (b), a person who has been convicted of a capital felony shall be punished by death if the proceeding held to determine sentence according to the procedure set forth in s. 921.141 results in a determination that such person shall be punished by death, otherwise such person shall be punished by life imprisonment and shall be ineligible for parole.\n\n(b)1. \nA person who actually killed, intended to kill, or attempted to kill the victim and who is convicted under s. 782.04 of a capital felony, or an offense that was reclassified as a capital felony, which was committed before the person attained 18 years of age shall be punished by a term of imprisonment for life if, after a sentencing hearing conducted by the court in accordance with s. 921.1401, the court finds that life imprisonment is an appropriate sentence. If the court finds that life imprisonment is not an appropriate sentence, such person shall be punished by a term of imprisonment of at least 40 years. A person sentenced pursuant to this subparagraph is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(a).\n\n2. \nA person who did not actually kill, intend to kill, or attempt to kill the victim and who is convicted under s. 782.04 of a capital felony, or an offense that was reclassified as a capital felony, which was committed before the person attained 18 years of age may be punished by a term of imprisonment for life or by a term of years equal to life if, after a sentencing hearing conducted by the court in accordance with s. 921.1401, the court finds that life imprisonment is an appropriate sentence. A person who is sentenced to a term of imprisonment of more than 15 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(c).\n\n3. \nThe court shall make a written finding as to whether a person is eligible for a sentence review hearing under s. 921.1402(2)(a) or (c). Such a finding shall be based upon whether the person actually killed, intended to kill, or attempted to kill the victim. The court may find that multiple defendants killed, intended to kill, or attempted to kill the victim.\n\n(2) \nIn the event the death penalty in a capital felony is held to be unconstitutional by the Florida Supreme Court or the United States Supreme Court, the court having jurisdiction over a person previously sentenced to death for a capital felony shall cause such person to be brought before the court, and the court shall sentence such person to life imprisonment as provided in subsection (1). No sentence of death shall be reduced as a result of a determination that a method of execution is held to be unconstitutional under the State Constitution or the Constitution of the United States.\n\n(3) \nA person who has been convicted of any other designated felony may be punished as follows:\n(a)1. \nFor a life felony committed before October 1, 1983, by a term of imprisonment for life or for a term of at least 30 years.\n\n2. \nFor a life felony committed on or after October 1, 1983, by a term of imprisonment for life or by a term of imprisonment not exceeding 40 years.\n\n3. \nExcept as provided in subparagraph 4., for a life felony committed on or after July 1, 1995, by a term of imprisonment for life or by imprisonment for a term of years not exceeding life imprisonment.\n\n4.a. \nExcept as provided in sub-subparagraph b., for a life felony committed on or after September 1, 2005, which is a violation of s. 800.04(5)(b), by:\n(I) \nA term of imprisonment for life; or\n\n(II) \nA split sentence that is a term of at least 25 years’ imprisonment and not exceeding life imprisonment, followed by probation or community control for the remainder of the person’s natural life, as provided in s. 948.012(4).\n\nb. \nFor a life felony committed on or after July 1, 2008, which is a person’s second or subsequent violation of s. 800.04(5)(b), by a term of imprisonment for life.\n\n5. \nNotwithstanding subparagraphs 1.-4., a person who is convicted under s. 782.04 of an offense that was reclassified as a life felony which was committed before the person attained 18 years of age may be punished by a term of imprisonment for life or by a term of years equal to life imprisonment if the judge conducts a sentencing hearing in accordance with s. 921.1401 and finds that life imprisonment or a term of years equal to life imprisonment is an appropriate sentence.\na. \nA person who actually killed, intended to kill, or attempted to kill the victim and is sentenced to a term of imprisonment of more than 25 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(b).\n\nb. \nA person who did not actually kill, intend to kill, or attempt to kill the victim and is sentenced to a term of imprisonment of more than 15 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(c).\n\nc. \nThe court shall make a written finding as to whether a person is eligible for a sentence review hearing under s. 921.1402(2)(b) or (c). Such a finding shall be based upon whether the person actually killed, intended to kill, or attempted to kill the victim. The court may find that multiple defendants killed, intended to kill, or attempted to kill the victim.\n\n6. \nFor a life felony committed on or after October 1, 2014, which is a violation of s. 787.06(3)(g), by a term of imprisonment for life.\n\n(b)1. \nFor a felony of the first degree, by a term of imprisonment not exceeding 30 years or, when specifically provided by statute, by imprisonment for a term of years not exceeding life imprisonment.\n\n2. \nNotwithstanding subparagraph 1., a person convicted under s. 782.04 of a first degree felony punishable by a term of years not exceeding life imprisonment, or an offense that was reclassified as a first degree felony punishable by a term of years not exceeding life, which was committed before the person attained 18 years of age may be punished by a term of years equal to life imprisonment if the judge conducts a sentencing hearing in accordance with s. 921.1401 and finds that a term of years equal to life imprisonment is an appropriate sentence.\na. \nA person who actually killed, intended to kill, or attempted to kill the victim and is sentenced to a term of imprisonment of more than 25 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(b).\n\nb. \nA person who did not actually kill, intend to kill, or attempt to kill the victim and is sentenced to a term of imprisonment of more than 15 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(c).\n\nc. \nThe court shall make a written finding as to whether a person is eligible for a sentence review hearing under s. 921.1402(2)(b) or (c). Such a finding shall be based upon whether the person actually killed, intended to kill, or attempted to kill the victim. The court may find that multiple defendants killed, intended to kill, or attempted to kill the victim.\n\n(c) \nNotwithstanding paragraphs (a) and (b), a person convicted of an offense that is not included in s. 782.04 but that is an offense that is a life felony or is punishable by a term of imprisonment for life or by a term of years not exceeding life imprisonment, or an offense that was reclassified as a life felony or an offense punishable by a term of imprisonment for life or by a term of years not exceeding life imprisonment, which was committed before the person attained 18 years of age may be punished by a term of imprisonment for life or a term of years equal to life imprisonment if the judge conducts a sentencing hearing in accordance with s. 921.1401 and finds that life imprisonment or a term of years equal to life imprisonment is an appropriate sentence. A person who is sentenced to a term of imprisonment of more than 20 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(d).\n\n(d) \nFor a felony of the second degree, by a term of imprisonment not exceeding 15 years.\n\n(e) \nFor a felony of the third degree, by a term of imprisonment not exceeding 5 years.\n\n(4) \nA person who has been convicted of a designated misdemeanor may be sentenced as follows:\n(a) \nFor a misdemeanor of the first degree, by a definite term of imprisonment not exceeding 1 year;\n\n(b) \nFor a misdemeanor of the second degree, by a definite term of imprisonment not exceeding 60 days.\n\n(5) \nAny person who has been convicted of a noncriminal violation may not be sentenced to a term of imprisonment nor to any other punishment more severe than a fine, forfeiture, or other civil penalty, except as provided in chapter 316 or by ordinance of any city or county.\n\n(6) \nNothing in this section shall be construed to alter the operation of any statute of this state authorizing a trial court, in its discretion, to impose a sentence of imprisonment for an indeterminate period within minimum and maximum limits as provided by law, except as provided in subsection (1).\n\n(7) \nThis section does not deprive the court of any authority conferred by law to decree a forfeiture of property, suspend or cancel a license, remove a person from office, or impose any other civil penalty. Such a judgment or order may be included in the sentence.\n\n(8)(a) \nThe sentencing guidelines that were effective October 1, 1983, and any revisions thereto, apply to all felonies, except capital felonies, committed on or after October 1, 1983, and before January 1, 1994, and to all felonies, except capital felonies and life felonies, committed before October 1, 1983, when the defendant affirmatively selects to be sentenced pursuant to such provisions.\n\n(b) \nThe 1994 sentencing guidelines, that were effective January 1, 1994, and any revisions thereto, apply to all felonies, except capital felonies, committed on or after January 1, 1994, and before October 1, 1995.\n\n(c) \nThe 1995 sentencing guidelines that were effective October 1, 1995, and any revisions thereto, apply to all felonies, except capital felonies, committed on or after October 1, 1995, and before October 1, 1998.\n\n(d) \nThe Criminal Punishment Code applies to all felonies, except capital felonies, committed on or after October 1, 1998. Any revision to the Criminal Punishment Code applies to sentencing for all felonies, except capital felonies, committed on or after the effective date of the revision.\n\n(e) \nFelonies, except capital felonies, with continuing dates of enterprise shall be sentenced under the sentencing guidelines or the Criminal Punishment Code in effect on the beginning date of the criminal activity.\n\n(9)(a)1. \n“Prison releasee reoffender” means any defendant who commits, or attempts to commit:\na. \nTreason;\n\nb. \nMurder;\n\nc. \nManslaughter;\n\nd. \nSexual battery;\n\ne. \nCarjacking;\n\nf. \nHome-invasion robbery;\n\ng. \nRobbery;\n\nh. \nArson;\n\ni. \nKidnapping;\n\nj. \nAggravated assault with a deadly weapon;\n\nk. \nAggravated battery;\n\nl. \nAggravated stalking;\n\nm. \nAircraft piracy;\n\nn. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\no. \nAny felony that involves the use or threat of physical force or violence against an individual;\n\np. \nArmed burglary;\n\nq. \nBurglary of a dwelling or burglary of an occupied structure;\n\nr. \nAny felony violation of s. 790.07, s. 800.04, s. 827.03, s. 827.071, or s. 847.0135(5); or\n\ns. \nBattery on a law enforcement officer which results in bodily injury;\n\nwithin 3 years after being released from a state correctional facility operated by the Department of Corrections or a private vendor, a county detention facility following incarceration for an offense for which the sentence pronounced was a prison sentence, or a correctional institution of another state, the District of Columbia, the United States, any possession or territory of the United States, or any foreign jurisdiction, following incarceration for an offense for which the sentence is punishable by more than 1 year in this state.\n\n2. \n“Prison releasee reoffender” also means any defendant who commits or attempts to commit any offense listed in sub-subparagraphs 1.a.-s. while the defendant was serving a prison sentence or on escape status from a state correctional facility operated by the Department of Corrections or a private vendor or while the defendant was on escape status from a correctional institution of another state, the District of Columbia, the United States, any possession or territory of the United States, or any foreign jurisdiction, following incarceration for an offense for which the sentence is punishable by more than 1 year in this state.\n\n3. \nIf the state attorney determines that a defendant is a prison releasee reoffender as defined in subparagraph 1., the state attorney may seek to have the court sentence the defendant as a prison releasee reoffender. Upon proof from the state attorney that establishes by a preponderance of the evidence that a defendant is a prison releasee reoffender as defined in this section, such defendant is not eligible for sentencing under the sentencing guidelines and must be sentenced as follows:\na. \nFor a felony punishable by life, by a term of imprisonment for life;\n\nb. \nFor a felony of the first degree, by a term of imprisonment of 30 years;\n\nc. \nFor a felony of the second degree, by a term of imprisonment of 15 years; and\n\nd. \nFor a felony of the third degree, by a term of imprisonment of 5 years.\n\n(b) \nA person sentenced under paragraph (a) shall be released only by expiration of sentence and shall not be eligible for parole, control release, or any form of early release. Any person sentenced under paragraph (a) must serve 100 percent of the court-imposed sentence.\n\n(c) \nNothing in this subsection shall prevent a court from imposing a greater sentence of incarceration as authorized by law, pursuant to s. 775.084 or any other provision of law.\n\n(d)1. \nIt is the intent of the Legislature that offenders previously released from prison or a county detention facility following incarceration for an offense for which the sentence pronounced was a prison sentence who meet the criteria in paragraph (a) be punished to the fullest extent of the law and as provided in this subsection, unless the state attorney determines that extenuating circumstances exist which preclude the just prosecution of the offender, including whether the victim recommends that the offender not be sentenced as provided in this subsection.\n\n2. \nFor every case in which the offender meets the criteria in paragraph (a) and does not receive the mandatory minimum prison sentence, the state attorney must explain the sentencing deviation in writing and place such explanation in the case file maintained by the state attorney.\n\n(10) \nIf a defendant is sentenced for an offense committed on or after July 1, 2009, which is a third degree felony but not a forcible felony as defined in s. 776.08, and excluding any third degree felony violation under chapter 810, and if the total sentence points pursuant to s. 921.0024 are 22 points or fewer, the court must sentence the offender to a nonstate prison sanction. However, if the court makes written findings that a nonstate prison sanction could present a danger to the public, the court may sentence the offender to a state correctional facility pursuant to this section.\n\n(11) \nThe purpose of this section is to provide uniform punishment for those crimes made punishable under this section and, to this end, a reference to this section constitutes a general reference under the doctrine of incorporation by reference.\n\nHistory.\n—\ns. 3, ch. 71-136; ss. 1, 2, ch. 72-118; s. 2, ch. 72-724; s. 5, ch. 74-383; s. 1, ch. 77-174; s. 1, ch. 83-87; s. 1, ch. 94-228; s. 16, ch. 95-184; s. 4, ch. 95-294; s. 2, ch. 97-239; s. 2, ch. 98-3; s. 10, ch. 98-204; s. 2, ch. 99-188; s. 3, ch. 2000-246; s. 1, ch. 2001-239; s. 2, ch. 2002-70; ss. 1, 2, ch. 2002-211; s. 4, ch. 2005-28; s. 13, ch. 2008-172; s. 1, ch. 2008-182; s. 1, ch. 2009-63; s. 2, ch. 2011-200; s. 8, ch. 2014-160; s. 1, ch. 2014-220; s. 1, ch. 2016-13; s. 19, ch. 2016-24; s. 3, ch. 2017-1; s. 21, ch. 2017-37; s. 11, ch. 2017-107; s. 30, ch. 2019-167; s. 1, ch. 2026-149.",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+        "retrievedAt": "2026-11-17T06:00:00.829Z",
+        "effectiveDateStart": "October 1, 1995",
+        "subdivisionRanges": []
+      },
+      "fl:statute:775.083": {
+        "sourceKey": "fl:statute:775.083",
+        "section": "775.083",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 775.083",
+        "title": "Fines",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html",
+        "text": "775.083 \nFines.\n—\n\n(1) \nA person who has been convicted of an offense other than a capital felony may be sentenced to pay a fine in addition to any punishment described in s. 775.082; when specifically authorized by statute, he or she may be sentenced to pay a fine in lieu of any punishment described in s. 775.082. A person who has been convicted of a noncriminal violation may be sentenced to pay a fine. Fines for designated crimes and for noncriminal violations shall not exceed:\n(a) \n$15,000, when the conviction is of a life felony.\n\n(b) \n$10,000, when the conviction is of a felony of the first or second degree.\n\n(c) \n$5,000, when the conviction is of a felony of the third degree.\n\n(d) \n$1,000, when the conviction is of a misdemeanor of the first degree.\n\n(e) \n$500, when the conviction is of a misdemeanor of the second degree or a noncriminal violation.\n\n(f) \nAny higher amount equal to double the pecuniary gain derived from the offense by the offender or double the pecuniary loss suffered by the victim.\n\n(g) \nAny higher amount specifically authorized by statute.\n\nFines imposed in this subsection shall be deposited by the clerk of the court in the fine and forfeiture fund established pursuant to s. 142.01. If a defendant is unable to pay a fine, the court may defer payment of the fine to a date certain. As used in this subsection, the term “convicted” or “conviction” means a determination of guilt which is the result of a trial or the entry of a plea of guilty or nolo contendere, regardless of whether adjudication is withheld.\n\n(2) \nIn addition to the fines set forth in subsection (1), court costs shall be assessed and collected in each instance a defendant pleads nolo contendere to, or is convicted of, or adjudicated delinquent for, a felony, a misdemeanor, or a criminal traffic offense under state law, or a violation of any municipal or county ordinance if the violation constitutes a misdemeanor under state law. The court costs imposed by this section shall be $50 for a felony and $20 for any other offense and shall be deposited by the clerk of the court into an appropriate county account for disbursement for the purposes provided in this subsection. A county shall account for the funds separately from other county funds as crime prevention funds. The county, in consultation with the sheriff, must expend such funds for crime prevention programs in the county.\n\n(3) \nThe clerk of the court of each county is the entity responsible for collecting payment of fines, fees, service charges, and court costs. Unless otherwise designated by the court, a person who has been ordered to pay court obligations under this section shall immediately contact the clerk to pay fines, fees, service charges, and court costs in full or to apply for enrollment in a payment plan pursuant to s. 28.246(4).\n\n(4) \nThe purpose of this section is to provide uniform penalty authorization for criminal offenses and, to this end, a reference to this section constitutes a general reference under the doctrine of incorporation by reference.\n\nHistory.\n—\ns. 4, ch. 71-136; s. 6, ch. 74-383; s. 1, ch. 77-97; s. 1, ch. 77-174; s. 1, ch. 96-408; s. 1810, ch. 97-102; s. 117, ch. 2003-402; s. 5, ch. 2009-6; s. 29, ch. 2010-162; s. 8, ch. 2017-126; s. 13, ch. 2021-116; s. 19, ch. 2021-131.",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+        "retrievedAt": "2026-11-17T06:00:01.774Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:775.084": {
+        "sourceKey": "fl:statute:775.084",
+        "section": "775.084",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 775.084",
+        "title": "Violent career criminals; habitual felony offenders and habitual violent felony offenders; three-time violent felony offenders; definitions; procedure; enhanced penalties or mandatory minimum prison terms",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html",
+        "text": "775.084 \nViolent career criminals; habitual felony offenders and habitual violent felony offenders; three-time violent felony offenders; definitions; procedure; enhanced penalties or mandatory minimum prison terms.\n—\n\n(1) \nAs used in this act:\n(a) \n“Habitual felony offender” means a defendant for whom the court may impose an extended term of imprisonment, as provided in paragraph (4)(a), if it finds that:\n1. \nThe defendant has previously been convicted of any combination of two or more felonies in this state or other qualified offenses.\n\n2. \nThe felony for which the defendant is to be sentenced was committed:\na. \nWhile the defendant was serving a prison sentence or other sentence, or court-ordered or lawfully imposed supervision that is imposed as a result of a prior conviction for a felony or other qualified offense; or\n\nb. \nWithin 5 years of the date of the conviction of the defendant’s last prior felony or other qualified offense, or within 5 years of the defendant’s release from a prison sentence, probation, community control, control release, conditional release, parole or court-ordered or lawfully imposed supervision or other sentence that is imposed as a result of a prior conviction for a felony or other qualified offense, whichever is later.\n\n3. \nThe felony for which the defendant is to be sentenced, and one of the two prior felony convictions, is not a violation of s. 893.13 relating to the purchase or the possession of a controlled substance.\n\n4. \nThe defendant has not received a pardon for any felony or other qualified offense that is necessary for the operation of this paragraph.\n\n5. \nA conviction of a felony or other qualified offense necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(b) \n“Habitual violent felony offender” means a defendant for whom the court may impose an extended term of imprisonment, as provided in paragraph (4)(b), if it finds that:\n1. \nThe defendant has previously been convicted of a felony or an attempt or conspiracy to commit a felony and one or more of such convictions was for:\na. \nArson;\n\nb. \nSexual battery;\n\nc. \nRobbery;\n\nd. \nKidnapping;\n\ne. \nAggravated child abuse;\n\nf. \nAggravated abuse of an elderly person or disabled adult;\n\ng. \nAggravated assault with a deadly weapon;\n\nh. \nMurder;\n\ni. \nManslaughter;\n\nj. \nAggravated manslaughter of an elderly person or disabled adult;\n\nk. \nAggravated manslaughter of a child;\n\nl. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\nm. \nArmed burglary;\n\nn. \nAggravated battery; or\n\no. \nAggravated stalking.\n\n2. \nThe felony for which the defendant is to be sentenced was committed:\na. \nWhile the defendant was serving a prison sentence or other sentence, or court-ordered or lawfully imposed supervision that is imposed as a result of a prior conviction for an enumerated felony; or\n\nb. \nWithin 5 years of the date of the conviction of the last prior enumerated felony, or within 5 years of the defendant’s release from a prison sentence, probation, community control, control release, conditional release, parole, or court-ordered or lawfully imposed supervision or other sentence that is imposed as a result of a prior conviction for an enumerated felony, whichever is later.\n\n3. \nThe defendant has not received a pardon on the ground of innocence for any crime that is necessary for the operation of this paragraph.\n\n4. \nA conviction of a crime necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(c) \n“Three-time violent felony offender” means a defendant for whom the court must impose a mandatory minimum term of imprisonment, as provided in paragraph (4)(c), if it finds that:\n1. \nThe defendant has previously been convicted as an adult two or more times of a felony, or an attempt to commit a felony, and two or more of such convictions were for committing, or attempting to commit, any of the following offenses or combination thereof:\na. \nArson;\n\nb. \nSexual battery;\n\nc. \nRobbery;\n\nd. \nKidnapping;\n\ne. \nAggravated child abuse;\n\nf. \nAggravated abuse of an elderly person or disabled adult;\n\ng. \nAggravated assault with a deadly weapon;\n\nh. \nMurder;\n\ni. \nManslaughter;\n\nj. \nAggravated manslaughter of an elderly person or disabled adult;\n\nk. \nAggravated manslaughter of a child;\n\nl. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\nm. \nArmed burglary;\n\nn. \nAggravated battery;\n\no. \nAggravated stalking;\n\np. \nHome invasion/robbery;\n\nq. \nCarjacking; or\n\nr. \nAn offense which is in violation of a law of any other jurisdiction if the elements of the offense are substantially similar to the elements of any felony offense enumerated in sub-subparagraphs a.-q., or an attempt to commit any such felony offense.\n\n2. \nThe felony for which the defendant is to be sentenced is one of the felonies enumerated in sub-subparagraphs 1.a.-q. and was committed:\na. \nWhile the defendant was serving a prison sentence or other sentence imposed as a result of a prior conviction for any offense enumerated in sub-subparagraphs 1.a.-r.; or\n\nb. \nWithin 5 years after the date of the conviction of the last prior offense enumerated in sub-subparagraphs 1.a.-r., or within 5 years after the defendant’s release from a prison sentence, probation, community control, or other sentence imposed as a result of a prior conviction for any offense enumerated in sub-subparagraphs 1.a.-r., whichever is later.\n\n3. \nThe defendant has not received a pardon on the ground of innocence for any crime that is necessary for the operation of this paragraph.\n\n4. \nA conviction of a crime necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(d) \n“Violent career criminal” means a defendant for whom the court must impose imprisonment pursuant to paragraph (4)(d), if it finds that:\n1. \nThe defendant has previously been convicted as an adult three or more times for an offense in this state or other qualified offense that is:\na. \nAny forcible felony, as described in s. 776.08;\n\nb. \nAggravated stalking, as described in s. 784.048(3) and (4);\n\nc. \nAggravated child abuse, as described in s. 827.03(2)(a);\n\nd. \nAggravated abuse of an elderly person or disabled adult, as described in s. 825.102(2);\n\ne. \nLewd or lascivious battery, lewd or lascivious molestation, lewd or lascivious conduct, or lewd or lascivious exhibition, as described in s. 800.04 or s. 847.0135(5);\n\nf. \nEscape, as described in s. 944.40; or\n\ng. \nA felony violation of chapter 790 involving the use or possession of a firearm.\n\n2. \nThe defendant has been incarcerated in a state prison or a federal prison.\n\n3. \nThe primary felony offense for which the defendant is to be sentenced is a felony enumerated in subparagraph 1. and was committed on or after October 1, 1995, and:\na. \nWhile the defendant was serving a prison sentence or other sentence, or court-ordered or lawfully imposed supervision that is imposed as a result of a prior conviction for an enumerated felony; or\n\nb. \nWithin 5 years after the conviction of the last prior enumerated felony, or within 5 years after the defendant’s release from a prison sentence, probation, community control, control release, conditional release, parole, or court-ordered or lawfully imposed supervision or other sentence that is imposed as a result of a prior conviction for an enumerated felony, whichever is later.\n\n4. \nThe defendant has not received a pardon for any felony or other qualified offense that is necessary for the operation of this paragraph.\n\n5. \nA conviction of a felony or other qualified offense necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(e) \n“Qualified offense” means any offense, substantially similar in elements and penalties to an offense in this state, which is in violation of a law of any other jurisdiction, whether that of another state, the District of Columbia, the United States or any possession or territory thereof, or any foreign jurisdiction, that was punishable under the law of such jurisdiction at the time of its commission by the defendant by death or imprisonment exceeding 1 year.\n\n(2) \nFor the purposes of this section, the placing of a person on probation or community control without an adjudication of guilt shall be treated as a prior conviction.\n\n(3)(a) \nIn a separate proceeding, the court shall determine if the defendant is a habitual felony offender or a habitual violent felony offender. The procedure shall be as follows:\n1. \nThe court shall obtain and consider a presentence investigation prior to the imposition of a sentence as a habitual felony offender or a habitual violent felony offender.\n\n2. \nWritten notice shall be served on the defendant and the defendant’s attorney a sufficient time prior to the entry of a plea or prior to the imposition of sentence in order to allow the preparation of a submission on behalf of the defendant.\n\n3. \nExcept as provided in subparagraph 1., all evidence presented shall be presented in open court with full rights of confrontation, cross-examination, and representation by counsel.\n\n4. \nEach of the findings required as the basis for such sentence shall be found to exist by a preponderance of the evidence and shall be appealable to the extent normally applicable to similar findings.\n\n5. \nFor the purpose of identification of a habitual felony offender or a habitual violent felony offender, the court shall fingerprint the defendant pursuant to s. 921.241.\n\n6. \nFor an offense committed on or after October 1, 1995, if the state attorney pursues a habitual felony offender sanction or a habitual violent felony offender sanction against the defendant and the court, in a separate proceeding pursuant to this paragraph, determines that the defendant meets the criteria under subsection (1) for imposing such sanction, the court must sentence the defendant as a habitual felony offender or a habitual violent felony offender, subject to imprisonment pursuant to this section unless the court finds that such sentence is not necessary for the protection of the public. If the court finds that it is not necessary for the protection of the public to sentence the defendant as a habitual felony offender or a habitual violent felony offender, the court shall provide written reasons; a written transcript of orally stated reasons is permissible, if filed by the court within 7 days after the date of sentencing. Each month, the court shall submit to the Office of Economic and Demographic Research of the Legislature the written reasons or transcripts in each case in which the court determines not to sentence a defendant as a habitual felony offender or a habitual violent felony offender as provided in this subparagraph.\n\n(b) \nIn a separate proceeding, the court shall determine if the defendant is a three-time violent felony offender. The procedure shall be as follows:\n1. \nThe court shall obtain and consider a presentence investigation prior to the imposition of a sentence as a three-time violent felony offender.\n\n2. \nWritten notice shall be served on the defendant and the defendant’s attorney a sufficient time prior to the entry of a plea or prior to the imposition of sentence in order to allow the preparation of a submission on behalf of the defendant.\n\n3. \nExcept as provided in subparagraph 1., all evidence presented shall be presented in open court with full rights of confrontation, cross-examination, and representation by counsel.\n\n4. \nEach of the findings required as the basis for such sentence shall be found to exist by a preponderance of the evidence and shall be appealable to the extent normally applicable to similar findings.\n\n5. \nFor the purpose of identification of a three-time violent felony offender, the court shall fingerprint the defendant pursuant to s. 921.241.\n\n6. \nFor an offense committed on or after the effective date of this act, if the state attorney pursues a three-time violent felony offender sanction against the defendant and the court, in a separate proceeding pursuant to this paragraph, determines that the defendant meets the criteria under subsection (1) for imposing such sanction, the court must sentence the defendant as a three-time violent felony offender, subject to imprisonment pursuant to this section as provided in paragraph (4)(c).\n\n(c) \nIn a separate proceeding, the court shall determine whether the defendant is a violent career criminal with respect to a primary offense committed on or after October 1, 1995. The procedure shall be as follows:\n1. \nWritten notice shall be served on the defendant and the defendant’s attorney a sufficient time prior to the entry of a plea or prior to the imposition of sentence in order to allow the preparation of a submission on behalf of the defendant.\n\n2. \nAll evidence presented shall be presented in open court with full rights of confrontation, cross-examination, and representation by counsel.\n\n3. \nEach of the findings required as the basis for such sentence shall be found to exist by a preponderance of the evidence and shall be appealable only as provided in paragraph (d).\n\n4. \nFor the purpose of identification, the court shall fingerprint the defendant pursuant to s. 921.241.\n\n5. \nFor an offense committed on or after October 1, 1995, if the state attorney pursues a violent career criminal sanction against the defendant and the court, in a separate proceeding pursuant to this paragraph, determines that the defendant meets the criteria under subsection (1) for imposing such sanction, the court must sentence the defendant as a violent career criminal, subject to imprisonment pursuant to this section unless the court finds that such sentence is not necessary for the protection of the public. If the court finds that it is not necessary for the protection of the public to sentence the defendant as a violent career criminal, the court shall provide written reasons; a written transcript of orally stated reasons is permissible, if filed by the court within 7 days after the date of sentencing. Each month, the court shall submit to the Office of Economic and Demographic Research of the Legislature the written reasons or transcripts in each case in which the court determines not to sentence a defendant as a violent career criminal as provided in this subparagraph.\n\n(d)1. \nA person sentenced under paragraph (4)(d) as a violent career criminal has the right of direct appeal, and either the state or the defendant may petition the trial court to vacate an illegal sentence at any time. However, the determination of the trial court to impose or not to impose a violent career criminal sentence is presumed appropriate and no petition or motion for collateral or other postconviction relief may be considered based on an allegation either by the state or the defendant that such sentence is inappropriate, inadequate, or excessive.\n\n2. \nIt is the intent of the Legislature that, with respect to both direct appeal and collateral review of violent career criminal sentences, all claims of error or illegality be raised at the first opportunity and that no claim should be filed more than 2 years after the judgment and sentence became final, unless it is established that the basis for the claim could not have been ascertained at the time by the exercise of due diligence. Technical violations and mistakes at trials and sentencing proceedings involving violent career criminals that do not affect due process or fundamental fairness are not appealable by either the state or the defendant.\n\n3. \nIt is the intent of the Legislature that no funds, resources, or employees of the state or its political subdivisions be used, directly or indirectly, in appellate or collateral proceedings based on violent career criminal sentencing, except when such use is constitutionally or statutorily mandated.\n\n(4)(a) \nThe court, in conformity with the procedure established in paragraph (3)(a), may sentence the habitual felony offender as follows:\n1. \nIn the case of a life felony or a felony of the first degree, for life.\n\n2. \nIn the case of a felony of the second degree, for a term of years not exceeding 30.\n\n3. \nIn the case of a felony of the third degree, for a term of years not exceeding 10.\n\n(b) \nThe court, in conformity with the procedure established in paragraph (3)(a), may sentence the habitual violent felony offender as follows:\n1. \nIn the case of a life felony or a felony of the first degree, for life, and such offender shall not be eligible for release for 15 years.\n\n2. \nIn the case of a felony of the second degree, for a term of years not exceeding 30, and such offender shall not be eligible for release for 10 years.\n\n3. \nIn the case of a felony of the third degree, for a term of years not exceeding 10, and such offender shall not be eligible for release for 5 years.\n\n(c)1. \nThe court, in conformity with the procedure established in paragraph (3)(b), must sentence the three-time violent felony offender to a mandatory minimum term of imprisonment, as follows:\na. \nIn the case of a felony punishable by life, to a term of imprisonment for life;\n\nb. \nIn the case of a felony of the first degree, to a term of imprisonment of 30 years;\n\nc. \nIn the case of a felony of the second degree, to a term of imprisonment of 15 years; or\n\nd. \nIn the case of a felony of the third degree, to a term of imprisonment of 5 years.\n\n2. \nNothing in this subsection shall prevent a court from imposing a greater sentence of incarceration as authorized by law.\n\n(d) \nThe court, in conformity with the procedure established in paragraph (3)(c), shall sentence the violent career criminal as follows:\n1. \nIn the case of a life felony or a felony of the first degree, for life.\n\n2. \nIn the case of a felony of the second degree, for a term of years not exceeding 40, with a mandatory minimum term of 30 years’ imprisonment.\n\n3. \nIn the case of a felony of the third degree, for a term of years not exceeding 15, with a mandatory minimum term of 10 years’ imprisonment.\n\n(e) \nIf the court finds, pursuant to paragraph (3)(a) or paragraph (3)(c), that it is not necessary for the protection of the public to sentence a defendant who meets the criteria for sentencing as a habitual felony offender, a habitual violent felony offender, or a violent career criminal, with respect to an offense committed on or after October 1, 1995, sentence shall be imposed without regard to this section.\n\n(f) \nAt any time when it appears to the court that the defendant is eligible for sentencing under this section, the court shall make that determination as provided in paragraph (3)(a), paragraph (3)(b), or paragraph (3)(c).\n\n(g) \nA sentence imposed under this section shall not be increased after such imposition.\n\n(h) \nA sentence imposed under this section is not subject to s. 921.002.\n\n(i) \nThe provisions of this section do not apply to capital felonies, and a sentence authorized under this section does not preclude the imposition of the death penalty for a capital felony.\n\n(j) \nThe provisions of s. 947.1405 shall apply to persons sentenced as habitual felony offenders and persons sentenced as habitual violent felony offenders.\n\n(k)1. \nA defendant sentenced under this section as a habitual felony offender, a habitual violent felony offender, or a violent career criminal is eligible for gain-time granted by the Department of Corrections as provided in s. 944.275(4)(b).\n\n2. \nFor an offense committed on or after October 1, 1995, a defendant sentenced under this section as a violent career criminal is not eligible for any form of discretionary early release, other than pardon or executive clemency, or conditional medical release granted pursuant to s. 947.149.\n\n3. \nFor an offense committed on or after July 1, 1999, a defendant sentenced under this section as a three-time violent felony offender shall be released only by expiration of sentence and shall not be eligible for parole, control release, or any form of early release.\n\n(5) \nIn order to be counted as a prior felony for purposes of sentencing under this section, the felony must have resulted in a conviction sentenced separately prior to the current offense and sentenced separately from any other felony conviction that is to be counted as a prior felony.\n\n(6) \nThe purpose of this section is to provide uniform punishment for those crimes made punishable under this section, and to this end, a reference to this section constitutes a general reference under the doctrine of incorporation by reference.\n\nHistory.\n—\ns. 5, ch. 71-136; s. 7, ch. 74-383; s. 1, ch. 75-116; s. 2, ch. 75-298; s. 1, ch. 77-174; s. 6, ch. 88-131; s. 1, ch. 89-280; s. 2, ch. 93-406; s. 2, ch. 95-182; s. 8, ch. 95-195; s. 14, ch. 96-322; s. 44, ch. 96-388; s. 12, ch. 97-78; s. 12, ch. 97-194; s. 11, ch. 98-204; s. 3, ch. 99-188; s. 3, ch. 99-201; s. 3, ch. 2000-246; ss. 1, 2, ch. 2002-210; s. 2, ch. 2003-23; s. 14, ch. 2008-172; s. 10, ch. 2012-155; s. 39, ch. 2016-105; s. 8, ch. 2019-98.",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+        "retrievedAt": "2026-11-17T06:00:02.732Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:590.28:2": {
+        "sourceKey": "fl:statute:590.28:2",
+        "section": "590.28",
+        "subdivision": "(2)",
+        "citation": "Fla. Stat. § 590.28(2)",
+        "title": "Intentional or reckless burning of lands",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.28.html",
+        "text": "590.28 \nIntentional or reckless burning of lands.\n—\n\n(1) \nWhoever intentionally burns, sets fire to, or causes to be burned or causes any fire to be set to, any wild land or vegetative land clearing debris not owned by, or in the lawful possession of, the person setting such fire or burning such lands or causing such fire to be set or lands to be burned without complying with s. 590.125, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nWhoever recklessly burns, sets fire to, or causes to be burned any wild lands not owned by, or in the lawful possession of, the person setting the fire or burning the lands or causing the fire to be set or lands to be burned, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 1, ch. 29919, 1955; s. 15, ch. 99-292; s. 33, ch. 2000-308.",
+        "contentHash": "6576ab9d59822178feb297cead62330f90c679dc131d381765a7c18c008f5274",
+        "retrievedAt": "2026-11-17T05:59:51.480Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)",
+            "start": 495,
+            "end": 896
+          }
+        ]
+      },
+      "fl:statute:590.10:1": {
+        "sourceKey": "fl:statute:590.10:1",
+        "section": "590.10",
+        "subdivision": "(1)",
+        "citation": "Fla. Stat. § 590.10(1)",
+        "title": "Disposing of lighted substances, etc",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.10.html",
+        "text": "590.10 \nDisposing of lighted substances, etc.\n—\n\n(1) \nIt is unlawful for any person to throw, drop, or dispose of a lighted match, cigarette, cigar, ashes, or other flaming or glowing substance, or any substance or thing which may or does cause a wildfire.\n\n(2) \nAnyone who violates this section commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 11, ch. 17029, 1935; CGL 1936 Supp. 4151(10-pp); s. 7, ch. 99-292.",
+        "contentHash": "7314a45fe263de2a67b2105814159364996eb29cd0fd900708913f35edcd35de",
+        "retrievedAt": "2026-11-17T06:00:22.170Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(1)",
+            "start": 49,
+            "end": 258
+          }
+        ]
+      },
+      "fl:statute:590.10": {
+        "sourceKey": "fl:statute:590.10",
+        "section": "590.10",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 590.10",
+        "title": "Disposing of lighted substances, etc",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.10.html",
+        "text": "590.10 \nDisposing of lighted substances, etc.\n—\n\n(1) \nIt is unlawful for any person to throw, drop, or dispose of a lighted match, cigarette, cigar, ashes, or other flaming or glowing substance, or any substance or thing which may or does cause a wildfire.\n\n(2) \nAnyone who violates this section commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 11, ch. 17029, 1935; CGL 1936 Supp. 4151(10-pp); s. 7, ch. 99-292.",
+        "contentHash": "7314a45fe263de2a67b2105814159364996eb29cd0fd900708913f35edcd35de",
+        "retrievedAt": "2026-11-17T06:00:22.170Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:590.11:1": {
+        "sourceKey": "fl:statute:590.11:1",
+        "section": "590.11",
+        "subdivision": "(1)",
+        "citation": "Fla. Stat. § 590.11(1)",
+        "title": "Recreational fires",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.11.html",
+        "text": "590.11 \nRecreational fires.\n—\n\n(1) \nIt is unlawful for any individual or group of individuals to build a warming fire, bonfire, or campfire and leave it unattended while visible flame, smoke, or emissions exist.\n\n(2) \nAnyone who violates this section commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 12, ch. 17029, 1935; CGL 1936 Supp. 4151(10-qq); s. 8, ch. 99-292; s. 40, ch. 2002-295; s. 24, ch. 2013-226.",
+        "contentHash": "9e6083921aa4856caea2d741bf89e5a072d81eb1c321e448e80624a024f3db7e",
+        "retrievedAt": "2026-11-17T06:00:23.050Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(1)",
+            "start": 31,
+            "end": 213
+          }
+        ]
+      },
+      "fl:statute:590.11": {
+        "sourceKey": "fl:statute:590.11",
+        "section": "590.11",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 590.11",
+        "title": "Recreational fires",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.11.html",
+        "text": "590.11 \nRecreational fires.\n—\n\n(1) \nIt is unlawful for any individual or group of individuals to build a warming fire, bonfire, or campfire and leave it unattended while visible flame, smoke, or emissions exist.\n\n(2) \nAnyone who violates this section commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 12, ch. 17029, 1935; CGL 1936 Supp. 4151(10-qq); s. 8, ch. 99-292; s. 40, ch. 2002-295; s. 24, ch. 2013-226.",
+        "contentHash": "9e6083921aa4856caea2d741bf89e5a072d81eb1c321e448e80624a024f3db7e",
+        "retrievedAt": "2026-11-17T06:00:23.050Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:590.25": {
+        "sourceKey": "fl:statute:590.25",
+        "section": "590.25",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 590.25",
+        "title": "Penalty for obstructing the prevention, detection, or suppression of wildfires",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0590/Sections/0590.25.html",
+        "text": "590.25 \nPenalty for obstructing the prevention, detection, or suppression of wildfires.\n—\n\nWhoever interferes with, obstructs or commits any act aimed to obstruct the prevention, detection, or suppression of wildfires by the employees of the Florida Forest Service or any other person engaged in the prevention, detection, or suppression of a wildfire, or who damages or destroys any equipment being used for such purpose, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 26833, 1951; ss. 14, 35, ch. 69-106; s. 616, ch. 71-136; s. 13, ch. 99-292; s. 64, ch. 2012-7; s. 26, ch. 2013-226.",
+        "contentHash": "08577f6a804181414459838364a5956f3340e13a69b825ed27b7f4590c1ded7d",
+        "retrievedAt": "2026-11-17T06:00:24.956Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:870.01:1": {
+        "sourceKey": "fl:statute:870.01:1",
+        "section": "870.01",
+        "subdivision": "(1)",
+        "citation": "Fla. Stat. § 870.01(1)",
+        "title": "Affrays and riots",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html",
+        "text": "870.01 \nAffrays and riots.\n—\n\n(1) \nA person commits an affray if he or she engages, by mutual consent, in fighting with another person in a public place to the terror of the people. A person who commits an affray commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nA person commits a riot if he or she willfully participates in a violent public disturbance involving an assembly of three or more persons, acting with a common intent to assist each other in violent and disorderly conduct, resulting in:\n(a) \nInjury to another person;\n\n(b) \nDamage to property; or\n\n(c) \nImminent danger of injury to another person or damage to property.\n\nA person who commits a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA person commits aggravated rioting if, in the course of committing a riot, he or she:\n(a) \nParticipates with 25 or more other persons;\n\n(b) \nCauses great bodily harm to a person not participating in the riot;\n\n(c) \nCauses property damage in excess of $5,000;\n\n(d) \nDisplays, uses, threatens to use, or attempts to use a deadly weapon; or\n\n(e) \nBy force, or threat of force, endangers the safe movement of a vehicle traveling on a public street, highway, or road.\n\nA person who commits aggravated rioting commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(4) \nA person commits inciting a riot if he or she willfully incites another person to participate in a riot, resulting in a riot or imminent danger of a riot. A person who commits inciting a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(5) \nA person commits aggravated inciting a riot if he or she:\n(a) \nIncites a riot resulting in great bodily harm to another person not participating in the riot;\n\n(b) \nIncites a riot resulting in property damage in excess of $5,000; or\n\n(c) \nSupplies a deadly weapon to another person or teaches another person to prepare a deadly weapon with intent that the deadly weapon be used in a riot for an unlawful purpose.\n\nA person who commits aggravated inciting a riot commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(6) \nExcept for a violation of subsection (1), a person arrested for a violation of this section shall be held in custody until brought before the court for admittance to bail in accordance with chapter 903.\n\n(7) \nThis section does not prohibit constitutionally protected activity such as a peaceful protest.\n\nHistory.\n—\ns. 35, Feb. 10, 1832; RS 2406; GS 3239; RGS 5072; CGL 7174; s. 1, ch. 67-407; s. 1125, ch. 71-136; s. 15, ch. 2021-6; s. 67, ch. 2022-4.",
+        "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+        "retrievedAt": "2026-11-17T05:59:54.482Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(1)",
+            "start": 30,
+            "end": 309
+          }
+        ]
+      },
+      "fl:statute:870.01": {
+        "sourceKey": "fl:statute:870.01",
+        "section": "870.01",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 870.01",
+        "title": "Affrays and riots",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html",
+        "text": "870.01 \nAffrays and riots.\n—\n\n(1) \nA person commits an affray if he or she engages, by mutual consent, in fighting with another person in a public place to the terror of the people. A person who commits an affray commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nA person commits a riot if he or she willfully participates in a violent public disturbance involving an assembly of three or more persons, acting with a common intent to assist each other in violent and disorderly conduct, resulting in:\n(a) \nInjury to another person;\n\n(b) \nDamage to property; or\n\n(c) \nImminent danger of injury to another person or damage to property.\n\nA person who commits a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA person commits aggravated rioting if, in the course of committing a riot, he or she:\n(a) \nParticipates with 25 or more other persons;\n\n(b) \nCauses great bodily harm to a person not participating in the riot;\n\n(c) \nCauses property damage in excess of $5,000;\n\n(d) \nDisplays, uses, threatens to use, or attempts to use a deadly weapon; or\n\n(e) \nBy force, or threat of force, endangers the safe movement of a vehicle traveling on a public street, highway, or road.\n\nA person who commits aggravated rioting commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(4) \nA person commits inciting a riot if he or she willfully incites another person to participate in a riot, resulting in a riot or imminent danger of a riot. A person who commits inciting a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(5) \nA person commits aggravated inciting a riot if he or she:\n(a) \nIncites a riot resulting in great bodily harm to another person not participating in the riot;\n\n(b) \nIncites a riot resulting in property damage in excess of $5,000; or\n\n(c) \nSupplies a deadly weapon to another person or teaches another person to prepare a deadly weapon with intent that the deadly weapon be used in a riot for an unlawful purpose.\n\nA person who commits aggravated inciting a riot commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(6) \nExcept for a violation of subsection (1), a person arrested for a violation of this section shall be held in custody until brought before the court for admittance to bail in accordance with chapter 903.\n\n(7) \nThis section does not prohibit constitutionally protected activity such as a peaceful protest.\n\nHistory.\n—\ns. 35, Feb. 10, 1832; RS 2406; GS 3239; RGS 5072; CGL 7174; s. 1, ch. 67-407; s. 1125, ch. 71-136; s. 15, ch. 2021-6; s. 67, ch. 2022-4.",
+        "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+        "retrievedAt": "2026-11-17T05:59:54.482Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:870.01:2": {
+        "sourceKey": "fl:statute:870.01:2",
+        "section": "870.01",
+        "subdivision": "(2)",
+        "citation": "Fla. Stat. § 870.01(2)",
+        "title": "Affrays and riots",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html",
+        "text": "870.01 \nAffrays and riots.\n—\n\n(1) \nA person commits an affray if he or she engages, by mutual consent, in fighting with another person in a public place to the terror of the people. A person who commits an affray commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nA person commits a riot if he or she willfully participates in a violent public disturbance involving an assembly of three or more persons, acting with a common intent to assist each other in violent and disorderly conduct, resulting in:\n(a) \nInjury to another person;\n\n(b) \nDamage to property; or\n\n(c) \nImminent danger of injury to another person or damage to property.\n\nA person who commits a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA person commits aggravated rioting if, in the course of committing a riot, he or she:\n(a) \nParticipates with 25 or more other persons;\n\n(b) \nCauses great bodily harm to a person not participating in the riot;\n\n(c) \nCauses property damage in excess of $5,000;\n\n(d) \nDisplays, uses, threatens to use, or attempts to use a deadly weapon; or\n\n(e) \nBy force, or threat of force, endangers the safe movement of a vehicle traveling on a public street, highway, or road.\n\nA person who commits aggravated rioting commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(4) \nA person commits inciting a riot if he or she willfully incites another person to participate in a riot, resulting in a riot or imminent danger of a riot. A person who commits inciting a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(5) \nA person commits aggravated inciting a riot if he or she:\n(a) \nIncites a riot resulting in great bodily harm to another person not participating in the riot;\n\n(b) \nIncites a riot resulting in property damage in excess of $5,000; or\n\n(c) \nSupplies a deadly weapon to another person or teaches another person to prepare a deadly weapon with intent that the deadly weapon be used in a riot for an unlawful purpose.\n\nA person who commits aggravated inciting a riot commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(6) \nExcept for a violation of subsection (1), a person arrested for a violation of this section shall be held in custody until brought before the court for admittance to bail in accordance with chapter 903.\n\n(7) \nThis section does not prohibit constitutionally protected activity such as a peaceful protest.\n\nHistory.\n—\ns. 35, Feb. 10, 1832; RS 2406; GS 3239; RGS 5072; CGL 7174; s. 1, ch. 67-407; s. 1125, ch. 71-136; s. 15, ch. 2021-6; s. 67, ch. 2022-4.",
+        "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+        "retrievedAt": "2026-11-17T05:59:54.482Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)",
+            "start": 309,
+            "end": 818
+          }
+        ]
+      },
+      "fl:statute:903.046": {
+        "sourceKey": "fl:statute:903.046",
+        "section": "903.046",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 903.046",
+        "title": "Purpose of and criteria for bail determination",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0903/Sections/0903.046.html",
+        "text": "903.046 \nPurpose of and criteria for bail determination.\n—\n\n(1) \nThe purpose of a bail determination in criminal proceedings is to ensure the appearance of the criminal defendant at subsequent proceedings and to protect the community against unreasonable danger from the criminal defendant.\n\n(2) \nWhen determining whether to release a defendant on bail or other conditions, and what that bail or those conditions may be, the court shall consider:\n(a) \nThe nature and circumstances of the offense charged.\n\n(b) \nThe weight of the evidence against the defendant.\n\n(c) \nThe defendant’s family ties, length of residence in the community, immigration status, employment history, financial resources, and mental condition.\n\n(d) \nThe defendant’s past and present conduct, including any record of convictions, previous flight to avoid prosecution, or failure to appear at court proceedings. However, any defendant who had failed to appear on the day of any required court proceeding in the case at issue, but who had later voluntarily appeared or surrendered, shall not be eligible for a recognizance bond; and any defendant who failed to appear on the day of any required court proceeding in the case at issue and who was later arrested shall not be eligible for a recognizance bond or for any form of bond which does not require a monetary undertaking or commitment equal to or greater than $2,000 or twice the value of the monetary commitment or undertaking of the original bond, whichever is greater. Notwithstanding anything in this section, the court has discretion in determining conditions of release if the defendant proves circumstances beyond his or her control for the failure to appear. This section may not be construed as imposing additional duties or obligations on a governmental entity related to monetary bonds.\n\n(e) \nThe nature and probability of danger which the defendant’s release poses to the community.\n\n(f) \nThe source of funds used to post bail or procure an appearance bond, particularly whether the proffered funds, real property, property, or any proposed collateral or bond premium may be linked to or derived from the crime alleged to have been committed or from any other criminal or illicit activities. The burden of establishing the noninvolvement in or nonderivation from criminal or other illicit activity of such proffered funds, real property, property, or any proposed collateral or bond premium falls upon the defendant or other person proffering them to obtain the defendant’s release.\n\n(g) \nWhether the defendant is already on release pending resolution of another criminal proceeding or on probation, parole, or other release pending completion of a sentence.\n\n(h) \nThe street value of any drug or controlled substance connected to or involved in the criminal charge. It is the finding and intent of the Legislature that crimes involving drugs and other controlled substances are of serious social concern, that the flight of defendants to avoid prosecution is of similar serious social concern, and that frequently such defendants are able to post monetary bail using the proceeds of their unlawful enterprises to defeat the social utility of pretrial bail. Therefore, the courts should carefully consider the utility and necessity of substantial bail in relation to the street value of the drugs or controlled substances involved.\n\n(i) \nThe nature and probability of intimidation and danger to victims.\n\n(j) \nWhether there is probable cause to believe that the defendant committed a new crime while on pretrial release.\n\n(k) \nAny other facts that the court considers relevant.\n\n(l) \nWhether the crime charged is a violation of chapter 874 or alleged to be subject to enhanced punishment under chapter 874 or reclassification under s. 843.22. If any such violation is charged against a defendant or if the defendant is charged with a crime that is alleged to be subject to such enhancement or reclassification, he or she is not eligible for release on bail or surety bond until the first appearance on the case in order to ensure the full participation of the prosecutor and the protection of the public.\n\n(m) \nWhether the defendant, other than a defendant whose only criminal charge is a misdemeanor offense under chapter 316, is required to register as a sexual offender under s. 943.0435 or a sexual predator under s. 775.21; and, if so, he or she is not eligible for release on bail or surety bond until the first appearance on the case in order to ensure the full participation of the prosecutor and the protection of the public.\n\nHistory.\n—\ns. 41, ch. 82-175; s. 42, ch. 84-103; s. 4, ch. 86-151; s. 1476, ch. 97-102; s. 1, ch. 2000-178; s. 18, ch. 2008-238; s. 1, ch. 2013-214; s. 2, ch. 2014-201; s. 48, ch. 2016-24; s. 19, ch. 2021-156; s. 13, ch. 2025-1; ss. 37, 66, ch. 2025-156.",
+        "contentHash": "dc621c5277d52ca7797b5983a09503a869f224a767ad6781376a9ec75ed89b64",
+        "retrievedAt": "2026-11-17T06:00:27.886Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:870.01:3": {
+        "sourceKey": "fl:statute:870.01:3",
+        "section": "870.01",
+        "subdivision": "(3)",
+        "citation": "Fla. Stat. § 870.01(3)",
+        "title": "Affrays and riots",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html",
+        "text": "870.01 \nAffrays and riots.\n—\n\n(1) \nA person commits an affray if he or she engages, by mutual consent, in fighting with another person in a public place to the terror of the people. A person who commits an affray commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nA person commits a riot if he or she willfully participates in a violent public disturbance involving an assembly of three or more persons, acting with a common intent to assist each other in violent and disorderly conduct, resulting in:\n(a) \nInjury to another person;\n\n(b) \nDamage to property; or\n\n(c) \nImminent danger of injury to another person or damage to property.\n\nA person who commits a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA person commits aggravated rioting if, in the course of committing a riot, he or she:\n(a) \nParticipates with 25 or more other persons;\n\n(b) \nCauses great bodily harm to a person not participating in the riot;\n\n(c) \nCauses property damage in excess of $5,000;\n\n(d) \nDisplays, uses, threatens to use, or attempts to use a deadly weapon; or\n\n(e) \nBy force, or threat of force, endangers the safe movement of a vehicle traveling on a public street, highway, or road.\n\nA person who commits aggravated rioting commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(4) \nA person commits inciting a riot if he or she willfully incites another person to participate in a riot, resulting in a riot or imminent danger of a riot. A person who commits inciting a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(5) \nA person commits aggravated inciting a riot if he or she:\n(a) \nIncites a riot resulting in great bodily harm to another person not participating in the riot;\n\n(b) \nIncites a riot resulting in property damage in excess of $5,000; or\n\n(c) \nSupplies a deadly weapon to another person or teaches another person to prepare a deadly weapon with intent that the deadly weapon be used in a riot for an unlawful purpose.\n\nA person who commits aggravated inciting a riot commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(6) \nExcept for a violation of subsection (1), a person arrested for a violation of this section shall be held in custody until brought before the court for admittance to bail in accordance with chapter 903.\n\n(7) \nThis section does not prohibit constitutionally protected activity such as a peaceful protest.\n\nHistory.\n—\ns. 35, Feb. 10, 1832; RS 2406; GS 3239; RGS 5072; CGL 7174; s. 1, ch. 67-407; s. 1125, ch. 71-136; s. 15, ch. 2021-6; s. 67, ch. 2022-4.",
+        "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+        "retrievedAt": "2026-11-17T05:59:54.482Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(3)",
+            "start": 818,
+            "end": 1433
+          }
+        ]
+      },
+      "fl:statute:870.01:4": {
+        "sourceKey": "fl:statute:870.01:4",
+        "section": "870.01",
+        "subdivision": "(4)",
+        "citation": "Fla. Stat. § 870.01(4)",
+        "title": "Affrays and riots",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html",
+        "text": "870.01 \nAffrays and riots.\n—\n\n(1) \nA person commits an affray if he or she engages, by mutual consent, in fighting with another person in a public place to the terror of the people. A person who commits an affray commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nA person commits a riot if he or she willfully participates in a violent public disturbance involving an assembly of three or more persons, acting with a common intent to assist each other in violent and disorderly conduct, resulting in:\n(a) \nInjury to another person;\n\n(b) \nDamage to property; or\n\n(c) \nImminent danger of injury to another person or damage to property.\n\nA person who commits a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA person commits aggravated rioting if, in the course of committing a riot, he or she:\n(a) \nParticipates with 25 or more other persons;\n\n(b) \nCauses great bodily harm to a person not participating in the riot;\n\n(c) \nCauses property damage in excess of $5,000;\n\n(d) \nDisplays, uses, threatens to use, or attempts to use a deadly weapon; or\n\n(e) \nBy force, or threat of force, endangers the safe movement of a vehicle traveling on a public street, highway, or road.\n\nA person who commits aggravated rioting commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(4) \nA person commits inciting a riot if he or she willfully incites another person to participate in a riot, resulting in a riot or imminent danger of a riot. A person who commits inciting a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(5) \nA person commits aggravated inciting a riot if he or she:\n(a) \nIncites a riot resulting in great bodily harm to another person not participating in the riot;\n\n(b) \nIncites a riot resulting in property damage in excess of $5,000; or\n\n(c) \nSupplies a deadly weapon to another person or teaches another person to prepare a deadly weapon with intent that the deadly weapon be used in a riot for an unlawful purpose.\n\nA person who commits aggravated inciting a riot commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(6) \nExcept for a violation of subsection (1), a person arrested for a violation of this section shall be held in custody until brought before the court for admittance to bail in accordance with chapter 903.\n\n(7) \nThis section does not prohibit constitutionally protected activity such as a peaceful protest.\n\nHistory.\n—\ns. 35, Feb. 10, 1832; RS 2406; GS 3239; RGS 5072; CGL 7174; s. 1, ch. 67-407; s. 1125, ch. 71-136; s. 15, ch. 2021-6; s. 67, ch. 2022-4.",
+        "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+        "retrievedAt": "2026-11-17T05:59:54.482Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(4)",
+            "start": 1433,
+            "end": 1734
+          }
+        ]
+      },
+      "fl:statute:870.01:5": {
+        "sourceKey": "fl:statute:870.01:5",
+        "section": "870.01",
+        "subdivision": "(5)",
+        "citation": "Fla. Stat. § 870.01(5)",
+        "title": "Affrays and riots",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html",
+        "text": "870.01 \nAffrays and riots.\n—\n\n(1) \nA person commits an affray if he or she engages, by mutual consent, in fighting with another person in a public place to the terror of the people. A person who commits an affray commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nA person commits a riot if he or she willfully participates in a violent public disturbance involving an assembly of three or more persons, acting with a common intent to assist each other in violent and disorderly conduct, resulting in:\n(a) \nInjury to another person;\n\n(b) \nDamage to property; or\n\n(c) \nImminent danger of injury to another person or damage to property.\n\nA person who commits a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA person commits aggravated rioting if, in the course of committing a riot, he or she:\n(a) \nParticipates with 25 or more other persons;\n\n(b) \nCauses great bodily harm to a person not participating in the riot;\n\n(c) \nCauses property damage in excess of $5,000;\n\n(d) \nDisplays, uses, threatens to use, or attempts to use a deadly weapon; or\n\n(e) \nBy force, or threat of force, endangers the safe movement of a vehicle traveling on a public street, highway, or road.\n\nA person who commits aggravated rioting commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(4) \nA person commits inciting a riot if he or she willfully incites another person to participate in a riot, resulting in a riot or imminent danger of a riot. A person who commits inciting a riot commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(5) \nA person commits aggravated inciting a riot if he or she:\n(a) \nIncites a riot resulting in great bodily harm to another person not participating in the riot;\n\n(b) \nIncites a riot resulting in property damage in excess of $5,000; or\n\n(c) \nSupplies a deadly weapon to another person or teaches another person to prepare a deadly weapon with intent that the deadly weapon be used in a riot for an unlawful purpose.\n\nA person who commits aggravated inciting a riot commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(6) \nExcept for a violation of subsection (1), a person arrested for a violation of this section shall be held in custody until brought before the court for admittance to bail in accordance with chapter 903.\n\n(7) \nThis section does not prohibit constitutionally protected activity such as a peaceful protest.\n\nHistory.\n—\ns. 35, Feb. 10, 1832; RS 2406; GS 3239; RGS 5072; CGL 7174; s. 1, ch. 67-407; s. 1125, ch. 71-136; s. 15, ch. 2021-6; s. 67, ch. 2022-4.",
+        "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb",
+        "retrievedAt": "2026-11-17T05:59:54.482Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(5)",
+            "start": 1734,
+            "end": 2305
+          }
+        ]
+      }
+    }
+  },
+  "eligibility": {
+    "schemaVersion": 1,
+    "reportHash": "da8cb1086ee1d5a688204aac5651fa4165856a615770f7c96f959e077d520aef",
+    "decisions": [
+      {
+        "id": "fl-fs-590-28-1-fire-riot",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "393bc5f679bfc509d4385a8cc4564c94a9ecb05badf44a906487d14950d8b9e9",
+        "definitionHash": "7ce3c7ab64ffe9c60fd49393c350042c10ecd83153a4f77ec98ab3d219e99dba",
+        "approvalHash": "191451bedcaf34a0437a16308dd623e016b8944539304fdafda70396a968158b"
+      },
+      {
+        "id": "fl-fs-590-28-2-fire-riot",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "79f351fb00806efc11f1c0c34a947ba19f2b7392482f6bfcce451474dbbdac99",
+        "definitionHash": "49e1223f88929f732d56243dba0c3589bd343a5a46a3da1ad8a2731a54d354fa",
+        "approvalHash": "cc338b9a2e81a1f7e680d6043fd6f3d3acefe0a9cb60025e6a8f7d79f5c2a947"
+      },
+      {
+        "id": "fl-fs-590-10-1-fire-riot",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "be6169d48f3ed52f5ca67ec2db1f91710620a216d8cf721bda4228f498711da1",
+        "definitionHash": "9690ba7877bd6251cd99f9fa6ac708117a13cd1a63b2757deb68d6abe87e3688",
+        "approvalHash": "a260d2ffea7e91aeb2f9d13c6ea99154fb61977274b8c6a2e507ed29ff14e2ce"
+      },
+      {
+        "id": "fl-fs-590-11-1-fire-riot",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "50318f475555184b80e49094378a4481d9ebc09160c607597cede39412f389e9",
+        "definitionHash": "a19d188d047338886ded90173d830762c7dc4b37a3758d50452165374eb450d5",
+        "approvalHash": "d9df8e36a351670f2faab9e0d234b4baa3651a8848d35ededc5fc18167e6f2ba"
+      },
+      {
+        "id": "fl-fs-590-25-fire-riot",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "5703027c1b38e7c3e717e680061ad2aad7684215f1217fdc9654cf4ed143e6f8",
+        "definitionHash": "a6148c3bea3eeaec359bd676c41924914cb6846c2b119e6836a42c14a7f35f4b",
+        "approvalHash": "18fc82b9ddf590b6ad26b1303dea2943b52a905d1aa726a1e6fe3753620912d0"
+      },
+      {
+        "id": "fl-fs-870-01-1-fire-riot",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "fe9bfb771f15fa23fced565ea374abba10aaf49bf4c111cb5e490c16c8f08a54",
+        "definitionHash": "a6e5b5992b2a005fab16b8ffa879dacd440e18df586a31d545307243601a8f72",
+        "approvalHash": "132925c8ec0be24a05e3f96182a345a037e31dfd9f61fcfae357d59f0fad9eff"
+      },
+      {
+        "id": "fl-fs-870-01-2-fire-riot",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "dfd7e07bd707f79f1eb9fc4fb0816e6a2717c156adb9cfb73775745532a9cdf5",
+        "definitionHash": "241356406c5ebf35817703852c4def64b28ac08b79ef58bf22cdf5b932bd93ae",
+        "approvalHash": "343c11d9c164117d777d3132ed911aa1d332fdd26353f4aeda44b714ab85ed17"
+      },
+      {
+        "id": "fl-fs-870-01-3-fire-riot",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "6379a4e32d465008d69f1f729d78da1d99fd11a3de68f4082994ddbf6ca987e9",
+        "definitionHash": "f167ba447086f56aa4c1e6e7f936adab4dd08ec90cbbf22e2f96206105880afc",
+        "approvalHash": "26d1f567e0e8e69129fbb77eba15d54e75478f86064062ccb66146cb41a3e672"
+      },
+      {
+        "id": "fl-fs-870-01-4-fire-riot",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "abac01a3b7384a34058e2f2df2928cc4932b162a320768cdfe4555f59c6d72bf",
+        "definitionHash": "8c3f3da166513ae78a732e2f92af31a41cfa86de4950a0fb4681da7cddd5bcac",
+        "approvalHash": "6c48ff2dc049c16793f981ae2bfeb8356371d6e181f4e28c6e55f24fd1f748d2"
+      },
+      {
+        "id": "fl-fs-870-01-5-fire-riot",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "500dd6c9654a5b7a0d78d82877d27f3deb5dd4df5305cc660d883e54afa14a06",
+        "definitionHash": "dc83ab061e3afeb709ff2eab41be48b422707bafeb44420d4560f0c056c12ea8",
+        "approvalHash": "28dbf39e900febd81aa0ccec17cee08db39db9da298dafa0cfa84589100ff221"
+      }
+    ]
+  }
+}
