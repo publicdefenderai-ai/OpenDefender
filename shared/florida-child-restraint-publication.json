@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "fl-fs-787-01-3-a-4-child-restraint",
+    "section": "787.01",
+    "scope": "(3)(a)4.",
+    "officialTitle": "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+    "dependencies": [
+      "787.01",
+      "796.04",
+      "796.001",
+      "775.021",
+      "943.0435",
+      "921.1401",
+      "921.1402",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.01": [
+        "(1)",
+        "(3)(a)",
+        "(3)(a)4.",
+        "(3)(b)"
+      ],
+      "796.04": [
+        "(1)",
+        "(2)"
+      ],
+      "796.001": [
+        ""
+      ],
+      "775.021": [
+        "(4)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "921.1401": [
+        "(1)"
+      ],
+      "921.1402": [
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-01-3-a-4-child-restraint",
+      "name": "Kidnapping a child under 13 with coercing the child into prostitution",
+      "names": {
+        "es": "Secuestro de menor de 13 años con coacción al menor para ejercer la prostitución",
+        "zh": "绑架不满13岁儿童并实施强迫该儿童卖淫"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.01(3)(a)4.",
+      "slug": "fl-fs-787-01-3-a-4-child-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.01(3)(a)4.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 796.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0796/Sections/0796.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 796.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0796/Sections/0796.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1401",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1401.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1402",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1402.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(3)(a)4.",
+          "F.S. 787.01(3)(a)4."
+        ],
+        "es": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(3)(a)4.",
+          "F.S. 787.01(3)(a)4."
+        ],
+        "zh": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(3)(a)4.",
+          "F.S. 787.01(3)(a)4."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Forcibly, secretly or by threat confining, abducting or imprisoning a child under 13 against the child’s will, without lawful authority, for ransom, reward, a shield or hostage, to commit or facilitate a felony, to harm or terrorize someone, or to interfere with a governmental or political function. Confinement without a parent’s or legal guardian’s consent qualifies as against the child’s will. For felony facilitation, the restraint must exceed merely incidental restraint, be unnecessary to the underlying felony and independently help commit it or avoid detection. During that kidnapping the accused must also commit the following offense. The accused forced, compelled or coerced the child to become a prostitute under §796.04. This choice covers that expressly incorporated act. Section 796.001 directs prosecution of adults involving minors toward other laws. Former §796.03 is a historical reference.",
+          "degreeContext": "Life felony. For a current offense, imprisonment may be for life or a term of years up to life, ordinarily with a fine up to $15,000. Separate convictions and sentences for the qualifying acts are permitted. Juvenile sentencing and registration depend on the applicable statutory conditions."
+        },
+        "es": {
+          "plainSummary": "Restringir, llevarse o encerrar mediante fuerza, en secreto o con amenazas a un menor de 13 años contra su voluntad y sin autoridad legal, para obtener rescate o recompensa, utilizarlo como escudo o rehén, cometer o facilitar un delito grave, dañar o aterrorizar a alguien o interferir con una función gubernamental o política. El confinamiento sin consentimiento del padre, madre o tutor cuenta como contrario a la voluntad del menor. Para facilitar un delito grave, la restricción debe superar la incidental, ser innecesaria para ese delito y facilitarlo de manera independiente o dificultar la detección. Durante ese secuestro también debe cometerse el delito siguiente. La persona acusada forzó, obligó o coaccionó al menor a ejercer la prostitución según el §796.04. Esta opción se limita a esa conducta expresamente incorporada. El §796.001 orienta el enjuiciamiento de adultos que involucran a menores hacia otras leyes. El antiguo §796.03 es una referencia histórica.",
+          "degreeContext": "Delito grave de categoría perpetua. Para un delito actual se permite cadena perpetua o una pena de años hasta perpetua, normalmente con una multa de hasta $15,000. Se permiten condenas y penas separadas por los actos que califican. Las penas para menores y el registro dependen de los requisitos legales aplicables."
+        },
+        "zh": {
+          "plainSummary": "以武力、秘密或威胁手段，无法定权限且违背不满13岁儿童的意愿限制其自由、劫持或拘禁，意图索取赎金或报酬、用作人盾或人质、实施或便利重罪、伤害或恐吓他人，或妨碍政府或政治职能。未经父母或法定监护人同意的拘禁，属于违背儿童意愿。若目的是便利重罪，对自由的限制须超出附带行为，并非该重罪本身所必需，且能独立便利犯罪或逃避侦查。 在该绑架过程中还须实施下列犯罪。 被告依第796.04条所述强迫、迫使或胁迫该儿童卖淫。此选项仅涵盖明确援引的该行为。第796.001条指明涉及未成年人的成年人应依据其他法律追诉。原第796.03条属于历史引文。",
+          "degreeContext": "终身级重罪。现行法律允许判处终身监禁或不超过终身的有期徒刑，通常最高罚款15,000美元。符合条件的行为可另行定罪量刑。未成年人量刑和登记义务取决于相应法定条件。"
+        }
+      }
+    },
+    "gradingScope": "(3)(a)"
+  },
+  {
+    "id": "fl-fs-787-01-3-a-5-child-restraint",
+    "section": "787.01",
+    "scope": "(3)(a)5.",
+    "officialTitle": "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+    "dependencies": [
+      "787.01",
+      "450.151",
+      "775.021",
+      "943.0435",
+      "921.1401",
+      "921.1402",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.01": [
+        "(1)",
+        "(3)(a)",
+        "(3)(a)5.",
+        "(3)(b)"
+      ],
+      "450.151": [
+        ""
+      ],
+      "775.021": [
+        "(4)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "921.1401": [
+        "(1)"
+      ],
+      "921.1402": [
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-01-3-a-5-child-restraint",
+      "name": "Kidnapping a child under 13 with exploiting or allowing exploitation of the child",
+      "names": {
+        "es": "Secuestro de menor de 13 años con explotación del menor o permitir su explotación",
+        "zh": "绑架不满13岁儿童并实施剥削或容许剥削该儿童"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.01(3)(a)5.",
+      "slug": "fl-fs-787-01-3-a-5-child-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.01(3)(a)5.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 450.151",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0450/Sections/0450.151.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1401",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1401.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1402",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1402.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(3)(a)5.",
+          "F.S. 787.01(3)(a)5."
+        ],
+        "es": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(3)(a)5.",
+          "F.S. 787.01(3)(a)5."
+        ],
+        "zh": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(3)(a)5.",
+          "F.S. 787.01(3)(a)5."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Forcibly, secretly or by threat confining, abducting or imprisoning a child under 13 against the child’s will, without lawful authority, for ransom, reward, a shield or hostage, to commit or facilitate a felony, to harm or terrorize someone, or to interfere with a governmental or political function. Confinement without a parent’s or legal guardian’s consent qualifies as against the child’s will. For felony facilitation, the restraint must exceed merely incidental restraint, be unnecessary to the underlying felony and independently help commit it or avoid detection. During that kidnapping the accused must also commit the following offense. The accused exploited the child or allowed exploitation in violation of §450.151. That provision reaches causing or permitting suffering through the listed use or employment of a child, inflicting unjustifiable physical pain or mental suffering, willfully causing or permitting the specified danger to life or injury to health, or having custody for such purposes.",
+          "degreeContext": "Life felony. For a current offense, imprisonment may be for life or a term of years up to life, ordinarily with a fine up to $15,000. Separate convictions and sentences for the qualifying acts are permitted. Juvenile sentencing and registration depend on the applicable statutory conditions."
+        },
+        "es": {
+          "plainSummary": "Restringir, llevarse o encerrar mediante fuerza, en secreto o con amenazas a un menor de 13 años contra su voluntad y sin autoridad legal, para obtener rescate o recompensa, utilizarlo como escudo o rehén, cometer o facilitar un delito grave, dañar o aterrorizar a alguien o interferir con una función gubernamental o política. El confinamiento sin consentimiento del padre, madre o tutor cuenta como contrario a la voluntad del menor. Para facilitar un delito grave, la restricción debe superar la incidental, ser innecesaria para ese delito y facilitarlo de manera independiente o dificultar la detección. Durante ese secuestro también debe cometerse el delito siguiente. La persona acusada explotó al menor o permitió su explotación en violación del §450.151. Se incluyen causar o permitir sufrimiento mediante los usos o empleos enumerados, infligir dolor físico o sufrimiento mental injustificable, crear o permitir deliberadamente el peligro para la vida o el daño a la salud previstos, o tener al menor bajo custodia para esos fines.",
+          "degreeContext": "Delito grave de categoría perpetua. Para un delito actual se permite cadena perpetua o una pena de años hasta perpetua, normalmente con una multa de hasta $15,000. Se permiten condenas y penas separadas por los actos que califican. Las penas para menores y el registro dependen de los requisitos legales aplicables."
+        },
+        "zh": {
+          "plainSummary": "以武力、秘密或威胁手段，无法定权限且违背不满13岁儿童的意愿限制其自由、劫持或拘禁，意图索取赎金或报酬、用作人盾或人质、实施或便利重罪、伤害或恐吓他人，或妨碍政府或政治职能。未经父母或法定监护人同意的拘禁，属于违背儿童意愿。若目的是便利重罪，对自由的限制须超出附带行为，并非该重罪本身所必需，且能独立便利犯罪或逃避侦查。 在该绑架过程中还须实施下列犯罪。 被告违反第450.151条剥削该儿童或容许其受剥削。该条涵盖通过列明的使用或雇用行为造成或允许儿童受苦、造成不正当的身体疼痛或精神痛苦、故意造成或允许规定的生命危险或健康损伤，或出于上述目的监护该儿童。",
+          "degreeContext": "终身级重罪。现行法律允许判处终身监禁或不超过终身的有期徒刑，通常最高罚款15,000美元。符合条件的行为可另行定罪量刑。未成年人量刑和登记义务取决于相应法定条件。"
+        }
+      }
+    },
+    "gradingScope": "(3)(a)"
+  },
+  {
+    "id": "fl-fs-787-01-3-a-6-child-restraint",
+    "section": "787.01",
+    "scope": "(3)(a)6.",
+    "officialTitle": "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+    "dependencies": [
+      "787.01",
+      "787.06",
+      "794.011",
+      "775.021",
+      "943.0435",
+      "921.1401",
+      "921.1402",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.01": [
+        "(1)",
+        "(3)(a)",
+        "(3)(a)6.",
+        "(3)(b)"
+      ],
+      "787.06": [
+        "(2)",
+        "(3)",
+        "(3)(g)",
+        "(5)"
+      ],
+      "794.011": [
+        "(1)",
+        "(10)"
+      ],
+      "775.021": [
+        "(4)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "921.1401": [
+        "(1)"
+      ],
+      "921.1402": [
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-01-3-a-6-child-restraint",
+      "name": "Kidnapping a child under 13 with a listed human trafficking offense",
+      "names": {
+        "es": "Secuestro de menor de 13 años con un delito enumerado de trata de personas",
+        "zh": "绑架不满13岁儿童并实施列明的人口贩运犯罪"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.01(3)(a)6.",
+      "slug": "fl-fs-787-01-3-a-6-child-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.01(3)(a)6.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.06",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.06.html"
+        },
+        {
+          "citation": "Fla. Stat. § 794.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1401",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1401.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1402",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1402.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(3)(a)6.",
+          "F.S. 787.01(3)(a)6."
+        ],
+        "es": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(3)(a)6.",
+          "F.S. 787.01(3)(a)6."
+        ],
+        "zh": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(3)(a)6.",
+          "F.S. 787.01(3)(a)6."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Forcibly, secretly or by threat confining, abducting or imprisoning a child under 13 against the child’s will, without lawful authority, for ransom, reward, a shield or hostage, to commit or facilitate a felony, to harm or terrorize someone, or to interfere with a governmental or political function. Confinement without a parent’s or legal guardian’s consent qualifies as against the child’s will. For felony facilitation, the restraint must exceed merely incidental restraint, be unnecessary to the underlying felony and independently help commit it or avoid detection. During that kidnapping the accused must also commit the following offense. Section 787.06(3)(g) covers knowingly or recklessly disregarding the facts when trafficking, attempting it or receiving financial benefit from participation in a trafficking venture for commercial sexual activity involving a child, someone believed to be a child, or a person with the specified mental impairment. From October 1, 2025, §787.06(5) also qualifies when an adult knowingly initiates, organizes, plans, finances, directs, manages or supervises a venture that subjected a child under 12 or a person with the specified mental impairment to trafficking for sexual exploitation as defined in §787.06(2)(i), a §794.011 violation excluding (10). The age limits for this predicate and for the restraint charge differ. Capital classification belongs only to the separate §787.06(5) trafficking charge.",
+          "degreeContext": "Life felony. For a current offense, imprisonment may be for life or a term of years up to life, ordinarily with a fine up to $15,000. Separate convictions and sentences for the qualifying acts are permitted. Juvenile sentencing and registration depend on the applicable statutory conditions."
+        },
+        "es": {
+          "plainSummary": "Restringir, llevarse o encerrar mediante fuerza, en secreto o con amenazas a un menor de 13 años contra su voluntad y sin autoridad legal, para obtener rescate o recompensa, utilizarlo como escudo o rehén, cometer o facilitar un delito grave, dañar o aterrorizar a alguien o interferir con una función gubernamental o política. El confinamiento sin consentimiento del padre, madre o tutor cuenta como contrario a la voluntad del menor. Para facilitar un delito grave, la restricción debe superar la incidental, ser innecesaria para ese delito y facilitarlo de manera independiente o dificultar la detección. Durante ese secuestro también debe cometerse el delito siguiente. El §787.06(3)(g) abarca realizar o intentar la trata o beneficiarse económicamente por participar en una empresa de trata, a sabiendas o con desprecio temerario de los hechos, para actividad sexual comercial que involucre a un menor, una persona que se cree menor o una con la incapacidad mental prevista. Desde el 1 de octubre de 2025 también califica el §787.06(5) si un adulto a sabiendas inicia, organiza, planifica, financia, dirige, administra o supervisa una empresa que sometió a un menor de 12 años o una persona con la incapacidad mental prevista a trata para explotación sexual, definida en §787.06(2)(i) como infracción del §794.011 salvo el apartado (10). Los límites de edad de la trata y la restricción difieren. La clasificación capital corresponde únicamente al cargo separado bajo §787.06(5).",
+          "degreeContext": "Delito grave de categoría perpetua. Para un delito actual se permite cadena perpetua o una pena de años hasta perpetua, normalmente con una multa de hasta $15,000. Se permiten condenas y penas separadas por los actos que califican. Las penas para menores y el registro dependen de los requisitos legales aplicables."
+        },
+        "zh": {
+          "plainSummary": "以武力、秘密或威胁手段，无法定权限且违背不满13岁儿童的意愿限制其自由、劫持或拘禁，意图索取赎金或报酬、用作人盾或人质、实施或便利重罪、伤害或恐吓他人，或妨碍政府或政治职能。未经父母或法定监护人同意的拘禁，属于违背儿童意愿。若目的是便利重罪，对自由的限制须超出附带行为，并非该重罪本身所必需，且能独立便利犯罪或逃避侦查。 在该绑架过程中还须实施下列犯罪。 依第787.06(3)(g)条，行为人明知事实或鲁莽地无视事实，实施、企图实施人口贩运，或通过参与贩运活动获取经济利益，商业性活动涉及儿童、被认为是儿童者或具有法定精神障碍者。自2025年10月1日起，第787.06(5)条还涵盖成年人明知而发起、组织、策划、资助、指挥、管理或监督一项使不满12岁儿童或具有法定精神障碍者因性剥削而遭贩运的活动。依第787.06(2)(i)条，性剥削指违反第794.011条的行为，第(10)款除外。基础贩运罪与限制自由罪的年龄界限不同。死刑级别仅指另行起诉的第787.06(5)条贩运罪。",
+          "degreeContext": "终身级重罪。现行法律允许判处终身监禁或不超过终身的有期徒刑，通常最高罚款15,000美元。符合条件的行为可另行定罪量刑。未成年人量刑和登记义务取决于相应法定条件。"
+        }
+      }
+    },
+    "gradingScope": "(3)(a)"
+  },
+  {
+    "id": "fl-fs-787-02-3-a-1-child-restraint",
+    "section": "787.02",
+    "scope": "(3)(a)1.",
+    "officialTitle": "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+    "dependencies": [
+      "787.02",
+      "827.03",
+      "784.045",
+      "775.021",
+      "943.0435",
+      "921.1401",
+      "921.1402",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.02": [
+        "(1)",
+        "(3)(a)",
+        "(3)(a)1.",
+        "(3)(b)"
+      ],
+      "827.03": [
+        "(1)(a)",
+        "(1)(b)",
+        "(1)(c)"
+      ],
+      "784.045": [
+        "(1)"
+      ],
+      "775.021": [
+        "(4)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "921.1401": [
+        "(1)"
+      ],
+      "921.1402": [
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-02-3-a-1-child-restraint",
+      "name": "False imprisonment of a child under 13 with aggravated child abuse",
+      "names": {
+        "es": "Privación ilegal de libertad de menor de 13 años con maltrato infantil agravado",
+        "zh": "非法拘禁不满13岁儿童并实施加重虐童"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.02(3)(a)1.",
+      "slug": "fl-fs-787-02-3-a-1-child-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.02(3)(a)1.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 827.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 784.045",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.045.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1401",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1401.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1402",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1402.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)1.",
+          "F.S. 787.02(3)(a)1."
+        ],
+        "es": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)1.",
+          "F.S. 787.02(3)(a)1."
+        ],
+        "zh": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)1.",
+          "F.S. 787.02(3)(a)1."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The accused forcibly, secretly or by threat confined, abducted, imprisoned or restrained a child under 13, without lawful authority and against the child’s will. Confinement without parental or legal guardian consent is against the child’s will. During that false imprisonment the accused must also commit the following offense. Aggravated battery on a child, willful torture, malicious punishment, willful unlawful caging, or knowing or willful abuse causing great bodily harm, permanent disability or permanent disfigurement qualifies under §827.03(1)(a).",
+          "degreeContext": "First-degree felony punishable by a term of years up to life and ordinarily a fine up to $10,000. Separate convictions and sentences for the qualifying acts are permitted. For conduct from July 1, 2026, a qualifying domestic-violence offense preceded by a qualifying domestic-violence conviction can be reclassified as a life felony, with an ordinary fine up to $15,000. Family or household relationship and the statutory domestic-violence conditions must be established. Registration and juvenile sentencing have separate criteria."
+        },
+        "es": {
+          "plainSummary": "La persona acusada, por fuerza, en secreto o mediante amenaza, confinó, sustrajo, encarceló o restringió a un menor de 13 años sin autoridad legal y contra su voluntad. El confinamiento sin consentimiento del padre, madre o tutor legal es contrario a la voluntad del menor. Durante esa privación ilegal de libertad también debe cometerse el delito siguiente. Conforme al §827.03(1)(a), califican la agresión física agravada a un menor, tortura intencional, castigo malicioso, encierro deliberado e ilícito en una jaula, o abuso consciente o intencional que cause lesiones graves, discapacidad o desfiguración permanente.",
+          "degreeContext": "Delito grave de primer grado punible con una pena de años hasta cadena perpetua y normalmente una multa de hasta $10,000. Se permiten condenas y penas separadas por los actos que califican. Para hechos desde el 1 de julio de 2026, un delito de violencia doméstica con una condena previa pertinente puede reclasificarse como delito de categoría perpetua, con multa ordinaria de hasta $15,000. Deben establecerse la relación familiar o de convivencia y los demás requisitos legales. El registro y las penas juveniles tienen criterios propios."
+        },
+        "zh": {
+          "plainSummary": "被告以武力、秘密或威胁手段，无法定权限且违背不满13岁儿童的意愿，限制其自由、劫持或拘禁。未经父母或法定监护人同意的拘禁属于违背儿童意愿。 在该非法拘禁过程中还须实施下列犯罪。 第827.03(1)(a)条涵盖加重殴打儿童、故意酷刑、恶意惩罚、故意非法将儿童关进笼子，或明知或故意虐待造成严重身体伤害、永久残疾或永久毁容。",
+          "degreeContext": "一级重罪，可判有期监禁直至终身，通常最高罚款10,000美元。 符合条件的行为可另行定罪量刑。对2026年7月1日起实施的行为，如构成法定家庭暴力且先前已有相应定罪，可升为终身级重罪，通常最高罚款15,000美元。须满足法定家庭关系或共同居住关系等条件。登记及未成年人的量刑另有标准。"
+        }
+      }
+    },
+    "gradingScope": "(3)(a)"
+  },
+  {
+    "id": "fl-fs-787-02-3-a-2-child-restraint",
+    "section": "787.02",
+    "scope": "(3)(a)2.",
+    "officialTitle": "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+    "dependencies": [
+      "787.02",
+      "794.011",
+      "775.021",
+      "943.0435",
+      "921.1401",
+      "921.1402",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.02": [
+        "(1)",
+        "(3)(a)",
+        "(3)(a)2.",
+        "(3)(b)"
+      ],
+      "794.011": [
+        "(1)(j)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(8)"
+      ],
+      "775.021": [
+        "(4)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "921.1401": [
+        "(1)"
+      ],
+      "921.1402": [
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-02-3-a-2-child-restraint",
+      "name": "False imprisonment of a child under 13 with sexual battery against the child",
+      "names": {
+        "es": "Privación ilegal de libertad de menor de 13 años con agresión sexual contra el menor",
+        "zh": "非法拘禁不满13岁儿童并实施针对该儿童的性侵犯"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.02(3)(a)2.",
+      "slug": "fl-fs-787-02-3-a-2-child-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.02(3)(a)2.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 794.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1401",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1401.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1402",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1402.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)2.",
+          "F.S. 787.02(3)(a)2."
+        ],
+        "es": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)2.",
+          "F.S. 787.02(3)(a)2."
+        ],
+        "zh": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)2.",
+          "F.S. 787.02(3)(a)2."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The accused forcibly, secretly or by threat confined, abducted, imprisoned or restrained a child under 13, without lawful authority and against the child’s will. Confinement without parental or legal guardian consent is against the child’s will. During that false imprisonment the accused must also commit the following offense. The accused must commit sexual battery against the child under chapter 794. Section 794.011(1)(j) specifies the sexual penetration or union covered and excludes a bona fide medical purpose.",
+          "degreeContext": "First-degree felony punishable by a term of years up to life and ordinarily a fine up to $10,000. Separate convictions and sentences for the qualifying acts are permitted. For conduct from July 1, 2026, a qualifying domestic-violence offense preceded by a qualifying domestic-violence conviction can be reclassified as a life felony, with an ordinary fine up to $15,000. Family or household relationship and the statutory domestic-violence conditions must be established. Registration and juvenile sentencing have separate criteria."
+        },
+        "es": {
+          "plainSummary": "La persona acusada, por fuerza, en secreto o mediante amenaza, confinó, sustrajo, encarceló o restringió a un menor de 13 años sin autoridad legal y contra su voluntad. El confinamiento sin consentimiento del padre, madre o tutor legal es contrario a la voluntad del menor. Durante esa privación ilegal de libertad también debe cometerse el delito siguiente. Debe cometerse agresión sexual contra el menor conforme al capítulo 794. El §794.011(1)(j) especifica la penetración o unión sexual comprendida y excluye fines médicos legítimos.",
+          "degreeContext": "Delito grave de primer grado punible con una pena de años hasta cadena perpetua y normalmente una multa de hasta $10,000. Se permiten condenas y penas separadas por los actos que califican. Para hechos desde el 1 de julio de 2026, un delito de violencia doméstica con una condena previa pertinente puede reclasificarse como delito de categoría perpetua, con multa ordinaria de hasta $15,000. Deben establecerse la relación familiar o de convivencia y los demás requisitos legales. El registro y las penas juveniles tienen criterios propios."
+        },
+        "zh": {
+          "plainSummary": "被告以武力、秘密或威胁手段，无法定权限且违背不满13岁儿童的意愿，限制其自由、劫持或拘禁。未经父母或法定监护人同意的拘禁属于违背儿童意愿。 在该非法拘禁过程中还须实施下列犯罪。 须对该儿童实施第794章规定的性侵犯。第794.011(1)(j)条界定了相应的性侵入或性器官接触，并排除出于真实医疗目的的行为。",
+          "degreeContext": "一级重罪，可判有期监禁直至终身，通常最高罚款10,000美元。 符合条件的行为可另行定罪量刑。对2026年7月1日起实施的行为，如构成法定家庭暴力且先前已有相应定罪，可升为终身级重罪，通常最高罚款15,000美元。须满足法定家庭关系或共同居住关系等条件。登记及未成年人的量刑另有标准。"
+        }
+      }
+    },
+    "gradingScope": "(3)(a)"
+  },
+  {
+    "id": "fl-fs-787-02-3-a-3-child-restraint",
+    "section": "787.02",
+    "scope": "(3)(a)3.",
+    "officialTitle": "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+    "dependencies": [
+      "787.02",
+      "800.04",
+      "847.0135",
+      "775.021",
+      "943.0435",
+      "921.1401",
+      "921.1402",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.02": [
+        "(1)",
+        "(3)(a)",
+        "(3)(a)3.",
+        "(3)(b)"
+      ],
+      "800.04": [
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "847.0135": [
+        "(5)"
+      ],
+      "775.021": [
+        "(4)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "921.1401": [
+        "(1)"
+      ],
+      "921.1402": [
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-02-3-a-3-child-restraint",
+      "name": "False imprisonment of a child under 13 with a listed lewd or lascivious act",
+      "names": {
+        "es": "Privación ilegal de libertad de menor de 13 años con un acto lascivo enumerado",
+        "zh": "非法拘禁不满13岁儿童并实施列明的猥亵行为"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.02(3)(a)3.",
+      "slug": "fl-fs-787-02-3-a-3-child-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.02(3)(a)3.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 800.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 847.0135",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0847/Sections/0847.0135.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1401",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1401.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1402",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1402.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)3.",
+          "F.S. 787.02(3)(a)3."
+        ],
+        "es": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)3.",
+          "F.S. 787.02(3)(a)3."
+        ],
+        "zh": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)3.",
+          "F.S. 787.02(3)(a)3."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The accused forcibly, secretly or by threat confined, abducted, imprisoned or restrained a child under 13, without lawful authority and against the child’s will. Confinement without parental or legal guardian consent is against the child’s will. During that false imprisonment the accused must also commit the following offense. The additional offense must be lewd or lascivious battery, molestation, conduct or exhibition under §800.04, or a qualifying computer transmission of a lewd exhibition under §847.0135(5). The underlying offense’s own age, act and knowledge requirements apply.",
+          "degreeContext": "First-degree felony punishable by a term of years up to life and ordinarily a fine up to $10,000. Separate convictions and sentences for the qualifying acts are permitted. For conduct from July 1, 2026, a qualifying domestic-violence offense preceded by a qualifying domestic-violence conviction can be reclassified as a life felony, with an ordinary fine up to $15,000. Family or household relationship and the statutory domestic-violence conditions must be established. Registration and juvenile sentencing have separate criteria."
+        },
+        "es": {
+          "plainSummary": "La persona acusada, por fuerza, en secreto o mediante amenaza, confinó, sustrajo, encarceló o restringió a un menor de 13 años sin autoridad legal y contra su voluntad. El confinamiento sin consentimiento del padre, madre o tutor legal es contrario a la voluntad del menor. Durante esa privación ilegal de libertad también debe cometerse el delito siguiente. Se requiere la modalidad de agresión, abuso, conducta o exhibición lasciva del §800.04 o una transmisión por computadora de exhibición lasciva del §847.0135(5). Rigen los requisitos propios de edad, conducta y conocimiento.",
+          "degreeContext": "Delito grave de primer grado punible con una pena de años hasta cadena perpetua y normalmente una multa de hasta $10,000. Se permiten condenas y penas separadas por los actos que califican. Para hechos desde el 1 de julio de 2026, un delito de violencia doméstica con una condena previa pertinente puede reclasificarse como delito de categoría perpetua, con multa ordinaria de hasta $15,000. Deben establecerse la relación familiar o de convivencia y los demás requisitos legales. El registro y las penas juveniles tienen criterios propios."
+        },
+        "zh": {
+          "plainSummary": "被告以武力、秘密或威胁手段，无法定权限且违背不满13岁儿童的意愿，限制其自由、劫持或拘禁。未经父母或法定监护人同意的拘禁属于违背儿童意愿。 在该非法拘禁过程中还须实施下列犯罪。 另须实施第800.04条列明的猥亵侵害、猥亵接触、行为或展示，或第847.0135(5)条规定的通过计算机传送猥亵展示。须满足基础犯罪相应的年龄、行为和明知要求。",
+          "degreeContext": "一级重罪，可判有期监禁直至终身，通常最高罚款10,000美元。 符合条件的行为可另行定罪量刑。对2026年7月1日起实施的行为，如构成法定家庭暴力且先前已有相应定罪，可升为终身级重罪，通常最高罚款15,000美元。须满足法定家庭关系或共同居住关系等条件。登记及未成年人的量刑另有标准。"
+        }
+      }
+    },
+    "gradingScope": "(3)(a)"
+  },
+  {
+    "id": "fl-fs-787-02-3-a-4-child-restraint",
+    "section": "787.02",
+    "scope": "(3)(a)4.",
+    "officialTitle": "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+    "dependencies": [
+      "787.02",
+      "796.04",
+      "796.001",
+      "775.021",
+      "943.0435",
+      "921.1401",
+      "921.1402",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.02": [
+        "(1)",
+        "(3)(a)",
+        "(3)(a)4.",
+        "(3)(b)"
+      ],
+      "796.04": [
+        "(1)",
+        "(2)"
+      ],
+      "796.001": [
+        ""
+      ],
+      "775.021": [
+        "(4)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "921.1401": [
+        "(1)"
+      ],
+      "921.1402": [
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-02-3-a-4-child-restraint",
+      "name": "False imprisonment of a child under 13 with coercing the child into prostitution",
+      "names": {
+        "es": "Privación ilegal de libertad de menor de 13 años con coacción al menor para ejercer la prostitución",
+        "zh": "非法拘禁不满13岁儿童并实施强迫该儿童卖淫"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.02(3)(a)4.",
+      "slug": "fl-fs-787-02-3-a-4-child-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.02(3)(a)4.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 796.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0796/Sections/0796.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 796.001",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0796/Sections/0796.001.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1401",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1401.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1402",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1402.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)4.",
+          "F.S. 787.02(3)(a)4."
+        ],
+        "es": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)4.",
+          "F.S. 787.02(3)(a)4."
+        ],
+        "zh": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)4.",
+          "F.S. 787.02(3)(a)4."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The accused forcibly, secretly or by threat confined, abducted, imprisoned or restrained a child under 13, without lawful authority and against the child’s will. Confinement without parental or legal guardian consent is against the child’s will. During that false imprisonment the accused must also commit the following offense. The accused forced, compelled or coerced the child to become a prostitute under §796.04. This choice covers that expressly incorporated act. Section 796.001 directs prosecution of adults involving minors toward other laws. Former §796.03 is a historical reference.",
+          "degreeContext": "First-degree felony punishable by a term of years up to life and ordinarily a fine up to $10,000. Separate convictions and sentences for the qualifying acts are permitted. For conduct from July 1, 2026, a qualifying domestic-violence offense preceded by a qualifying domestic-violence conviction can be reclassified as a life felony, with an ordinary fine up to $15,000. Family or household relationship and the statutory domestic-violence conditions must be established. Registration and juvenile sentencing have separate criteria."
+        },
+        "es": {
+          "plainSummary": "La persona acusada, por fuerza, en secreto o mediante amenaza, confinó, sustrajo, encarceló o restringió a un menor de 13 años sin autoridad legal y contra su voluntad. El confinamiento sin consentimiento del padre, madre o tutor legal es contrario a la voluntad del menor. Durante esa privación ilegal de libertad también debe cometerse el delito siguiente. La persona acusada forzó, obligó o coaccionó al menor a ejercer la prostitución según el §796.04. Esta opción se limita a esa conducta expresamente incorporada. El §796.001 orienta el enjuiciamiento de adultos que involucran a menores hacia otras leyes. El antiguo §796.03 es una referencia histórica.",
+          "degreeContext": "Delito grave de primer grado punible con una pena de años hasta cadena perpetua y normalmente una multa de hasta $10,000. Se permiten condenas y penas separadas por los actos que califican. Para hechos desde el 1 de julio de 2026, un delito de violencia doméstica con una condena previa pertinente puede reclasificarse como delito de categoría perpetua, con multa ordinaria de hasta $15,000. Deben establecerse la relación familiar o de convivencia y los demás requisitos legales. El registro y las penas juveniles tienen criterios propios."
+        },
+        "zh": {
+          "plainSummary": "被告以武力、秘密或威胁手段，无法定权限且违背不满13岁儿童的意愿，限制其自由、劫持或拘禁。未经父母或法定监护人同意的拘禁属于违背儿童意愿。 在该非法拘禁过程中还须实施下列犯罪。 被告依第796.04条所述强迫、迫使或胁迫该儿童卖淫。此选项仅涵盖明确援引的该行为。第796.001条指明涉及未成年人的成年人应依据其他法律追诉。原第796.03条属于历史引文。",
+          "degreeContext": "一级重罪，可判有期监禁直至终身，通常最高罚款10,000美元。 符合条件的行为可另行定罪量刑。对2026年7月1日起实施的行为，如构成法定家庭暴力且先前已有相应定罪，可升为终身级重罪，通常最高罚款15,000美元。须满足法定家庭关系或共同居住关系等条件。登记及未成年人的量刑另有标准。"
+        }
+      }
+    },
+    "gradingScope": "(3)(a)"
+  },
+  {
+    "id": "fl-fs-787-02-3-a-5-child-restraint",
+    "section": "787.02",
+    "scope": "(3)(a)5.",
+    "officialTitle": "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+    "dependencies": [
+      "787.02",
+      "450.151",
+      "775.021",
+      "943.0435",
+      "921.1401",
+      "921.1402",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.02": [
+        "(1)",
+        "(3)(a)",
+        "(3)(a)5.",
+        "(3)(b)"
+      ],
+      "450.151": [
+        ""
+      ],
+      "775.021": [
+        "(4)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "921.1401": [
+        "(1)"
+      ],
+      "921.1402": [
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-02-3-a-5-child-restraint",
+      "name": "False imprisonment of a child under 13 with exploiting or allowing exploitation of the child",
+      "names": {
+        "es": "Privación ilegal de libertad de menor de 13 años con explotación del menor o permitir su explotación",
+        "zh": "非法拘禁不满13岁儿童并实施剥削或容许剥削该儿童"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.02(3)(a)5.",
+      "slug": "fl-fs-787-02-3-a-5-child-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.02(3)(a)5.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 450.151",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0450/Sections/0450.151.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1401",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1401.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1402",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1402.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)5.",
+          "F.S. 787.02(3)(a)5."
+        ],
+        "es": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)5.",
+          "F.S. 787.02(3)(a)5."
+        ],
+        "zh": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)5.",
+          "F.S. 787.02(3)(a)5."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The accused forcibly, secretly or by threat confined, abducted, imprisoned or restrained a child under 13, without lawful authority and against the child’s will. Confinement without parental or legal guardian consent is against the child’s will. During that false imprisonment the accused must also commit the following offense. The accused exploited the child or allowed exploitation in violation of §450.151. That provision reaches causing or permitting suffering through the listed use or employment of a child, inflicting unjustifiable physical pain or mental suffering, willfully causing or permitting the specified danger to life or injury to health, or having custody for such purposes.",
+          "degreeContext": "First-degree felony punishable by a term of years up to life and ordinarily a fine up to $10,000. Separate convictions and sentences for the qualifying acts are permitted. For conduct from July 1, 2026, a qualifying domestic-violence offense preceded by a qualifying domestic-violence conviction can be reclassified as a life felony, with an ordinary fine up to $15,000. Family or household relationship and the statutory domestic-violence conditions must be established. Registration and juvenile sentencing have separate criteria."
+        },
+        "es": {
+          "plainSummary": "La persona acusada, por fuerza, en secreto o mediante amenaza, confinó, sustrajo, encarceló o restringió a un menor de 13 años sin autoridad legal y contra su voluntad. El confinamiento sin consentimiento del padre, madre o tutor legal es contrario a la voluntad del menor. Durante esa privación ilegal de libertad también debe cometerse el delito siguiente. La persona acusada explotó al menor o permitió su explotación en violación del §450.151. Se incluyen causar o permitir sufrimiento mediante los usos o empleos enumerados, infligir dolor físico o sufrimiento mental injustificable, crear o permitir deliberadamente el peligro para la vida o el daño a la salud previstos, o tener al menor bajo custodia para esos fines.",
+          "degreeContext": "Delito grave de primer grado punible con una pena de años hasta cadena perpetua y normalmente una multa de hasta $10,000. Se permiten condenas y penas separadas por los actos que califican. Para hechos desde el 1 de julio de 2026, un delito de violencia doméstica con una condena previa pertinente puede reclasificarse como delito de categoría perpetua, con multa ordinaria de hasta $15,000. Deben establecerse la relación familiar o de convivencia y los demás requisitos legales. El registro y las penas juveniles tienen criterios propios."
+        },
+        "zh": {
+          "plainSummary": "被告以武力、秘密或威胁手段，无法定权限且违背不满13岁儿童的意愿，限制其自由、劫持或拘禁。未经父母或法定监护人同意的拘禁属于违背儿童意愿。 在该非法拘禁过程中还须实施下列犯罪。 被告违反第450.151条剥削该儿童或容许其受剥削。该条涵盖通过列明的使用或雇用行为造成或允许儿童受苦、造成不正当的身体疼痛或精神痛苦、故意造成或允许规定的生命危险或健康损伤，或出于上述目的监护该儿童。",
+          "degreeContext": "一级重罪，可判有期监禁直至终身，通常最高罚款10,000美元。 符合条件的行为可另行定罪量刑。对2026年7月1日起实施的行为，如构成法定家庭暴力且先前已有相应定罪，可升为终身级重罪，通常最高罚款15,000美元。须满足法定家庭关系或共同居住关系等条件。登记及未成年人的量刑另有标准。"
+        }
+      }
+    },
+    "gradingScope": "(3)(a)"
+  },
+  {
+    "id": "fl-fs-787-02-3-a-6-child-restraint",
+    "section": "787.02",
+    "scope": "(3)(a)6.",
+    "officialTitle": "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+    "dependencies": [
+      "787.02",
+      "787.06",
+      "794.011",
+      "775.021",
+      "943.0435",
+      "921.1401",
+      "921.1402",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.02": [
+        "(1)",
+        "(3)(a)",
+        "(3)(a)6.",
+        "(3)(b)"
+      ],
+      "787.06": [
+        "(2)",
+        "(3)",
+        "(3)(g)",
+        "(5)"
+      ],
+      "794.011": [
+        "(1)",
+        "(10)"
+      ],
+      "775.021": [
+        "(4)"
+      ],
+      "943.0435": [
+        "(1)(h)"
+      ],
+      "921.1401": [
+        "(1)"
+      ],
+      "921.1402": [
+        "(2)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-02-3-a-6-child-restraint",
+      "name": "False imprisonment of a child under 13 with a listed human trafficking offense",
+      "names": {
+        "es": "Privación ilegal de libertad de menor de 13 años con un delito enumerado de trata de personas",
+        "zh": "非法拘禁不满13岁儿童并实施列明的人口贩运犯罪"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.02(3)(a)6.",
+      "slug": "fl-fs-787-02-3-a-6-child-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.02(3)(a)6.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.06",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.06.html"
+        },
+        {
+          "citation": "Fla. Stat. § 794.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 943.0435",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1401",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1401.html"
+        },
+        {
+          "citation": "Fla. Stat. § 921.1402",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1402.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)6.",
+          "F.S. 787.02(3)(a)6."
+        ],
+        "es": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)6.",
+          "F.S. 787.02(3)(a)6."
+        ],
+        "zh": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(3)(a)6.",
+          "F.S. 787.02(3)(a)6."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "The accused forcibly, secretly or by threat confined, abducted, imprisoned or restrained a child under 13, without lawful authority and against the child’s will. Confinement without parental or legal guardian consent is against the child’s will. During that false imprisonment the accused must also commit the following offense. Section 787.06(3)(g) covers knowingly or recklessly disregarding the facts when trafficking, attempting it or receiving financial benefit from participation in a trafficking venture for commercial sexual activity involving a child, someone believed to be a child, or a person with the specified mental impairment. From October 1, 2025, §787.06(5) also qualifies when an adult knowingly initiates, organizes, plans, finances, directs, manages or supervises a venture that subjected a child under 12 or a person with the specified mental impairment to trafficking for sexual exploitation as defined in §787.06(2)(i), a §794.011 violation excluding (10). The age limits for this predicate and for the restraint charge differ. Capital classification belongs only to the separate §787.06(5) trafficking charge.",
+          "degreeContext": "First-degree felony punishable by a term of years up to life and ordinarily a fine up to $10,000. Separate convictions and sentences for the qualifying acts are permitted. For conduct from July 1, 2026, a qualifying domestic-violence offense preceded by a qualifying domestic-violence conviction can be reclassified as a life felony, with an ordinary fine up to $15,000. Family or household relationship and the statutory domestic-violence conditions must be established. Registration and juvenile sentencing have separate criteria."
+        },
+        "es": {
+          "plainSummary": "La persona acusada, por fuerza, en secreto o mediante amenaza, confinó, sustrajo, encarceló o restringió a un menor de 13 años sin autoridad legal y contra su voluntad. El confinamiento sin consentimiento del padre, madre o tutor legal es contrario a la voluntad del menor. Durante esa privación ilegal de libertad también debe cometerse el delito siguiente. El §787.06(3)(g) abarca realizar o intentar la trata o beneficiarse económicamente por participar en una empresa de trata, a sabiendas o con desprecio temerario de los hechos, para actividad sexual comercial que involucre a un menor, una persona que se cree menor o una con la incapacidad mental prevista. Desde el 1 de octubre de 2025 también califica el §787.06(5) si un adulto a sabiendas inicia, organiza, planifica, financia, dirige, administra o supervisa una empresa que sometió a un menor de 12 años o una persona con la incapacidad mental prevista a trata para explotación sexual, definida en §787.06(2)(i) como infracción del §794.011 salvo el apartado (10). Los límites de edad de la trata y la restricción difieren. La clasificación capital corresponde únicamente al cargo separado bajo §787.06(5).",
+          "degreeContext": "Delito grave de primer grado punible con una pena de años hasta cadena perpetua y normalmente una multa de hasta $10,000. Se permiten condenas y penas separadas por los actos que califican. Para hechos desde el 1 de julio de 2026, un delito de violencia doméstica con una condena previa pertinente puede reclasificarse como delito de categoría perpetua, con multa ordinaria de hasta $15,000. Deben establecerse la relación familiar o de convivencia y los demás requisitos legales. El registro y las penas juveniles tienen criterios propios."
+        },
+        "zh": {
+          "plainSummary": "被告以武力、秘密或威胁手段，无法定权限且违背不满13岁儿童的意愿，限制其自由、劫持或拘禁。未经父母或法定监护人同意的拘禁属于违背儿童意愿。 在该非法拘禁过程中还须实施下列犯罪。 依第787.06(3)(g)条，行为人明知事实或鲁莽地无视事实，实施、企图实施人口贩运，或通过参与贩运活动获取经济利益，商业性活动涉及儿童、被认为是儿童者或具有法定精神障碍者。自2025年10月1日起，第787.06(5)条还涵盖成年人明知而发起、组织、策划、资助、指挥、管理或监督一项使不满12岁儿童或具有法定精神障碍者因性剥削而遭贩运的活动。依第787.06(2)(i)条，性剥削指违反第794.011条的行为，第(10)款除外。基础贩运罪与限制自由罪的年龄界限不同。死刑级别仅指另行起诉的第787.06(5)条贩运罪。",
+          "degreeContext": "一级重罪，可判有期监禁直至终身，通常最高罚款10,000美元。 符合条件的行为可另行定罪量刑。对2026年7月1日起实施的行为，如构成法定家庭暴力且先前已有相应定罪，可升为终身级重罪，通常最高罚款15,000美元。须满足法定家庭关系或共同居住关系等条件。登记及未成年人的量刑另有标准。"
+        }
+      }
+    },
+    "gradingScope": "(3)(a)"
+  }
+]
