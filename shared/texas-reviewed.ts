@@ -1,3 +1,4 @@
+import fraud from "./texas-card-identity-fraud.json";
 import road from "./texas-road-safety.json";
 import justice from "./texas-justice-process.json";
 import family from "./texas-family-safety.json";
@@ -43,6 +44,7 @@ export const texasReviewedRecords = [
   ...family,
   ...justice,
   ...road,
+  ...fraud,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 
@@ -91,7 +93,14 @@ export function isTexasAmbiguousCollision(charge: TexasSavedSelection, jurisdict
     (/^(?:(?:Tex\.\s*)?(?:Transp\.|Transportation) Code\s*)?(?:§\s*)?550\.(?:021|022|024)(?:$|\()/.test(charge.code?.trim() ?? "") || /^hit(?:-| )and(?:-| )run$/i.test(charge.name.trim()));
 }
 
+export const texasHeldFraudIds = new Set(["tx-identity-theft", "tx-credit-card-fraud"]);
+export function isTexasAmbiguousFraud(charge: TexasSavedSelection, jurisdiction?: string) {
+  if (charge.id) return texasHeldFraudIds.has(charge.id);
+  return /^(TX|Texas)$/i.test(jurisdiction ?? "") &&
+    (/^(?:(?:Tex\.\s*)?Penal Code\s*)?(?:§\s*)?32\.(?:315|31|51)(?:$|\()/.test(charge.code?.trim() ?? "") || /^(?:identity theft|credit card fraud)$/i.test(charge.name.trim()));
+}
+
 export function needsTexasChargeReselection(charge: TexasSavedSelection, jurisdiction?: string) {
-  return isTexasAmbiguousCollision(charge, jurisdiction) || isTexasAmbiguousDelivery(charge, jurisdiction) || isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
+  return isTexasAmbiguousFraud(charge, jurisdiction) || isTexasAmbiguousCollision(charge, jurisdiction) || isTexasAmbiguousDelivery(charge, jurisdiction) || isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
     isTexasAmbiguousVehicleBurglary(charge, jurisdiction);
 }

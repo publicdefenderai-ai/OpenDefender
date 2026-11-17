@@ -1,4 +1,4 @@
-import { texasHeldRoadId, texasHeldDeliveryIds, texasHeldCarryId, texasHeldTheftId, texasReviewedById, texasReviewedRecords, texasReviewedCitation, texasReviewedUrl } from "./texas-reviewed";
+import { texasHeldFraudIds, texasHeldRoadId, texasHeldDeliveryIds, texasHeldCarryId, texasHeldTheftId, texasReviewedById, texasReviewedRecords, texasReviewedCitation, texasReviewedUrl } from "./texas-reviewed";
 import { FLORIDA_LEGACY_REMAINING } from "./florida-legacy-remaining";
 import { FLORIDA_LEGACY_SEXUAL } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
@@ -3818,7 +3818,7 @@ export function getChargeExplanation(
   canonicalChargeId?: string,
 ): ChargeExplanationWithJurisdiction | null {
   if (canonicalChargeId && texasHeldDeliveryIds.has(canonicalChargeId)) return null;
-  if (canonicalChargeId === texasHeldRoadId || canonicalChargeId === texasHeldCarryId || canonicalChargeId === texasHeldTheftId) return null;
+  if (texasHeldFraudIds.has(canonicalChargeId ?? "") || canonicalChargeId === texasHeldRoadId || canonicalChargeId === texasHeldCarryId || canonicalChargeId === texasHeldTheftId) return null;
   const reviewed = jurisdiction?.toUpperCase() === "TX"
     ? canonicalChargeId ? texasReviewedById.get(canonicalChargeId)
       : texasReviewedRecords.find(row => row.name.toLowerCase() === chargeName.trim().toLowerCase())

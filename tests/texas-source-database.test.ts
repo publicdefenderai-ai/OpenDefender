@@ -35,15 +35,15 @@ describe("Texas authority manifest", () => {
 
     expect(manifest.catalogRecords).toHaveLength(txCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(txCount);
-    expect(seed.sources).toHaveLength(147);
-    expect(seed.snapshots).toHaveLength(1515);
-    expect(seed.links).toHaveLength(1515);
-    expect(seed.selectableChargeIds).toHaveLength(194);
+    expect(seed.sources).toHaveLength(151);
+    expect(seed.snapshots).toHaveLength(1840);
+    expect(seed.links).toHaveLength(1840);
+    expect(seed.selectableChargeIds).toHaveLength(221);
     expect(seed.selectableChargeIds).toContain("tx-aggravated-assault");
     expect(seed.selectableChargeIds).not.toContain("tx-bank-robbery");
     expect(seed.selectableChargeIds).not.toContain("tx-wire-fraud");
     expect(manifest.catalogRecords.filter((record) =>
-      record.disposition === "require_exact_reselection")).toHaveLength(74);
+      record.disposition === "require_exact_reselection")).toHaveLength(75);
   });
 
   it("stores TCSS text, hashes, currentness evidence, and official source identity", () => {
@@ -115,8 +115,7 @@ describe("Texas authority manifest", () => {
 
   it("exposes official names for reviewed aliases and TCSS URLs in the shared catalog helpers", () => {
     expect(getChargeById("tx-involuntary-manslaughter")?.name).toBe("Manslaughter");
-    expect(getChargeById("tx-identity-theft")?.name)
-      .toBe("Fraudulent Use or Possession of Identifying Information");
+    expect(getChargeById("tx-identity-theft")).toBeUndefined(); // Quantity and conduct require exact reselection.
     expect(getChargesByJurisdiction("TX").find((charge) =>
       charge.id === "tx-auto-burglary")?.name).toBe("Burglary of Vehicles");
     expect(getVerifiedSourceUrl(getChargeById("tx-aggravated-assault")!))

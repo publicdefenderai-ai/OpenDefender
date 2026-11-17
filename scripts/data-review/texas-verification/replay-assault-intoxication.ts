@@ -43,7 +43,11 @@ import justiceEvidence from "../output/texas-justice-process-evidence.json";
 import roadRows from "../../../shared/texas-road-safety.json";
 import roadEvidence from "../output/texas-road-safety-evidence.json";
 
+import fraudRows from "../../../shared/texas-card-identity-fraud.json";
+import fraudEvidence from "../output/texas-card-identity-fraud-evidence.json";
+
 const batches = new Map([
+  ["card-identity-fraud", { rows: fraudRows, evidence: Object.entries(fraudEvidence) }],
   ["road-safety", { rows: roadRows, evidence: Object.entries(roadEvidence) }],
   ["justice-process", { rows: justiceRows, evidence: Object.entries(justiceEvidence) }],
   ["family-safety", { rows: familyRows, evidence: Object.entries(familyEvidence) }],
