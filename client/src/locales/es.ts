@@ -5483,6 +5483,7 @@ export default {
       "disclaimer": "OpenDefender no sustituye a un abogado con licencia. Es una herramienta de orientación, diseñada para ayudarle a entender lo que está ocurriendo, cuáles son sus opciones y dónde encontrar el apoyo adecuado, ya sea legal, logístico o personal."
     }
   },
+  "missingPage": {"title": "No encontramos esta página", "description": "La página que busca puede haberse movido o el enlace puede ser incorrecto.", "home": "Ir al inicio", "resources": "Explorar recursos"},
   "privacyPolicy": {
     "reader": {"contents": "En esta página · {{count}} categorías", "index": "Índice de la política de privacidad", "sources": "Fuentes de datos"},
     "hero": {

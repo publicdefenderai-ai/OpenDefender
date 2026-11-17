@@ -5481,6 +5481,7 @@ export default {
       "disclaimer": "OpenDefender is not a substitute for a licensed attorney. It is an orientation tool, designed to help you understand what is happening, what your options are, and where to find the right support, whether that is legal, logistical, or personal."
     }
   },
+  "missingPage": {"title": "We couldn’t find this page", "description": "The page you’re looking for may have moved, or the link may be incorrect.", "home": "Go to homepage", "resources": "Browse resources"},
   "privacyPolicy": {
     "reader": {"contents": "On this page · {{count}} categories", "index": "Privacy policy contents", "sources": "Data Sources"},
     "hero": {

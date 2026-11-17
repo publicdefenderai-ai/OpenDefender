@@ -709,3 +709,7 @@ The notice uses the approved notice-layout.html reading layout. A keyboard-opera
 ### Privacy Policy
 
 The 12-category policy uses the shared reading layout and contents index. Its AI inventory compares five features, the data sent and the published retention limits. On narrow screens each feature keeps its own labeled fields. The policy text, publication date, provider terms links and privilege disclosure are preserved in all three languages.
+
+### Missing-page recovery
+
+Unknown URLs use the shared header, appearance controls and footer. A document warning symbol and localized explanation identify the error. Homepage and resource-directory links provide recovery destinations. The route fallback is exercised with keyboard navigation across English, Spanish and Chinese, both themes, and 320px screens.

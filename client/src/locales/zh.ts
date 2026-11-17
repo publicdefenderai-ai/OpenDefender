@@ -5483,6 +5483,7 @@ export default {
       "disclaimer": "OpenDefender 不能替代持证律师。它是一个指导工具，旨在帮助您了解正在发生的事情、您的选择以及在哪里找到合适的支持，无论是法律上的、后勤上的还是个人方面的。"
     }
   },
+  "missingPage": {"title": "找不到此页面", "description": "您要查找的页面可能已移动，或链接有误。", "home": "返回首页", "resources": "浏览资源"},
   "privacyPolicy": {
     "reader": {"contents": "本页内容 · {{count}} 个类别", "index": "隐私政策目录", "sources": "数据来源"},
     "hero": {
