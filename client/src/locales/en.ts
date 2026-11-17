@@ -4781,6 +4781,9 @@ export default {
   },
   "diversionPrograms": {
     "directory": {
+      "lookupUnavailable": "ZIP code lookup unavailable",
+      "lookupHelp": "We could not identify the state for this ZIP code. Try again, or clear the ZIP code and choose a state. This does not mean there are no programs in your area.",
+      "retry": "Try ZIP lookup again",
       "title": "Explore diversion.",
       "accent": "Understand your options.",
       "intro": "Find diversion and alternative sentencing programs by location and program type. Review the details with your lawyer to understand what may apply to your case.",

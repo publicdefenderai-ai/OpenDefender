@@ -25,3 +25,5 @@
 @media (max-width: 700px) {
   .diversion-filter-row, .diversion-result { grid-template-columns: minmax(0,1fr); gap: .75rem; }
 }
+
+.diversion-retry { min-height: 44px; color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
