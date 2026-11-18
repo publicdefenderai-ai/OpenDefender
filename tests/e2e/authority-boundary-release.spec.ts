@@ -68,8 +68,12 @@ async function expectChargePresence(
 
 test.describe("authority boundary release gate", () => {
   test("public v1 charge search returns Florida first-degree robbery with its jury instruction", async ({ page }) => {
+    // Catalog growth can move this result beyond the first global page.
+    const globalIds = await allChargeSearchIds(page.request, '/api/v1/search?q=robbery&types=charge');
+    expect(globalIds.has('fl-robbery-in-the-first-degree')).toBe(true);
+    expect(globalIds.has('il-robbery-in-the-second-degree')).toBe(false);
     const searchResponse = await page.request.get(
-      "/api/v1/search?q=robbery&types=charge&limit=20",
+      "/api/v1/search?q=robbery&types=charge&jurisdiction=FL&limit=100",
     );
     expect(searchResponse.ok()).toBe(true);
     const searchPayload = await searchResponse.json() as SearchPayload & {

@@ -678,35 +678,41 @@ export function buildFloridaSourceDatabaseSeed(
   manifest: FloridaAuthorityManifest,
   now: Date = new Date(),
 ): AuthoritySourceDatabaseSeed {
+  // Build-local only: revalidate every family on each subsequent call.
+  const freshness = new Map<(at: Date) => boolean, boolean>();
+  const fresh = (check: (at: Date) => boolean): boolean => {
+    if (!freshness.has(check)) freshness.set(check, check(now));
+    return freshness.get(check)!;
+  };
   const records = manifest.catalogRecords.filter(record =>
     !FLORIDA_REVIEWED_SOURCE_RECORDS.some(source => source.chargeId === record.chargeId) ||
-    isFloridaReviewedSourceFresh(now))
-    .filter(record => !FLORIDA_PERSONS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaPersonsSourceFresh(now))
-    .filter(record => !FLORIDA_ROBBERY_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaRobberySourceFresh(now))
-    .filter(record => !FLORIDA_FALSE_REPORTS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaFalseReportsSourceFresh(now))
-    .filter(record => !FLORIDA_OBSCENITY_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaObscenitySourceFresh(now))
-    .filter(record => !FLORIDA_COMPUTER_FINANCIAL_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaComputerFinancialSourceFresh(now))
-    .filter(record => !FLORIDA_FIRE_RIOT_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaFireRiotSourceFresh(now))
-    .filter(record => !FLORIDA_REGULATORY_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaRegulatorySourceFresh(now))
-    .filter(record => !FLORIDA_CHILD_RESTRAINT_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaChildRestraintSourceFresh(now))
-    .filter(record => !FLORIDA_CHILD_VICTIMS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaChildVictimsSourceFresh(now))
-    .filter(record => !FLORIDA_VEHICLE_IDENTIFIERS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaVehicleIdentifiersSourceFresh(now))
-    .filter(record => !FLORIDA_PAYMENT_FRAUD_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaPaymentFraudSourceFresh(now))
-    .filter(record => !FLORIDA_PRESCRIPTION_FRAUD_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaPrescriptionFraudSourceFresh(now))
-    .filter(record => !FLORIDA_THEFT_THRESHOLDS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaTheftThresholdsSourceFresh(now))
-    .filter(record => !FLORIDA_BOATING_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaBoatingSourceFresh(now))
-    .filter(record => !FLORIDA_PROTECTED_PERSONS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaProtectedPersonsSourceFresh(now))
-    .filter(record => !FLORIDA_LICENSE_DOCUMENTS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaLicenseDocumentsSourceFresh(now))
-    .filter(record => !FLORIDA_PROPERTY_DAMAGE_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaPropertyDamageSourceFresh(now))
-    .filter(record => !FLORIDA_EXPLOITATION_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaExploitationSourceFresh(now))
-    .filter(record => !FLORIDA_FORGED_INSTRUMENTS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaForgedInstrumentsSourceFresh(now))
-    .filter(record => !FLORIDA_CORRUPTION_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaCorruptionSourceFresh(now))
-    .filter(record => !FLORIDA_ROAD_RACING_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaRoadRacingSourceFresh(now))
-    .filter(record => !FLORIDA_COURT_OFFICIALS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaCourtOfficialsSourceFresh(now))
-    .filter(record => !FLORIDA_JUSTICE_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaJusticeSourceFresh(now))
-    .filter(record => !FLORIDA_CREDIT_CARD_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaCreditCardSourceFresh(now))
-    .filter(record => !FLORIDA_RESTRAINT_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaRestraintSourceFresh(now))
-    .filter(record => !FLORIDA_CRASH_FLIGHT_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaCrashFlightSourceFresh(now));
+    fresh(isFloridaReviewedSourceFresh))
+    .filter(record => !FLORIDA_PERSONS_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaPersonsSourceFresh))
+    .filter(record => !FLORIDA_ROBBERY_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaRobberySourceFresh))
+    .filter(record => !FLORIDA_FALSE_REPORTS_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaFalseReportsSourceFresh))
+    .filter(record => !FLORIDA_OBSCENITY_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaObscenitySourceFresh))
+    .filter(record => !FLORIDA_COMPUTER_FINANCIAL_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaComputerFinancialSourceFresh))
+    .filter(record => !FLORIDA_FIRE_RIOT_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaFireRiotSourceFresh))
+    .filter(record => !FLORIDA_REGULATORY_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaRegulatorySourceFresh))
+    .filter(record => !FLORIDA_CHILD_RESTRAINT_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaChildRestraintSourceFresh))
+    .filter(record => !FLORIDA_CHILD_VICTIMS_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaChildVictimsSourceFresh))
+    .filter(record => !FLORIDA_VEHICLE_IDENTIFIERS_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaVehicleIdentifiersSourceFresh))
+    .filter(record => !FLORIDA_PAYMENT_FRAUD_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaPaymentFraudSourceFresh))
+    .filter(record => !FLORIDA_PRESCRIPTION_FRAUD_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaPrescriptionFraudSourceFresh))
+    .filter(record => !FLORIDA_THEFT_THRESHOLDS_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaTheftThresholdsSourceFresh))
+    .filter(record => !FLORIDA_BOATING_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaBoatingSourceFresh))
+    .filter(record => !FLORIDA_PROTECTED_PERSONS_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaProtectedPersonsSourceFresh))
+    .filter(record => !FLORIDA_LICENSE_DOCUMENTS_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaLicenseDocumentsSourceFresh))
+    .filter(record => !FLORIDA_PROPERTY_DAMAGE_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaPropertyDamageSourceFresh))
+    .filter(record => !FLORIDA_EXPLOITATION_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaExploitationSourceFresh))
+    .filter(record => !FLORIDA_FORGED_INSTRUMENTS_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaForgedInstrumentsSourceFresh))
+    .filter(record => !FLORIDA_CORRUPTION_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaCorruptionSourceFresh))
+    .filter(record => !FLORIDA_ROAD_RACING_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaRoadRacingSourceFresh))
+    .filter(record => !FLORIDA_COURT_OFFICIALS_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaCourtOfficialsSourceFresh))
+    .filter(record => !FLORIDA_JUSTICE_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaJusticeSourceFresh))
+    .filter(record => !FLORIDA_CREDIT_CARD_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaCreditCardSourceFresh))
+    .filter(record => !FLORIDA_RESTRAINT_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaRestraintSourceFresh))
+    .filter(record => !FLORIDA_CRASH_FLIGHT_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isFloridaCrashFlightSourceFresh));
   const sources = new Map<string, AuthoritySourceSeed>();
   const snapshots: AuthoritySourceDatabaseSeed["snapshots"] = [];
   const snapshotIdentities = new Set<string>();
