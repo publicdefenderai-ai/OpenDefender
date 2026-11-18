@@ -6,8 +6,8 @@
     "category": "felony",
     "code": "22.01(b)(1)",
     "citation": "Tex. Penal Code § 22.01(b)(1)",
-    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor knows the person is a public servant and the person is lawfully discharging an official duty, or the assault is in retaliation for or on account of official power or duty. Public servant has the broad definition in §1.07(a)(41), including specified government officers/employees, jurors and other listed roles. This ordinary public-servant choice excludes the more specific peace-officer/judge second-degree circumstance; a person’s status alone does not replace the required duty connection. The distinctive-uniform/badge knowledge presumption requires its facts and does not compel guilt. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
-    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor knows the person is a public servant and the person is lawfully discharging an official duty, or the assault is in retaliation for or on account of official power or duty. Public servant has the broad definition in §1.07(a)(41), including specified government officers/employees, jurors and other listed roles. This ordinary public-servant choice excludes the more specific peace-officer/judge second-degree circumstance. Section 22.01(b-2) applies to bodily-injury assault against any legally defined peace officer or judge whom the actor knows has that status, while the officer or judge lawfully discharges an official duty or in retaliation for or on account of official power or duty. A qualifying officer role does not become third-degree merely because that role is not offered in the separate, narrowly scoped officer selector. This does not clear additional officer roles for selection or make every assault on an officer second-degree; the bodily-injury, knowledge and duty/retaliation requirements must be satisfied. The distinctive-uniform/badge knowledge presumption requires its facts and does not compel guilt. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The qualifying peace-officer/judge bodily-injury circumstance under §22.01(b-2) is instead second-degree, ordinarily two to 20 years in prison and a possible fine up to $10,000; the selector’s limited officer-role coverage does not reduce that statutory grade. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
     "references": [
       {
         "code": "PE",
@@ -66,6 +66,12 @@
       {
         "code": "PE",
         "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
         "subdivision": null,
         "supportRole": "penalty"
       },

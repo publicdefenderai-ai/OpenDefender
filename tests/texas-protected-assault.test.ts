@@ -22,6 +22,14 @@ it("accounts for three ranked codes and twenty-four distinct roles/conduct branc
 it("distinguishes public-servant and specific peace-officer/judge grades",()=>{
  expect(row("22-01-public-servant").penalty).toContain("Third-degree felony");
  expect(row("22-01-public-servant").conduct).toContain("excludes the more specific");
+ expect(row("22-01-public-servant").conduct).toContain("any legally defined peace officer or judge");
+ expect(row("22-01-public-servant").conduct).toContain("does not become third-degree");
+ expect(row("22-01-public-servant").conduct).toContain("bodily-injury, knowledge and duty/retaliation requirements");
+ expect(row("22-01-public-servant").penalty).toContain("instead second-degree, ordinarily two to 20 years");
+ expect(row("22-01-public-servant").references).toContainEqual({code:"PE",section:"12.33",subdivision:null,supportRole:"penalty"});
+ expect(evidence["PE:22.01"].text).toContain("(b-2) Notwithstanding Subsection (b)(1), an offense under Subsection (a)(1) is a felony of the second degree");
+ expect(evidence["PE:22.01"].text).toContain("the actor knows is a peace officer or judge while the officer or judge is lawfully discharging an official duty");
+
  for(const id of ["peace-officer","judge"]){
   expect(row("22-01-"+id).penalty).toContain("Second-degree felony");
   expect(row("22-01-"+id).conduct).toContain("lawfully discharging");
