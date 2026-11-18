@@ -11,7 +11,7 @@ function isZipCode(query: string): boolean {
   return /^\d{5}$/.test(query.trim());
 }
 
-export async function searchDiversionProgramsExpanded(query: string): Promise<ExpandedSearchResult> {
+export async function searchDiversionProgramsExpanded(query: string): Promise<ExpandedSearchResult & { locationUnavailable?: boolean }> {
   if (!query.trim()) {
     return { programs: [] };
   }
@@ -38,8 +38,8 @@ export async function searchDiversionProgramsExpanded(query: string): Promise<Ex
       console.error("Error geocoding zip code for diversion programs:", error);
     }
 
-    // Fall back to regular search if geocoding fails
-    return { programs: searchDiversionPrograms(trimmedQuery) };
+    // A failed location lookup cannot establish that an area has no programs.
+    return { programs: [], locationUnavailable: true };
   }
 
   // For non-zip-code queries, use the regular search

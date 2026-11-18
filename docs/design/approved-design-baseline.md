@@ -721,3 +721,7 @@ Unknown URLs use the shared header, appearance controls and footer. A document w
 ### How To screenshots
 
 The five path illustrations now use actual captures of First 24 Hours, Case Guidance, Life & Family Support, Immigration and Friends & Family from main at e44cc81. Each has English, Spanish and Chinese WebP versions at 1280 × 960. Captures use light mode consistently, load lazily and open at full size in a new tab. The current paths and both parallel journey examples remain available.
+
+### Diversion search recovery
+
+The directory retains the published program-scope disclaimer alongside the variability notice. ZIP lookups that cannot identify a state show a localized recovery message instead of an empty-results claim. Readers can retry or clear the ZIP and select a state. Successful statewide expansion and text filtering retain their existing behavior. Browser checks cover recovery in all three interface languages and narrow screens.
