@@ -10,8 +10,8 @@ describe("committed Texas deployment seed", () => {
     expect(manifest.source).toBe(
       "Texas Legislative Council TCSS static HTML (tcss.legis.texas.gov/resources)",
     );
-    expect(manifest.catalogRecords).toHaveLength(320);
-    expect(seed.selectableChargeIds).toHaveLength(245);
+    expect(manifest.catalogRecords).toHaveLength(331);
+    expect(seed.selectableChargeIds).toHaveLength(256);
     expect(seed.sources.every((source) =>
       source.canonicalUrl.startsWith("https://tcss.legis.texas.gov/resources/"),
     )).toBe(true);

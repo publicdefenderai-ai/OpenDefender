@@ -1,0 +1,1101 @@
+[
+  {
+    "id": "tx-robbery-in-the-second-degree",
+    "name": "Robbery",
+    "officialTitle": "ROBBERY.",
+    "category": "felony",
+    "code": "29.02(a)",
+    "citation": "Tex. Penal Code § 29.02(a)",
+    "conduct": "In the course of committing theft and with intent to obtain or maintain control of the property, either intentionally, knowingly or recklessly causing bodily injury to another, or intentionally or knowingly threatening or placing another in fear of imminent bodily injury or death. Recklessness alone does not satisfy the threat/fear alternative. The course of theft includes an attempt, commission, or immediate flight after an attempt or commission; a completed taking is not required. The theft elements and required connection to the injury or threat still must be proved. There is no property-value threshold for this robbery grade. This choice describes ordinary robbery without an aggravated circumstance under §29.03.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "29.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "29.02",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "29.02",
+        "subdivision": "(a)(1), (a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "29.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (17), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "29.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "12990001"
+  },
+  {
+    "id": "tx-robbery-in-the-first-degree",
+    "name": "Aggravated robbery",
+    "officialTitle": "AGGRAVATED ROBBERY.",
+    "category": "felony",
+    "code": "29.03(a)",
+    "citation": "Tex. Penal Code § 29.03(a)",
+    "conduct": "Robbery under §29.02 plus at least one aggravated circumstance: causing serious bodily injury to another; using or exhibiting a deadly weapon; or causing bodily injury to, or threatening/placing in fear of imminent bodily injury or death, a person who is age 65 or older or is disabled as defined in §29.03(c). That disability definition requires a mental, physical or developmental disability and substantial inability to protect oneself from harm; the different §22.04 definition is not substituted. The statute does not add a requirement that the actor know the victim’s age to the age branch. In the course of committing theft and with intent to obtain or maintain control of the property, either intentionally, knowingly or recklessly causing bodily injury to another, or intentionally or knowingly threatening or placing another in fear of imminent bodily injury or death. Recklessness alone does not satisfy the threat/fear alternative. The course of theft includes an attempt, commission, or immediate flight after an attempt or commission; a completed taking is not required. The theft elements and required connection to the injury or threat still must be proved. There is no property-value threshold for this robbery grade.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Article 42A.054 restricts judge-ordered community supervision for aggravated robbery. Jury-recommended supervision has separate eligibility rules; this summary does not promise probation or treat all forms of supervision as identical. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "29.03",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "29.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "29.02",
+        "subdivision": "(a)(1), (a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "29.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (17), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "29.03",
+        "subdivision": "(a)(1), (a)(2), (a)(3), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "42A.054",
+        "subdivision": "(a)(11)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.055",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.056",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "12990002"
+  },
+  {
+    "id": "tx-pc-20-02-ordinary",
+    "name": "Unlawful restraint (ordinary adult branch)",
+    "officialTitle": "UNLAWFUL RESTRAINT.",
+    "category": "misdemeanor",
+    "code": "20.02(a)",
+    "citation": "Tex. Penal Code § 20.02(a)",
+    "conduct": "Intentionally or knowingly restricting another person’s movement without consent, substantially interfering with liberty by moving or confining the person. Without consent includes force, intimidation or deception. For a child under 14 or an incompetent person, any means including acquiescence can qualify if the parent, guardian or person/institution in loco parentis has not acquiesced. For a child age 14 to under 17, the special acquiescence rule requires taking the child both outside Texas and outside a 120-mile radius from home without the specified adult’s acquiescence; it is not enough to meet only one geographic condition. Restraint is not automatically kidnapping: abduction has additional elements. The ordinary Class A choice excludes the child-under-17, substantial-risk, protected-duty and actor-custody/civil-commitment felony circumstances. Section 20.02(d) makes lawful arrest or detention of a lawfully arrested individual no offense under this section. The under-14 affirmative defense requires a relative whose sole intent was lawful control. The age-14-to-under-17 affirmative defense requires no force, intimidation or deception and an actor not more than three years older. Every element of the applicable defense must be met.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.01",
+        "subdivision": "(1), (2), (3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(b), (c), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "10990019"
+  },
+  {
+    "id": "tx-pc-20-02-child",
+    "name": "Unlawful restraint (child younger than 17)",
+    "officialTitle": "UNLAWFUL RESTRAINT.",
+    "category": "felony",
+    "code": "20.02(a)",
+    "citation": "Tex. Penal Code § 20.02(a)",
+    "conduct": "Intentionally or knowingly restricting another person’s movement without consent, substantially interfering with liberty by moving or confining the person. Without consent includes force, intimidation or deception. For a child under 14 or an incompetent person, any means including acquiescence can qualify if the parent, guardian or person/institution in loco parentis has not acquiesced. For a child age 14 to under 17, the special acquiescence rule requires taking the child both outside Texas and outside a 120-mile radius from home without the specified adult’s acquiescence; it is not enough to meet only one geographic condition. Restraint is not automatically kidnapping: abduction has additional elements. The person restrained is younger than 17 and no higher felony circumstance applies. Section 20.02(d) makes lawful arrest or detention of a lawfully arrested individual no offense under this section. The under-14 affirmative defense requires a relative whose sole intent was lawful control. The age-14-to-under-17 affirmative defense requires no force, intimidation or deception and an actor not more than three years older. Every element of the applicable defense must be met.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.01",
+        "subdivision": "(1), (2), (3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(b), (c), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "10990019"
+  },
+  {
+    "id": "tx-pc-20-02-risk",
+    "name": "Unlawful restraint (substantial risk of serious bodily injury)",
+    "officialTitle": "UNLAWFUL RESTRAINT.",
+    "category": "felony",
+    "code": "20.02(a)",
+    "citation": "Tex. Penal Code § 20.02(a)",
+    "conduct": "Intentionally or knowingly restricting another person’s movement without consent, substantially interfering with liberty by moving or confining the person. Without consent includes force, intimidation or deception. For a child under 14 or an incompetent person, any means including acquiescence can qualify if the parent, guardian or person/institution in loco parentis has not acquiesced. For a child age 14 to under 17, the special acquiescence rule requires taking the child both outside Texas and outside a 120-mile radius from home without the specified adult’s acquiescence; it is not enough to meet only one geographic condition. Restraint is not automatically kidnapping: abduction has additional elements. In addition to intentional/knowing restraint, the actor recklessly exposes the victim to a substantial risk of serious bodily injury. Mere restraint alone is not enough for this aggravator. A more specific second-degree peace-officer/judge circumstance is outside this choice. Section 20.02(d) makes lawful arrest or detention of a lawfully arrested individual no offense under this section. The under-14 affirmative defense requires a relative whose sole intent was lawful control. The age-14-to-under-17 affirmative defense requires no force, intimidation or deception and an actor not more than three years older. Every element of the applicable defense must be met.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.01",
+        "subdivision": "(1), (2), (3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(b), (c), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "10990019"
+  },
+  {
+    "id": "tx-pc-20-02-public-servant",
+    "name": "Unlawful restraint (public servant with duty connection)",
+    "officialTitle": "UNLAWFUL RESTRAINT.",
+    "category": "felony",
+    "code": "20.02(a)",
+    "citation": "Tex. Penal Code § 20.02(a)",
+    "conduct": "Intentionally or knowingly restricting another person’s movement without consent, substantially interfering with liberty by moving or confining the person. Without consent includes force, intimidation or deception. For a child under 14 or an incompetent person, any means including acquiescence can qualify if the parent, guardian or person/institution in loco parentis has not acquiesced. For a child age 14 to under 17, the special acquiescence rule requires taking the child both outside Texas and outside a 120-mile radius from home without the specified adult’s acquiescence; it is not enough to meet only one geographic condition. Restraint is not automatically kidnapping: abduction has additional elements. The actor knows the victim is a public servant and the victim is lawfully discharging an official duty, or the restraint is in retaliation for or on account of official power/duty. Public servant has the definition in §1.07(a)(41). The specific peace-officer/judge second-degree circumstance is excluded. Section 20.02(d) makes lawful arrest or detention of a lawfully arrested individual no offense under this section. The under-14 affirmative defense requires a relative whose sole intent was lawful control. The age-14-to-under-17 affirmative defense requires no force, intimidation or deception and an actor not more than three years older. Every element of the applicable defense must be met.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(c)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.01",
+        "subdivision": "(1), (2), (3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(b), (c), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(41)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "10990019"
+  },
+  {
+    "id": "tx-pc-20-02-custody",
+    "name": "Unlawful restraint (actor in custody)",
+    "officialTitle": "UNLAWFUL RESTRAINT.",
+    "category": "felony",
+    "code": "20.02(a)",
+    "citation": "Tex. Penal Code § 20.02(a)",
+    "conduct": "Intentionally or knowingly restricting another person’s movement without consent, substantially interfering with liberty by moving or confining the person. Without consent includes force, intimidation or deception. For a child under 14 or an incompetent person, any means including acquiescence can qualify if the parent, guardian or person/institution in loco parentis has not acquiesced. For a child age 14 to under 17, the special acquiescence rule requires taking the child both outside Texas and outside a 120-mile radius from home without the specified adult’s acquiescence; it is not enough to meet only one geographic condition. Restraint is not automatically kidnapping: abduction has additional elements. The actor is in custody when restraining another person. This actor-status condition is distinct from the mere fact that the victim is confined. Custody status must be established from applicable law and facts, not assumed from the restraint allegation. A more specific second-degree peace-officer/judge circumstance is outside this choice. Section 20.02(d) makes lawful arrest or detention of a lawfully arrested individual no offense under this section. The under-14 affirmative defense requires a relative whose sole intent was lawful control. The age-14-to-under-17 affirmative defense requires no force, intimidation or deception and an actor not more than three years older. Every element of the applicable defense must be met.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(c)(2)(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.01",
+        "subdivision": "(1), (2), (3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(b), (c), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "10990019"
+  },
+  {
+    "id": "tx-pc-20-02-civil",
+    "name": "Unlawful restraint (actor committed to a civil commitment facility)",
+    "officialTitle": "UNLAWFUL RESTRAINT.",
+    "category": "felony",
+    "code": "20.02(a)",
+    "citation": "Tex. Penal Code § 20.02(a)",
+    "conduct": "Intentionally or knowingly restricting another person’s movement without consent, substantially interfering with liberty by moving or confining the person. Without consent includes force, intimidation or deception. For a child under 14 or an incompetent person, any means including acquiescence can qualify if the parent, guardian or person/institution in loco parentis has not acquiesced. For a child age 14 to under 17, the special acquiescence rule requires taking the child both outside Texas and outside a 120-mile radius from home without the specified adult’s acquiescence; it is not enough to meet only one geographic condition. Restraint is not automatically kidnapping: abduction has additional elements. The actor is committed to a civil commitment facility when restraining another person. Under §1.07(a)(8-a), the facility houses only persons civilly committed as sexually violent predators under Chapter 841 and is state-owned/leased/operated or vendor-operated under state contract. A more specific second-degree peace-officer/judge circumstance is outside this choice. Section 20.02(d) makes lawful arrest or detention of a lawfully arrested individual no offense under this section. The under-14 affirmative defense requires a relative whose sole intent was lawful control. The age-14-to-under-17 affirmative defense requires no force, intimidation or deception and an actor not more than three years older. Every element of the applicable defense must be met.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(c)(2)(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.01",
+        "subdivision": "(1), (2), (3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(b), (c), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "10990019"
+  },
+  {
+    "id": "tx-pc-20-02-peace-officer",
+    "name": "Unlawful restraint (sheriff, constable, municipal officer or DPS officer)",
+    "officialTitle": "UNLAWFUL RESTRAINT.",
+    "category": "felony",
+    "code": "20.02(a)",
+    "citation": "Tex. Penal Code § 20.02(a)",
+    "conduct": "Intentionally or knowingly restricting another person’s movement without consent, substantially interfering with liberty by moving or confining the person. Without consent includes force, intimidation or deception. For a child under 14 or an incompetent person, any means including acquiescence can qualify if the parent, guardian or person/institution in loco parentis has not acquiesced. For a child age 14 to under 17, the special acquiescence rule requires taking the child both outside Texas and outside a 120-mile radius from home without the specified adult’s acquiescence; it is not enough to meet only one geographic condition. Restraint is not automatically kidnapping: abduction has additional elements. The actor knows the victim is a peace officer who is lawfully discharging an official duty, or the restraint is in retaliation for or on account of official power/duty. Officer status is limited here to sheriff/deputy, constable/deputy, municipal-police/marshal and DPS roles meeting article 2A.001(1)-(4), common to both retained versions. Other officer categories remain unresolved by this choice. Section 20.02(d) makes lawful arrest or detention of a lawfully arrested individual no offense under this section. The under-14 affirmative defense requires a relative whose sole intent was lawful control. The age-14-to-under-17 affirmative defense requires no force, intimidation or deception and an actor not more than three years older. Every element of the applicable defense must be met.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(c)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.01",
+        "subdivision": "(1), (2), (3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(b), (c), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "(1)-(4) in both published versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "10990019"
+  },
+  {
+    "id": "tx-pc-20-02-judge",
+    "name": "Unlawful restraint (judge with duty connection)",
+    "officialTitle": "UNLAWFUL RESTRAINT.",
+    "category": "felony",
+    "code": "20.02(a)",
+    "citation": "Tex. Penal Code § 20.02(a)",
+    "conduct": "Intentionally or knowingly restricting another person’s movement without consent, substantially interfering with liberty by moving or confining the person. Without consent includes force, intimidation or deception. For a child under 14 or an incompetent person, any means including acquiescence can qualify if the parent, guardian or person/institution in loco parentis has not acquiesced. For a child age 14 to under 17, the special acquiescence rule requires taking the child both outside Texas and outside a 120-mile radius from home without the specified adult’s acquiescence; it is not enough to meet only one geographic condition. Restraint is not automatically kidnapping: abduction has additional elements. The actor knows the victim is a judge who is lawfully discharging an official duty, or the restraint is in retaliation for or on account of official power/duty. This specific second-degree provision supersedes the ordinary public-servant third-degree grade. Section 20.02(d) makes lawful arrest or detention of a lawfully arrested individual no offense under this section. The under-14 affirmative defense requires a relative whose sole intent was lawful control. The age-14-to-under-17 affirmative defense requires no force, intimidation or deception and an actor not more than three years older. Every element of the applicable defense must be met.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(c)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.01",
+        "subdivision": "(1), (2), (3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20.02",
+        "subdivision": "(b), (c), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "10990019"
+  },
+  {
+    "id": "tx-pc-29-04-ordinary",
+    "name": "Jugging (ordinary grade)",
+    "officialTitle": "JUGGING.",
+    "category": "felony",
+    "code": "29.04(a)",
+    "citation": "Tex. Penal Code § 29.04(a)",
+    "conduct": "With intent to commit theft of another person’s money, knowingly traveling from a commercial business or qualifying financial institution along the same path or route as another person without substantially deviating, while possessing two or more criminal instruments. A criminal instrument under §16.01(b)(1) must be specially designed, made or adapted for committing an offense and its possession/manufacture/sale must not otherwise be an offense. Ordinary objects do not automatically qualify merely because they are present. Following someone alone is not enough. This offense was added effective September 1, 2025; the new provision is not assigned to earlier conduct. This choice excludes committing vehicle burglary or robbery during the offense.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Section 29.04(c) permits prosecution under this section or another applicable Penal Code section, or both; cumulative-punishment questions require case-specific review. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "29.04",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "29.04",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "29.04",
+        "subdivision": "(a)(1), (a)(2), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "16.01",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FI",
+        "section": "201.101",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FI",
+        "section": "201.002",
+        "subdivision": "(a)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-29-04-vehicle",
+    "name": "Jugging (vehicle burglary during the offense)",
+    "officialTitle": "JUGGING.",
+    "category": "felony",
+    "code": "29.04(a)",
+    "citation": "Tex. Penal Code § 29.04(a)",
+    "conduct": "With intent to commit theft of another person’s money, knowingly traveling from a commercial business or qualifying financial institution along the same path or route as another person without substantially deviating, while possessing two or more criminal instruments. A criminal instrument under §16.01(b)(1) must be specially designed, made or adapted for committing an offense and its possession/manufacture/sale must not otherwise be an offense. Ordinary objects do not automatically qualify merely because they are present. Following someone alone is not enough. This offense was added effective September 1, 2025; the new provision is not assigned to earlier conduct. During the jugging offense, the actor also commits vehicle burglary under §30.04: breaking into or entering a vehicle or part of a vehicle without the owner’s effective consent with intent to commit a felony or theft. Entry includes intruding any body part or connected physical object. This is not inferred from following the vehicle. A robbery circumstance is outside this grade.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Section 29.04(c) permits prosecution under this section or another applicable Penal Code section, or both; cumulative-punishment questions require case-specific review. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "29.04",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "29.04",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "29.04",
+        "subdivision": "(a)(1), (a)(2), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "16.01",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FI",
+        "section": "201.101",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FI",
+        "section": "201.002",
+        "subdivision": "(a)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.04",
+        "subdivision": "(a), (b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-29-04-robbery",
+    "name": "Jugging (robbery during the offense)",
+    "officialTitle": "JUGGING.",
+    "category": "felony",
+    "code": "29.04(a)",
+    "citation": "Tex. Penal Code § 29.04(a)",
+    "conduct": "With intent to commit theft of another person’s money, knowingly traveling from a commercial business or qualifying financial institution along the same path or route as another person without substantially deviating, while possessing two or more criminal instruments. A criminal instrument under §16.01(b)(1) must be specially designed, made or adapted for committing an offense and its possession/manufacture/sale must not otherwise be an offense. Ordinary objects do not automatically qualify merely because they are present. Following someone alone is not enough. This offense was added effective September 1, 2025; the new provision is not assigned to earlier conduct. During the jugging offense, the actor also commits robbery under §29.02. In the course of committing theft and with intent to obtain or maintain control of the property, either intentionally, knowingly or recklessly causing bodily injury to another, or intentionally or knowingly threatening or placing another in fear of imminent bodily injury or death. Recklessness alone does not satisfy the threat/fear alternative. The course of theft includes an attempt, commission, or immediate flight after an attempt or commission; a completed taking is not required. The theft elements and required connection to the injury or threat still must be proved. There is no property-value threshold for this robbery grade.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Section 29.04(c) permits prosecution under this section or another applicable Penal Code section, or both; cumulative-punishment questions require case-specific review. Qualifying prior convictions and case-specific sentencing findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "29.04",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "29.04",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "29.04",
+        "subdivision": "(a)(1), (a)(2), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "16.01",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FI",
+        "section": "201.101",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FI",
+        "section": "201.002",
+        "subdivision": "(a)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "29.02",
+        "subdivision": "(a)(1), (a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "29.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (17), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]

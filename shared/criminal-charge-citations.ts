@@ -5838,13 +5838,6 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     sourceUrl: "https://law.justia.com/codes/tennessee/section-39-13-402/",
     instructionRef: "TPI-Crim. 8.02",
   },
-  "tx-robbery-in-the-first-degree": {
-    citation: "Tex. Penal Code § 29.03",
-    confidence: "high",
-    lastVerified: "2026-06",
-    source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 29.03",
-    sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.29.htm#29.03",
-  },
   "ut-robbery-in-the-first-degree": {
     citation: "Utah Code Ann. § 76-6-302",
     confidence: "medium",
@@ -6240,13 +6233,6 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Tennessee robbery (unarmed — second degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/tennessee/section-39-13-401/",
     instructionRef: "TPI-Crim. 8.01",
-  },
-  "tx-robbery-in-the-second-degree": {
-    citation: "Tex. Penal Code § 29.02",
-    confidence: "high",
-    lastVerified: "2026-06",
-    source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 29.02",
-    sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.29.htm#29.02",
   },
   "ut-robbery-in-the-second-degree": {
     citation: "Utah Code Ann. § 76-6-301",

@@ -1,3 +1,5 @@
+import robberyRows from "../../../shared/texas-robbery-restraint.json";
+import robberyEvidence from "../output/texas-robbery-restraint-evidence.json";
 // Replay reviewed Texas batches through the production builder without an import.
 import { criminalCharges } from "../../../shared/criminal-charges";
 import assaultRows from "../../../shared/texas-assault-public-intoxication.json";
@@ -50,6 +52,7 @@ import protectedAssaultRows from "../../../shared/texas-protected-assault.json";
 import protectedAssaultEvidence from "../output/texas-protected-assault-evidence.json";
 
 const batches = new Map([
+  ["robbery-restraint", { rows: robberyRows, evidence: Object.entries(robberyEvidence) }],
   ["protected-assault", { rows: protectedAssaultRows, evidence: Object.entries(protectedAssaultEvidence) }],
   ["card-identity-fraud", { rows: fraudRows, evidence: Object.entries(fraudEvidence) }],
   ["road-safety", { rows: roadRows, evidence: Object.entries(roadEvidence) }],

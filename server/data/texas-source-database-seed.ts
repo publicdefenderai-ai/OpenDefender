@@ -34,6 +34,8 @@ export interface TexasSourceDocument {
 }
 
 const CODE_MAP: Array<[string, string]> = [
+  ["Fin. Code", "FI"],
+  ["Finance Code", "FI"],
   ["Util. Code", "UT"],
   ["Utilities Code", "UT"],
   ["Gov’t Code", "GV"],
@@ -63,6 +65,7 @@ const CODE_MAP: Array<[string, string]> = [
 ];
 
 const CODE_PREFIX: Record<string, string> = {
+  FI: "Tex. Fin. Code",
   UT: "Tex. Util. Code",
   GV: "Tex. Gov’t Code",
   IN: "Tex. Ins. Code",
