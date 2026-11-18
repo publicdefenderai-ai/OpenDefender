@@ -3004,7 +3004,7 @@ export default {
     "hero": {
       "title": "案件指导",
       "subtitle": "获取个性化指导",
-      "description": "回答几个关于你情况的问题，获取法律帮助、下一步建议和案件相关资源。",
+      "description": "告诉我们你所在的州、所面临的指控，以及目前所处的法律程序阶段。了解这一阶段通常会发生什么，内容以通俗易懂的语言呈现。",
       "startButton": "开始使用",
       "startHere": "从这里开始",
       "alternativeStartPrefix": "或者从",

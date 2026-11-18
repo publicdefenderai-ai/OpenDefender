@@ -725,3 +725,5 @@ The five path illustrations now use actual captures of First 24 Hours, Case Guid
 ### Diversion search recovery
 
 The directory retains the published program-scope disclaimer alongside the variability notice. ZIP lookups that cannot identify a state show a localized recovery message instead of an empty-results claim. Readers can retry or clear the ZIP and select a state. Successful statewide expansion and text filtering retain their existing behavior. Browser checks cover recovery in all three interface languages and narrow screens.
+
+The Chinese Case Guidance introduction now matches the English description of a plain-language overview of the current stage. Its How To capture is refreshed with that copy. When a later PR changes the visible introduction, navigation or layout of any of the five captured pages, refresh the affected localized How To screenshots in the same PR. Keep captures free of user data and use 1280 × 960 light-mode WebP images.
