@@ -57,7 +57,7 @@ The existing ordinary and family assault choices are preserved. The §22.01(b-4)
 
 ## Evidence and instructions
 
-Thirty-six official sections support 287 required links. Twenty texts overlap prior reviewed packets and match exactly. Acquisition metadata, effective-date text, official headings, chapter hashes, text hashes and snapshot hashes are retained. No active receipt or earlier acquisition date is renewed. Utilities Code citation support is added narrowly for the six statutory definitions.
+Thirty-six official sections support 288 required links. Twenty texts overlap prior reviewed packets and match exactly. Acquisition metadata, effective-date text, official headings, chapter hashes, text hashes and snapshot hashes are retained. No active receipt or earlier acquisition date is renewed. Utilities Code citation support is added narrowly for the six statutory definitions.
 
 The publisher's CPJC 22.1, 22.2 and 22.3 items cover underlying bodily-injury, threat and offensive-contact conduct. They are not presented as verified protected-role grading instructions. Existing verified 22.1 edition 013 is reused; 22.2 and 22.3 edition 055 were checked directly:
 
@@ -65,7 +65,7 @@ The publisher's CPJC 22.1, 22.2 and 22.3 items cover underlying bodily-injury, t
 - [CPJC 22.2](https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-2.htm&version=055)
 - [CPJC 22.3](https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-3.htm&version=055)
 
-The candidate has 320 configured Texas IDs, 245 eligible under complete current evidence, 167 source keys and 2,127 links. These are offline counts, not live availability. All 295 other prior manifest records and the generation timestamp remain unchanged. The one changed prior record clarifies an existing hold, so the eligible increase is exactly 24. New Spanish/Chinese requests show the English-content notice rather than claiming reviewed translations.
+The candidate has 320 configured Texas IDs, 245 eligible under complete current evidence, 167 source keys and 2,128 links. These are offline counts, not live availability. All 295 other prior manifest records and the generation timestamp remain unchanged. The one changed prior record clarifies an existing hold, so the eligible increase is exactly 24. New Spanish/Chinese requests show the English-content notice rather than claiming reviewed translations.
 
 Reproduce the records with `node --import tsx scripts/data-review/texas-verification/replay-assault-intoxication.ts protected-assault`.
 
@@ -74,3 +74,5 @@ Reproduce the records with `node --import tsx scripts/data-review/texas-verifica
 - Texas, jury-instruction, source-inventory, catalog and PDF suites: 173 passed; six database integration tests deliberately skipped.
 - Typecheck and production build passed. All 15 isolated built-selector checks passed, including the 24 new assault choices and legacy officer exclusion.
 - No database operations, imports, monitoring changes, deployment, activation or receipt renewal.
+
+The ordinary public-servant choice expressly excludes every qualifying §22.01(b-2) peace-officer/judge bodily-injury circumstance, including legally qualifying roles not offered by the narrower officer selector. The selector limitation does not reduce those statutory circumstances to third-degree. Knowledge and official-duty/retaliation conditions remain required; no additional role is cleared for selection. The second-degree comparison is separately bound to §12.33. This clarification changes no retained evidence or acquisition/manifest dates.
