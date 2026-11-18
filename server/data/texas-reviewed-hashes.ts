@@ -1,3 +1,4 @@
+import protectedAssault from "../../scripts/data-review/output/texas-protected-assault-evidence.json";
 import fraud from "../../scripts/data-review/output/texas-card-identity-fraud-evidence.json";
 import road from "../../scripts/data-review/output/texas-road-safety-evidence.json";
 import justice from "../../scripts/data-review/output/texas-justice-process-evidence.json";
@@ -17,8 +18,8 @@ import { texasDwiHashes } from "@shared/texas-dwi";
 import { TEXAS_DWI_SNAPSHOT_HASHES } from "./texas-dwi-snapshot-hashes";
 
 export const texasReviewedTextHashes: Readonly<Record<string, string>> = {
-  ...texasDwiHashes, ...Object.fromEntries(Object.entries({ ...evidence, ...possession, ...theft, ...propertyAccess, ...arrest, ...closeout, ...carry, ...loss, ...burglary, ...weights, ...delivery, ...family, ...justice, ...road, ...fraud }).map(([key, doc]) => [key, doc.textSha256])),
+  ...texasDwiHashes, ...Object.fromEntries(Object.entries({ ...evidence, ...possession, ...theft, ...propertyAccess, ...arrest, ...closeout, ...carry, ...loss, ...burglary, ...weights, ...delivery, ...family, ...justice, ...road, ...fraud, ...protectedAssault }).map(([key, doc]) => [key, doc.textSha256])),
 };
 export const texasReviewedSnapshotHashes: Readonly<Record<string, string>> = {
-  ...TEXAS_DWI_SNAPSHOT_HASHES, ...Object.fromEntries(Object.entries({ ...evidence, ...possession, ...theft, ...propertyAccess, ...arrest, ...closeout, ...carry, ...loss, ...burglary, ...weights, ...delivery, ...family, ...justice, ...road, ...fraud }).map(([key, doc]) => [`tx:${key}`, doc.snapshotHash])),
+  ...TEXAS_DWI_SNAPSHOT_HASHES, ...Object.fromEntries(Object.entries({ ...evidence, ...possession, ...theft, ...propertyAccess, ...arrest, ...closeout, ...carry, ...loss, ...burglary, ...weights, ...delivery, ...family, ...justice, ...road, ...fraud, ...protectedAssault }).map(([key, doc]) => [`tx:${key}`, doc.snapshotHash])),
 };

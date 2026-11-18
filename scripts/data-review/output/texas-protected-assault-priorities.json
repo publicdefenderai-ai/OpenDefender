@@ -1,0 +1,40 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "year": 2025,
+  "statewideAdult": 831210,
+  "statewideJuvenile": 44782,
+  "eligibleCodes": 2378,
+  "excludedCodes": 57,
+  "excludedAdult": 71549,
+  "rows": [
+    {
+      "rank": 51,
+      "code": "13990082",
+      "label": "ASSAULT PEACE OFFICER/JUDGE",
+      "law": "PC",
+      "citation": "22.01(b-2)",
+      "adult": 3581,
+      "juvenile": 281
+    },
+    {
+      "rank": 64,
+      "code": "13990063",
+      "label": "ASSAULT PUBLIC SERVANT",
+      "law": "PC",
+      "citation": "22.01(b)(1)",
+      "adult": 2335,
+      "juvenile": 1267
+    },
+    {
+      "rank": 73,
+      "code": "13990090",
+      "label": "ASSAULT OF PREGNANT PERSON",
+      "law": "PC",
+      "citation": "22.01(b)(8)",
+      "adult": 1677,
+      "juvenile": 63
+    }
+  ]
+}

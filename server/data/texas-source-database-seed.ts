@@ -1,4 +1,4 @@
-import { texasHeldFraudIds, texasHeldRoadId, texasHeldDeliveryIds, texasHeldCarryId, texasReviewedById, texasReviewedUrl } from "@shared/texas-reviewed";
+import { texasHeldOfficerId, texasHeldFraudIds, texasHeldRoadId, texasHeldDeliveryIds, texasHeldCarryId, texasReviewedById, texasReviewedUrl } from "@shared/texas-reviewed";
 import { texasReviewedTextHashes } from "./texas-reviewed-hashes";
 import { createHash } from "node:crypto";
 import { criminalCharges, type CriminalCharge } from "@shared/criminal-charges";
@@ -34,6 +34,8 @@ export interface TexasSourceDocument {
 }
 
 const CODE_MAP: Array<[string, string]> = [
+  ["Util. Code", "UT"],
+  ["Utilities Code", "UT"],
   ["Gov’t Code", "GV"],
   ["Government Code", "GV"],
   ["Ins. Code", "IN"],
@@ -61,6 +63,7 @@ const CODE_MAP: Array<[string, string]> = [
 ];
 
 const CODE_PREFIX: Record<string, string> = {
+  UT: "Tex. Util. Code",
   GV: "Tex. Gov’t Code",
   IN: "Tex. Ins. Code",
   PE: "Tex. Penal Code",
@@ -229,7 +232,7 @@ function provisionFromDocument(
 }
 
 export function texasReferencesForCharge(charge: CriminalCharge) {
-  if (texasHeldFraudIds.has(charge.id) || charge.id === texasHeldRoadId || charge.id === texasHeldCarryId || texasHeldDeliveryIds.has(charge.id)) return [];
+  if (charge.id === texasHeldOfficerId || texasHeldFraudIds.has(charge.id) || charge.id === texasHeldRoadId || charge.id === texasHeldCarryId || texasHeldDeliveryIds.has(charge.id)) return [];
   const reviewed = texasReviewedById.get(charge.id);
   if (reviewed) return reviewed.references;
   return parseTexasCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "").map((ref, i) => ({
@@ -252,7 +255,7 @@ export function buildTexasManifestRecord(
       catalogCode: charge.code,
       catalogCategory: charge.category,
       disposition: "require_exact_reselection",
-      dispositionReason: error ?? (texasHeldFraudIds.has(charge.id) ? "The generic fraud identity requires selection of its conduct and quantity/grade branch." : charge.id === texasHeldRoadId ? "The generic collision identity requires selection of the applicable duty and injury/damage grade." : texasHeldDeliveryIds.has(charge.id) ? "The section-wide drug identity requires selection of the applicable substance group and weight branch." : charge.id === texasHeldCarryId ? "The section-wide carrying-weapons identity requires selection of the applicable conduct and grading branch." :
+      dispositionReason: error ?? (charge.id === texasHeldOfficerId ? "The legacy officer-assault identity requires selection of the applicable role, conduct and grade." : texasHeldFraudIds.has(charge.id) ? "The generic fraud identity requires selection of its conduct and quantity/grade branch." : charge.id === texasHeldRoadId ? "The generic collision identity requires selection of the applicable duty and injury/damage grade." : texasHeldDeliveryIds.has(charge.id) ? "The section-wide drug identity requires selection of the applicable substance group and weight branch." : charge.id === texasHeldCarryId ? "The section-wide carrying-weapons identity requires selection of the applicable conduct and grading branch." :
         "The catalog citation is not a Texas statutory citation supported by TCSS; do not infer a state-law replacement."),
       canonicalTitle: null,
       provisions: [],
@@ -348,6 +351,7 @@ export function buildTexasSourceDatabaseSeed(
   manifest: TexasAuthorityManifest,
 ): AuthoritySourceDatabaseSeed {
   for (const record of manifest.catalogRecords) {
+    if (record.chargeId === texasHeldOfficerId && ["retain", "exact_alias_rename"].includes(record.disposition)) throw new Error("Legacy Texas officer-assault identity requires exact reselection");
     if (texasHeldFraudIds.has(record.chargeId) && ["retain", "exact_alias_rename"].includes(record.disposition)) throw new Error("Legacy Texas fraud identity requires exact reselection");
     if (record.chargeId === texasHeldRoadId && ["retain", "exact_alias_rename"].includes(record.disposition)) {
       throw new Error("Legacy Texas collision identity requires exact reselection");
