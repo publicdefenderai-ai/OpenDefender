@@ -51,9 +51,10 @@ it('preserves names and translated bases while restoring ordinary misdemeanor pr
   for(const lang of ['en','es','zh'] as const){const e=getChargeExplanation('','FL',lang,d.id)!;expect(e.plainSummary).toBe(old.text[lang].plainSummary);expect(e.degreeContext).toContain(old.text[lang].degreeContext);if(lang!=='en'){expect(e.translationDraft).toBe(true);expect(e.untranslated).not.toBe(true);}}
  }
 });
-it('keeps the 101-record family withheld without a separately matching receipt',()=>{
+it('accepts the matching 101-record receipt and withholds it at expiry',()=>{
  const all=buildFloridaReviewedSourceRecords(FLORIDA_REVIEWED_DEFINITIONS,report as any,ledger as any);expect(all).toHaveLength(101);
- expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.checkedAt))).not.toBeNull();
+ expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.checkedAt))).toBeNull();
+  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.expiresAt))).not.toBeNull();
 });
 it('keeps ordinary, special-suspension and manslaughter consequences distinct',()=>{
  const text=(code:string)=>packet.definitions.find(d=>d.code===code)!.text.en.degreeContext;

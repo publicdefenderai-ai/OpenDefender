@@ -53,8 +53,9 @@ it('preserves distinct mandatory and conditional financial and sentencing conseq
   expect(charge('817.234(1)(a)').text.en.degreeContext).toContain('civil penalty');
 });
 
-it('keeps the corrected reviewed family behind its existing receipt gate',()=>{
+it('keeps the corrected reviewed family behind its receipt and expiry gate',()=>{
   const records=buildFloridaReviewedSourceRecords(FLORIDA_REVIEWED_DEFINITIONS,report as any,ledger as any);
   expect(records).toHaveLength(101);
-  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,records,new Date(receipt.checkedAt))).not.toBeNull();
+  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,records,new Date(receipt.checkedAt))).toBeNull();
+  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,records,new Date(receipt.expiresAt))).not.toBeNull();
 });
