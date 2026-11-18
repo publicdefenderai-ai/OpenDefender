@@ -1,4 +1,7 @@
 import { expect, test } from "@playwright/test";
+import en from "../../client/src/locales/en";
+import es from "../../client/src/locales/es";
+import zh from "../../client/src/locales/zh";
 import { diversionPrograms } from "../../shared/diversion-programs-data";
 
 for (const language of ["en", "es", "zh"]) {
@@ -9,6 +12,7 @@ for (const language of ["en", "es", "zh"]) {
         localStorage.setItem("public-defender-theme", theme);
       }, { language, theme });
       await page.goto("/diversion-programs");
+      await expect(page.getByText("breadcrumb.home", { exact: true })).toHaveCount(0);
       const directory = page.locator(".diversion-directory");
       await expect(directory.getByRole("status")).toContainText(String(diversionPrograms.length));
       const program = diversionPrograms.find(p => p.state === "CA" && p.contact && typeof p.contact === "object" && "url" in p.contact && p.eligibilityNotes)!;
@@ -53,3 +57,36 @@ test("expanded program card shows its supporting source alongside a single conta
   await expect(card.getByRole("link", { name: "www.pacodeandbulletin.gov" })).toHaveAttribute("href", /s790\.html$/);
   await expect(card.locator('a[href*="phillyda.org"]')).toHaveCount(1);
 });
+
+for (const language of ["en", "es", "zh"] as const) {
+  test(`ZIP lookup failure and recovery in ${language}`, async ({ page }) => {
+    const copy = { en, es, zh }[language].translation.diversionPrograms;
+    await page.addInitScript(language => localStorage.setItem("i18nextLng", language), language);
+    let available = false;
+    await page.route("https://nominatim.openstreetmap.org/**", route => available
+      ? route.fulfill({ json: [{ lat: "34", lon: "-118", address: { state: "California" } }] })
+      : route.fulfill({ status: 503, body: "Unavailable" }));
+    await page.goto("/diversion-programs");
+    const root = page.locator(".diversion-directory");
+    await expect(root.getByText(copy.infoBanner.disclaimer, { exact: true })).toBeVisible();
+    await page.getByTestId("input-location-search").fill("90001");
+    await expect(root.getByRole("alert")).toContainText(copy.directory.lookupHelp);
+    await expect(root.getByText(copy.emptyState.title, { exact: true })).toHaveCount(0);
+    for (const width of [1280, 320]) {
+      await page.setViewportSize({ width, height: 900 });
+      expect(await root.getByRole("alert").evaluate(el => el.getBoundingClientRect().right)).toBeLessThanOrEqual(width);
+      expect(await root.getByRole("button", { name: copy.directory.retry }).evaluate(el => el.getBoundingClientRect().right)).toBeLessThanOrEqual(width);
+    }
+    available = true;
+    await root.getByRole("button", { name: copy.directory.retry }).click();
+    await expect(root.getByRole("alert")).toHaveCount(0);
+    await expect(root.locator(".diversion-result")).toHaveCount(diversionPrograms.filter(p => p.state === "CA").length);
+    available = false;
+    await page.getByTestId("input-location-search").fill("90002");
+    await expect(root.getByRole("alert")).toBeVisible();
+    await page.getByTestId("input-location-search").fill("");
+    await page.getByTestId("select-state-filter").selectOption("CA");
+    await expect(root.getByRole("alert")).toHaveCount(0);
+    await expect(root.locator(".diversion-result")).toHaveCount(diversionPrograms.filter(p => p.state === "CA").length);
+  });
+}

@@ -1,5 +1,5 @@
-// Corrected hashes are deliberately not approved by the committed expired receipt.
-// Only this test substitutes a synthetic receipt, preserving real boundary checks.
+// Use a synthetic receipt for deterministic historical-family isolation.
+// The committed receipt is exercised separately by florida-reviewed-activation.test.ts.
 vi.mock('node:fs',async original=>{
  const fs=await original<typeof import('node:fs')>();
  const {syntheticFloridaReceipt}=await import('./helpers/florida-receipt-fixture');
@@ -7,6 +7,31 @@ vi.mock('node:fs',async original=>{
 });
 // Isolate the historical reviewed family; independent-family interaction has its own matrix test.
 vi.mock('../server/data/florida-persons-source',async original=>({...await original<typeof import('../server/data/florida-persons-source')>(),isFloridaPersonsSourceFresh:()=>false}));
+vi.mock('../server/data/florida-robbery-source',async original=>({...await original<typeof import('../server/data/florida-robbery-source')>(),isFloridaRobberySourceFresh:()=>false}));
+vi.mock('../server/data/florida-false-reports-source',async original=>({...await original<typeof import('../server/data/florida-false-reports-source')>(),isFloridaFalseReportsSourceFresh:()=>false}));
+vi.mock('../server/data/florida-obscenity-source',async original=>({...await original<typeof import('../server/data/florida-obscenity-source')>(),isFloridaObscenitySourceFresh:()=>false}));
+vi.mock('../server/data/florida-computer-financial-source',async original=>({...await original<typeof import('../server/data/florida-computer-financial-source')>(),isFloridaComputerFinancialSourceFresh:()=>false}));
+vi.mock('../server/data/florida-fire-riot-source',async original=>({...await original<typeof import('../server/data/florida-fire-riot-source')>(),isFloridaFireRiotSourceFresh:()=>false}));
+vi.mock('../server/data/florida-regulatory-source',async original=>({...await original<typeof import('../server/data/florida-regulatory-source')>(),isFloridaRegulatorySourceFresh:()=>false}));
+vi.mock('../server/data/florida-child-restraint-source',async original=>({...await original<typeof import('../server/data/florida-child-restraint-source')>(),isFloridaChildRestraintSourceFresh:()=>false}));
+vi.mock('../server/data/florida-child-victims-source',async original=>({...await original<typeof import('../server/data/florida-child-victims-source')>(),isFloridaChildVictimsSourceFresh:()=>false}));
+vi.mock('../server/data/florida-vehicle-identifiers-source',async original=>({...await original<typeof import('../server/data/florida-vehicle-identifiers-source')>(),isFloridaVehicleIdentifiersSourceFresh:()=>false}));
+vi.mock('../server/data/florida-payment-fraud-source',async original=>({...await original<typeof import('../server/data/florida-payment-fraud-source')>(),isFloridaPaymentFraudSourceFresh:()=>false}));
+vi.mock('../server/data/florida-prescription-fraud-source',async original=>({...await original<typeof import('../server/data/florida-prescription-fraud-source')>(),isFloridaPrescriptionFraudSourceFresh:()=>false}));
+vi.mock('../server/data/florida-theft-thresholds-source',async original=>({...await original<typeof import('../server/data/florida-theft-thresholds-source')>(),isFloridaTheftThresholdsSourceFresh:()=>false}));
+vi.mock('../server/data/florida-boating-source',async original=>({...await original<typeof import('../server/data/florida-boating-source')>(),isFloridaBoatingSourceFresh:()=>false}));
+vi.mock('../server/data/florida-protected-persons-source',async original=>({...await original<typeof import('../server/data/florida-protected-persons-source')>(),isFloridaProtectedPersonsSourceFresh:()=>false}));
+vi.mock('../server/data/florida-license-documents-source',async original=>({...await original<typeof import('../server/data/florida-license-documents-source')>(),isFloridaLicenseDocumentsSourceFresh:()=>false}));
+vi.mock('../server/data/florida-property-damage-source',async original=>({...await original<typeof import('../server/data/florida-property-damage-source')>(),isFloridaPropertyDamageSourceFresh:()=>false}));
+vi.mock('../server/data/florida-exploitation-source',async original=>({...await original<typeof import('../server/data/florida-exploitation-source')>(),isFloridaExploitationSourceFresh:()=>false}));
+vi.mock('../server/data/florida-forged-instruments-source',async original=>({...await original<typeof import('../server/data/florida-forged-instruments-source')>(),isFloridaForgedInstrumentsSourceFresh:()=>false}));
+vi.mock('../server/data/florida-corruption-source',async original=>({...await original<typeof import('../server/data/florida-corruption-source')>(),isFloridaCorruptionSourceFresh:()=>false}));
+vi.mock('../server/data/florida-road-racing-source',async original=>({...await original<typeof import('../server/data/florida-road-racing-source')>(),isFloridaRoadRacingSourceFresh:()=>false}));
+vi.mock('../server/data/florida-court-officials-source',async original=>({...await original<typeof import('../server/data/florida-court-officials-source')>(),isFloridaCourtOfficialsSourceFresh:()=>false}));
+vi.mock('../server/data/florida-justice-source',async original=>({...await original<typeof import('../server/data/florida-justice-source')>(),isFloridaJusticeSourceFresh:()=>false}));
+vi.mock('../server/data/florida-credit-card-source',async original=>({...await original<typeof import('../server/data/florida-credit-card-source')>(),isFloridaCreditCardSourceFresh:()=>false}));
+vi.mock('../server/data/florida-restraint-source',async original=>({...await original<typeof import('../server/data/florida-restraint-source')>(),isFloridaRestraintSourceFresh:()=>false}));
+vi.mock('../server/data/florida-crash-flight-source',async original=>({...await original<typeof import('../server/data/florida-crash-flight-source')>(),isFloridaCrashFlightSourceFresh:()=>false}));
 import {syntheticFloridaReceipt as receipt} from "./helpers/florida-receipt-fixture";
 import { describe, expect, it, vi } from "vitest";
 import { createHash } from "node:crypto";

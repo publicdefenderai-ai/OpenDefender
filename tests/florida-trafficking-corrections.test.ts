@@ -50,7 +50,8 @@ it('uses only the charged drug’s weight, minimum and fine for every language, 
  expect(lookup('(1)(j)1.').text.en.degreeContext).toContain('15 calendar years and a $500,000 fine');
  expect(lookup('(1)(b)1.').text.en.degreeContext).toContain('already had a qualifying domestic-violence conviction');
 });
-it('continues to withhold the changed family without a current matching receipt',()=>{
+it('accepts the corrected family only within its matching receipt window',()=>{
  const all=buildFloridaReviewedSourceRecords(FLORIDA_REVIEWED_DEFINITIONS,report as any,ledger as any);expect(all).toHaveLength(101);
- expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.checkedAt))).not.toBeNull();
+ expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.checkedAt))).toBeNull();
+  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.expiresAt))).not.toBeNull();
 });

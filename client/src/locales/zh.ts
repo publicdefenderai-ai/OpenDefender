@@ -4782,6 +4782,9 @@ export default {
   },
   "diversionPrograms": {
     "directory": {
+      "lookupUnavailable": "邮政编码查询暂不可用",
+      "lookupHelp": "无法确定此邮政编码所属的州。请重试，或清除邮政编码并选择一个州。这并不表示您所在地区没有项目。",
+      "retry": "重新查询邮政编码",
       "title": "了解分流项目。",
       "accent": "探索您的选择。",
       "intro": "按地点和项目类型查找分流和替代量刑项目。请与律师讨论具体信息，了解哪些项目可能适用于您的案件。",
@@ -7696,7 +7699,7 @@ export default {
     }
   },
   "howTo": {
-    "design": {"title": "从您现在最需要的帮助开始。", "screenshot": "设计获批后将添加页面截图"},
+    "design": {"title": "从您现在最需要的帮助开始。", "screenshot": "打开完整截图（新标签页）"},
     "pageTitle": "使用指南",
     "pageSubtitle": "查找法律资源，了解您的权利，获取所需的支持",
     "hero": {

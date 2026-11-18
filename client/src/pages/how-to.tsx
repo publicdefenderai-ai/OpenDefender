@@ -1,4 +1,3 @@
-import { Image } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
@@ -40,7 +39,9 @@ function Journey({ family = false }: { family?: boolean }) {
 
 export default function HowTo() {
   useScrollToTop();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const language = i18n.resolvedLanguage ?? i18n.language;
+  const imageLanguage = language.startsWith("es") ? "es" : language.startsWith("zh") ? "zh" : "en";
   return (
     <ScanFirstPageFrame mainClassName="how-page">
       <div className="how-width">
@@ -66,9 +67,10 @@ export default function HowTo() {
                   <ul>{[1, 2, 3, 4].map(n => <li key={n}>{t(`${key}.bullet${n}`)}</li>)}</ul>
                   <Link href={path.href} className="how-link">{t(`${key}.cta`)}</Link>
                 </div>
-                {/* Replace with current page captures after the remaining designs are final. */}
                 <figure className="how-shot">
-                  <Image size={32} strokeWidth={1.25} aria-hidden="true" />
+                  <a href={`/images/how-to/${imageLanguage}-${path.id}.webp`} target="_blank" rel="noopener noreferrer" aria-label={`${t("howTo.design.screenshot")}: ${t(`howTo.hero.pills.${path.pill}`)}`}>
+                    <img src={`/images/how-to/${imageLanguage}-${path.id}.webp`} alt="" width="1280" height="960" loading="lazy" />
+                  </a>
                   <figcaption>{t(`${key}.headline`)}<small>{t("howTo.design.screenshot")}</small></figcaption>
                 </figure>
               </article>

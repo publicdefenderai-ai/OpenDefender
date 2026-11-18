@@ -4781,6 +4781,9 @@ export default {
   },
   "diversionPrograms": {
     "directory": {
+      "lookupUnavailable": "ZIP code lookup unavailable",
+      "lookupHelp": "We could not identify the state for this ZIP code. Try again, or clear the ZIP code and choose a state. This does not mean there are no programs in your area.",
+      "retry": "Try ZIP lookup again",
       "title": "Explore diversion.",
       "accent": "Understand your options.",
       "intro": "Find diversion and alternative sentencing programs by location and program type. Review the details with your lawyer to understand what may apply to your case.",
@@ -7690,7 +7693,7 @@ export default {
     }
   },
   "howTo": {
-    "design": {"title": "Start with what you need right now.", "screenshot": "Screenshot to follow after design approval"},
+    "design": {"title": "Start with what you need right now.", "screenshot": "Open full-size screenshot (new tab)"},
     "pageTitle": "Navigate This Tool",
     "pageSubtitle": "Find legal resources, understand your rights, and get the support you need",
     "hero": {

@@ -50,9 +50,10 @@ it('preserves identities, grade categories, translated summaries and scoped expl
   }
 });
 
-it('keeps the separate §827.04(1) hold and expired aggregate receipt',()=>{
+it('keeps the separate §827.04(1) hold and rejects the aggregate receipt at expiry',()=>{
   expect(FLORIDA_REVIEWED_DEFINITIONS.some(d=>d.code==='827.04(1)')).toBe(false);
   const records=buildFloridaReviewedSourceRecords(FLORIDA_REVIEWED_DEFINITIONS,report as any,ledger as any);
   expect(records).toHaveLength(101);
-  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,records,new Date(receipt.checkedAt))).not.toBeNull();
+  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,records,new Date(receipt.checkedAt))).toBeNull();
+  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,records,new Date(receipt.expiresAt))).not.toBeNull();
 });
