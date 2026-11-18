@@ -168,3 +168,12 @@ test("Texas road-safety choices correct reckless driving and replace generic hit
   expect(charges.find((r:{id:string})=>r.id==="tx-reckless-driving").maxPenalty).toContain("30 days");
   expect(charges.find((r:{id:string})=>r.id==="tx-tn-550-021-other-injury").maxPenalty).toContain("$5,000");
 });
+
+
+test("Texas fraud selector distinguishes quantities, duties and legacy identities", async ({request})=>{
+ const response=await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");expect(response.ok()).toBe(true);
+ const {charges}=await response.json();
+ const rows=JSON.parse(readFileSync("shared/texas-card-identity-fraud.json","utf8"));
+ for(const r of rows)expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,code:r.code,description:r.conduct,maxPenalty:r.penalty});
+ expect(charges.some((c:{id:string})=>["tx-identity-theft","tx-credit-card-fraud"].includes(c.id))).toBe(false);
+});

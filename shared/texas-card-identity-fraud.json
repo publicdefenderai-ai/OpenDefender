@@ -1,0 +1,2322 @@
+[
+  {
+    "id": "tx-pc-32-31-1-a",
+    "name": "Credit card or debit card abuse (unauthorized use or presentation)",
+    "officialTitle": "CREDIT CARD OR DEBIT CARD ABUSE.",
+    "category": "felony",
+    "code": "32.31(b)(1)(A)",
+    "citation": "Tex. Penal Code § 32.31(b)(1)(A)",
+    "conduct": "With intent to obtain a benefit fraudulently, presenting or using a credit or debit card knowing that it was not issued to the actor and is being used without the cardholder’s effective consent. Card and cardholder have the definitions in (a); covered card numbers or descriptions can qualify without production of the physical card. Effective consent and benefit retain their statutory meanings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If the offense was committed against a person age 65 or older, §32.31(d) makes it a third-degree felony, ordinarily two to ten years in prison and a possible $10,000 fine. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(b)(1)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a), (b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(7), (19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26050014"
+  },
+  {
+    "id": "tx-pc-32-31-1-b",
+    "name": "Credit card or debit card abuse (expired, revoked or cancelled card)",
+    "officialTitle": "CREDIT CARD OR DEBIT CARD ABUSE.",
+    "category": "felony",
+    "code": "32.31(b)(1)(B)",
+    "citation": "Tex. Penal Code § 32.31(b)(1)(B)",
+    "conduct": "With intent to obtain a benefit fraudulently, presenting or using a credit or debit card knowing it has expired or has been revoked or cancelled. Subsection (c) creates notice-based presumptions of knowledge and receipt of notice, not automatic guilt. Card and cardholder have the definitions in (a); covered card numbers or descriptions can qualify without production of the physical card. Effective consent and benefit retain their statutory meanings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If the offense was committed against a person age 65 or older, §32.31(d) makes it a third-degree felony, ordinarily two to ten years in prison and a possible $10,000 fine. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(b)(1)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a), (b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(7), (19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26050014"
+  },
+  {
+    "id": "tx-pc-32-31-2",
+    "name": "Credit card or debit card abuse (fictitious card)",
+    "officialTitle": "CREDIT CARD OR DEBIT CARD ABUSE.",
+    "category": "felony",
+    "code": "32.31(b)(2)",
+    "citation": "Tex. Penal Code § 32.31(b)(2)",
+    "conduct": "With intent to obtain a benefit, using a fictitious credit or debit card or its pretended number or description. Card and cardholder have the definitions in (a); covered card numbers or descriptions can qualify without production of the physical card. Effective consent and benefit retain their statutory meanings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If the offense was committed against a person age 65 or older, §32.31(d) makes it a third-degree felony, ordinarily two to ten years in prison and a possible $10,000 fine. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(b)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a), (b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(7), (19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26050014"
+  },
+  {
+    "id": "tx-pc-32-31-3",
+    "name": "Credit card or debit card abuse (knowingly receiving an unlawfully obtained benefit)",
+    "officialTitle": "CREDIT CARD OR DEBIT CARD ABUSE.",
+    "category": "felony",
+    "code": "32.31(b)(3)",
+    "citation": "Tex. Penal Code § 32.31(b)(3)",
+    "conduct": "Receiving a benefit knowing it was obtained in violation of §32.31. The underlying card-abuse violation must be established; receiving a benefit alone is not enough. Card and cardholder have the definitions in (a); covered card numbers or descriptions can qualify without production of the physical card. Effective consent and benefit retain their statutory meanings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If the offense was committed against a person age 65 or older, §32.31(d) makes it a third-degree felony, ordinarily two to ten years in prison and a possible $10,000 fine. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(b)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a), (b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(7), (19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26050014"
+  },
+  {
+    "id": "tx-pc-32-31-4",
+    "name": "Credit card or debit card abuse (stealing or receiving a stolen card)",
+    "officialTitle": "CREDIT CARD OR DEBIT CARD ABUSE.",
+    "category": "felony",
+    "code": "32.31(b)(4)",
+    "citation": "Tex. Penal Code § 32.31(b)(4)",
+    "conduct": "Stealing a credit or debit card, or knowingly receiving a stolen card with intent to use it, sell it, or transfer it to someone other than the issuer or cardholder. Stealing means acquisition by theft; the intent-to-use/sell/transfer language belongs to the receiving alternative. Card and cardholder have the definitions in (a); covered card numbers or descriptions can qualify without production of the physical card. Effective consent and benefit retain their statutory meanings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If the offense was committed against a person age 65 or older, §32.31(d) makes it a third-degree felony, ordinarily two to ten years in prison and a possible $10,000 fine. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(b)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a), (b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(7), (19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "31.03",
+        "subdivision": "(a), (b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "31.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": "26050014"
+  },
+  {
+    "id": "tx-pc-32-31-5",
+    "name": "Credit card or debit card abuse (buying from a nonissuer)",
+    "officialTitle": "CREDIT CARD OR DEBIT CARD ABUSE.",
+    "category": "felony",
+    "code": "32.31(b)(5)",
+    "citation": "Tex. Penal Code § 32.31(b)(5)",
+    "conduct": "Buying a credit or debit card from someone the actor knows is not its issuer. Card and cardholder have the definitions in (a); covered card numbers or descriptions can qualify without production of the physical card. Effective consent and benefit retain their statutory meanings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If the offense was committed against a person age 65 or older, §32.31(d) makes it a third-degree felony, ordinarily two to ten years in prison and a possible $10,000 fine. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(b)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a), (b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(7), (19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26050014"
+  },
+  {
+    "id": "tx-pc-32-31-6",
+    "name": "Credit card or debit card abuse (sale by a nonissuer)",
+    "officialTitle": "CREDIT CARD OR DEBIT CARD ABUSE.",
+    "category": "felony",
+    "code": "32.31(b)(6)",
+    "citation": "Tex. Penal Code § 32.31(b)(6)",
+    "conduct": "Selling a credit or debit card while not its issuer. Applicable culpable-mental-state requirements remain governed by Penal Code §6.02; this summary does not declare a strict-liability offense. Card and cardholder have the definitions in (a); covered card numbers or descriptions can qualify without production of the physical card. Effective consent and benefit retain their statutory meanings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If the offense was committed against a person age 65 or older, §32.31(d) makes it a third-degree felony, ordinarily two to ten years in prison and a possible $10,000 fine. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(b)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a), (b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(7), (19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26050014"
+  },
+  {
+    "id": "tx-pc-32-31-7",
+    "name": "Credit card or debit card abuse (use with cardholder unable to pay)",
+    "officialTitle": "CREDIT CARD OR DEBIT CARD ABUSE.",
+    "category": "felony",
+    "code": "32.31(b)(7)",
+    "citation": "Tex. Penal Code § 32.31(b)(7)",
+    "conduct": "Using, or inducing the cardholder to use, the cardholder’s credit or debit card to obtain property or services for the actor’s benefit for which the cardholder is financially unable to pay. This is not a general prohibition on carrying a credit-card balance. Card and cardholder have the definitions in (a); covered card numbers or descriptions can qualify without production of the physical card. Effective consent and benefit retain their statutory meanings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If the offense was committed against a person age 65 or older, §32.31(d) makes it a third-degree felony, ordinarily two to ten years in prison and a possible $10,000 fine. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(b)(7)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a), (b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(7), (19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26050014"
+  },
+  {
+    "id": "tx-pc-32-31-8",
+    "name": "Credit card or debit card abuse (unauthorized possession with intent to use)",
+    "officialTitle": "CREDIT CARD OR DEBIT CARD ABUSE.",
+    "category": "felony",
+    "code": "32.31(b)(8)",
+    "citation": "Tex. Penal Code § 32.31(b)(8)",
+    "conduct": "Not being the cardholder, possessing a credit or debit card without the cardholder’s effective consent and with intent to use it. Card and cardholder have the definitions in (a); covered card numbers or descriptions can qualify without production of the physical card. Effective consent and benefit retain their statutory meanings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If the offense was committed against a person age 65 or older, §32.31(d) makes it a third-degree felony, ordinarily two to ten years in prison and a possible $10,000 fine. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(b)(8)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a), (b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(7), (19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26050014"
+  },
+  {
+    "id": "tx-pc-32-31-9",
+    "name": "Credit card or debit card abuse (incomplete cards)",
+    "officialTitle": "CREDIT CARD OR DEBIT CARD ABUSE.",
+    "category": "felony",
+    "code": "32.31(b)(9)",
+    "citation": "Tex. Penal Code § 32.31(b)(9)",
+    "conduct": "Possessing two or more incomplete credit or debit cards not issued to the actor, intending to complete them without the issuer’s effective consent. A card is incomplete when issuer-required matter other than the cardholder’s signature has not been stamped, embossed, imprinted or written on it. Card and cardholder have the definitions in (a); covered card numbers or descriptions can qualify without production of the physical card. Effective consent and benefit retain their statutory meanings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If the offense was committed against a person age 65 or older, §32.31(d) makes it a third-degree felony, ordinarily two to ten years in prison and a possible $10,000 fine. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(b)(9)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a), (b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(7), (19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26050014"
+  },
+  {
+    "id": "tx-pc-32-31-10",
+    "name": "Credit card or debit card abuse (merchant furnishing on an unlawful card)",
+    "officialTitle": "CREDIT CARD OR DEBIT CARD ABUSE.",
+    "category": "felony",
+    "code": "32.31(b)(10)",
+    "citation": "Tex. Penal Code § 32.31(b)(10)",
+    "conduct": "Being authorized by an issuer to furnish goods or services on card presentation, and with intent to defraud the issuer or cardholder, furnishing them on presentation of a card obtained or retained in violation of §32.31, or forged, expired or revoked. Card and cardholder have the definitions in (a); covered card numbers or descriptions can qualify without production of the physical card. Effective consent and benefit retain their statutory meanings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If the offense was committed against a person age 65 or older, §32.31(d) makes it a third-degree felony, ordinarily two to ten years in prison and a possible $10,000 fine. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(b)(10)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a), (b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(7), (19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26050014"
+  },
+  {
+    "id": "tx-pc-32-31-11",
+    "name": "Credit card or debit card abuse (merchant falsely claiming performance)",
+    "officialTitle": "CREDIT CARD OR DEBIT CARD ABUSE.",
+    "category": "felony",
+    "code": "32.31(b)(11)",
+    "citation": "Tex. Penal Code § 32.31(b)(11)",
+    "conduct": "Being authorized by an issuer to furnish goods or services on card presentation, and with intent to defraud the issuer or cardholder, failing to furnish goods or services represented in writing to the issuer as furnished. Card and cardholder have the definitions in (a); covered card numbers or descriptions can qualify without production of the physical card. Effective consent and benefit retain their statutory meanings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If the offense was committed against a person age 65 or older, §32.31(d) makes it a third-degree felony, ordinarily two to ten years in prison and a possible $10,000 fine. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(b)(11)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a), (b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(7), (19)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26050014"
+  },
+  {
+    "id": "tx-pc-32-51-person-under-5",
+    "name": "Fraudulent use or possession of identifying information (another person, fewer than five items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION.",
+    "category": "felony",
+    "code": "32.51(b)(1)",
+    "citation": "Tex. Penal Code § 32.51(b)(1)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using identifying information of another person without that person’s consent or effective consent. This choice requires fewer than five items of identifying information. Items are not automatically the number of documents or people: name and date of birth are combined in (a)(1)(A), not two separate items. Other identifying data may identify alone or in combination. The three-person intent presumption in (b-1) is separate from item-count grading and is subject to (b-2)’s lawful business/government exception. A presumption does not replace all offense elements.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If proved at trial that the offense was against an elderly individual (age 65 or older), or that identifying information was fraudulently used with intent to facilitate a registration offense under article 62.102, (c-1) raises the grade one category: Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(b)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a), (b-1), (b-2), (c-1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26040042"
+  },
+  {
+    "id": "tx-pc-32-51-person-5-to-9",
+    "name": "Fraudulent use or possession of identifying information (another person, five to nine items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION.",
+    "category": "felony",
+    "code": "32.51(b)(1)",
+    "citation": "Tex. Penal Code § 32.51(b)(1)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using identifying information of another person without that person’s consent or effective consent. This choice requires five to nine items of identifying information. Items are not automatically the number of documents or people: name and date of birth are combined in (a)(1)(A), not two separate items. Other identifying data may identify alone or in combination. The three-person intent presumption in (b-1) is separate from item-count grading and is subject to (b-2)’s lawful business/government exception. A presumption does not replace all offense elements.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. If proved at trial that the offense was against an elderly individual (age 65 or older), or that identifying information was fraudulently used with intent to facilitate a registration offense under article 62.102, (c-1) raises the grade one category: Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(b)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a), (b-1), (b-2), (c-1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-32-51-person-10-to-49",
+    "name": "Fraudulent use or possession of identifying information (another person, 10 to 49 items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION.",
+    "category": "felony",
+    "code": "32.51(b)(1)",
+    "citation": "Tex. Penal Code § 32.51(b)(1)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using identifying information of another person without that person’s consent or effective consent. This choice requires 10 to 49 items of identifying information. Items are not automatically the number of documents or people: name and date of birth are combined in (a)(1)(A), not two separate items. Other identifying data may identify alone or in combination. The three-person intent presumption in (b-1) is separate from item-count grading and is subject to (b-2)’s lawful business/government exception. A presumption does not replace all offense elements.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. If proved at trial that the offense was against an elderly individual (age 65 or older), or that identifying information was fraudulently used with intent to facilitate a registration offense under article 62.102, (c-1) raises the grade one category: First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(b)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(c)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a), (b-1), (b-2), (c-1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-32-51-person-50-plus",
+    "name": "Fraudulent use or possession of identifying information (another person, 50 or more items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION.",
+    "category": "felony",
+    "code": "32.51(b)(1)",
+    "citation": "Tex. Penal Code § 32.51(b)(1)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using identifying information of another person without that person’s consent or effective consent. This choice requires 50 or more items of identifying information. Items are not automatically the number of documents or people: name and date of birth are combined in (a)(1)(A), not two separate items. Other identifying data may identify alone or in combination. The three-person intent presumption in (b-1) is separate from item-count grading and is subject to (b-2)’s lawful business/government exception. A presumption does not replace all offense elements.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. The one-category increase in (c-1) applies only to (c)(1)-(3), not this already first-degree branch. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(b)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(c)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a), (b-1), (b-2), (c-1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-32-51-deceased-under-5",
+    "name": "Fraudulent use or possession of identifying information (deceased person, fewer than five items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION.",
+    "category": "felony",
+    "code": "32.51(b)(2)",
+    "citation": "Tex. Penal Code § 32.51(b)(2)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using information concerning a deceased natural person, including a stillborn infant or fetus, that would identify the person if alive, without legal authorization. This choice requires fewer than five items of identifying information. Items are not automatically the number of documents or people: name and date of birth are combined in (a)(1)(A), not two separate items. Other identifying data may identify alone or in combination. The three-person intent presumption in (b-1) is separate from item-count grading and is subject to (b-2)’s lawful business/government exception. A presumption does not replace all offense elements.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If proved at trial that the offense was against an elderly individual (age 65 or older), or that identifying information was fraudulently used with intent to facilitate a registration offense under article 62.102, (c-1) raises the grade one category: Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(b)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a), (b-1), (b-2), (c-1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26040042"
+  },
+  {
+    "id": "tx-pc-32-51-deceased-5-to-9",
+    "name": "Fraudulent use or possession of identifying information (deceased person, five to nine items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION.",
+    "category": "felony",
+    "code": "32.51(b)(2)",
+    "citation": "Tex. Penal Code § 32.51(b)(2)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using information concerning a deceased natural person, including a stillborn infant or fetus, that would identify the person if alive, without legal authorization. This choice requires five to nine items of identifying information. Items are not automatically the number of documents or people: name and date of birth are combined in (a)(1)(A), not two separate items. Other identifying data may identify alone or in combination. The three-person intent presumption in (b-1) is separate from item-count grading and is subject to (b-2)’s lawful business/government exception. A presumption does not replace all offense elements.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. If proved at trial that the offense was against an elderly individual (age 65 or older), or that identifying information was fraudulently used with intent to facilitate a registration offense under article 62.102, (c-1) raises the grade one category: Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(b)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a), (b-1), (b-2), (c-1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-32-51-deceased-10-to-49",
+    "name": "Fraudulent use or possession of identifying information (deceased person, 10 to 49 items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION.",
+    "category": "felony",
+    "code": "32.51(b)(2)",
+    "citation": "Tex. Penal Code § 32.51(b)(2)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using information concerning a deceased natural person, including a stillborn infant or fetus, that would identify the person if alive, without legal authorization. This choice requires 10 to 49 items of identifying information. Items are not automatically the number of documents or people: name and date of birth are combined in (a)(1)(A), not two separate items. Other identifying data may identify alone or in combination. The three-person intent presumption in (b-1) is separate from item-count grading and is subject to (b-2)’s lawful business/government exception. A presumption does not replace all offense elements.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. If proved at trial that the offense was against an elderly individual (age 65 or older), or that identifying information was fraudulently used with intent to facilitate a registration offense under article 62.102, (c-1) raises the grade one category: First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(b)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(c)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a), (b-1), (b-2), (c-1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-32-51-deceased-50-plus",
+    "name": "Fraudulent use or possession of identifying information (deceased person, 50 or more items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION.",
+    "category": "felony",
+    "code": "32.51(b)(2)",
+    "citation": "Tex. Penal Code § 32.51(b)(2)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using information concerning a deceased natural person, including a stillborn infant or fetus, that would identify the person if alive, without legal authorization. This choice requires 50 or more items of identifying information. Items are not automatically the number of documents or people: name and date of birth are combined in (a)(1)(A), not two separate items. Other identifying data may identify alone or in combination. The three-person intent presumption in (b-1) is separate from item-count grading and is subject to (b-2)’s lawful business/government exception. A presumption does not replace all offense elements.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. The one-category increase in (c-1) applies only to (c)(1)-(3), not this already first-degree branch. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(b)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(c)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a), (b-1), (b-2), (c-1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-32-51-child-under-5",
+    "name": "Fraudulent use or possession of identifying information (child younger than 18, fewer than five items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION.",
+    "category": "felony",
+    "code": "32.51(b)(3)",
+    "citation": "Tex. Penal Code § 32.51(b)(3)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using identifying information of a child younger than 18; the text does not make absence of parental or child consent an additional element of this branch. This choice requires fewer than five items of identifying information. Items are not automatically the number of documents or people: name and date of birth are combined in (a)(1)(A), not two separate items. Other identifying data may identify alone or in combination. The three-person intent presumption in (b-1) is separate from item-count grading and is subject to (b-2)’s lawful business/government exception. A presumption does not replace all offense elements.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. If proved at trial that the offense was against an elderly individual (age 65 or older), or that identifying information was fraudulently used with intent to facilitate a registration offense under article 62.102, (c-1) raises the grade one category: Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(b)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a), (b-1), (b-2), (c-1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26040042"
+  },
+  {
+    "id": "tx-pc-32-51-child-5-to-9",
+    "name": "Fraudulent use or possession of identifying information (child younger than 18, five to nine items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION.",
+    "category": "felony",
+    "code": "32.51(b)(3)",
+    "citation": "Tex. Penal Code § 32.51(b)(3)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using identifying information of a child younger than 18; the text does not make absence of parental or child consent an additional element of this branch. This choice requires five to nine items of identifying information. Items are not automatically the number of documents or people: name and date of birth are combined in (a)(1)(A), not two separate items. Other identifying data may identify alone or in combination. The three-person intent presumption in (b-1) is separate from item-count grading and is subject to (b-2)’s lawful business/government exception. A presumption does not replace all offense elements.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. If proved at trial that the offense was against an elderly individual (age 65 or older), or that identifying information was fraudulently used with intent to facilitate a registration offense under article 62.102, (c-1) raises the grade one category: Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(b)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a), (b-1), (b-2), (c-1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-32-51-child-10-to-49",
+    "name": "Fraudulent use or possession of identifying information (child younger than 18, 10 to 49 items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION.",
+    "category": "felony",
+    "code": "32.51(b)(3)",
+    "citation": "Tex. Penal Code § 32.51(b)(3)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using identifying information of a child younger than 18; the text does not make absence of parental or child consent an additional element of this branch. This choice requires 10 to 49 items of identifying information. Items are not automatically the number of documents or people: name and date of birth are combined in (a)(1)(A), not two separate items. Other identifying data may identify alone or in combination. The three-person intent presumption in (b-1) is separate from item-count grading and is subject to (b-2)’s lawful business/government exception. A presumption does not replace all offense elements.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. If proved at trial that the offense was against an elderly individual (age 65 or older), or that identifying information was fraudulently used with intent to facilitate a registration offense under article 62.102, (c-1) raises the grade one category: First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(b)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(c)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a), (b-1), (b-2), (c-1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-32-51-child-50-plus",
+    "name": "Fraudulent use or possession of identifying information (child younger than 18, 50 or more items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION.",
+    "category": "felony",
+    "code": "32.51(b)(3)",
+    "citation": "Tex. Penal Code § 32.51(b)(3)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using identifying information of a child younger than 18; the text does not make absence of parental or child consent an additional element of this branch. This choice requires 50 or more items of identifying information. Items are not automatically the number of documents or people: name and date of birth are combined in (a)(1)(A), not two separate items. Other identifying data may identify alone or in combination. The three-person intent presumption in (b-1) is separate from item-count grading and is subject to (b-2)’s lawful business/government exception. A presumption does not replace all offense elements.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. The one-category increase in (c-1) applies only to (c)(1)-(3), not this already first-degree branch. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(b)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(c)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a), (b-1), (b-2), (c-1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(19), (25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.102",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-32-315-under-5",
+    "name": "Fraudulent use or possession of credit card or debit card information (fewer than five items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF CREDIT CARD OR DEBIT CARD INFORMATION.",
+    "category": "felony",
+    "code": "32.315(b)",
+    "citation": "Tex. Penal Code § 32.315(b)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using a counterfeit credit/debit card, the number and expiration date of a credit/debit card without account-holder consent, or digital-imprint data without account-holder consent. Counterfeit includes the specific false-issuer, altered-imprint, inconsistent-account-data and altered-card forms in (a)(1), not any card merely suspected to be invalid. This choice requires fewer than five items under §32.315(e). The five-item rebuttable presumption concerns lack of consent for (b)(2)/(3), not intent and not counterfeit cards under (b)(1); lawful business/government activities have the (d) exception. It is not the three-person presumption in §32.51.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Section 32.315 does not supply §32.51’s elderly/registration one-category enhancement. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.315",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.315",
+        "subdivision": "(e)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.315",
+        "subdivision": "(a), (c), (d), (f), (g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a)(2), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-32-315-5-to-9",
+    "name": "Fraudulent use or possession of credit card or debit card information (five to nine items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF CREDIT CARD OR DEBIT CARD INFORMATION.",
+    "category": "felony",
+    "code": "32.315(b)",
+    "citation": "Tex. Penal Code § 32.315(b)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using a counterfeit credit/debit card, the number and expiration date of a credit/debit card without account-holder consent, or digital-imprint data without account-holder consent. Counterfeit includes the specific false-issuer, altered-imprint, inconsistent-account-data and altered-card forms in (a)(1), not any card merely suspected to be invalid. This choice requires five to nine items under §32.315(e). The five-item rebuttable presumption concerns lack of consent for (b)(2)/(3), not intent and not counterfeit cards under (b)(1); lawful business/government activities have the (d) exception. It is not the three-person presumption in §32.51.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Section 32.315 does not supply §32.51’s elderly/registration one-category enhancement. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.315",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.315",
+        "subdivision": "(e)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.315",
+        "subdivision": "(a), (c), (d), (f), (g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a)(2), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-32-315-10-to-49",
+    "name": "Fraudulent use or possession of credit card or debit card information (10 to 49 items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF CREDIT CARD OR DEBIT CARD INFORMATION.",
+    "category": "felony",
+    "code": "32.315(b)",
+    "citation": "Tex. Penal Code § 32.315(b)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using a counterfeit credit/debit card, the number and expiration date of a credit/debit card without account-holder consent, or digital-imprint data without account-holder consent. Counterfeit includes the specific false-issuer, altered-imprint, inconsistent-account-data and altered-card forms in (a)(1), not any card merely suspected to be invalid. This choice requires 10 to 49 items under §32.315(e). The five-item rebuttable presumption concerns lack of consent for (b)(2)/(3), not intent and not counterfeit cards under (b)(1); lawful business/government activities have the (d) exception. It is not the three-person presumption in §32.51.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Section 32.315 does not supply §32.51’s elderly/registration one-category enhancement. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.315",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.315",
+        "subdivision": "(e)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.315",
+        "subdivision": "(a), (c), (d), (f), (g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a)(2), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-32-315-50-plus",
+    "name": "Fraudulent use or possession of credit card or debit card information (50 or more items)",
+    "officialTitle": "FRAUDULENT USE OR POSSESSION OF CREDIT CARD OR DEBIT CARD INFORMATION.",
+    "category": "felony",
+    "code": "32.315(b)",
+    "citation": "Tex. Penal Code § 32.315(b)",
+    "conduct": "With intent to harm or defraud another, obtaining, possessing, transferring or using a counterfeit credit/debit card, the number and expiration date of a credit/debit card without account-holder consent, or digital-imprint data without account-holder consent. Counterfeit includes the specific false-issuer, altered-imprint, inconsistent-account-data and altered-card forms in (a)(1), not any card merely suspected to be invalid. This choice requires 50 or more items under §32.315(e). The five-item rebuttable presumption concerns lack of consent for (b)(2)/(3), not intent and not counterfeit cards under (b)(1); lawful business/government activities have the (d) exception. It is not the three-person presumption in §32.51.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Court-ordered restitution may include lost income and other resulting expenses, excluding attorney fees. Section 32.315 does not supply §32.51’s elderly/registration one-category enhancement. Qualifying prior convictions or findings can change punishment; the ordinary range is not a prediction for an individual case.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "32.315",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "32.315",
+        "subdivision": "(e)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.315",
+        "subdivision": "(a), (c), (d), (f), (g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.31",
+        "subdivision": "(a)(2), (4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(25)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]

@@ -1,3 +1,4 @@
+import fraud from "../shared/texas-card-identity-fraud.json";
 import road from "../shared/texas-road-safety.json";
 import justice from "../shared/texas-justice-process.json";
 import { createHash } from "node:crypto";
@@ -96,7 +97,7 @@ describe("Texas ranked drug possession", () => {
   });
 
   it("withholds each exact charge when any required current link is missing or superseded", async () => {
-    const rankedIds = new Set([...ids, ...theftRows.map(row => row.id), ...propertyRows.map(row => row.id), ...arrestRows.map(row => row.id), ...closeoutRows.map(row => row.id), ...carryRows.map(row => row.id), ...lossRows.map(row => row.id), ...burglaryRows.map(row => row.id), ...weights.map(row => row.id), ...delivery.map(row => row.id), ...family.map(row => row.id), ...justice.map(row => row.id), ...road.map(row => row.id)]);
+    const rankedIds = new Set([...ids, ...theftRows.map(row => row.id), ...propertyRows.map(row => row.id), ...arrestRows.map(row => row.id), ...closeoutRows.map(row => row.id), ...carryRows.map(row => row.id), ...lossRows.map(row => row.id), ...burglaryRows.map(row => row.id), ...weights.map(row => row.id), ...delivery.map(row => row.id), ...family.map(row => row.id), ...justice.map(row => row.id), ...road.map(row => row.id), ...fraud.map(row => row.id)]);
     for (const record of manifest.catalogRecords.filter(row => rankedIds.has(row.chargeId))) {
       const all = record.provisions.map(p => ({chargeId:record.chargeId, sourceKey:p.sourceKey,
         contentHash:p.contentHash, subdivision:p.subdivision, supportRole:p.supportRole, citation:p.citation}));

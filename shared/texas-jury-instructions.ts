@@ -41,6 +41,43 @@ const deliveryTransfer = {
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-13.htm&version=048",
 };
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
+  "tx-pc-32-31-1-a": {
+    instructionRef: "CPJC 32.11: Credit Card or Debit Card Abuse: unauthorized presentation/use (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F32_Fraud%2FCPJC32-11.htm&version=055",
+  },
+  "tx-pc-32-51-person-under-5": {
+    instructionRef: "CPJC 32.41: Identifying Information: another-person branch (underlying conduct only; no enhancement)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F32_Fraud%2FCPJC32-41.htm&version=055",
+  },
+  "tx-pc-32-315-under-5": {
+    instructionRef: "CPJC 32.6: Card Information: digital-imprint branch (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F32_Fraud%2FCPJC32-6.htm&version=055",
+  },
+  "tx-pc-32-51-person-5-to-9": {
+    instructionRef: "CPJC 32.42: Identifying Information: another-person branch (underlying conduct only; no enhancement)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F32_Fraud%2FCPJC32-42.htm&version=055",
+  },
+  "tx-pc-32-315-5-to-9": {
+    instructionRef: "CPJC 32.6: Card Information: digital-imprint branch (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F32_Fraud%2FCPJC32-6.htm&version=055",
+  },
+  "tx-pc-32-51-person-10-to-49": {
+    instructionRef: "CPJC 32.42: Identifying Information: another-person branch (underlying conduct only; no enhancement)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F32_Fraud%2FCPJC32-42.htm&version=055",
+  },
+  "tx-pc-32-315-10-to-49": {
+    instructionRef: "CPJC 32.6: Card Information: digital-imprint branch (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F32_Fraud%2FCPJC32-6.htm&version=055",
+  },
+  "tx-pc-32-51-person-50-plus": {
+    instructionRef: "CPJC 32.42: Identifying Information: another-person branch (underlying conduct only; no enhancement)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F32_Fraud%2FCPJC32-42.htm&version=055",
+  },
+  "tx-pc-32-315-50-plus": {
+    instructionRef: "CPJC 32.6: Card Information: digital-imprint branch (underlying conduct only)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F32_Fraud%2FCPJC32-6.htm&version=055",
+  },
+
   "tx-tn-550-021-death": {
     instructionRef: "CPJC 80.2: Failure to Stop and Render Aid (underlying conduct only)",
     instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F80_Transportation_Code_Offenses%2FCPJC80-2.htm&version=007",

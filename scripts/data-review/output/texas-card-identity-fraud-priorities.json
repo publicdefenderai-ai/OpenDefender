@@ -1,0 +1,31 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "year": 2025,
+  "statewideAdult": 831210,
+  "statewideJuvenile": 44782,
+  "eligibleCodes": 2378,
+  "excludedCodes": 57,
+  "excludedAdult": 71549,
+  "rows": [
+    {
+      "rank": 54,
+      "code": "26050014",
+      "label": "CREDIT CARD OR DEBIT CARD ABUSE",
+      "law": "PC",
+      "citation": "32.31",
+      "adult": 2948,
+      "juvenile": 111
+    },
+    {
+      "rank": 58,
+      "code": "26040042",
+      "label": "FRAUD USE/POSS IDENTIFYING INFO # OF ITEMS <5",
+      "law": "PC",
+      "citation": "32.51(c)(1)",
+      "adult": 2646,
+      "juvenile": 24
+    }
+  ]
+}

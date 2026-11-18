@@ -6,7 +6,7 @@ import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, knownCasePhase, type LegalDocument } from "@shared/legal-documents";
 import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
-import { isTexasAmbiguousCollision, isTexasAmbiguousDelivery, isTexasAmbiguousVehicleBurglary, isTexasHeldCarrySelection, needsTexasChargeReselection } from "@shared/texas-reviewed";
+import { isTexasAmbiguousFraud, isTexasAmbiguousCollision, isTexasAmbiguousDelivery, isTexasAmbiguousVehicleBurglary, isTexasHeldCarrySelection, needsTexasChargeReselection } from "@shared/texas-reviewed";
 import { resolveGuidanceCharge } from "@shared/guidance-charge-resolution";
 
 // jsPDF's built-in fonts (helvetica, times, courier) only cover Latin/WinAnsi glyphs. Chinese
@@ -800,6 +800,11 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       doc.setTextColor(0, 0, 0);
       if (needsTexasChargeReselection(charge, caseData.jurisdiction)) {
         const messages = {
+          fraud: {
+            en: "Select the exact Texas card or identifying-information charge. Conduct, item count and qualifying circumstances determine the penalty.",
+            es: "Seleccione el cargo exacto de Texas relacionado con tarjetas o información de identificación. La conducta, la cantidad de elementos y las circunstancias aplicables determinan la pena.",
+            zh: "请选择具体的得克萨斯州银行卡或身份信息指控。行为、信息项目数量及适用情节决定处罚。",
+          },
           collision: {
             zh: "请重新选择具体的德克萨斯州碰撞事故罪名。伤害、财产损失和相关义务会影响处罚。",
             es: "Seleccione el cargo exacto por colisión en Texas. Las lesiones, los daños y los deberes aplicables determinan la pena.",
@@ -826,7 +831,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
             en: "Select the specific Texas vehicle burglary charge listed on your charging document.",
           },
         };
-        const notice = messages[isTexasAmbiguousCollision(charge, caseData.jurisdiction) ? "collision" : isTexasAmbiguousDelivery(charge, caseData.jurisdiction) ? "delivery" : isTexasAmbiguousVehicleBurglary(charge, caseData.jurisdiction) ? "vehicle" :
+        const notice = messages[isTexasAmbiguousFraud(charge, caseData.jurisdiction) ? "fraud" : isTexasAmbiguousCollision(charge, caseData.jurisdiction) ? "collision" : isTexasAmbiguousDelivery(charge, caseData.jurisdiction) ? "delivery" : isTexasAmbiguousVehicleBurglary(charge, caseData.jurisdiction) ? "vehicle" :
           isTexasHeldCarrySelection(charge, caseData.jurisdiction) ? "weapons" : "theft"];
         yPosition = addText(formatChargeName(charge.name), margin, yPosition);
         yPosition = addText(notice[isChinese ? "zh" : isSpanish ? "es" : "en"], margin, yPosition + 6) + 6;
