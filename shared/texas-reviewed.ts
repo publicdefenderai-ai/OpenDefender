@@ -1,3 +1,4 @@
+import protectedAssault from "./texas-protected-assault.json";
 import fraud from "./texas-card-identity-fraud.json";
 import road from "./texas-road-safety.json";
 import justice from "./texas-justice-process.json";
@@ -16,7 +17,7 @@ import additions from "./texas-assault-public-intoxication.json";
 import { texasDwiConduct, texasDwiQualifications, texasDwiRecords } from "./texas-dwi";
 export { texasDwiUrl as texasReviewedUrl } from "./texas-dwi";
 
-const labels: Record<string, string> = { OC: "Occ.", GV: "Gov’t", IN: "Ins.", HS: "Health & Safety", HR: "Hum. Res.", PE: "Penal", TN: "Transp.", FA: "Fam.", AL: "Alco. Bev." };
+const labels: Record<string, string> = { UT: "Util.", OC: "Occ.", GV: "Gov’t", IN: "Ins.", HS: "Health & Safety", HR: "Hum. Res.", PE: "Penal", TN: "Transp.", FA: "Fam.", AL: "Alco. Bev." };
 
 export function texasReviewedCitation(ref: { code: string; section: string; subdivision?: string | null }) {
   if (ref.code === "CR") return `Tex. Code Crim. Proc. art. ${ref.section}${ref.subdivision ?? ""}`;
@@ -45,6 +46,7 @@ export const texasReviewedRecords = [
   ...justice,
   ...road,
   ...fraud,
+  ...protectedAssault,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 
@@ -100,7 +102,14 @@ export function isTexasAmbiguousFraud(charge: TexasSavedSelection, jurisdiction?
     (/^(?:(?:Tex\.\s*)?Penal Code\s*)?(?:§\s*)?32\.(?:315|31|51)(?:$|\()/.test(charge.code?.trim() ?? "") || /^(?:identity theft|credit card fraud)$/i.test(charge.name.trim()));
 }
 
+export const texasHeldOfficerId = "tx-assault-on-peace-officer";
+export function isTexasAmbiguousOfficerAssault(charge: TexasSavedSelection, jurisdiction?: string) {
+  if (charge.id) return charge.id === texasHeldOfficerId;
+  return /^(TX|Texas)$/i.test(jurisdiction ?? "") &&
+    (/^(?:(?:Tex\.\s*)?Penal Code\s*)?(?:§\s*)?22\.01\(b(?:-2)?\)(?:$|\(1\))/.test(charge.code?.trim() ?? "") || /^assault (?:on|of) (?:a )?peace officer$/i.test(charge.name.trim()));
+}
+
 export function needsTexasChargeReselection(charge: TexasSavedSelection, jurisdiction?: string) {
-  return isTexasAmbiguousFraud(charge, jurisdiction) || isTexasAmbiguousCollision(charge, jurisdiction) || isTexasAmbiguousDelivery(charge, jurisdiction) || isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
+  return isTexasAmbiguousOfficerAssault(charge, jurisdiction) || isTexasAmbiguousFraud(charge, jurisdiction) || isTexasAmbiguousCollision(charge, jurisdiction) || isTexasAmbiguousDelivery(charge, jurisdiction) || isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
     isTexasAmbiguousVehicleBurglary(charge, jurisdiction);
 }

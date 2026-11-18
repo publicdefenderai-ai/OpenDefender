@@ -177,3 +177,11 @@ test("Texas fraud selector distinguishes quantities, duties and legacy identitie
  for(const r of rows)expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,code:r.code,description:r.conduct,maxPenalty:r.penalty});
  expect(charges.some((c:{id:string})=>["tx-identity-theft","tx-credit-card-fraud"].includes(c.id))).toBe(false);
 });
+
+
+test("Texas protected assault selector preserves injury, threat and contact grades", async ({request})=>{
+ const response=await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");expect(response.ok()).toBe(true);
+ const {charges}=await response.json();const rows=JSON.parse(readFileSync("shared/texas-protected-assault.json","utf8"));
+ for(const r of rows)expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,code:r.code,description:r.conduct,maxPenalty:r.penalty,category:r.category});
+ expect(charges.some((c:{id:string})=>c.id==="tx-assault-on-peace-officer")).toBe(false);
+});

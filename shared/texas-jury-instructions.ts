@@ -41,6 +41,64 @@ const deliveryTransfer = {
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-13.htm&version=048",
 };
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
+  "tx-pc-22-01-public-servant": bodilyInjury,
+  "tx-pc-22-01-peace-officer": bodilyInjury,
+  "tx-pc-22-01-judge": bodilyInjury,
+  "tx-pc-22-01-custody-contractor": bodilyInjury,
+  "tx-pc-22-01-security": bodilyInjury,
+  "tx-pc-22-01-emergency": bodilyInjury,
+  "tx-pc-22-01-process-server": bodilyInjury,
+  "tx-pc-22-01-forced-abortion-injury": bodilyInjury,
+  "tx-pc-22-01-pregnant": bodilyInjury,
+  "tx-pc-22-01-hospital": bodilyInjury,
+  "tx-pc-22-01-utility": bodilyInjury,
+  "tx-pc-22-01-civil-office-1": bodilyInjury,
+  "tx-pc-22-01-civil-office-2": {
+    instructionRef: "CPJC 22.2: Assault by Threat (underlying conduct only; protected-role grading separate)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-2.htm&version=055",
+  },
+  "tx-pc-22-01-civil-office-3": {
+    instructionRef: "CPJC 22.3: Assault by Offensive Touching (underlying conduct only; protected-role grading separate)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-3.htm&version=055",
+  },
+  "tx-pc-22-01-civil-contractor-1": bodilyInjury,
+  "tx-pc-22-01-civil-contractor-2": {
+    instructionRef: "CPJC 22.2: Assault by Threat (underlying conduct only; protected-role grading separate)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-2.htm&version=055",
+  },
+  "tx-pc-22-01-civil-contractor-3": {
+    instructionRef: "CPJC 22.3: Assault by Offensive Touching (underlying conduct only; protected-role grading separate)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-3.htm&version=055",
+  },
+  "tx-pc-22-01-ordinary-2": {
+    instructionRef: "CPJC 22.2: Assault by Threat (underlying conduct only; protected-role grading separate)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-2.htm&version=055",
+  },
+  "tx-pc-22-01-sports-2": {
+    instructionRef: "CPJC 22.2: Assault by Threat (underlying conduct only; protected-role grading separate)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-2.htm&version=055",
+  },
+  "tx-pc-22-01-forced-abortion-2": {
+    instructionRef: "CPJC 22.2: Assault by Threat (underlying conduct only; protected-role grading separate)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-2.htm&version=055",
+  },
+  "tx-pc-22-01-ordinary-3": {
+    instructionRef: "CPJC 22.3: Assault by Offensive Touching (underlying conduct only; protected-role grading separate)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-3.htm&version=055",
+  },
+  "tx-pc-22-01-sports-3": {
+    instructionRef: "CPJC 22.3: Assault by Offensive Touching (underlying conduct only; protected-role grading separate)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-3.htm&version=055",
+  },
+  "tx-pc-22-01-forced-abortion-3": {
+    instructionRef: "CPJC 22.3: Assault by Offensive Touching (underlying conduct only; protected-role grading separate)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-3.htm&version=055",
+  },
+  "tx-pc-22-01-elderly-disabled-contact": {
+    instructionRef: "CPJC 22.3: Assault by Offensive Touching (underlying conduct only; protected-role grading separate)",
+    instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-3.htm&version=055",
+  },
+
   "tx-pc-32-31-1-a": {
     instructionRef: "CPJC 32.11: Credit Card or Debit Card Abuse: unauthorized presentation/use (underlying conduct only)",
     instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F32_Fraud%2FCPJC32-11.htm&version=055",

@@ -1,0 +1,2036 @@
+[
+  {
+    "id": "tx-pc-22-01-public-servant",
+    "name": "Assault (bodily injury to a public servant)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b)(1)",
+    "citation": "Tex. Penal Code § 22.01(b)(1)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor knows the person is a public servant and the person is lawfully discharging an official duty, or the assault is in retaliation for or on account of official power or duty. Public servant has the broad definition in §1.07(a)(41), including specified government officers/employees, jurors and other listed roles. This ordinary public-servant choice excludes the more specific peace-officer/judge second-degree circumstance; a person’s status alone does not replace the required duty connection. The distinctive-uniform/badge knowledge presumption requires its facts and does not compel guilt. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(41)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(d), (b-2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13990063"
+  },
+  {
+    "id": "tx-pc-22-01-peace-officer",
+    "name": "Assault (bodily injury to a sheriff, constable, municipal officer or DPS officer)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b-2)",
+    "citation": "Tex. Penal Code § 22.01(b-2)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor knows the person is a peace officer, and the officer is lawfully discharging an official duty, or the assault is in retaliation for or on account of official power or duty. Peace-officer status is limited here to sheriff/deputy, constable/deputy, municipal-police/marshal and DPS roles meeting article 2A.001(1)-(4), unchanged in both published versions. Other peace-officer categories remain unresolved by this choice. This is second-degree bodily-injury assault, not the separate deadly-weapon/serious-injury aggravated-assault offense. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "(1)-(4) in both published versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13990082"
+  },
+  {
+    "id": "tx-pc-22-01-judge",
+    "name": "Assault (bodily injury to a judge)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b-2)",
+    "citation": "Tex. Penal Code § 22.01(b-2)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor knows the person is a judge, and the judge is lawfully discharging an official duty, or the assault is in retaliation for or on account of official power or duty. The judge-specific second-degree provision controls over ordinary public-servant grading. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13990082"
+  },
+  {
+    "id": "tx-pc-22-01-custody-contractor",
+    "name": "Assault (bodily injury to a government custody-facility contractor or employee)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b)(3)",
+    "citation": "Tex. Penal Code § 22.01(b)(3)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The person contracts with government to provide services in a correctional facility under §1.07(a)(14) or a secure juvenile detention/correctional facility under Family Code §51.02(13)/(14), or is that contractor’s employee. The person must be performing services within the contract and the actor know the person is government-authorized, or the assault must be in retaliation for or on account of the person’s performance within the contract. This does not cover every private contractor without the specified facility and service connection. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-security",
+    "name": "Assault (bodily injury to a security officer)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b)(4)",
+    "citation": "Tex. Penal Code § 22.01(b)(4)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor knows the person is a security officer and the person is performing a security-officer duty. The role is a commissioned security officer under Occupations Code §1702.002 or a noncommissioned officer registered under §1702.221, not anyone described colloquially as security. Subsection (d)’s distinctive-uniform/badge knowledge presumption does not compel guilt. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(e)(3), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1702.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "1702.221",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-emergency",
+    "name": "Assault (bodily injury to emergency services personnel)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b)(5)",
+    "citation": "Tex. Penal Code § 22.01(b)(5)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor knows the person is emergency services personnel and the person is providing emergency services. The definition includes firefighters, qualifying emergency medical services personnel, emergency-room personnel and employed or volunteer personnel providing services to the public during emergencies. It is not every interaction with someone who has an emergency-services job. Subsection (d)’s distinctive-uniform/badge knowledge presumption does not compel guilt. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(e)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-process-server",
+    "name": "Assault (bodily injury to a process server)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b)(6)",
+    "citation": "Tex. Penal Code § 22.01(b)(6)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor knows the person is a process server and the person is performing a process-server duty. Government Code §156.001 supplies the incorporated role definition. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(e)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "156.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-forced-abortion-injury",
+    "name": "Assault (bodily injury to force a pregnant individual to have an abortion)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b)(7)",
+    "citation": "Tex. Penal Code § 22.01(b)(7)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The assault is against a pregnant individual to force that individual to have an abortion. The coercive purpose is required by this branch; pregnancy by itself does not establish it. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)(7)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-pregnant",
+    "name": "Assault (bodily injury to a person known to be pregnant)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b)(8)",
+    "citation": "Tex. Penal Code § 22.01(b)(8)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor knows the person is pregnant at the time of the offense. This branch requires knowledge of pregnancy, but does not require a purpose of forcing an abortion. Conduct before the applicable amendment must be reviewed under the version then in effect. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)(8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13990090"
+  },
+  {
+    "id": "tx-pc-22-01-hospital",
+    "name": "Assault (bodily injury to hospital personnel on hospital property)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b)(9)",
+    "citation": "Tex. Penal Code § 22.01(b)(9)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor knows the person is hospital personnel and the person is on hospital property, including all owned or leased land and buildings. Hospital personnel includes nurses, physicians, physician assistants, maintenance/janitorial staff, receptionists and others working in a facility licensed as a general or special hospital under Health and Safety Code §241.003, including state hospitals. The hospital-property condition and incorporated facility definition cannot be replaced by a generic healthcare-worker label. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)(9)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(e)(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "241.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-utility",
+    "name": "Assault (bodily injury to a utility employee or agent)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b)(10)",
+    "citation": "Tex. Penal Code § 22.01(b)(10)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor knows or reasonably should know the person is a utility employee or agent and the person is performing a duty within that employment or agency. The utilities definition includes specified electric, telecommunications, cable/video and gas providers, oil/gas/related-product pipelines, electric cooperatives and municipal utilities. It does not extend to every contractor or delivery worker. Subsection (d)’s distinctive-uniform/badge knowledge presumption requires its facts and does not compel guilt. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b)(10)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(e)(5), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "31.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "51.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "66.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "101.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "121.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "11.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-civil-office-1",
+    "name": "Assault (bodily injury by a civilly committed actor against commitment-office personnel)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b-1)(2)(A)",
+    "citation": "Tex. Penal Code § 22.01(b-1)(2)(A)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor must be committed to a civil commitment facility, defined as a state/vendor facility housing only persons civilly committed as sexually violent predators under Chapter 841 and know the victim is an officer or employee of the Texas Civil Commitment Office, while lawfully discharging an official duty or in retaliation for or on account of official power/duty. This special provision applies to all three assault forms, overriding ordinary threat/contact misdemeanor grades. Subsection (d-1) supplies a distinctive-uniform/badge knowledge presumption, not automatic guilt. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)(1), (d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-civil-office-2",
+    "name": "Assault (threat by a civilly committed actor against commitment-office personnel)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b-1)(2)(A)",
+    "citation": "Tex. Penal Code § 22.01(b-1)(2)(A)",
+    "conduct": "Intentionally or knowingly threatening another with imminent bodily injury. Recklessness alone does not satisfy this threat branch. The actor must be committed to a civil commitment facility, defined as a state/vendor facility housing only persons civilly committed as sexually violent predators under Chapter 841 and know the victim is an officer or employee of the Texas Civil Commitment Office, while lawfully discharging an official duty or in retaliation for or on account of official power/duty. This special provision applies to all three assault forms, overriding ordinary threat/contact misdemeanor grades. Subsection (d-1) supplies a distinctive-uniform/badge knowledge presumption, not automatic guilt. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)(1), (d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-civil-office-3",
+    "name": "Assault (offensive contact by a civilly committed actor against commitment-office personnel)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b-1)(2)(A)",
+    "citation": "Tex. Penal Code § 22.01(b-1)(2)(A)",
+    "conduct": "Intentionally or knowingly causing physical contact with another when the actor knows or should reasonably believe the other will regard it as offensive or provocative. Bodily injury is not required for this contact branch. The actor must be committed to a civil commitment facility, defined as a state/vendor facility housing only persons civilly committed as sexually violent predators under Chapter 841 and know the victim is an officer or employee of the Texas Civil Commitment Office, while lawfully discharging an official duty or in retaliation for or on account of official power/duty. This special provision applies to all three assault forms, overriding ordinary threat/contact misdemeanor grades. Subsection (d-1) supplies a distinctive-uniform/badge knowledge presumption, not automatic guilt. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)(1), (d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-civil-contractor-1",
+    "name": "Assault (bodily injury by a civilly committed actor against commitment contractor personnel)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b-1)(2)(B)",
+    "citation": "Tex. Penal Code § 22.01(b-1)(2)(B)",
+    "conduct": "Intentionally, knowingly or recklessly causing bodily injury to another. Bodily injury includes physical pain, illness or impairment of physical condition. The actor must be committed to a civil commitment facility, defined as a state/vendor facility housing only persons civilly committed as sexually violent predators under Chapter 841 and know the victim is a person contracting with the state to provide services in a civil commitment facility, or that contractor’s employee, while performing services within the contract or in retaliation for or on account of that performance. This special provision applies to all three assault forms, overriding ordinary threat/contact misdemeanor grades. Subsection (d-1) supplies a distinctive-uniform/badge knowledge presumption, not automatic guilt. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)(1), (d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-civil-contractor-2",
+    "name": "Assault (threat by a civilly committed actor against commitment contractor personnel)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b-1)(2)(B)",
+    "citation": "Tex. Penal Code § 22.01(b-1)(2)(B)",
+    "conduct": "Intentionally or knowingly threatening another with imminent bodily injury. Recklessness alone does not satisfy this threat branch. The actor must be committed to a civil commitment facility, defined as a state/vendor facility housing only persons civilly committed as sexually violent predators under Chapter 841 and know the victim is a person contracting with the state to provide services in a civil commitment facility, or that contractor’s employee, while performing services within the contract or in retaliation for or on account of that performance. This special provision applies to all three assault forms, overriding ordinary threat/contact misdemeanor grades. Subsection (d-1) supplies a distinctive-uniform/badge knowledge presumption, not automatic guilt. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)(1), (d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-civil-contractor-3",
+    "name": "Assault (offensive contact by a civilly committed actor against commitment contractor personnel)",
+    "officialTitle": "ASSAULT.",
+    "category": "felony",
+    "code": "22.01(b-1)(2)(B)",
+    "citation": "Tex. Penal Code § 22.01(b-1)(2)(B)",
+    "conduct": "Intentionally or knowingly causing physical contact with another when the actor knows or should reasonably believe the other will regard it as offensive or provocative. Bodily injury is not required for this contact branch. The actor must be committed to a civil commitment facility, defined as a state/vendor facility housing only persons civilly committed as sexually violent predators under Chapter 841 and know the victim is a person contracting with the state to provide services in a civil commitment facility, or that contractor’s employee, while performing services within the contract or in retaliation for or on account of that performance. This special provision applies to all three assault forms, overriding ordinary threat/contact misdemeanor grades. Subsection (d-1) supplies a distinctive-uniform/badge knowledge presumption, not automatic guilt. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)(1), (d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(b-1)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-ordinary-2",
+    "name": "Assault (threat of imminent bodily injury)",
+    "officialTitle": "ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.01(c)",
+    "citation": "Tex. Penal Code § 22.01(c)",
+    "conduct": "Intentionally or knowingly threatening another with imminent bodily injury. Recklessness alone does not satisfy this threat branch. This ordinary choice excludes the special civil-commitment, sports-participant, elderly/disabled-contact and forced-abortion circumstances. A protected-victim bodily-injury felony is not automatically imported into an offense without bodily injury. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, without a jail term as the ordinary punishment. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-sports-2",
+    "name": "Assault (threat of imminent bodily injury against a sports participant)",
+    "officialTitle": "ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.01(c)(2)",
+    "citation": "Tex. Penal Code § 22.01(c)(2)",
+    "conduct": "Intentionally or knowingly threatening another with imminent bodily injury. Recklessness alone does not satisfy this threat branch. The actor is not a sports participant, knows the person is a sports participant, and acts while that person performs their sports duties or in retaliation for or on account of those duties. The definition includes athletes, referees, umpires, linesmen, coaches, instructors, administrators and staff in an official capacity in organized amateur/professional athletic competition. This choice excludes an overlapping circumstance with a higher grade. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(e)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-forced-abortion-2",
+    "name": "Assault (threat of imminent bodily injury to force an abortion)",
+    "officialTitle": "ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.01(c)(3)",
+    "citation": "Tex. Penal Code § 22.01(c)(3)",
+    "conduct": "Intentionally or knowingly threatening another with imminent bodily injury. Recklessness alone does not satisfy this threat branch. The offense is against a pregnant individual to force that individual to have an abortion. This is the threat/contact grade; the bodily-injury branch has separate felony grading. The civil-commitment exception can supersede this misdemeanor grade. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(c)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-ordinary-3",
+    "name": "Assault (offensive or provocative contact)",
+    "officialTitle": "ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.01(c)",
+    "citation": "Tex. Penal Code § 22.01(c)",
+    "conduct": "Intentionally or knowingly causing physical contact with another when the actor knows or should reasonably believe the other will regard it as offensive or provocative. Bodily injury is not required for this contact branch. This ordinary choice excludes the special civil-commitment, sports-participant, elderly/disabled-contact and forced-abortion circumstances. A protected-victim bodily-injury felony is not automatically imported into an offense without bodily injury. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, without a jail term as the ordinary punishment. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-sports-3",
+    "name": "Assault (offensive or provocative contact against a sports participant)",
+    "officialTitle": "ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.01(c)(2)",
+    "citation": "Tex. Penal Code § 22.01(c)(2)",
+    "conduct": "Intentionally or knowingly causing physical contact with another when the actor knows or should reasonably believe the other will regard it as offensive or provocative. Bodily injury is not required for this contact branch. The actor is not a sports participant, knows the person is a sports participant, and acts while that person performs their sports duties or in retaliation for or on account of those duties. The definition includes athletes, referees, umpires, linesmen, coaches, instructors, administrators and staff in an official capacity in organized amateur/professional athletic competition. This choice excludes an overlapping circumstance with a higher grade. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(e)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-forced-abortion-3",
+    "name": "Assault (offensive or provocative contact to force an abortion)",
+    "officialTitle": "ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.01(c)(3)",
+    "citation": "Tex. Penal Code § 22.01(c)(3)",
+    "conduct": "Intentionally or knowingly causing physical contact with another when the actor knows or should reasonably believe the other will regard it as offensive or provocative. Bodily injury is not required for this contact branch. The offense is against a pregnant individual to force that individual to have an abortion. This is the threat/contact grade; the bodily-injury branch has separate felony grading. The civil-commitment exception can supersede this misdemeanor grade. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(c)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-01-elderly-disabled-contact",
+    "name": "Assault (offensive contact with an elderly or disabled individual)",
+    "officialTitle": "ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.01(c)(1)",
+    "citation": "Tex. Penal Code § 22.01(c)(1)",
+    "conduct": "Intentionally or knowingly causing physical contact with another when the actor knows or should reasonably believe the other will regard it as offensive or provocative. Bodily injury is not required for this contact branch. The contact is against an elderly individual (age 65 or older) or a disabled individual meeting §22.04(c)(3), including the incorporated autism, developmental/intellectual disability, severe emotional disturbance, traumatic brain injury and mental illness definitions, or the substantially-unable-to-protect/provide-for-self alternative. This specific grade applies to offensive contact, not automatically to the threat branch. The civil-commitment exception can supersede it. The consent defense in §22.06 requires effective consent or a reasonable belief in consent and its injury/risk conditions; it is unavailable for the specified criminal-street-gang initiation or continued-membership conduct. Other justification and case-specific defenses require separate review.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying prior convictions or other statutory findings can change punishment. The separate aggravated-assault offense and its additional elements are not decided by this choice.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (19), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)(2), (3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "591.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "IN",
+        "section": "1355.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "112.042",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "92.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "571.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  }
+]
