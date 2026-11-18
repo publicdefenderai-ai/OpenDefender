@@ -1,5 +1,5 @@
-// Corrected hashes are deliberately not approved by the committed expired receipt.
-// Only this test substitutes a synthetic receipt, preserving real boundary checks.
+// Use a synthetic receipt for deterministic historical-family isolation.
+// The committed receipt is exercised separately by florida-reviewed-activation.test.ts.
 vi.mock('node:fs',async original=>{
  const fs=await original<typeof import('node:fs')>();
  const {syntheticFloridaReceipt}=await import('./helpers/florida-receipt-fixture');

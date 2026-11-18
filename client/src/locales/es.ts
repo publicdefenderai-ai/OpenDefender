@@ -4783,6 +4783,9 @@ export default {
   },
   "diversionPrograms": {
     "directory": {
+      "lookupUnavailable": "Consulta de código postal no disponible",
+      "lookupHelp": "No pudimos identificar el estado de este código postal. Inténtelo de nuevo, o borre el código postal y elija un estado. Esto no significa que no haya programas en su área.",
+      "retry": "Reintentar consulta del código postal",
       "title": "Explore los programas alternativos.",
       "accent": "Conozca sus opciones.",
       "intro": "Busque programas alternativos al proceso penal o a la sentencia por ubicación y tipo de programa. Revise los detalles con su abogado para saber qué podría aplicarse a su caso.",
@@ -7696,7 +7699,7 @@ export default {
     }
   },
   "howTo": {
-    "design": {"title": "Empiece con lo que necesita ahora.", "screenshot": "La captura de pantalla se añadirá cuando se apruebe el diseño"},
+    "design": {"title": "Empiece con lo que necesita ahora.", "screenshot": "Abrir captura a tamaño completo (nueva pestaña)"},
     "pageTitle": "Guía de Navegación",
     "pageSubtitle": "Encuentre recursos legales, entienda sus derechos y obtenga el apoyo que necesita",
     "hero": {

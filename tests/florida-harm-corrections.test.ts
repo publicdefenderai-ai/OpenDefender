@@ -86,11 +86,12 @@ describe('Florida harm-family individually bound corrections',()=>{
   const elder=packet.definitions.find(r=>r.code==='825.102(1)')!;
   expect(elder.text.en.degreeContext).toContain('reasonably believed the action was necessary');
  });
- it('retains approval-bound evidence and withholds the older family without a matching current receipt',()=>{
+ it('retains approval-bound evidence and checks the matching receipt and withholds the family at expiry',()=>{
   const corrupted=structuredClone(packet.report);corrupted.drafts[0].requiredDependencies.pop();
   expect(()=>buildFloridaReviewedSourceRecords(packet.definitions as any,corrupted as any,packet.eligibility as any)).toThrow();
   const all=buildFloridaReviewedSourceRecords(FLORIDA_REVIEWED_DEFINITIONS,report as any,ledger as any);
   expect(all).toHaveLength(101);
-  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.checkedAt))).not.toBeNull();
+  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.checkedAt))).toBeNull();
+  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.expiresAt))).not.toBeNull();
  });
 });

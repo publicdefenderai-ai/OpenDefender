@@ -27,10 +27,13 @@ export default function DiversionPrograms() {
   const [selectedProgramType, setSelectedProgramType] = useState("");
   const query = searchQuery.trim();
   const isZip = /^\d{5}$/.test(query);
-  const [zipResult, setZipResult] = useState<ExpandedSearchResult | null>(null);
+  const [zipResult, setZipResult] = useState<(ExpandedSearchResult & { locationUnavailable?: boolean }) | null>(null);
+
+  const [retry, setRetry] = useState(0);
 
   useEffect(() => {
     if (!isZip) return;
+    setZipResult(null);
     let active = true;
     const timer = window.setTimeout(async () => {
       const result = await searchDiversionProgramsExpanded(query);
@@ -40,7 +43,7 @@ export default function DiversionPrograms() {
       active = false;
       window.clearTimeout(timer);
     };
-  }, [query, isZip]);
+  }, [query, isZip, retry]);
 
   const currentZip = isZip && zipResult?.searchedZipCode === query ? zipResult : null;
   const searching = isZip && !currentZip;
@@ -64,7 +67,7 @@ export default function DiversionPrograms() {
 
   return (
     <ScanFirstPageFrame>
-      <PageBreadcrumb items={[{ label: t("breadcrumb.home"), href: "/" }]} currentPage={t("diversionPrograms.hero.title")} />
+      <PageBreadcrumb items={[{ label: t("diversionPrograms.navigation.backToHome"), href: "/" }]} currentPage={t("diversionPrograms.hero.title")} />
       <div className="diversion-directory">
         <header>
           <h1>{t("diversionPrograms.directory.title")} <span>{t("diversionPrograms.directory.accent")}</span></h1>
@@ -91,10 +94,14 @@ export default function DiversionPrograms() {
           </div>
         </div>
         <div role="status" className="diversion-count">
-          {searching ? t("diversionPrograms.search.searching") : t(hasFilters ? "diversionPrograms.navigation.programsCount" : "diversionPrograms.navigation.totalPrograms", { count: programs.length, total: diversionPrograms.length })}
+          {currentZip?.locationUnavailable ? t("diversionPrograms.directory.lookupUnavailable") : searching ? t("diversionPrograms.search.searching") : t(hasFilters ? "diversionPrograms.navigation.programsCount" : "diversionPrograms.navigation.totalPrograms", { count: programs.length, total: diversionPrograms.length })}
           {currentZip?.expandedToState && <p>{t("diversionPrograms.expandedSearch.message", { zipCode: query, state: currentZip.expandedToState, count: currentZip.programs.length })}</p>}
         </div>
-        {!searching && !programs.length && <section className="diversion-empty">
+        {currentZip?.locationUnavailable && <section className="diversion-empty" role="alert">
+          <p>{t("diversionPrograms.directory.lookupHelp")}</p>
+          <button type="button" className="diversion-retry" onClick={() => setRetry(value => value + 1)}>{t("diversionPrograms.directory.retry")}</button>
+        </section>}
+        {!currentZip?.locationUnavailable && !searching && !programs.length && <section className="diversion-empty">
           <h2>{t(hasFilters ? "diversionPrograms.emptyState.title" : "diversionPrograms.initialState.title")}</h2>
           <p>{t(hasFilters ? "diversionPrograms.emptyState.description" : "diversionPrograms.initialState.description")}</p>
         </section>}
@@ -102,6 +109,7 @@ export default function DiversionPrograms() {
           ...program, county: program.county ?? undefined, cities: program.cities ?? undefined,
           eligibilityNotes: program.eligibilityNotes ?? undefined, contact: normalizeProgramContact(program.contact),
         }} />)}
+        <p className="diversion-notice">{t("diversionPrograms.infoBanner.disclaimer")}</p>
         <p className="diversion-notice">{t("diversionPrograms.directory.notice")}</p>
         <nav aria-label={t("diversionPrograms.directory.related")}>
           <Link href="/case-guidance">{t("diversionPrograms.quickNav.legalGuidanceButton")}</Link>

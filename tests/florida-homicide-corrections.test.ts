@@ -45,5 +45,6 @@ it('accounts for the fifteen screened injury/death IDs and keeps the corrected f
  const priority=screen.rows.filter(r=>r.classification==='injury_or_death_condition_priority');expect(priority).toHaveLength(15);
  const completed=new Set([...harm.definitions,...roadway.definitions,...packet.definitions].map(d=>d.id));expect(priority.filter(r=>!completed.has(r.id))).toEqual([]);
  const all=buildFloridaReviewedSourceRecords(FLORIDA_REVIEWED_DEFINITIONS,report as any,ledger as any);expect(all).toHaveLength(101);
- expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.checkedAt))).not.toBeNull();
+ expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.checkedAt))).toBeNull();
+  expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,ledger as any,all,new Date(receipt.expiresAt))).not.toBeNull();
 });
