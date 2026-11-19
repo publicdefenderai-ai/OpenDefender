@@ -1,3 +1,4 @@
+import threats from "./texas-threats-alerts.json";
 import robbery from "./texas-robbery-restraint.json";
 import protectedAssault from "./texas-protected-assault.json";
 import fraud from "./texas-card-identity-fraud.json";
@@ -49,6 +50,7 @@ export const texasReviewedRecords = [
   ...fraud,
   ...protectedAssault,
   ...robbery,
+  ...threats,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 
@@ -111,7 +113,14 @@ export function isTexasAmbiguousOfficerAssault(charge: TexasSavedSelection, juri
     (/^(?:(?:Tex\.\s*)?Penal Code\s*)?(?:§\s*)?22\.01\(b(?:-2)?\)(?:$|\(1\))/.test(charge.code?.trim() ?? "") || /^assault (?:on|of) (?:a )?peace officer$/i.test(charge.name.trim()));
 }
 
+export const texasHeldThreatId = "tx-terroristic-threat";
+export function isTexasAmbiguousThreat(charge: TexasSavedSelection, jurisdiction?: string) {
+  if (charge.id) return charge.id === texasHeldThreatId;
+  return /^(TX|Texas)$/i.test(jurisdiction ?? "") &&
+    (/^(?:(?:Tex\.\s*)?Penal Code\s*)?(?:§\s*)?22\.07(?:$|\()/.test(charge.code?.trim() ?? "") || /^terroristic threat$/i.test(charge.name.trim()));
+}
+
 export function needsTexasChargeReselection(charge: TexasSavedSelection, jurisdiction?: string) {
-  return isTexasAmbiguousOfficerAssault(charge, jurisdiction) || isTexasAmbiguousFraud(charge, jurisdiction) || isTexasAmbiguousCollision(charge, jurisdiction) || isTexasAmbiguousDelivery(charge, jurisdiction) || isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
+  return isTexasAmbiguousThreat(charge, jurisdiction) || isTexasAmbiguousOfficerAssault(charge, jurisdiction) || isTexasAmbiguousFraud(charge, jurisdiction) || isTexasAmbiguousCollision(charge, jurisdiction) || isTexasAmbiguousDelivery(charge, jurisdiction) || isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
     isTexasAmbiguousVehicleBurglary(charge, jurisdiction);
 }
