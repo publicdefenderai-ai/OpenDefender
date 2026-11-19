@@ -41,6 +41,10 @@ const deliveryTransfer = {
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-13.htm&version=048",
 };
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
+  "tx-pc-46-04-felony-window": {
+    "instructionRef": "CPJC 46.3: Possession of a Firearm by a Felon at His Home, Third-Degree Felony (home and within-period theory only; underlying conduct only)",
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F46_Weapons_Offenses%2FCPJC46-3.htm&version=055"
+  },
   "tx-pc-22-07-ordinary-fear": {
     "instructionRef": "CPJC 22.28: Terroristic Threat (individual imminent-serious-injury fear theory only; underlying conduct only, special grading separate)",
     "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=048"

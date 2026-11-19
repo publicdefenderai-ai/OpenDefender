@@ -1,0 +1,3208 @@
+[
+  {
+    "id": "tx-pc-46-04-felony-window",
+    "name": "Unlawful possession of firearm (after felony conviction and before the five-year release anniversary)",
+    "officialTitle": "UNLAWFUL POSSESSION OF FIREARM.",
+    "category": "felony",
+    "code": "46.04(a)(1)",
+    "citation": "Tex. Penal Code § 46.04(a)(1)",
+    "conduct": "Intentionally, knowingly or recklessly possessing a firearm in the specified felony circumstance. After a qualifying felony conviction and before the fifth anniversary of release from confinement following that conviction or release from community supervision, parole or mandatory supervision, whichever date is later. The clock is not simply five years after conviction, and residence possession is not exempt during this window. The predicate must qualify under §46.04(f), subject to (g): the statute’s designation, elements and penitentiary-punishment tests cannot be replaced by a colloquial felony label, and its exception looks to Texas felony designation/elements at the time of firearm possession. Possession requires actual care, custody, control or management and the applicable culpable mental state. Under §6.01(b), possession is voluntary if the person knowingly obtains or receives the thing or is aware of control long enough to terminate it; mere proximity is not automatically possession. The Chapter 46 firearm definition and its narrow antique/replica exclusion apply. These choices describe the Texas offense only; they do not restore firearm rights or resolve separate federal restrictions or individual constitutional challenges.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Section 46.11 can increase punishment by one offense category when its knowledge and school-zone/function findings are proved beyond a reasonable doubt; this ordinary choice does not assume those findings. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(f), (g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.11",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "52120009"
+  },
+  {
+    "id": "tx-pc-46-04-felony-after-window",
+    "name": "Unlawful possession of firearm (after the five-year window away from the residence)",
+    "officialTitle": "UNLAWFUL POSSESSION OF FIREARM.",
+    "category": "felony",
+    "code": "46.04(a)(2)",
+    "citation": "Tex. Penal Code § 46.04(a)(2)",
+    "conduct": "Intentionally, knowingly or recklessly possessing a firearm in the specified felony circumstance. After the period in §46.04(a)(1), possessing the firearm at a location other than the premises where the person lives. Ownership of other property is not the statutory residence condition. The rule is not a blanket restoration of firearm rights after five years. The predicate must qualify under §46.04(f), subject to (g): the statute’s designation, elements and penitentiary-punishment tests cannot be replaced by a colloquial felony label, and its exception looks to Texas felony designation/elements at the time of firearm possession. Possession requires actual care, custody, control or management and the applicable culpable mental state. Under §6.01(b), possession is voluntary if the person knowingly obtains or receives the thing or is aware of control long enough to terminate it; mere proximity is not automatically possession. The Chapter 46 firearm definition and its narrow antique/replica exclusion apply. These choices describe the Texas offense only; they do not restore firearm rights or resolve separate federal restrictions or individual constitutional challenges.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Section 46.11 can increase punishment by one offense category when its knowledge and school-zone/function findings are proved beyond a reasonable doubt; this ordinary choice does not assume those findings. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(f), (g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.11",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "52120009"
+  },
+  {
+    "id": "tx-pc-46-04-gang-vehicle",
+    "name": "Unlawful possession of firearm (criminal street gang member carrying in a vehicle or watercraft)",
+    "officialTitle": "UNLAWFUL POSSESSION OF FIREARM.",
+    "category": "misdemeanor",
+    "code": "46.04(a-1)",
+    "citation": "Tex. Penal Code § 46.04(a-1)",
+    "conduct": "A person who is a member of a criminal street gang intentionally, knowingly or recklessly carries a handgun on or about the person in a motor vehicle or watercraft. The §71.01(d) gang definition requires three or more persons with a common identifying sign/symbol or identifiable leadership who continuously or regularly associate in criminal activities; association alone is not automatically membership in such a gang. This is the specific handgun-carry branch, not every firearm possessed by someone called a gang member. Possession requires actual care, custody, control or management and the applicable culpable mental state. Under §6.01(b), possession is voluntary if the person knowingly obtains or receives the thing or is aware of control long enough to terminate it; mere proximity is not automatically possession. The Chapter 46 firearm definition and its narrow antique/replica exclusion apply. These choices describe the Texas offense only; they do not restore firearm rights or resolve separate federal restrictions or individual constitutional challenges.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Section 46.11 can increase punishment by one offense category when its knowledge and school-zone/function findings are proved beyond a reasonable doubt; this ordinary choice does not assume those findings. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(a-1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.11",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-04-family-assault-window",
+    "name": "Unlawful possession of firearm (qualifying Class A family/household assault conviction within five-year window)",
+    "officialTitle": "UNLAWFUL POSSESSION OF FIREARM.",
+    "category": "misdemeanor",
+    "code": "46.04(b)",
+    "citation": "Tex. Penal Code § 46.04(b)",
+    "conduct": "Intentionally, knowingly or recklessly possessing a firearm after conviction under §22.01 punishable as a Class A misdemeanor and involving a family or household member, before the fifth anniversary of the later release from confinement or community supervision following that misdemeanor. Not every misdemeanor or assault conviction supplies this predicate. Family includes the specified relatives, former spouses, parents of the same child and foster relationships; household includes people living together and membership includes a former household member under §71.006. Possession requires actual care, custody, control or management and the applicable culpable mental state. Under §6.01(b), possession is voluntary if the person knowingly obtains or receives the thing or is aware of control long enough to terminate it; mere proximity is not automatically possession. The Chapter 46 firearm definition and its narrow antique/replica exclusion apply. These choices describe the Texas offense only; they do not restore firearm rights or resolve separate federal restrictions or individual constitutional challenges.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Section 46.11 can increase punishment by one offense category when its knowledge and school-zone/function findings are proved beyond a reasonable doubt; this ordinary choice does not assume those findings. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.11",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-041-armor",
+    "name": "Unlawful possession of metal or body armor by felon (after felony conviction)",
+    "officialTitle": "UNLAWFUL POSSESSION OF METAL OR BODY ARMOR BY FELON.",
+    "category": "felony",
+    "code": "46.041(b)",
+    "citation": "Tex. Penal Code § 46.041(b)",
+    "conduct": "After a felony conviction, intentionally, knowingly or recklessly possessing metal or body armor: a body covering manifestly designed, made or adapted to protect against gunfire. The five-year/residence qualifications in the separate firearm statute are not silently imported into this armor statute. Voluntary possession and actual control must be established; merely being near an item is not enough. This choice does not decide separate federal restrictions or case-specific constitutional challenges.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Section 46.11 can increase punishment by one offense category when its knowledge and school-zone/function findings are proved beyond a reasonable doubt; this ordinary choice does not assume those findings. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.041",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.041",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.041",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.11",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-10-prison-weapon",
+    "name": "Deadly weapon in penal institution (carrying, possessing or concealing while confined)",
+    "officialTitle": "DEADLY WEAPON IN PENAL INSTITUTION.",
+    "category": "felony",
+    "code": "46.10(a)",
+    "citation": "Tex. Penal Code § 46.10(a)",
+    "conduct": "While confined in a penal institution, intentionally, knowingly or recklessly carrying a deadly weapon on or about the person, or possessing or concealing one in the institution. Penal institution has the §1.07(a)(37) meaning of a lawfully designated place for confinement after arrest, charge or conviction; a civil commitment facility is not automatically substituted. Deadly weapon includes a firearm and the other designed/adapted or manner-of-use lethal-capability alternatives in §1.07(a)(17). Section 46.10(b) supplies an affirmative defense when the conduct was authorized by an institutional employee. Its rule allowing prosecution under this or another applicable Chapter 46 section is not treated as automatic cumulative punishment.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Section 46.11 can increase punishment by one offense category when its knowledge and school-zone/function findings are proved beyond a reasonable doubt; this ordinary choice does not assume those findings. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.10",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.10",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.10",
+        "subdivision": "(b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(37)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3), (5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.11",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-11-provide-substance-ordinary",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (providing substances or possessing with intent to provide; ordinary)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(a)(1)",
+    "citation": "Tex. Penal Code § 38.11(a)(1)",
+    "conduct": "Providing, or possessing with intent to provide, an alcoholic beverage, controlled substance or dangerous drug to someone in correctional custody or residing in a civil commitment facility, except on a practitioner’s prescription. The prescription language here is the (a)(1) exception, not a general phone/weapon authorization. This ordinary grade excludes the correctional-facility employee enhancements; civil-facility employment is not automatically correctional-facility employment. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. ",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The completed offense is described here; subsection (h) separately makes qualifying attempts under (a), (b) or (c) third-degree felonies rather than applying the ordinary one-category reduction. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(1), (f)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "1.04",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(a)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g), (g-1), (g-2), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "15.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-provide-substance-employee",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (providing substances or possessing with intent to provide; employee)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(a)(1)",
+    "citation": "Tex. Penal Code § 38.11(a)(1)",
+    "conduct": "Providing, or possessing with intent to provide, an alcoholic beverage, controlled substance or dangerous drug to someone in correctional custody or residing in a civil commitment facility, except on a practitioner’s prescription. The prescription language here is the (a)(1) exception, not a general phone/weapon authorization. The actor is employed by the correctional facility, and this offense is committed with respect to that correctional facility. It excludes the drug-caused-death circumstance. A contract or civil-facility job alone is not automatically this employment finding. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. ",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. The completed offense is described here; subsection (h) separately makes qualifying attempts under (a), (b) or (c) third-degree felonies rather than applying the ordinary one-category reduction. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(1), (f)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "1.04",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(a)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g), (g-1), (g-2), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "15.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-11-provide-substance-employee-death",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (providing substances or possessing with intent to provide; employee death)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(a)(1)",
+    "citation": "Tex. Penal Code § 38.11(a)(1)",
+    "conduct": "Providing, or possessing with intent to provide, an alcoholic beverage, controlled substance or dangerous drug to someone in correctional custody or residing in a civil commitment facility, except on a practitioner’s prescription. The prescription language here is the (a)(1) exception, not a general phone/weapon authorization. The actor is employed by the correctional facility, and administration of the controlled substance or dangerous drug that is the subject of this offense causes the death of a person in the facility’s custody. Alcohol alone, any unrelated death, or mere facility employment does not establish this special branch. The 2025 enhanced range applies only to conduct governed by the amendment effective September 1, 2025; earlier conduct requires its prior version. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. ",
+    "penalty": "First-degree felony with a special range under §38.11(g-2): 15 to 99 years or life in prison, and a fine up to $250,000. The ordinary five-year first-degree minimum and $10,000 fine ceiling do not replace this specific range. The completed offense is described here; subsection (h) separately makes qualifying attempts under (a), (b) or (c) third-degree felonies rather than applying the ordinary one-category reduction. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g-2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(1), (f)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "1.04",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(a)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g), (g-1), (g-2), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "15.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-11-take-inside-ordinary",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (taking substances into a facility; ordinary)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(b)",
+    "citation": "Tex. Penal Code § 38.11(b)",
+    "conduct": "Taking an alcoholic beverage, controlled substance or dangerous drug into a correctional or civil commitment facility. For (b), (c) and (d)(1), subsection (e) provides an affirmative defense for possession pursuant to a practitioner’s prescription or while delivering to a warehouse, pharmacy or practitioner on facility property. That defense is not silently extended to every other contraband branch. For (b), subsection (i) separately protects the specified duly authorized clergy ritual involving no more than four ounces of alcohol, personally consumed or removed from the facility; it is not blanket permission to bring alcohol. This ordinary grade excludes the correctional-facility employee enhancements; civil-facility employment is not automatically correctional-facility employment. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. ",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The completed offense is described here; subsection (h) separately makes qualifying attempts under (a), (b) or (c) third-degree felonies rather than applying the ordinary one-category reduction. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(1), (f)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "1.04",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(e), (i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g), (g-1), (g-2), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "15.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-take-inside-employee",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (taking substances into a facility; employee)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(b)",
+    "citation": "Tex. Penal Code § 38.11(b)",
+    "conduct": "Taking an alcoholic beverage, controlled substance or dangerous drug into a correctional or civil commitment facility. For (b), (c) and (d)(1), subsection (e) provides an affirmative defense for possession pursuant to a practitioner’s prescription or while delivering to a warehouse, pharmacy or practitioner on facility property. That defense is not silently extended to every other contraband branch. For (b), subsection (i) separately protects the specified duly authorized clergy ritual involving no more than four ounces of alcohol, personally consumed or removed from the facility; it is not blanket permission to bring alcohol. The actor is employed by the correctional facility, and this offense is committed with respect to that correctional facility. It excludes the drug-caused-death circumstance. A contract or civil-facility job alone is not automatically this employment finding. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. ",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. The completed offense is described here; subsection (h) separately makes qualifying attempts under (a), (b) or (c) third-degree felonies rather than applying the ordinary one-category reduction. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(1), (f)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "1.04",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(e), (i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g), (g-1), (g-2), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "15.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-11-take-inside-employee-death",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (taking substances into a facility; employee death)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(b)",
+    "citation": "Tex. Penal Code § 38.11(b)",
+    "conduct": "Taking an alcoholic beverage, controlled substance or dangerous drug into a correctional or civil commitment facility. For (b), (c) and (d)(1), subsection (e) provides an affirmative defense for possession pursuant to a practitioner’s prescription or while delivering to a warehouse, pharmacy or practitioner on facility property. That defense is not silently extended to every other contraband branch. For (b), subsection (i) separately protects the specified duly authorized clergy ritual involving no more than four ounces of alcohol, personally consumed or removed from the facility; it is not blanket permission to bring alcohol. The actor is employed by the correctional facility, and administration of the controlled substance or dangerous drug that is the subject of this offense causes the death of a person in the facility’s custody. Alcohol alone, any unrelated death, or mere facility employment does not establish this special branch. The 2025 enhanced range applies only to conduct governed by the amendment effective September 1, 2025; earlier conduct requires its prior version. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. ",
+    "penalty": "First-degree felony with a special range under §38.11(g-2): 15 to 99 years or life in prison, and a fine up to $250,000. The ordinary five-year first-degree minimum and $10,000 fine ceiling do not replace this specific range. The completed offense is described here; subsection (h) separately makes qualifying attempts under (a), (b) or (c) third-degree felonies rather than applying the ordinary one-category reduction. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g-2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(1), (f)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "1.04",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(e), (i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g), (g-1), (g-2), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "15.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-11-take-property-ordinary",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (taking drugs onto facility property; ordinary)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(c)",
+    "citation": "Tex. Penal Code § 38.11(c)",
+    "conduct": "Taking a controlled substance or dangerous drug onto property owned, used or controlled by a correctional or civil commitment facility. Alcohol alone is not listed in (c). For (b), (c) and (d)(1), subsection (e) provides an affirmative defense for possession pursuant to a practitioner’s prescription or while delivering to a warehouse, pharmacy or practitioner on facility property. That defense is not silently extended to every other contraband branch. This ordinary grade excludes the correctional-facility employee enhancements; civil-facility employment is not automatically correctional-facility employment. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. ",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The completed offense is described here; subsection (h) separately makes qualifying attempts under (a), (b) or (c) third-degree felonies rather than applying the ordinary one-category reduction. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(c)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(1), (f)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "1.04",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g), (g-1), (g-2), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "15.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-take-property-employee",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (taking drugs onto facility property; employee)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(c)",
+    "citation": "Tex. Penal Code § 38.11(c)",
+    "conduct": "Taking a controlled substance or dangerous drug onto property owned, used or controlled by a correctional or civil commitment facility. Alcohol alone is not listed in (c). For (b), (c) and (d)(1), subsection (e) provides an affirmative defense for possession pursuant to a practitioner’s prescription or while delivering to a warehouse, pharmacy or practitioner on facility property. That defense is not silently extended to every other contraband branch. The actor is employed by the correctional facility, and this offense is committed with respect to that correctional facility. It excludes the drug-caused-death circumstance. A contract or civil-facility job alone is not automatically this employment finding. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. ",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. The completed offense is described here; subsection (h) separately makes qualifying attempts under (a), (b) or (c) third-degree felonies rather than applying the ordinary one-category reduction. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(c)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(1), (f)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "1.04",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g), (g-1), (g-2), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "15.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-11-take-property-employee-death",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (taking drugs onto facility property; employee death)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(c)",
+    "citation": "Tex. Penal Code § 38.11(c)",
+    "conduct": "Taking a controlled substance or dangerous drug onto property owned, used or controlled by a correctional or civil commitment facility. Alcohol alone is not listed in (c). For (b), (c) and (d)(1), subsection (e) provides an affirmative defense for possession pursuant to a practitioner’s prescription or while delivering to a warehouse, pharmacy or practitioner on facility property. That defense is not silently extended to every other contraband branch. The actor is employed by the correctional facility, and administration of the controlled substance or dangerous drug that is the subject of this offense causes the death of a person in the facility’s custody. Alcohol alone, any unrelated death, or mere facility employment does not establish this special branch. The 2025 enhanced range applies only to conduct governed by the amendment effective September 1, 2025; earlier conduct requires its prior version. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. ",
+    "penalty": "First-degree felony with a special range under §38.11(g-2): 15 to 99 years or life in prison, and a fine up to $250,000. The ordinary five-year first-degree minimum and $10,000 fine ceiling do not replace this specific range. The completed offense is described here; subsection (h) separately makes qualifying attempts under (a), (b) or (c) third-degree felonies rather than applying the ordinary one-category reduction. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(c)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g-2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(1), (f)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "1.04",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g), (g-1), (g-2), (h)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "15.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-11-provide-weapon",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (providing a deadly weapon or possessing it with intent to provide)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(a)(2)",
+    "citation": "Tex. Penal Code § 38.11(a)(2)",
+    "conduct": "Providing, or possessing with intent to provide, a deadly weapon to a person in correctional custody or residing in a civil commitment facility. The separate (d)(2) authorized-possessor defense is not a blanket defense to this provision. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. The correctional-employee enhancements in (g-1)/(g-2) apply only to (a)(1), (b) or (c), not automatically to this branch.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-provide-device",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (providing a communications device or component to a person in correctional custody)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(a)(3)",
+    "citation": "Tex. Penal Code § 38.11(a)(3)",
+    "conduct": "Providing, or possessing with intent to provide, a cellular telephone, other wireless communications device or statutory component to a person in correctional custody. Unlike (j-1) and (k), this specific branch does not name a civil commitment resident. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. The correctional-employee enhancements in (g-1)/(g-2) apply only to (a)(1), (b) or (c), not automatically to this branch.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-provide-money",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (providing money or possessing it with intent to provide)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(a)(4)",
+    "citation": "Tex. Penal Code § 38.11(a)(4)",
+    "conduct": "Providing, or possessing with intent to provide, money to a person confined in a correctional facility. The text does not supply a general employee-authorization exception; actual alleged conduct and any separately applicable authority must be evaluated. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. The correctional-employee enhancements in (g-1)/(g-2) apply only to (a)(1), (b) or (c), not automatically to this branch.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-provide-tobacco",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (providing cigarettes/tobacco or possessing with intent to provide)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(a)(5)",
+    "citation": "Tex. Penal Code § 38.11(a)(5)",
+    "conduct": "Providing, or possessing with intent to provide, a cigarette or tobacco product to a person confined in a correctional facility. For a local jail regulated by the Commission on Jail Standards, this is an offense only when providing it violates the applicable sheriff/jail-administrator rule restricting possession or provision. This choice does not assert that every local jail has such a rule; the actual applicable rule and violation must be established. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. The correctional-employee enhancements in (g-1)/(g-2) apply only to (a)(1), (b) or (c), not automatically to this branch.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(3), (f)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TX",
+        "section": "154.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TX",
+        "section": "155.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-possess-substance",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (possessing substances in a facility or on facility property)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(d)(1)",
+    "citation": "Tex. Penal Code § 38.11(d)(1)",
+    "conduct": "Possessing an alcoholic beverage, controlled substance or dangerous drug in a correctional/civil commitment facility or on its owned, used or controlled property. For (b), (c) and (d)(1), subsection (e) provides an affirmative defense for possession pursuant to a practitioner’s prescription or while delivering to a warehouse, pharmacy or practitioner on facility property. That defense is not silently extended to every other contraband branch. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. The correctional-employee enhancements in (g-1)/(g-2) apply only to (a)(1), (b) or (c), not automatically to this branch.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(d)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(1), (f)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "483.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "AL",
+        "section": "1.04",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-possess-weapon",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (possessing a deadly weapon inside a facility)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(d)(2)",
+    "citation": "Tex. Penal Code § 38.11(d)(2)",
+    "conduct": "Possessing a deadly weapon while inside a correctional or civil commitment facility; the property-only language in (d)(1) is not automatically imported. Subsection (e) provides an affirmative defense for a peace officer, or an institutional officer/employee authorized to possess the weapon while on duty or traveling to/from assignment. The authorized-employee condition and travel scope must be established; the separate substance-prescription defense is not substituted. Whether a particular officer role qualifies requires the applicable statutory definition; the narrower officer selector elsewhere does not restrict this statutory defense. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. The correctional-employee enhancements in (g-1)/(g-2) apply only to (a)(1), (b) or (c), not automatically to this branch.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(d)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "both retained versions; peace-officer defense only",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-confined-device",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (confined person possessing a communications device/component)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(j)",
+    "citation": "Tex. Penal Code § 38.11(j)",
+    "conduct": "While confined in a correctional facility, possessing a cellular telephone, wireless communications device or statutory component. This branch is confined-person possession, distinct from provision by outsiders. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. The correctional-employee enhancements in (g-1)/(g-2) apply only to (a)(1), (b) or (c), not automatically to this branch.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(j)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-civil-device",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (civil commitment resident possessing an unauthorized device/component)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(j-1)",
+    "citation": "Tex. Penal Code § 38.11(j-1)",
+    "conduct": "While residing in a civil commitment facility, possessing a cellular telephone, wireless communications device or statutory component unless authorized by the Texas Civil Commitment Office. The express authorization limitation belongs to this resident-possession branch and is not extended to every outsider-delivery offense. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. Expressly required intent must be established. Section 6.01 governs voluntary conduct and possession, and §6.02 supplies general culpability rules where an offense does not state a mental state. The applicable mental-state instructions require case-specific review; this summary does not declare accidental presence of an item automatic guilt. The correctional-employee enhancements in (g-1)/(g-2) apply only to (a)(1), (b) or (c), not automatically to this branch.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(j-1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-acquire-device",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (acquiring a device/component for delivery)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(k)(1)",
+    "citation": "Tex. Penal Code § 38.11(k)(1)",
+    "conduct": "With intent to provide or make a cellular telephone, wireless communications device or statutory component available for use by a person in correctional custody or residing in a civil commitment facility, the actor acquires a cellular telephone, other wireless communications device or component to be delivered to the person. A payment or purchase without that specified intent is not enough. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. ",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(k)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "18A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-relay-device",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (providing a device/component to another for delivery)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(k)(2)",
+    "citation": "Tex. Penal Code § 38.11(k)(2)",
+    "conduct": "With intent to provide or make a cellular telephone, wireless communications device or statutory component available for use by a person in correctional custody or residing in a civil commitment facility, the actor provides a cellular telephone, other wireless communications device or component to another person for delivery. A payment or purchase without that specified intent is not enough. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. ",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(k)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "18A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  },
+  {
+    "id": "tx-pc-38-11-pay-service",
+    "name": "Prohibited substances and items in correctional or civil commitment facility (paying a carrier or communication service)",
+    "officialTitle": "PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR CIVIL COMMITMENT FACILITY.",
+    "category": "felony",
+    "code": "38.11(k)(3)",
+    "citation": "Tex. Penal Code § 38.11(k)(3)",
+    "conduct": "With intent to provide or make a cellular telephone, wireless communications device or statutory component available for use by a person in correctional custody or residing in a civil commitment facility, the actor makes a payment to a communication common carrier as defined by article 18A.001, or to a communication service that enables users to send or receive wire or electronic communications. A payment or purchase without that specified intent is not enough. Correctional facility is limited by §38.11(f)(6) to the specified municipal/county jail, TDCJ confinement and TDCJ contract-designated places, plus Family Code secure correctional/detention facilities; the broader general definition is not substituted wholesale. Civil commitment facility has the §1.07(a)(8-a) meaning tied to Chapter 841 civil commitment. ",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(k)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(17), (28), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8-a), (14)(A)-(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13), (14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.11",
+        "subdivision": "(f)(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "18A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990677"
+  }
+]
