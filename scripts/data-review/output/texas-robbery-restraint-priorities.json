@@ -1,0 +1,40 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "year": 2025,
+  "statewideAdult": 831210,
+  "statewideJuvenile": 44782,
+  "eligibleCodes": 2378,
+  "excludedCodes": 57,
+  "excludedAdult": 71549,
+  "rows": [
+    {
+      "rank": 52,
+      "code": "12990002",
+      "label": "AGG ROBBERY",
+      "law": "PC",
+      "citation": "29.03",
+      "adult": 3188,
+      "juvenile": 556
+    },
+    {
+      "rank": 61,
+      "code": "10990019",
+      "label": "UNLAWFUL RESTRAINT",
+      "law": "PC",
+      "citation": "20.02(c)",
+      "adult": 2497,
+      "juvenile": 51
+    },
+    {
+      "rank": 66,
+      "code": "12990001",
+      "label": "ROBBERY",
+      "law": "PC",
+      "citation": "29.02",
+      "adult": 2198,
+      "juvenile": 302
+    }
+  ]
+}

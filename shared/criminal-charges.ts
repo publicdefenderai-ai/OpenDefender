@@ -40230,32 +40230,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
-    id: 'tx-robbery-in-the-first-degree',
-    name: 'Aggravated Robbery',
-    code: '29.03',
-    jurisdiction: 'TX',
-    category: 'felony',
-    description: 'Armed robbery with injury under Texas law',
-    maxPenalty: 'Up to life imprisonment and/or substantial fines',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
-  },
-  {
-    id: 'tx-robbery-in-the-second-degree',
-    name: 'Robbery',
-    code: '29.02',
-    jurisdiction: 'TX',
-    category: 'felony',
-    description: 'Armed robbery under Texas law',
-    maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
-  },
-  {
     id: 'tx-bank-robbery',
     name: 'Bank Robbery',
     code: '18 U.S.C. § 2113',
@@ -94941,6 +94915,10 @@ for (const group of ["TX", "DUI & Traffic", "DUI/Traffic Crimes"]) {
 for (const group of ["Violent Crimes", "Assault Crimes"]) {
   const ids = texasReviewedRecords.filter(row => row.references[0].section === "22.01").map(row => row.id);
   chargeCategories[group] = [...new Set([...(chargeCategories[group] ?? []), ...ids])];
+}
+for (const group of ["Violent Crimes", "Theft & Property"]) {
+  const ids = texasReviewedRecords.filter(row => ["29.02", "29.03", "29.04", "20.02"].includes(row.references[0].section)).map(row => row.id);
+  chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
 for (const group of ["Fraud Crimes", "Theft Crimes"]) {
   const ids = texasReviewedRecords.filter(row => ["32.31", "32.315", "32.51"].includes(row.references[0].section)).map(row => row.id);
