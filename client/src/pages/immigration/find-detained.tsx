@@ -1,3 +1,4 @@
+import "./find-detained.css";
 import {
   Search,
   AlertTriangle,
@@ -16,20 +17,21 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useTranslation } from 'react-i18next';
-import { ScrollReveal } from '@/components/ui/scroll-reveal';
+
 import { useScrollToTop } from '@/hooks/use-scroll-to-top';
 import { FacilitySearch } from '@/components/immigration/facility-search';
-import { ImmigrationDetailLayout } from '@/components/immigration/immigration-detail-layout';
+import { ScanFirstPageFrame, PageSectionNav } from '@/components/layout/scan-first-page-frame';
+import { PageBreadcrumb } from '@/components/navigation/page-breadcrumb';
+import { RapidlyEvolvingNotice } from '@/components/immigration/rapidly-evolving-notice';
+import { immigrationLocatorCopy } from '@/locales/immigration-locator-design';
 
 export default function FindDetained() {
   useScrollToTop();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
 
-  const breadcrumbItems = [
-    { label: t('breadcrumb.home', 'Home'), href: '/' },
-    { label: t('breadcrumb.immigrationGuidance', 'Immigration Guidance'), href: '/immigration-guidance' }
-  ];
+  const locale = i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en';
+  const design = immigrationLocatorCopy[locale];
 
   const locatorSteps = [
     {
@@ -137,14 +139,27 @@ export default function FindDetained() {
   };
 
   return (
-    <ImmigrationDetailLayout
-      title={lang === 'es' ? 'Encontrar a un Ser Querido Después del Arresto' : 'Finding a Loved One After Arrest'}
-      subtitle={lang === 'es'
-        ? 'Guía paso a paso para localizar a alguien que ha sido detenido por ICE. Incluye cómo usar el localizador de detenidos, información sobre fianzas y directorio de centros de detención.'
-        : 'Step-by-step guide to locate someone who has been detained by ICE. Includes how to use the detainee locator, bond information, and detention facility directory.'}
-      breadcrumbItems={breadcrumbItems}
-      icon={<Search className="h-7 w-7" />}
-      alert={
+    <ScanFirstPageFrame mainClassName="immigration-locator-page">
+      <PageBreadcrumb items={[{ label: design.home, href: '/' }, { label: design.immigration, href: '/immigration-guidance' }]} currentPage={design.title} />
+      <header className="immigration-locator-hero">
+        <div>
+          <h1 data-testid="immigration-detail-title">{design.title} <span>{design.accent}</span></h1>
+          <p lang={lang} data-testid="immigration-detail-subtitle">{lang === 'es' ? 'Guía paso a paso para localizar a alguien que ha sido detenido por ICE. Incluye cómo usar el localizador de detenidos, información sobre fianzas y directorio de centros de detención.' : 'Step-by-step guide to locate someone who has been detained by ICE. Includes how to use the detainee locator, bond information, and detention facility directory.'}</p>
+          <a lang={lang}
+                href="https://locator.ice.gov/odls/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="immigration-locator-action"
+              >
+                {lang === 'es' ? 'Abrir Localizador de ICE' : 'Open ICE Locator'}
+                <ExternalLink className="h-5 w-5" />
+              </a>
+        </div>
+        <img className="immigration-locator-art" src="/images/design/immigration-locator.svg" alt="" aria-hidden="true" width="260" height="240" />
+      </header>
+      {locale === 'zh' && <p className="immigration-locator-language">{design.english}</p>}
+      <PageSectionNav ariaLabel={design.nav} items={[{ id: "search-steps", label: design.sections[0] }, { id: "not-found", label: design.sections[1] }, { id: "facility-directory", label: design.sections[2] }, { id: "legal-help", label: design.sections[3] }]} />
+      <div className="immigration-locator-notice" lang={lang}>
         <Alert className="border-amber-300 bg-amber-50 dark:border-amber-700 dark:bg-amber-950/40">
           <Clock className="h-5 w-5 text-amber-600 dark:text-amber-400" />
           <AlertDescription className="text-amber-900 dark:text-amber-200">
@@ -154,13 +169,15 @@ export default function FindDetained() {
               : 'The first few days after arrest are critical. Locating the person quickly helps secure legal representation and may affect their bond eligibility.'}
           </AlertDescription>
         </Alert>
-      }
-    >
+      </div>
+      <RapidlyEvolvingNotice />
+      <div className="immigration-locator-reading" lang={lang}>
+
 
       {/* ICE Locator Steps */}
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
+      <section id="search-steps" tabIndex={-1} className="immigration-locator-section">
+        <div className="min-w-0">
+
             <h2 className="text-2xl font-bold mb-2">
               {lang === 'es' ? 'Cómo Usar el Localizador de Detenidos de ICE' : 'How to Use the ICE Detainee Locator'}
             </h2>
@@ -169,18 +186,18 @@ export default function FindDetained() {
                 ? 'Siga estos pasos para buscar a alguien en custodia de inmigración.'
                 : 'Follow these steps to search for someone in immigration custody.'}
             </p>
-          </ScrollReveal>
+
 
           <div className="space-y-4">
-            {locatorSteps.map((step, index) => (
-              <ScrollReveal key={step.step} delay={0.1 * index}>
-                <Card>
+            {locatorSteps.map((step) => (
+
+                <Card key={step.step} className="immigration-locator-step">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold shrink-0">
                         {step.step}
                       </div>
-                      <div className="flex-1">
+                      <div className="flex-1 min-w-0">
                         <h3 className="font-semibold text-lg mb-2">{step.title[lang]}</h3>
                         <p className="text-muted-foreground mb-3">{step.description[lang]}</p>
                         <div className="bg-muted/50 rounded-lg p-3">
@@ -193,31 +210,21 @@ export default function FindDetained() {
                     </div>
                   </CardContent>
                 </Card>
-              </ScrollReveal>
+
             ))}
           </div>
 
-          <ScrollReveal delay={0.5}>
-            <div className="mt-6 text-center">
-              <a
-                href="https://locator.ice.gov/odls/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg text-lg font-medium hover:bg-primary/90 transition-colors"
-              >
-                {lang === 'es' ? 'Abrir Localizador de ICE' : 'Open ICE Locator'}
-                <ExternalLink className="h-5 w-5" />
-              </a>
-            </div>
-          </ScrollReveal>
+
+
+
         </div>
       </section>
 
       {/* A-Number Info */}
-      <section className="py-12 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4">
-          <ScrollReveal>
-            <Card>
+      <section id="a-number" tabIndex={-1} className="immigration-locator-section">
+        <div className="min-w-0">
+
+            <Card className="immigration-locator-plain">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <HelpCircle className="h-6 w-6 text-primary" />
@@ -248,14 +255,14 @@ export default function FindDetained() {
                 </Alert>
               </CardContent>
             </Card>
-          </ScrollReveal>
+
         </div>
       </section>
 
       {/* If Not Found */}
-      <section className="py-12 bg-background">
-        <div className="max-w-4xl mx-auto px-4">
-          <ScrollReveal>
+      <section id="not-found" tabIndex={-1} className="immigration-locator-section">
+        <div className="min-w-0">
+
             <Card className="border-amber-200 bg-amber-50/50 dark:bg-amber-950/20">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-amber-700 dark:text-amber-400">
@@ -276,22 +283,22 @@ export default function FindDetained() {
                 </ul>
               </CardContent>
             </Card>
-          </ScrollReveal>
+
         </div>
       </section>
 
       {/* Bond Information */}
-      <section className="py-12 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
+      <section id="bond-information" tabIndex={-1} className="immigration-locator-section">
+        <div className="min-w-0">
+
             <h2 className="text-2xl font-bold mb-6">
               {lang === 'es' ? 'Información Sobre Fianzas' : 'Bond Information'}
             </h2>
-          </ScrollReveal>
+
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ScrollReveal delay={0.1}>
-              <Card className="h-full">
+
+              <Card className="immigration-locator-plain h-full">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Scale className="h-5 w-5 text-primary" />
@@ -311,10 +318,10 @@ export default function FindDetained() {
                   </p>
                 </CardContent>
               </Card>
-            </ScrollReveal>
 
-            <ScrollReveal delay={0.2}>
-              <Card className="h-full">
+
+
+              <Card className="immigration-locator-plain h-full">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <FileText className="h-5 w-5 text-primary" />
@@ -334,10 +341,10 @@ export default function FindDetained() {
                   </p>
                 </CardContent>
               </Card>
-            </ScrollReveal>
 
-            <ScrollReveal delay={0.3}>
-              <Card className="h-full">
+
+
+              <Card className="immigration-locator-plain h-full">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Users className="h-5 w-5 text-primary" />
@@ -357,10 +364,10 @@ export default function FindDetained() {
                   </p>
                 </CardContent>
               </Card>
-            </ScrollReveal>
+
           </div>
 
-          <ScrollReveal delay={0.4}>
+
             <div className="mt-6 text-center">
               <Button asChild variant="outline">
                 <a href="/immigration-guidance/bond-hearings">
@@ -369,14 +376,14 @@ export default function FindDetained() {
                 </a>
               </Button>
             </div>
-          </ScrollReveal>
+
         </div>
       </section>
 
       {/* Detention Facility Search */}
-      <section className="py-12 bg-background">
-        <div className="max-w-4xl mx-auto px-4">
-          <ScrollReveal>
+      <section id="facility-directory" tabIndex={-1} className="immigration-locator-section">
+        <div className="min-w-0">
+
             <h2 className="text-2xl font-bold mb-2">
               {lang === 'es' ? 'Directorio de Centros de Detención' : 'Detention Facility Directory'}
             </h2>
@@ -385,26 +392,27 @@ export default function FindDetained() {
                 ? 'Busque centros de detención de ICE por estado o nombre para encontrar información de contacto.'
                 : 'Search ICE detention facilities by state or name to find contact information.'}
             </p>
-          </ScrollReveal>
 
-          <ScrollReveal delay={0.1}>
+
+
+            <p lang={locale} className="immigration-locator-directory-note">{design.directoryNote}</p>
             <FacilitySearch />
-          </ScrollReveal>
+
         </div>
       </section>
 
       {/* Emergency Contacts */}
-      <section className="py-12 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <ScrollReveal>
+      <section id="legal-help" tabIndex={-1} className="immigration-locator-section">
+        <div className="min-w-0">
+
             <h2 className="text-2xl font-bold mb-6">
               {lang === 'es' ? 'Números Importantes' : 'Important Numbers'}
             </h2>
-          </ScrollReveal>
+
 
           <div className="grid sm:grid-cols-2 gap-4">
-            <ScrollReveal delay={0.1}>
-              <Card>
+
+              <Card className="immigration-locator-plain">
                 <CardContent className="pt-6">
                   <Phone className="h-6 w-6 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold text-sm">
@@ -423,10 +431,10 @@ export default function FindDetained() {
                       : 'Monday–Friday, 8 a.m.–8 p.m. Eastern Time; excluding federal holidays.'}</p>
                 </CardContent>
               </Card>
-            </ScrollReveal>
 
-            <ScrollReveal delay={0.2}>
-              <Card>
+
+
+              <Card className="immigration-locator-plain">
                 <CardContent className="pt-6">
                   <Phone className="h-6 w-6 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold text-sm">
@@ -442,15 +450,15 @@ export default function FindDetained() {
                     </a>
                 </CardContent>
               </Card>
-            </ScrollReveal>
+
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-12 bg-primary/5">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <ScrollReveal>
+      <section id="prepare" tabIndex={-1} className="immigration-locator-section">
+        <div className="min-w-0">
+
             <h2 className="text-2xl font-bold mb-4">
               {lang === 'es' ? '¿Necesita Ayuda Legal?' : 'Need Legal Help?'}
             </h2>
@@ -464,10 +472,11 @@ export default function FindDetained() {
                 {lang === 'es' ? 'Encontrar un Abogado de Inmigración' : 'Find an Immigration Attorney'}
               </a>
             </Button>
-          </ScrollReveal>
+
         </div>
       </section>
 
-    </ImmigrationDetailLayout>
+    </div>
+    </ScanFirstPageFrame>
   );
 }
