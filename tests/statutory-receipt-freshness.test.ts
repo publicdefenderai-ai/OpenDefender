@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import californiaReceipt from "../scripts/data-review/output/california-archive-refresh-receipt.json";
 import { describe, expect, it } from "vitest";
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
@@ -12,6 +13,15 @@ function withReceipts(run: (root: string, dir: string) => void) {
   const dir = join(root, "scripts/data-review/output"); mkdirSync(dir, { recursive: true });
   for (const name of names) writeFileSync(join(dir, name), JSON.stringify({ checkedAt: "2026-09-24T00:00:00Z", expiresAt: "2026-10-01T00:00:00Z" }));
   writeFileSync(join(dir, "california-archive-refresh-receipt.json"), JSON.stringify({ ...californiaReceipt, verificationPolicy: undefined, status: "matched", method: "original_acquisition", checkedAt: "2026-09-24T22:10:49.174Z", expiresAt: "2026-10-01T22:10:49.174Z" }));
+
+  const hash = (v:unknown) => createHash('sha256').update(JSON.stringify(v)).digest('hex');
+  const documents = [{sourceKey:'fl:statute:1.01',contentHash:'a'.repeat(64),retrievedAt:'2026-09-24T00:00:00Z'}];
+  const report = {sourceEvidence:{'fl:statute:1.01':documents[0]}};
+  const eligibility = {reportHash:hash(report),decisions:[]};
+  mkdirSync(join(root,'shared'),{recursive:true});
+  writeFileSync(join(dir,'florida-reviewed-analysis.json'),JSON.stringify(report));
+  writeFileSync(join(root,'shared/florida-reviewed-eligibility.json'),JSON.stringify(eligibility));
+  writeFileSync(join(dir,'florida-reviewed-refresh-receipt.json'),JSON.stringify({checkedAt:'2026-09-24T00:00:00Z',expiresAt:'2026-10-01T00:00:00Z',reportHash:hash(report),eligibilityHash:hash(eligibility),documents}));
   try { run(root, dir); } finally { rmSync(root, { recursive: true, force: true }); }
 }
 describe("statutory receipt deadline alarm", () => {
@@ -47,3 +57,13 @@ describe("statutory receipt deadline alarm", () => {
     expect(report.receipts).toHaveLength(names.length + 2); expect(report.ok).toBe(false);
   }));
 });
+
+it('does not call an unexpired Florida receipt current after its report binding changes',()=>withReceipts((root,dir)=>{
+  const now=new Date('2026-09-26T00:00:00Z');
+  const row=()=>checkStatutoryReceipts(root,now).receipts.find((r:any)=>r.name==='florida-reviewed-refresh-receipt.json');
+  expect(row()).toMatchObject({status:'current',dateStatus:'current',bindingStatus:'matched'});
+  writeFileSync(join(dir,'florida-reviewed-analysis.json'),JSON.stringify({sourceEvidence:{},changed:true}));
+  expect(row()).toMatchObject({status:'binding_mismatch',dateStatus:'current',bindingStatus:'mismatched_or_missing'});
+  expect(checkStatutoryReceipts(root,now).ok).toBe(false);
+  expect(checkStatutoryReceipts(root,now).receipts.find((r:any)=>r.name==='ohio-reviewed-refresh-receipt.json').bindingStatus).toBe('not_checked');
+}));

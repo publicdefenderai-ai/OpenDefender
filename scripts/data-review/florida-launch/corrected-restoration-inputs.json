@@ -1,0 +1,23 @@
+{
+  "baselineCommit": "f1f69d4dc0be2674f15540af94df47ae1f765a36",
+  "files": {
+    "scripts/data-review/output/florida-reviewed-analysis.json": "855c4225ed6402ac51cbd492aa8f4d49eac532e73366410dea2a8d7e1a0cc7e3",
+    "scripts/data-review/output/florida-reviewed-refresh-receipt.json": "90f071a3ad46bc6444b98f2d09530affe39ecb23b6e1e6e436e17ad5e2ec7c0a",
+    "scripts/data-review/output/florida-batch-source-cache.json": "a369655d230ad5830cdf106ba8de8f722b8da8c5e426fdcdc5be15197742972e",
+    "shared/florida-reviewed-eligibility.json": "801dc8a4ffd4ababe03c774b76283573b9272b83afad81c4f0bffee093804c13",
+    "shared/florida-reviewed-data/a.json": "37d8303b22a1c4d8df488ca2ad471d948dde2b7fd57f0b5c47d1de1db87ad97e",
+    "shared/florida-reviewed-data/b.json": "fc40521317c8b41a482eccf1f3637f190ff10d94d92a0cc199de2ddb9062d507",
+    "shared/florida-reviewed-data/c.json": "390bea27ba01249dccde0d9c673989406e25acaf3a44954895f434ce2bebc3c8",
+    "shared/florida-reviewed-data/d.json": "46a49eb14d6c8a339094ffac3f1251766c969e655bf8d27e247d24cfa61228c4",
+    "shared/florida-reviewed-data/e.json": "3ec865ce0c82ffc824f46829f614caebaafefeddd3a3485e6ee1b3c3c4d51acc",
+    "shared/florida-reviewed-data/f.json": "b4d5dd0799a1ce290d0e35d14f9b18079ba34dbc05cc557b7c5d94782764f563",
+    "shared/florida-reviewed-data/judicial-authorities.json": "6cdd6336b2eb75abbce21a3b11c8b909564b3e247576d18223feb57eb2eb87ea",
+    "scripts/data-review/output/florida-reviewed-closeout-corrections.json": "628f4d5b3986477da29d446608c1b5ee305fd6ddc2d075b59d934e9e07fac3bd",
+    "scripts/data-review/florida-reviewed-closeout/successor-baseline.json": "9deaa50d7c3136437b8936460b60dd92a1f1fcc973e061f3a759a03ae2394dde",
+    "scripts/data-review/florida-reviewed-closeout/previous-evidence.json": "5e7e72ee60e34042083b2fd050f565269c77e44b5bcc00c448bf790c866a7a67",
+    "scripts/data-review/florida-launch/restoration-comparison.json": "d67980f48e349914a109c9c607414e7c7319fe273845d355b1bb094e49a23f5d",
+    "scripts/data-review/florida-launch/restoration-proposal.json": "efe2cb77043a7e6e68465915e73779ac0ed029bc699bbe538edc8f2a06d20101",
+    "scripts/data-review/florida-reviewed-closeout/previous-definitions.json": "de515b3b8f6f4350c0bdedde8c022224e6aab955e75c8987b8d94e4dc7fbf51d"
+  },
+  "preparedAt": "2026-11-19T16:56:36.544Z"
+}

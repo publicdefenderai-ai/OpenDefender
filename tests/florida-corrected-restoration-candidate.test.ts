@@ -1,0 +1,47 @@
+import {expect,it} from 'vitest';
+import{readFileSync,mkdtempSync,symlinkSync,readdirSync}from'node:fs';
+import{tmpdir}from'node:os';import{join}from'node:path';
+import candidate from '../scripts/data-review/florida-launch/corrected-restoration-candidate.json';
+import inputs from '../scripts/data-review/florida-launch/corrected-restoration-inputs.json';
+import{buildCorrectedRestorationCandidate,writeCorrectedRestorationCandidate}from'../scripts/data-review/florida-launch/prepare-corrected-restoration';
+import report from '../scripts/data-review/output/florida-reviewed-analysis.json';
+import eligibility from '../shared/florida-reviewed-eligibility.json';
+import receipt from '../scripts/data-review/output/florida-reviewed-refresh-receipt.json';
+import{FLORIDA_REVIEWED_SOURCE_RECORDS as records,validateFloridaReviewedRefreshReceipt}from'../server/data/florida-reviewed-source-records';
+import{groupFloridaReviewedDependenciesForAuthority}from'../server/data/florida-source-database-seed';
+it('reproduces exactly and accounts source, identity, definition and physical-link deltas without database assumptions',()=>{
+ expect(buildCorrectedRestorationCandidate()).toEqual(candidate);
+ expect(candidate.recordIds).toHaveLength(101);
+ expect(candidate.sourceDelta).toMatchObject({priorSections:130,candidateSections:134,priorSourceKeys:221,candidateSourceKeys:225});
+ expect(candidate.linkDelta).toMatchObject({priorReferences:920,candidateReferences:1051,priorPhysicalLinks:884,candidatePhysicalLinks:1015});
+ expect(candidate.linkDelta.addedPhysicalLinks).toHaveLength(131);expect(candidate.linkDelta.removedPhysicalLinks).toEqual([]);
+ expect(records.reduce((n,r)=>n+groupFloridaReviewedDependenciesForAuthority(r).length,0)).toBe(1015);
+ expect(candidate.perRecord.filter(r=>r.priorDefinitionHash!==r.candidateDefinitionHash)).toHaveLength(26);
+ expect(candidate.perRecord.filter(r=>!r.corrected).every(r=>r.addedPhysicalLinks.length===0)).toBe(true);
+ expect(candidate.productionExistingOrMissingLinks).toBe('not_observed_no_database_access');
+});
+it('validates candidate bounds and tamper rejection without granting approval to the unchanged active receipt',()=>{
+ const now=new Date(candidate.receipt.checkedAt);
+ expect(candidate.receipt.expiresAt).toBe(receipt.expiresAt);
+ expect(validateFloridaReviewedRefreshReceipt(candidate.receipt,report,eligibility,records,now)).toBeNull();
+ expect(validateFloridaReviewedRefreshReceipt(receipt,report,eligibility,records,now)).not.toBeNull();
+ expect(validateFloridaReviewedRefreshReceipt(candidate.receipt,report,eligibility,records,new Date(candidate.receipt.expiresAt))).not.toBeNull();
+ expect(validateFloridaReviewedRefreshReceipt({...candidate.receipt,expiresAt:new Date(Date.parse(candidate.receipt.expiresAt)+1).toISOString()},report,eligibility,records,now)).not.toBeNull();
+ expect(validateFloridaReviewedRefreshReceipt({...candidate.receipt,documents:candidate.receipt.documents.slice(1)},report,eligibility,records,now)).not.toBeNull();
+ const bad=structuredClone(report);Object.values(bad.sourceEvidence)[0].text+='changed';
+ expect(()=>buildCorrectedRestorationCandidate(bad as any,eligibility)).toThrow();
+ const decision=structuredClone(eligibility);decision.decisions[0].approvalHash='0'.repeat(64);
+ expect(()=>buildCorrectedRestorationCandidate(report as any,decision)).toThrow();
+});
+it('writes only new external candidate files while preserving every active input and refusing unsafe destinations',()=>{
+ const before=Object.fromEntries(Object.keys(inputs.files).map(p=>[p,readFileSync(p,'utf8')]));
+ const dir=mkdtempSync(join(tmpdir(),'fl-corrected-candidate-'));
+ expect(writeCorrectedRestorationCandidate(dir)).toEqual(candidate);
+ expect(readdirSync(dir)).toEqual(['corrected-restoration-candidate.json']);
+ expect(()=>writeCorrectedRestorationCandidate(dir)).toThrow('EEXIST');
+ expect(()=>writeCorrectedRestorationCandidate(join(process.cwd(),'..candidate'))).toThrow('outside checkout');
+ const redirected=mkdtempSync(join(tmpdir(),'fl-candidate-symlink-'));
+ symlinkSync(join(process.cwd(),'scripts/data-review/output/florida-reviewed-refresh-receipt.json'),join(redirected,'corrected-restoration-candidate.json'));
+ expect(()=>writeCorrectedRestorationCandidate(redirected)).toThrow('EEXIST');
+ expect(Object.fromEntries(Object.keys(inputs.files).map(p=>[p,readFileSync(p,'utf8')]))).toEqual(before);
+});
