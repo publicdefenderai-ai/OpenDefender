@@ -87,33 +87,123 @@
     "id": "fl-fs-806-01-1-arson-in-the-first-degree",
     "section": "806.01",
     "status": "eligible",
-    "reason": "Subsection (1) expressly states guilt of arson in the first degree and its first-degree-felony grade.",
-    "identity": { "kind": "operative_guilt_clause", "quote": "is guilty of arson in the first degree, which constitutes a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c" },
+    "reason": "Individually bound reviewed-family offense, scope and penalties.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "is guilty of arson in the first degree, which constitutes a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c"
+    },
     "conductQuotes": [
       "Any person who willfully and unlawfully, or while in the commission of any felony, by fire or explosion, damages or causes to be damaged:",
       "Any dwelling, whether occupied or not, or its contents;",
       "Any other structure that he or she knew or had reasonable grounds to believe was occupied by a human being,"
     ],
-    "gradingQuotes": ["is guilty of arson in the first degree, which constitutes a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
-    "requiredSections": [
-      { "section": "806.01", "role": "offense", "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c" },
-      { "section": "806.01", "role": "definition", "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c" }
+    "gradingQuotes": [
+      "is guilty of arson in the first degree, which constitutes a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
     ],
-    "notes": "The whole-section definition dependency pins subsection (3)'s broad definition of structure. The eligible scope retains all three alternatives in subsection (1), including normally occupied structures; selected conduct quotes are evidentiary anchors rather than an exhaustive rewrite."
+    "requiredSections": [
+      {
+        "section": "806.01",
+        "role": "offense",
+        "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c"
+      },
+      {
+        "section": "806.01",
+        "role": "definition",
+        "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "806.031",
+        "role": "penalty",
+        "contentHash": "6ef1f722a1c9e8324511a2d120e83732b739d4c6ddad98ac3bf7b943a4ddfa14"
+      }
+    ],
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
   },
   {
     "id": "fl-fs-806-01-2-arson-in-the-second-degree",
     "section": "806.01",
     "status": "eligible",
-    "reason": "Subsection (2) expressly states guilt of arson in the second degree, complete conduct, and its felony grade.",
-    "identity": { "kind": "operative_guilt_clause", "quote": "is guilty of arson in the second degree, which constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c" },
-    "conductQuotes": ["Any person who willfully and unlawfully, or while in the commission of any felony, by fire or explosion, damages or causes to be damaged any structure, whether the property of himself or herself or another, under any circumstances not referred to in subsection (1), is guilty of arson in the second degree, which constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
-    "gradingQuotes": ["is guilty of arson in the second degree, which constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
-    "requiredSections": [
-      { "section": "806.01", "role": "offense", "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c" },
-      { "section": "806.01", "role": "definition", "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c" }
+    "reason": "Individually bound reviewed-family offense, scope and penalties.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "is guilty of arson in the second degree, which constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c"
+    },
+    "conductQuotes": [
+      "Any person who willfully and unlawfully, or while in the commission of any felony, by fire or explosion, damages or causes to be damaged any structure, whether the property of himself or herself or another, under any circumstances not referred to in subsection (1), is guilty of arson in the second degree, which constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
     ],
-    "notes": "The branch expressly includes the actor's own structure and is residual to subsection (1). Subsection (3)'s definition of structure is pinned through the whole-section dependency."
+    "gradingQuotes": [
+      "is guilty of arson in the second degree, which constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "806.01",
+        "role": "offense",
+        "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c"
+      },
+      {
+        "section": "806.01",
+        "role": "definition",
+        "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "806.031",
+        "role": "penalty",
+        "contentHash": "6ef1f722a1c9e8324511a2d120e83732b739d4c6ddad98ac3bf7b943a4ddfa14"
+      }
+    ],
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
   },
   {
     "id": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
@@ -461,22 +551,71 @@
     "id": "fl-fs-837-02-1-2-perjury-in-official-proceedings",
     "section": "837.02",
     "status": "eligible",
-    "reason": "The official heading supplies exact identity; subsections (1)-(2) provide the ordinary and capital-felony-prosecution branches with literal felony grades.",
-    "identity": { "kind": "official_heading", "quote": "Perjury in official proceedings", "sourceHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5" },
+    "reason": "Individually bound reviewed-family offense, scope and penalties.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Perjury in official proceedings",
+      "sourceHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5"
+    },
     "conductQuotes": [
       "Except as provided in subsection (2), whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding in regard to any material matter, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
       "Whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding that relates to the prosecution of a capital felony, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
     ],
     "gradingQuotes": [
-      "Except as provided in subsection (2), whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding in regard to any material matter, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "Whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding that relates to the prosecution of a capital felony, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      "Except as provided in subsection (2), whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding in regard to any material matter, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
     ],
     "requiredSections": [
-      { "section": "837.02", "role": "offense", "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5" },
-      { "section": "837.02", "role": "grading", "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5" },
-      { "section": "837.02", "role": "exception", "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5" },
-      { "section": "837.011", "role": "definition", "contentHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583" }
+      {
+        "section": "837.02",
+        "role": "offense",
+        "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5"
+      },
+      {
+        "section": "837.02",
+        "role": "grading",
+        "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5"
+      },
+      {
+        "section": "837.02",
+        "role": "exception",
+        "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5"
+      },
+      {
+        "section": "837.011",
+        "role": "definition",
+        "contentHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "837.07",
+        "role": "exception",
+        "contentHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d"
+      }
     ],
-    "notes": "Section 837.011 closes official proceeding, oath, and material matter. Subsection (3) expressly removes knowledge of materiality as an element and mistaken immateriality as a defense. Subsection (2)'s text does not separately say material matter, so the display does not import that condition into the capital-felony branch."
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
   }
 ]

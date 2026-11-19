@@ -5,7 +5,8 @@ import packet from '../scripts/data-review/output/florida-harm-corrections.json'
 import plan from '../scripts/data-review/florida-harm/correction-plan.json';
 import before from '../scripts/data-review/florida-harm/previous-definitions.json';
 import baseline from '../scripts/data-review/florida-harm/previous-evidence.json';
-import receipt from '../scripts/data-review/output/florida-reviewed-refresh-receipt.json';
+// Synthetic positive control only; the actual unchanged receipt rejects the later closeout corrections.
+import { syntheticFloridaReceipt as receipt } from './helpers/florida-receipt-fixture';
 import report from '../scripts/data-review/output/florida-reviewed-analysis.json';
 import ledger from '../shared/florida-reviewed-eligibility.json';
 import {FLORIDA_REVIEWED_DEFINITIONS} from '../shared/florida-reviewed-batch';

@@ -6,7 +6,8 @@ import prior from '../scripts/data-review/florida-drug-acts/previous-definitions
 import plan from '../scripts/data-review/florida-drug-acts/correction-plan.json';
 import trafficking from '../scripts/data-review/output/florida-trafficking-corrections.json';
 import screen from '../scripts/data-review/output/florida-domestic-applicability-screen.json';
-import receipt from '../scripts/data-review/output/florida-reviewed-refresh-receipt.json';
+// Synthetic positive control only; the actual unchanged receipt rejects the later closeout corrections.
+import { syntheticFloridaReceipt as receipt } from './helpers/florida-receipt-fixture';
 import report from '../scripts/data-review/output/florida-reviewed-analysis.json';
 import ledger from '../shared/florida-reviewed-eligibility.json';
 import {getChargeById} from '../shared/criminal-charges';

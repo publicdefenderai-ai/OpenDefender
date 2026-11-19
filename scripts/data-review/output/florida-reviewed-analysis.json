@@ -91,11 +91,36 @@
           "sourceKey": "fl:statute:921.0023",
           "role": "grading",
           "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "(1) \nA person who attempts to commit an offense prohibited by law and in such attempt does any act toward the commission of such offense, but fails in the perpetration or is intercepted or prevented in the execution thereof, commits the offense of criminal attempt, ranked for purposes of sentencing as provided in subsection (4). Criminal attempt includes the act of an adult who, with intent to commit an offense prohibited by law, allures, seduces, coaxes, or induces a child under the age of 12 to engage in an offense prohibited by law.",
-      "grading": "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
-      "interpretation": "All intermediate grade branches and renunciation defense remain quoted in the same pinned primary section.",
+      "grading": "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -187,11 +212,36 @@
           "sourceKey": "fl:statute:921.0023",
           "role": "grading",
           "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "(2) \nA person who solicits another to commit an offense prohibited by law and in the course of such solicitation commands, encourages, hires, or requests another person to engage in specific conduct which would constitute such offense or an attempt to commit such offense commits the offense of criminal solicitation, ranked for purposes of sentencing as provided in subsection (4).",
-      "grading": "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
-      "interpretation": "Conditional classification is not a universal maximum.",
+      "grading": "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -283,11 +333,36 @@
           "sourceKey": "fl:statute:921.0023",
           "role": "grading",
           "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "(3) \nA person who agrees, conspires, combines, or confederates with another person or persons to commit any offense commits the offense of criminal conspiracy, ranked for purposes of sentencing as provided in subsection (4).",
-      "grading": "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
-      "interpretation": "Conditional classification is not a universal maximum.",
+      "grading": "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -1067,11 +1142,36 @@
           "sourceKey": "fl:statute:921.0023",
           "role": "grading",
           "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "Any person not standing in the relation of husband or wife, parent or grandparent, child or grandchild, brother or sister, by consanguinity or affinity to the offender, who maintains or assists the principal or an accessory before the fact, or gives the offender any other aid, knowing that the offender had committed a crime and such crime was a third degree felony, or had been an accessory thereto before the fact, with the intent that the offender avoids or escapes detection, arrest, trial, or punishment, is an accessory after the fact.\nAny person who maintains or assists the principal or accessory before the fact, or gives the offender any other aid, knowing that the offender had committed the offense of child abuse, neglect of a child, aggravated child abuse, aggravated manslaughter of a child under 18 years of age, or murder of a child under 18 years of age, or had been an accessory thereto before the fact, with the intent that the offender avoids or escapes detection, arrest, trial, or punishment, is an accessory after the fact unless the court finds that the person is a victim of domestic violence.\nAny person who maintains or assists the principal or an accessory before the fact, or gives the offender any other aid, knowing that the offender had committed a crime and such crime was a capital, life, first degree, or second degree felony, or had been an accessory thereto before the fact, with the intent that the offender avoids or escapes detection, arrest, trial, or punishment, is an accessory after the fact.",
-      "grading": "If the felony offense committed is a capital felony, the offense of accessory after the fact is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nIf the felony offense committed is a life felony or a felony of the first degree, the offense of accessory after the fact is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nIf the felony offense committed is a felony of the second degree or a felony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023, the offense of accessory after the fact is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nIf the felony offense committed is a felony of the third degree ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, the offense of accessory after the fact is a misdemeanor of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "All conduct and grade branches are quoted; both felony and misdemeanor classifications are operative.",
+      "grading": "If the felony offense committed is a capital felony, the offense of accessory after the fact is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nIf the felony offense committed is a felony of the third degree ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, the offense of accessory after the fact is a misdemeanor of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -1192,11 +1292,41 @@
           "sourceKey": "fl:statute:796.07",
           "role": "grading",
           "contentHash": "2db10ef8152b2810184e89cd93a4f35a3988589249c1d5a7016285d5b08814a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:796.08",
+          "role": "penalty",
+          "contentHash": "8ea0e8f1655a916c38991dd1bb89b231932dbae4cb65ac99c43e874376a0882c"
         }
       ],
       "conduct": "To own, establish, maintain, or operate any place, structure, building, or conveyance for the purpose of lewdness, assignation, or prostitution.\nTo offer, or to offer or agree to secure, another for the purpose of prostitution or for any other lewd or indecent act.\nTo receive, or to offer or agree to receive, any person into any place, structure, building, or conveyance for the purpose of prostitution, lewdness, or assignation, or to permit any person to remain there for such purpose.\nTo direct, take, or transport, or to offer or agree to direct, take, or transport, any person to any place, structure, or building, or to any other person, with knowledge or reasonable cause to believe that the purpose of such directing, taking, or transporting is prostitution, lewdness, or assignation.\nFor a person 18 years of age or older to offer to commit, or to commit, or to engage in, prostitution, lewdness, or assignation.\nTo solicit, induce, entice, or procure another to commit prostitution, lewdness, or assignation.\nTo reside in, enter, or remain in, any place, structure, or building, or to enter or remain in any conveyance, for the purpose of prostitution, lewdness, or assignation.\nTo aid, abet, or participate in any of the acts or things enumerated in this subsection.\nTo purchase the services of any person engaged in prostitution.",
-      "grading": "A misdemeanor of the second degree for a first violation, punishable as provided in s. 775.082 or s. 775.083.\nA misdemeanor of the first degree for a second violation, punishable as provided in s. 775.082 or s. 775.083.\nA felony of the third degree for a third or subsequent violation, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nA misdemeanor of the first degree for a first violation, punishable as provided in s. 775.082 or s. 775.083.\nA felony of the third degree for a second violation, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nA felony of the second degree for a third or subsequent violation, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nA misdemeanor of the second degree for a first violation is reclassified as a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\nA misdemeanor of the first degree for a second violation is reclassified as a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nA felony of the third degree for a third or subsequent violation is reclassified as a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Evidence covers all subsection (2) conduct, repeat grades, and massage-establishment reclassification.",
+      "grading": "A misdemeanor of the second degree for a first violation, punishable as provided in s. 775.082 or s. 775.083.\nA felony of the third degree for a third or subsequent violation, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -1732,11 +1862,36 @@
           "sourceKey": "fl:statute:800.03",
           "role": "grading",
           "contentHash": "df7bd7420beae7f4fb552d265df5376026e0868b93ea5c093f5717b2cb28a940"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "A person commits unlawful exposure of sexual organs by:\nExposing or exhibiting his or her sexual organs in public or on the private premises of another, or so near thereto as to be seen from such private premises, in a vulgar or indecent manner; or\nBeing naked in public in a vulgar or indecent manner.",
       "grading": "Except as provided in paragraph (b), a violation of this section is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\nA second or subsequent violation of this section is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Primary conduct evidence is confined to subsection (1). The separately declared whole-section exception dependency supplies subsection (3), which excludes breastfeeding and mere nudity at a place set apart for that purpose; the whole-section grading dependency supplies subsection (2).",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -1839,11 +1994,46 @@
           "sourceKey": "fl:statute:874.04",
           "role": "grading",
           "contentHash": "da872aaedc45f61809b1c04ae840b5f53e49e607e4693870a6e4c1dc3acdb647"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:775.087",
+          "role": "penalty",
+          "contentHash": "cea37b85d8ef3ce0aebe6313923ba4e591d1eca1be2a0af6f822ae633211e5db"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "definition",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
         }
       ],
       "conduct": "It is unlawful for any person to own or to have in his or her care, custody, possession, or control any firearm, ammunition, or electric weapon or device, or to carry a concealed weapon, including a tear gas gun or chemical weapon or device, if that person has been:\nConvicted of a felony in the courts of this state;\nFound, in the courts of this state, to have committed a delinquent act that would be a felony if committed by an adult and such person is under 24 years of age;\nConvicted of or found to have committed a crime against the United States which is designated as a felony;\nFound to have committed a delinquent act in another state, territory, or country that would be a felony if committed by an adult and which was punishable by imprisonment for a term exceeding 1 year and such person is under 24 years of age; or\nFound guilty of an offense that is a felony in another state, territory, or country and which was punishable by imprisonment for a term exceeding 1 year.",
-      "grading": "Except as otherwise provided in subsection (4), any person who violates this section commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nNotwithstanding the provisions of s. 874.04, if the offense described in subsection (1) has been committed by a person who has previously qualified or currently qualifies for the penalty enhancements provided for in s. 874.04, the offense is a felony of the first degree, punishable by a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Primary conduct evidence is confined to subsection (1). The separately declared whole-section exception dependency supplies subsection (2), under which the section does not apply after the specified restoration of civil rights and firearm authority or the specified expungement; whole-section grading evidence supplies subsections (3) and (4).",
+      "grading": "Except as otherwise provided in subsection (4), any person who violates this section commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -1899,11 +2089,36 @@
           "sourceKey": "fl:statute:790.001",
           "role": "definition",
           "contentHash": "cd1b42285d13324a3914a699ee10c76b8a46e8beca1199d11cf0cd37c2a2072f"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "It is unlawful for any person to own or to have in his or her care, custody, possession, or control any short-barreled rifle, short-barreled shotgun, or machine gun which is, or may readily be made, operable; but this section shall not apply to antique firearms.\nFirearms in violation hereof which are lawfully owned and possessed under provisions of federal law are excepted.",
       "grading": "A person who violates this section commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Exception closure included.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -2608,20 +2823,20 @@
         {
           "sourceKey": "fl:statute:806.13:1",
           "target": "text",
-          "text": "If the damage is $1,000 or greater, or if there is interruption or impairment of a business operation or public communication, transportation, supply of water, gas or power, or other public service which costs $1,000 or more in labor and supplies to restore, it is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 669,
-          "end": 1028,
-          "sourceHash": "2a26f6fe81a54e875fffe4fec87b9e390243943b9cf092999a9d8c13400852ac",
-          "category": "felony"
-        },
-        {
-          "sourceKey": "fl:statute:806.13:1",
-          "target": "text",
           "text": "If the damage to such property is $200 or less, it is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
           "start": 350,
           "end": 491,
           "sourceHash": "2a26f6fe81a54e875fffe4fec87b9e390243943b9cf092999a9d8c13400852ac",
           "category": "misdemeanor"
+        },
+        {
+          "sourceKey": "fl:statute:806.13:1",
+          "target": "text",
+          "text": "If the damage is $1,000 or greater, or if there is interruption or impairment of a business operation or public communication, transportation, supply of water, gas or power, or other public service which costs $1,000 or more in labor and supplies to restore, it is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 669,
+          "end": 1028,
+          "sourceHash": "2a26f6fe81a54e875fffe4fec87b9e390243943b9cf092999a9d8c13400852ac",
+          "category": "felony"
         }
       ],
       "requiredDependencies": [
@@ -2634,11 +2849,36 @@
           "sourceKey": "fl:statute:806.13",
           "role": "grading",
           "contentHash": "2a26f6fe81a54e875fffe4fec87b9e390243943b9cf092999a9d8c13400852ac"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "A person commits the offense of criminal mischief if he or she willfully and maliciously injures or damages by any means any real or personal property belonging to another, including, but not limited to, the placement of graffiti thereon or other acts of vandalism thereto.",
-      "grading": "If the damage to such property is $200 or less, it is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\nIf the damage to such property is greater than $200 but less than $1,000, it is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\nIf the damage is $1,000 or greater, or if there is interruption or impairment of a business operation or public communication, transportation, supply of water, gas or power, or other public service which costs $1,000 or more in labor and supplies to restore, it is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Definition is limited to subsection (1); prior-conviction reclassification remains conditional.",
+      "grading": "If the damage is $1,000 or greater, or if there is interruption or impairment of a business operation or public communication, transportation, supply of water, gas or power, or other public service which costs $1,000 or more in labor and supplies to restore, it is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nIf the damage to such property is $200 or less, it is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -2693,20 +2933,20 @@
         {
           "sourceKey": "fl:statute:810.09:1_2",
           "target": "text",
-          "text": "If the offender is armed with a firearm or other dangerous weapon during the commission of the offense of trespass on property other than a structure or conveyance, he or she commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 1659,
-          "end": 1936,
-          "sourceHash": "8d5da32e2029d8936090727630db84c1aadf8b060e51fce3d24001b864d671ec",
-          "category": "felony"
-        },
-        {
-          "sourceKey": "fl:statute:810.09:1_2",
-          "target": "text",
           "text": "Except as provided in this subsection, trespass on property other than a structure or conveyance is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
           "start": 955,
           "end": 1141,
           "sourceHash": "8d5da32e2029d8936090727630db84c1aadf8b060e51fce3d24001b864d671ec",
           "category": "misdemeanor"
+        },
+        {
+          "sourceKey": "fl:statute:810.09:1_2",
+          "target": "text",
+          "text": "If the offender is armed with a firearm or other dangerous weapon during the commission of the offense of trespass on property other than a structure or conveyance, he or she commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 1659,
+          "end": 1936,
+          "sourceHash": "8d5da32e2029d8936090727630db84c1aadf8b060e51fce3d24001b864d671ec",
+          "category": "felony"
         }
       ],
       "requiredDependencies": [
@@ -2724,11 +2964,36 @@
           "sourceKey": "fl:statute:810.011",
           "role": "definition",
           "contentHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "A person who, without being authorized, licensed, or invited, willfully enters upon or remains in any property other than a structure or conveyance:\nAs to which notice against entering or remaining is given, either by actual communication to the offender or by posting, fencing, or cultivation as described in s. 810.011; or\nIf the property is the unenclosed curtilage of a dwelling and the offender enters or remains with the intent to commit an offense thereon, other than the offense of trespass,\ncommits the offense of trespass on property other than a structure or conveyance.",
-      "grading": "Except as provided in this subsection, trespass on property other than a structure or conveyance is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\nIf the offender is armed with a firearm or other dangerous weapon during the commission of the offense of trespass on property other than a structure or conveyance, he or she commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Felony treatment is stated only for enumerated conditions.",
+      "grading": "If the offender is armed with a firearm or other dangerous weapon during the commission of the offense of trespass on property other than a structure or conveyance, he or she commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nExcept as provided in this subsection, trespass on property other than a structure or conveyance is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -2969,11 +3234,36 @@
           "sourceKey": "fl:statute:815.06",
           "role": "exception",
           "contentHash": "fa2eccee748350078b38da92e838a4525c91af38d1752a5eca4f9f1d0ba99377"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "A person commits an offense against users of computers, computer systems, computer networks, or electronic devices if he or she willfully, knowingly, and without authorization or exceeding authorization:\nAccesses or causes to be accessed any computer, computer system, computer network, or electronic device with knowledge that such access is unauthorized or the manner of use exceeds authorization;\nIntroduces any computer contaminant into any computer, computer system, computer network, or electronic device; or",
-      "grading": "Except as provided in paragraphs (b) and (c), a person who violates subsection (2) commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nA person commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if he or she violates subsection (2) and:\nA person who violates subsection (2) commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the violation:",
-      "interpretation": "The unnamed subsection (4) misdemeanor is not merged into the named subsection (2) offense.",
+      "grading": "Except as provided in paragraphs (b) and (c), a person who violates subsection (2) commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -3509,20 +3799,20 @@
         {
           "sourceKey": "fl:statute:827.06:2_3",
           "target": "text",
-          "text": "Any person who is convicted of a fourth or subsequent violation of subsection (2) or who violates subsection (2) and who has owed to that child or spouse for more than 1 year support in an amount equal to or greater than $5,000 commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 1357,
-          "end": 1687,
-          "sourceHash": "b31c30167d25a0ad8dafaaf6086f2b1173a0a350945133f05c9eba7bb10111e0",
-          "category": "felony"
-        },
-        {
-          "sourceKey": "fl:statute:827.06:2_3",
-          "target": "text",
           "text": "Any person who willfully fails to provide support which he or she has the ability to provide to a child or a spouse whom the person knows he or she is legally obligated to support commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
           "start": 1076,
           "end": 1350,
           "sourceHash": "b31c30167d25a0ad8dafaaf6086f2b1173a0a350945133f05c9eba7bb10111e0",
           "category": "misdemeanor"
+        },
+        {
+          "sourceKey": "fl:statute:827.06:2_3",
+          "target": "text",
+          "text": "Any person who is convicted of a fourth or subsequent violation of subsection (2) or who violates subsection (2) and who has owed to that child or spouse for more than 1 year support in an amount equal to or greater than $5,000 commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 1357,
+          "end": 1687,
+          "sourceHash": "b31c30167d25a0ad8dafaaf6086f2b1173a0a350945133f05c9eba7bb10111e0",
+          "category": "felony"
         }
       ],
       "requiredDependencies": [
@@ -3535,11 +3825,36 @@
           "sourceKey": "fl:statute:827.06",
           "role": "grading",
           "contentHash": "b31c30167d25a0ad8dafaaf6086f2b1173a0a350945133f05c9eba7bb10111e0"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "Any person who willfully fails to provide support which he or she has the ability to provide to a child or a spouse whom the person knows he or she is legally obligated to support commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
-      "grading": "Any person who willfully fails to provide support which he or she has the ability to provide to a child or a spouse whom the person knows he or she is legally obligated to support commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\nAny person who is convicted of a fourth or subsequent violation of subsection (2) or who violates subsection (2) and who has owed to that child or spouse for more than 1 year support in an amount equal to or greater than $5,000 commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "No claim is made about the optional tribunal-based evidentiary route.",
+      "grading": "Any person who is convicted of a fourth or subsequent violation of subsection (2) or who violates subsection (2) and who has owed to that child or spouse for more than 1 year support in an amount equal to or greater than $5,000 commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nAny person who willfully fails to provide support which he or she has the ability to provide to a child or a spouse whom the person knows he or she is legally obligated to support commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -3582,11 +3897,31 @@
           "sourceKey": "fl:statute:828.12:1",
           "role": "offense",
           "contentHash": "979062d1f596a3a8319f65588fc94dcffe3b0044221cf79f59134b0bc1871cee"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "A person who unnecessarily overloads, overdrives, torments, deprives of necessary sustenance or shelter, or unnecessarily mutilates, or kills any animal, or causes the same to be done, or carries in or upon any vehicle, or otherwise, any animal in a cruel or inhumane manner, commits animal cruelty, a misdemeanor of the first degree, punishable as provided in s. 775.082 or by a fine of not more than $5,000, or both.",
       "grading": "A person who unnecessarily overloads, overdrives, torments, deprives of necessary sustenance or shelter, or unnecessarily mutilates, or kills any animal, or causes the same to be done, or carries in or upon any vehicle, or otherwise, any animal in a cruel or inhumane manner, commits animal cruelty, a misdemeanor of the first degree, punishable as provided in s. 775.082 or by a fine of not more than $5,000, or both.",
-      "interpretation": "Not the separately named aggravated offense.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -3634,11 +3969,36 @@
           "sourceKey": "fl:statute:828.12",
           "role": "grading",
           "contentHash": "979062d1f596a3a8319f65588fc94dcffe3b0044221cf79f59134b0bc1871cee"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "A person who intentionally commits an act to any animal",
       "grading": "commits aggravated animal cruelty, a felony of the third degree",
-      "interpretation": "Subsections (2)(a)-(b) supply additional torture and repeat-conviction conditions.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -3681,11 +4041,36 @@
           "sourceKey": "fl:statute:831.01",
           "role": "offense",
           "contentHash": "2983b98d3ba1ac0396e3b97717ac8c5b2fcf572fb3f6a453117065d070c95dd5"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "Whoever falsely makes, alters, forges or counterfeits a public record, or a certificate, return or attestation of any clerk or register of a court, public register, notary public, town clerk or any public officer, in relation to a matter wherein such certificate, return or attestation may be received as a legal proof; or a charter, deed, will, testament, bond, or writing obligatory, letter of attorney, policy of insurance, bill of lading, bill of exchange or promissory note, or an order, acquittance, or discharge for money or other property, or an acceptance of a bill of exchange or promissory note for the payment of money, or any receipt for money, goods or other property, or any passage ticket, pass or other evidence of transportation issued by a common carrier, with intent to injure or defraud any person, shall be guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
       "grading": "shall be guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "The record is limited to the instruments and intent stated in § 831.01.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -3720,7 +4105,7 @@
           "start": 1587,
           "end": 2115,
           "sourceHash": "f6ee675959afb225bdedeb7bde9a8bc72d4fc8230e7e5e589425f4f8fc5085a2",
-          "category": "felony"
+          "category": "misdemeanor"
         },
         {
           "sourceKey": "fl:statute:832.05:2_4",
@@ -3729,7 +4114,7 @@
           "start": 1587,
           "end": 2115,
           "sourceHash": "f6ee675959afb225bdedeb7bde9a8bc72d4fc8230e7e5e589425f4f8fc5085a2",
-          "category": "misdemeanor"
+          "category": "felony"
         }
       ],
       "requiredDependencies": [
@@ -3747,11 +4132,36 @@
           "sourceKey": "fl:statute:832.05",
           "role": "exception",
           "contentHash": "f6ee675959afb225bdedeb7bde9a8bc72d4fc8230e7e5e589425f4f8fc5085a2"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "It is unlawful for any person, by act or common scheme, to cash or deposit any item, as defined in s. 674.104(1)(i), in any bank or depository with intent to defraud.",
-      "grading": "A violation of the provisions of this subsection constitutes a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, unless the check, draft, debit card order, or other written order drawn, made, uttered, issued, or delivered is in the amount of $150, or its equivalent, or more and the payee or a subsequent holder thereof receives something of value therefor. In that event, the violation constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nA violation of the provisions of this subsection, if the check, draft, other written order, or debit card order is for an amount less than $150 or its equivalent, constitutes a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083. A violation of the provisions of this subsection, if the check, draft, other written order, or debit card order is in the amount of $150, or its equivalent, or more, constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Display text distinguishes the subsection (2), (3), and (4) grades and the payee-knowledge and postdated-check exceptions.",
+      "grading": "A violation of the provisions of this subsection constitutes a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, unless the check, draft, debit card order, or other written order drawn, made, uttered, issued, or delivered is in the amount of $150, or its equivalent, or more and the payee or a subsequent holder thereof receives something of value therefor. In that event, the violation constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nA violation of the provisions of this subsection constitutes a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, unless the check, draft, debit card order, or other written order drawn, made, uttered, issued, or delivered is in the amount of $150, or its equivalent, or more and the payee or a subsequent holder thereof receives something of value therefor. In that event, the violation constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -3782,20 +4192,20 @@
         {
           "sourceKey": "fl:statute:837.05",
           "target": "text",
-          "text": "A person who knowingly gives false information to a law enforcement officer concerning the alleged commission of a capital felony, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 1160,
-          "end": 1393,
-          "sourceHash": "10d2fea76549f8dabb0137942a00134b5aec3a6d10c01b3ff8dbfb4c2cd21c7a",
-          "category": "felony"
-        },
-        {
-          "sourceKey": "fl:statute:837.05",
-          "target": "text",
           "text": "Except as provided in paragraph (b) or subsection (2), a person who knowingly gives false information to a law enforcement officer concerning the alleged commission of any crime, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
           "start": 65,
           "end": 338,
           "sourceHash": "10d2fea76549f8dabb0137942a00134b5aec3a6d10c01b3ff8dbfb4c2cd21c7a",
           "category": "misdemeanor"
+        },
+        {
+          "sourceKey": "fl:statute:837.05",
+          "target": "text",
+          "text": "A person who knowingly gives false information to a law enforcement officer concerning the alleged commission of a capital felony, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 1160,
+          "end": 1393,
+          "sourceHash": "10d2fea76549f8dabb0137942a00134b5aec3a6d10c01b3ff8dbfb4c2cd21c7a",
+          "category": "felony"
         }
       ],
       "requiredDependencies": [
@@ -3808,11 +4218,36 @@
           "sourceKey": "fl:statute:837.05",
           "role": "grading",
           "contentHash": "10d2fea76549f8dabb0137942a00134b5aec3a6d10c01b3ff8dbfb4c2cd21c7a"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "Except as provided in paragraph (b) or subsection (2), a person who knowingly gives false information to a law enforcement officer concerning the alleged commission of any crime, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
-      "grading": "Except as provided in paragraph (b) or subsection (2), a person who knowingly gives false information to a law enforcement officer concerning the alleged commission of any crime, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\nA person who knowingly gives false information to a law enforcement officer concerning the alleged commission of a capital felony, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Degree text also limits prior-offense felony treatment to the corroboration conditions in paragraph (1)(b).",
+      "grading": "A person who knowingly gives false information to a law enforcement officer concerning the alleged commission of a capital felony, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nExcept as provided in paragraph (b) or subsection (2), a person who knowingly gives false information to a law enforcement officer concerning the alleged commission of any crime, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -3878,11 +4313,36 @@
           "sourceKey": "fl:statute:843.19",
           "role": "definition",
           "contentHash": "a0911c532005e085f3ad36a3a193bc259eab70e3a154403c8a2e23067bd1a656"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "Whoever knowingly and willfully resists, obstructs, or opposes any officer as defined in s. 943.10(1), (2), (3), (6), (7), (8), or (9); member of the Florida Commission on Offender Review or any administrative aide or supervisor employed by the commission; parole and probation supervisor; county probation officer; personnel or representative of the Department of Law Enforcement; or other person legally authorized to execute process in the execution of legal process or engaged in the performance of his or her official duties as described in s. 943.10, by offering or doing violence to the person of such officer or legally authorized person, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nWhoever knowingly and willfully resists, obstructs, or opposes a police canine or police horse as defined in s. 843.19(1)(a), working at the direction of or in tandem with any officer or legally authorized person listed in subsection (1), by offering or doing violence to the police canine or police horse, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
       "grading": "Whoever knowingly and willfully resists, obstructs, or opposes any officer as defined in s. 943.10(1), (2), (3), (6), (7), (8), or (9); member of the Florida Commission on Offender Review or any administrative aide or supervisor employed by the commission; parole and probation supervisor; county probation officer; personnel or representative of the Department of Law Enforcement; or other person legally authorized to execute process in the execution of legal process or engaged in the performance of his or her official duties as described in s. 943.10, by offering or doing violence to the person of such officer or legally authorized person, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Section 943.10(1)-(3), (6)-(9) and section 843.19(1)(a) are the operative definition passages within the pinned whole supporting sections.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -3939,11 +4399,36 @@
           "sourceKey": "fl:statute:843.15",
           "role": "grading",
           "contentHash": "cf7b83030fd86432b4face535308860163812c3b80baedb44da0f97bc812b0d8"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "Whoever, having been released pursuant to chapter 903, willfully fails to appear before any court or judicial officer as required shall incur a forfeiture of any security which was given or pledged for her or his release and, in addition, shall:",
       "grading": "If she or he was released in connection with a charge of felony or while awaiting sentence or pending review by certiorari after conviction of any offense, be guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, or;\nIf she or he was released in connection with a charge of misdemeanor, be guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
-      "interpretation": "Grades remain conditional on the charge or procedural posture connected to release.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -4393,11 +4878,31 @@
           "sourceKey": "fl:statute:320.07",
           "role": "definition",
           "contentHash": "2c7ee3607c70a574be9d6f5e607919a251d653e481e55713a99ca1f1d405680d"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "Any person whose motor vehicle or mobile home registration has been expired for more than 6 months, upon a second or subsequent offense, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
       "grading": "Any person whose motor vehicle or mobile home registration has been expired for more than 6 months, upon a second or subsequent offense, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
-      "interpretation": "Parent conduct support, § 320.07(3): “The operation of any motor vehicle without having attached thereto a registration license plate and validation stickers, or the use of any mobile home without having attached thereto a mobile home sticker, for the current registration period shall subject the owner thereof, if he or she is present, or, if the owner is not present, the operator thereof to the following penalty provisions:”. Excluded adjacent grade, § 320.07(3)(a): “Any person whose motor vehicle or mobile home registration has been expired for a period of 6 months or less commits a noncriminal traffic infraction, punishable as a nonmoving violation as provided in chapter 318.” These are whole-section support, not primary (3)(c) conduct or grading quotes. Subsections (3)(d)-(f) supply the lease, servicemember, and leased-owner limitations included in the summaries.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -4556,11 +5061,31 @@
           "sourceKey": "fl:statute:403.413",
           "role": "definition",
           "contentHash": "e777e643a98637b909a7a82e1e0fd6a42935addcb8817ba04ea9bd81e0e6e702"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "Any person who dumps litter in violation of subsection (4) in an amount exceeding 15 pounds in weight or 27 cubic feet in volume, but not exceeding 500 pounds in weight or 100 cubic feet in volume and not for commercial purposes is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
       "grading": "Any person who dumps litter in violation of subsection (4) in an amount exceeding 15 pounds in weight or 27 cubic feet in volume, but not exceeding 500 pounds in weight or 100 cubic feet in volume and not for commercial purposes is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
-      "interpretation": "Parent conduct support, § 403.413(4): “Unless otherwise authorized by law or permit, it is unlawful for any person to dump litter in any manner or amount in or on any of the following areas:”. That parent prohibition and its listed locations remain whole-section definition support rather than primary (6)(b) conductQuotes. The definition excludes the separate small-amount infraction and felony tiers, avoiding unsupported hazardous-waste definition claims.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -4599,20 +5124,20 @@
         {
           "sourceKey": "fl:statute:562.12:1",
           "target": "text",
-          "text": "Any person, including a licensee, who unlawfully sells alcoholic beverages at a commercial establishment or keeps and maintains a place where alcoholic beverages are sold or intended to be sold unlawfully commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, and must pay a fine of not less than $5,000 and not more than $10,000.",
-          "start": 726,
-          "end": 1104,
-          "sourceHash": "a3302039cc0f2923e07ba9090646b44914ee11d704fe2c6185f51cbbbfe4f32b",
-          "category": "felony"
-        },
-        {
-          "sourceKey": "fl:statute:562.12:1",
-          "target": "text",
           "text": "It is unlawful for any person to sell alcoholic beverages without a license, and it is unlawful for any licensee to sell alcoholic beverages except as permitted by her or his license, or to sell such beverages in any manner except that permitted by her or his license; and any licensee or other person who keeps or possesses alcoholic beverages not permitted to be sold by her or his license, or not permitted to be sold without a license, with intent to sell or dispose of same unlawfully, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
           "start": 133,
           "end": 719,
           "sourceHash": "a3302039cc0f2923e07ba9090646b44914ee11d704fe2c6185f51cbbbfe4f32b",
           "category": "misdemeanor"
+        },
+        {
+          "sourceKey": "fl:statute:562.12:1",
+          "target": "text",
+          "text": "Any person, including a licensee, who unlawfully sells alcoholic beverages at a commercial establishment or keeps and maintains a place where alcoholic beverages are sold or intended to be sold unlawfully commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, and must pay a fine of not less than $5,000 and not more than $10,000.",
+          "start": 726,
+          "end": 1104,
+          "sourceHash": "a3302039cc0f2923e07ba9090646b44914ee11d704fe2c6185f51cbbbfe4f32b",
+          "category": "felony"
         }
       ],
       "requiredDependencies": [
@@ -4625,11 +5150,31 @@
           "sourceKey": "fl:statute:562.12",
           "role": "grading",
           "contentHash": "a3302039cc0f2923e07ba9090646b44914ee11d704fe2c6185f51cbbbfe4f32b"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "It is unlawful for any person to sell alcoholic beverages without a license, and it is unlawful for any licensee to sell alcoholic beverages except as permitted by her or his license, or to sell such beverages in any manner except that permitted by her or his license; and any licensee or other person who keeps or possesses alcoholic beverages not permitted to be sold by her or his license, or not permitted to be sold without a license, with intent to sell or dispose of same unlawfully, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\nAny person, including a licensee, who unlawfully sells alcoholic beverages at a commercial establishment or keeps and maintains a place where alcoholic beverages are sold or intended to be sold unlawfully commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, and must pay a fine of not less than $5,000 and not more than $10,000.",
-      "grading": "It is unlawful for any person to sell alcoholic beverages without a license, and it is unlawful for any licensee to sell alcoholic beverages except as permitted by her or his license, or to sell such beverages in any manner except that permitted by her or his license; and any licensee or other person who keeps or possesses alcoholic beverages not permitted to be sold by her or his license, or not permitted to be sold without a license, with intent to sell or dispose of same unlawfully, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\nAny person, including a licensee, who unlawfully sells alcoholic beverages at a commercial establishment or keeps and maintains a place where alcoholic beverages are sold or intended to be sold unlawfully commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, and must pay a fine of not less than $5,000 and not more than $10,000.\nAny person, including a licensee, who commits a second or subsequent violation of subsection (1) commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, and must pay a fine of not less than $15,000 and not more than $20,000.",
-      "interpretation": "The exporter-registration offense in subsection (3) is outside this exact charge code.",
+      "grading": "Any person, including a licensee, who unlawfully sells alcoholic beverages at a commercial establishment or keeps and maintains a place where alcoholic beverages are sold or intended to be sold unlawfully commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, and must pay a fine of not less than $5,000 and not more than $10,000.\nIt is unlawful for any person to sell alcoholic beverages without a license, and it is unlawful for any licensee to sell alcoholic beverages except as permitted by her or his license, or to sell such beverages in any manner except that permitted by her or his license; and any licensee or other person who keeps or possesses alcoholic beverages not permitted to be sold by her or his license, or not permitted to be sold without a license, with intent to sell or dispose of same unlawfully, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -4672,11 +5217,31 @@
           "sourceKey": "fl:statute:877.03",
           "role": "offense",
           "contentHash": "813f9375f538cb1c40f0079335c3c7a8447dbe82c71b8afb5120c1c439316e92"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
       "conduct": "Whoever commits such acts as are of a nature to corrupt the public morals, or outrage the sense of public decency, or affect the peace and quiet of persons who may witness them, or engages in brawling or fighting, or engages in such conduct as to constitute a breach of the peace or disorderly conduct, shall be guilty of a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
       "grading": "Whoever commits such acts as are of a nature to corrupt the public morals, or outrage the sense of public decency, or affect the peace and quiet of persons who may witness them, or engages in brawling or fighting, or engages in such conduct as to constitute a breach of the peace or disorderly conduct, shall be guilty of a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
-      "interpretation": "The nonliteral noise-only legacy label remains held; this definition uses only the complete official identity and statutory scope.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -6544,11 +7109,41 @@
           "sourceKey": "fl:statute:806.01",
           "role": "definition",
           "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:806.031",
+          "role": "penalty",
+          "contentHash": "6ef1f722a1c9e8324511a2d120e83732b739d4c6ddad98ac3bf7b943a4ddfa14"
         }
       ],
       "conduct": "Any person who willfully and unlawfully, or while in the commission of any felony, by fire or explosion, damages or causes to be damaged:\nAny dwelling, whether occupied or not, or its contents;\nAny other structure that he or she knew or had reasonable grounds to believe was occupied by a human being,",
       "grading": "is guilty of arson in the first degree, which constitutes a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "The whole-section definition dependency pins subsection (3)'s broad definition of structure. The eligible scope retains all three alternatives in subsection (1), including normally occupied structures; selected conduct quotes are evidentiary anchors rather than an exhaustive rewrite.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -6596,11 +7191,41 @@
           "sourceKey": "fl:statute:806.01",
           "role": "definition",
           "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:806.031",
+          "role": "penalty",
+          "contentHash": "6ef1f722a1c9e8324511a2d120e83732b739d4c6ddad98ac3bf7b943a4ddfa14"
         }
       ],
       "conduct": "Any person who willfully and unlawfully, or while in the commission of any felony, by fire or explosion, damages or causes to be damaged any structure, whether the property of himself or herself or another, under any circumstances not referred to in subsection (1), is guilty of arson in the second degree, which constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
       "grading": "is guilty of arson in the second degree, which constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "The branch expressly includes the actor's own structure and is residual to subsection (1). Subsection (3)'s definition of structure is pinned through the whole-section dependency.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -7133,11 +7758,41 @@
           "sourceKey": "fl:statute:837.011",
           "role": "definition",
           "contentHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:837.07",
+          "role": "exception",
+          "contentHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d"
         }
       ],
       "conduct": "Except as provided in subsection (2), whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding in regard to any material matter, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nWhoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding that relates to the prosecution of a capital felony, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "grading": "Except as provided in subsection (2), whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding in regard to any material matter, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\nWhoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding that relates to the prosecution of a capital felony, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Section 837.011 closes official proceeding, oath, and material matter. Subsection (3) expressly removes knowledge of materiality as an element and mistaken immateriality as a defense. Subsection (2)'s text does not separately say material matter, so the display does not import that condition into the capital-felony branch.",
+      "grading": "Except as provided in subsection (2), whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding in regard to any material matter, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific.",
       "legalReview": null
     },
     {
@@ -12768,6 +13423,58 @@
       "text": "775.0847 \nPossession or promotion of certain images of child sexual abuse material; reclassification.\n—\n\n(1) \nFor purposes of this section:\n(a) \n“Child” or “minor” means any person, whose identity is known or unknown, younger than 18 years of age.\n\n(b) \n“Child sexual abuse material” means:\n1. \nAny image depicting a minor engaged in sexual conduct; or\n\n2. \nAny image that has been created, altered, adapted, or modified by electronic, mechanical, or other means, to portray an identifiable minor engaged in sexual conduct.\n\n(c) \n“Female genitals” includes the labia minora, labia majora, clitoris, vulva, hymen, and vagina.\n\n(d) \n“Identifiable minor” means a person:\n1. \nWho was a minor at the time the image was created, altered, adapted, or modified, or whose image as a minor was used in the creating, altering, adapting, or modifying of the image; and\n\n2. \nWho is recognizable as an actual person by the person’s face, likeness, or other distinguishing characteristic, such as a unique birthmark, or other recognizable feature.\n\nThe term may not be construed to require proof of the actual identity of the identifiable minor.\n\n(e) \n“Sadomasochistic abuse” means flagellation or torture by or upon a person or the condition of being fettered, bound, or otherwise physically restrained, for the purpose of deriving sexual satisfaction, or satisfaction brought about as a result of sadistic violence, from inflicting harm on another or receiving such harm oneself.\n\n(f) \n“Sexual battery” means oral, anal, or female genital penetration by, or union with, the sexual organ of another or the anal or female genital penetration of another by any other object; however, sexual battery does not include an act done for a bona fide medical purpose.\n\n(g) \n“Sexual bestiality” means any sexual act, actual or simulated, between a person and an animal involving the sex organ of the one and the mouth, anus, or female genitals of the other.\n\n(h) \n“Sexual conduct” means actual or simulated sexual intercourse, deviate sexual intercourse, sexual bestiality, masturbation, or sadomasochistic abuse; actual or simulated lewd exhibition of the genitals; actual physical contact with a person’s clothed or unclothed genitals, pubic area, buttocks, or, if such person is a female, breast with the intent to arouse or gratify the sexual desire of either party; or any act or conduct which constitutes sexual battery or simulates that sexual battery is being or will be committed. A mother’s breastfeeding of her baby does not under any circumstance constitute “sexual conduct.”\n\n(2) \nA violation of s. 827.071, s. 847.0135, s. 847.0137, or s. 847.0138 shall be reclassified to the next higher degree as provided in subsection (3) if:\n(a) \nThe offender possesses 10 or more images of any form of child sexual abuse material regardless of content; and\n\n(b) \nThe content of at least one image contains one or more of the following:\n1. \nA child who is younger than the age of 12.\n\n2. \nSadomasochistic abuse involving a child.\n\n3. \nSexual battery involving a child.\n\n4. \nSexual bestiality involving a child.\n\n5. \nAny motion picture, film, video, or computer-generated motion picture, film, or video involving a child, regardless of length and regardless of whether the motion picture, film, video, or computer-generated motion picture, film, or video contains sound.\n\n(3)(a) \nIn the case of a felony of the third degree, the offense is reclassified to a felony of the second degree.\n\n(b) \nIn the case of a felony of the second degree, the offense is reclassified to a felony of the first degree.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked one level above the ranking under s. 921.0022 or s. 921.0023 of the offense committed.\n\nHistory.\n—\ns. 3, ch. 2007-143; s. 3, ch. 2022-165; s. 1, ch. 2022-212; s. 7, ch. 2026-18; s. 6, ch. 2026-20.",
       "contentHash": "cdf5eeda82ec0c2fd1bbdd48084b9707fec2a84f28b4a6b2b29de91346c68dc9",
       "retrievedAt": "2026-11-17T17:39:33.622Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": []
+    },
+    "fl:statute:796.08": {
+      "sourceKey": "fl:statute:796.08",
+      "section": "796.08",
+      "subdivision": null,
+      "citation": "Fla. Stat. § 796.08",
+      "title": "Screening for HIV and sexually transmissible diseases; providing penalties",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0796/Sections/0796.08.html",
+      "text": "796.08 \nScreening for HIV and sexually transmissible diseases; providing penalties.\n—\n\n(1)(a) \nFor the purposes of this section, “sexually transmissible disease” means a bacterial, viral, fungal, or parasitic disease, determined by rule of the Department of Health to be sexually transmissible, a threat to the public health and welfare, and a disease for which a legitimate public interest is served by providing for regulation and treatment.\n\n(b) \nIn considering which diseases are designated as sexually transmissible diseases, the Department of Health shall consider such diseases as chancroid, gonorrhea, granuloma inguinale, lymphogranuloma venereum, genital herpes simplex, chlamydia, nongonococcal urethritis (NGU), pelvic inflammatory disease (PID)/acute salpingitis, syphilis, and human immunodeficiency virus infection for designation and shall consider the recommendations and classifications of the Centers for Disease Control and Prevention and other nationally recognized authorities. Not all diseases that are sexually transmissible need be designated for purposes of this section.\n\n(2) \nA person arrested under s. 796.07 may request screening for a sexually transmissible disease under direction of the Department of Health and, if infected, shall submit to appropriate treatment and counseling. A person who requests screening for a sexually transmissible disease under this subsection must pay any costs associated with such screening.\n\n(3) \nA person convicted under s. 796.07 of prostitution or procuring another to commit prostitution must undergo screening for a sexually transmissible disease, including, but not limited to, screening to detect exposure to the human immunodeficiency virus, under direction of the Department of Health. If the person is infected, he or she must submit to treatment and counseling prior to release from probation, community control, or incarceration. Notwithstanding the provisions of s. 384.29, the results of tests conducted pursuant to this subsection shall be made available by the Department of Health to the offender, medical personnel, appropriate state agencies, state attorneys, and courts of appropriate jurisdiction in need of such information in order to enforce the provisions of this chapter.\n\n(4) \nA person who commits prostitution or procures another for prostitution and who, prior to the commission of such crime, had tested positive for a sexually transmissible disease other than human immunodeficiency virus infection and knew or had been informed that he or she had tested positive for such sexually transmissible disease and could possibly communicate such disease to another person through sexual activity commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083. A person may be convicted and sentenced separately for a violation of this subsection and for the underlying crime of prostitution or procurement of prostitution.\n\n(5) \nA person who:\n(a) \nCommits or offers to commit prostitution; or\n\n(b) \nProcures another for prostitution by engaging in sexual activity in a manner likely to transmit the human immunodeficiency virus,\n\nand who, prior to the commission of such crime, had tested positive for human immunodeficiency virus and knew or had been informed that he or she had tested positive for human immunodeficiency virus and could possibly communicate such disease to another person through sexual activity commits criminal transmission of HIV, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084. A person may be convicted and sentenced separately for a violation of this subsection and for the underlying crime of prostitution or procurement of prostitution.\n\nHistory.\n—\ns. 2, ch. 86-143; s. 44, ch. 88-380; s. 6, ch. 90-292; s. 67, ch. 91-110; s. 258, ch. 91-224; s. 7, ch. 93-227; s. 7, ch. 94-90; s. 2, ch. 94-205; s. 7, ch. 96-409; s. 3, ch. 97-37; s. 35, ch. 97-93; s. 296, ch. 99-8; s. 3, ch. 2010-64; s. 5, ch. 2010-113; s. 33, ch. 2016-24.",
+      "contentHash": "8ea0e8f1655a916c38991dd1bb89b231932dbae4cb65ac99c43e874376a0882c",
+      "retrievedAt": "2026-11-19T06:33:03.809Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": []
+    },
+    "fl:statute:775.087": {
+      "sourceKey": "fl:statute:775.087",
+      "section": "775.087",
+      "subdivision": null,
+      "citation": "Fla. Stat. § 775.087",
+      "title": "Possession or use of weapon; aggravated battery; felony reclassification; minimum sentence",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.087.html",
+      "text": "775.087 \nPossession or use of weapon; aggravated battery; felony reclassification; minimum sentence.\n—\n\n(1) \nUnless otherwise provided by law, whenever a person is charged with a felony, except a felony in which the use of a weapon or firearm is an essential element, and during the commission of such felony the defendant carries, displays, uses, threatens to use, or attempts to use any weapon or firearm, or during the commission of such felony the defendant commits an aggravated battery, the felony for which the person is charged shall be reclassified as follows:\n(a) \nIn the case of a felony of the first degree, to a life felony.\n\n(b) \nIn the case of a felony of the second degree, to a felony of the first degree.\n\n(c) \nIn the case of a felony of the third degree, to a felony of the second degree.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense which is reclassified under this section is ranked one level above the ranking under s. 921.0022 or s. 921.0023 of the felony offense committed.\n\n(2)(a)1. \nAny person who is convicted of a felony or an attempt to commit a felony, regardless of whether the use of a weapon is an element of the felony, and the conviction was for:\na. \nMurder;\n\nb. \nSexual battery;\n\nc. \nRobbery;\n\nd. \nBurglary;\n\ne. \nArson;\n\nf. \nAggravated battery;\n\ng. \nKidnapping;\n\nh. \nEscape;\n\ni. \nAircraft piracy;\n\nj. \nAggravated child abuse;\n\nk. \nAggravated abuse of an elderly person or disabled adult;\n\nl. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\nm. \nCarjacking;\n\nn. \nHome-invasion robbery;\n\no. \nAggravated stalking;\n\np. \nTrafficking in cannabis, trafficking in cocaine, capital importation of cocaine, trafficking in illegal drugs, capital importation of illegal drugs, trafficking in phencyclidine, capital importation of phencyclidine, trafficking in methaqualone, capital importation of methaqualone, trafficking in amphetamine, capital importation of amphetamine, trafficking in flunitrazepam, trafficking in gamma-hydroxybutyric acid (GHB), trafficking in 1,4-Butanediol, trafficking in Phenethylamines, or other violation of s. 893.135(1);\n\nq. \nPossession of a firearm by a felon; or\n\nr. \nHuman trafficking\n\nand during the commission of the offense, such person actually possessed a “firearm” or “destructive device” as those terms are defined in s. 790.001, shall be sentenced to a minimum term of imprisonment of 10 years, except that a person who is convicted for possession of a firearm by a felon or burglary of a conveyance shall be sentenced to a minimum term of imprisonment of 3 years if such person possessed a “firearm” or “destructive device” during the commission of the offense. However, if an offender who is convicted of the offense of possession of a firearm by a felon has a previous conviction of committing or attempting to commit a felony listed in s. 775.084(1)(b)1. and actually possessed a firearm or destructive device during the commission of the prior felony, the offender shall be sentenced to a minimum term of imprisonment of 10 years.\n\n2. \nAny person who is convicted of a felony or an attempt to commit a felony listed in sub-subparagraphs 1.a.-p. or sub-subparagraph 1.r., regardless of whether the use of a weapon is an element of the felony, and during the course of the commission of the felony such person discharged a “firearm” or “destructive device” as defined in s. 790.001 shall be sentenced to a minimum term of imprisonment of 20 years.\n\n3. \nAny person who is convicted of a felony or an attempt to commit a felony listed in sub-subparagraphs 1.a.-p. or sub-subparagraph 1.r., regardless of whether the use of a weapon is an element of the felony, and during the course of the commission of the felony such person discharged a “firearm” or “destructive device” as defined in s. 790.001 and, as the result of the discharge, death or great bodily harm was inflicted upon any person, the convicted person shall be sentenced to a minimum term of imprisonment of not less than 25 years and not more than a term of imprisonment of life in prison.\n\n(b) \nSubparagraph (a)1., subparagraph (a)2., or subparagraph (a)3. does not prevent a court from imposing a longer sentence of incarceration as authorized by law in addition to the minimum mandatory sentence, or from imposing a sentence of death pursuant to other applicable law. Subparagraph (a)1., subparagraph (a)2., or subparagraph (a)3. does not authorize a court to impose a lesser sentence than otherwise required by law.\nNotwithstanding s. 948.01, adjudication of guilt or imposition of sentence shall not be suspended, deferred, or withheld, and the defendant is not eligible for statutory gain-time under s. 944.275 or any form of discretionary early release, other than pardon or executive clemency, or conditional medical release under s. 947.149, prior to serving the minimum sentence.\n\n(c) \nIf the minimum mandatory terms of imprisonment imposed pursuant to this section exceed the maximum sentences authorized by s. 775.082, s. 775.084, or the Criminal Punishment Code under chapter 921, then the mandatory minimum sentence must be imposed. If the mandatory minimum terms of imprisonment pursuant to this section are less than the sentences that could be imposed as authorized by s. 775.082, s. 775.084, or the Criminal Punishment Code under chapter 921, then the sentence imposed by the court must include the mandatory minimum term of imprisonment as required in this section.\n\n(d) \nIt is the intent of the Legislature that offenders who actually possess, carry, display, use, threaten to use, or attempt to use firearms or destructive devices be punished to the fullest extent of the law. The court shall impose the minimum term of imprisonment required under paragraph (a) for each qualifying felony offense for which the person is convicted. If the offender is convicted of multiple felony offenses for which paragraph (a) requires the imposition of a minimum term of imprisonment, the court shall impose any such terms of imprisonment consecutively.\n\n(e) \nIf an offender commits a felony enumerated in subparagraph (a)1. in conjunction with any other felony offense not enumerated in subparagraph (a)1., the court may impose any term of imprisonment provided for in paragraph (a) consecutively to any other term of imprisonment imposed for any other felony offense not enumerated in subparagraph (a)1.\n\n(3)(a)1. \nAny person who is convicted of a felony or an attempt to commit a felony, regardless of whether the use of a firearm is an element of the felony, and the conviction was for:\na. \nMurder;\n\nb. \nSexual battery;\n\nc. \nRobbery;\n\nd. \nBurglary;\n\ne. \nArson;\n\nf. \nAggravated battery;\n\ng. \nKidnapping;\n\nh. \nEscape;\n\ni. \nSale, manufacture, delivery, or intent to sell, manufacture, or deliver any controlled substance;\n\nj. \nAircraft piracy;\n\nk. \nAggravated child abuse;\n\nl. \nAggravated abuse of an elderly person or disabled adult;\n\nm. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\nn. \nCarjacking;\n\no. \nHome-invasion robbery;\n\np. \nAggravated stalking;\n\nq. \nTrafficking in cannabis, trafficking in cocaine, capital importation of cocaine, trafficking in illegal drugs, capital importation of illegal drugs, trafficking in phencyclidine, capital importation of phencyclidine, trafficking in methaqualone, capital importation of methaqualone, trafficking in amphetamine, capital importation of amphetamine, trafficking in flunitrazepam, trafficking in gamma-hydroxybutyric acid (GHB), trafficking in 1,4-Butanediol, trafficking in Phenethylamines, or other violation of s. 893.135(1); or\n\nr. \nHuman trafficking\n\nand during the commission of the offense, such person possessed a semiautomatic firearm and its high-capacity detachable box magazine or a machine gun as defined in s. 790.001, shall be sentenced to a minimum term of imprisonment of 15 years.\n\n2. \nAny person who is convicted of a felony or an attempt to commit a felony listed in subparagraph 1., regardless of whether the use of a weapon is an element of the felony, and during the course of the commission of the felony such person discharged a semiautomatic firearm and its high-capacity box magazine or a “machine gun” as defined in s. 790.001 shall be sentenced to a minimum term of imprisonment of 20 years.\n\n3. \nAny person who is convicted of a felony or an attempt to commit a felony listed in subparagraph 1., regardless of whether the use of a weapon is an element of the felony, and during the course of the commission of the felony such person discharged a semiautomatic firearm and its high-capacity box magazine or a “machine gun” as defined in s. 790.001 and, as the result of the discharge, death or great bodily harm was inflicted upon any person, the convicted person shall be sentenced to a minimum term of imprisonment of not less than 25 years and not more than a term of imprisonment of life in prison.\n\n(b) \nSubparagraph (a)1., subparagraph (a)2., or subparagraph (a)3. does not prevent a court from imposing a longer sentence of incarceration as authorized by law in addition to the minimum mandatory sentence, or from imposing a sentence of death pursuant to other applicable law. Subparagraph (a)1., subparagraph (a)2., or subparagraph (a)3. does not authorize a court to impose a lesser sentence than otherwise required by law.\nNotwithstanding s. 948.01, adjudication of guilt or imposition of sentence shall not be suspended, deferred, or withheld, and the defendant is not eligible for statutory gain-time under s. 944.275 or any form of discretionary early release, other than pardon or executive clemency, or conditional medical release under s. 947.149, prior to serving the minimum sentence.\n\n(c) \nIf the minimum mandatory terms of imprisonment imposed pursuant to this section exceed the maximum sentences authorized by s. 775.082, s. 775.084, or the Criminal Punishment Code under chapter 921, then the mandatory minimum sentence must be imposed. If the mandatory minimum terms of imprisonment pursuant to this section are less than the sentences that could be imposed as authorized by s. 775.082, s. 775.084, or the Criminal Punishment Code under chapter 921, then the sentence imposed by the court must include the mandatory minimum term of imprisonment as required in this section.\n\n(d) \nIt is the intent of the Legislature that offenders who possess, carry, display, use, threaten to use, or attempt to use a semiautomatic firearm and its high-capacity detachable box magazine or a machine gun as defined in s. 790.001 be punished to the fullest extent of the law. The court shall impose the minimum term of imprisonment required under paragraph (a) for each qualifying felony offense for which the person is convicted. If the offender is convicted of multiple felony offenses for which paragraph (a) requires the imposition of a minimum term of imprisonment, the court shall impose any such terms of imprisonment consecutively.\n\n(e) \nIf an offender commits a felony enumerated in subparagraph (a)1. in conjunction with any other felony offense not enumerated in subparagraph (a)1., the court may impose any term of imprisonment provided for in paragraph (a) consecutively to any other term of imprisonment imposed for any other felony offense not enumerated in subparagraph (a)1.\n\n(f) \nAs used in this subsection, the term:\n1. \n“High-capacity detachable box magazine” means any detachable box magazine, for use in a semiautomatic firearm, which is capable of being loaded with more than 20 centerfire cartridges.\n\n2. \n“Semiautomatic firearm” means a firearm which is capable of firing a series of rounds by separate successive depressions of the trigger and which uses the energy of discharge to perform a portion of the operating cycle.\n\n(4) \nFor purposes of imposition of minimum mandatory sentencing provisions of this section, with respect to a firearm, the term “possession” is defined as carrying it on the person. Possession may also be proven by demonstrating that the defendant had the firearm within immediate physical reach with ready access with the intent to use the firearm during the commission of the offense, if proven beyond a reasonable doubt.\n\n(5) \nThis section does not apply to law enforcement officers or to United States military personnel who are performing their lawful duties or who are traveling to or from their places of employment or assignment to perform their lawful duties.\n\nHistory.\n—\ns. 9, ch. 74-383; s. 1, ch. 75-7; s. 3, ch. 75-298; s. 2, ch. 76-75; s. 51, ch. 83-215; s. 3, ch. 89-306; s. 2, ch. 90-124; s. 2, ch. 90-176; s. 19, ch. 95-184; s. 9, ch. 95-195; s. 15, ch. 96-322; s. 55, ch. 96-388; s. 14, ch. 97-194; s. 1, ch. 99-12; s. 88, ch. 2000-158; s. 5, ch. 2000-320; s. 11, ch. 2005-128; s. 4, ch. 2011-200; s. 1, ch. 2012-74; s. 3, ch. 2014-176; s. 2, ch. 2014-195; s. 1, ch. 2016-7; s. 121, ch. 2019-167; s. 1, ch. 2023-87; s. 4, ch. 2025-81.",
+      "contentHash": "cea37b85d8ef3ce0aebe6313923ba4e591d1eca1be2a0af6f822ae633211e5db",
+      "retrievedAt": "2026-11-19T06:33:02.889Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": []
+    },
+    "fl:statute:806.031": {
+      "sourceKey": "fl:statute:806.031",
+      "section": "806.031",
+      "subdivision": null,
+      "citation": "Fla. Stat. § 806.031",
+      "title": "Arson resulting in injury to another; penalty",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.031.html",
+      "text": "806.031 \nArson resulting in injury to another; penalty.\n—\n\n(1) \nA person who perpetrates any arson that results in any bodily harm to a firefighter or any other person, regardless of intent or lack of intent to cause such harm, is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nA person who perpetrates any arson that results in great bodily harm, permanent disability, or permanent disfigurement to a firefighter or any other person, regardless of intent or lack of intent to cause such harm, is guilty of a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nUpon conviction and adjudication of guilt, a person may be sentenced separately, pursuant to s. 775.021(4), for any violation of this section and for any arson committed during the same criminal episode. A conviction for any arson, however, is not necessary for a conviction under this section.\n\nHistory.\n—\ns. 1, ch. 84-23; s. 182, ch. 91-224.",
+      "contentHash": "6ef1f722a1c9e8324511a2d120e83732b739d4c6ddad98ac3bf7b943a4ddfa14",
+      "retrievedAt": "2026-11-19T06:33:04.718Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": []
+    },
+    "fl:statute:837.07": {
+      "sourceKey": "fl:statute:837.07",
+      "section": "837.07",
+      "subdivision": null,
+      "citation": "Fla. Stat. § 837.07",
+      "title": "Recantation as a defense",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.07.html",
+      "text": "837.07 \nRecantation as a defense.\n—\n\nRecantation shall be a defense to any prosecution for perjury or false statement only if the person making the false statement admits such statement to be false in the same continuous proceeding or matter, and:\n(1) \nThe false statement has not substantially affected the proceeding; or\n\n(2) \nSuch admission is made before it has become manifest that such false statement has been or will be exposed.\n\nHistory.\n—\ns. 1, ch. 90-126.",
+      "contentHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d",
+      "retrievedAt": "2026-11-19T06:33:05.846Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     }

@@ -5,7 +5,8 @@ import packet from '../scripts/data-review/output/florida-trafficking-correction
 import plan from '../scripts/data-review/florida-trafficking/correction-plan.json';
 import before from '../scripts/data-review/florida-trafficking/previous-definitions.json';
 import screen from '../scripts/data-review/output/florida-domestic-applicability-screen.json';
-import receipt from '../scripts/data-review/output/florida-reviewed-refresh-receipt.json';
+// Synthetic positive control only; the actual unchanged receipt rejects the later closeout corrections.
+import { syntheticFloridaReceipt as receipt } from './helpers/florida-receipt-fixture';
 import report from '../scripts/data-review/output/florida-reviewed-analysis.json';
 import ledger from '../shared/florida-reviewed-eligibility.json';
 import {FLORIDA_REVIEWED_DEFINITIONS} from '../shared/florida-reviewed-batch';
