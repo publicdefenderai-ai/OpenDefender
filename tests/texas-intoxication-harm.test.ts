@@ -42,7 +42,7 @@ it("preserves the old manslaughter identity once and corrects conditional penalt
  expect(evidence["CR:42A.401"].text).toContain("not less than 30 days");expect(evidence["CR:42A.401"].text).toContain("not less than 120 days");
  expect(evidence["CR:42.0375"].text).toContain("19 years of age or older");
  for(const r of rows.filter(r=>r.references[0].section==="49.07"))expect(r.penalty).toContain("at least 30 days");
- for(const r of rows.filter(r=>r.references[0].section==="49.08")){expect(r.penalty).toContain("at least 120 days");expect(r.penalty).toContain("not once the recipient is 19");expect(r.penalty).toContain("not an automatic stacking requirement");}
+ for(const r of rows.filter(r=>r.references[0].section==="49.08")){expect(r.penalty).toContain("at least 120 days");expect(r.penalty).toContain("until the child turns 18 or graduates from high school, whichever is later");expect(r.penalty).not.toContain("through age 18");expect(r.penalty).toContain("not once the recipient is 19");expect(r.penalty).toContain("not an automatic stacking requirement");}
 });
 it("limits publisher instructions to verified motor-vehicle conduct, leaving special grading separate",()=>{
  for(const r of rows){const instruction=getInstructionRef(getChargeById(r.id)!);expect(instruction).toContain("underlying conduct only: motor-vehicle/public-place; enhanced grading separate");expect(instruction).toContain(r.references[0].section==="49.045"?"49.17":r.references[0].section==="49.07"?"49.26":"49.25");}
@@ -70,4 +70,10 @@ it("rebuilds individually supported identities and fails closed on altered or mi
     expect(resolveGuidanceCharge({id:r.id,name:r.name,code:r.code,classification:r.category},"TX")).toMatchObject({id:r.id});
     if (r.id.startsWith("tx-pc-")) expect(resolveGuidanceCharge({name:r.name,code:r.code,classification:r.category},"TX")).toBeUndefined();
   }
+});
+
+it("names deputies and qualifying reserves without broadening the retained four officer classes",()=>{
+ const source=evidence["CR:2A.001"].text;
+ for(const phrase of ["reserve deputy sheriff", "deputy constable", "reserve municipal police officer", "reserve officer corps"])expect(source).toContain(phrase);
+ for(const r of rows.filter(r=>r.id.endsWith("peace-officer"))){expect(r.name).toContain("deputy or qualifying reserve");expect(r.conduct).toContain("required permanent peace-officer license");expect(r.conduct).toContain("Public Safety Commission and DPS director");expect(r.conduct).toContain("actual official duty");}
 });

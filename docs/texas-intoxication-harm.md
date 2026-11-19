@@ -14,13 +14,13 @@ The retained 2025 DPS rank 62, code 54040028, reports 2,400 adult arrests for dr
 | Intoxication assault (ordinary serious bodily injury) (`tx-pc-49-07-ordinary`) | Tex. Penal Code § 49.07(a) | Third-degree felony |
 | Intoxication assault (firefighter injured in actual official duty) (`tx-pc-49-07-firefighter`) | Tex. Penal Code § 49.07(a) | Second-degree felony |
 | Intoxication assault (EMS personnel injured in actual official duty) (`tx-pc-49-07-ems`) | Tex. Penal Code § 49.07(a) | Second-degree felony |
-| Intoxication assault (specified peace officer injured in actual official duty) (`tx-pc-49-07-peace-officer`) | Tex. Penal Code § 49.07(a) | First-degree felony |
+| Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty) (`tx-pc-49-07-peace-officer`) | Tex. Penal Code § 49.07(a) | First-degree felony |
 | Intoxication assault (judge injured in actual official duty) (`tx-pc-49-07-judge`) | Tex. Penal Code § 49.07(a) | First-degree felony |
 | Intoxication assault (traumatic brain injury resulting in persistent vegetative state) (`tx-pc-49-07-persistent-vegetative-state`) | Tex. Penal Code § 49.07(a) | Second-degree felony |
 | Intoxication Manslaughter (`tx-vehicular-homicide`) | Tex. Penal Code § 49.08 | Second-degree felony |
 | Intoxication manslaughter (death of firefighter in actual official duty) (`tx-pc-49-08-firefighter`) | Tex. Penal Code § 49.08(a) | First-degree felony |
 | Intoxication manslaughter (death of EMS personnel in actual official duty) (`tx-pc-49-08-ems`) | Tex. Penal Code § 49.08(a) | First-degree felony |
-| Intoxication manslaughter (death of specified peace officer in actual official duty) (`tx-pc-49-08-peace-officer`) | Tex. Penal Code § 49.08(a) | First-degree felony |
+| Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty) (`tx-pc-49-08-peace-officer`) | Tex. Penal Code § 49.08(a) | First-degree felony |
 | Intoxication manslaughter (death of judge in actual official duty) (`tx-pc-49-08-judge`) | Tex. Penal Code § 49.08(a) | First-degree felony |
 | Intoxication manslaughter (more than one death in same criminal transaction) (`tx-pc-49-08-multiple-deaths`) | Tex. Penal Code § 49.08(a) | First-degree felony |
 
@@ -55,3 +55,5 @@ Reproduce with `npx tsx scripts/data-review/texas-verification/replay-assault-in
 This draft is stacked on PR270 and must follow it; it does not include a production operation, database import, migration, receipt renewal or activation. Unrelated Florida and design review branches are not prerequisites.
 
 Validation: the affected 201-test set is green after correcting the instruction label's established underlying-conduct disclaimer (initial broader run: 200 passed and that one failure; final instruction/evidence rerun: 52 passed). Six database integration tests were deliberately skipped. Typecheck and production build passed. All 19 isolated built-selector checks passed before the final label wording refinement and explicit `(a)` conduct-reference metadata; the final evidence/accounting checks validate that reference and manifest grouping. The corrected manslaughter record is grouped with the new batch at the end of the manifest; other records retain their relative order and content.
+
+Review follow-up: all six manslaughter penalties now state restitution lasts until the child turns eighteen or graduates from high school, whichever is later, with no required payments once the recipient is nineteen. The two officer labels explicitly include deputies and qualifying reserves; the conduct text preserves the permanent-license and DPS-commission conditions in the retained article 2A.001(1)-(4). No evidence dates, statutory holds or other records change.

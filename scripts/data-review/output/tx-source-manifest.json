@@ -125306,7 +125306,7 @@
     },
     {
       "chargeId": "tx-pc-49-07-peace-officer",
-      "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+      "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
       "catalogCode": "49.07(a)",
       "catalogCategory": "felony",
       "disposition": "exact_alias_rename",
@@ -125330,7 +125330,7 @@
           "subdivision": "(a)",
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125370,7 +125370,7 @@
           "subdivision": "(b), (c)",
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125410,7 +125410,7 @@
           "subdivision": "(b-1)(2)",
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125450,7 +125450,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125490,7 +125490,7 @@
           "subdivision": "(a)(2)",
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125530,7 +125530,7 @@
           "subdivision": "(a)(26), (38), (40)",
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125570,7 +125570,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125610,7 +125610,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125650,7 +125650,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125690,7 +125690,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125730,7 +125730,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125770,7 +125770,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125810,7 +125810,7 @@
           "subdivision": "(b-1), (b-2), (b-3)",
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125850,7 +125850,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125890,7 +125890,7 @@
           "subdivision": "(a)(36)",
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125930,7 +125930,7 @@
           "subdivision": "common roles in (1)-(4), both retained versions",
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -125970,7 +125970,7 @@
           "subdivision": "(b)(1)",
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -126010,7 +126010,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -126050,7 +126050,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -126090,7 +126090,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -126130,7 +126130,7 @@
           "subdivision": "(a), (b)",
           "metadata": {
             "chargeId": "tx-pc-49-07-peace-officer",
-            "catalogLabel": "Intoxication assault (specified peace officer injured in actual official duty)",
+            "catalogLabel": "Intoxication assault (specified peace officer, deputy or qualifying reserve injured in actual official duty)",
             "catalogCode": "49.07(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -130578,7 +130578,7 @@
     },
     {
       "chargeId": "tx-pc-49-08-peace-officer",
-      "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+      "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
       "catalogCode": "49.08(a)",
       "catalogCategory": "felony",
       "disposition": "exact_alias_rename",
@@ -130602,7 +130602,7 @@
           "subdivision": "(a)",
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -130642,7 +130642,7 @@
           "subdivision": "(b)",
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -130682,7 +130682,7 @@
           "subdivision": "(b-2)(1), both versions",
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -130722,7 +130722,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -130762,7 +130762,7 @@
           "subdivision": "(a)(2)",
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -130802,7 +130802,7 @@
           "subdivision": "(a)(26), (38), (40)",
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -130842,7 +130842,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -130882,7 +130882,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -130922,7 +130922,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -130962,7 +130962,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -131002,7 +131002,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -131042,7 +131042,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -131082,7 +131082,7 @@
           "subdivision": "(b-1), (b-2), (b-3)",
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -131122,7 +131122,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -131162,7 +131162,7 @@
           "subdivision": "(a)(36)",
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -131202,7 +131202,7 @@
           "subdivision": "common roles in (1)-(4), both retained versions",
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -131242,7 +131242,7 @@
           "subdivision": "(b)(1)",
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -131282,7 +131282,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -131322,7 +131322,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -131362,7 +131362,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -131402,7 +131402,7 @@
           "subdivision": "(a), (b)",
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
@@ -131442,7 +131442,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-49-08-peace-officer",
-            "catalogLabel": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+            "catalogLabel": "Intoxication manslaughter (death of specified peace officer, deputy or qualifying reserve in actual official duty)",
             "catalogCode": "49.08(a)",
             "catalogClassification": "felony",
             "elements": {
