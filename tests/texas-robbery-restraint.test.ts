@@ -1,3 +1,4 @@
+import { texasVerifiedInstructions } from "../shared/texas-jury-instructions";
 import { createHash } from "node:crypto";
 import { expect, it } from "vitest";
 import rows from "../shared/texas-robbery-restraint.json";
@@ -44,6 +45,14 @@ it("retains restraint geography, child defenses and role-specific grades",()=>{
  expect(row("tx-pc-20-02-child").penalty).toContain("State jail");
  expect(row("tx-pc-20-02-peace-officer").conduct).toContain("both retained versions");
  expect(row("tx-pc-20-02-custody").conduct).toContain("actor");
+ const publicServant=row("tx-pc-20-02-public-servant");
+ expect(publicServant.conduct).toContain("any legally defined peace officer or judge");
+ expect(publicServant.conduct).toContain("does not become third-degree");
+ expect(publicServant.conduct).toContain("unlawful-restraint, knowledge and duty/retaliation requirements");
+ expect(publicServant.penalty).toContain("instead second-degree, ordinarily two to 20 years");
+ expect(publicServant.references).toContainEqual({code:"PE",section:"12.33",subdivision:null,supportRole:"penalty"});
+ expect(statute).toContain("the actor knows is a peace officer or judge while the officer or judge is lawfully discharging an official duty");
+
 });
 it("preserves the new jugging offense date and actual instrument and predicate requirements",()=>{
  const t=evidence["PE:29.04"].text;
@@ -54,6 +63,7 @@ it("preserves the new jugging offense date and actual instrument and predicate r
  expect(row("tx-pc-29-04-robbery").penalty).toContain("First-degree");
 });
 it("uses verified instruction theories without implying a verified jugging instruction",()=>{
+ for(const r of rows.filter(r=>!r.id.startsWith("tx-pc-29-04")))expect(texasVerifiedInstructions[r.id]?.instructionUrl).toContain("version=055");
  for(const r of rows.filter(r=>r.id.startsWith("tx-pc-20-02")))expect(getInstructionRef(getChargeById(r.id)!)).toContain("child-acquiescence alternatives and grading separate");
  expect(getInstructionRef(getChargeById("tx-robbery-in-the-first-degree")!)).toContain("serious-injury theory only");
  expect(getInstructionRef(getChargeById("tx-robbery-in-the-second-degree")!)).toContain("threat theory only");

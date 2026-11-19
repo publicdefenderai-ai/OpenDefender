@@ -63,43 +63,43 @@ export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInj
   },
   "tx-pc-20-02-ordinary": {
     "instructionRef": "CPJC 20.7: Unlawful Restraint (force, intimidation or deception theory only; underlying conduct only; child-acquiescence alternatives and grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=055"
   },
   "tx-pc-20-02-child": {
     "instructionRef": "CPJC 20.7: Unlawful Restraint (force, intimidation or deception theory only; underlying conduct only; child-acquiescence alternatives and grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=055"
   },
   "tx-pc-20-02-risk": {
     "instructionRef": "CPJC 20.7: Unlawful Restraint (force, intimidation or deception theory only; underlying conduct only; child-acquiescence alternatives and grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=055"
   },
   "tx-pc-20-02-public-servant": {
     "instructionRef": "CPJC 20.7: Unlawful Restraint (force, intimidation or deception theory only; underlying conduct only; child-acquiescence alternatives and grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=055"
   },
   "tx-pc-20-02-custody": {
     "instructionRef": "CPJC 20.7: Unlawful Restraint (force, intimidation or deception theory only; underlying conduct only; child-acquiescence alternatives and grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=055"
   },
   "tx-pc-20-02-civil": {
     "instructionRef": "CPJC 20.7: Unlawful Restraint (force, intimidation or deception theory only; underlying conduct only; child-acquiescence alternatives and grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=055"
   },
   "tx-pc-20-02-peace-officer": {
     "instructionRef": "CPJC 20.7: Unlawful Restraint (force, intimidation or deception theory only; underlying conduct only; child-acquiescence alternatives and grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=055"
   },
   "tx-pc-20-02-judge": {
     "instructionRef": "CPJC 20.7: Unlawful Restraint (force, intimidation or deception theory only; underlying conduct only; child-acquiescence alternatives and grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=055"
   },
   "tx-robbery-in-the-second-degree": {
     "instructionRef": "CPJC 29.2: Robbery by Threat (threat theory only; underlying conduct only; injury alternative separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F29_Robbery%2FCPJC29-2.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F29_Robbery%2FCPJC29-2.htm&version=055"
   },
   "tx-robbery-in-the-first-degree": {
     "instructionRef": "CPJC 29.3: Aggravated Robbery by Causing Serious Bodily Injury (serious-injury theory only; underlying conduct only; other alternatives separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F29_Robbery%2FCPJC29-3.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F29_Robbery%2FCPJC29-3.htm&version=055"
   },
   "tx-pc-22-01-public-servant": bodilyInjury,
   "tx-pc-22-01-peace-officer": bodilyInjury,

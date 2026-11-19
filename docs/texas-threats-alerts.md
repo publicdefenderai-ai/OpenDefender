@@ -45,10 +45,10 @@ New non-English requests show the English-content notice. The canonical-ID, expl
 
 ## Candidate accounting and reproduction
 
-Parent PR262 contains 331 configured Texas records and 256 offline eligible IDs. This candidate has 347 configured and 271 offline eligible (+16 new, minus one newly held); 76 held. The seed builder produces 183 source keys and 2,413 snapshot/links. Only the prior blanket threat record changes; the other 330 parent records and manifest generation timestamp are unchanged. These are offline candidate figures, not public availability claims.
+Parent PR262 contains 331 configured Texas records and 256 offline eligible IDs. This candidate has 347 configured and 271 offline eligible (+16 new, minus one newly held); 76 held. The seed builder produces 183 source keys and 2,414 snapshot/links. Only the prior blanket threat record changes; the other 330 parent records and manifest generation timestamp are unchanged. These are offline candidate figures, not public availability claims.
 
 Run `npx tsx scripts/data-review/texas-verification/replay-assault-intoxication.ts threats-alerts` to rebuild the sixteen records from committed official evidence with the actual manifest builder. Tests verify exact records, every required reference, missing/altered-evidence rejection, retained statutory conditions, language notices and saved-identity/forged-disposition rejection. The built-selector check verifies all sixteen descriptions and grades plus exclusion of the blanket ID.
 
-Review order: PR262 before this draft. No database, import, migration, source activation, receipt renewal or deployment is performed.
+PR262 is merged; this draft targets main and preserves its officer-grading and publisher-edition corrections. No database, import, migration, source activation, receipt renewal or deployment is performed.
 
 Validation: 193 affected tests passed with six deliberate database integration skips; the final explicit PDF notice addition passed all 20 PDF tests, including two new cases. Typecheck and production build passed. All 17 isolated built-selector checks passed.
