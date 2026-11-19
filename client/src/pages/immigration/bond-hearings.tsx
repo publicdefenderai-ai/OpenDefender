@@ -20,9 +20,10 @@ import { immigrationBondCopy } from '@/locales/immigration-bond-design';
 export default function BondHearings() {
   useScrollToTop();
   const { t, i18n } = useTranslation();
-  const copy = immigrationUpdates[i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en'];
+  const language = i18n.resolvedLanguage || i18n.language;
+  const copy = immigrationUpdates[language?.startsWith('es') ? 'es' : language?.startsWith('zh') ? 'zh' : 'en'];
 
-  const locale = i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en';
+  const locale = language?.startsWith('es') ? 'es' : language?.startsWith('zh') ? 'zh' : 'en';
   const design = immigrationBondCopy[locale];
 
   return (

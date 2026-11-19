@@ -1,7 +1,7 @@
 export const immigrationBondCopy = {
   "en": {
     "title": "Immigration bond.",
-    "accent": "Prepare for the hearing.",
+    "accent": "How bond hearings work.",
     "home": "Home",
     "immigration": "Immigration Guidance",
     "nav": "On this page",
@@ -15,7 +15,7 @@ export const immigrationBondCopy = {
   },
   "es": {
     "title": "Fianza de inmigración.",
-    "accent": "Prepárese para la audiencia.",
+    "accent": "Cómo funcionan las audiencias de fianza.",
     "home": "Inicio",
     "immigration": "Guía de inmigración",
     "nav": "En esta página",
@@ -29,7 +29,7 @@ export const immigrationBondCopy = {
   },
   "zh": {
     "title": "移民保释。",
-    "accent": "为听证做好准备。",
+    "accent": "保释听证的流程。",
     "home": "首页",
     "immigration": "移民指南",
     "nav": "本页内容",
