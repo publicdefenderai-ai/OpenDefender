@@ -201,3 +201,11 @@ test("Texas threats and false alerts expose exact intent and grading while withh
  for(const r of rows)expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,name:r.name,code:r.code,description:r.conduct,maxPenalty:r.penalty,category:r.category});
  expect(charges.some((c:{id:string})=>c.id==="tx-terroristic-threat")).toBe(false);
 });
+
+
+test("Texas prohibited possession preserves source-specific authorizations and special death penalties", async ({request})=>{
+ const response=await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");expect(response.ok()).toBe(true);
+ const {charges}=await response.json();const rows=JSON.parse(readFileSync("shared/texas-prohibited-possession.json","utf8"));
+ for(const r of rows)expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,name:r.name,code:r.code,description:r.conduct,maxPenalty:r.penalty,category:r.category});
+ for(const r of rows.filter((r:{id:string})=>r.id.endsWith("employee-death")))expect(charges.find((c:{id:string})=>c.id===r.id).maxPenalty).toContain("$250,000");
+});

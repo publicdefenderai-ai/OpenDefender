@@ -94916,6 +94916,10 @@ for (const group of ["Violent Crimes", "Assault Crimes"]) {
   const ids = texasReviewedRecords.filter(row => row.references[0].section === "22.01").map(row => row.id);
   chargeCategories[group] = [...new Set([...(chargeCategories[group] ?? []), ...ids])];
 }
+for (const group of ["Weapons", "Public Order"]) {
+  const ids = texasReviewedRecords.filter(row => ["46.04", "46.041", "46.10", "38.11"].includes(row.references[0].section)).map(row => row.id);
+  chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
+}
 for (const group of ["Violent Crimes", "Public Order"]) {
   const ids = texasReviewedRecords.filter(row => ["22.07", "42.06", "42.0601"].includes(row.references[0].section)).map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];

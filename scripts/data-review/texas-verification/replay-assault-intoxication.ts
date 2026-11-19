@@ -1,3 +1,5 @@
+import prohibitedRows from "../../../shared/texas-prohibited-possession.json";
+import prohibitedEvidence from "../output/texas-prohibited-possession-evidence.json";
 import threatRows from "../../../shared/texas-threats-alerts.json";
 import threatEvidence from "../output/texas-threats-alerts-evidence.json";
 import robberyRows from "../../../shared/texas-robbery-restraint.json";
@@ -54,6 +56,7 @@ import protectedAssaultRows from "../../../shared/texas-protected-assault.json";
 import protectedAssaultEvidence from "../output/texas-protected-assault-evidence.json";
 
 const batches = new Map([
+  ["prohibited-possession", { rows: prohibitedRows, evidence: Object.entries(prohibitedEvidence) }],
   ["threats-alerts", { rows: threatRows, evidence: Object.entries(threatEvidence) }],
   ["robbery-restraint", { rows: robberyRows, evidence: Object.entries(robberyEvidence) }],
   ["protected-assault", { rows: protectedAssaultRows, evidence: Object.entries(protectedAssaultEvidence) }],
