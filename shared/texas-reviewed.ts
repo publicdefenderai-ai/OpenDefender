@@ -1,3 +1,4 @@
+import intoxicationHarm from "./texas-intoxication-harm.json";
 import prohibited from "./texas-prohibited-possession.json";
 import threats from "./texas-threats-alerts.json";
 import robbery from "./texas-robbery-restraint.json";
@@ -53,6 +54,7 @@ export const texasReviewedRecords = [
   ...robbery,
   ...threats,
   ...prohibited,
+  ...intoxicationHarm,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 

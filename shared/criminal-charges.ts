@@ -39970,19 +39970,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact criminal defense attorney immediately', 'Do not speak to police without attorney', 'Preserve all evidence']
   },
   {
-    id: 'tx-vehicular-homicide',
-    name: 'Intoxication Manslaughter',
-    code: '49.08',
-    jurisdiction: 'TX',
-    category: 'felony',
-    description: 'Causing the death of another person by operating a motor vehicle, aircraft, watercraft, or amusement ride while intoxicated, under Texas Penal Code § 49.08. A second-degree felony.',
-    maxPenalty: 'Second-degree felony; 2 to 20 years imprisonment and up to $10,000 fine',
-    commonDefenses: ['Self-defense', 'Defense of others', 'Insanity defense', 'Lack of intent'],
-    evidenceToGather: ['Crime scene analysis', 'Forensic evidence', 'Witness statements', 'Medical examiner reports'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial', 'Right to expert witnesses'],
-    urgentActions: ['Contact criminal defense attorney immediately', 'Do not speak to police without attorney', 'Preserve all evidence']
-  },
-  {
     id: 'tx-felony-murder',
     name: 'Felony Murder',
     code: '19.02(b)(3)',
@@ -94915,6 +94902,10 @@ for (const group of ["TX", "DUI & Traffic", "DUI/Traffic Crimes"]) {
 for (const group of ["Violent Crimes", "Assault Crimes"]) {
   const ids = texasReviewedRecords.filter(row => row.references[0].section === "22.01").map(row => row.id);
   chargeCategories[group] = [...new Set([...(chargeCategories[group] ?? []), ...ids])];
+}
+for (const group of ["DUI & Traffic", "DUI/Traffic Crimes"]) {
+  const ids = texasReviewedRecords.filter(row => ["49.045", "49.07", "49.08"].includes(row.references[0].section)).map(row => row.id);
+  chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
 for (const group of ["Weapons", "Public Order"]) {
   const ids = texasReviewedRecords.filter(row => ["46.04", "46.041", "46.10", "38.11"].includes(row.references[0].section)).map(row => row.id);

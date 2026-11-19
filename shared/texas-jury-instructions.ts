@@ -1,3 +1,4 @@
+import intoxicationHarm from "./texas-intoxication-harm.json";
 // Pin the publisher's edition because item numbers and titles can change between editions.
 const bodilyInjury = {
   instructionRef: "CPJC 22.1: Assault by Causing Bodily Injury (underlying conduct only)",
@@ -41,6 +42,12 @@ const deliveryTransfer = {
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-13.htm&version=048",
 };
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
+  ...Object.fromEntries(intoxicationHarm.map(row => {
+    const section = row.references[0].section;
+    const item = section === "49.045" ? "49-17" : section === "49.07" ? "49-26" : "49-25";
+    const title = section === "49.045" ? "Driving While Intoxicated with Child Passenger" : section === "49.07" ? "Intoxication Assault" : "Intoxication Manslaughter";
+    return [row.id, {instructionRef: `CPJC ${item.replace("-", ".")}: ${title} (underlying conduct only: motor-vehicle/public-place; enhanced grading separate)`, instructionUrl: `https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F49_Intoxication_Offenses%2FCPJC${item}.htm&version=055`}];
+  })),
   "tx-pc-46-04-felony-window": {
     "instructionRef": "CPJC 46.3: Possession of a Firearm by a Felon at His Home, Third-Degree Felony (home and within-period theory only; underlying conduct only)",
     "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F46_Weapons_Offenses%2FCPJC46-3.htm&version=055"

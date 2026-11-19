@@ -1,0 +1,22 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "year": 2025,
+  "statewideAdult": 831210,
+  "statewideJuvenile": 44782,
+  "eligibleCodes": 2378,
+  "excludedCodes": 57,
+  "excludedAdult": 71549,
+  "rows": [
+    {
+      "rank": 62,
+      "code": "54040028",
+      "label": "DRIVING WHILE INTOXICATED W/CHILD UNDER 15 YOA",
+      "law": "PC",
+      "citation": "49.045(b)",
+      "adult": 2400,
+      "juvenile": 0
+    }
+  ]
+}
