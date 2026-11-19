@@ -28,9 +28,10 @@ import { immigrationLocatorCopy } from '@/locales/immigration-locator-design';
 export default function FindDetained() {
   useScrollToTop();
   const { i18n } = useTranslation();
-  const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
+  const language = i18n.resolvedLanguage || i18n.language;
+  const lang = language?.startsWith('es') ? 'es' : 'en';
 
-  const locale = i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en';
+  const locale = language?.startsWith('es') ? 'es' : language?.startsWith('zh') ? 'zh' : 'en';
   const design = immigrationLocatorCopy[locale];
 
   const locatorSteps = [
