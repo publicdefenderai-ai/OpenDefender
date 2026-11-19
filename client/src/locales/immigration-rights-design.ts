@@ -1,0 +1,5 @@
+export const immigrationRightsDesignCopy = {
+  en: { home: "Home", immigration: "Immigration Guidance", title: "Know your rights.", accent: "Be prepared.", section: "Immigration / Know your rights", nav: "On this page", cards: "Rights cards", encounters: "Encounter guidance", warrants: "Understand a warrant", contacts: "Find support", english: "Detailed guidance is currently available in English and Spanish. Cards print in English or English and Spanish." },
+  es: { home: "Inicio", immigration: "Guía de inmigración", title: "Conozca sus derechos.", accent: "Prepárese.", section: "Inmigración / Conozca sus derechos", nav: "En esta página", cards: "Tarjetas de derechos", encounters: "Guía para encuentros", warrants: "Entender una orden", contacts: "Encontrar apoyo", english: "La guía detallada está disponible actualmente en inglés y español. Las tarjetas se imprimen en inglés o en inglés y español." },
+  zh: { home: "首页", immigration: "移民指南", title: "了解您的权利。", accent: "做好准备。", section: "移民 / 了解您的权利", nav: "本页内容", cards: "权利卡片", encounters: "执法接触指南", warrants: "了解执法令", contacts: "寻找支持", english: "详细内容目前仅提供英语和西班牙语版本。打印卡片为英语或英西双语。" },
+};

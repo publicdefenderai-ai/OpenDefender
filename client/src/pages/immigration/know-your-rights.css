@@ -1,0 +1,31 @@
+.immigration-rights-page { width: 100%; max-width: 1120px; margin: auto; padding: 2.5rem clamp(1rem, 5vw, 3rem) 4rem; overflow-wrap: anywhere; }
+.immigration-rights-hero { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 3rem; align-items: center; margin: 1rem 0 2rem; }
+.immigration-rights-hero h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); line-height: 1.1; font-weight: 500; letter-spacing: -.035em; margin: 1rem 0; }
+.immigration-rights-hero h1 span { display: block; color: var(--primary); }
+.immigration-rights-hero p { color: var(--muted-foreground); line-height: 1.75; max-width: 65ch; }
+.immigration-rights-art { max-width: 100%; }
+.immigration-rights-language { margin: 1rem 0; color: var(--muted-foreground); }
+.immigration-rights-notices { margin-top: 1.5rem; }
+.immigration-rights-section { border-top: 1px solid var(--border); padding: 2.5rem 0; scroll-margin-top: 6rem; }
+.immigration-rights-section h2 { font-weight: 500; font-size: 1.75rem; line-height: 1.3; }
+.immigration-rights-section p { line-height: 1.7; }
+.immigration-rights-scenario { border-top: 1px solid var(--border); }
+.immigration-rights-trigger { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; width: 100%; min-height: 64px; text-align: left; padding: 1rem .25rem; font-size: 1.2rem; }
+.immigration-rights-trigger:hover { color: var(--primary); background: var(--muted); }
+.immigration-rights-trigger:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+.immigration-rights-toggle { font-size: 1rem; flex-shrink: 0; color: var(--primary); }
+.immigration-rights-scenario-body { padding: .75rem 0 1.75rem; max-width: 80ch; }
+.immigration-rights-mistakes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 2.5rem; }
+.immigration-rights-mistake, .immigration-rights-contact { border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+.immigration-rights-mistake > div, .immigration-rights-contact > div { padding: 1rem 0; }
+.immigration-rights-contacts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2rem; }
+.immigration-rights-contact { border-top: 1px solid var(--border); }
+.immigration-rights-contact svg { display: none; }
+.immigration-rights-section .flex-wrap a { white-space: normal; height: auto; min-height: 44px; }
+@media(max-width:700px) {
+ .immigration-rights-hero, .immigration-rights-mistakes, .immigration-rights-contacts { grid-template-columns: minmax(0,1fr); }
+ .immigration-rights-art { display: none; }
+ .immigration-rights-page { padding-top: 1.5rem; }
+}
+@media print { .immigration-rights-art { display: none; } }
+.immigration-rights-page > nav { backdrop-filter: none; }

@@ -1,17 +1,11 @@
-import { BrandShieldIcon } from "@/components/brand-logo";
+import "./know-your-rights.css";
+import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useState } from 'react';
 import {
-  
+
   AlertTriangle,
   Phone,
-  Home,
-  Car,
-  Building2,
-  Users,
-  MapPin,
   ExternalLink,
-  ChevronDown,
-  ChevronUp,
   Scale,
   FileText,
   Gavel
@@ -21,11 +15,13 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
-import { ScrollReveal } from '@/components/ui/scroll-reveal';
+
 import { useScrollToTop } from '@/hooks/use-scroll-to-top';
 import { RedCardGenerator } from '@/components/immigration/red-card-generator';
 import { WarrantGuide } from '@/components/immigration/warrant-guide';
-import { ImmigrationDetailLayout } from '@/components/immigration/immigration-detail-layout';
+import { ScanFirstPageFrame, PageSectionNav } from '@/components/layout/scan-first-page-frame';
+import { RapidlyEvolvingNotice } from '@/components/immigration/rapidly-evolving-notice';
+import { immigrationRightsDesignCopy } from '@/locales/immigration-rights-design';
 import {
   kyrScripts,
   redCardContent,
@@ -36,35 +32,36 @@ import {
 
 export default function KnowYourRights() {
   useScrollToTop();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
+  const locale = i18n.resolvedLanguage?.startsWith('zh') ? 'zh' : lang;
+  const copy = immigrationRightsDesignCopy[locale];
   const [expandedScript, setExpandedScript] = useState<string | null>('door');
 
-  const breadcrumbItems = [
-    { label: t('breadcrumb.home', 'Home'), href: '/' },
-    { label: t('breadcrumb.immigrationGuidance', 'Immigration Guidance'), href: '/immigration-guidance' }
-  ];
-
-  const getScenarioIcon = (id: string) => {
-    switch (id) {
-      case 'door': return <Home className="h-5 w-5" />;
-      case 'traffic': return <Car className="h-5 w-5" />;
-      case 'workplace': return <Building2 className="h-5 w-5" />;
-      case 'public': return <Users className="h-5 w-5" />;
-      case 'checkpoint': return <MapPin className="h-5 w-5" />;
-      default: return <BrandShieldIcon size={20} />;
-    }
-  };
-
   return (
-    <ImmigrationDetailLayout
-      title={lang === 'es' ? 'Conozca Sus Derechos' : 'Know Your Rights'}
-      subtitle={lang === 'es'
-        ? 'Materiales imprimibles y guías interactivas para proteger sus derechos durante encuentros con ICE. Basado en plantillas del ILRC y orientación de ACLU/NILC.'
-        : 'Printable materials and interactive guides to protect your rights during ICE encounters. Based on ILRC templates and ACLU/NILC guidance.'}
-      breadcrumbItems={breadcrumbItems}
-      icon={<BrandShieldIcon size={28} />}
-      alert={
+    <ScanFirstPageFrame mainClassName="immigration-rights-page">
+      <PageBreadcrumb items={[{ label: copy.home, href: "/" }, { label: copy.immigration, href: "/immigration-guidance" }]} currentPage={copy.title} />
+      <header className="immigration-rights-hero">
+        <div>
+          <p>{copy.section}</p>
+          <h1 data-testid="immigration-detail-title">{copy.title} <span>{copy.accent}</span></h1>
+          <p lang={lang} data-testid="immigration-detail-subtitle">{lang === 'es'
+            ? 'Materiales imprimibles y guías interactivas para proteger sus derechos durante encuentros con ICE. Basado en plantillas del ILRC y orientación de ACLU/NILC.'
+            : 'Printable materials and interactive guides to protect your rights during ICE encounters. Based on ILRC templates and ACLU/NILC guidance.'}</p>
+        </div>
+        <svg className="immigration-rights-art" viewBox="0 0 240 220" width="240" height="220" aria-hidden="true">
+          <rect x="25" y="30" width="150" height="170" rx="8" fill="var(--primary)" transform="rotate(-9 100 110)"/>
+          <rect x="60" y="18" width="155" height="174" rx="8" fill="var(--design-art)"/>
+          <path d="M85 58h105M85 78h85M85 128h105M85 148h80" stroke="var(--background)" strokeWidth="5"/>
+          <path d="M85 104h105" stroke="var(--primary)" strokeWidth="12"/>
+        </svg>
+      </header>
+      {locale === 'zh' && <p className="immigration-rights-language">{copy.english}</p>}
+      <PageSectionNav ariaLabel={copy.nav} items={[
+        { id: 'rights-cards', label: copy.cards }, { id: 'encounters', label: copy.encounters },
+        { id: 'warrant-guide', label: copy.warrants }, { id: 'contacts', label: copy.contacts },
+      ]} />
+      <div className="immigration-rights-notices" lang={lang}>
         <Alert className="border-red-300 bg-red-50 dark:border-red-700 dark:bg-red-950/40">
           <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400" />
           <AlertDescription className="text-red-900 dark:text-red-200">
@@ -74,13 +71,14 @@ export default function KnowYourRights() {
               : 'These rights apply to ALL persons in the United States, regardless of immigration status. You have legal protections even during immigration enforcement actions.'}
           </AlertDescription>
         </Alert>
-      }
-    >
+      </div>
+      <RapidlyEvolvingNotice />
+      <div className="immigration-rights-reading" lang={lang}>
 
       {/* Red Card Generator Section */}
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
+      <section id="rights-cards" tabIndex={-1} className="immigration-rights-section">
+        <div className="min-w-0">
+
             <h2 className="text-2xl font-bold mb-2">
               {lang === 'es' ? 'Tarjetas Rojas Imprimibles' : 'Printable Red Cards'}
             </h2>
@@ -89,18 +87,17 @@ export default function KnowYourRights() {
                 ? 'Imprima estas tarjetas para tener a mano durante encuentros con agentes de inmigración.'
                 : 'Print these cards to have ready during encounters with immigration agents.'}
             </p>
-          </ScrollReveal>
 
-          <ScrollReveal delay={0.1}>
-            <RedCardGenerator cards={redCardContent} />
-          </ScrollReveal>
+
+            <div lang={locale}><RedCardGenerator cards={redCardContent} /></div>
+
         </div>
       </section>
 
       {/* ICE Encounter Scripts Section */}
-      <section className="py-12 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
+      <section id="encounters" tabIndex={-1} className="immigration-rights-section">
+        <div className="min-w-0">
+
             <h2 className="text-2xl font-bold mb-2">
               {lang === 'es' ? 'Guiones para Encuentros con ICE' : 'ICE Encounter Scripts'}
             </h2>
@@ -109,52 +106,39 @@ export default function KnowYourRights() {
                 ? 'Qué decir (y qué NO decir) en diferentes situaciones. Haga clic en cada escenario para ver los detalles.'
                 : 'What to say (and what NOT to say) in different situations. Click each scenario to see details.'}
             </p>
-          </ScrollReveal>
 
           <div className="space-y-4">
-            {kyrScripts.map((script, index) => (
-              <ScrollReveal key={script.id} delay={0.1 * index}>
-                <Card className={`overflow-hidden transition-all ${
-                  expandedScript === script.id ? 'ring-2 ring-primary' : ''
-                }`}>
+            {kyrScripts.map((script) => (
+
+                <article key={script.id} className="immigration-rights-scenario">
                   <button
                     onClick={() => setExpandedScript(expandedScript === script.id ? null : script.id)}
-                    className="w-full text-left"
+                    className="immigration-rights-trigger"
+                    id={`encounter-${script.id}-trigger`}
+                    aria-expanded={expandedScript === script.id}
+                    aria-controls={`encounter-${script.id}`}
                   >
-                    <CardHeader className="pb-3">
-                      <CardTitle className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center ring-1 ring-primary/20">
-                            {getScenarioIcon(script.id)}
-                          </div>
-                          <span>{script.scenario[lang]}</span>
-                        </div>
-                        {expandedScript === script.id ? (
-                          <ChevronUp className="h-5 w-5 text-muted-foreground" />
-                        ) : (
-                          <ChevronDown className="h-5 w-5 text-muted-foreground" />
-                        )}
-                      </CardTitle>
-                    </CardHeader>
+                    <span>{script.scenario[lang]}</span>
+                    <span aria-hidden="true" className="immigration-rights-toggle">{expandedScript === script.id ? '−' : '+'}</span>
                   </button>
 
                   {expandedScript === script.id && (
-                    <CardContent className="pt-0 space-y-6">
+                    <div id={`encounter-${script.id}`} role="region" aria-labelledby={`encounter-${script.id}-trigger`} className="immigration-rights-scenario-body space-y-6">
                       {/* What to Say */}
                       <div>
-                        <h4 className="font-semibold text-green-700 dark:text-green-400 mb-3 flex items-center gap-2">
-                          <Badge variant="outline" className="border-green-500 text-green-700 dark:text-green-400">
-                            {lang === 'es' ? 'FRASES QUE PUEDE USAR' : 'LANGUAGE YOU CAN USE'}
+                        <h4 className="font-semibold text-primary mb-3 flex items-center gap-2">
+                          <Badge variant="outline" className="border-primary text-primary">
+                            {lang === 'es' ? 'Frases que puede usar' : 'Language you can use'}
                           </Badge>
                         </h4>
-                        <div className="space-y-2 bg-green-50 dark:bg-green-950/30 rounded-lg p-4">
-                          <p className="text-xs text-green-700 dark:text-green-400 mb-2 italic">
+                        <div className="space-y-2 bg-muted rounded-lg p-4">
+                          <p className="text-xs text-primary mb-2 italic">
                             {lang === 'es'
                               ? 'Si elige invocar sus derechos, los tribunales reconocen frases como estas:'
                               : 'If you choose to invoke these rights, courts recognize language like:'}
                           </p>
                           {script.whatToSay[lang].map((text, idx) => (
-                            <p key={idx} className="text-sm font-medium text-green-800 dark:text-green-200">
+                            <p key={idx} className="text-sm font-medium text-foreground">
                               {text}
                             </p>
                           ))}
@@ -165,7 +149,7 @@ export default function KnowYourRights() {
                       <div>
                         <h4 className="font-semibold text-red-700 dark:text-red-400 mb-3 flex items-center gap-2">
                           <Badge variant="outline" className="border-red-500 text-red-700 dark:text-red-400">
-                            {lang === 'es' ? 'LO QUE PUEDEN USAR EN SU CONTRA' : 'WHAT CAN BE USED AGAINST YOU'}
+                            {lang === 'es' ? 'Lo que pueden usar en su contra' : 'What can be used against you'}
                           </Badge>
                         </h4>
                         <div className="space-y-2 bg-red-50 dark:bg-red-950/30 rounded-lg p-4">
@@ -181,7 +165,7 @@ export default function KnowYourRights() {
                       <div>
                         <h4 className="font-semibold mb-3 flex items-center gap-2">
                           <Badge variant="outline">
-                            {lang === 'es' ? 'CONSEJOS' : 'TIPS'}
+                            {lang === 'es' ? 'Consejos' : 'Tips'}
                           </Badge>
                         </h4>
                         <ul className="space-y-2">
@@ -204,19 +188,19 @@ export default function KnowYourRights() {
                           {script.legalBasis[lang]}
                         </p>
                       </div>
-                    </CardContent>
+                    </div>
                   )}
-                </Card>
-              </ScrollReveal>
+                </article>
+
             ))}
           </div>
         </div>
       </section>
 
       {/* Warrant Recognition Guide Section */}
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
+      <section id="warrant-guide" tabIndex={-1} className="immigration-rights-section">
+        <div className="min-w-0">
+
             <h2 className="text-2xl font-bold mb-2 flex items-center gap-3">
               <FileText className="h-6 w-6 text-primary" />
               {lang === 'es' ? 'Guía de Reconocimiento de Órdenes' : 'Warrant Recognition Guide'}
@@ -226,18 +210,17 @@ export default function KnowYourRights() {
                 ? 'Compare órdenes judiciales y administrativas de ICE. La autoridad para entrar depende del documento y las circunstancias; estas descripciones no determinan su validez.'
                 : 'Compare judicial and ICE administrative warrants. Entry authority depends on the document and circumstances; these descriptions are not a validity test.'}
             </p>
-          </ScrollReveal>
 
-          <ScrollReveal delay={0.1}>
+
             <WarrantGuide warrantInfo={warrantInfo} />
-          </ScrollReveal>
+
         </div>
       </section>
 
       {/* Blackie's Warrants Section */}
-      <section className="py-12 bg-muted/30" id="blackies-warrants">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
+      <section className="immigration-rights-section" id="blackies-warrants">
+        <div className="min-w-0">
+
             <Card className="border-amber-200 dark:border-amber-800">
               <CardHeader className="pb-3">
                 <CardTitle className="flex items-center gap-2 text-lg">
@@ -262,11 +245,11 @@ export default function KnowYourRights() {
                   </AlertDescription>
                 </Alert>
 
-                <div className="bg-blue-50 dark:bg-blue-950/30 rounded-lg p-4">
-                  <h4 className="font-semibold text-sm mb-2 text-blue-800 dark:text-blue-200">
+                <div className="bg-muted rounded-lg p-4">
+                  <h4 className="font-semibold text-sm mb-2 text-foreground">
                     {lang === 'es' ? 'Qué verificar en cualquier orden:' : 'What to verify on any warrant:'}
                   </h4>
-                  <ul className="space-y-1.5 text-sm text-blue-700 dark:text-blue-300">
+                  <ul className="space-y-1.5 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="font-bold">1.</span>
                       {lang === 'es'
@@ -294,11 +277,11 @@ export default function KnowYourRights() {
                   </ul>
                 </div>
 
-                <div className="bg-green-50 dark:bg-green-950/30 rounded-lg p-4">
-                  <h4 className="font-semibold text-sm mb-2 text-green-800 dark:text-green-200">
+                <div className="bg-muted rounded-lg p-4">
+                  <h4 className="font-semibold text-sm mb-2 text-foreground">
                     {lang === 'es' ? 'Qué decir si ICE se presenta con una orden:' : 'What to say if ICE shows up with a warrant:'}
                   </h4>
-                  <p className="text-sm font-medium text-green-800 dark:text-green-200 italic">
+                  <p className="text-sm font-medium text-foreground italic">
                     {lang === 'es'
                       ? '"Esta es un área privada. No pueden entrar sin una orden judicial firmada por un juez. ¿Tiene una orden judicial?"'
                       : '"This is a private area. You cannot enter without a judicial warrant signed by a judge. Do you have a judicial warrant?"'}
@@ -312,14 +295,14 @@ export default function KnowYourRights() {
                 </p>
               </CardContent>
             </Card>
-          </ScrollReveal>
+
         </div>
       </section>
 
       {/* Common Mistakes Section */}
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
+      <section id="common-mistakes" tabIndex={-1} className="immigration-rights-section">
+        <div className="min-w-0">
+
             <h2 className="text-2xl font-bold mb-2">
               {lang === 'es' ? 'Errores Comunes a Evitar' : 'Common Mistakes to Avoid'}
             </h2>
@@ -328,12 +311,11 @@ export default function KnowYourRights() {
                 ? 'Estos errores pueden perjudicar su caso. Conozca qué evitar.'
                 : 'These mistakes can hurt your case. Know what to avoid.'}
             </p>
-          </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="immigration-rights-mistakes">
             {commonMistakes[lang].map((item, index) => (
-              <ScrollReveal key={index} delay={0.1 * index}>
-                <Card className="h-full">
+
+                <Card key={index} className="immigration-rights-mistake">
                   <CardContent className="pt-6">
                     <div className="space-y-3">
                       <div className="flex items-start gap-2">
@@ -345,28 +327,28 @@ export default function KnowYourRights() {
                         </div>
                       </div>
                       <div className="bg-red-50 dark:bg-red-950/30 rounded p-2">
-                        <p className="text-xs text-red-800 dark:text-red-200">
+                        <p className="text-sm text-red-800 dark:text-red-200">
                           <strong>{lang === 'es' ? 'Consecuencia:' : 'Consequence:'}</strong> {item.consequence}
                         </p>
                       </div>
-                      <div className="bg-green-50 dark:bg-green-950/30 rounded p-2">
-                        <p className="text-xs text-green-800 dark:text-green-200">
+                      <div className="bg-muted rounded p-2">
+                        <p className="text-sm text-foreground">
                           <strong>{lang === 'es' ? 'En su lugar:' : 'Instead:'}</strong> {item.instead}
                         </p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              </ScrollReveal>
+
             ))}
           </div>
         </div>
       </section>
 
       {/* Emergency Contacts Section */}
-      <section className="py-12 bg-background">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <ScrollReveal>
+      <section id="contacts" tabIndex={-1} className="immigration-rights-section">
+        <div className="min-w-0">
+
             <h2 className="text-2xl font-bold mb-4">
               {lang === 'es' ? 'Líneas de Ayuda de Emergencia' : 'Emergency Hotlines'}
             </h2>
@@ -375,12 +357,11 @@ export default function KnowYourRights() {
                 ? 'Si necesita ayuda inmediata, contacte estas organizaciones:'
                 : 'If you need immediate help, contact these organizations:'}
             </p>
-          </ScrollReveal>
 
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="immigration-rights-contacts">
             {emergencyContacts.national.map((contact, index) => (
-              <ScrollReveal key={index} delay={0.1 * index}>
-                <Card>
+
+                <Card key={index} className="immigration-rights-contact">
                   <CardContent className="pt-6">
                     <Phone className="h-6 w-6 text-primary mx-auto mb-3" />
                     <h3 className="font-semibold text-sm">{contact.name[lang]}</h3>
@@ -396,16 +377,16 @@ export default function KnowYourRights() {
                     </a>
                   </CardContent>
                 </Card>
-              </ScrollReveal>
+
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 bg-primary/5">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <ScrollReveal>
+      <section id="prepare" tabIndex={-1} className="immigration-rights-section">
+        <div className="min-w-0">
+
             <h2 className="text-2xl font-bold mb-4">
               {lang === 'es' ? 'Prepárese Ahora' : 'Prepare Now'}
             </h2>
@@ -431,10 +412,11 @@ export default function KnowYourRights() {
                 </a>
               </Button>
             </div>
-          </ScrollReveal>
+
         </div>
       </section>
 
-    </ImmigrationDetailLayout>
+    </div>
+    </ScanFirstPageFrame>
   );
 }
