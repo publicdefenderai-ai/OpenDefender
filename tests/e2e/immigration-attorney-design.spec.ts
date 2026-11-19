@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import captured from '../fixtures/immigration-attorney-published-content';
+import { immigrationAttorneyCopy } from '../../client/src/locales/immigration-attorney-design';
 
 for (const language of ['en', 'es', 'zh'] as const) for (const theme of ['light', 'dark']) {
  test(`immigration-attorney preserved content and responsive layout: ${language}/${theme}`, async ({ page }, info) => {
@@ -8,6 +9,10 @@ for (const language of ['en', 'es', 'zh'] as const) for (const theme of ['light'
   await page.goto('/immigration-guidance/find-attorney');
   const root = page.locator('.immigration-attorney-page');
   await expect(page.locator('main')).toHaveCount(1);
+  const heading = root.getByTestId('immigration-detail-title');
+  const expectedHeading = `${immigrationAttorneyCopy[language].title} ${immigrationAttorneyCopy[language].accent}`;
+  await expect(heading).toHaveText(expectedHeading);
+  await expect(heading).toHaveAccessibleName(expectedHeading);
   for (const text of captured[language].text) await expect(root).toContainText(text);
   for (const href of new Set(captured[language].links)) expect(await root.locator('a[href]').evaluateAll(links => links.map(a => a.getAttribute('href')))).toContain(href);
   const art = root.locator('.immigration-attorney-art');

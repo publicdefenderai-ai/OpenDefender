@@ -31,7 +31,7 @@ export default function FindAttorney() {
       <PageBreadcrumb items={breadcrumbItems} currentPage={t('immigration.attorney.title')} />
       <header className="immigration-attorney-hero">
         <div>
-          <h1 data-testid="immigration-detail-title">{design.title}<span>{design.accent}</span></h1>
+          <h1 data-testid="immigration-detail-title">{design.title}{" "}<span>{design.accent}</span></h1>
           <p data-testid="immigration-detail-subtitle">{t('immigration.attorney.subtitle')}</p>
         </div>
         <img className="immigration-attorney-art" src="/images/design/immigration-attorney.svg" width="260" height="230" alt="" aria-hidden="true" />

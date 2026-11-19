@@ -1,7 +1,7 @@
 export const immigrationAttorneyCopy = {
   "en": {
     "title": "Find legal help.",
-    "accent": "Know who to trust.",
+    "accent": "Credentials and warning signs.",
     "nav": "On this page",
     "affordable": "Free or low-cost help",
     "private": "Private immigration attorneys",
@@ -16,7 +16,7 @@ export const immigrationAttorneyCopy = {
   },
   "es": {
     "title": "Encuentre ayuda legal.",
-    "accent": "Sepa en quién confiar.",
+    "accent": "Credenciales y señales de alerta.",
     "nav": "En esta página",
     "affordable": "Ayuda gratuita o de bajo costo",
     "private": "Abogados privados de inmigración",
@@ -31,7 +31,7 @@ export const immigrationAttorneyCopy = {
   },
   "zh": {
     "title": "寻找法律帮助。",
-    "accent": "了解谁值得信赖。",
+    "accent": "资质与警示迹象。",
     "nav": "本页内容",
     "affordable": "免费或低费用帮助",
     "private": "私人移民律师",
