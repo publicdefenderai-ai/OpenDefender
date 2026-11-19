@@ -1,0 +1,3440 @@
+[
+  {
+    "id": "tx-pc-21-11-contact",
+    "name": "Indecency with a child (sexual contact)",
+    "officialTitle": "INDECENCY WITH A CHILD.",
+    "category": "felony",
+    "code": "21.11(a)(1)",
+    "citation": "Tex. Penal Code § 21.11(a)(1)",
+    "conduct": "Engaging in sexual contact with the child or causing the child to engage in sexual contact. Section 21.11(c) requires intent to arouse or gratify anyone’s sexual desire and covers the listed touching, including through clothing, of a child’s anus, breast or genitals, or touching any part of the child’s body with another person’s anus, breast or genitals. Incidental touching without the statutory sexual intent is not silently included. The child must be younger than 17, regardless of knowledge of age. Subsection (b) states a close-in-age affirmative defense requiring no more than a three-year age gap, its opposite-sex condition, no duress/force/threat, and the stated registration-status alternative; its application to a particular case must be evaluated rather than assumed from age alone. Subsection (b-1) separately supplies a spouse affirmative defense. ",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.11",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "21.11",
+        "subdivision": "(b), (b-1), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "36010005"
+  },
+  {
+    "id": "tx-pc-21-11-exposure",
+    "name": "Indecency with a child (actor exposure knowing child present)",
+    "officialTitle": "INDECENCY WITH A CHILD.",
+    "category": "felony",
+    "code": "21.11(a)(2)(A)",
+    "citation": "Tex. Penal Code § 21.11(a)(2)(A)",
+    "conduct": "With intent to arouse or gratify anyone’s sexual desire, exposing the actor’s anus or any part of the actor’s genitals, knowing the child is present. The child must be younger than 17, regardless of knowledge of age. Subsection (b) states a close-in-age affirmative defense requiring no more than a three-year age gap, its opposite-sex condition, no duress/force/threat, and the stated registration-status alternative; its application to a particular case must be evaluated rather than assumed from age alone. Subsection (b-1) separately supplies a spouse affirmative defense. ",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The contact-specific mandatory-life current-offense listing in §12.42(c)(2)(A) does not automatically include this exposure branch. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.11",
+        "subdivision": "(a)(2)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "21.11",
+        "subdivision": "(b), (b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-21-11-cause-exposure",
+    "name": "Indecency with a child (causing child exposure)",
+    "officialTitle": "INDECENCY WITH A CHILD.",
+    "category": "felony",
+    "code": "21.11(a)(2)(B)",
+    "citation": "Tex. Penal Code § 21.11(a)(2)(B)",
+    "conduct": "With intent to arouse or gratify anyone’s sexual desire, causing the child to expose the child’s anus or any part of the child’s genitals. The child must be younger than 17, regardless of knowledge of age. Subsection (b) states a close-in-age affirmative defense requiring no more than a three-year age gap, its opposite-sex condition, no duress/force/threat, and the stated registration-status alternative; its application to a particular case must be evaluated rather than assumed from age alone. Subsection (b-1) separately supplies a spouse affirmative defense. ",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The contact-specific mandatory-life current-offense listing in §12.42(c)(2)(A) does not automatically include this exposure branch. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.11",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "21.11",
+        "subdivision": "(b), (b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-statutory-rape",
+    "name": "Sexual assault (child: penetration of anus or sexual organ)",
+    "officialTitle": "SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.011(a)(2)(A)",
+    "citation": "Tex. Penal Code § 22.011(a)(2)(A)",
+    "conduct": "Intentionally or knowingly causes penetration of the child’s anus or sexual organ by any means. Child means younger than 17. Knowledge of the child’s age is not required. The §22.011(d) medical-care defense is limited to care without the prohibited child-to-actor/third-party sexual contact. The spouse and close-in-age affirmative defenses in §22.011(e) have their own conditions: the latter requires no more than a three-year age gap, a victim at least 14, the statutory registration-status alternative, and no prohibited §25.01/§25.02 relationship. It is not a blanket consent or age-gap exception. Section 22.011(f)(1) raises the grade for the specified prohibited marriage/intercourse relationships; the ordinary range does not erase that branch. Conduct against a child younger than 14 may also meet the separate aggravated offense; this choice does not promise nonaggravated treatment.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. The §22.011(f)(1) prohibited-relationship branch is first degree: ordinarily five to 99 years or life and up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(a)(2)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990002"
+  },
+  {
+    "id": "tx-pc-22-011-b",
+    "name": "Sexual assault (child: penetration of mouth by actor’s sexual organ)",
+    "officialTitle": "SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.011(a)(2)(B)",
+    "citation": "Tex. Penal Code § 22.011(a)(2)(B)",
+    "conduct": "Intentionally or knowingly causes penetration of the child’s mouth by the actor’s sexual organ. Child means younger than 17. Knowledge of the child’s age is not required. The §22.011(d) medical-care defense is limited to care without the prohibited child-to-actor/third-party sexual contact. The spouse and close-in-age affirmative defenses in §22.011(e) have their own conditions: the latter requires no more than a three-year age gap, a victim at least 14, the statutory registration-status alternative, and no prohibited §25.01/§25.02 relationship. It is not a blanket consent or age-gap exception. Section 22.011(f)(1) raises the grade for the specified prohibited marriage/intercourse relationships; the ordinary range does not erase that branch. Conduct against a child younger than 14 may also meet the separate aggravated offense; this choice does not promise nonaggravated treatment.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. The §22.011(f)(1) prohibited-relationship branch is first degree: ordinarily five to 99 years or life and up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990002"
+  },
+  {
+    "id": "tx-pc-22-011-c",
+    "name": "Sexual assault (child: child sexual organ contacting another person)",
+    "officialTitle": "SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.011(a)(2)(C)",
+    "citation": "Tex. Penal Code § 22.011(a)(2)(C)",
+    "conduct": "Intentionally or knowingly causes the child’s sexual organ to contact or penetrate another person’s mouth, anus or sexual organ, including the actor. Child means younger than 17. Knowledge of the child’s age is not required. The §22.011(d) medical-care defense is limited to care without the prohibited child-to-actor/third-party sexual contact. The spouse and close-in-age affirmative defenses in §22.011(e) have their own conditions: the latter requires no more than a three-year age gap, a victim at least 14, the statutory registration-status alternative, and no prohibited §25.01/§25.02 relationship. It is not a blanket consent or age-gap exception. Section 22.011(f)(1) raises the grade for the specified prohibited marriage/intercourse relationships; the ordinary range does not erase that branch. Conduct against a child younger than 14 may also meet the separate aggravated offense; this choice does not promise nonaggravated treatment.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. The §22.011(f)(1) prohibited-relationship branch is first degree: ordinarily five to 99 years or life and up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(a)(2)(C)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990002"
+  },
+  {
+    "id": "tx-pc-22-011-d",
+    "name": "Sexual assault (child: child anus contacting another person)",
+    "officialTitle": "SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.011(a)(2)(D)",
+    "citation": "Tex. Penal Code § 22.011(a)(2)(D)",
+    "conduct": "Intentionally or knowingly causes the child’s anus to contact another person’s mouth, anus or sexual organ, including the actor. Child means younger than 17. Knowledge of the child’s age is not required. The §22.011(d) medical-care defense is limited to care without the prohibited child-to-actor/third-party sexual contact. The spouse and close-in-age affirmative defenses in §22.011(e) have their own conditions: the latter requires no more than a three-year age gap, a victim at least 14, the statutory registration-status alternative, and no prohibited §25.01/§25.02 relationship. It is not a blanket consent or age-gap exception. Section 22.011(f)(1) raises the grade for the specified prohibited marriage/intercourse relationships; the ordinary range does not erase that branch. Conduct against a child younger than 14 may also meet the separate aggravated offense; this choice does not promise nonaggravated treatment.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. The §22.011(f)(1) prohibited-relationship branch is first degree: ordinarily five to 99 years or life and up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(a)(2)(D)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990002"
+  },
+  {
+    "id": "tx-pc-22-011-e",
+    "name": "Sexual assault (child: child mouth contacting another person)",
+    "officialTitle": "SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.011(a)(2)(E)",
+    "citation": "Tex. Penal Code § 22.011(a)(2)(E)",
+    "conduct": "Intentionally or knowingly causes the child’s mouth to contact another person’s anus or sexual organ, including the actor. Child means younger than 17. Knowledge of the child’s age is not required. The §22.011(d) medical-care defense is limited to care without the prohibited child-to-actor/third-party sexual contact. The spouse and close-in-age affirmative defenses in §22.011(e) have their own conditions: the latter requires no more than a three-year age gap, a victim at least 14, the statutory registration-status alternative, and no prohibited §25.01/§25.02 relationship. It is not a blanket consent or age-gap exception. Section 22.011(f)(1) raises the grade for the specified prohibited marriage/intercourse relationships; the ordinary range does not erase that branch. Conduct against a child younger than 14 may also meet the separate aggravated offense; this choice does not promise nonaggravated treatment.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. The §22.011(f)(1) prohibited-relationship branch is first degree: ordinarily five to 99 years or life and up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(a)(2)(E)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990002"
+  },
+  {
+    "id": "tx-pc-22-021-a-age10-13",
+    "name": "Aggravated sexual assault (penetration of anus or sexual organ; victim aged 10 to 13 without additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(i)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(i)",
+    "conduct": "Intentionally or knowingly causes penetration of the child’s anus or sexual organ by any means. The victim is at least 10 but younger than 14, establishing §22.021(a)(2)(B), and this ordinary profile does not assume an additional (a)(2)(A) circumstance. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(i)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-021-a-under10",
+    "name": "Aggravated sexual assault (penetration of anus or sexual organ; victim younger than 10)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(i)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(i)",
+    "conduct": "Intentionally or knowingly causes penetration of the child’s anus or sexual organ by any means. The victim is younger than 10, triggering §22.021(f)(1); a separate (a)(2)(A) circumstance is not required for this 25-year minimum. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony with a 25-year minimum under §22.021(f): 25 to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(i)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990004"
+  },
+  {
+    "id": "tx-pc-22-021-a-under14-extra",
+    "name": "Aggravated sexual assault (penetration of anus or sexual organ; victim younger than 14 with additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(i)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(i)",
+    "conduct": "Intentionally or knowingly causes penetration of the child’s anus or sexual organ by any means. The victim is younger than 14 and an additional (a)(2)(A) circumstance is established, triggering §22.021(f)(2). The additional §22.021(a)(2)(A) circumstance must be established: serious bodily injury or attempted killing in the same criminal episode; fear that any person will become a victim of listed trafficking, or fear that death, serious bodily injury or kidnapping will be imminently inflicted on any person; a specified threat made in the victim’s presence; a deadly weapon in the same episode; acting in concert with another committing the specified sexual conduct against the same victim in that episode; or administering/providing an impairing substance with intent to facilitate the offense. Fear and threat are distinct statutory alternatives, and a substance’s presence alone is not the facilitating-intent finding. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony with a 25-year minimum under §22.021(f): 25 to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(i)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990004"
+  },
+  {
+    "id": "tx-pc-22-021-a-age14-16-extra",
+    "name": "Aggravated sexual assault (penetration of anus or sexual organ; victim aged 14 to 16 with additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(i)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(i)",
+    "conduct": "Intentionally or knowingly causes penetration of the child’s anus or sexual organ by any means. The victim is at least 14 but younger than 17 and an additional (a)(2)(A) circumstance is established. Age alone does not establish this aggravated branch. The additional §22.021(a)(2)(A) circumstance must be established: serious bodily injury or attempted killing in the same criminal episode; fear that any person will become a victim of listed trafficking, or fear that death, serious bodily injury or kidnapping will be imminently inflicted on any person; a specified threat made in the victim’s presence; a deadly weapon in the same episode; acting in concert with another committing the specified sexual conduct against the same victim in that episode; or administering/providing an impairing substance with intent to facilitate the offense. Fear and threat are distinct statutory alternatives, and a substance’s presence alone is not the facilitating-intent finding. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(i)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-021-b-age10-13",
+    "name": "Aggravated sexual assault (penetration of mouth by actor’s sexual organ; victim aged 10 to 13 without additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(ii)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(ii)",
+    "conduct": "Intentionally or knowingly causes penetration of the child’s mouth by the actor’s sexual organ. The victim is at least 10 but younger than 14, establishing §22.021(a)(2)(B), and this ordinary profile does not assume an additional (a)(2)(A) circumstance. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(ii)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-021-b-under10",
+    "name": "Aggravated sexual assault (penetration of mouth by actor’s sexual organ; victim younger than 10)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(ii)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(ii)",
+    "conduct": "Intentionally or knowingly causes penetration of the child’s mouth by the actor’s sexual organ. The victim is younger than 10, triggering §22.021(f)(1); a separate (a)(2)(A) circumstance is not required for this 25-year minimum. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony with a 25-year minimum under §22.021(f): 25 to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(ii)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990004"
+  },
+  {
+    "id": "tx-pc-22-021-b-under14-extra",
+    "name": "Aggravated sexual assault (penetration of mouth by actor’s sexual organ; victim younger than 14 with additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(ii)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(ii)",
+    "conduct": "Intentionally or knowingly causes penetration of the child’s mouth by the actor’s sexual organ. The victim is younger than 14 and an additional (a)(2)(A) circumstance is established, triggering §22.021(f)(2). The additional §22.021(a)(2)(A) circumstance must be established: serious bodily injury or attempted killing in the same criminal episode; fear that any person will become a victim of listed trafficking, or fear that death, serious bodily injury or kidnapping will be imminently inflicted on any person; a specified threat made in the victim’s presence; a deadly weapon in the same episode; acting in concert with another committing the specified sexual conduct against the same victim in that episode; or administering/providing an impairing substance with intent to facilitate the offense. Fear and threat are distinct statutory alternatives, and a substance’s presence alone is not the facilitating-intent finding. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony with a 25-year minimum under §22.021(f): 25 to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(ii)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990004"
+  },
+  {
+    "id": "tx-pc-22-021-b-age14-16-extra",
+    "name": "Aggravated sexual assault (penetration of mouth by actor’s sexual organ; victim aged 14 to 16 with additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(ii)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(ii)",
+    "conduct": "Intentionally or knowingly causes penetration of the child’s mouth by the actor’s sexual organ. The victim is at least 14 but younger than 17 and an additional (a)(2)(A) circumstance is established. Age alone does not establish this aggravated branch. The additional §22.021(a)(2)(A) circumstance must be established: serious bodily injury or attempted killing in the same criminal episode; fear that any person will become a victim of listed trafficking, or fear that death, serious bodily injury or kidnapping will be imminently inflicted on any person; a specified threat made in the victim’s presence; a deadly weapon in the same episode; acting in concert with another committing the specified sexual conduct against the same victim in that episode; or administering/providing an impairing substance with intent to facilitate the offense. Fear and threat are distinct statutory alternatives, and a substance’s presence alone is not the facilitating-intent finding. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(ii)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-021-c-age10-13",
+    "name": "Aggravated sexual assault (child sexual organ contacting another person; victim aged 10 to 13 without additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(iii)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(iii)",
+    "conduct": "Intentionally or knowingly causes the child’s sexual organ to contact or penetrate another person’s mouth, anus or sexual organ, including the actor. The victim is at least 10 but younger than 14, establishing §22.021(a)(2)(B), and this ordinary profile does not assume an additional (a)(2)(A) circumstance. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(iii)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-021-c-under10",
+    "name": "Aggravated sexual assault (child sexual organ contacting another person; victim younger than 10)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(iii)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(iii)",
+    "conduct": "Intentionally or knowingly causes the child’s sexual organ to contact or penetrate another person’s mouth, anus or sexual organ, including the actor. The victim is younger than 10, triggering §22.021(f)(1); a separate (a)(2)(A) circumstance is not required for this 25-year minimum. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony with a 25-year minimum under §22.021(f): 25 to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(iii)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990004"
+  },
+  {
+    "id": "tx-pc-22-021-c-under14-extra",
+    "name": "Aggravated sexual assault (child sexual organ contacting another person; victim younger than 14 with additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(iii)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(iii)",
+    "conduct": "Intentionally or knowingly causes the child’s sexual organ to contact or penetrate another person’s mouth, anus or sexual organ, including the actor. The victim is younger than 14 and an additional (a)(2)(A) circumstance is established, triggering §22.021(f)(2). The additional §22.021(a)(2)(A) circumstance must be established: serious bodily injury or attempted killing in the same criminal episode; fear that any person will become a victim of listed trafficking, or fear that death, serious bodily injury or kidnapping will be imminently inflicted on any person; a specified threat made in the victim’s presence; a deadly weapon in the same episode; acting in concert with another committing the specified sexual conduct against the same victim in that episode; or administering/providing an impairing substance with intent to facilitate the offense. Fear and threat are distinct statutory alternatives, and a substance’s presence alone is not the facilitating-intent finding. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony with a 25-year minimum under §22.021(f): 25 to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(iii)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990004"
+  },
+  {
+    "id": "tx-pc-22-021-c-age14-16-extra",
+    "name": "Aggravated sexual assault (child sexual organ contacting another person; victim aged 14 to 16 with additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(iii)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(iii)",
+    "conduct": "Intentionally or knowingly causes the child’s sexual organ to contact or penetrate another person’s mouth, anus or sexual organ, including the actor. The victim is at least 14 but younger than 17 and an additional (a)(2)(A) circumstance is established. Age alone does not establish this aggravated branch. The additional §22.021(a)(2)(A) circumstance must be established: serious bodily injury or attempted killing in the same criminal episode; fear that any person will become a victim of listed trafficking, or fear that death, serious bodily injury or kidnapping will be imminently inflicted on any person; a specified threat made in the victim’s presence; a deadly weapon in the same episode; acting in concert with another committing the specified sexual conduct against the same victim in that episode; or administering/providing an impairing substance with intent to facilitate the offense. Fear and threat are distinct statutory alternatives, and a substance’s presence alone is not the facilitating-intent finding. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(iii)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-021-d-age10-13",
+    "name": "Aggravated sexual assault (child anus contacting another person; victim aged 10 to 13 without additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(iv)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(iv)",
+    "conduct": "Intentionally or knowingly causes the child’s anus to contact another person’s mouth, anus or sexual organ, including the actor. The victim is at least 10 but younger than 14, establishing §22.021(a)(2)(B), and this ordinary profile does not assume an additional (a)(2)(A) circumstance. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(iv)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-021-d-under10",
+    "name": "Aggravated sexual assault (child anus contacting another person; victim younger than 10)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(iv)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(iv)",
+    "conduct": "Intentionally or knowingly causes the child’s anus to contact another person’s mouth, anus or sexual organ, including the actor. The victim is younger than 10, triggering §22.021(f)(1); a separate (a)(2)(A) circumstance is not required for this 25-year minimum. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony with a 25-year minimum under §22.021(f): 25 to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(iv)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990004"
+  },
+  {
+    "id": "tx-pc-22-021-d-under14-extra",
+    "name": "Aggravated sexual assault (child anus contacting another person; victim younger than 14 with additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(iv)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(iv)",
+    "conduct": "Intentionally or knowingly causes the child’s anus to contact another person’s mouth, anus or sexual organ, including the actor. The victim is younger than 14 and an additional (a)(2)(A) circumstance is established, triggering §22.021(f)(2). The additional §22.021(a)(2)(A) circumstance must be established: serious bodily injury or attempted killing in the same criminal episode; fear that any person will become a victim of listed trafficking, or fear that death, serious bodily injury or kidnapping will be imminently inflicted on any person; a specified threat made in the victim’s presence; a deadly weapon in the same episode; acting in concert with another committing the specified sexual conduct against the same victim in that episode; or administering/providing an impairing substance with intent to facilitate the offense. Fear and threat are distinct statutory alternatives, and a substance’s presence alone is not the facilitating-intent finding. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony with a 25-year minimum under §22.021(f): 25 to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(iv)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990004"
+  },
+  {
+    "id": "tx-pc-22-021-d-age14-16-extra",
+    "name": "Aggravated sexual assault (child anus contacting another person; victim aged 14 to 16 with additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(iv)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(iv)",
+    "conduct": "Intentionally or knowingly causes the child’s anus to contact another person’s mouth, anus or sexual organ, including the actor. The victim is at least 14 but younger than 17 and an additional (a)(2)(A) circumstance is established. Age alone does not establish this aggravated branch. The additional §22.021(a)(2)(A) circumstance must be established: serious bodily injury or attempted killing in the same criminal episode; fear that any person will become a victim of listed trafficking, or fear that death, serious bodily injury or kidnapping will be imminently inflicted on any person; a specified threat made in the victim’s presence; a deadly weapon in the same episode; acting in concert with another committing the specified sexual conduct against the same victim in that episode; or administering/providing an impairing substance with intent to facilitate the offense. Fear and threat are distinct statutory alternatives, and a substance’s presence alone is not the facilitating-intent finding. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(iv)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-021-e-age10-13",
+    "name": "Aggravated sexual assault (child mouth contacting another person; victim aged 10 to 13 without additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(v)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(v)",
+    "conduct": "Intentionally or knowingly causes the child’s mouth to contact another person’s anus or sexual organ, including the actor. The victim is at least 10 but younger than 14, establishing §22.021(a)(2)(B), and this ordinary profile does not assume an additional (a)(2)(A) circumstance. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(v)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-021-e-under10",
+    "name": "Aggravated sexual assault (child mouth contacting another person; victim younger than 10)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(v)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(v)",
+    "conduct": "Intentionally or knowingly causes the child’s mouth to contact another person’s anus or sexual organ, including the actor. The victim is younger than 10, triggering §22.021(f)(1); a separate (a)(2)(A) circumstance is not required for this 25-year minimum. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony with a 25-year minimum under §22.021(f): 25 to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(v)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990004"
+  },
+  {
+    "id": "tx-pc-22-021-e-under14-extra",
+    "name": "Aggravated sexual assault (child mouth contacting another person; victim younger than 14 with additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(v)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(v)",
+    "conduct": "Intentionally or knowingly causes the child’s mouth to contact another person’s anus or sexual organ, including the actor. The victim is younger than 14 and an additional (a)(2)(A) circumstance is established, triggering §22.021(f)(2). The additional §22.021(a)(2)(A) circumstance must be established: serious bodily injury or attempted killing in the same criminal episode; fear that any person will become a victim of listed trafficking, or fear that death, serious bodily injury or kidnapping will be imminently inflicted on any person; a specified threat made in the victim’s presence; a deadly weapon in the same episode; acting in concert with another committing the specified sexual conduct against the same victim in that episode; or administering/providing an impairing substance with intent to facilitate the offense. Fear and threat are distinct statutory alternatives, and a substance’s presence alone is not the facilitating-intent finding. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony with a 25-year minimum under §22.021(f): 25 to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(v)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "11990004"
+  },
+  {
+    "id": "tx-pc-22-021-e-age14-16-extra",
+    "name": "Aggravated sexual assault (child mouth contacting another person; victim aged 14 to 16 with additional aggravator)",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021(a)(1)(B)(v)",
+    "citation": "Tex. Penal Code § 22.021(a)(1)(B)(v)",
+    "conduct": "Intentionally or knowingly causes the child’s mouth to contact another person’s anus or sexual organ, including the actor. The victim is at least 14 but younger than 17 and an additional (a)(2)(A) circumstance is established. Age alone does not establish this aggravated branch. The additional §22.021(a)(2)(A) circumstance must be established: serious bodily injury or attempted killing in the same criminal episode; fear that any person will become a victim of listed trafficking, or fear that death, serious bodily injury or kidnapping will be imminently inflicted on any person; a specified threat made in the victim’s presence; a deadly weapon in the same episode; acting in concert with another committing the specified sexual conduct against the same victim in that episode; or administering/providing an impairing substance with intent to facilitate the offense. Fear and threat are distinct statutory alternatives, and a substance’s presence alone is not the facilitating-intent finding. The child definition and age-knowledge rule apply. Section 22.021(d) imports the limited medical-care defense in 22.011(d), not the spouse or close-in-age affirmative defenses in 22.011(e). Those defenses are not silently transferred to this aggravated offense.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(1)(B)(v)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-sexual-assault-in-the-second-degree",
+    "name": "Sexual Assault",
+    "officialTitle": "SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.011",
+    "citation": "Tex. Penal Code § 22.011",
+    "conduct": "The statute covers intentional or knowing penetration/contact under (a)(1) without consent under the specific (b) circumstances, or the separately enumerated child conduct under (a)(2). The child alternatives are penetration of anus/sexual organ by any means, mouth penetration by the actor’s sexual organ, child sexual-organ contact with another’s mouth/anus/sexual organ, child anus contact with those parts, or child mouth contact with another’s anus/sexual organ. Child means younger than 17. Knowledge of the child’s age is not required. The §22.011(d) medical-care defense is limited to care without the prohibited child-to-actor/third-party sexual contact. The spouse and close-in-age affirmative defenses in §22.011(e) have their own conditions: the latter requires no more than a three-year age gap, a victim at least 14, the statutory registration-status alternative, and no prohibited §25.01/§25.02 relationship. It is not a blanket consent or age-gap exception. The nonconsent alternatives include specified compulsion, incapacity or unawareness and enumerated exploitation/relationship circumstances; this whole-statute identity does not determine which one a case proves. The prohibited-relationship first-degree and assisted-reproduction state-jail branches remain distinct.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. This ordinary second-degree range does not cover every branch: (f)(1) specifies first degree for listed prohibited relationships; (f)(2) specifies state jail punishment for (a)(1) involving the (b)(12) express-consent circumstance. Those ordinary ranges are five to 99 years/life or 180 days to two years respectively, with up to $10,000. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(b), (c), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "25.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-sexual-assault-in-the-first-degree",
+    "name": "Aggravated Sexual Assault",
+    "officialTitle": "AGGRAVATED SEXUAL ASSAULT.",
+    "category": "felony",
+    "code": "22.021",
+    "citation": "Tex. Penal Code § 22.021",
+    "conduct": "The statute requires a specified intentional or knowing nonconsensual act against another or listed child conduct, together with an (a)(2) aggravating circumstance. The child alternatives are penetration of anus/sexual organ by any means, mouth penetration by the actor’s sexual organ, child sexual-organ contact with another’s mouth/anus/sexual organ, child anus contact with those parts, or child mouth contact with another’s anus/sexual organ. The additional §22.021(a)(2)(A) circumstance must be established: serious bodily injury or attempted killing in the same criminal episode; fear that any person will become a victim of listed trafficking, or fear that death, serious bodily injury or kidnapping will be imminently inflicted on any person; a specified threat made in the victim’s presence; a deadly weapon in the same episode; acting in concert with another committing the specified sexual conduct against the same victim in that episode; or administering/providing an impairing substance with intent to facilitate the offense. Fear and threat are distinct statutory alternatives, and a substance’s presence alone is not the facilitating-intent finding. Other statutory aggravators are a victim younger than 14 or the defined elderly/disabled status. The medical-care defense is incorporated by (d); the 22.011(e) spouse/age-gap defenses are not. This preserved whole-statute identity does not assume the victim’s age or a particular aggravator.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. Section 22.021(f) instead sets a 25-year minimum when the victim is younger than 10, or younger than 14 with an (a)(2)(A) additional aggravator. This general identity does not promise a five-year minimum in those cases. These are ordinary ranges, not a determination that no special prior applies. Section 12.42 can require life or life without parole for specified repeat sexual offenses; the exact current offense, prior, age and other statutory findings require separate review. Conviction for this offense is reportable under Chapter 62 and carries registration consequences; duration, reporting duties and any statutory relief depend on the exact record. For qualifying multiple convictions from one criminal episode, §3.03 permits consecutive sentences rather than guaranteeing concurrent service.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)(1), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": "(a)(3), (4), (7), (8)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": "(a)(2), (b), (c), (d), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(a), (b), (c), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]
