@@ -193,3 +193,11 @@ test("Texas robbery IDs stay unique and restraint/jugging branches retain exact 
  for(const r of rows){expect(charges.filter((c:{id:string})=>c.id===r.id)).toHaveLength(1);expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,name:r.name,code:r.code,description:r.conduct,maxPenalty:r.penalty,category:r.category});}
  for(const id of ["tx-bank-robbery","tx-attempted-robbery"])expect(charges.some((c:{id:string})=>c.id===id)).toBe(false);
 });
+
+
+test("Texas threats and false alerts expose exact intent and grading while withholding the old blanket ID", async ({request})=>{
+ const response=await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");expect(response.ok()).toBe(true);
+ const {charges}=await response.json();const rows=JSON.parse(readFileSync("shared/texas-threats-alerts.json","utf8"));
+ for(const r of rows)expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,name:r.name,code:r.code,description:r.conduct,maxPenalty:r.penalty,category:r.category});
+ expect(charges.some((c:{id:string})=>c.id==="tx-terroristic-threat")).toBe(false);
+});

@@ -6,7 +6,7 @@ import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, knownCasePhase, type LegalDocument } from "@shared/legal-documents";
 import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
-import { isTexasAmbiguousOfficerAssault, isTexasAmbiguousFraud, isTexasAmbiguousCollision, isTexasAmbiguousDelivery, isTexasAmbiguousVehicleBurglary, isTexasHeldCarrySelection, needsTexasChargeReselection } from "@shared/texas-reviewed";
+import { isTexasAmbiguousThreat, isTexasAmbiguousOfficerAssault, isTexasAmbiguousFraud, isTexasAmbiguousCollision, isTexasAmbiguousDelivery, isTexasAmbiguousVehicleBurglary, isTexasHeldCarrySelection, needsTexasChargeReselection } from "@shared/texas-reviewed";
 import { resolveGuidanceCharge } from "@shared/guidance-charge-resolution";
 
 // jsPDF's built-in fonts (helvetica, times, courier) only cover Latin/WinAnsi glyphs. Chinese
@@ -800,6 +800,11 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       doc.setTextColor(0, 0, 0);
       if (needsTexasChargeReselection(charge, caseData.jurisdiction)) {
         const messages = {
+          threat: {
+            en: "Select the exact Texas threat charge. The alleged intent and qualifying circumstances determine the applicable grade.",
+            es: "Seleccione el cargo exacto de amenaza de Texas. La intención alegada y las circunstancias aplicables determinan la clasificación.",
+            zh: "请选择具体的得克萨斯州威胁指控。被指控的意图和适用情节决定罪级。",
+          },
           officer: {
             en: "Select the exact Texas assault charge. The alleged conduct, protected role and duty connection determine the applicable grade.",
             es: "Seleccione el cargo exacto de agresión de Texas. La conducta alegada, la función protegida y la relación con los deberes determinan la clasificación aplicable.",
@@ -836,7 +841,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
             en: "Select the specific Texas vehicle burglary charge listed on your charging document.",
           },
         };
-        const notice = messages[isTexasAmbiguousOfficerAssault(charge, caseData.jurisdiction) ? "officer" : isTexasAmbiguousFraud(charge, caseData.jurisdiction) ? "fraud" : isTexasAmbiguousCollision(charge, caseData.jurisdiction) ? "collision" : isTexasAmbiguousDelivery(charge, caseData.jurisdiction) ? "delivery" : isTexasAmbiguousVehicleBurglary(charge, caseData.jurisdiction) ? "vehicle" :
+        const notice = messages[isTexasAmbiguousThreat(charge, caseData.jurisdiction) ? "threat" : isTexasAmbiguousOfficerAssault(charge, caseData.jurisdiction) ? "officer" : isTexasAmbiguousFraud(charge, caseData.jurisdiction) ? "fraud" : isTexasAmbiguousCollision(charge, caseData.jurisdiction) ? "collision" : isTexasAmbiguousDelivery(charge, caseData.jurisdiction) ? "delivery" : isTexasAmbiguousVehicleBurglary(charge, caseData.jurisdiction) ? "vehicle" :
           isTexasHeldCarrySelection(charge, caseData.jurisdiction) ? "weapons" : "theft"];
         yPosition = addText(formatChargeName(charge.name), margin, yPosition);
         yPosition = addText(notice[isChinese ? "zh" : isSpanish ? "es" : "en"], margin, yPosition + 6) + 6;

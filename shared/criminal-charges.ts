@@ -1,4 +1,4 @@
-import { texasHeldOfficerId, texasHeldFraudIds, texasHeldRoadId, texasHeldDeliveryIds, texasHeldCarryId, texasHeldTheftId, texasReviewedRecords } from "./texas-reviewed";
+import { texasHeldThreatId, texasHeldOfficerId, texasHeldFraudIds, texasHeldRoadId, texasHeldDeliveryIds, texasHeldCarryId, texasHeldTheftId, texasReviewedRecords } from "./texas-reviewed";
 import { texasDwiRecords } from "./texas-dwi";
 import { floridaRemainingChargeText, floridaRemainingDisplayName } from "./florida-legacy-remaining";
 import { floridaSexualChargeText, floridaSexualDisplayName } from "./florida-legacy-sexual";
@@ -94916,6 +94916,10 @@ for (const group of ["Violent Crimes", "Assault Crimes"]) {
   const ids = texasReviewedRecords.filter(row => row.references[0].section === "22.01").map(row => row.id);
   chargeCategories[group] = [...new Set([...(chargeCategories[group] ?? []), ...ids])];
 }
+for (const group of ["Violent Crimes", "Public Order"]) {
+  const ids = texasReviewedRecords.filter(row => ["22.07", "42.06", "42.0601"].includes(row.references[0].section)).map(row => row.id);
+  chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
+}
 for (const group of ["Violent Crimes", "Theft & Property"]) {
   const ids = texasReviewedRecords.filter(row => ["29.02", "29.03", "29.04", "20.02"].includes(row.references[0].section)).map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
@@ -94957,7 +94961,7 @@ function withAuthorityDisplayName(charge: CriminalCharge): CriminalCharge {
 export function getChargeById(id: string): CriminalCharge | undefined {
   const normalizedId = normalizeChargeId(id);
   if (
-    normalizedId === texasHeldOfficerId || texasHeldFraudIds.has(normalizedId) || normalizedId === texasHeldRoadId || texasHeldDeliveryIds.has(normalizedId) || normalizedId === texasHeldCarryId || normalizedId === texasHeldTheftId ||
+    normalizedId === texasHeldThreatId || normalizedId === texasHeldOfficerId || texasHeldFraudIds.has(normalizedId) || normalizedId === texasHeldRoadId || texasHeldDeliveryIds.has(normalizedId) || normalizedId === texasHeldCarryId || normalizedId === texasHeldTheftId ||
     NY_CHARGE_IDS_REQUIRING_RESELECTION.has(normalizedId) ||
     OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(normalizedId)
   ) return undefined;

@@ -41,6 +41,26 @@ const deliveryTransfer = {
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-13.htm&version=048",
 };
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
+  "tx-pc-22-07-ordinary-fear": {
+    "instructionRef": "CPJC 22.28: Terroristic Threat (individual imminent-serious-injury fear theory only; underlying conduct only, special grading separate)",
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=048"
+  },
+  "tx-pc-22-07-family": {
+    "instructionRef": "CPJC 22.28: Terroristic Threat (individual imminent-serious-injury fear theory only; underlying conduct only, special grading separate)",
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=048"
+  },
+  "tx-pc-22-07-public-servant": {
+    "instructionRef": "CPJC 22.28: Terroristic Threat (individual imminent-serious-injury fear theory only; underlying conduct only, special grading separate)",
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=048"
+  },
+  "tx-pc-22-07-peace-officer": {
+    "instructionRef": "CPJC 22.28: Terroristic Threat (individual imminent-serious-injury fear theory only; underlying conduct only, special grading separate)",
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=048"
+  },
+  "tx-pc-22-07-judge": {
+    "instructionRef": "CPJC 22.28: Terroristic Threat (individual imminent-serious-injury fear theory only; underlying conduct only, special grading separate)",
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=048"
+  },
   "tx-pc-20-02-ordinary": {
     "instructionRef": "CPJC 20.7: Unlawful Restraint (force, intimidation or deception theory only; underlying conduct only; child-acquiescence alternatives and grading separate)",
     "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F20_Kidnapping_Restraint_and_Human_Smuggling%2FCPJC20-7.htm&version=048"

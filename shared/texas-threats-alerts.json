@@ -1,0 +1,1008 @@
+[
+  {
+    "id": "tx-pc-22-07-emergency",
+    "name": "Terroristic threat (intent to cause an emergency-agency reaction)",
+    "officialTitle": "TERRORISTIC THREAT.",
+    "category": "misdemeanor",
+    "code": "22.07(b)",
+    "citation": "Tex. Penal Code § 22.07(b)",
+    "conduct": "Threatening to commit an offense involving violence to a person or property, with the specific intent to cause a reaction of any type to the threat by an official or volunteer agency organized to deal with emergencies. The specific statutory intent must be proved; an offensive remark or an unwanted reaction alone does not establish every element. Protected expression and case-specific defenses require separate review.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-07-ordinary-fear",
+    "name": "Terroristic threat (ordinary intent to cause imminent-serious-injury fear)",
+    "officialTitle": "TERRORISTIC THREAT.",
+    "category": "misdemeanor",
+    "code": "22.07(c)",
+    "citation": "Tex. Penal Code § 22.07(c)",
+    "conduct": "Threatening to commit an offense involving violence to a person or property, with the specific intent to place any person in fear of imminent serious bodily injury. Imminence and serious bodily injury belong to this individual-fear branch; ordinary bodily-injury fear is not substituted. This ordinary branch excludes family/household or family-violence circumstances, public servants, and the known-peace-officer/judge circumstance. The specific statutory intent must be proved; an offensive remark or an unwanted reaction alone does not establish every element. Protected expression and case-specific defenses require separate review.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "16020009"
+  },
+  {
+    "id": "tx-pc-22-07-family",
+    "name": "Terroristic threat (family, household or family violence)",
+    "officialTitle": "TERRORISTIC THREAT.",
+    "category": "misdemeanor",
+    "code": "22.07(c)(1)",
+    "citation": "Tex. Penal Code § 22.07(c)(1)",
+    "conduct": "Threatening to commit an offense involving violence to a person or property, with the specific intent to place any person in fear of imminent serious bodily injury. Imminence and serious bodily injury belong to this individual-fear branch; ordinary bodily-injury fear is not substituted. The offense is against a family or household member or otherwise constitutes family violence under the incorporated Family Code definitions. Family includes the specified blood/marriage relationships, former spouses, parents of the same child and foster relationships; household is people living in the same dwelling regardless of relationship. Family violence includes its specified acts, child-abuse and dating-violence alternatives, with the statutory defensive-measures exclusion; a label alone does not establish it. This choice excludes the higher known-peace-officer/judge circumstance. The specific statutory intent must be proved; an offensive remark or an unwanted reaction alone does not establish every element. Protected expression and case-specific defenses require separate review.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "261.001",
+        "subdivision": "(1)(C), (E), (G), (H), (I), (J), (K), (M)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "16020010"
+  },
+  {
+    "id": "tx-pc-22-07-public-servant",
+    "name": "Terroristic threat (against a public servant)",
+    "officialTitle": "TERRORISTIC THREAT.",
+    "category": "misdemeanor",
+    "code": "22.07(c)(2)",
+    "citation": "Tex. Penal Code § 22.07(c)(2)",
+    "conduct": "Threatening to commit an offense involving violence to a person or property, with the specific intent to place any person in fear of imminent serious bodily injury. Imminence and serious bodily injury belong to this individual-fear branch; ordinary bodily-injury fear is not substituted. The offense is against a public servant as defined by §1.07(a)(41). This Class A choice excludes §22.07(c-1): if the actor knows the person is any legally defined peace officer or judge, the applicable grade is state jail felony even if that officer role is not included in the narrowed officer selector. Subsection (c-1) does not import the official-duty/retaliation condition from the separate assault statute. Additional officer roles are not cleared by this statement. The specific statutory intent must be proved; an offensive remark or an unwanted reaction alone does not establish every element. Protected expression and case-specific defenses require separate review.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(c-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-07-peace-officer",
+    "name": "Terroristic threat (known sheriff, constable, municipal officer or DPS officer)",
+    "officialTitle": "TERRORISTIC THREAT.",
+    "category": "felony",
+    "code": "22.07(c-1)",
+    "citation": "Tex. Penal Code § 22.07(c-1)",
+    "conduct": "Threatening to commit an offense involving violence to a person or property, with the specific intent to place any person in fear of imminent serious bodily injury. Imminence and serious bodily injury belong to this individual-fear branch; ordinary bodily-injury fear is not substituted. The actor knows the person is a peace officer. Officer status is limited here to sheriff/deputy, constable/deputy, municipal-police/marshal and DPS roles meeting article 2A.001(1)-(4), common to both retained versions. Other officer categories remain outside this selector choice. This statute does not require the additional official-duty/retaliation condition found in the separate assault provision. The specific statutory intent must be proved; an offensive remark or an unwanted reaction alone does not establish every element. Protected expression and case-specific defenses require separate review.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Section 12.35(c) can change punishment for its specified findings; qualifying repeat convictions are separately addressed by §12.425. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(c-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "(1)-(4) in both published versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-07-judge",
+    "name": "Terroristic threat (known judge)",
+    "officialTitle": "TERRORISTIC THREAT.",
+    "category": "felony",
+    "code": "22.07(c-1)",
+    "citation": "Tex. Penal Code § 22.07(c-1)",
+    "conduct": "Threatening to commit an offense involving violence to a person or property, with the specific intent to place any person in fear of imminent serious bodily injury. Imminence and serious bodily injury belong to this individual-fear branch; ordinary bodily-injury fear is not substituted. The actor knows the person is a judge. This statute does not require the additional official-duty/retaliation condition found in the separate assault provision. The specific statutory intent must be proved; an offensive remark or an unwanted reaction alone does not establish every element. Protected expression and case-specific defenses require separate review.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Section 12.35(c) can change punishment for its specified findings; qualifying repeat convictions are separately addressed by §12.425. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(c-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-07-interruption",
+    "name": "Terroristic threat (intended interruption without the $1,500 loss finding)",
+    "officialTitle": "TERRORISTIC THREAT.",
+    "category": "misdemeanor",
+    "code": "22.07(d)",
+    "citation": "Tex. Penal Code § 22.07(d)",
+    "conduct": "Threatening to commit an offense involving violence to a person or property, with the specific intent to prevent or interrupt occupation or use of a building, room, assembly/public/employment place, aircraft, automobile, other conveyance or other public place. The actor has not caused the owner economic loss of $1,500 or more as a result of the prevention or interruption. The specific statutory intent must be proved; an offensive remark or an unwanted reaction alone does not establish every element. Protected expression and case-specific defenses require separate review.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-07-interruption-loss",
+    "name": "Terroristic threat (interruption causing at least $1,500 owner loss)",
+    "officialTitle": "TERRORISTIC THREAT.",
+    "category": "felony",
+    "code": "22.07(d)",
+    "citation": "Tex. Penal Code § 22.07(d)",
+    "conduct": "Threatening to commit an offense involving violence to a person or property, with the specific intent to prevent or interrupt occupation or use of a building, room, assembly/public/employment place, aircraft, automobile, other conveyance or other public place. The actor causes the owner economic loss of $1,500 or more as a result of the prevention or interruption. This is lost-use economic loss under subsection (g), not an invented $2,500 theft threshold or necessarily physical property damage. The specific statutory intent must be proved; an offensive remark or an unwanted reaction alone does not establish every element. Protected expression and case-specific defenses require separate review.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Section 12.35(c) can change punishment for its specified findings; qualifying repeat convictions are separately addressed by §12.425. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-07-public-service",
+    "name": "Terroristic threat (intent to impair public services)",
+    "officialTitle": "TERRORISTIC THREAT.",
+    "category": "felony",
+    "code": "22.07(e)",
+    "citation": "Tex. Penal Code § 22.07(e)",
+    "conduct": "Threatening to commit an offense involving violence to a person or property, with the specific intent to cause impairment or interruption of public communications, transportation, water, gas, power or another public service. This branch retains its own specific intent; the individual-fear subsection’s imminence wording is not automatically inserted into every other threat branch. The specific statutory intent must be proved; an offensive remark or an unwanted reaction alone does not establish every element. Protected expression and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-07-public-fear",
+    "name": "Terroristic threat (intent to cause serious-injury fear in the public)",
+    "officialTitle": "TERRORISTIC THREAT.",
+    "category": "felony",
+    "code": "22.07(e)",
+    "citation": "Tex. Penal Code § 22.07(e)",
+    "conduct": "Threatening to commit an offense involving violence to a person or property, with the specific intent to place the public or a substantial group of the public in fear of serious bodily injury. This branch retains its own specific intent; the individual-fear subsection’s imminence wording is not automatically inserted into every other threat branch. The specific statutory intent must be proved; an offensive remark or an unwanted reaction alone does not establish every element. Protected expression and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-07-government",
+    "name": "Terroristic threat (intent to influence a government branch or agency)",
+    "officialTitle": "TERRORISTIC THREAT.",
+    "category": "felony",
+    "code": "22.07(e)",
+    "citation": "Tex. Penal Code § 22.07(e)",
+    "conduct": "Threatening to commit an offense involving violence to a person or property, with the specific intent to influence conduct or activities of a federal, state or local-government branch or agency. This branch retains its own specific intent; the individual-fear subsection’s imminence wording is not automatically inserted into every other threat branch. The specific statutory intent must be proved; an offensive remark or an unwanted reaction alone does not establish every element. Protected expression and case-specific defenses require separate review.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.07",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-06-ordinary",
+    "name": "False alarm or report (ordinary)",
+    "officialTitle": "FALSE ALARM OR REPORT.",
+    "category": "misdemeanor",
+    "code": "42.06(b)",
+    "citation": "Tex. Penal Code § 42.06(b)",
+    "conduct": "Knowingly initiating, communicating or circulating a report of a present, past or future bombing, fire, offense or other emergency, knowing it is false or baseless, where the report would ordinarily cause emergency-agency action, place a person in fear of imminent serious bodily injury, or prevent/interrupt occupation of the listed building, room, assembly/public place, aircraft, automobile or other conveyance. Actual response is not silently substituted for the statute’s would-ordinarily test, and a mistaken report without the required knowledge is not enough. This excludes the school, higher-education and public-service emergencies listed in subsection (b).",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.06",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.06",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.06",
+        "subdivision": "(a)(1)-(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-06-institution-service",
+    "name": "False alarm or report (listed institution or public-service emergency)",
+    "officialTitle": "FALSE ALARM OR REPORT.",
+    "category": "felony",
+    "code": "42.06(b)",
+    "citation": "Tex. Penal Code § 42.06(b)",
+    "conduct": "Knowingly initiating, communicating or circulating a report of a present, past or future bombing, fire, offense or other emergency, knowing it is false or baseless, where the report would ordinarily cause emergency-agency action, place a person in fear of imminent serious bodily injury, or prevent/interrupt occupation of the listed building, room, assembly/public place, aircraft, automobile or other conveyance. Actual response is not silently substituted for the statute’s would-ordinarily test, and a mistaken report without the required knowledge is not enough. The false emergency report involves a public or private higher-education institution, a public primary or secondary school, public communications, public transportation, public water/gas/power supply or another public service. The statutory distinction between public schools and public-or-private higher education is preserved; private primary/secondary school status alone is not listed.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Section 12.35(c) can change punishment for its specified findings; qualifying repeat convictions are separately addressed by §12.425. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.06",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.06",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.06",
+        "subdivision": "(a)(1)-(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-0601-ordinary",
+    "name": "False report to induce emergency response (ordinary)",
+    "officialTitle": "FALSE REPORT TO INDUCE EMERGENCY RESPONSE.",
+    "category": "misdemeanor",
+    "code": "42.0601(b)",
+    "citation": "Tex. Penal Code § 42.0601(b)",
+    "conduct": "Making or causing a report of a criminal offense or emergency to a listed authorized recipient, knowing the report is false, actually causing a law-enforcement or other emergency response, and being reckless whether that response may directly cause bodily injury to another. Recipients include peace officers, law-enforcement agencies, statutory 9-1-1 services, official/volunteer emergency agencies and other government employees/contractors authorized to receive such reports. Recklessness about injury and an actual response are required; a merely false report is not sufficient for this offense. This ordinary branch excludes two-or-more qualifying prior convictions and the serious-injury/death circumstance. Added effective September 1, 2021; earlier conduct requires the law then applicable. Subsection (c) permits prosecution under this and another applicable section without itself deciding cumulative punishment. Subsection (d) preserves the specified federal-law limits; this summary does not resolve separate federal liability or immunity.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.0601",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.0601",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.0601",
+        "subdivision": "(c), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "771.001",
+        "subdivision": "(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-0601-repeat",
+    "name": "False report to induce emergency response (repeat)",
+    "officialTitle": "FALSE REPORT TO INDUCE EMERGENCY RESPONSE.",
+    "category": "felony",
+    "code": "42.0601(b)(1)",
+    "citation": "Tex. Penal Code § 42.0601(b)(1)",
+    "conduct": "Making or causing a report of a criminal offense or emergency to a listed authorized recipient, knowing the report is false, actually causing a law-enforcement or other emergency response, and being reckless whether that response may directly cause bodily injury to another. Recipients include peace officers, law-enforcement agencies, statutory 9-1-1 services, official/volunteer emergency agencies and other government employees/contractors authorized to receive such reports. Recklessness about injury and an actual response are required; a merely false report is not sufficient for this offense. The defendant has two or more prior convictions under this same section; one conviction alone does not supply this enhancement. This choice excludes the higher serious-injury/death circumstance. Added effective September 1, 2021; earlier conduct requires the law then applicable. Subsection (c) permits prosecution under this and another applicable section without itself deciding cumulative punishment. Subsection (d) preserves the specified federal-law limits; this summary does not resolve separate federal liability or immunity.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Section 12.35(c) can change punishment for its specified findings; qualifying repeat convictions are separately addressed by §12.425. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.0601",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.0601",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.0601",
+        "subdivision": "(c), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "771.001",
+        "subdivision": "(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-0601-injury-death",
+    "name": "False report to induce emergency response (injury death)",
+    "officialTitle": "FALSE REPORT TO INDUCE EMERGENCY RESPONSE.",
+    "category": "felony",
+    "code": "42.0601(b)(2)",
+    "citation": "Tex. Penal Code § 42.0601(b)(2)",
+    "conduct": "Making or causing a report of a criminal offense or emergency to a listed authorized recipient, knowing the report is false, actually causing a law-enforcement or other emergency response, and being reckless whether that response may directly cause bodily injury to another. Recipients include peace officers, law-enforcement agencies, statutory 9-1-1 services, official/volunteer emergency agencies and other government employees/contractors authorized to receive such reports. Recklessness about injury and an actual response are required; a merely false report is not sufficient for this offense. The false report must be of a criminal offense to which responders respond, and a person must suffer serious bodily injury or death as a direct result of lawful conduct arising from that response. A noncriminal emergency report alone, ordinary bodily injury alone, or injury not directly resulting from lawful responsive conduct does not satisfy this felony branch. Added effective September 1, 2021; earlier conduct requires the law then applicable. Subsection (c) permits prosecution under this and another applicable section without itself deciding cumulative punishment. Subsection (d) preserves the specified federal-law limits; this summary does not resolve separate federal liability or immunity.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying prior convictions and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.0601",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.0601",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(8), (41), (46)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.0601",
+        "subdivision": "(c), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "771.001",
+        "subdivision": "(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]

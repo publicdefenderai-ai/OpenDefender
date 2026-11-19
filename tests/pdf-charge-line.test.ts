@@ -219,6 +219,18 @@ describe('generateGuidancePDF — charge summary row citation logic', () => {
     expect(JSON.stringify(mockDoc.text.mock.calls)).not.toContain("Select the exact Texas theft charge");
   });
 
+  it.each([
+    ["tx-terroristic-threat", "Terroristic Threat", "22.07"],
+    [undefined, "Different AI-generated name", "22.07"],
+  ])("withholds the blanket Texas threat grade with the correct reselection notice (%s)", async (id,name,code) => {
+    const guidance=makeGuidance([{id,name:name!,classification:"misdemeanor",code:code!,verifiedCitation:"Old Texas threat citation"}]);
+    mockDoc.text.mockClear();
+    await generateGuidancePDF({...guidance,caseData:{...guidance.caseData,jurisdiction:"TX"}},"en");
+    expect(chargeRows().join(" ")).not.toMatch(/MISDEMEANOR|Old Texas threat citation/);
+    expect(JSON.stringify(mockDoc.text.mock.calls)).toContain("Select the exact Texas threat charge");
+    expect(JSON.stringify(mockDoc.text.mock.calls)).not.toContain("Select the exact Texas theft charge");
+  });
+
   it("requires reselection for a saved Texas auto-burglary blanket felony", async () => {
     const guidance = makeGuidance([{ id:"tx-auto-burglary", name:"Auto Burglary", classification:"felony",
       code:"30.04", verifiedCitation:"Old Texas citation" }]);
