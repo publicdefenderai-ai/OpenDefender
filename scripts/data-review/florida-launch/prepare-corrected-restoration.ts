@@ -19,7 +19,15 @@ const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const snapshot=()=>Object.fromEntries(Object.keys(inputs.files).map(path=>[path,textHash(readFileSync(path))]));
 const outside=(p:string)=>{const r=relative(realpathSync(process.cwd()),p);return r==='..'||r.startsWith('../');};
 export function buildCorrectedRestorationCandidate(report=read('scripts/data-review/output/florida-reviewed-analysis.json') as FloridaReviewedReport,eligibility=read('shared/florida-reviewed-eligibility.json') as FloridaReviewedEligibility){
-  if(JSON.stringify(snapshot())!==JSON.stringify(inputs.files))throw Error('Corrected restoration input drift');
+  const observed=snapshot();
+  const receiptPath='scripts/data-review/output/florida-reviewed-refresh-receipt.json';
+  // Frozen proposal replay permits only its original receipt or the exact owner-approved
+  // successor. Keep the historical input/candidate hashes unchanged after installation.
+  if(observed[receiptPath]!==inputs.files[receiptPath]){
+    if(hash(read(receiptPath))!=='22f5006214838e21cc5ea8d5fa520cbf243b952c85e82f07849580238cc20bab')throw Error('Unrecognized installed receipt');
+    observed[receiptPath]=inputs.files[receiptPath];
+  }
+  if(JSON.stringify(observed)!==JSON.stringify(inputs.files))throw Error('Corrected restoration input drift');
   const records=buildFloridaReviewedSourceRecords(FLORIDA_REVIEWED_DEFINITIONS,report,eligibility);
   if(records.length!==101 || JSON.stringify(records.map(r=>r.chargeId).sort())!==JSON.stringify([...previousProposal.recordIds].sort()))throw Error('Changed restoration identity set');
   const sources=new Map(records.flatMap(r=>r.dependencies.map(d=>[d.section,d] as const)));
@@ -39,8 +47,7 @@ export function buildCorrectedRestorationCandidate(report=read('scripts/data-rev
   const receipt:FloridaReviewedReceipt={schemaVersion:1,verificationPolicy:'quarterly-v1',reportHash:hash(report),eligibilityHash:hash(eligibility),checkedAt,expiresAt:quarterlyDeadline(oldest),documents};
   if(receipt.expiresAt!==previousProposal.proposedReceipt.expiresAt)throw Error('Unexpected change to original evidence ceiling');
   const reason=validateFloridaReviewedRefreshReceipt(receipt,report,eligibility,records,new Date(checkedAt));if(reason)throw Error(reason);
-  const active=read('scripts/data-review/output/florida-reviewed-refresh-receipt.json');
-  if(validateFloridaReviewedRefreshReceipt(active,report,eligibility,records,new Date(checkedAt))===null)throw Error('Active approval unexpectedly accepts corrections');
+  if(validateFloridaReviewedRefreshReceipt(previousProposal.proposedReceipt,report,eligibility,records,new Date(checkedAt))===null)throw Error('Historical approval unexpectedly accepts corrections');
   const role=(r:string)=>['definition','exception','justification'].includes(r)?'grading':r;
   const physical=(id:string,key:string,supportRole:string)=>`${id}|${key}|${supportRole}`;
   const perRecord=records.map(record=>{

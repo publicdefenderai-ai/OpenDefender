@@ -2,6 +2,7 @@ import {expect,it} from 'vitest';
 import{readFileSync,mkdtempSync,symlinkSync,readdirSync}from'node:fs';
 import{tmpdir}from'node:os';import{join}from'node:path';
 import candidate from '../scripts/data-review/florida-launch/corrected-restoration-candidate.json';
+import previousProposal from '../scripts/data-review/florida-launch/restoration-proposal.json';
 import inputs from '../scripts/data-review/florida-launch/corrected-restoration-inputs.json';
 import{buildCorrectedRestorationCandidate,writeCorrectedRestorationCandidate}from'../scripts/data-review/florida-launch/prepare-corrected-restoration';
 import report from '../scripts/data-review/output/florida-reviewed-analysis.json';
@@ -20,11 +21,12 @@ it('reproduces exactly and accounts source, identity, definition and physical-li
  expect(candidate.perRecord.filter(r=>!r.corrected).every(r=>r.addedPhysicalLinks.length===0)).toBe(true);
  expect(candidate.productionExistingOrMissingLinks).toBe('not_observed_no_database_access');
 });
-it('validates candidate bounds and tamper rejection without granting approval to the unchanged active receipt',()=>{
+it('validates candidate bounds and tamper rejection while rejecting the historical receipt after the approved installation',()=>{
  const now=new Date(candidate.receipt.checkedAt);
  expect(candidate.receipt.expiresAt).toBe(receipt.expiresAt);
  expect(validateFloridaReviewedRefreshReceipt(candidate.receipt,report,eligibility,records,now)).toBeNull();
- expect(validateFloridaReviewedRefreshReceipt(receipt,report,eligibility,records,now)).not.toBeNull();
+ expect(receipt).toEqual(candidate.receipt);
+ expect(validateFloridaReviewedRefreshReceipt(previousProposal.proposedReceipt,report,eligibility,records,now)).not.toBeNull();
  expect(validateFloridaReviewedRefreshReceipt(candidate.receipt,report,eligibility,records,new Date(candidate.receipt.expiresAt))).not.toBeNull();
  expect(validateFloridaReviewedRefreshReceipt({...candidate.receipt,expiresAt:new Date(Date.parse(candidate.receipt.expiresAt)+1).toISOString()},report,eligibility,records,now)).not.toBeNull();
  expect(validateFloridaReviewedRefreshReceipt({...candidate.receipt,documents:candidate.receipt.documents.slice(1)},report,eligibility,records,now)).not.toBeNull();
