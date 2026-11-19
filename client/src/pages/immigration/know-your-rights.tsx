@@ -33,8 +33,9 @@ import {
 export default function KnowYourRights() {
   useScrollToTop();
   const { i18n } = useTranslation();
-  const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
-  const locale = i18n.resolvedLanguage?.startsWith('zh') ? 'zh' : lang;
+  const language = i18n.resolvedLanguage || i18n.language;
+  const lang = language?.startsWith('es') ? 'es' : 'en';
+  const locale = language?.startsWith('zh') ? 'zh' : lang;
   const copy = immigrationRightsDesignCopy[locale];
   const [expandedScript, setExpandedScript] = useState<string | null>('door');
 
