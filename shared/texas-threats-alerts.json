@@ -940,7 +940,7 @@
   },
   {
     "id": "tx-pc-42-0601-injury-death",
-    "name": "False report to induce emergency response (injury death)",
+    "name": "False report to induce emergency response (serious injury or death)",
     "officialTitle": "FALSE REPORT TO INDUCE EMERGENCY RESPONSE.",
     "category": "felony",
     "code": "42.0601(b)(2)",

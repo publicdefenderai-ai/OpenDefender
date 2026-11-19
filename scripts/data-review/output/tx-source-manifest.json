@@ -100282,7 +100282,7 @@
     },
     {
       "chargeId": "tx-pc-42-0601-injury-death",
-      "catalogLabel": "False report to induce emergency response (injury death)",
+      "catalogLabel": "False report to induce emergency response (serious injury or death)",
       "catalogCode": "42.0601(b)(2)",
       "catalogCategory": "felony",
       "disposition": "exact_alias_rename",
@@ -100306,7 +100306,7 @@
           "subdivision": "(a)",
           "metadata": {
             "chargeId": "tx-pc-42-0601-injury-death",
-            "catalogLabel": "False report to induce emergency response (injury death)",
+            "catalogLabel": "False report to induce emergency response (serious injury or death)",
             "catalogCode": "42.0601(b)(2)",
             "catalogClassification": "felony",
             "elements": {
@@ -100346,7 +100346,7 @@
           "subdivision": "(b)(2)",
           "metadata": {
             "chargeId": "tx-pc-42-0601-injury-death",
-            "catalogLabel": "False report to induce emergency response (injury death)",
+            "catalogLabel": "False report to induce emergency response (serious injury or death)",
             "catalogCode": "42.0601(b)(2)",
             "catalogClassification": "felony",
             "elements": {
@@ -100386,7 +100386,7 @@
           "subdivision": "(a)(8), (41), (46)",
           "metadata": {
             "chargeId": "tx-pc-42-0601-injury-death",
-            "catalogLabel": "False report to induce emergency response (injury death)",
+            "catalogLabel": "False report to induce emergency response (serious injury or death)",
             "catalogCode": "42.0601(b)(2)",
             "catalogClassification": "felony",
             "elements": {
@@ -100426,7 +100426,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-42-0601-injury-death",
-            "catalogLabel": "False report to induce emergency response (injury death)",
+            "catalogLabel": "False report to induce emergency response (serious injury or death)",
             "catalogCode": "42.0601(b)(2)",
             "catalogClassification": "felony",
             "elements": {
@@ -100466,7 +100466,7 @@
           "subdivision": "(c), (d)",
           "metadata": {
             "chargeId": "tx-pc-42-0601-injury-death",
-            "catalogLabel": "False report to induce emergency response (injury death)",
+            "catalogLabel": "False report to induce emergency response (serious injury or death)",
             "catalogCode": "42.0601(b)(2)",
             "catalogClassification": "felony",
             "elements": {
@@ -100506,7 +100506,7 @@
           "subdivision": "(6)",
           "metadata": {
             "chargeId": "tx-pc-42-0601-injury-death",
-            "catalogLabel": "False report to induce emergency response (injury death)",
+            "catalogLabel": "False report to induce emergency response (serious injury or death)",
             "catalogCode": "42.0601(b)(2)",
             "catalogClassification": "felony",
             "elements": {
@@ -100546,7 +100546,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-42-0601-injury-death",
-            "catalogLabel": "False report to induce emergency response (injury death)",
+            "catalogLabel": "False report to induce emergency response (serious injury or death)",
             "catalogCode": "42.0601(b)(2)",
             "catalogClassification": "felony",
             "elements": {
@@ -100586,7 +100586,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-42-0601-injury-death",
-            "catalogLabel": "False report to induce emergency response (injury death)",
+            "catalogLabel": "False report to induce emergency response (serious injury or death)",
             "catalogCode": "42.0601(b)(2)",
             "catalogClassification": "felony",
             "elements": {
@@ -100626,7 +100626,7 @@
           "subdivision": null,
           "metadata": {
             "chargeId": "tx-pc-42-0601-injury-death",
-            "catalogLabel": "False report to induce emergency response (injury death)",
+            "catalogLabel": "False report to induce emergency response (serious injury or death)",
             "catalogCode": "42.0601(b)(2)",
             "catalogClassification": "felony",
             "elements": {

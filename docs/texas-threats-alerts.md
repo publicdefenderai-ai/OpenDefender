@@ -23,7 +23,7 @@ The old `tx-terroristic-threat` whole-section identity is withheld and requires 
 | False alarm or report (listed institution or public-service emergency) (`tx-pc-42-06-institution-service`) | §42.06(a) | Tex. Penal Code § 42.06(b) | State jail felony |
 | False report to induce emergency response (ordinary) (`tx-pc-42-0601-ordinary`) | §42.0601(a) | Tex. Penal Code § 42.0601(b) | Class A misdemeanor |
 | False report to induce emergency response (repeat) (`tx-pc-42-0601-repeat`) | §42.0601(a) | Tex. Penal Code § 42.0601(b)(1) | State jail felony |
-| False report to induce emergency response (injury death) (`tx-pc-42-0601-injury-death`) | §42.0601(a) | Tex. Penal Code § 42.0601(b)(2) | Third-degree felony |
+| False report to induce emergency response (serious injury or death) (`tx-pc-42-0601-injury-death`) | §42.0601(a) | Tex. Penal Code § 42.0601(b)(2) | Third-degree felony |
 
 ## Boundaries
 
