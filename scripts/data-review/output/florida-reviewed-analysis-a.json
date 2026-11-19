@@ -5,7 +5,7 @@
       "id": "fl-fs-777-04-1-criminal-attempt",
       "section": "777.04",
       "status": "eligible",
-      "reason": "Literal operative offense with complete current grading-exception closure.",
+      "reason": "Individually bound reviewed-family offense, scope and penalties.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "commits the offense of criminal attempt",
@@ -15,6 +15,7 @@
         "(1) \nA person who attempts to commit an offense prohibited by law and in such attempt does any act toward the commission of such offense, but fails in the perpetration or is intercepted or prevented in the execution thereof, commits the offense of criminal attempt, ranked for purposes of sentencing as provided in subsection (4). Criminal attempt includes the act of an adult who, with intent to commit an offense prohibited by law, allures, seduces, coaxes, or induces a child under the age of 12 to engage in an offense prohibited by law."
       ],
       "gradingQuotes": [
+        "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
         "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
       ],
       "requiredSections": [
@@ -62,15 +63,40 @@
           "section": "921.0023",
           "role": "grading",
           "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
-      "notes": "All intermediate grade branches and renunciation defense remain quoted in the same pinned primary section."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-777-04-2-criminal-solicitation",
       "section": "777.04",
       "status": "eligible",
-      "reason": "Literal operative offense; same closed grading and exception structure as attempt.",
+      "reason": "Individually bound reviewed-family offense, scope and penalties.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "commits the offense of criminal solicitation",
@@ -80,6 +106,7 @@
         "(2) \nA person who solicits another to commit an offense prohibited by law and in the course of such solicitation commands, encourages, hires, or requests another person to engage in specific conduct which would constitute such offense or an attempt to commit such offense commits the offense of criminal solicitation, ranked for purposes of sentencing as provided in subsection (4)."
       ],
       "gradingQuotes": [
+        "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
         "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
       ],
       "requiredSections": [
@@ -127,15 +154,40 @@
           "section": "921.0023",
           "role": "grading",
           "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
-      "notes": "Conditional classification is not a universal maximum."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-777-04-3-criminal-conspiracy",
       "section": "777.04",
       "status": "eligible",
-      "reason": "Literal operative offense; same closed grading and exception structure as attempt.",
+      "reason": "Individually bound reviewed-family offense, scope and penalties.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "commits the offense of criminal conspiracy",
@@ -145,6 +197,7 @@
         "(3) \nA person who agrees, conspires, combines, or confederates with another person or persons to commit any offense commits the offense of criminal conspiracy, ranked for purposes of sentencing as provided in subsection (4)."
       ],
       "gradingQuotes": [
+        "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
         "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
       ],
       "requiredSections": [
@@ -192,9 +245,34 @@
           "section": "921.0023",
           "role": "grading",
           "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
-      "notes": "Conditional classification is not a universal maximum."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-782-07-1-manslaughter",
@@ -770,7 +848,7 @@
       "id": "fl-fs-777-03-accessory-after-the-fact",
       "section": "777.03",
       "status": "eligible",
-      "reason": "Clear whole-section offense; current ranking tables close its conditional grades.",
+      "reason": "Individually bound reviewed-family offense, scope and penalties.",
       "identity": {
         "kind": "official_heading",
         "quote": "Accessory after the fact",
@@ -783,8 +861,6 @@
       ],
       "gradingQuotes": [
         "If the felony offense committed is a capital felony, the offense of accessory after the fact is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-        "If the felony offense committed is a life felony or a felony of the first degree, the offense of accessory after the fact is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-        "If the felony offense committed is a felony of the second degree or a felony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023, the offense of accessory after the fact is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
         "If the felony offense committed is a felony of the third degree ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, the offense of accessory after the fact is a misdemeanor of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
       ],
       "requiredSections": [
@@ -807,15 +883,40 @@
           "section": "921.0023",
           "role": "grading",
           "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
-      "notes": "All conduct and grade branches are quoted; both felony and misdemeanor classifications are operative."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-796-07-prohibiting-prostitution-and-related-acts",
       "section": "796.07",
       "status": "eligible",
-      "reason": "The official heading supplies a whole-section identity and the section exhaustively states conduct and repeat grades.",
+      "reason": "Individually bound reviewed-family offense, scope and penalties.",
       "identity": {
         "kind": "official_heading",
         "quote": "Prohibiting prostitution and related acts",
@@ -834,14 +935,7 @@
       ],
       "gradingQuotes": [
         "A misdemeanor of the second degree for a first violation, punishable as provided in s. 775.082 or s. 775.083.",
-        "A misdemeanor of the first degree for a second violation, punishable as provided in s. 775.082 or s. 775.083.",
-        "A felony of the third degree for a third or subsequent violation, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-        "A misdemeanor of the first degree for a first violation, punishable as provided in s. 775.082 or s. 775.083.",
-        "A felony of the third degree for a second violation, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-        "A felony of the second degree for a third or subsequent violation, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-        "A misdemeanor of the second degree for a first violation is reclassified as a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
-        "A misdemeanor of the first degree for a second violation is reclassified as a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-        "A felony of the third degree for a third or subsequent violation is reclassified as a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+        "A felony of the third degree for a third or subsequent violation, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
       ],
       "requiredSections": [
         {
@@ -853,9 +947,39 @@
           "section": "796.07",
           "role": "grading",
           "contentHash": "2db10ef8152b2810184e89cd93a4f35a3988589249c1d5a7016285d5b08814a7"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "796.08",
+          "role": "penalty",
+          "contentHash": "8ea0e8f1655a916c38991dd1bb89b231932dbae4cb65ac99c43e874376a0882c"
         }
       ],
-      "notes": "Evidence covers all subsection (2) conduct, repeat grades, and massage-establishment reclassification."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-784-011-assault",
@@ -1203,7 +1327,7 @@
       "id": "fl-fs-800-03-1-unlawful-exposure-of-sexual-organs",
       "section": "800.03",
       "status": "eligible",
-      "reason": "The operative clause supplies a literal offense name; conduct, exceptions, and repeat grading are complete.",
+      "reason": "Individually bound reviewed-family offense, scope and penalties.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "A person commits unlawful exposure of sexual organs by:",
@@ -1233,15 +1357,40 @@
           "section": "800.03",
           "role": "grading",
           "contentHash": "df7bd7420beae7f4fb552d265df5376026e0868b93ea5c093f5717b2cb28a940"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
-      "notes": "Primary conduct evidence is confined to subsection (1). The separately declared whole-section exception dependency supplies subsection (3), which excludes breastfeeding and mere nudity at a place set apart for that purpose; the whole-section grading dependency supplies subsection (2)."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-790-23-felons-and-delinquents-possession-of-firearms-ammunition-or-electric-weapons-or-devices-unlawful",
       "section": "790.23",
       "status": "eligible",
-      "reason": "Current section states prohibited status, conduct, exclusions, and conditional grades.",
+      "reason": "Individually bound reviewed-family offense, scope and penalties.",
       "identity": {
         "kind": "official_heading",
         "quote": "Felons and delinquents; possession of firearms, ammunition, or electric weapons or devices unlawful",
@@ -1256,8 +1405,7 @@
         "Found guilty of an offense that is a felony in another state, territory, or country and which was punishable by imprisonment for a term exceeding 1 year."
       ],
       "gradingQuotes": [
-        "Except as otherwise provided in subsection (4), any person who violates this section commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-        "Notwithstanding the provisions of s. 874.04, if the offense described in subsection (1) has been committed by a person who has previously qualified or currently qualifies for the penalty enhancements provided for in s. 874.04, the offense is a felony of the first degree, punishable by a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084."
+        "Except as otherwise provided in subsection (4), any person who violates this section commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
       ],
       "requiredSections": [
         {
@@ -1284,15 +1432,50 @@
           "section": "874.04",
           "role": "grading",
           "contentHash": "da872aaedc45f61809b1c04ae840b5f53e49e607e4693870a6e4c1dc3acdb647"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "775.087",
+          "role": "penalty",
+          "contentHash": "cea37b85d8ef3ce0aebe6313923ba4e591d1eca1be2a0af6f822ae633211e5db"
+        },
+        {
+          "section": "775.084",
+          "role": "definition",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
         }
       ],
-      "notes": "Primary conduct evidence is confined to subsection (1). The separately declared whole-section exception dependency supplies subsection (2), under which the section does not apply after the specified restoration of civil rights and firearm authority or the specified expungement; whole-section grading evidence supplies subsections (3) and (4)."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-790-221-possession-of-short-barreled-rifle-short-barreled-shotgun-or-machine-gun-penalty",
       "section": "790.221",
       "status": "eligible",
-      "reason": "Clear whole-section possession offense with express state and federal-law exceptions.",
+      "reason": "Individually bound reviewed-family offense, scope and penalties.",
       "identity": {
         "kind": "official_heading",
         "quote": "Possession of short-barreled rifle, short-barreled shotgun, or machine gun; penalty",
@@ -1315,9 +1498,34 @@
           "section": "790.001",
           "role": "definition",
           "contentHash": "cd1b42285d13324a3914a699ee10c76b8a46e8beca1199d11cf0cd37c2a2072f"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
         }
       ],
-      "notes": "Exception closure included."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-800-04-4-lewd-or-lascivious-battery",

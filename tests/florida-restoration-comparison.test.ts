@@ -1,3 +1,5 @@
+import previousCloseoutEvidence from '../scripts/data-review/florida-reviewed-closeout/previous-evidence.json';
+import closeout from '../scripts/data-review/output/florida-reviewed-closeout-corrections.json';
 import { expect, it } from 'vitest';
 import { createHash } from 'node:crypto';
 import { compareRetainedDocuments, compareFloridaReviewedSources } from '../scripts/data-review/florida-launch/compare-reviewed-sources';
@@ -32,8 +34,12 @@ it('accounts for all reviewed identities and every required dependency binding i
   for(const record of records){
     const coverage=report.recordCoverage.find((r:{id:string})=>r.id===record.chargeId);
     expect(coverage.complete).toBe(true);
-    expect(coverage.bindings.map((r:{sourceKey:string})=>r.sourceKey)).toEqual(record.dependencies.map(r=>r.sourceKey));
-    for(const dependency of record.dependencies)expect(coverage.bindings).toContainEqual(expect.objectContaining({sourceKey:dependency.sourceKey,retainedHash:dependency.contentHash,candidateHash:dependency.contentHash}));
+    // The historical comparison covers the pre-closeout dependency set, not the later correction.
+    const previous=previousCloseoutEvidence.find(row=>row.id===record.chargeId);
+    expect(Boolean(previous)).toBe(closeout.definitions.some(row=>row.id===record.chargeId));
+    const dependencies=previous?.requiredDependencies??record.dependencies;
+    expect(coverage.bindings.map((r:{sourceKey:string})=>r.sourceKey)).toEqual(dependencies.map(r=>r.sourceKey));
+    for(const dependency of dependencies)expect(coverage.bindings).toContainEqual(expect.objectContaining({sourceKey:dependency.sourceKey,retainedHash:dependency.contentHash,candidateHash:dependency.contentHash}));
   }
   expect(report.activeBefore).toEqual(report.activeAfter);
 });

@@ -2,7 +2,8 @@ import {execFileSync} from 'node:child_process';
 import {expect,it} from 'vitest';
 import packet from '../scripts/data-review/output/florida-property-fraud-corrections.json';
 import prior from '../scripts/data-review/florida-property-fraud/previous-definitions.json';
-import receipt from '../scripts/data-review/output/florida-reviewed-refresh-receipt.json';
+// Synthetic positive control only; the actual unchanged receipt rejects the later closeout corrections.
+import { syntheticFloridaReceipt as receipt } from './helpers/florida-receipt-fixture';
 import report from '../scripts/data-review/output/florida-reviewed-analysis.json';
 import ledger from '../shared/florida-reviewed-eligibility.json';
 import {getChargeById} from '../shared/criminal-charges';
