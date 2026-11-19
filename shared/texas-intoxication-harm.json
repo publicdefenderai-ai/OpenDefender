@@ -1,0 +1,2153 @@
+[
+  {
+    "id": "tx-pc-49-045-ordinary",
+    "name": "Driving while intoxicated with child passenger (ordinary state jail felony)",
+    "officialTitle": "DRIVING WHILE INTOXICATED WITH CHILD PASSENGER.",
+    "category": "felony",
+    "code": "49.045(a)",
+    "citation": "Tex. Penal Code § 49.045(a)",
+    "conduct": "Operating a motor vehicle in a public place while intoxicated when that vehicle is occupied by a passenger younger than 15. The statute does not require a crash or injury, parenthood, or proof that the passenger is the driver’s child. A passenger aged 15 does not meet this age condition. This ordinary profile does not assume either §49.09(b) qualifying-prior finding. Section 49.09(d)/(g) governs final convictions, specified deferred adjudication and the prohibition on using the same conviction for both this enhancement and Chapter 12 enhancement. Historical or foreign predicates require their own exact verification; this choice does not establish that any particular prior qualifies. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "State jail felony: ordinarily 180 days to two years in a state jail and a possible fine up to $10,000. The ordinary §49.04 Class B, open-container or 0.15 profiles do not replace this separate child-passenger offense. For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.045",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.045",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(c), (d), (g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.045",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.061",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.065",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "54040028"
+  },
+  {
+    "id": "tx-pc-49-045-prior-manslaughter",
+    "name": "Driving while intoxicated with child passenger (one qualifying intoxication-manslaughter conviction)",
+    "officialTitle": "DRIVING WHILE INTOXICATED WITH CHILD PASSENGER.",
+    "category": "felony",
+    "code": "49.045(a)",
+    "citation": "Tex. Penal Code § 49.045(a)",
+    "conduct": "Operating a motor vehicle in a public place while intoxicated when that vehicle is occupied by a passenger younger than 15. The statute does not require a crash or injury, parenthood, or proof that the passenger is the driver’s child. A passenger aged 15 does not meet this age condition. The trial establishes one prior §49.08 conviction or an out-of-state offense with substantially similar elements. A generic homicide conviction is not automatically this predicate. Section 49.09(d)/(g) governs final convictions, specified deferred adjudication and the prohibition on using the same conviction for both this enhancement and Chapter 12 enhancement. Historical or foreign predicates require their own exact verification; this choice does not establish that any particular prior qualifies. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The ordinary §49.04 Class B, open-container or 0.15 profiles do not replace this separate child-passenger offense. For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 10 days of confinement for this conviction/enhancement; this does not promise supervision eligibility.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.045",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.045",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(c), (d), (g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.045",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.061",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.065",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "54040028"
+  },
+  {
+    "id": "tx-pc-49-045-two-priors",
+    "name": "Driving while intoxicated with child passenger (two qualifying intoxication convictions)",
+    "officialTitle": "DRIVING WHILE INTOXICATED WITH CHILD PASSENGER.",
+    "category": "felony",
+    "code": "49.045(a)",
+    "citation": "Tex. Penal Code § 49.045(a)",
+    "conduct": "Operating a motor vehicle in a public place while intoxicated when that vehicle is occupied by a passenger younger than 15. The statute does not require a crash or injury, parenthood, or proof that the passenger is the driver’s child. A passenger aged 15 does not meet this age condition. The trial establishes two prior qualifying intoxication offenses under §49.09(c). Their statutory vehicle/mode and out-of-state requirements must be established; two unrelated convictions are not enough. Section 49.09(d)/(g) governs final convictions, specified deferred adjudication and the prohibition on using the same conviction for both this enhancement and Chapter 12 enhancement. Historical or foreign predicates require their own exact verification; this choice does not establish that any particular prior qualifies. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The ordinary §49.04 Class B, open-container or 0.15 profiles do not replace this separate child-passenger offense. For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 10 days of confinement for this conviction/enhancement; this does not promise supervision eligibility.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.045",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.045",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(c), (d), (g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.045",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.061",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.065",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "54040028"
+  },
+  {
+    "id": "tx-pc-49-07-ordinary",
+    "name": "Intoxication assault (ordinary serious bodily injury)",
+    "officialTitle": "INTOXICATION ASSAULT.",
+    "category": "felony",
+    "code": "49.07(a)",
+    "citation": "Tex. Penal Code § 49.07(a)",
+    "conduct": "By accident or mistake, causing serious bodily injury to another by reason of intoxication while operating an aircraft, watercraft or amusement ride, or while operating a motor vehicle in a public place; alternatively, causing that injury as a result of assembling a mobile amusement ride while intoxicated. The public-place condition attaches to the motor-vehicle alternative, not automatically to every listed mode. Section 49.07(b) requires substantial risk of death, serious permanent disfigurement, or protracted loss or impairment of a bodily member or organ; ordinary bodily injury alone is insufficient. Intoxication must cause the injury under the statutory alternative, not merely coincide with an accident. This ordinary profile excludes the special victim/duty and traumatic-brain-injury findings in §49.09(b-1)/(b-4). Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. For multiple §49.07/49.08 convictions arising from one criminal episode, §3.03(b)(1) permits concurrent or consecutive sentences; this is not an automatic stacking requirement.  For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 30 days of confinement for this conviction/enhancement; this does not promise supervision eligibility.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": "(b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "OC",
+        "section": "2151.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1), (b-4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-49-07-firefighter",
+    "name": "Intoxication assault (firefighter injured in actual official duty)",
+    "officialTitle": "INTOXICATION ASSAULT.",
+    "category": "felony",
+    "code": "49.07(a)",
+    "citation": "Tex. Penal Code § 49.07(a)",
+    "conduct": "By accident or mistake, causing serious bodily injury to another by reason of intoxication while operating an aircraft, watercraft or amusement ride, or while operating a motor vehicle in a public place; alternatively, causing that injury as a result of assembling a mobile amusement ride while intoxicated. The public-place condition attaches to the motor-vehicle alternative, not automatically to every listed mode. Section 49.07(b) requires substantial risk of death, serious permanent disfigurement, or protracted loss or impairment of a bodily member or organ; ordinary bodily injury alone is insufficient. Intoxication must cause the injury under the statutory alternative, not merely coincide with an accident. The injured person meets §49.09(b-3)’s employed-certification or organized-volunteer definition and is in the actual discharge of official duty. A volunteer unit must meet the no-remuneration and specified two monthly two-hour drills requirements. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. For multiple §49.07/49.08 convictions arising from one criminal episode, §3.03(b)(1) permits concurrent or consecutive sentences; this is not an automatic stacking requirement.  For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 30 days of confinement for this conviction/enhancement; this does not promise supervision eligibility.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": "(b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "OC",
+        "section": "2151.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1), (b-2), (b-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "common roles in (1)-(4), both retained versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-49-07-ems",
+    "name": "Intoxication assault (EMS personnel injured in actual official duty)",
+    "officialTitle": "INTOXICATION ASSAULT.",
+    "category": "felony",
+    "code": "49.07(a)",
+    "citation": "Tex. Penal Code § 49.07(a)",
+    "conduct": "By accident or mistake, causing serious bodily injury to another by reason of intoxication while operating an aircraft, watercraft or amusement ride, or while operating a motor vehicle in a public place; alternatively, causing that injury as a result of assembling a mobile amusement ride while intoxicated. The public-place condition attaches to the motor-vehicle alternative, not automatically to every listed mode. Section 49.07(b) requires substantial risk of death, serious permanent disfigurement, or protracted loss or impairment of a bodily member or organ; ordinary bodily injury alone is insufficient. Intoxication must cause the injury under the statutory alternative, not merely coincide with an accident. The injured person meets Health and Safety Code §773.003’s emergency medical services personnel definition and is in the actual discharge of official duty; a generic medical occupation alone is not sufficient. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. For multiple §49.07/49.08 convictions arising from one criminal episode, §3.03(b)(1) permits concurrent or consecutive sentences; this is not an automatic stacking requirement.  For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 30 days of confinement for this conviction/enhancement; this does not promise supervision eligibility.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": "(b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "OC",
+        "section": "2151.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1), (b-2), (b-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "common roles in (1)-(4), both retained versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-49-07-peace-officer",
+    "name": "Intoxication assault (specified peace officer injured in actual official duty)",
+    "officialTitle": "INTOXICATION ASSAULT.",
+    "category": "felony",
+    "code": "49.07(a)",
+    "citation": "Tex. Penal Code § 49.07(a)",
+    "conduct": "By accident or mistake, causing serious bodily injury to another by reason of intoxication while operating an aircraft, watercraft or amusement ride, or while operating a motor vehicle in a public place; alternatively, causing that injury as a result of assembling a mobile amusement ride while intoxicated. The public-place condition attaches to the motor-vehicle alternative, not automatically to every listed mode. Section 49.07(b) requires substantial risk of death, serious permanent disfigurement, or protracted loss or impairment of a bodily member or organ; ordinary bodily injury alone is insufficient. Intoxication must cause the injury under the statutory alternative, not merely coincide with an accident. The injured person is a sheriff, constable, municipal police officer or DPS officer within article 2A.001(1)-(4), common to both retained official versions, and is in the actual discharge of official duty. The selector does not clear every other officer class. Section 49.09(b-1)(2) nevertheless grades qualifying serious bodily injury to any legally defined peace officer in actual official duty as first degree; absence of that role from this selector does not reduce its statutory grade. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. For multiple §49.07/49.08 convictions arising from one criminal episode, §3.03(b)(1) permits concurrent or consecutive sentences; this is not an automatic stacking requirement.  For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 30 days of confinement for this conviction/enhancement; this does not promise supervision eligibility.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": "(b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "OC",
+        "section": "2151.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1), (b-2), (b-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "common roles in (1)-(4), both retained versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-49-07-judge",
+    "name": "Intoxication assault (judge injured in actual official duty)",
+    "officialTitle": "INTOXICATION ASSAULT.",
+    "category": "felony",
+    "code": "49.07(a)",
+    "citation": "Tex. Penal Code § 49.07(a)",
+    "conduct": "By accident or mistake, causing serious bodily injury to another by reason of intoxication while operating an aircraft, watercraft or amusement ride, or while operating a motor vehicle in a public place; alternatively, causing that injury as a result of assembling a mobile amusement ride while intoxicated. The public-place condition attaches to the motor-vehicle alternative, not automatically to every listed mode. Section 49.07(b) requires substantial risk of death, serious permanent disfigurement, or protracted loss or impairment of a bodily member or organ; ordinary bodily injury alone is insufficient. Intoxication must cause the injury under the statutory alternative, not merely coincide with an accident. The injured person is a judge in the actual discharge of official duty. This statutory duty condition is required; the offense does not add the knowledge-of-status or retaliation alternatives from unrelated assault statutes. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. For multiple §49.07/49.08 convictions arising from one criminal episode, §3.03(b)(1) permits concurrent or consecutive sentences; this is not an automatic stacking requirement.  For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 30 days of confinement for this conviction/enhancement; this does not promise supervision eligibility.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": "(b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "OC",
+        "section": "2151.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1), (b-2), (b-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "common roles in (1)-(4), both retained versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-49-07-persistent-vegetative-state",
+    "name": "Intoxication assault (traumatic brain injury resulting in persistent vegetative state)",
+    "officialTitle": "INTOXICATION ASSAULT.",
+    "category": "felony",
+    "code": "49.07(a)",
+    "citation": "Tex. Penal Code § 49.07(a)",
+    "conduct": "By accident or mistake, causing serious bodily injury to another by reason of intoxication while operating an aircraft, watercraft or amusement ride, or while operating a motor vehicle in a public place; alternatively, causing that injury as a result of assembling a mobile amusement ride while intoxicated. The public-place condition attaches to the motor-vehicle alternative, not automatically to every listed mode. Section 49.07(b) requires substantial risk of death, serious permanent disfigurement, or protracted loss or impairment of a bodily member or organ; ordinary bodily injury alone is insufficient. Intoxication must cause the injury under the statutory alternative, not merely coincide with an accident. The serious bodily injury is in the nature of traumatic brain injury resulting in a persistent vegetative state. Brain injury, concussion, coma or lasting impairment alone is not silently equated to that specific statutory finding. The first-degree officer/judge branch controls if independently established. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. For multiple §49.07/49.08 convictions arising from one criminal episode, §3.03(b)(1) permits concurrent or consecutive sentences; this is not an automatic stacking requirement.  For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 30 days of confinement for this conviction/enhancement; this does not promise supervision eligibility.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.07",
+        "subdivision": "(b), (c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "OC",
+        "section": "2151.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1), (b-2), (b-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "common roles in (1)-(4), both retained versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-vehicular-homicide",
+    "name": "Intoxication Manslaughter",
+    "officialTitle": "INTOXICATION MANSLAUGHTER.",
+    "category": "felony",
+    "code": "49.08",
+    "citation": "Tex. Penal Code § 49.08",
+    "conduct": "Operating a motor vehicle in a public place, an aircraft, watercraft or amusement ride, or assembling a mobile amusement ride, while intoxicated, and by reason of that intoxication causing another’s death by accident or mistake. The public-place requirement attaches to motor-vehicle operation. Being intoxicated when someone dies does not alone establish the required causal link. The two retained 2025 versions of §49.09(b-2) share the protected-victim grade; one additionally addresses multiple deaths and the other a prior intoxication conviction plus a Chapter 51 violation. That Chapter 51-dependent branch is not cleared by this choice and requires separate predicate, version and applicable enforcement verification; it is not declared invalid or inapplicable. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. This is the ordinary second-degree range, not a claim that every §49.08 case has that grade: qualifying protected-victim or multiple-death findings can produce first-degree punishment (five to 99 years or life and up to $10,000). For multiple §49.07/49.08 convictions arising from one criminal episode, §3.03(b)(1) permits concurrent or consecutive sentences; this is not an automatic stacking requirement.  For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 120 days of confinement for this conviction/enhancement; this does not promise supervision eligibility. For applicable offenses from September 1, 2023, article 42.0375 requires court-set monthly restitution for a child whose parent or guardian was the victim, through age 18 or high-school graduation, whichever is later, but not once the recipient is 19. The court determines the reasonable necessary amount using the statutory factors; confinement does not automatically erase arrears.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "both retained (b-2) versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "OC",
+        "section": "2151.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1), (b-2), (b-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "common roles in (1)-(4), both retained versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42.0375",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-49-08-firefighter",
+    "name": "Intoxication manslaughter (death of firefighter in actual official duty)",
+    "officialTitle": "INTOXICATION MANSLAUGHTER.",
+    "category": "felony",
+    "code": "49.08(a)",
+    "citation": "Tex. Penal Code § 49.08(a)",
+    "conduct": "Operating a motor vehicle in a public place, an aircraft, watercraft or amusement ride, or assembling a mobile amusement ride, while intoxicated, and by reason of that intoxication causing another’s death by accident or mistake. The public-place requirement attaches to motor-vehicle operation. Being intoxicated when someone dies does not alone establish the required causal link. The person killed meets §49.09(b-3)’s employed-certification or organized-volunteer firefighter definition and was in actual official duty. The statutory volunteer-unit conditions must be met. The two retained 2025 versions of §49.09(b-2) share the protected-victim grade; one additionally addresses multiple deaths and the other a prior intoxication conviction plus a Chapter 51 violation. That Chapter 51-dependent branch is not cleared by this choice and requires separate predicate, version and applicable enforcement verification; it is not declared invalid or inapplicable. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. For multiple §49.07/49.08 convictions arising from one criminal episode, §3.03(b)(1) permits concurrent or consecutive sentences; this is not an automatic stacking requirement.  For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 120 days of confinement for this conviction/enhancement; this does not promise supervision eligibility. For applicable offenses from September 1, 2023, article 42.0375 requires court-set monthly restitution for a child whose parent or guardian was the victim, through age 18 or high-school graduation, whichever is later, but not once the recipient is 19. The court determines the reasonable necessary amount using the statutory factors; confinement does not automatically erase arrears.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-2)(1), both versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "OC",
+        "section": "2151.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1), (b-2), (b-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "common roles in (1)-(4), both retained versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42.0375",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-49-08-ems",
+    "name": "Intoxication manslaughter (death of EMS personnel in actual official duty)",
+    "officialTitle": "INTOXICATION MANSLAUGHTER.",
+    "category": "felony",
+    "code": "49.08(a)",
+    "citation": "Tex. Penal Code § 49.08(a)",
+    "conduct": "Operating a motor vehicle in a public place, an aircraft, watercraft or amusement ride, or assembling a mobile amusement ride, while intoxicated, and by reason of that intoxication causing another’s death by accident or mistake. The public-place requirement attaches to motor-vehicle operation. Being intoxicated when someone dies does not alone establish the required causal link. The person killed meets Health and Safety Code §773.003’s EMS personnel definition and was in actual official duty. The two retained 2025 versions of §49.09(b-2) share the protected-victim grade; one additionally addresses multiple deaths and the other a prior intoxication conviction plus a Chapter 51 violation. That Chapter 51-dependent branch is not cleared by this choice and requires separate predicate, version and applicable enforcement verification; it is not declared invalid or inapplicable. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. For multiple §49.07/49.08 convictions arising from one criminal episode, §3.03(b)(1) permits concurrent or consecutive sentences; this is not an automatic stacking requirement.  For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 120 days of confinement for this conviction/enhancement; this does not promise supervision eligibility. For applicable offenses from September 1, 2023, article 42.0375 requires court-set monthly restitution for a child whose parent or guardian was the victim, through age 18 or high-school graduation, whichever is later, but not once the recipient is 19. The court determines the reasonable necessary amount using the statutory factors; confinement does not automatically erase arrears.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-2)(1), both versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "OC",
+        "section": "2151.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1), (b-2), (b-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "common roles in (1)-(4), both retained versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42.0375",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-49-08-peace-officer",
+    "name": "Intoxication manslaughter (death of specified peace officer in actual official duty)",
+    "officialTitle": "INTOXICATION MANSLAUGHTER.",
+    "category": "felony",
+    "code": "49.08(a)",
+    "citation": "Tex. Penal Code § 49.08(a)",
+    "conduct": "Operating a motor vehicle in a public place, an aircraft, watercraft or amusement ride, or assembling a mobile amusement ride, while intoxicated, and by reason of that intoxication causing another’s death by accident or mistake. The public-place requirement attaches to motor-vehicle operation. Being intoxicated when someone dies does not alone establish the required causal link. The person killed was a sheriff, constable, municipal police officer or DPS officer within article 2A.001(1)-(4), common to both retained versions, in actual official duty. This limited selector does not decide additional officer classes; the statutory first-degree rule still applies to any legally qualifying peace officer with the duty finding. The two retained 2025 versions of §49.09(b-2) share the protected-victim grade; one additionally addresses multiple deaths and the other a prior intoxication conviction plus a Chapter 51 violation. That Chapter 51-dependent branch is not cleared by this choice and requires separate predicate, version and applicable enforcement verification; it is not declared invalid or inapplicable. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. For multiple §49.07/49.08 convictions arising from one criminal episode, §3.03(b)(1) permits concurrent or consecutive sentences; this is not an automatic stacking requirement.  For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 120 days of confinement for this conviction/enhancement; this does not promise supervision eligibility. For applicable offenses from September 1, 2023, article 42.0375 requires court-set monthly restitution for a child whose parent or guardian was the victim, through age 18 or high-school graduation, whichever is later, but not once the recipient is 19. The court determines the reasonable necessary amount using the statutory factors; confinement does not automatically erase arrears.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-2)(1), both versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "OC",
+        "section": "2151.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1), (b-2), (b-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "common roles in (1)-(4), both retained versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42.0375",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-49-08-judge",
+    "name": "Intoxication manslaughter (death of judge in actual official duty)",
+    "officialTitle": "INTOXICATION MANSLAUGHTER.",
+    "category": "felony",
+    "code": "49.08(a)",
+    "citation": "Tex. Penal Code § 49.08(a)",
+    "conduct": "Operating a motor vehicle in a public place, an aircraft, watercraft or amusement ride, or assembling a mobile amusement ride, while intoxicated, and by reason of that intoxication causing another’s death by accident or mistake. The public-place requirement attaches to motor-vehicle operation. Being intoxicated when someone dies does not alone establish the required causal link. The person killed was a judge in actual official duty. No extra knowledge-of-status requirement is imported from unrelated offenses. The two retained 2025 versions of §49.09(b-2) share the protected-victim grade; one additionally addresses multiple deaths and the other a prior intoxication conviction plus a Chapter 51 violation. That Chapter 51-dependent branch is not cleared by this choice and requires separate predicate, version and applicable enforcement verification; it is not declared invalid or inapplicable. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. For multiple §49.07/49.08 convictions arising from one criminal episode, §3.03(b)(1) permits concurrent or consecutive sentences; this is not an automatic stacking requirement.  For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 120 days of confinement for this conviction/enhancement; this does not promise supervision eligibility. For applicable offenses from September 1, 2023, article 42.0375 requires court-set monthly restitution for a child whose parent or guardian was the victim, through age 18 or high-school graduation, whichever is later, but not once the recipient is 19. The court determines the reasonable necessary amount using the statutory factors; confinement does not automatically erase arrears.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-2)(1), both versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "OC",
+        "section": "2151.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1), (b-2), (b-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "common roles in (1)-(4), both retained versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42.0375",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-49-08-multiple-deaths",
+    "name": "Intoxication manslaughter (more than one death in same criminal transaction)",
+    "officialTitle": "INTOXICATION MANSLAUGHTER.",
+    "category": "felony",
+    "code": "49.08(a)",
+    "citation": "Tex. Penal Code § 49.08(a)",
+    "conduct": "Operating a motor vehicle in a public place, an aircraft, watercraft or amusement ride, or assembling a mobile amusement ride, while intoxicated, and by reason of that intoxication causing another’s death by accident or mistake. The public-place requirement attaches to motor-vehicle operation. Being intoxicated when someone dies does not alone establish the required causal link. More than one person died during the same criminal transaction. This is the September 1, 2025 S.B. 745 version of §49.09(b-2)(2), not an inference from multiple charges or separate transactions. The other retained 2025 amendment has a different additional branch; this choice does not erase that version or adjudicate its Chapter 51 predicate. The two retained 2025 versions of §49.09(b-2) share the protected-victim grade; one additionally addresses multiple deaths and the other a prior intoxication conviction plus a Chapter 51 violation. That Chapter 51-dependent branch is not cleared by this choice and requires separate predicate, version and applicable enforcement verification; it is not declared invalid or inapplicable. Intoxication can mean loss of normal mental or physical faculties from the listed substances or a statutory alcohol concentration of 0.08 or more; a 0.08 test is not indispensable under the faculties theory. Lawful entitlement to use a substance is not a defense under §49.10. Section 49.11 removes the need to prove a separate culpable mental state; it does not remove the conduct, intoxication or causation elements. ",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. For multiple §49.07/49.08 convictions arising from one criminal episode, §3.03(b)(1) permits concurrent or consecutive sentences; this is not an automatic stacking requirement.  For qualifying motor-vehicle intoxication convictions, Transportation Code §709.001 adds its traffic fine ($3,000, $4,500 or $6,000 under its distinct conviction-period/test conditions); a judicial indigency finding requires waiver of fines and costs under that section. Separate license, community-supervision and case-specific consequences require review. Qualifying priors and other legally required findings can change punishment. If community supervision is granted, article 42A.401 requires at least 120 days of confinement for this conviction/enhancement; this does not promise supervision eligibility. For applicable offenses from September 1, 2023, article 42.0375 requires court-set monthly restitution for a child whose parent or guardian was the victim, through age 18 or high-school graduation, whichever is later, but not once the recipient is 19. The court determines the reasonable necessary amount using the statutory factors; confinement does not automatically erase arrears.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "49.08",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-2)(2), S.B. 745 version",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.34",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(26), (38), (40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.10",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.11",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "709.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "OC",
+        "section": "2151.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.09",
+        "subdivision": "(b-1), (b-2), (b-3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": "common roles in (1)-(4), both retained versions",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "3.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.401",
+        "subdivision": "(a), (b)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42.0375",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]

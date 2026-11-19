@@ -209,3 +209,11 @@ test("Texas prohibited possession preserves source-specific authorizations and s
  for(const r of rows)expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,name:r.name,code:r.code,description:r.conduct,maxPenalty:r.penalty,category:r.category});
  for(const r of rows.filter((r:{id:string})=>r.id.endsWith("employee-death")))expect(charges.find((c:{id:string})=>c.id===r.id).maxPenalty).toContain("$250,000");
 });
+
+
+test("Texas intoxication-harm selector preserves child, injury and death grading", async ({request})=>{
+ const response=await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");expect(response.ok()).toBe(true);
+ const {charges}=await response.json();const rows=JSON.parse(readFileSync("shared/texas-intoxication-harm.json","utf8"));
+ for(const r of rows){expect(charges.filter((c:{id:string})=>c.id===r.id)).toHaveLength(1);expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,name:r.name,code:r.code,description:r.conduct,maxPenalty:r.penalty,category:r.category});}
+ expect(charges.find((c:{id:string})=>c.id==="tx-vehicular-homicide").maxPenalty).toContain("not once the recipient is 19");
+});

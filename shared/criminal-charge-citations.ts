@@ -3538,13 +3538,6 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm",
   },
-  "tx-vehicular-homicide": {
-    citation: "Tex. Penal Code § 49.08",
-    confidence: "high",
-    lastVerified: "2026-04",
-    source: "OpenLaws verified 2026-04",
-    sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm",
-  },
   "tx-involuntary-manslaughter": {
     citation: "Tex. Penal Code § 19.04",
     confidence: "high",
