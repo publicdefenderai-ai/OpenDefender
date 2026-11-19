@@ -1,58 +1,74 @@
-import { motion } from "framer-motion";
-import { 
-  UserCheck, 
-  AlertTriangle, 
+import "./find-attorney.css";
+import {
+  AlertTriangle,
   ExternalLink,
   Phone
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { useTranslation } from 'react-i18next';
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { ClickToCall } from "@/components/ui/click-to-call";
-import { ImmigrationDetailLayout } from "@/components/immigration/immigration-detail-layout";
+import { ScanFirstPageFrame, PageSectionNav } from '@/components/layout/scan-first-page-frame';
+import { PageBreadcrumb } from '@/components/navigation/page-breadcrumb';
+import { RapidlyEvolvingNotice } from '@/components/immigration/rapidly-evolving-notice';
+import { immigrationAttorneyCopy } from '@/locales/immigration-attorney-design';
 
 export default function FindAttorney() {
   useScrollToTop();
-  const { t } = useTranslation();
-  
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en';
+  const design = immigrationAttorneyCopy[locale];
+
   const breadcrumbItems = [
     { label: t('breadcrumb.home', 'Home'), href: '/' },
     { label: t('breadcrumb.immigrationGuidance', 'Immigration Guidance'), href: '/immigration-guidance' }
   ];
-  
+
   return (
-    <ImmigrationDetailLayout
-      title={t('immigration.attorney.title')}
-      subtitle={t('immigration.attorney.subtitle')}
-      breadcrumbItems={breadcrumbItems}
-      icon={<UserCheck className="h-7 w-7" />}
-      alert={
+    <ScanFirstPageFrame mainClassName="immigration-attorney-page">
+      <PageBreadcrumb items={breadcrumbItems} currentPage={t('immigration.attorney.title')} />
+      <header className="immigration-attorney-hero">
+        <div>
+          <h1 data-testid="immigration-detail-title">{design.title}{" "}<span>{design.accent}</span></h1>
+          <p data-testid="immigration-detail-subtitle">{t('immigration.attorney.subtitle')}</p>
+        </div>
+        <img className="immigration-attorney-art" src="/images/design/immigration-attorney.svg" width="260" height="230" alt="" aria-hidden="true" />
+      </header>
+      <div className="immigration-attorney-notice">
         <Alert className="border-red-300 bg-red-50 dark:border-red-700 dark:bg-red-950/40">
           <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400" />
           <AlertDescription className="text-red-900 dark:text-red-200" data-testid="alert-scam-warning">
             <strong>{t('immigration.attorney.scamWarning')}</strong> {t('immigration.attorney.scamWarningText')}
           </AlertDescription>
         </Alert>
-      }
-    >
-
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-2xl font-bold text-center mb-8" data-testid="text-who-can-help-title">
+      </div>
+      <div className="immigration-attorney-paths">
+        <a href="#affordable-help"><span>{design.affordable}</span><strong>{design.affordableAction}</strong></a>
+        <a href="https://www.ailalawyer.com/" target="_blank" rel="noopener noreferrer"><span>{design.private}</span><strong>{t('immigration.attorney.verify.aila.link')}</strong></a>
+      </div>
+      <PageSectionNav ariaLabel={design.nav} items={[
+        {id:'who-can-help',label:design.sections[0]},
+        {id:'check-credentials',label:design.sections[1]},
+        {id:'warning-signs',label:design.sections[2]},
+        {id:'affordable-help',label:design.sections[3]},
+        {id:'report-fraud',label:design.sections[4]}
+      ]} />
+      <RapidlyEvolvingNotice />
+      <section id="who-can-help" tabIndex={-1} className="immigration-attorney-section">
+        <div className="min-w-0">
+            <h2 className="text-2xl font-bold mb-8" data-testid="text-who-can-help-title">
               {t('immigration.attorney.whoCanHelp.title')}
             </h2>
-          </ScrollReveal>
-          
+
+
           <div className="grid lg:grid-cols-2 gap-8">
-            <ScrollReveal delay={0.1}>
-              <Card className="h-full">
+              <Card className="immigration-attorney-plain h-full">
                 <CardHeader>
-                  <CardTitle data-testid="text-attorneys-title">
+                  <h3 data-testid="text-attorneys-title">
                     {t('immigration.attorney.whoCanHelp.attorneys.title')}
-                  </CardTitle>
+                  </h3>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-sm text-muted-foreground">
@@ -65,14 +81,12 @@ export default function FindAttorney() {
                   </ul>
                 </CardContent>
               </Card>
-            </ScrollReveal>
 
-            <ScrollReveal delay={0.2}>
-              <Card className="h-full">
+              <Card className="immigration-attorney-plain h-full">
                 <CardHeader>
-                  <CardTitle data-testid="text-accredited-reps-title">
+                  <h3 data-testid="text-accredited-reps-title">
                     {t('immigration.attorney.whoCanHelp.accredited.title')}
-                  </CardTitle>
+                  </h3>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-sm text-muted-foreground">
@@ -85,28 +99,26 @@ export default function FindAttorney() {
                   </ul>
                 </CardContent>
               </Card>
-            </ScrollReveal>
+
           </div>
         </div>
       </section>
 
-      <section className="py-12 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-2xl font-bold text-center mb-8" data-testid="text-how-to-verify-title">
+      <section id="check-credentials" tabIndex={-1} className="immigration-attorney-section">
+        <div className="min-w-0">
+            <h2 className="text-2xl font-bold mb-8" data-testid="text-how-to-verify-title">
               {t('immigration.attorney.verify.title')}
             </h2>
-          </ScrollReveal>
-          
+
+
           <div className="grid md:grid-cols-3 gap-6">
-            <ScrollReveal delay={0.1}>
-              <Card className="h-full">
+              <Card className="immigration-attorney-plain h-full">
                 <CardContent className="pt-6">
                   <h3 className="font-semibold mb-2">{t('immigration.attorney.verify.stateBar.title')}</h3>
                   <p className="text-sm text-muted-foreground mb-4">
                     {t('immigration.attorney.verify.stateBar.description')}
                   </p>
-                  <a 
+                  <a
                     href="https://www.americanbar.org/groups/legal_services/flh-home/flh-bar-directories-and-lawyer-finders/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -118,16 +130,14 @@ export default function FindAttorney() {
                   </a>
                 </CardContent>
               </Card>
-            </ScrollReveal>
 
-            <ScrollReveal delay={0.2}>
-              <Card className="h-full">
+              <Card className="immigration-attorney-plain h-full">
                 <CardContent className="pt-6">
                   <h3 className="font-semibold mb-2">{t('immigration.attorney.verify.eoir.title')}</h3>
                   <p className="text-sm text-muted-foreground mb-4">
                     {t('immigration.attorney.verify.eoir.description')}
                   </p>
-                  <a 
+                  <a
                     href="https://www.justice.gov/eoir/recognized-organizations-and-accredited-representatives-roster-state-and-city"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -139,16 +149,14 @@ export default function FindAttorney() {
                   </a>
                 </CardContent>
               </Card>
-            </ScrollReveal>
 
-            <ScrollReveal delay={0.3}>
-              <Card className="h-full">
+              <Card className="immigration-attorney-plain h-full">
                 <CardContent className="pt-6">
                   <h3 className="font-semibold mb-2">{t('immigration.attorney.verify.aila.title')}</h3>
                   <p className="text-sm text-muted-foreground mb-4">
                     {t('immigration.attorney.verify.aila.description')}
                   </p>
-                  <a 
+                  <a
                     href="https://www.ailalawyer.com/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -160,26 +168,24 @@ export default function FindAttorney() {
                   </a>
                 </CardContent>
               </Card>
-            </ScrollReveal>
+
           </div>
         </div>
       </section>
 
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-2xl font-bold text-center mb-8" data-testid="text-red-flags-title">
+      <section id="warning-signs" tabIndex={-1} className="immigration-attorney-section">
+        <div className="min-w-0">
+            <h2 className="text-2xl font-bold mb-8" data-testid="text-red-flags-title">
               {t('immigration.attorney.redFlags.title')}
             </h2>
-          </ScrollReveal>
-          
+
+
           <div className="grid md:grid-cols-2 gap-8">
-            <ScrollReveal delay={0.1}>
               <Card className="h-full border-l-4 border-l-red-500">
                 <CardHeader>
-                  <CardTitle className="text-red-700 dark:text-red-400">
+                  <h3 className="text-red-700 dark:text-red-400">
                     {t('immigration.attorney.redFlags.warnings.title')}
-                  </CardTitle>
+                  </h3>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
@@ -193,14 +199,12 @@ export default function FindAttorney() {
                   </ul>
                 </CardContent>
               </Card>
-            </ScrollReveal>
 
-            <ScrollReveal delay={0.2}>
               <Card className="h-full border-l-4 border-l-green-500">
                 <CardHeader>
-                  <CardTitle className="text-green-700 dark:text-green-400">
+                  <h3 className="text-green-700 dark:text-green-400">
                     {t('immigration.attorney.redFlags.legitimate.title')}
-                  </CardTitle>
+                  </h3>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
@@ -214,25 +218,24 @@ export default function FindAttorney() {
                   </ul>
                 </CardContent>
               </Card>
-            </ScrollReveal>
+
           </div>
         </div>
       </section>
 
-      <section className="py-12 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4">
-          <ScrollReveal>
+      <section id="affordable-help" tabIndex={-1} className="immigration-attorney-section">
+        <div className="min-w-0">
             <Card className="bg-blue-50 border-blue-200 dark:bg-blue-950/30 dark:border-blue-800">
               <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-blue-800 dark:text-blue-300">
+                <h2 className="flex items-center gap-3 text-blue-800 dark:text-blue-300">
                   <Phone className="h-5 w-5" />
                   {t('immigration.attorney.freeHelp.title')}
-                </CardTitle>
+                </h2>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">{t('immigration.attorney.freeHelp.organizations')}</h4>
+                    <h3 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">{t('immigration.attorney.freeHelp.organizations')}</h3>
                     <ul className="space-y-2 text-sm text-blue-800 dark:text-blue-300 list-disc list-inside">
                       <li>{t('immigration.attorney.freeHelp.org1')}</li>
                       <li>{t('immigration.attorney.freeHelp.org2')}</li>
@@ -241,7 +244,7 @@ export default function FindAttorney() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">{t('immigration.attorney.freeHelp.findingHelp')}</h4>
+                    <h3 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">{t('immigration.attorney.freeHelp.findingHelp')}</h3>
                     <ul className="space-y-2 text-sm text-blue-800 dark:text-blue-300 list-disc list-inside">
                       <li>{t('immigration.attorney.freeHelp.find1')}</li>
                       <li>{t('immigration.attorney.freeHelp.find2')}</li>
@@ -249,18 +252,20 @@ export default function FindAttorney() {
                     </ul>
                   </div>
                 </div>
-                
+
                 <div className="mt-6 pt-6 border-t border-blue-200 dark:border-blue-700">
-                  <h4 className="font-semibold mb-4 text-blue-900 dark:text-blue-200">
+                  <h3 className="font-semibold mb-4 text-blue-900 dark:text-blue-200">
                     {t('immigration.attorney.freeHelp.hotlines', 'Emergency Hotlines')}
-                  </h4>
+                  </h3>
                   <div className="flex flex-wrap gap-3">
                     <ClickToCall
+                      variant="outline"
                       phoneNumber="1-800-354-0365"
                       label={t('immigration.attorney.freeHelp.nilfHotline', 'NILF Hotline')}
                       data-testid="button-call-nilf"
                     />
                     <ClickToCall
+                      variant="outline"
                       phoneNumber="1-888-839-8682"
                       label={t('immigration.attorney.freeHelp.immigrantDefense', 'Immigrant Defense')}
                       data-testid="button-call-immigrant-defense"
@@ -269,21 +274,20 @@ export default function FindAttorney() {
                 </div>
               </CardContent>
             </Card>
-          </ScrollReveal>
+
         </div>
       </section>
 
-      <section className="py-12 bg-background">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <ScrollReveal>
+      <section id="report-fraud" tabIndex={-1} className="immigration-attorney-section">
+        <div className="min-w-0">
             <h2 className="text-2xl font-bold mb-6">{t('immigration.attorney.reportFraud.title')}</h2>
             <p className="text-muted-foreground mb-6">
               {t('immigration.attorney.reportFraud.subtitle')}
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="https://www.ftc.gov/complaint" 
-                target="_blank" 
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="https://www.ftc.gov/complaint"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
                 data-testid="link-ftc-complaint"
@@ -291,9 +295,9 @@ export default function FindAttorney() {
                 {t('immigration.attorney.reportFraud.ftc')}
                 <ExternalLink className="h-4 w-4" />
               </a>
-              <a 
-                href="https://www.justice.gov/eoir/immigration-court-information" 
-                target="_blank" 
+              <a
+                href="https://www.justice.gov/eoir/immigration-court-information"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
                 data-testid="link-eoir-complaint"
@@ -302,10 +306,10 @@ export default function FindAttorney() {
                 <ExternalLink className="h-4 w-4" />
               </a>
             </div>
-          </ScrollReveal>
+
         </div>
       </section>
 
-    </ImmigrationDetailLayout>
+    </ScanFirstPageFrame>
   );
 }
