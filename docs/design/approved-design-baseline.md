@@ -728,6 +728,12 @@ The directory retains the published program-scope disclaimer alongside the varia
 
 The Chinese Case Guidance introduction now matches the English description of a plain-language overview of the current stage. Its How To capture is refreshed with that copy. When a later PR changes the visible introduction, navigation or layout of any of the five captured pages, refresh the affected localized How To screenshots in the same PR. Keep captures free of user data and use 1280 × 960 light-mode WebP images.
 
+### Immigration bond hearings
+
+The immigration-bond-content.html layout uses the approved courthouse illustration, a five-part section index and open reading sections. Bond types, eligibility and mandatory-detention cautions, the four hearing steps, denied-bond guidance, post-order limitation and supporting statute links remain unchanged. Routine card borders and scroll-triggered animations are removed; caution styling remains. No data, eligibility logic or shared immigration frame changes.
+
+The pre-change fixture captures 43 text fragments and both article destinations per locale. Six browser cases cover content, section navigation, image loading, both themes and 320px layouts. The three existing translated immigration-qualification cases also pass.
+
 ### Immigration Know Your Rights
 
 The immigration-rights-content.html direction uses “Know your rights. Be prepared.” with a rights-card motif, section navigation and simpler encounter disclosures. The page retains its published red-card materials, five encounter scripts, warrant comparison, Blackie's warrant section, warnings and contact destinations. Scenario buttons expose their expanded state and controlled region; time-sensitive content no longer waits for scroll animations. Shared immigration layouts and the card printing implementation are unchanged.
