@@ -126,44 +126,44 @@ function PoliceEncounterCard({ testId }: { testId?: string }) {
   const { t } = useTranslation();
   return (
     <PrintableCard
-      title={t("quickRef.police.title", "If You Are Stopped by Police")}
+      title={t("quickRef.police.title")}
       testId={testId}
       sections={[
         {
-          heading: t("quickRef.police.stay", "Stay Calm & Remember"),
+          heading: t("quickRef.police.stay"),
           items: [
-            t("quickRef.police.stay1", "You have the right to remain silent. Say: \"I am exercising my right to remain silent.\""),
-            t("quickRef.police.stay2", "You have the right to refuse searches. Say: \"I do not consent to a search.\""),
-            t("quickRef.police.stay3", "Ask: \"Am I free to leave?\" If yes, walk away calmly."),
-            t("quickRef.police.stay4", "You have the right to an attorney. Say: \"I want to speak to a lawyer.\""),
+            t("quickRef.police.stay1"),
+            t("quickRef.police.stay2"),
+            t("quickRef.police.stay3"),
+            t("quickRef.police.stay4"),
           ],
         },
         {
-          heading: t("quickRef.police.doHeading", "Do"),
+          heading: t("quickRef.police.doHeading"),
           items: [
-            t("quickRef.police.do1", "Keep your hands visible at all times"),
-            t("quickRef.police.do2", "Provide your name and ID if asked"),
-            t("quickRef.police.do3", "Stay calm and speak clearly"),
-            t("quickRef.police.do4", "Remember badge numbers and patrol car numbers"),
-            t("quickRef.police.do5", "Write down everything immediately after"),
+            t("quickRef.police.do1"),
+            t("quickRef.police.do2"),
+            t("quickRef.police.do3"),
+            t("quickRef.police.do4"),
+            t("quickRef.police.do5"),
           ],
         },
         {
-          heading: t("quickRef.police.dontHeading", "Don't"),
+          heading: t("quickRef.police.dontHeading"),
           items: [
-            t("quickRef.police.dont1", "Don't resist arrest, even if you believe it's unfair"),
-            t("quickRef.police.dont2", "Don't run, argue, or make sudden movements"),
-            t("quickRef.police.dont3", "Don't consent to a search of your person, car, or home"),
-            t("quickRef.police.dont4", "Don't answer questions without a lawyer present"),
-            t("quickRef.police.dont5", "Don't sign anything without reading it and consulting an attorney"),
+            t("quickRef.police.dont1"),
+            t("quickRef.police.dont2"),
+            t("quickRef.police.dont3"),
+            t("quickRef.police.dont4"),
+            t("quickRef.police.dont5"),
           ],
         },
         {
-          heading: t("quickRef.police.ifArrested", "If You Are Arrested"),
+          heading: t("quickRef.police.ifArrested"),
           items: [
-            t("quickRef.police.arrested1", "Say clearly: \"I want a lawyer\" — then stop talking"),
+            t("quickRef.police.arrested1"),
             t("quickRef.police.arrested2"),
-            t("quickRef.police.arrested3", "Do not discuss your case with anyone except your attorney"),
+            t("quickRef.police.arrested3"),
             t("quickRef.police.arrested4"),
           ],
         },
@@ -176,41 +176,41 @@ function ArraignmentCard({ testId }: { testId?: string }) {
   const { t } = useTranslation();
   return (
     <PrintableCard
-      title={t("quickRef.arraignment.title", "Arraignment")}
+      title={t("quickRef.arraignment.title")}
       testId={testId}
       sections={[
         {
-          heading: t("quickRef.arraignment.expect", "What to Expect"),
+          heading: t("quickRef.arraignment.expect"),
           items: [
-            t("quickRef.arraignment.expect1", "The judge reads the charges against you"),
+            t("quickRef.arraignment.expect1"),
             t("quickRef.arraignment.expect2"),
-            t("quickRef.arraignment.expect3", "Bail amount may be set or modified"),
-            t("quickRef.arraignment.expect4", "Your attorney can request a public defender if needed"),
+            t("quickRef.arraignment.expect3"),
+            t("quickRef.arraignment.expect4"),
           ],
         },
         {
-          heading: t("quickRef.arraignment.say", "What to Say"),
+          heading: t("quickRef.arraignment.say"),
           items: [
             t("quickRef.arraignment.say1"),
-            t("quickRef.arraignment.say2", "\"I would like a court-appointed attorney\" — if you can't afford one"),
-            t("quickRef.arraignment.say3", "\"Yes, Your Honor\" / \"No, Your Honor\" — when addressing the judge"),
+            t("quickRef.arraignment.say2"),
+            t("quickRef.arraignment.say3"),
           ],
         },
         {
-          heading: t("quickRef.arraignment.dontSay", "Don't Say"),
+          heading: t("quickRef.arraignment.dontSay"),
           items: [
-            t("quickRef.arraignment.dontSay1", "Don't discuss the facts of your case in open court"),
-            t("quickRef.arraignment.dontSay2", "Don't plead guilty without talking to a lawyer first"),
-            t("quickRef.arraignment.dontSay3", "Don't argue with the judge or prosecutor"),
+            t("quickRef.arraignment.dontSay1"),
+            t("quickRef.arraignment.dontSay2"),
+            t("quickRef.arraignment.dontSay3"),
           ],
         },
         {
-          heading: t("quickRef.arraignment.rights", "Your Rights"),
+          heading: t("quickRef.arraignment.rights"),
           items: [
-            t("quickRef.arraignment.right1", "Right to an attorney (free if you can't afford one)"),
-            t("quickRef.arraignment.right2", "Right to know the charges against you"),
-            t("quickRef.arraignment.right3", "Right to reasonable bail"),
-            t("quickRef.arraignment.right4", "Right to a speedy trial"),
+            t("quickRef.arraignment.right1"),
+            t("quickRef.arraignment.right2"),
+            t("quickRef.arraignment.right3"),
+            t("quickRef.arraignment.right4"),
           ],
         },
       ]}
@@ -222,40 +222,40 @@ function BailHearingCard({ testId }: { testId?: string }) {
   const { t } = useTranslation();
   return (
     <PrintableCard
-      title={t("quickRef.bail.title", "Bail Hearing")}
+      title={t("quickRef.bail.title")}
       testId={testId}
       sections={[
         {
-          heading: t("quickRef.bail.expect", "What to Expect"),
+          heading: t("quickRef.bail.expect"),
           items: [
-            t("quickRef.bail.expect1", "Judge decides whether to grant bail and how much"),
-            t("quickRef.bail.expect2", "Factors: severity of charge, flight risk, community ties, criminal history"),
-            t("quickRef.bail.expect3", "You or your attorney can argue for lower bail or release"),
-            t("quickRef.bail.expect4", "Conditions of release may be set (curfew, no contact orders, etc.)"),
+            t("quickRef.bail.expect1"),
+            t("quickRef.bail.expect2"),
+            t("quickRef.bail.expect3"),
+            t("quickRef.bail.expect4"),
           ],
         },
         {
-          heading: t("quickRef.bail.say", "What to Say"),
+          heading: t("quickRef.bail.say"),
           items: [
-            t("quickRef.bail.say1", "Emphasize community ties: family, job, length of residence"),
-            t("quickRef.bail.say2", "Mention you will comply with all court dates"),
-            t("quickRef.bail.say3", "Offer alternatives if bail is too high (ankle monitor, check-ins)"),
+            t("quickRef.bail.say1"),
+            t("quickRef.bail.say2"),
+            t("quickRef.bail.say3"),
           ],
         },
         {
-          heading: t("quickRef.bail.dontSay", "Don't Say"),
+          heading: t("quickRef.bail.dontSay"),
           items: [
-            t("quickRef.bail.dontSay1", "Don't discuss the details of your case"),
-            t("quickRef.bail.dontSay2", "Don't make promises you can't keep"),
-            t("quickRef.bail.dontSay3", "Don't show frustration or anger toward the court"),
+            t("quickRef.bail.dontSay1"),
+            t("quickRef.bail.dontSay2"),
+            t("quickRef.bail.dontSay3"),
           ],
         },
         {
-          heading: t("quickRef.bail.rights", "Your Rights"),
+          heading: t("quickRef.bail.rights"),
           items: [
-            t("quickRef.bail.right1", "Right to reasonable bail (8th Amendment)"),
-            t("quickRef.bail.right2", "Right to a bail hearing"),
-            t("quickRef.bail.right3", "Right to appeal a bail decision"),
+            t("quickRef.bail.right1"),
+            t("quickRef.bail.right2"),
+            t("quickRef.bail.right3"),
           ],
         },
       ]}
@@ -267,41 +267,41 @@ function PretrialCard({ testId }: { testId?: string }) {
   const { t } = useTranslation();
   return (
     <PrintableCard
-      title={t("quickRef.pretrial.title", "Pretrial / Discovery")}
+      title={t("quickRef.pretrial.title")}
       testId={testId}
       sections={[
         {
-          heading: t("quickRef.pretrial.expect", "What to Expect"),
+          heading: t("quickRef.pretrial.expect"),
           items: [
-            t("quickRef.pretrial.expect1", "Both sides exchange evidence (discovery process)"),
-            t("quickRef.pretrial.expect2", "Your attorney may file motions to suppress evidence or dismiss charges"),
-            t("quickRef.pretrial.expect3", "Plea bargain negotiations often happen during this phase"),
-            t("quickRef.pretrial.expect4", "This phase can take weeks to months"),
+            t("quickRef.pretrial.expect1"),
+            t("quickRef.pretrial.expect2"),
+            t("quickRef.pretrial.expect3"),
+            t("quickRef.pretrial.expect4"),
           ],
         },
         {
-          heading: t("quickRef.pretrial.say", "What to Do"),
+          heading: t("quickRef.pretrial.say"),
           items: [
-            t("quickRef.pretrial.do1", "Stay in close contact with your attorney"),
-            t("quickRef.pretrial.do2", "Attend every court date — missing one can result in a bench warrant"),
-            t("quickRef.pretrial.do3", "Follow all bail conditions strictly"),
-            t("quickRef.pretrial.do4", "Gather any evidence or witnesses that help your case"),
+            t("quickRef.pretrial.do1"),
+            t("quickRef.pretrial.do2"),
+            t("quickRef.pretrial.do3"),
+            t("quickRef.pretrial.do4"),
           ],
         },
         {
-          heading: t("quickRef.pretrial.dontSay", "Don't Do"),
+          heading: t("quickRef.pretrial.dontSay"),
           items: [
-            t("quickRef.pretrial.dont1", "Don't discuss your case on social media or with others"),
-            t("quickRef.pretrial.dont2", "Don't contact witnesses or victims directly"),
-            t("quickRef.pretrial.dont3", "Don't accept a plea deal without fully understanding the consequences"),
+            t("quickRef.pretrial.dont1"),
+            t("quickRef.pretrial.dont2"),
+            t("quickRef.pretrial.dont3"),
           ],
         },
         {
-          heading: t("quickRef.pretrial.rights", "Your Rights"),
+          heading: t("quickRef.pretrial.rights"),
           items: [
-            t("quickRef.pretrial.right1", "Right to see all evidence against you (Brady Rule)"),
-            t("quickRef.pretrial.right2", "Right to a speedy trial"),
-            t("quickRef.pretrial.right3", "Right to present your own evidence and witnesses"),
+            t("quickRef.pretrial.right1"),
+            t("quickRef.pretrial.right2"),
+            t("quickRef.pretrial.right3"),
           ],
         },
       ]}
@@ -313,40 +313,40 @@ function PleaCard({ testId }: { testId?: string }) {
   const { t } = useTranslation();
   return (
     <PrintableCard
-      title={t("quickRef.plea.title", "Plea Hearing")}
+      title={t("quickRef.plea.title")}
       testId={testId}
       sections={[
         {
-          heading: t("quickRef.plea.expect", "What to Expect"),
+          heading: t("quickRef.plea.expect"),
           items: [
-            t("quickRef.plea.expect1", "The judge asks if you understand the plea and its consequences"),
-            t("quickRef.plea.expect2", "You must confirm the plea is voluntary and not coerced"),
-            t("quickRef.plea.expect3", "The judge explains the maximum possible sentence"),
-            t("quickRef.plea.expect4", "Sentencing may happen immediately or be scheduled later"),
+            t("quickRef.plea.expect1"),
+            t("quickRef.plea.expect2"),
+            t("quickRef.plea.expect3"),
+            t("quickRef.plea.expect4"),
           ],
         },
         {
-          heading: t("quickRef.plea.say", "What to Say"),
+          heading: t("quickRef.plea.say"),
           items: [
-            t("quickRef.plea.say1", "\"Yes, I understand\" — when the judge explains the plea terms"),
-            t("quickRef.plea.say2", "\"Yes, this is my voluntary decision\" — confirm you were not forced"),
-            t("quickRef.plea.say3", "Ask your lawyer to explain anything you don't understand"),
+            t("quickRef.plea.say1"),
+            t("quickRef.plea.say2"),
+            t("quickRef.plea.say3"),
           ],
         },
         {
-          heading: t("quickRef.plea.dontSay", "Don't Say"),
+          heading: t("quickRef.plea.dontSay"),
           items: [
-            t("quickRef.plea.dontSay1", "Don't say \"I didn't do it\" while pleading guilty — the judge may reject the plea"),
-            t("quickRef.plea.dontSay2", "Don't agree to a plea if you don't understand the collateral consequences (immigration, housing, employment)"),
-            t("quickRef.plea.dontSay3", "Don't rush — you can ask for more time to decide"),
+            t("quickRef.plea.dontSay1"),
+            t("quickRef.plea.dontSay2"),
+            t("quickRef.plea.dontSay3"),
           ],
         },
         {
-          heading: t("quickRef.plea.rights", "Your Rights"),
+          heading: t("quickRef.plea.rights"),
           items: [
-            t("quickRef.plea.right1", "Right to withdraw a guilty plea in certain circumstances"),
-            t("quickRef.plea.right2", "Right to know the full consequences before pleading"),
-            t("quickRef.plea.right3", "Right to reject any plea deal and go to trial"),
+            t("quickRef.plea.right1"),
+            t("quickRef.plea.right2"),
+            t("quickRef.plea.right3"),
           ],
         },
       ]}
@@ -358,41 +358,41 @@ function SentencingCard({ testId }: { testId?: string }) {
   const { t } = useTranslation();
   return (
     <PrintableCard
-      title={t("quickRef.sentencing.title", "Sentencing")}
+      title={t("quickRef.sentencing.title")}
       testId={testId}
       sections={[
         {
-          heading: t("quickRef.sentencing.expect", "What to Expect"),
+          heading: t("quickRef.sentencing.expect"),
           items: [
-            t("quickRef.sentencing.expect1", "The judge considers sentencing guidelines, victim impact statements, and your background"),
-            t("quickRef.sentencing.expect2", "Your attorney can present mitigating factors (first offense, employment, family responsibilities)"),
-            t("quickRef.sentencing.expect3", "Possible outcomes: fines, probation, community service, imprisonment, or combination"),
-            t("quickRef.sentencing.expect4", "You may have the opportunity to address the court"),
+            t("quickRef.sentencing.expect1"),
+            t("quickRef.sentencing.expect2"),
+            t("quickRef.sentencing.expect3"),
+            t("quickRef.sentencing.expect4"),
           ],
         },
         {
-          heading: t("quickRef.sentencing.say", "What to Say"),
+          heading: t("quickRef.sentencing.say"),
           items: [
-            t("quickRef.sentencing.say1", "Express genuine remorse if you have been found guilty"),
-            t("quickRef.sentencing.say2", "Mention rehabilitation steps you've taken (counseling, classes, employment)"),
-            t("quickRef.sentencing.say3", "Describe your responsibilities (children, family, community)"),
+            t("quickRef.sentencing.say1"),
+            t("quickRef.sentencing.say2"),
+            t("quickRef.sentencing.say3"),
           ],
         },
         {
-          heading: t("quickRef.sentencing.dontSay", "Don't Say"),
+          heading: t("quickRef.sentencing.dontSay"),
           items: [
-            t("quickRef.sentencing.dontSay1", "Don't blame the victim or minimize the offense"),
-            t("quickRef.sentencing.dontSay2", "Don't argue with the judge's questions"),
-            t("quickRef.sentencing.dontSay3", "Don't make excuses — take responsibility where appropriate"),
+            t("quickRef.sentencing.dontSay1"),
+            t("quickRef.sentencing.dontSay2"),
+            t("quickRef.sentencing.dontSay3"),
           ],
         },
         {
-          heading: t("quickRef.sentencing.rights", "Your Rights"),
+          heading: t("quickRef.sentencing.rights"),
           items: [
-            t("quickRef.sentencing.right1", "Right to speak at your sentencing (allocution)"),
-            t("quickRef.sentencing.right2", "Right to appeal the sentence"),
-            t("quickRef.sentencing.right3", "Right to fair and proportional punishment (8th Amendment)"),
-            t("quickRef.sentencing.right4", "Right to have your attorney present"),
+            t("quickRef.sentencing.right1"),
+            t("quickRef.sentencing.right2"),
+            t("quickRef.sentencing.right3"),
+            t("quickRef.sentencing.right4"),
           ],
         },
       ]}

@@ -171,10 +171,10 @@ const chargeGuidance = {
   'dui': {
     name: 'DUI/DWI',
     immediateActions: [
-      'An independent blood or breath test may be requested in some jurisdictions — attorneys advise asking about this option promptly as timing matters.',
-      'Document any medical conditions affecting tests',
-      'Take photos of arrest scene and conditions',
-      'Request DMV hearing within 10 days (varies by state)'
+      'Availability and timing of independent blood or breath testing under the applicable law',
+      'Medical conditions that may affect test results',
+      'Scene conditions and any existing photographs or recordings',
+      'Administrative license-hearing procedures and the deadline stated in the applicable notice'
     ],
     evidenceToGather: [
       'Breathalyzer calibration records',
@@ -184,10 +184,10 @@ const chargeGuidance = {
       'Weather and road condition reports'
     ],
     defenseStrategies: [
-      'Challenge breathalyzer accuracy and maintenance',
-      'Question field sobriety test administration',
-      'Examine probable cause for initial stop',
-      'Review Miranda rights administration'
+      'Breath-test accuracy and device maintenance',
+      'How field sobriety tests were administered',
+      'Legal grounds for the stop and detention',
+      'Custodial questioning and applicable rights'
     ],
     collateralConsequences: [
       'License suspension (administrative and criminal)',
@@ -1265,9 +1265,9 @@ export const CHARGE_CONSEQUENCE_MAP: Record<string, CollateralConsequenceItem[]>
   dui: [
     {
       category: 'drivers_license',
-      consequence: 'A DUI conviction typically triggers an automatic administrative license suspension separate from any criminal sentence, and may require an ignition interlock device.',
-      timing: 'Upon arrest (administrative) and conviction (criminal)',
-      actionNote: 'Request a DMV hearing to contest the administrative suspension — the deadline is often 10 days from arrest, but this window varies by state. Check your arrest paperwork or your state DMV website immediately. This is one common consequence; a DUI conviction can carry additional consequences depending on your state and circumstances.',
+      consequence: 'A qualifying test result or test refusal may trigger administrative license action independently of the criminal case. A conviction can have separate licensing consequences, and ignition-interlock requirements depend on the applicable law.',
+      timing: 'Administrative notice and criminal disposition follow separate procedures',
+      actionNote: 'DMV hearing deadlines and their starting events vary by state and notice type. The applicable notice and state DMV information identify the process; a lawyer can explain how it relates to the criminal case. Other consequences depend on the jurisdiction and circumstances.',
     },
   ],
   assault: [
@@ -1323,7 +1323,7 @@ export const CHARGE_CONSEQUENCE_MAP: Record<string, CollateralConsequenceItem[]>
       category: 'drivers_license',
       consequence: 'Serious traffic violations — including reckless driving, hit-and-run, or habitual offenses — can result in license suspension, revocation, or points accumulation leading to disqualification.',
       timing: 'Upon conviction or administrative action',
-      actionNote: 'Request a DMV hearing if your license is administratively suspended. Commercial driver\'s license (CDL) holders face stricter consequences.',
+      actionNote: 'Administrative hearing options and deadlines depend on the applicable notice and state rules. Commercial driver\'s license (CDL) holders can face additional consequences.',
     },
   ],
   weapons: [
