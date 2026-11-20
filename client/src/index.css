@@ -2030,6 +2030,7 @@ a:focus-visible,
   .design-footer-bottom nav { width: 100%; margin: 0; gap: 0 16px; }
 }
 @media(max-width:360px) {
+  .design-header-row { flex-wrap: wrap; }
   .design-home-hero { grid-template-columns: minmax(0,1fr) 65px; gap: 0 8px; }
   .design-home-hero h1 { font-size: 30px; }
   .design-open-door { width: 65px; height: 100px; }

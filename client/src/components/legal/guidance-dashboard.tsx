@@ -1833,7 +1833,7 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
                   {guidance.caseData.hasAttorney === false && onShowPublicDefender && (
                     <Button
                       variant="outline"
-                      className="w-full justify-start h-auto py-4 px-4"
+                      className="w-full justify-start h-auto whitespace-normal break-words py-4 px-4"
                       onClick={onShowPublicDefender}
                     >
                       <div className="flex min-w-0 w-full items-start gap-3">
@@ -1852,7 +1852,7 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
                   {/* Legal Aid Organizations */}
                   <Button
                     variant="outline"
-                    className="w-full justify-start h-auto py-4 px-4"
+                    className="w-full justify-start h-auto whitespace-normal break-words py-4 px-4"
                     onClick={() => guardedNavigate('/resources')}
                   >
                     <div className="flex min-w-0 w-full items-start gap-3">
@@ -1870,7 +1870,7 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
                   {/* Court Self-Help Center */}
                   <Button
                     variant="outline"
-                    className="w-full justify-start h-auto py-4 px-4"
+                    className="w-full justify-start h-auto whitespace-normal break-words py-4 px-4"
                     onClick={() => guardedNavigate('/court-locator')}
                   >
                     <div className="flex min-w-0 w-full items-start gap-3">
