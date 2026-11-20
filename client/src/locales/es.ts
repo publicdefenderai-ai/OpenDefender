@@ -4655,10 +4655,10 @@ export default {
     "police": {
       "title": "Si la Policía lo Detiene",
       "stay": "Derechos y preguntas",
-      "stay1": "El derecho a guardar silencio protege contra la autoincriminación forzada; aún pueden existir deberes de identificación.",
-      "stay2": "El consentimiento es una base legal para un registro. Negarlo no impide un registro respaldado por otra base legal.",
+      "stay1": "Quien elija invocar el derecho a guardar silencio puede decir claramente: «Estoy invocando mi derecho a guardar silencio». El silencio por sí solo puede no ser suficiente; aún pueden existir obligaciones de identificación.",
+      "stay2": "Quien elija no dar su consentimiento puede decir: «No doy mi consentimiento para un registro». Esto no impide un registro respaldado por otra base legal.",
       "stay3": "La posibilidad de retirarse depende de si el encuentro es voluntario o constituye una detención legal.",
-      "stay4": "El derecho a un abogado depende de la etapa y las circunstancias, incluidos el interrogatorio bajo custodia y el proceso penal.",
+      "stay4": "Durante un interrogatorio bajo custodia, quien elija solicitar un abogado puede decir claramente: «Quiero que haya un abogado presente antes de responder preguntas». Una referencia ambigua a un abogado puede no invocar ese derecho.",
       "doHeading": "Detalles del encuentro",
       "do1": "Durante una detención, los agentes pueden dar instrucciones sobre las manos y los movimientos.",
       "do2": "Los deberes de dar el nombre o identificarse varían según el estado y el tipo de encuentro, incluidas las paradas de tránsito.",

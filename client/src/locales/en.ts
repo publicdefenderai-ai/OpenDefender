@@ -4653,10 +4653,10 @@ export default {
     "police": {
       "title": "If You Are Stopped by Police",
       "stay": "Rights and questions",
-      "stay1": "The right to remain silent protects against compelled self-incrimination; identification duties can still apply.",
-      "stay2": "Consent is one legal basis for a search. Refusing consent does not prevent a search supported by another lawful basis.",
+      "stay1": "A person who chooses to invoke the right to remain silent can say clearly: “I am invoking my right to remain silent.” Silence alone may not be enough; identification duties can still apply.",
+      "stay2": "A person who chooses to decline consent can say: “I do not consent to a search.” This does not prevent a search supported by another lawful basis.",
       "stay3": "Whether a person is free to leave depends on whether the encounter is voluntary or a lawful detention.",
-      "stay4": "The right to counsel depends on the stage and circumstances, including custodial interrogation and criminal proceedings.",
+      "stay4": "During custodial questioning, a person who chooses to request counsel can say clearly: “I want a lawyer present before answering questions.” An unclear reference to a lawyer may not invoke that right.",
       "doHeading": "Encounter details",
       "do1": "Officers may give instructions concerning hands and movement during a stop.",
       "do2": "Name and identification duties vary by state and by the type of encounter, including traffic stops.",

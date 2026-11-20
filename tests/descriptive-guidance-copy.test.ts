@@ -39,3 +39,25 @@ it('uses the verified publisher edition without widening the terroristic-threat 
     expect(row!.instructionRef).toContain('individual imminent-serious-injury fear theory only');
   }
 });
+
+const invocationExamples = {
+  en: ['I am invoking my right to remain silent.', 'I do not consent to a search.', 'I want a lawyer present before answering questions.'],
+  es: ['Estoy invocando mi derecho a guardar silencio', 'No doy mi consentimiento para un registro', 'Quiero que haya un abogado presente antes de responder preguntas'],
+  zh: ['我正在行使保持沉默的权利', '我不同意搜查', '我希望律师在场后再回答问题'],
+};
+for (const [language, locale] of Object.entries({ en, es, zh })) {
+  it(`${language} retains explicit optional invocation examples and their limits`, () => {
+    const police = locale.translation.quickRef.police;
+    const examples = invocationExamples[language as keyof typeof invocationExamples];
+    [police.stay1, police.stay2, police.stay4].forEach((text, i) => expect(text).toContain(examples[i]));
+    const limits = {
+      en: ['identification duties', 'another lawful basis', 'custodial questioning', 'unclear reference'],
+      es: ['obligaciones de identificación', 'otra base legal', 'interrogatorio bajo custodia', 'referencia ambigua'],
+      zh: ['表明身份的义务', '其他合法理由', '羁押讯问', '含糊地提及'],
+    }[language as keyof typeof invocationExamples];
+    expect(police.stay1).toContain(limits[0]);
+    expect(police.stay2).toContain(limits[1]);
+    expect(police.stay4.toLowerCase()).toContain(limits[2]);
+    expect(police.stay4).toContain(limits[3]);
+  });
+}

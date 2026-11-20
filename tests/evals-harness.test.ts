@@ -158,6 +158,16 @@ function runScenario(scenario: EvalScenario): void {
     }
   }
 
+  if (ex.absentActionKeywords) {
+    const actionTexts = actions.map(a => a.action);
+    for (const keyword of ex.absentActionKeywords) {
+      expect(
+        anyContains(actionTexts, keyword),
+        `[${label}] Unexpected immediate-action text: "${keyword}"; actual: ${JSON.stringify(actionTexts)}`,
+      ).toBe(false);
+    }
+  }
+
   // ── Required uncertainty areas ────────────────────────────────────────────
   if (ex.requiredUncertaintyAreas) {
     const actualAreas = uncertainties.map(u => u.area);
