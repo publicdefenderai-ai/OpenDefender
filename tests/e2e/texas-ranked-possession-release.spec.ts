@@ -241,3 +241,10 @@ test("Texas animal-cruelty selector preserves separate conduct and repeat gradin
  for(const r of rows)expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,name:r.name,code:r.code,description:r.conduct,maxPenalty:r.penalty,category:r.category});
  expect(charges.some((c:{id:string})=>c.id==="tx-animal-cruelty-misdemeanor")).toBe(false);
 });
+
+
+test("Texas protective-firearm choices preserve notice and finite-term review boundaries",async({request})=>{
+ const response=await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");expect(response.ok()).toBe(true);
+ const {charges}=await response.json();const rows=JSON.parse(readFileSync("shared/texas-protective-firearms.json","utf8"));
+ for(const r of rows){expect(charges.filter((c:{id:string})=>c.id===r.id)).toHaveLength(1);expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,name:r.name,code:r.code,description:r.conduct,maxPenalty:r.penalty,category:r.category});}
+});

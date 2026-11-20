@@ -1,3 +1,4 @@
+import protectiveFirearms from "../../scripts/data-review/output/texas-protective-firearms-evidence.json";
 import animals from "../../scripts/data-review/output/texas-animal-cruelty-evidence.json";
 import communications from "../../scripts/data-review/output/texas-communications-evidence.json";
 import childSexual from "../../scripts/data-review/output/texas-child-sexual-evidence.json";
@@ -25,8 +26,8 @@ import { texasDwiHashes } from "@shared/texas-dwi";
 import { TEXAS_DWI_SNAPSHOT_HASHES } from "./texas-dwi-snapshot-hashes";
 
 export const texasReviewedTextHashes: Readonly<Record<string, string>> = {
-  ...texasDwiHashes, ...Object.fromEntries(Object.entries({ ...evidence, ...possession, ...theft, ...propertyAccess, ...arrest, ...closeout, ...carry, ...loss, ...burglary, ...weights, ...delivery, ...family, ...justice, ...road, ...fraud, ...protectedAssault, ...robbery, ...threats, ...prohibited, ...intoxicationHarm, ...childSexual, ...communications, ...animals }).map(([key, doc]) => [key, doc.textSha256])),
+  ...texasDwiHashes, ...Object.fromEntries(Object.entries({ ...evidence, ...possession, ...theft, ...propertyAccess, ...arrest, ...closeout, ...carry, ...loss, ...burglary, ...weights, ...delivery, ...family, ...justice, ...road, ...fraud, ...protectedAssault, ...robbery, ...threats, ...prohibited, ...intoxicationHarm, ...childSexual, ...communications, ...animals, ...protectiveFirearms }).map(([key, doc]) => [key, doc.textSha256])),
 };
 export const texasReviewedSnapshotHashes: Readonly<Record<string, string>> = {
-  ...TEXAS_DWI_SNAPSHOT_HASHES, ...Object.fromEntries(Object.entries({ ...evidence, ...possession, ...theft, ...propertyAccess, ...arrest, ...closeout, ...carry, ...loss, ...burglary, ...weights, ...delivery, ...family, ...justice, ...road, ...fraud, ...protectedAssault, ...robbery, ...threats, ...prohibited, ...intoxicationHarm, ...childSexual, ...communications, ...animals }).map(([key, doc]) => [`tx:${key}`, doc.snapshotHash])),
+  ...TEXAS_DWI_SNAPSHOT_HASHES, ...Object.fromEntries(Object.entries({ ...evidence, ...possession, ...theft, ...propertyAccess, ...arrest, ...closeout, ...carry, ...loss, ...burglary, ...weights, ...delivery, ...family, ...justice, ...road, ...fraud, ...protectedAssault, ...robbery, ...threats, ...prohibited, ...intoxicationHarm, ...childSexual, ...communications, ...animals, ...protectiveFirearms }).map(([key, doc]) => [`tx:${key}`, doc.snapshotHash])),
 };

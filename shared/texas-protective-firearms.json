@@ -1,0 +1,675 @@
+[
+  {
+    "id": "tx-pc-46-04-dissolution-order",
+    "name": "Unlawful possession of firearm (finite-term marriage-dissolution protective order)",
+    "officialTitle": "UNLAWFUL POSSESSION OF FIREARM.",
+    "category": "misdemeanor",
+    "code": "46.04(c)",
+    "citation": "Tex. Penal Code § 46.04(c)",
+    "conduct": "Possessing a firearm after receiving notice of a qualifying order and before that order expires. The prosecution must establish the actual order, its statutory authority, its continuing effect and receipt of notice; being described as a respondent or defendant alone establishes none of these. The applicable culpable mental state and voluntary possession rules also apply: actual care, custody, control or management is not established by mere proximity. The statutory firearm definition and antique/replica exclusion apply. Section 46.04(c) excludes a legally defined peace officer actively employed as a sworn, full-time paid employee of a state agency or political subdivision; a license, former office or reserve title alone does not establish every condition. The predicate is a protective order rendered under Family Code §6.504 in a marriage-dissolution suit, using Subtitle B, Title 4; a routine divorce injunction or a pending divorce alone is not the specified predicate. Section 85.004 requires a separate protective-order document. The order’s current expiration controls. Section 85.025 ordinarily limits an order to its stated period, up to two years, or two years when no period is stated, but permits specified longer periods and confinement-related extensions. A motion seeking review does not itself terminate the order. Agreed and default orders have their own statutory conditions; agreement or nonappearance is not an automatic exemption. No protected person can authorize ignoring an operative order. This choice covers only a finite-term order in the specified category; lifetime, indefinite and ex-parte-only orders are outside this choice’s reviewed scope, not declared lawful to disregard. Finite duration is a selection boundary, not an added statutory element or proof of constitutional validity. The actual process, findings, duration, later modifications and constitutional application require examination. Rahimi upheld the federal restriction in its temporary credible-threat setting; it did not approve every Texas order. Noyes vacated and remanded a lifetime-order judgment for further proceedings after Rahimi, rather than categorically invalidating §46.04(c). Do not infer that an order has ended or may be ignored from this summary. Separate federal firearm restrictions are not determined here.",
+    "penalty": "Class A misdemeanor under §46.04(e): ordinarily up to one year in jail, a fine up to $4,000, or both. Section 46.11 can increase punishment to the next offense category if its knowledge and school-zone/function findings are proved beyond a reasonable doubt; no such findings are assumed here. Qualifying priors and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(c)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.11",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "FA",
+        "section": "6.504",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.022",
+        "subdivision": "(b)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.025",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.026",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "87.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "caseContextKeys": [
+      "rahimi",
+      "noyes"
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-04-family-order",
+    "name": "Unlawful possession of firearm (finite-term Chapter 85 protective order)",
+    "officialTitle": "UNLAWFUL POSSESSION OF FIREARM.",
+    "category": "misdemeanor",
+    "code": "46.04(c)",
+    "citation": "Tex. Penal Code § 46.04(c)",
+    "conduct": "Possessing a firearm after receiving notice of a qualifying order and before that order expires. The prosecution must establish the actual order, its statutory authority, its continuing effect and receipt of notice; being described as a respondent or defendant alone establishes none of these. The applicable culpable mental state and voluntary possession rules also apply: actual care, custody, control or management is not established by mere proximity. The statutory firearm definition and antique/replica exclusion apply. Section 46.04(c) excludes a legally defined peace officer actively employed as a sworn, full-time paid employee of a state agency or political subdivision; a license, former office or reserve title alone does not establish every condition. The predicate is a protective order issued under Family Code Chapter 85. The court-order document and statutory basis must be checked; a family dispute, allegation or application alone is not an issued order. The order’s current expiration controls. Section 85.025 ordinarily limits an order to its stated period, up to two years, or two years when no period is stated, but permits specified longer periods and confinement-related extensions. A motion seeking review does not itself terminate the order. Agreed and default orders have their own statutory conditions; agreement or nonappearance is not an automatic exemption. No protected person can authorize ignoring an operative order. This choice covers only a finite-term order in the specified category; lifetime, indefinite and ex-parte-only orders are outside this choice’s reviewed scope, not declared lawful to disregard. Finite duration is a selection boundary, not an added statutory element or proof of constitutional validity. The actual process, findings, duration, later modifications and constitutional application require examination. Rahimi upheld the federal restriction in its temporary credible-threat setting; it did not approve every Texas order. Noyes vacated and remanded a lifetime-order judgment for further proceedings after Rahimi, rather than categorically invalidating §46.04(c). Do not infer that an order has ended or may be ignored from this summary. Separate federal firearm restrictions are not determined here.",
+    "penalty": "Class A misdemeanor under §46.04(e): ordinarily up to one year in jail, a fine up to $4,000, or both. Section 46.11 can increase punishment to the next offense category if its knowledge and school-zone/function findings are proved beyond a reasonable doubt; no such findings are assumed here. Qualifying priors and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(c)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.11",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "FA",
+        "section": "85.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.022",
+        "subdivision": "(b)(6)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.025",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.026",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "87.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "caseContextKeys": [
+      "rahimi",
+      "noyes"
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-04-emergency-order",
+    "name": "Unlawful possession of firearm (finite-term magistrate emergency-protection order)",
+    "officialTitle": "UNLAWFUL POSSESSION OF FIREARM.",
+    "category": "misdemeanor",
+    "code": "46.04(c)",
+    "citation": "Tex. Penal Code § 46.04(c)",
+    "conduct": "Possessing a firearm after receiving notice of a qualifying order and before that order expires. The prosecution must establish the actual order, its statutory authority, its continuing effect and receipt of notice; being described as a respondent or defendant alone establishes none of these. The applicable culpable mental state and voluntary possession rules also apply: actual care, custody, control or management is not established by mere proximity. The statutory firearm definition and antique/replica exclusion apply. Section 46.04(c) excludes a legally defined peace officer actively employed as a sworn, full-time paid employee of a state agency or political subdivision; a license, former office or reserve title alone does not establish every condition. The predicate is an actual magistrate’s emergency-protection order under article 17.292, not every bail condition. The article makes the order effective on issuance, but this firearm offense separately requires receipt of notice. Subsection (j) requires service in person or electronically and a separate service record. Under the current text, orders under (a)/(b)(1) last 61–91 days and those under(b)(2) 91–121 days; verify the actual order and applicable earlier law for earlier issuance. The court may modify under the specified findings after notice and hearing; private permission is not a court modification. These are current statutory periods, not automatic expiration calculations from an arrest date. This choice covers only a finite-term order in the specified category; lifetime, indefinite and ex-parte-only orders are outside this choice’s reviewed scope, not declared lawful to disregard. Finite duration is a selection boundary, not an added statutory element or proof of constitutional validity. The actual process, findings, duration, later modifications and constitutional application require examination. Rahimi upheld the federal restriction in its temporary credible-threat setting; it did not approve every Texas order. Noyes vacated and remanded a lifetime-order judgment for further proceedings after Rahimi, rather than categorically invalidating §46.04(c). Do not infer that an order has ended or may be ignored from this summary. Separate federal firearm restrictions are not determined here.",
+    "penalty": "Class A misdemeanor under §46.04(e): ordinarily up to one year in jail, a fine up to $4,000, or both. Section 46.11 can increase punishment to the next offense category if its knowledge and school-zone/function findings are proved beyond a reasonable doubt; no such findings are assumed here. Qualifying priors and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(c)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.11",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "17.292",
+        "subdivision": "(a), (b), (c)(4), (g), (j), (n)",
+        "supportRole": "grading"
+      }
+    ],
+    "caseContextKeys": [
+      "rahimi",
+      "noyes"
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-04-chapter7b-order",
+    "name": "Unlawful possession of firearm (finite-term Chapter 7B post-hearing protective order)",
+    "officialTitle": "UNLAWFUL POSSESSION OF FIREARM.",
+    "category": "misdemeanor",
+    "code": "46.04(c)",
+    "citation": "Tex. Penal Code § 46.04(c)",
+    "conduct": "Possessing a firearm after receiving notice of a qualifying order and before that order expires. The prosecution must establish the actual order, its statutory authority, its continuing effect and receipt of notice; being described as a respondent or defendant alone establishes none of these. The applicable culpable mental state and voluntary possession rules also apply: actual care, custody, control or management is not established by mere proximity. The statutory firearm definition and antique/replica exclusion apply. Section 46.04(c) excludes a legally defined peace officer actively employed as a sworn, full-time paid employee of a state agency or political subdivision; a license, former office or reserve title alone does not establish every condition. The predicate is a protective order issued under article 7B.003 after the hearing and required reasonable-grounds findings concerning an offense listed in article 7B.001(a)(1) or (2). A temporary ex parte order under 7B.002 is outside this choice. Article7B.007 governs duration and rescission and prevails over conflicting §85.025 terms; an unspecified period defaults to two years. The statute also authorizes lifetime orders, including specified mandatory-lifetime circumstances, but those are not covered by this finite-term choice. Its statutory reasonable-grounds finding is not silently equated with a constitutional credible-threat determination. Only the court can change or rescind an order; the protected person’s permission alone does not do so. This choice covers only a finite-term order in the specified category; lifetime, indefinite and ex-parte-only orders are outside this choice’s reviewed scope, not declared lawful to disregard. Finite duration is a selection boundary, not an added statutory element or proof of constitutional validity. The actual process, findings, duration, later modifications and constitutional application require examination. Rahimi upheld the federal restriction in its temporary credible-threat setting; it did not approve every Texas order. Noyes vacated and remanded a lifetime-order judgment for further proceedings after Rahimi, rather than categorically invalidating §46.04(c). Do not infer that an order has ended or may be ignored from this summary. Separate federal firearm restrictions are not determined here.",
+    "penalty": "Class A misdemeanor under §46.04(e): ordinarily up to one year in jail, a fine up to $4,000, or both. Section 46.11 can increase punishment to the next offense category if its knowledge and school-zone/function findings are proved beyond a reasonable doubt; no such findings are assumed here. Qualifying priors and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(c)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.11",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "7B.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "7B.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "7B.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "7B.005",
+        "subdivision": "(a)(2)(D)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "7B.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "7B.007",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "85.025",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "caseContextKeys": [
+      "rahimi",
+      "noyes"
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-46-04-foreign-order",
+    "name": "Unlawful possession of firearm (finite-term qualifying out-of-state protective order)",
+    "officialTitle": "UNLAWFUL POSSESSION OF FIREARM.",
+    "category": "misdemeanor",
+    "code": "46.04(c)",
+    "citation": "Tex. Penal Code § 46.04(c)",
+    "conduct": "Possessing a firearm after receiving notice of a qualifying order and before that order expires. The prosecution must establish the actual order, its statutory authority, its continuing effect and receipt of notice; being described as a respondent or defendant alone establishes none of these. The applicable culpable mental state and voluntary possession rules also apply: actual care, custody, control or management is not established by mere proximity. The statutory firearm definition and antique/replica exclusion apply. Section 46.04(c) excludes a legally defined peace officer actively employed as a sworn, full-time paid employee of a state agency or political subdivision; a license, former office or reserve title alone does not establish every condition. The predicate is an order from another jurisdiction qualifying under Family Code Chapter 88, not any document labeled a restraining order. Section88.003(d) requires named protected individual and respondent, continuing effect, issuing-tribunal jurisdiction and reasonable notice/opportunity to be heard consistent with due process. Its ex parte process is outside this choice. A facially valid order establishes a prima facie case, not irrebuttable validity; failure to meet (d) is an affirmative defense in an enforcement action. Mutual orders have additional pleading/findings requirements. Registration or filing in Texas is not required for enforcement of a valid foreign order. Under88.004(d), an officer confronting lack of notification/service must inform the respondent, reasonably attempt service and allow a reasonable opportunity to comply before enforcing. Verify the issuing jurisdiction’s actual duration, modifications and continuing validity; this record does not supply another state’s missing law. This choice covers only a finite-term order in the specified category; lifetime, indefinite and ex-parte-only orders are outside this choice’s reviewed scope, not declared lawful to disregard. Finite duration is a selection boundary, not an added statutory element or proof of constitutional validity. The actual process, findings, duration, later modifications and constitutional application require examination. Rahimi upheld the federal restriction in its temporary credible-threat setting; it did not approve every Texas order. Noyes vacated and remanded a lifetime-order judgment for further proceedings after Rahimi, rather than categorically invalidating §46.04(c). Do not infer that an order has ended or may be ignored from this summary. Separate federal firearm restrictions are not determined here.",
+    "penalty": "Class A misdemeanor under §46.04(e): ordinarily up to one year in jail, a fine up to $4,000, or both. Section 46.11 can increase punishment to the next offense category if its knowledge and school-zone/function findings are proved beyond a reasonable doubt; no such findings are assumed here. Qualifying priors and case-specific findings can change punishment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(c)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "46.04",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(36), (39)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.01",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "46.11",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "FA",
+        "section": "88.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "88.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "88.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "88.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "caseContextKeys": [
+      "rahimi",
+      "noyes"
+    ],
+    "dpsCode": ""
+  }
+]
