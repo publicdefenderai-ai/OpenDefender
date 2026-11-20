@@ -1,0 +1,690 @@
+{
+  "status": "candidate_research_not_API_manifest_or_approval",
+  "baselineCommit": "9cebb7bbf1c4a4afec0ffad19e1a6195ee973fc0",
+  "baselineSha256": "5c3bd5a203c7bced0d97950a361756ba48b943454914f9c5443fb8637c7b3e73",
+  "sourcesSha256": "91506e8666e362d192499facbabbd222932d418acb00c89eaf0fff342246e79c",
+  "selectionMethod": "28 purposive statutory citations selected across offense families before catalog matching; official Senate text is the independent reference. No frequency, randomness or statewide completeness claim.",
+  "counts": {
+    "baselineRows": 121,
+    "retained": 33,
+    "renamed": 61,
+    "heldForReselection": 27,
+    "benchmarkCitations": 28,
+    "sourceDocuments": 39,
+    "candidateReviewedRecords": 4,
+    "newPublishedRecords": 0,
+    "liveSelections": null
+  },
+  "publicationBlockers": [
+    "Official Senate API key not available in this research process; human-page evidence does not satisfy the existing API-only authority contract.",
+    "Substantive amendment/effective-date chronology remains to be reconciled; page acquisition time is not an effective date.",
+    "Candidate summaries are not wired to selector, saved guidance or exports; translations and production-path verification remain publication prerequisites."
+  ],
+  "benchmark": [
+    {
+      "citation": "N.Y. Penal Law § 120.00",
+      "section": "120.00",
+      "officialTitle": "Assault in the third degree",
+      "sourceKey": "ny:PEN:120.00",
+      "contentSha256": "713624523047eda6f83f1d3a3d92f8bcac7932b8785d8d20a79f43943109ccc1",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-assault-in-the-third-degree",
+          "disposition": "retain"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 120.05",
+      "section": "120.05",
+      "officialTitle": "Assault in the second degree",
+      "sourceKey": "ny:PEN:120.05",
+      "contentSha256": "b3f3fd7c19157b42aa4782aa536a8142438ffe1907141109fec621659dac18f4",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-assault-in-the-second-degree",
+          "disposition": "retain"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 120.10",
+      "section": "120.10",
+      "officialTitle": "Assault in the first degree",
+      "sourceKey": "ny:PEN:120.10",
+      "contentSha256": "9fb389ce9b379872f232d4f348d0b887c5c8dfb6a8b69d63b8eafab30fe3e2c8",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-assault-in-the-first-degree",
+          "disposition": "retain"
+        },
+        {
+          "id": "ny-assault-with-deadly-weapon",
+          "disposition": "exact_alias_rename"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 120.14",
+      "section": "120.14",
+      "officialTitle": "Menacing in the second degree",
+      "sourceKey": "ny:PEN:120.14",
+      "contentSha256": "7e1b0c626b302d3b44633193a3610b9afc12378b5f4ff98632098edc397a77a7",
+      "status": "no_baseline_section_mapping",
+      "matches": []
+    },
+    {
+      "citation": "N.Y. Penal Law § 121.11",
+      "section": "121.11",
+      "officialTitle": "Criminal obstruction of breathing or blood circulation",
+      "sourceKey": "ny:PEN:121.11",
+      "contentSha256": "3e9f738335ade59ba21d9e3e9d3e7a3f24d474a65a539fb2b45dc74ca53ed2ee",
+      "status": "no_baseline_section_mapping",
+      "matches": []
+    },
+    {
+      "citation": "N.Y. Penal Law § 121.12",
+      "section": "121.12",
+      "officialTitle": "Strangulation in the second degree",
+      "sourceKey": "ny:PEN:121.12",
+      "contentSha256": "e211e0a18b6428913bc667247e3ab560d9ad61cf2e6ad6ac5efce9c804ba9fab",
+      "status": "no_baseline_section_mapping",
+      "matches": []
+    },
+    {
+      "citation": "N.Y. Penal Law § 130.20",
+      "section": "130.20",
+      "officialTitle": "Sexual misconduct",
+      "sourceKey": "ny:PEN:130.20",
+      "contentSha256": "9d308e7f666d106e5f7328fd017b5213de9029d84cb84c42584c6d392dc76847",
+      "status": "no_baseline_section_mapping",
+      "matches": []
+    },
+    {
+      "citation": "N.Y. Penal Law § 140.05",
+      "section": "140.05",
+      "officialTitle": "Trespass",
+      "sourceKey": "ny:PEN:140.05",
+      "contentSha256": "9ca35db6482c30bdb26757cbf8210b59fe82512c9689af5c5a6da5d0228036e0",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-trespassing",
+          "disposition": "exact_alias_rename"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 140.10",
+      "section": "140.10",
+      "officialTitle": "Criminal trespass in the third degree",
+      "sourceKey": "ny:PEN:140.10",
+      "contentSha256": "28d5b89296324f1cb0e1a13a5031ee4ad72c51684cba3ac335a8f7a5f4ec1467",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-trespass-after-warning",
+          "disposition": "exact_alias_rename"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 140.15",
+      "section": "140.15",
+      "officialTitle": "Criminal trespass in the second degree",
+      "sourceKey": "ny:PEN:140.15",
+      "contentSha256": "bf4f1c7ede295c7c642e2672d432954ee0bdafdd8ce8cde1fb7b25d04f714042",
+      "status": "no_baseline_section_mapping",
+      "matches": []
+    },
+    {
+      "citation": "N.Y. Penal Law § 140.20",
+      "section": "140.20",
+      "officialTitle": "Burglary in the third degree",
+      "sourceKey": "ny:PEN:140.20",
+      "contentSha256": "e4dd48101abb8164cbe0d7dee3ca50978c358ec4ce8bb48a3599cc0908d436f9",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-burglary-in-the-third-degree",
+          "disposition": "retain"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 140.25",
+      "section": "140.25",
+      "officialTitle": "Burglary in the second degree",
+      "sourceKey": "ny:PEN:140.25",
+      "contentSha256": "9eca5aa7cb0ad4dacca072bbf534008976c398a78d8ea1a81bc9bf9a56a80b71",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-burglary-in-the-second-degree",
+          "disposition": "retain"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 140.30",
+      "section": "140.30",
+      "officialTitle": "Burglary in the first degree",
+      "sourceKey": "ny:PEN:140.30",
+      "contentSha256": "4fbacf81bef2b46138463c91bfdb233943d7fdf8d6200270ab19a6c4d1f13d46",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-burglary-in-the-first-degree",
+          "disposition": "retain"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 145.00",
+      "section": "145.00",
+      "officialTitle": "Criminal mischief in the fourth degree",
+      "sourceKey": "ny:PEN:145.00",
+      "contentSha256": "8d0783b51b9deab32d317d01f8726193c4028f0a0fc1dcbadd0f20889afef7e2",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-vandalism",
+          "disposition": "exact_alias_rename"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 145.05",
+      "section": "145.05",
+      "officialTitle": "Criminal mischief in the third degree",
+      "sourceKey": "ny:PEN:145.05",
+      "contentSha256": "222c23170f067145410512176fe91d38199c168ceb61c76f899ebf07feb7cb80",
+      "status": "no_baseline_section_mapping",
+      "matches": []
+    },
+    {
+      "citation": "N.Y. Penal Law § 155.25",
+      "section": "155.25",
+      "officialTitle": "Petit larceny",
+      "sourceKey": "ny:PEN:155.25",
+      "contentSha256": "d1900f1162edd2c680409130fd5249b070a272d454978297c6a4de260f275f90",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-petit-larceny",
+          "disposition": "retain"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 155.30",
+      "section": "155.30",
+      "officialTitle": "Grand Larceny in the fourth degree",
+      "sourceKey": "ny:PEN:155.30",
+      "contentSha256": "7f56e5d5fa2016191d345a936682fbbb566d892194eae44f8b4ae5f588d2b139",
+      "status": "no_baseline_section_mapping",
+      "matches": []
+    },
+    {
+      "citation": "N.Y. Penal Law § 155.35",
+      "section": "155.35",
+      "officialTitle": "Grand larceny in the third degree",
+      "sourceKey": "ny:PEN:155.35",
+      "contentSha256": "ef0c30b61bc75e28c4fde557324088e2856b4b3ae6051fcf80181e5593fe692d",
+      "status": "no_baseline_section_mapping",
+      "matches": []
+    },
+    {
+      "citation": "N.Y. Penal Law § 155.40",
+      "section": "155.40",
+      "officialTitle": "Grand larceny in the second degree",
+      "sourceKey": "ny:PEN:155.40",
+      "contentSha256": "90ad8725276917f367bd2d2c282c98bfdc64170e0dafcdfa6a4debb73d9a3cad",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-grand-theft-in-the-second-degree",
+          "disposition": "exact_alias_rename"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 160.05",
+      "section": "160.05",
+      "officialTitle": "Robbery in the third degree",
+      "sourceKey": "ny:PEN:160.05",
+      "contentSha256": "cf44bd4cf8d060d501d7418014ed84681f25c3153f01dd76621b3d50fbc1d0e7",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-robbery-in-the-third-degree",
+          "disposition": "retain"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 160.10",
+      "section": "160.10",
+      "officialTitle": "Robbery in the second degree",
+      "sourceKey": "ny:PEN:160.10",
+      "contentSha256": "729c482b35bc723a6c067191f5a2a4f3570b84f99a52b50d846e379898b4ca2b",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-robbery-in-the-second-degree",
+          "disposition": "retain"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 160.15",
+      "section": "160.15",
+      "officialTitle": "Robbery in the first degree",
+      "sourceKey": "ny:PEN:160.15",
+      "contentSha256": "94f2ced2fbea49a312ad619ec1fe43229a64eb36ab85a20eecf90a340e115efa",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-robbery-in-the-first-degree",
+          "disposition": "retain"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 165.40",
+      "section": "165.40",
+      "officialTitle": "Criminal possession of stolen property in the fifth degree",
+      "sourceKey": "ny:PEN:165.40",
+      "contentSha256": "100aea87ae2b144fdb4b3599c73dcfcb372bacbcba887a0bb9a14e1e077dba10",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-criminal-possession-of-stolen-property",
+          "disposition": "exact_alias_rename"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 170.20",
+      "section": "170.20",
+      "officialTitle": "Criminal possession of a forged instrument in the third degree",
+      "sourceKey": "ny:PEN:170.20",
+      "contentSha256": "38a22a043df27da19efdf6dd937882eaf225d2726506debab8850cbf451d0f0b",
+      "status": "no_baseline_section_mapping",
+      "matches": []
+    },
+    {
+      "citation": "N.Y. Penal Law § 195.05",
+      "section": "195.05",
+      "officialTitle": "Obstructing governmental administration in the second degree",
+      "sourceKey": "ny:PEN:195.05",
+      "contentSha256": "bcf976319e34a0d81c81c2d4ca692e3440658fd2f6173ebd1fec37db34c22ae2",
+      "status": "no_baseline_section_mapping",
+      "matches": []
+    },
+    {
+      "citation": "N.Y. Penal Law § 205.30",
+      "section": "205.30",
+      "officialTitle": "Resisting arrest",
+      "sourceKey": "ny:PEN:205.30",
+      "contentSha256": "e79b1c25592d073c90e605a99f252e20e16ad73522ba8e5c4c091cbbd4f76aeb",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-resisting-arrest",
+          "disposition": "exact_alias_rename"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 215.50",
+      "section": "215.50",
+      "officialTitle": "Criminal contempt in the second degree",
+      "sourceKey": "ny:PEN:215.50",
+      "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-criminal-contempt",
+          "disposition": "exact_alias_rename"
+        }
+      ]
+    },
+    {
+      "citation": "N.Y. Penal Law § 240.26",
+      "section": "240.26",
+      "officialTitle": "Harassment in the second degree",
+      "sourceKey": "ny:PEN:240.26",
+      "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+      "status": "same_section_requires_scope_review",
+      "matches": [
+        {
+          "id": "ny-harassment",
+          "disposition": "exact_alias_rename"
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "ny-petit-larceny",
+      "section": "155.25",
+      "scope": "whole section; definition in 155.05 and claim-of-right rule in 155.15",
+      "grade": "A",
+      "dependencies": [
+        "155.00",
+        "155.05",
+        "155.15",
+        "70.15",
+        "80.05",
+        "80.00"
+      ],
+      "proposedConduct": "Stealing property. Penal Law 155.05 supplies the required intent to deprive or appropriate and the applicable manner of taking, obtaining or withholding. Section 155.25 does not itself impose a $1,000-or-less element. Applicable higher-degree offenses must be considered separately.",
+      "correction": "Remove the one-year custody ceiling, unsupported statutory value ceiling and asserted entitlement to an ACD. This packet does not independently establish eligibility for diversion or other procedural relief.",
+      "officialTitle": "Petit larceny",
+      "researchOnly": true,
+      "publicationStatus": "blocked_pending_API_provenance_and_date_review",
+      "proposedOrdinaryPenalty": "For an individual: up to 364 days of imprisonment and/or a fine up to $1,000. If money or property was gained, the court may instead impose a fine up to twice the gain under 80.05(5), subject to 80.00(2)–(3). Restitution, fees and other case-specific consequences are not included in these fine limits.",
+      "bindings": [
+        {
+          "role": "conduct",
+          "sourceKey": "ny:PEN:155.25",
+          "contentSha256": "d1900f1162edd2c680409130fd5249b070a272d454978297c6a4de260f275f90",
+          "start": 0,
+          "end": 85,
+          "text": "§ 155.25 Petit larceny.\n\nA person is guilty of petit larceny when he steals property."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:155.25",
+          "contentSha256": "d1900f1162edd2c680409130fd5249b070a272d454978297c6a4de260f275f90",
+          "start": 87,
+          "end": 126,
+          "text": "Petit larceny is a class A misdemeanor."
+        },
+        {
+          "role": "definition_or_exception",
+          "sourceKey": "ny:PEN:155.00",
+          "contentSha256": "3aff351e379bef7701baa689a53cc45471cf3a32ce9447ac8f0327b045c21cd3",
+          "start": 0,
+          "end": 6145,
+          "text": "§ 155.00 Larceny; definitions of terms.\n\nThe following definitions are applicable to this title:\n\n1. \"Property\" means any money, compensation for labor or services,\npersonal property, real property, computer data, computer program, thing\nin action, evidence of debt or contract, or any article, substance or\nthing of value, including any gas, steam, water or electricity, which is\nprovided for a charge or compensation.\n\n2. \"Obtain\" includes, but is not limited to, the bringing about of a\ntransfer or purported transfer of property or of a legal interest\ntherein, whether to the obtainer or another.\n\n3. \"Deprive.\" To \"deprive\" another of property means (a) to withhold\nit or cause it to be withheld from him permanently or for so extended a\nperiod or under such circumstances that the major portion of its\neconomic value or benefit is lost to him, or (b) to dispose of the\nproperty in such manner or under such circumstances as to render it\nunlikely that an owner will recover such property.\n\n4. \"Appropriate.\" To \"appropriate\" property of another to oneself or a\nthird person means (a) to exercise control over it, or to aid a third\nperson to exercise control over it, permanently or for so extended a\nperiod or under such circumstances as to acquire the major portion of\nits economic value or benefit, or (b) to dispose of the property for the\nbenefit of oneself or a third person.\n\n5. \"Owner.\" When property is taken, obtained or withheld by one person\nfrom another person, an \"owner\" thereof means any person who has a right\nto possession thereof superior to that of the taker, obtainer or\nwithholder.\n\nA person who has obtained possession of property by theft or other\nillegal means shall be deemed to have a right of possession superior to\nthat of a person who takes, obtains or withholds it from him by\nlarcenous means.\n\nA joint or common owner of property shall not be deemed to have a\nright of possession thereto superior to that of any other joint or\ncommon owner thereof.\n\nIn the absence of a specific agreement to the contrary, a person in\nlawful possession of property shall be deemed to have a right of\npossession superior to that of a person having only a security interest\ntherein, even if legal title lies with the holder of the security\ninterest pursuant to a conditional sale contract or other security\nagreement.\n\n6. \"Secret scientific material\" means a sample, culture,\nmicro-organism, specimen, record, recording, document, drawing or any\nother article, material, device or substance which constitutes,\nrepresents, evidences, reflects, or records a scientific or technical\nprocess, invention or formula or any part or phase thereof, and which is\nnot, and is not intended to be, available to anyone other than the\nperson or persons rightfully in possession thereof or selected persons\nhaving access thereto with his or their consent, and when it accords or\nmay accord such rightful possessors an advantage over competitors or\nother persons who do not have knowledge or the benefit thereof.\n\n7. \"Credit card\" means any instrument or article defined as a credit\ncard in section five hundred eleven of the general business law.\n\n7-a. \"Debit card\" means any instrument or article defined as a debit\ncard in section five hundred eleven of the general business law.\n\n7-b. \"Public benefit card\" means any medical assistance card, food\nstamp assistance card, public assistance card, or any other\nidentification, authorization card or electronic access device issued by\nthe state or a social services district as defined in subdivision seven\nof section two of the social services law, which entitles a person to\nobtain public assistance benefits under a local, state or federal\nprogram administered by the state, its political subdivisions or social\nservices districts.\n\n7-c. \"Access device\" means any telephone calling card number, credit\ncard number, account number, mobile identification number, electronic\nserial number or personal identification number that can be used to\nobtain telephone service.\n\n8. \"Service\" includes, but is not limited to, labor, professional\nservice, a computer service, transportation service, the supplying of\nhotel accommodations, restaurant services, entertainment, the supplying\nof equipment for use, and the supplying of commodities of a public\nutility nature such as gas, electricity, steam and water. A ticket or\nequivalent instrument which evidences a right to receive a service is\nnot in itself service but constitutes property within the meaning of\nsubdivision one.\n\n9. \"Cable television service\" means any and all services provided by\nor through the facilities of any cable television system or closed\ncircuit coaxial cable communications system, or any microwave or similar\ntransmission service used in connection with any cable television system\nor other similar closed circuit coaxial cable communications system.\n\n10. \"Workforce\" means a group of one or more persons who work in\nexchange for wages.\n\n11. \"Residential real property\" or any derivative word thereof shall\nhave the same meaning as defined in subdivision three of section 187.00\nof this part.\n\n12. \"Commercial property\" or any derivative word thereof shall mean a\nnonresidential property used for the buying, selling or otherwise\nproviding of goods or services including hotel services, or for other\nlawful business, commercial or manufacturing activities.\n\n13. \"Mixed-use property\" shall have the same meaning as defined in\nsubdivision twenty-two of section four hundred eighty-nine-aaaa of the\nreal property tax law.\n\n14. \"Incompetent\" shall have the same meaning as defined in section\n1-2.9 of the estates, powers and trusts law.\n\n15. \"Incapacitated person\" shall mean a person who, because of mental\ndisability as defined in subdivision three of section 1.03 of the mental\nhygiene law or mental deficiency, is unable to care for their own\nproperty and/or personal needs, and is likely to suffer harm because\nsuch person is unable to understand and appreciate the nature and\nconsequences of not being able to care for their property and/or\npersonal needs.\n\n16. \"Elderly person\" means a person sixty years of age or older."
+        },
+        {
+          "role": "definition_or_exception",
+          "sourceKey": "ny:PEN:155.05",
+          "contentSha256": "d66c1b0e09a6e31028c2307806b0a5366a2dae6dfdb5c7f7d95f04a65c634abc",
+          "start": 0,
+          "end": 5330,
+          "text": "§ 155.05 Larceny; defined.\n\n1. A person steals property and commits larceny when, with intent to\ndeprive another of property or to appropriate the same to himself or to\na third person, he wrongfully takes, obtains or withholds such property\nfrom an owner thereof.\n\n2. Larceny includes a wrongful taking, obtaining or withholding of\nanother's property, with the intent prescribed in subdivision one of\nthis section, committed in any of the following ways:\n\n(a) By conduct heretofore defined or known as common law larceny by\ntrespassory taking, common law larceny by trick, embezzlement, or\nobtaining property by false pretenses;\n\n(b) By acquiring lost property.\n\nA person acquires lost property when he exercises control over\nproperty of another which he knows to have been lost or mislaid, or to\nhave been delivered under a mistake as to the identity of the recipient\nor the nature or amount of the property, without taking reasonable\nmeasures to return such property to the owner;\n\n(c) By committing the crime of issuing a bad check, as defined in\nsection 190.05;\n\n(d) By false promise.\n\nA person obtains property by false promise when, pursuant to a scheme\nto defraud, he obtains property of another by means of a representation,\nexpress or implied, that he or a third person will in the future engage\nin particular conduct, and when he does not intend to engage in such\nconduct or, as the case may be, does not believe that the third person\nintends to engage in such conduct.\n\nIn any prosecution for larceny based upon a false promise, the\ndefendant's intention or belief that the promise would not be performed\nmay not be established by or inferred from the fact alone that such\npromise was not performed. Such a finding may be based only upon\nevidence establishing that the facts and circumstances of the case are\nwholly consistent with guilty intent or belief and wholly inconsistent\nwith innocent intent or belief, and excluding to a moral certainty every\nhypothesis except that of the defendant's intention or belief that the\npromise would not be performed;\n\n(e) By extortion.\n\nA person obtains property by extortion when he compels or induces\nanother person to deliver such property to himself or to a third person\nby means of instilling in him a fear that, if the property is not so\ndelivered, the actor or another will:\n\n(i) Cause physical injury to some person in the future; or\n\n(ii) Cause damage to property; or\n\n(iii) Engage in other conduct constituting a crime; or\n\n(iv) Accuse some person of a crime or cause criminal charges or\nremoval proceedings to be instituted against him or her; or\n\n(v) Expose a secret or publicize an asserted fact, whether true or\nfalse, tending to subject some person to hatred, contempt or ridicule;\nor\n\n(vi) Cause a strike, boycott or other collective labor group action\ninjurious to some person's business; except that such a threat shall not\nbe deemed extortion when the property is demanded or received for the\nbenefit of the group in whose interest the actor purports to act; or\n\n(vii) Testify or provide information or withhold testimony or\ninformation with respect to another's legal claim or defense; or\n\n(viii) Use or abuse his position as a public servant by performing\nsome act within or related to his official duties, or by failing or\nrefusing to perform an official duty, in such manner as to affect some\nperson adversely; or\n\n(ix) Perform any other act which would not in itself materially\nbenefit the actor but which is calculated to harm another person\nmaterially with respect to such other person's health, safety, business,\ncalling, career, financial condition, reputation or personal\nrelationships;or\n\n(f) By wage theft.\n\nA person obtains property by wage theft when such person hires a\nperson to perform services and the person performs such services and the\nperson does not pay wages, at the minimum wage rate and overtime, or\npromised wage, if greater than the minimum wage rate and overtime, to\nsaid person for work performed. In a prosecution for wage theft, for the\npurposes of venue, it is permissible to aggregate all nonpayments or\nunderpayments to one person from one person, into one larceny count,\neven if the nonpayments or underpayments occurred in multiple counties.\nIt is also permissible to aggregate nonpayments or underpayments from a\nworkforce into one larceny count even if such nonpayments or\nunderpayments occurred in multiple counties; or\n\n(g) By deed theft. A person commits deed theft when such person:\n\n(i) Intentionally alters, falsifies, forges, or misrepresents any\nwritten instrument involved in the conveyance or financing of real\nproperty, such as a residential or commercial deed or title, with the\nintent to deceive, defraud, or unlawfully transfer or encumber the\nownership rights or a portion thereof of a residential or commercial\nproperty; or\n\n(ii) with intent to defraud, misrepresents themselves as the owner or\nauthorized representative of residential or commercial real property to\ninduce others to rely on such false information in order to obtain\nownership or possession of such real property; or\n\n(iii) with intent to defraud, takes, obtains, or transfers title or\nownership of real property by fraud, misrepresentation, forgery,\nlarceny, false pretenses, false promise, or any other fraudulent or\ndeceptive practice."
+        },
+        {
+          "role": "definition_or_exception",
+          "sourceKey": "ny:PEN:155.15",
+          "contentSha256": "18ff822295f0ec13eecea9dc2c8ecf52de1d46f426c7b6413d0aa716a4356722",
+          "start": 0,
+          "end": 628,
+          "text": "§ 155.15 Larceny; defenses.\n\n1. In any prosecution for larceny committed by trespassory taking or\nembezzlement, it is an affirmative defense that the property was\nappropriated under a claim of right made in good faith.\n\n2. In any prosecution for larceny by extortion committed by instilling\nin the victim a fear that he or another person would be charged with a\ncrime, it is an affirmative defense that the defendant reasonably\nbelieved the threatened charge to be true and that his sole purpose was\nto compel or induce the victim to take reasonable action to make good\nthe wrong which was the subject of such threatened charge."
+        },
+        {
+          "role": "penalty",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721,
+          "text": "§ 70.15 Sentences of imprisonment for misdemeanors and violation.\n\n1. Class A misdemeanor. A sentence of imprisonment for a class A\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nhundred sixty-four days.\n\n1-a. (a) Notwithstanding the provisions of any other law, whenever the\nphrase \"one year\" or \"three hundred sixty-five days\" or \"365 days\" or\nany similar phrase appears in any provision of this chapter or any other\nlaw in reference to the definite sentence or maximum definite sentence\nof imprisonment that is imposed, or has been imposed, or may be imposed\nafter enactment of this subdivision, for a misdemeanor conviction in\nthis state, such phrase shall mean, be interpreted and be applied as\nthree hundred sixty-four days.\n\n(b) The amendatory provisions of this subdivision are ameliorative and\nshall apply to all persons who are sentenced before, on or after the\neffective date of this subdivision, for a crime committed before, on or\nafter the effective date of this subdivision.\n\n(c) Any sentence for a misdemeanor conviction imposed prior to the\neffective date of this subdivision that is a definite sentence of\nimprisonment of one year, or three hundred sixty-five days, shall, by\noperation of law, be changed to, mean and be interpreted and applied as\na sentence of three hundred sixty-four days. In addition to any other\nright of a person to obtain a record of a proceeding against him or her,\na person so sentenced prior to the effective date of this subdivision\nshall be entitled to obtain, from the criminal court or the clerk\nthereof, a certificate of conviction, as described in subdivision one of\nsection 60.60 of the criminal procedure law, setting forth such sentence\nas the sentence specified in this paragraph.\n\n(d) Any sentence for a misdemeanor conviction imposed prior to the\neffective date of this subdivision that is other than a definite\nsentence of imprisonment of one year may be set aside, upon motion of\nthe defendant under section 440.20 of the criminal procedure law based\non a showing that the judgment and sentence under the law in effect at\nthe time of conviction imposed prior to the effective date of this\nsubdivision is likely to result in collateral consequences, in order to\npermit the court to resentence the defendant in accordance with the\namendatory provisions of this subdivision.\n\n(e) Resentence by operation of law is without prejudice to an\nindividual seeking further relief pursuant to paragraph (j) of\nsubdivision one of section 440.10 of the criminal procedure law. Nothing\nin this section is intended to diminish or abrogate any rights or\nremedies otherwise available to the individual.\n\n2. Class B misdemeanor. A sentence of imprisonment for a class B\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nmonths.\n\n3. Unclassified misdemeanor. A sentence of imprisonment for an\nunclassified misdemeanor shall be a definite sentence. When such a\nsentence is imposed the term shall be fixed by the court, and shall be\nin accordance with the sentence specified in the law or ordinance that\ndefines the crime but, in any event, it shall not exceed three hundred\nsixty-four days.\n\n4. Violation. A sentence of imprisonment for a violation shall be a\ndefinite sentence. When such a sentence is imposed the term shall be\nfixed by the court, and shall not exceed fifteen days.\n\nIn the case of a violation defined outside this chapter, if the\nsentence is expressly specified in the law or ordinance that defines the\noffense and consists solely of a fine, no term of imprisonment shall be\nimposed."
+        },
+        {
+          "role": "penalty",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039,
+          "text": "§ 80.05 Fines for misdemeanors and violation.\n\n1. Class A misdemeanor. A sentence to pay a fine for a class A\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding one thousand dollars, provided, however, that a sentence\nimposed for a violation of section 215.80 of this chapter may include a\nfine in an amount equivalent to double the value of the property\nunlawfully disposed of in the commission of the crime.\n\n2. Class B misdemeanor. A sentence to pay a fine for a class B\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding five hundred dollars.\n\n3. Unclassified misdemeanor. A sentence to pay a fine for an\nunclassified misdemeanor shall be a sentence to pay an amount, fixed by\nthe court, in accordance with the provisions of the law or ordinance\nthat defines the crime.\n\n4. Violation. A sentence to pay a fine for a violation shall be a\nsentence to pay an amount, fixed by the court, not exceeding two hundred\nfifty dollars.\n\nIn the case of a violation defined outside this chapter, if the amount\nof the fine is expressly specified in the law or ordinance that defines\nthe offense, the amount of the fine shall be fixed in accordance with\nthat law or ordinance.\n\n5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence.\n\n6. Exception. The provisions of this section shall not apply to a\ncorporation."
+        },
+        {
+          "role": "penalty",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099,
+          "text": "§ 80.00 Fine for felony.\n\n1. A sentence to pay a fine for a felony shall be a sentence to pay an\namount, fixed by the court, not exceeding the higher of\n\na. five thousand dollars; or\n\nb. double the amount of the defendant's gain from the commission of\nthe crime or, if the defendant is convicted of a crime defined in\narticle four hundred ninety-six of this chapter, any higher amount not\nexceeding three times the amount of the defendant's gain from the\ncommission of such offense; or\n\nc. if the conviction is for any felony defined in article two hundred\ntwenty or two hundred twenty-one of this chapter, according to the\nfollowing schedule:\n\n(i) for A-I felonies, one hundred thousand dollars;\n\n(ii) for A-II felonies, fifty thousand dollars;\n\n(iii) for B felonies, thirty thousand dollars;\n\n(iv) for C felonies, fifteen thousand dollars.\nWhen imposing a fine pursuant to the provisions of this paragraph, the\ncourt shall consider the profit gained by defendant's conduct, whether\nthe amount of the fine is disproportionate to the conduct in which\ndefendant engaged, its impact on any victims, and defendant's economic\ncircumstances, including the defendant's ability to pay, the effect of\nthe fine upon his or her immediate family or any other persons to whom\nthe defendant owes an obligation of support.\n\n2. As used in this section the term \"gain\" means the amount of money\nor the value of property derived from the commission of the crime, less\nthe amount of money or the value of property returned to the victim of\nthe crime or seized by or surrendered to lawful authority prior to the\ntime sentence is imposed.\n\n3. When the court imposes a fine for a felony pursuant to paragraph b\nof subdivision one of this section, the court shall make a finding as to\nthe amount of the defendant's gain from the crime. If the record does\nnot contain sufficient evidence to support such a finding or to permit\nadequate consideration of the matters specified in paragraph c of\nsubdivision one of this section, the court may conduct a hearing upon\nsuch issues.\n\n4. Exception. The provisions of this section shall not apply to a\ncorporation.\n\n5. All moneys in excess of five thousand dollars received or collected\nin payment of a fine imposed pursuant to paragraph c of subdivision one\nof this section are the property of the state and the state comptroller\nshall deposit all such fines to the rehabilitative alcohol and substance\ntreatment fund established pursuant to section ninety-seven-cc of the\nstate finance law.\n\n6. Notwithstanding any inconsistent provision of subdivision one of\nthis section a sentence to pay a fine for a felony set forth in the\nvehicle and traffic law shall be a sentence to pay an amount fixed by\nthe court in accordance with the provisions of the law that defines the\ncrime.\n\n7. When the court imposes a fine pursuant to section 145.22 or 145.23\nof this chapter, the court shall direct that no less than ten percent of\nsuch fine be credited to the state cemetery vandalism restoration and\nadministration fund created pursuant to section ninety-seven-r of the\nstate finance law."
+        }
+      ]
+    },
+    {
+      "id": "ny-criminal-possession-of-stolen-property",
+      "section": "165.40",
+      "scope": "whole section",
+      "grade": "A",
+      "dependencies": [
+        "155.00",
+        "165.55",
+        "70.15",
+        "80.05",
+        "80.00"
+      ],
+      "proposedConduct": "Knowingly possessing stolen property with intent to benefit oneself or someone other than an owner, or to impede an owner's recovery. Section 165.40 does not itself impose a $1,000-or-less element. Applicable higher-degree offenses and the limitations on statutory presumptions require separate attention.",
+      "correction": "Replace the one-year ceiling; preserve the alternative intent to impede recovery; remove the unsupported statutory value ceiling.",
+      "officialTitle": "Criminal possession of stolen property in the fifth degree",
+      "researchOnly": true,
+      "publicationStatus": "blocked_pending_API_provenance_and_date_review",
+      "proposedOrdinaryPenalty": "For an individual: up to 364 days of imprisonment and/or a fine up to $1,000. If money or property was gained, the court may instead impose a fine up to twice the gain under 80.05(5), subject to 80.00(2)–(3). Restitution, fees and other case-specific consequences are not included in these fine limits.",
+      "bindings": [
+        {
+          "role": "conduct",
+          "sourceKey": "ny:PEN:165.40",
+          "contentSha256": "100aea87ae2b144fdb4b3599c73dcfcb372bacbcba887a0bb9a14e1e077dba10",
+          "start": 0,
+          "end": 313,
+          "text": "§ 165.40 Criminal possession of stolen property in the fifth degree.\n\nA person is guilty of criminal possession of stolen property in the\nfifth degree when he knowingly possesses stolen property, with intent to\nbenefit himself or a person other than an owner thereof or to impede the\nrecovery by an owner thereof."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:165.40",
+          "contentSha256": "100aea87ae2b144fdb4b3599c73dcfcb372bacbcba887a0bb9a14e1e077dba10",
+          "start": 315,
+          "end": 399,
+          "text": "Criminal possession of stolen property in the fifth degree is a class\nA misdemeanor."
+        },
+        {
+          "role": "definition_or_exception",
+          "sourceKey": "ny:PEN:155.00",
+          "contentSha256": "3aff351e379bef7701baa689a53cc45471cf3a32ce9447ac8f0327b045c21cd3",
+          "start": 0,
+          "end": 6145,
+          "text": "§ 155.00 Larceny; definitions of terms.\n\nThe following definitions are applicable to this title:\n\n1. \"Property\" means any money, compensation for labor or services,\npersonal property, real property, computer data, computer program, thing\nin action, evidence of debt or contract, or any article, substance or\nthing of value, including any gas, steam, water or electricity, which is\nprovided for a charge or compensation.\n\n2. \"Obtain\" includes, but is not limited to, the bringing about of a\ntransfer or purported transfer of property or of a legal interest\ntherein, whether to the obtainer or another.\n\n3. \"Deprive.\" To \"deprive\" another of property means (a) to withhold\nit or cause it to be withheld from him permanently or for so extended a\nperiod or under such circumstances that the major portion of its\neconomic value or benefit is lost to him, or (b) to dispose of the\nproperty in such manner or under such circumstances as to render it\nunlikely that an owner will recover such property.\n\n4. \"Appropriate.\" To \"appropriate\" property of another to oneself or a\nthird person means (a) to exercise control over it, or to aid a third\nperson to exercise control over it, permanently or for so extended a\nperiod or under such circumstances as to acquire the major portion of\nits economic value or benefit, or (b) to dispose of the property for the\nbenefit of oneself or a third person.\n\n5. \"Owner.\" When property is taken, obtained or withheld by one person\nfrom another person, an \"owner\" thereof means any person who has a right\nto possession thereof superior to that of the taker, obtainer or\nwithholder.\n\nA person who has obtained possession of property by theft or other\nillegal means shall be deemed to have a right of possession superior to\nthat of a person who takes, obtains or withholds it from him by\nlarcenous means.\n\nA joint or common owner of property shall not be deemed to have a\nright of possession thereto superior to that of any other joint or\ncommon owner thereof.\n\nIn the absence of a specific agreement to the contrary, a person in\nlawful possession of property shall be deemed to have a right of\npossession superior to that of a person having only a security interest\ntherein, even if legal title lies with the holder of the security\ninterest pursuant to a conditional sale contract or other security\nagreement.\n\n6. \"Secret scientific material\" means a sample, culture,\nmicro-organism, specimen, record, recording, document, drawing or any\nother article, material, device or substance which constitutes,\nrepresents, evidences, reflects, or records a scientific or technical\nprocess, invention or formula or any part or phase thereof, and which is\nnot, and is not intended to be, available to anyone other than the\nperson or persons rightfully in possession thereof or selected persons\nhaving access thereto with his or their consent, and when it accords or\nmay accord such rightful possessors an advantage over competitors or\nother persons who do not have knowledge or the benefit thereof.\n\n7. \"Credit card\" means any instrument or article defined as a credit\ncard in section five hundred eleven of the general business law.\n\n7-a. \"Debit card\" means any instrument or article defined as a debit\ncard in section five hundred eleven of the general business law.\n\n7-b. \"Public benefit card\" means any medical assistance card, food\nstamp assistance card, public assistance card, or any other\nidentification, authorization card or electronic access device issued by\nthe state or a social services district as defined in subdivision seven\nof section two of the social services law, which entitles a person to\nobtain public assistance benefits under a local, state or federal\nprogram administered by the state, its political subdivisions or social\nservices districts.\n\n7-c. \"Access device\" means any telephone calling card number, credit\ncard number, account number, mobile identification number, electronic\nserial number or personal identification number that can be used to\nobtain telephone service.\n\n8. \"Service\" includes, but is not limited to, labor, professional\nservice, a computer service, transportation service, the supplying of\nhotel accommodations, restaurant services, entertainment, the supplying\nof equipment for use, and the supplying of commodities of a public\nutility nature such as gas, electricity, steam and water. A ticket or\nequivalent instrument which evidences a right to receive a service is\nnot in itself service but constitutes property within the meaning of\nsubdivision one.\n\n9. \"Cable television service\" means any and all services provided by\nor through the facilities of any cable television system or closed\ncircuit coaxial cable communications system, or any microwave or similar\ntransmission service used in connection with any cable television system\nor other similar closed circuit coaxial cable communications system.\n\n10. \"Workforce\" means a group of one or more persons who work in\nexchange for wages.\n\n11. \"Residential real property\" or any derivative word thereof shall\nhave the same meaning as defined in subdivision three of section 187.00\nof this part.\n\n12. \"Commercial property\" or any derivative word thereof shall mean a\nnonresidential property used for the buying, selling or otherwise\nproviding of goods or services including hotel services, or for other\nlawful business, commercial or manufacturing activities.\n\n13. \"Mixed-use property\" shall have the same meaning as defined in\nsubdivision twenty-two of section four hundred eighty-nine-aaaa of the\nreal property tax law.\n\n14. \"Incompetent\" shall have the same meaning as defined in section\n1-2.9 of the estates, powers and trusts law.\n\n15. \"Incapacitated person\" shall mean a person who, because of mental\ndisability as defined in subdivision three of section 1.03 of the mental\nhygiene law or mental deficiency, is unable to care for their own\nproperty and/or personal needs, and is likely to suffer harm because\nsuch person is unable to understand and appreciate the nature and\nconsequences of not being able to care for their property and/or\npersonal needs.\n\n16. \"Elderly person\" means a person sixty years of age or older."
+        },
+        {
+          "role": "definition_or_exception",
+          "sourceKey": "ny:PEN:165.55",
+          "contentSha256": "8f080892521fcc3d587bc5f24313bba6693d7a9763dfd6aa8c216fc2c54560f0",
+          "start": 0,
+          "end": 1115,
+          "text": "§ 165.55 Criminal possession of stolen property; presumptions.\n\n1. A person who knowingly possesses stolen property is presumed to\npossess it with intent to benefit himself or a person other than an\nowner thereof or to impede the recovery by an owner thereof.\n\n2. A collateral loan broker or a person in the business of buying,\nselling or otherwise dealing in property who possesses stolen property\nis presumed to know that such property was stolen if he obtained it\nwithout having ascertained by reasonable inquiry that the person from\nwhom he obtained it had a legal right to possess it.\n\n3. A person who possesses two or more stolen credit cards, debit cards\nor public benefit cards is presumed to know that such credit cards,\ndebit cards or public benefit cards were stolen.\n\n4. A person who possesses three or more tickets or equivalent\ninstrument for air transportation service, which tickets or instruments\nwere stolen by reason of having been obtained from the issuer or agent\nthereof by the use of one or more stolen or forged credit cards, is\npresumed to know that such tickets or instruments were stolen."
+        },
+        {
+          "role": "penalty",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721,
+          "text": "§ 70.15 Sentences of imprisonment for misdemeanors and violation.\n\n1. Class A misdemeanor. A sentence of imprisonment for a class A\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nhundred sixty-four days.\n\n1-a. (a) Notwithstanding the provisions of any other law, whenever the\nphrase \"one year\" or \"three hundred sixty-five days\" or \"365 days\" or\nany similar phrase appears in any provision of this chapter or any other\nlaw in reference to the definite sentence or maximum definite sentence\nof imprisonment that is imposed, or has been imposed, or may be imposed\nafter enactment of this subdivision, for a misdemeanor conviction in\nthis state, such phrase shall mean, be interpreted and be applied as\nthree hundred sixty-four days.\n\n(b) The amendatory provisions of this subdivision are ameliorative and\nshall apply to all persons who are sentenced before, on or after the\neffective date of this subdivision, for a crime committed before, on or\nafter the effective date of this subdivision.\n\n(c) Any sentence for a misdemeanor conviction imposed prior to the\neffective date of this subdivision that is a definite sentence of\nimprisonment of one year, or three hundred sixty-five days, shall, by\noperation of law, be changed to, mean and be interpreted and applied as\na sentence of three hundred sixty-four days. In addition to any other\nright of a person to obtain a record of a proceeding against him or her,\na person so sentenced prior to the effective date of this subdivision\nshall be entitled to obtain, from the criminal court or the clerk\nthereof, a certificate of conviction, as described in subdivision one of\nsection 60.60 of the criminal procedure law, setting forth such sentence\nas the sentence specified in this paragraph.\n\n(d) Any sentence for a misdemeanor conviction imposed prior to the\neffective date of this subdivision that is other than a definite\nsentence of imprisonment of one year may be set aside, upon motion of\nthe defendant under section 440.20 of the criminal procedure law based\non a showing that the judgment and sentence under the law in effect at\nthe time of conviction imposed prior to the effective date of this\nsubdivision is likely to result in collateral consequences, in order to\npermit the court to resentence the defendant in accordance with the\namendatory provisions of this subdivision.\n\n(e) Resentence by operation of law is without prejudice to an\nindividual seeking further relief pursuant to paragraph (j) of\nsubdivision one of section 440.10 of the criminal procedure law. Nothing\nin this section is intended to diminish or abrogate any rights or\nremedies otherwise available to the individual.\n\n2. Class B misdemeanor. A sentence of imprisonment for a class B\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nmonths.\n\n3. Unclassified misdemeanor. A sentence of imprisonment for an\nunclassified misdemeanor shall be a definite sentence. When such a\nsentence is imposed the term shall be fixed by the court, and shall be\nin accordance with the sentence specified in the law or ordinance that\ndefines the crime but, in any event, it shall not exceed three hundred\nsixty-four days.\n\n4. Violation. A sentence of imprisonment for a violation shall be a\ndefinite sentence. When such a sentence is imposed the term shall be\nfixed by the court, and shall not exceed fifteen days.\n\nIn the case of a violation defined outside this chapter, if the\nsentence is expressly specified in the law or ordinance that defines the\noffense and consists solely of a fine, no term of imprisonment shall be\nimposed."
+        },
+        {
+          "role": "penalty",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039,
+          "text": "§ 80.05 Fines for misdemeanors and violation.\n\n1. Class A misdemeanor. A sentence to pay a fine for a class A\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding one thousand dollars, provided, however, that a sentence\nimposed for a violation of section 215.80 of this chapter may include a\nfine in an amount equivalent to double the value of the property\nunlawfully disposed of in the commission of the crime.\n\n2. Class B misdemeanor. A sentence to pay a fine for a class B\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding five hundred dollars.\n\n3. Unclassified misdemeanor. A sentence to pay a fine for an\nunclassified misdemeanor shall be a sentence to pay an amount, fixed by\nthe court, in accordance with the provisions of the law or ordinance\nthat defines the crime.\n\n4. Violation. A sentence to pay a fine for a violation shall be a\nsentence to pay an amount, fixed by the court, not exceeding two hundred\nfifty dollars.\n\nIn the case of a violation defined outside this chapter, if the amount\nof the fine is expressly specified in the law or ordinance that defines\nthe offense, the amount of the fine shall be fixed in accordance with\nthat law or ordinance.\n\n5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence.\n\n6. Exception. The provisions of this section shall not apply to a\ncorporation."
+        },
+        {
+          "role": "penalty",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099,
+          "text": "§ 80.00 Fine for felony.\n\n1. A sentence to pay a fine for a felony shall be a sentence to pay an\namount, fixed by the court, not exceeding the higher of\n\na. five thousand dollars; or\n\nb. double the amount of the defendant's gain from the commission of\nthe crime or, if the defendant is convicted of a crime defined in\narticle four hundred ninety-six of this chapter, any higher amount not\nexceeding three times the amount of the defendant's gain from the\ncommission of such offense; or\n\nc. if the conviction is for any felony defined in article two hundred\ntwenty or two hundred twenty-one of this chapter, according to the\nfollowing schedule:\n\n(i) for A-I felonies, one hundred thousand dollars;\n\n(ii) for A-II felonies, fifty thousand dollars;\n\n(iii) for B felonies, thirty thousand dollars;\n\n(iv) for C felonies, fifteen thousand dollars.\nWhen imposing a fine pursuant to the provisions of this paragraph, the\ncourt shall consider the profit gained by defendant's conduct, whether\nthe amount of the fine is disproportionate to the conduct in which\ndefendant engaged, its impact on any victims, and defendant's economic\ncircumstances, including the defendant's ability to pay, the effect of\nthe fine upon his or her immediate family or any other persons to whom\nthe defendant owes an obligation of support.\n\n2. As used in this section the term \"gain\" means the amount of money\nor the value of property derived from the commission of the crime, less\nthe amount of money or the value of property returned to the victim of\nthe crime or seized by or surrendered to lawful authority prior to the\ntime sentence is imposed.\n\n3. When the court imposes a fine for a felony pursuant to paragraph b\nof subdivision one of this section, the court shall make a finding as to\nthe amount of the defendant's gain from the crime. If the record does\nnot contain sufficient evidence to support such a finding or to permit\nadequate consideration of the matters specified in paragraph c of\nsubdivision one of this section, the court may conduct a hearing upon\nsuch issues.\n\n4. Exception. The provisions of this section shall not apply to a\ncorporation.\n\n5. All moneys in excess of five thousand dollars received or collected\nin payment of a fine imposed pursuant to paragraph c of subdivision one\nof this section are the property of the state and the state comptroller\nshall deposit all such fines to the rehabilitative alcohol and substance\ntreatment fund established pursuant to section ninety-seven-cc of the\nstate finance law.\n\n6. Notwithstanding any inconsistent provision of subdivision one of\nthis section a sentence to pay a fine for a felony set forth in the\nvehicle and traffic law shall be a sentence to pay an amount fixed by\nthe court in accordance with the provisions of the law that defines the\ncrime.\n\n7. When the court imposes a fine pursuant to section 145.22 or 145.23\nof this chapter, the court shall direct that no less than ten percent of\nsuch fine be credited to the state cemetery vandalism restoration and\nadministration fund created pursuant to section ninety-seven-r of the\nstate finance law."
+        }
+      ]
+    },
+    {
+      "id": "ny-vandalism",
+      "section": "145.00",
+      "scope": "subdivisions 1–4, including incorporated abandoned-building definition",
+      "grade": "A",
+      "dependencies": [
+        "70.15",
+        "80.05",
+        "80.00",
+        "RPA:1971-A",
+        "RPA:1971"
+      ],
+      "proposedConduct": "Without a right or reasonable ground to believe one has a right: intentionally damaging another person's property; intentionally participating in destruction of an abandoned building as statutorily defined; recklessly damaging another person's property in an amount exceeding $250; or intentionally disabling/removing communication equipment to prevent an emergency-assistance request under subdivision 4. An ownership interest in that equipment is not a defense to subdivision 4.",
+      "correction": "Replace the one-year ceiling and generic destruction label with the official title and actual alternative conduct. Do not turn the greater-than-$250 reckless threshold into an at-least-$250 threshold.",
+      "officialTitle": "Criminal mischief in the fourth degree",
+      "researchOnly": true,
+      "publicationStatus": "blocked_pending_API_provenance_and_date_review",
+      "proposedOrdinaryPenalty": "For an individual: up to 364 days of imprisonment and/or a fine up to $1,000. If money or property was gained, the court may instead impose a fine up to twice the gain under 80.05(5), subject to 80.00(2)–(3). Restitution, fees and other case-specific consequences are not included in these fine limits.",
+      "bindings": [
+        {
+          "role": "conduct",
+          "sourceKey": "ny:PEN:145.00",
+          "contentSha256": "8d0783b51b9deab32d317d01f8726193c4028f0a0fc1dcbadd0f20889afef7e2",
+          "start": 0,
+          "end": 1279,
+          "text": "§ 145.00 Criminal mischief in the fourth degree.\n\nA person is guilty of criminal mischief in the fourth degree when,\nhaving no right to do so nor any reasonable ground to believe that he or\nshe has such right, he or she:\n\n1. Intentionally damages property of another person; or\n\n2. Intentionally participates in the destruction of an abandoned\nbuilding as defined in section one thousand nine hundred seventy-one-a\nof the real property actions and proceedings law; or\n\n3. Recklessly damages property of another person in an amount\nexceeding two hundred fifty dollars; or\n\n4. With intent to prevent a person from communicating a request for\nemergency assistance, intentionally disables or removes telephonic, TTY\nor similar communication sending equipment while that person: (a) is\nattempting to seek or is engaged in the process of seeking emergency\nassistance from police, law enforcement, fire or emergency medical\nservices personnel; or (b) is attempting to seek or is engaged in the\nprocess of seeking emergency assistance from another person or entity in\norder to protect himself, herself or a third person from imminent\nphysical injury. The fact that the defendant has an ownership interest\nin such equipment shall not be a defense to a charge pursuant to this\nsubdivision."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:145.00",
+          "contentSha256": "8d0783b51b9deab32d317d01f8726193c4028f0a0fc1dcbadd0f20889afef7e2",
+          "start": 1281,
+          "end": 1345,
+          "text": "Criminal mischief in the fourth degree is a class A misdemeanor."
+        },
+        {
+          "role": "penalty",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721,
+          "text": "§ 70.15 Sentences of imprisonment for misdemeanors and violation.\n\n1. Class A misdemeanor. A sentence of imprisonment for a class A\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nhundred sixty-four days.\n\n1-a. (a) Notwithstanding the provisions of any other law, whenever the\nphrase \"one year\" or \"three hundred sixty-five days\" or \"365 days\" or\nany similar phrase appears in any provision of this chapter or any other\nlaw in reference to the definite sentence or maximum definite sentence\nof imprisonment that is imposed, or has been imposed, or may be imposed\nafter enactment of this subdivision, for a misdemeanor conviction in\nthis state, such phrase shall mean, be interpreted and be applied as\nthree hundred sixty-four days.\n\n(b) The amendatory provisions of this subdivision are ameliorative and\nshall apply to all persons who are sentenced before, on or after the\neffective date of this subdivision, for a crime committed before, on or\nafter the effective date of this subdivision.\n\n(c) Any sentence for a misdemeanor conviction imposed prior to the\neffective date of this subdivision that is a definite sentence of\nimprisonment of one year, or three hundred sixty-five days, shall, by\noperation of law, be changed to, mean and be interpreted and applied as\na sentence of three hundred sixty-four days. In addition to any other\nright of a person to obtain a record of a proceeding against him or her,\na person so sentenced prior to the effective date of this subdivision\nshall be entitled to obtain, from the criminal court or the clerk\nthereof, a certificate of conviction, as described in subdivision one of\nsection 60.60 of the criminal procedure law, setting forth such sentence\nas the sentence specified in this paragraph.\n\n(d) Any sentence for a misdemeanor conviction imposed prior to the\neffective date of this subdivision that is other than a definite\nsentence of imprisonment of one year may be set aside, upon motion of\nthe defendant under section 440.20 of the criminal procedure law based\non a showing that the judgment and sentence under the law in effect at\nthe time of conviction imposed prior to the effective date of this\nsubdivision is likely to result in collateral consequences, in order to\npermit the court to resentence the defendant in accordance with the\namendatory provisions of this subdivision.\n\n(e) Resentence by operation of law is without prejudice to an\nindividual seeking further relief pursuant to paragraph (j) of\nsubdivision one of section 440.10 of the criminal procedure law. Nothing\nin this section is intended to diminish or abrogate any rights or\nremedies otherwise available to the individual.\n\n2. Class B misdemeanor. A sentence of imprisonment for a class B\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nmonths.\n\n3. Unclassified misdemeanor. A sentence of imprisonment for an\nunclassified misdemeanor shall be a definite sentence. When such a\nsentence is imposed the term shall be fixed by the court, and shall be\nin accordance with the sentence specified in the law or ordinance that\ndefines the crime but, in any event, it shall not exceed three hundred\nsixty-four days.\n\n4. Violation. A sentence of imprisonment for a violation shall be a\ndefinite sentence. When such a sentence is imposed the term shall be\nfixed by the court, and shall not exceed fifteen days.\n\nIn the case of a violation defined outside this chapter, if the\nsentence is expressly specified in the law or ordinance that defines the\noffense and consists solely of a fine, no term of imprisonment shall be\nimposed."
+        },
+        {
+          "role": "penalty",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039,
+          "text": "§ 80.05 Fines for misdemeanors and violation.\n\n1. Class A misdemeanor. A sentence to pay a fine for a class A\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding one thousand dollars, provided, however, that a sentence\nimposed for a violation of section 215.80 of this chapter may include a\nfine in an amount equivalent to double the value of the property\nunlawfully disposed of in the commission of the crime.\n\n2. Class B misdemeanor. A sentence to pay a fine for a class B\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding five hundred dollars.\n\n3. Unclassified misdemeanor. A sentence to pay a fine for an\nunclassified misdemeanor shall be a sentence to pay an amount, fixed by\nthe court, in accordance with the provisions of the law or ordinance\nthat defines the crime.\n\n4. Violation. A sentence to pay a fine for a violation shall be a\nsentence to pay an amount, fixed by the court, not exceeding two hundred\nfifty dollars.\n\nIn the case of a violation defined outside this chapter, if the amount\nof the fine is expressly specified in the law or ordinance that defines\nthe offense, the amount of the fine shall be fixed in accordance with\nthat law or ordinance.\n\n5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence.\n\n6. Exception. The provisions of this section shall not apply to a\ncorporation."
+        },
+        {
+          "role": "penalty",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099,
+          "text": "§ 80.00 Fine for felony.\n\n1. A sentence to pay a fine for a felony shall be a sentence to pay an\namount, fixed by the court, not exceeding the higher of\n\na. five thousand dollars; or\n\nb. double the amount of the defendant's gain from the commission of\nthe crime or, if the defendant is convicted of a crime defined in\narticle four hundred ninety-six of this chapter, any higher amount not\nexceeding three times the amount of the defendant's gain from the\ncommission of such offense; or\n\nc. if the conviction is for any felony defined in article two hundred\ntwenty or two hundred twenty-one of this chapter, according to the\nfollowing schedule:\n\n(i) for A-I felonies, one hundred thousand dollars;\n\n(ii) for A-II felonies, fifty thousand dollars;\n\n(iii) for B felonies, thirty thousand dollars;\n\n(iv) for C felonies, fifteen thousand dollars.\nWhen imposing a fine pursuant to the provisions of this paragraph, the\ncourt shall consider the profit gained by defendant's conduct, whether\nthe amount of the fine is disproportionate to the conduct in which\ndefendant engaged, its impact on any victims, and defendant's economic\ncircumstances, including the defendant's ability to pay, the effect of\nthe fine upon his or her immediate family or any other persons to whom\nthe defendant owes an obligation of support.\n\n2. As used in this section the term \"gain\" means the amount of money\nor the value of property derived from the commission of the crime, less\nthe amount of money or the value of property returned to the victim of\nthe crime or seized by or surrendered to lawful authority prior to the\ntime sentence is imposed.\n\n3. When the court imposes a fine for a felony pursuant to paragraph b\nof subdivision one of this section, the court shall make a finding as to\nthe amount of the defendant's gain from the crime. If the record does\nnot contain sufficient evidence to support such a finding or to permit\nadequate consideration of the matters specified in paragraph c of\nsubdivision one of this section, the court may conduct a hearing upon\nsuch issues.\n\n4. Exception. The provisions of this section shall not apply to a\ncorporation.\n\n5. All moneys in excess of five thousand dollars received or collected\nin payment of a fine imposed pursuant to paragraph c of subdivision one\nof this section are the property of the state and the state comptroller\nshall deposit all such fines to the rehabilitative alcohol and substance\ntreatment fund established pursuant to section ninety-seven-cc of the\nstate finance law.\n\n6. Notwithstanding any inconsistent provision of subdivision one of\nthis section a sentence to pay a fine for a felony set forth in the\nvehicle and traffic law shall be a sentence to pay an amount fixed by\nthe court in accordance with the provisions of the law that defines the\ncrime.\n\n7. When the court imposes a fine pursuant to section 145.22 or 145.23\nof this chapter, the court shall direct that no less than ten percent of\nsuch fine be credited to the state cemetery vandalism restoration and\nadministration fund created pursuant to section ninety-seven-r of the\nstate finance law."
+        },
+        {
+          "role": "definition_or_exception",
+          "sourceKey": "ny:RPA:1971-A",
+          "contentSha256": "8577cf5b0e091056a3d666f4c94c5c3424148cade34ed5a2cd26666c3a235a05",
+          "start": 0,
+          "end": 547,
+          "text": "§ 1971-a. Destruction of abandoned dwellings. \"Destruction of an\nabandoned dwelling\" occurs when a person, having no right to do so or\npermission of the department or the owner to take, remove or otherwise\ndamage the fixtures or the structure of the building, nor any reasonable\nground to believe that he has such right or permission, intentionally\nremoves or damages any fixture or part of the structure of a building\nwhich has been certified as abandoned in accordance with the provisions\nof section nineteen hundred seventy-one of this chapter."
+        },
+        {
+          "role": "definition_or_exception",
+          "sourceKey": "ny:RPA:1971",
+          "contentSha256": "94a0d064f9bdf9d77f16a21be3400f6e483424c40e49b9e7ea26898eee30370e",
+          "start": 0,
+          "end": 2306,
+          "text": "§ 1971. Certification of abandonment. 1. The department may make a\nfinding that a dwelling is abandoned if:\n\n(a) In the case of an occupied dwelling, the owner has failed for a\nperiod of at least three consecutive months either to collect rent or to\ninstitute summary proceedings for nonpayment of rent, and the department\nfinds that the dwelling has become a danger to life, health or safety as\na result of the owner's failure to assume his responsibility for its\ncondition. Such failure may be shown by such facts as an owner's failure\nto provide services including, but not limited to, the failure to make\nrepairs, supply janitorial service, purchase fuel or other needed\nsupplies, or pay utility bills. The appointment of an administrator\npursuant to article seven-A of this chapter shall not prevent the\ndepartment from making a finding that a dwelling is abandoned; or\n\n(b) In the case of a vacant dwelling, it is not sealed or continuously\nguarded as required by law or it was sealed or is continuously guarded\nby a person other than the owner, a mortgagee, lienor or agent thereof,\nand either of the following facts exists:\n\n(i) A vacate order of the department or other governmental agency\ncurrently prohibits occupancy of the dwelling; or\n\n(ii) The tax on such premises has been due and unpaid for a period of\nat least one year; or\n\n(c) In the case of a building for which an administrator has been\nappointed pursuant to article seven-A of this chapter.\n\n(i) no motion for the termination of the judgment entered pursuant to\narticle seven-A of this chapter has been granted by the appointing\ncourt;\n\n(ii) no mortgagee or lienor has commenced foreclosure proceedings; and\n\n(iii) at least six months have passed since the granting of a judgment\nappointing an administrator pursuant to article seven-A of this chapter.\n\n2. When the department finds that a dwelling is abandoned within the\nmeaning of this article, it shall make and file among its records a\ncertification containing such finding and the facts on which it is\nbased. Further, it shall immediately affix to the dwelling in a\nprominent and conspicuous location, a notice that the building has been\nfound to be an abandoned building and that it is a crime to take, remove\nor otherwise damage any fixture or part of the building structure."
+        }
+      ]
+    },
+    {
+      "id": "ny-trespass-after-warning",
+      "section": "140.10",
+      "scope": "subdivisions (a)–(g), with 140.00 unlawful-entry definition and incorporated camp definitions",
+      "grade": "B",
+      "dependencies": [
+        "140.00",
+        "70.15",
+        "80.05",
+        "80.00",
+        "PBH:1392"
+      ],
+      "proposedConduct": "Knowingly entering or remaining unlawfully in a building or on real property under one of the specific conditions in subdivisions (a)–(g): enclosing barriers; specified school or camp conditions; specified public-housing conditions; or a designated, conspicuously posted no-trespass railroad zone. A generic warning or ban alone does not establish every required statutory condition.",
+      "correction": "Replace the generic warning-based description and the one-year/$1,000 penalty with the actual Class B classification. Do not promise a fixed warning expiration or an entitlement not established by the statute.",
+      "officialTitle": "Criminal trespass in the third degree",
+      "researchOnly": true,
+      "publicationStatus": "blocked_pending_API_provenance_and_date_review",
+      "proposedOrdinaryPenalty": "For an individual: up to three months of imprisonment and/or a fine up to $500. If money or property was gained, the court may instead impose a fine up to twice the gain under 80.05(5), subject to 80.00(2)–(3). Restitution, fees and other case-specific consequences are not included in these fine limits.",
+      "bindings": [
+        {
+          "role": "conduct",
+          "sourceKey": "ny:PEN:140.10",
+          "contentSha256": "28d5b89296324f1cb0e1a13a5031ee4ad72c51684cba3ac335a8f7a5f4ec1467",
+          "start": 0,
+          "end": 1834,
+          "text": "§ 140.10 Criminal trespass in the third degree.\n\nA person is guilty of criminal trespass in the third degree when he\nknowingly enters or remains unlawfully in a building or upon real\nproperty\n\n(a) which is fenced or otherwise enclosed in a manner designed to\nexclude intruders; or\n\n(b) where the building is utilized as an elementary or secondary\nschool or a children's overnight camp as defined in section one thousand\nthree hundred ninety-two of the public health law or a summer day camp\nas defined in section one thousand three hundred ninety-two of the\npublic health law in violation of conspicuously posted rules or\nregulations governing entry and use thereof; or\n\n(c) located within a city with a population in excess of one million\nand where the building or real property is utilized as an elementary or\nsecondary school in violation of a personally communicated request to\nleave the premises from a principal, custodian or other person in charge\nthereof; or\n\n(d) located outside of a city with a population in excess of one\nmillion and where the building or real property is utilized as an\nelementary or secondary school in violation of a personally communicated\nrequest to leave the premises from a principal, custodian, school board\nmember or trustee, or other person in charge thereof; or\n\n(e) where the building is used as a public housing project in\nviolation of conspicuously posted rules or regulations governing entry\nand use thereof; or\n\n(f) where a building is used as a public housing project in violation\nof a personally communicated request to leave the premises from a\nhousing police officer or other person in charge thereof; or\n\n(g) where the property consists of a right-of-way or yard of a\nrailroad or rapid transit railroad which has been designated and\nconspicuously posted as a no-trespass railroad zone."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:140.10",
+          "contentSha256": "28d5b89296324f1cb0e1a13a5031ee4ad72c51684cba3ac335a8f7a5f4ec1467",
+          "start": 1836,
+          "end": 1899,
+          "text": "Criminal trespass in the third degree is a class B misdemeanor."
+        },
+        {
+          "role": "definition_or_exception",
+          "sourceKey": "ny:PEN:140.00",
+          "contentSha256": "c7cd579ded50b32cd28c39123e520b89acac12d5686a550988560284011efd37",
+          "start": 0,
+          "end": 2318,
+          "text": "§ 140.00 Criminal trespass and burglary; definitions of terms.\n\nThe following definitions are applicable to this article:\n\n1. \"Premises\" includes the term \"building,\" as defined herein, and any\nreal property.\n\n2. \"Building,\" in addition to its ordinary meaning, includes any\nstructure, vehicle or watercraft used for overnight lodging of persons,\nor used by persons for carrying on business therein, or used as an\nelementary or secondary school, or an inclosed motor truck, or an\ninclosed motor truck trailer. Where a building consists of two or more\nunits separately secured or occupied, each unit shall be deemed both a\nseparate building in itself and a part of the main building.\n\n3. \"Dwelling\" means a building which is usually occupied by a person\nlodging therein at night.\n\n4. \"Night\" means the period between thirty minutes after sunset and\nthirty minutes before sunrise.\n\n5. \"Enter or remain unlawfully.\" A person \"enters or remains\nunlawfully\" in or upon premises when he is not licensed or privileged to\ndo so. A person who, regardless of his intent, enters or remains in or\nupon premises which are at the time open to the public does so with\nlicense and privilege unless he defies a lawful order not to enter or\nremain, personally communicated to him by the owner of such premises or\nother authorized person. A license or privilege to enter or remain in a\nbuilding which is only partly open to the public is not a license or\nprivilege to enter or remain in that part of the building which is not\nopen to the public. A person who enters or remains upon unimproved and\napparently unused land, which is neither fenced nor otherwise enclosed\nin a manner designed to exclude intruders, does so with license and\nprivilege unless notice against trespass is personally communicated to\nhim by the owner of such land or other authorized person, or unless such\nnotice is given by posting in a conspicuous manner. A person who enters\nor remains in or about a school building without written permission from\nsomeone authorized to issue such permission or without a legitimate\nreason which includes a relationship involving custody of or\nresponsibility for a pupil or student enrolled in the school or without\nlegitimate business or a purpose relating to the operation of the school\ndoes so without license and privilege."
+        },
+        {
+          "role": "penalty",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721,
+          "text": "§ 70.15 Sentences of imprisonment for misdemeanors and violation.\n\n1. Class A misdemeanor. A sentence of imprisonment for a class A\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nhundred sixty-four days.\n\n1-a. (a) Notwithstanding the provisions of any other law, whenever the\nphrase \"one year\" or \"three hundred sixty-five days\" or \"365 days\" or\nany similar phrase appears in any provision of this chapter or any other\nlaw in reference to the definite sentence or maximum definite sentence\nof imprisonment that is imposed, or has been imposed, or may be imposed\nafter enactment of this subdivision, for a misdemeanor conviction in\nthis state, such phrase shall mean, be interpreted and be applied as\nthree hundred sixty-four days.\n\n(b) The amendatory provisions of this subdivision are ameliorative and\nshall apply to all persons who are sentenced before, on or after the\neffective date of this subdivision, for a crime committed before, on or\nafter the effective date of this subdivision.\n\n(c) Any sentence for a misdemeanor conviction imposed prior to the\neffective date of this subdivision that is a definite sentence of\nimprisonment of one year, or three hundred sixty-five days, shall, by\noperation of law, be changed to, mean and be interpreted and applied as\na sentence of three hundred sixty-four days. In addition to any other\nright of a person to obtain a record of a proceeding against him or her,\na person so sentenced prior to the effective date of this subdivision\nshall be entitled to obtain, from the criminal court or the clerk\nthereof, a certificate of conviction, as described in subdivision one of\nsection 60.60 of the criminal procedure law, setting forth such sentence\nas the sentence specified in this paragraph.\n\n(d) Any sentence for a misdemeanor conviction imposed prior to the\neffective date of this subdivision that is other than a definite\nsentence of imprisonment of one year may be set aside, upon motion of\nthe defendant under section 440.20 of the criminal procedure law based\non a showing that the judgment and sentence under the law in effect at\nthe time of conviction imposed prior to the effective date of this\nsubdivision is likely to result in collateral consequences, in order to\npermit the court to resentence the defendant in accordance with the\namendatory provisions of this subdivision.\n\n(e) Resentence by operation of law is without prejudice to an\nindividual seeking further relief pursuant to paragraph (j) of\nsubdivision one of section 440.10 of the criminal procedure law. Nothing\nin this section is intended to diminish or abrogate any rights or\nremedies otherwise available to the individual.\n\n2. Class B misdemeanor. A sentence of imprisonment for a class B\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nmonths.\n\n3. Unclassified misdemeanor. A sentence of imprisonment for an\nunclassified misdemeanor shall be a definite sentence. When such a\nsentence is imposed the term shall be fixed by the court, and shall be\nin accordance with the sentence specified in the law or ordinance that\ndefines the crime but, in any event, it shall not exceed three hundred\nsixty-four days.\n\n4. Violation. A sentence of imprisonment for a violation shall be a\ndefinite sentence. When such a sentence is imposed the term shall be\nfixed by the court, and shall not exceed fifteen days.\n\nIn the case of a violation defined outside this chapter, if the\nsentence is expressly specified in the law or ordinance that defines the\noffense and consists solely of a fine, no term of imprisonment shall be\nimposed."
+        },
+        {
+          "role": "penalty",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039,
+          "text": "§ 80.05 Fines for misdemeanors and violation.\n\n1. Class A misdemeanor. A sentence to pay a fine for a class A\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding one thousand dollars, provided, however, that a sentence\nimposed for a violation of section 215.80 of this chapter may include a\nfine in an amount equivalent to double the value of the property\nunlawfully disposed of in the commission of the crime.\n\n2. Class B misdemeanor. A sentence to pay a fine for a class B\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding five hundred dollars.\n\n3. Unclassified misdemeanor. A sentence to pay a fine for an\nunclassified misdemeanor shall be a sentence to pay an amount, fixed by\nthe court, in accordance with the provisions of the law or ordinance\nthat defines the crime.\n\n4. Violation. A sentence to pay a fine for a violation shall be a\nsentence to pay an amount, fixed by the court, not exceeding two hundred\nfifty dollars.\n\nIn the case of a violation defined outside this chapter, if the amount\nof the fine is expressly specified in the law or ordinance that defines\nthe offense, the amount of the fine shall be fixed in accordance with\nthat law or ordinance.\n\n5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence.\n\n6. Exception. The provisions of this section shall not apply to a\ncorporation."
+        },
+        {
+          "role": "penalty",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099,
+          "text": "§ 80.00 Fine for felony.\n\n1. A sentence to pay a fine for a felony shall be a sentence to pay an\namount, fixed by the court, not exceeding the higher of\n\na. five thousand dollars; or\n\nb. double the amount of the defendant's gain from the commission of\nthe crime or, if the defendant is convicted of a crime defined in\narticle four hundred ninety-six of this chapter, any higher amount not\nexceeding three times the amount of the defendant's gain from the\ncommission of such offense; or\n\nc. if the conviction is for any felony defined in article two hundred\ntwenty or two hundred twenty-one of this chapter, according to the\nfollowing schedule:\n\n(i) for A-I felonies, one hundred thousand dollars;\n\n(ii) for A-II felonies, fifty thousand dollars;\n\n(iii) for B felonies, thirty thousand dollars;\n\n(iv) for C felonies, fifteen thousand dollars.\nWhen imposing a fine pursuant to the provisions of this paragraph, the\ncourt shall consider the profit gained by defendant's conduct, whether\nthe amount of the fine is disproportionate to the conduct in which\ndefendant engaged, its impact on any victims, and defendant's economic\ncircumstances, including the defendant's ability to pay, the effect of\nthe fine upon his or her immediate family or any other persons to whom\nthe defendant owes an obligation of support.\n\n2. As used in this section the term \"gain\" means the amount of money\nor the value of property derived from the commission of the crime, less\nthe amount of money or the value of property returned to the victim of\nthe crime or seized by or surrendered to lawful authority prior to the\ntime sentence is imposed.\n\n3. When the court imposes a fine for a felony pursuant to paragraph b\nof subdivision one of this section, the court shall make a finding as to\nthe amount of the defendant's gain from the crime. If the record does\nnot contain sufficient evidence to support such a finding or to permit\nadequate consideration of the matters specified in paragraph c of\nsubdivision one of this section, the court may conduct a hearing upon\nsuch issues.\n\n4. Exception. The provisions of this section shall not apply to a\ncorporation.\n\n5. All moneys in excess of five thousand dollars received or collected\nin payment of a fine imposed pursuant to paragraph c of subdivision one\nof this section are the property of the state and the state comptroller\nshall deposit all such fines to the rehabilitative alcohol and substance\ntreatment fund established pursuant to section ninety-seven-cc of the\nstate finance law.\n\n6. Notwithstanding any inconsistent provision of subdivision one of\nthis section a sentence to pay a fine for a felony set forth in the\nvehicle and traffic law shall be a sentence to pay an amount fixed by\nthe court in accordance with the provisions of the law that defines the\ncrime.\n\n7. When the court imposes a fine pursuant to section 145.22 or 145.23\nof this chapter, the court shall direct that no less than ten percent of\nsuch fine be credited to the state cemetery vandalism restoration and\nadministration fund created pursuant to section ninety-seven-r of the\nstate finance law."
+        },
+        {
+          "role": "definition_or_exception",
+          "sourceKey": "ny:PBH:1392",
+          "contentSha256": "f857900c1706f99c23f8e6d094aacdce05f9941b5b2afa60001772e55a49f104",
+          "start": 0,
+          "end": 3019,
+          "text": "§ 1392. Definitions. As used in this article:\n\n1. \"Children's overnight camp\" shall mean a property consisting of a\ntract of land and any tents, vehicles, buildings or other structures\nthat may be pertinent to its use, any part of which may be occupied by\npersons under eighteen years of age under general supervision for the\npurpose of outdoor or indoor organized activities and on which\nprovisions are made for overnight occupancy of children. The\ncommissioner shall have the power to except by rule from this article\nand the sanitary code a place or facility that is not within the intent\nof this definition.\n\n2. \"Summer day camp\" shall mean a property consisting of a tract of\nland and any tents, vehicles, buildings or other structures that may be\npertinent to its use, any part of which may be occupied on a scheduled\nbasis at any time between June first and September fifteenth in any year\nby children under sixteen years of age under general supervision, for\nthe purpose of indoor or outdoor organized group activities, involving\nnonpassive recreational activities with significant risk of injury, as\nsuch activities are defined by the department in rules and regulations,\nfor a period of less than twenty-four hours on any day the property is\nso occupied, and on which no provisions are made for overnight occupancy\nby such children. The commissioner shall have the power to except by\nrule from this article and the sanitary code a place, facility or\nactivity that is not within the intent of this definition.\n\n3. \"Traveling summer day camp\" shall mean a summer day camp which\nregularly operates in the period between May fifteenth and September\nfifteenth and which regularly transports children under the age of\nsixteen on a regular schedule to a facility, site, or property,\nincluding any tract of land, beach, park, stadium, building, tents or\nother structures pertinent to its use and primarily for the purposes of\norganized group activity. The commissioner shall have the power to\nexcept by rule from this article and the sanitary code a place, facility\nor activity that is not within the intent of this definition.\n\n4. \"Officer\" shall mean the commissioner, the health commissioner of a\ncity with a population of over fifty thousand, the health commissioner\nof a county or part-county health district, the state district health\nofficer, in whose jurisdiction a children's overnight camp, summer day\ncamp, or the primary inclement weather facility of the children's\ntraveling summer day camp is located, or if there be no such facility\nthen the state district health officer in whose jurisdiction the central\noffice is located, any county health director having all the powers and\nduties prescribed in  section three hundred fifty-two of this chapter,\nthe state district sanitary engineer or a grade one public health\nadministrator qualified and appointed pursuant to part  eleven of the\nsanitary code and serving as primary administrator of all health\nprograms in a county or part-county health district."
+        }
+      ]
+    }
+  ]
+}
