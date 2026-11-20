@@ -892,36 +892,43 @@ export function buildOhioSourceDatabaseSeed(
   }
   // A manifest supplied directly to this builder must not bypass the same
   // live receipt boundary that the loader uses.
+  // Reuse only within this synchronous build. Every subsequent build rechecks
+  // each family's evidence and deadline; per-record validation remains intact.
+  const freshness = new Map<(at: Date) => boolean, boolean>();
+  const fresh = (check: (at: Date) => boolean): boolean => {
+    if (!freshness.has(check)) freshness.set(check, check(now));
+    return freshness.get(check)!;
+  };
   const records = manifest.catalogRecords.filter(record =>
-    (!OHIO_RESIDUAL_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioResidualSourceFresh(now)) &&
-    (!OHIO_ODOMETER_FRAUD_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioOdometerFraudSourceFresh(now)) &&
-    (!OHIO_TRANSIT_VENUES_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioTransitVenuesSourceFresh(now)) &&
-    (!OHIO_LIQUOR_ID_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioLiquorIdSourceFresh(now)) &&
-    (!OHIO_CIVIL_RIGHTS_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioCivilRightsSourceFresh(now)) &&
-    (!OHIO_ANIMAL_PROTECTION_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioAnimalProtectionSourceFresh(now)) &&
-    (!OHIO_TOOLS_TRANSACTIONS_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioToolsTransactionsSourceFresh(now)) &&
-    (!OHIO_DANGEROUS_DRIVING_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioDangerousDrivingSourceFresh(now)) &&
-    (!OHIO_CRASH_IDENTITY_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioCrashIdentitySourceFresh(now)) &&
-    (!OHIO_DRIVING_LICENSE_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioDrivingLicenseSourceFresh(now)) &&
-    (!OHIO_GAMBLING_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioGamblingSourceFresh(now)) &&
-    (!OHIO_WEAPONS_LOCATION_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioWeaponsLocationSourceFresh(now)) &&
-    (!OHIO_DRUG_REMAINDER_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioDrugRemainderSourceFresh(now)) &&
-    (!OHIO_DRUG_CONDUCT_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioDrugConductSourceFresh(now)) &&
-    (!OHIO_COMMERCIAL_SEX_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioCommercialSexSourceFresh(now)) &&
-    (!OHIO_PRIORITY_GAPS_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioPriorityGapsSourceFresh(now)) &&
-    (!OHIO_PRIVACY_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioPrivacySourceFresh(now)) &&
-    (!OHIO_PROTECTION_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioProtectionSourceFresh(now)) &&
-    (!OHIO_FAMILY_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioFamilySourceFresh(now)) &&
-    (!OHIO_PUBLIC_PEACE_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioPublicPeaceSourceFresh(now)) &&
-    (!OHIO_CUSTODY_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioCustodySourceFresh(now)) &&
-    (!OHIO_JUSTICE_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioJusticeSourceFresh(now)) &&
-    (!OHIO_BENEFITS_FRAUD_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioBenefitsFraudSourceFresh(now)) &&
-    (!OHIO_THEFT_FRAUD_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioTheftFraudSourceFresh(now)) &&
-    (!OHIO_MAJOR_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioMajorSourceFresh(now)) &&
+    (!OHIO_RESIDUAL_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioResidualSourceFresh)) &&
+    (!OHIO_ODOMETER_FRAUD_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioOdometerFraudSourceFresh)) &&
+    (!OHIO_TRANSIT_VENUES_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioTransitVenuesSourceFresh)) &&
+    (!OHIO_LIQUOR_ID_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioLiquorIdSourceFresh)) &&
+    (!OHIO_CIVIL_RIGHTS_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioCivilRightsSourceFresh)) &&
+    (!OHIO_ANIMAL_PROTECTION_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioAnimalProtectionSourceFresh)) &&
+    (!OHIO_TOOLS_TRANSACTIONS_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioToolsTransactionsSourceFresh)) &&
+    (!OHIO_DANGEROUS_DRIVING_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioDangerousDrivingSourceFresh)) &&
+    (!OHIO_CRASH_IDENTITY_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioCrashIdentitySourceFresh)) &&
+    (!OHIO_DRIVING_LICENSE_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioDrivingLicenseSourceFresh)) &&
+    (!OHIO_GAMBLING_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioGamblingSourceFresh)) &&
+    (!OHIO_WEAPONS_LOCATION_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioWeaponsLocationSourceFresh)) &&
+    (!OHIO_DRUG_REMAINDER_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioDrugRemainderSourceFresh)) &&
+    (!OHIO_DRUG_CONDUCT_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioDrugConductSourceFresh)) &&
+    (!OHIO_COMMERCIAL_SEX_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioCommercialSexSourceFresh)) &&
+    (!OHIO_PRIORITY_GAPS_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioPriorityGapsSourceFresh)) &&
+    (!OHIO_PRIVACY_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioPrivacySourceFresh)) &&
+    (!OHIO_PROTECTION_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioProtectionSourceFresh)) &&
+    (!OHIO_FAMILY_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioFamilySourceFresh)) &&
+    (!OHIO_PUBLIC_PEACE_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioPublicPeaceSourceFresh)) &&
+    (!OHIO_CUSTODY_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioCustodySourceFresh)) &&
+    (!OHIO_JUSTICE_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioJusticeSourceFresh)) &&
+    (!OHIO_BENEFITS_FRAUD_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioBenefitsFraudSourceFresh)) &&
+    (!OHIO_THEFT_FRAUD_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioTheftFraudSourceFresh)) &&
+    (!OHIO_MAJOR_SOURCES.some(source => source.chargeId === record.chargeId) || fresh(isOhioMajorSourceFresh)) &&
     (!OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.some(source => source.chargeId === record.chargeId) ||
       pilotFresh) &&
     (!OHIO_REVIEWED_SOURCES.some(source => source.chargeId === record.chargeId) ||
-      isOhioReviewedSourceFresh(now)));
+      fresh(isOhioReviewedSourceFresh)));
   annotateSharedAuthorityMappings(records);
   const sources = new Map<string, AuthoritySourceSeed>();
   const snapshots: AuthoritySourceDatabaseSeed["snapshots"] = [];
