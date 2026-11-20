@@ -82,9 +82,15 @@ export function EmergencyCard() {
       ? `${selectedConsulate.mainPhone}${selectedConsulate.emergencyPhone ? ` / ${selectedConsulate.emergencyPhone}` : ''}`
       : '';
 
+    const escapePrint = (value: string) => {
+      const span = document.createElement('span');
+      span.textContent = value;
+      return span.innerHTML;
+    };
+
     printWindow.document.write(`
       <!DOCTYPE html>
-      <html>
+      <html lang="${lang}">
         <head>
           <title>${lang === 'es' ? 'Tarjeta de Contacto de Emergencia' : 'Emergency Contact Card'}</title>
           <style>
@@ -133,6 +139,7 @@ export function EmergencyCard() {
             }
             .contact {
               font-size: 11px;
+              overflow-wrap: anywhere;
               margin-bottom: 4px;
             }
             .contact strong {
@@ -174,16 +181,16 @@ export function EmergencyCard() {
                 <p class="section-title">${lang === 'es' ? 'Personas de Confianza' : 'Trusted Persons'}</p>
                 ${data.trustedPerson1.name ? `
                   <p class="contact">
-                    <strong>${data.trustedPerson1.name}</strong>
-                    ${data.trustedPerson1.relationship ? `(${data.trustedPerson1.relationship})` : ''}
-                    <br><span class="phone">${data.trustedPerson1.phone}</span>
+                    <strong>${escapePrint(data.trustedPerson1.name)}</strong>
+                    ${data.trustedPerson1.relationship ? `(${escapePrint(data.trustedPerson1.relationship)})` : ''}
+                    <br><span class="phone">${escapePrint(data.trustedPerson1.phone)}</span>
                   </p>
                 ` : ''}
                 ${data.trustedPerson2.name ? `
                   <p class="contact">
-                    <strong>${data.trustedPerson2.name}</strong>
-                    ${data.trustedPerson2.relationship ? `(${data.trustedPerson2.relationship})` : ''}
-                    <br><span class="phone">${data.trustedPerson2.phone}</span>
+                    <strong>${escapePrint(data.trustedPerson2.name)}</strong>
+                    ${data.trustedPerson2.relationship ? `(${escapePrint(data.trustedPerson2.relationship)})` : ''}
+                    <br><span class="phone">${escapePrint(data.trustedPerson2.phone)}</span>
                   </p>
                 ` : ''}
               </div>
@@ -193,9 +200,9 @@ export function EmergencyCard() {
               <div class="section">
                 <p class="section-title">${lang === 'es' ? 'Abogado' : 'Attorney'}</p>
                 <p class="contact">
-                  <strong>${data.attorney.name}</strong>
-                  ${data.attorney.firm ? `<br>${data.attorney.firm}` : ''}
-                  <br><span class="phone">${data.attorney.phone}</span>
+                  <strong>${escapePrint(data.attorney.name)}</strong>
+                  ${data.attorney.firm ? `<br>${escapePrint(data.attorney.firm)}` : ''}
+                  <br><span class="phone">${escapePrint(data.attorney.phone)}</span>
                 </p>
               </div>
             ` : ''}
@@ -204,8 +211,8 @@ export function EmergencyCard() {
               <div class="section">
                 <p class="section-title">${lang === 'es' ? 'Consulado' : 'Consulate'}</p>
                 <p class="contact">
-                  <strong>${lang === 'es' ? selectedConsulate.countryEs : selectedConsulate.country}</strong>
-                  <br><span class="phone">${consulateInfo}</span>
+                  <strong>${escapePrint(lang === 'es' ? selectedConsulate.countryEs : selectedConsulate.country)}</strong>
+                  <br><span class="phone">${escapePrint(consulateInfo)}</span>
                 </p>
               </div>
             ` : ''}
@@ -213,14 +220,14 @@ export function EmergencyCard() {
             ${data.childrenNames ? `
               <div class="section">
                 <p class="section-title">${lang === 'es' ? 'Hijos' : 'Children'}</p>
-                <p class="contact">${data.childrenNames}</p>
+                <p class="contact">${escapePrint(data.childrenNames)}</p>
               </div>
             ` : ''}
 
             ${data.medicalInfo ? `
               <div class="section">
                 <p class="section-title">${lang === 'es' ? 'Info Médica' : 'Medical Info'}</p>
-                <p class="contact">${data.medicalInfo}</p>
+                <p class="contact">${escapePrint(data.medicalInfo)}</p>
               </div>
             ` : ''}
 
@@ -249,7 +256,7 @@ export function EmergencyCard() {
   };
 
   return (
-    <Card>
+    <Card className="toolkit-tool">
       <CardHeader>
         <CardTitle className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500/20 via-red-500/10 to-transparent flex items-center justify-center ring-1 ring-red-500/20">
@@ -277,26 +284,26 @@ export function EmergencyCard() {
               {lang === 'es' ? 'Persona de Confianza #1' : 'Trusted Person #1'}
             </Label>
           </div>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <div>
-              <Label className="text-xs">{lang === 'es' ? 'Nombre' : 'Name'}</Label>
-              <Input
+              <Label htmlFor="toolkit-trustedPerson1-name" className="text-xs">{lang === 'es' ? 'Nombre' : 'Name'}</Label>
+              <Input id="toolkit-trustedPerson1-name"
                 value={data.trustedPerson1.name}
                 onChange={(e) => updateData('trustedPerson1.name', e.target.value)}
                 placeholder={lang === 'es' ? 'Nombre completo' : 'Full name'}
               />
             </div>
             <div>
-              <Label className="text-xs">{lang === 'es' ? 'Teléfono' : 'Phone'}</Label>
-              <Input
+              <Label htmlFor="toolkit-trustedPerson1-phone" className="text-xs">{lang === 'es' ? 'Teléfono' : 'Phone'}</Label>
+              <Input id="toolkit-trustedPerson1-phone"
                 value={data.trustedPerson1.phone}
                 onChange={(e) => updateData('trustedPerson1.phone', e.target.value)}
                 placeholder="(555) 555-5555"
               />
             </div>
             <div>
-              <Label className="text-xs">{lang === 'es' ? 'Relación' : 'Relationship'}</Label>
-              <Input
+              <Label htmlFor="toolkit-trustedPerson1-relationship" className="text-xs">{lang === 'es' ? 'Relación' : 'Relationship'}</Label>
+              <Input id="toolkit-trustedPerson1-relationship"
                 value={data.trustedPerson1.relationship}
                 onChange={(e) => updateData('trustedPerson1.relationship', e.target.value)}
                 placeholder={lang === 'es' ? 'Ej: Hermana' : 'E.g., Sister'}
@@ -313,26 +320,26 @@ export function EmergencyCard() {
               {lang === 'es' ? 'Persona de Confianza #2' : 'Trusted Person #2'}
             </Label>
           </div>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <div>
-              <Label className="text-xs">{lang === 'es' ? 'Nombre' : 'Name'}</Label>
-              <Input
+              <Label htmlFor="toolkit-trustedPerson2-name" className="text-xs">{lang === 'es' ? 'Nombre' : 'Name'}</Label>
+              <Input id="toolkit-trustedPerson2-name"
                 value={data.trustedPerson2.name}
                 onChange={(e) => updateData('trustedPerson2.name', e.target.value)}
                 placeholder={lang === 'es' ? 'Nombre completo' : 'Full name'}
               />
             </div>
             <div>
-              <Label className="text-xs">{lang === 'es' ? 'Teléfono' : 'Phone'}</Label>
-              <Input
+              <Label htmlFor="toolkit-trustedPerson2-phone" className="text-xs">{lang === 'es' ? 'Teléfono' : 'Phone'}</Label>
+              <Input id="toolkit-trustedPerson2-phone"
                 value={data.trustedPerson2.phone}
                 onChange={(e) => updateData('trustedPerson2.phone', e.target.value)}
                 placeholder="(555) 555-5555"
               />
             </div>
             <div>
-              <Label className="text-xs">{lang === 'es' ? 'Relación' : 'Relationship'}</Label>
-              <Input
+              <Label htmlFor="toolkit-trustedPerson2-relationship" className="text-xs">{lang === 'es' ? 'Relación' : 'Relationship'}</Label>
+              <Input id="toolkit-trustedPerson2-relationship"
                 value={data.trustedPerson2.relationship}
                 onChange={(e) => updateData('trustedPerson2.relationship', e.target.value)}
                 placeholder={lang === 'es' ? 'Ej: Vecino' : 'E.g., Neighbor'}
@@ -349,26 +356,26 @@ export function EmergencyCard() {
               {lang === 'es' ? 'Abogado de Inmigración' : 'Immigration Attorney'}
             </Label>
           </div>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <div>
-              <Label className="text-xs">{lang === 'es' ? 'Nombre' : 'Name'}</Label>
-              <Input
+              <Label htmlFor="toolkit-attorney-name" className="text-xs">{lang === 'es' ? 'Nombre' : 'Name'}</Label>
+              <Input id="toolkit-attorney-name"
                 value={data.attorney.name}
                 onChange={(e) => updateData('attorney.name', e.target.value)}
                 placeholder={lang === 'es' ? 'Nombre del abogado' : 'Attorney name'}
               />
             </div>
             <div>
-              <Label className="text-xs">{lang === 'es' ? 'Teléfono' : 'Phone'}</Label>
-              <Input
+              <Label htmlFor="toolkit-attorney-phone" className="text-xs">{lang === 'es' ? 'Teléfono' : 'Phone'}</Label>
+              <Input id="toolkit-attorney-phone"
                 value={data.attorney.phone}
                 onChange={(e) => updateData('attorney.phone', e.target.value)}
                 placeholder="(555) 555-5555"
               />
             </div>
             <div>
-              <Label className="text-xs">{lang === 'es' ? 'Firma/Oficina' : 'Firm/Office'}</Label>
-              <Input
+              <Label htmlFor="toolkit-attorney-firm" className="text-xs">{lang === 'es' ? 'Firma/Oficina' : 'Firm/Office'}</Label>
+              <Input id="toolkit-attorney-firm"
                 value={data.attorney.firm}
                 onChange={(e) => updateData('attorney.firm', e.target.value)}
                 placeholder={lang === 'es' ? 'Nombre de la firma' : 'Firm name'}
@@ -381,12 +388,12 @@ export function EmergencyCard() {
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <Globe className="h-4 w-4 text-primary" />
-            <Label className="font-semibold">
+            <Label htmlFor="toolkit-consulate" className="font-semibold">
               {lang === 'es' ? 'Consulado' : 'Consulate'}
             </Label>
           </div>
           <div className="relative">
-            <Input
+            <Input id="toolkit-consulate"
               value={consulateSearch || data.consulate}
               onChange={(e) => {
                 setConsulateSearch(e.target.value);
@@ -425,10 +432,10 @@ export function EmergencyCard() {
 
         {/* Children */}
         <div className="space-y-3">
-          <Label className="font-semibold">
+          <Label htmlFor="toolkit-childrenNames" className="font-semibold">
             {lang === 'es' ? 'Nombres de los Hijos (opcional)' : 'Children\'s Names (optional)'}
           </Label>
-          <Input
+          <Input id="toolkit-childrenNames"
             value={data.childrenNames}
             onChange={(e) => updateData('childrenNames', e.target.value)}
             placeholder={lang === 'es' ? 'Ej: Maria (8), Carlos (5)' : 'E.g., Maria (8), Carlos (5)'}
@@ -437,10 +444,10 @@ export function EmergencyCard() {
 
         {/* Medical Info */}
         <div className="space-y-3">
-          <Label className="font-semibold">
+          <Label htmlFor="toolkit-medicalInfo" className="font-semibold">
             {lang === 'es' ? 'Información Médica Importante (opcional)' : 'Important Medical Info (optional)'}
           </Label>
-          <Input
+          <Input id="toolkit-medicalInfo"
             value={data.medicalInfo}
             onChange={(e) => updateData('medicalInfo', e.target.value)}
             placeholder={lang === 'es' ? 'Ej: Diabetes, alergias' : 'E.g., Diabetes, allergies'}

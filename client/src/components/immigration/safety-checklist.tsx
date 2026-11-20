@@ -305,7 +305,7 @@ export function SafetyChecklist() {
 
     printWindow.document.write(`
       <!DOCTYPE html>
-      <html>
+      <html lang="${lang}">
         <head>
           <title>${lang === 'es' ? 'Lista de Preparación de Seguridad' : 'Safety Preparedness Checklist'}</title>
           <style>
@@ -370,7 +370,7 @@ export function SafetyChecklist() {
   };
 
   return (
-    <Card>
+    <Card className="toolkit-tool">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -411,6 +411,7 @@ export function SafetyChecklist() {
         {/* Category filter */}
         <div className="flex flex-wrap gap-2">
           <button
+            aria-pressed={activeCategory === 'all'}
             onClick={() => setActiveCategory('all')}
             className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
               activeCategory === 'all'
@@ -427,6 +428,7 @@ export function SafetyChecklist() {
             return (
               <button
                 key={cat.id}
+                aria-pressed={activeCategory === cat.id}
                 onClick={() => setActiveCategory(cat.id)}
                 className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
                   activeCategory === cat.id
@@ -449,6 +451,8 @@ export function SafetyChecklist() {
           {filteredItems.map(item => (
             <button
               key={item.id}
+              role="checkbox"
+              aria-checked={checkedItems.has(item.id)}
               onClick={() => toggleItem(item.id)}
               className={`w-full flex items-start gap-3 p-3 rounded-lg text-left transition-all ${
                 checkedItems.has(item.id)
