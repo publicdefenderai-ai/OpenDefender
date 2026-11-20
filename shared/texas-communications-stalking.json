@@ -1,0 +1,2443 @@
+[
+  {
+    "id": "tx-pc-42-07-obscene",
+    "name": "Harassment (obscene initiated communication)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(1)",
+    "citation": "Tex. Penal Code § 42.07(a)(1)",
+    "conduct": "Initiating communication and, during it, making a comment, request, suggestion or proposal meeting §42.07(b)(3)’s specific obscene definition. Mere rude language is not automatically a patently offensive sexual-act/excretory description or solicitation. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. This ordinary branch excludes §42.07(c)’s special repeat, child-harm-intent, injunction, utility, court-employee and judge circumstances. Those circumstances can produce Class A, state jail or third-degree punishment and require their own findings.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-threat",
+    "name": "Harassment (threat of injury or specified felony)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(2)",
+    "citation": "Tex. Penal Code § 42.07(a)(2)",
+    "conduct": "Threatening in a manner reasonably likely to alarm the recipient to inflict bodily injury on that person or commit a felony against that person, a family/household member or that person’s property. For liability based on a true threat, constitutional protection requires at least recklessness about the communication’s threatening character; an objective reasonable-person finding alone does not resolve that requirement. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. This ordinary branch excludes §42.07(c)’s special repeat, child-harm-intent, injunction, utility, court-employee and judge circumstances. Those circumstances can produce Class A, state jail or third-degree punishment and require their own findings.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "counterman"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-false-report",
+    "name": "Harassment (known false report of death or serious injury)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(3)",
+    "citation": "Tex. Penal Code § 42.07(a)(3)",
+    "conduct": "Conveying a report known to be false that another has suffered death or serious bodily injury, in a manner reasonably likely to alarm the recipient. A mistaken report without knowledge of falsity is not enough. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. This ordinary branch excludes §42.07(c)’s special repeat, child-harm-intent, injunction, utility, court-employee and judge circumstances. Those circumstances can produce Class A, state jail or third-degree punishment and require their own findings.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-repeated-phone",
+    "name": "Harassment (repeated telephone conduct)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(4)",
+    "citation": "Tex. Penal Code § 42.07(a)(4)",
+    "conduct": "Causing another’s telephone to ring repeatedly, or making repeated telephone communications anonymously or in the specified reasonably-likely harassing manner. The statutory alternatives still require the introductory intent; every missed call is not a crime. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. This ordinary branch excludes §42.07(c)’s special repeat, child-harm-intent, injunction, utility, court-employee and judge circumstances. Those circumstances can produce Class A, state jail or third-degree punishment and require their own findings.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-hangup",
+    "name": "Harassment (intentionally maintaining telephone connection)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(5)",
+    "citation": "Tex. Penal Code § 42.07(a)(5)",
+    "conduct": "Making a telephone call and intentionally failing to hang up or disengage the connection. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. This ordinary branch excludes §42.07(c)’s special repeat, child-harm-intent, injunction, utility, court-employee and judge circumstances. Those circumstances can produce Class A, state jail or third-degree punishment and require their own findings.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-permit-phone",
+    "name": "Harassment (knowingly permitting controlled telephone misuse)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(6)",
+    "citation": "Tex. Penal Code § 42.07(a)(6)",
+    "conduct": "Knowingly permitting a telephone under the actor’s control to be used by another to commit an offense under this section. Mere ownership without the required control, knowledge and offense is not enough. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. This ordinary branch excludes §42.07(c)’s special repeat, child-harm-intent, injunction, utility, court-employee and judge circumstances. Those circumstances can produce Class A, state jail or third-degree punishment and require their own findings.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-repeated-electronic",
+    "name": "Harassment (repeated electronic communications)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(7)",
+    "citation": "Tex. Penal Code § 42.07(a)(7)",
+    "conduct": "Sending repeated electronic communications in the statutory reasonably-likely harassing manner. The electronic-communications definition includes the listed electronic, Internet, telephone, camera, messaging and pager methods; the required repeated conduct is not silently replaced by a single ordinary message. A facial-validity ruling does not eliminate an as-applied challenge to punishment for protected expression. The content and context of particular communications matter. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. This ordinary branch excludes §42.07(c)’s special repeat, child-harm-intent, injunction, utility, court-employee and judge circumstances. Those circumstances can produce Class A, state jail or third-degree punishment and require their own findings.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(7)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(1-a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-internet-publication",
+    "name": "Harassment (repeated Internet publication outside public concern)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(8)",
+    "citation": "Tex. Penal Code § 42.07(a)(8)",
+    "conduct": "Publishing repeated electronic communications on an Internet website, including social media, in a manner reasonably likely to cause emotional distress, abuse or torment, unless made in connection with a matter of public concern. That express exclusion remains essential; public criticism is not automatically harassment. The public-concern definition is Civil Practice and Remedies Code §27.001. A facial-validity ruling does not eliminate an as-applied challenge to punishment for protected expression. The content and context of particular communications matter. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. This ordinary branch excludes §42.07(c)’s special repeat, child-harm-intent, injunction, utility, court-employee and judge circumstances. Those circumstances can produce Class A, state jail or third-degree punishment and require their own findings.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(8)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(1-a), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "27.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-tracking",
+    "name": "Harassment (nonconsensual tracking or monitoring)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(9)",
+    "citation": "Tex. Penal Code § 42.07(a)(9)",
+    "conduct": "Tracking or monitoring another person’s personal property or motor vehicle without effective consent, including a tracking application/device or physically following/causing someone to follow the other person. The required harassment intent and absence of effective consent must be established. Subsection (e) provides specified consent presumptions for certain protective-order filings/orders and marital-dissolution circumstances; a presumption is not a substitute for every offense element. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. This ordinary branch excludes §42.07(c)’s special repeat, child-harm-intent, injunction, utility, court-employee and judge circumstances. Those circumstances can produce Class A, state jail or third-degree punishment and require their own findings.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(9)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "7B.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "17.292",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "6.504",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": []
+  },
+  {
+    "id": "tx-pc-42-07-temporary-number",
+    "name": "Harassment (specified communications from temporary or disposable number)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(10)",
+    "citation": "Tex. Penal Code § 42.07(a)(10)",
+    "conduct": "Making obscene, intimidating or threatening telephone calls or electronic communications from a temporary/disposable number provided by an Internet application or other technology. A temporary number alone is not criminal. For liability based on a true threat, constitutional protection requires at least recklessness about the communication’s threatening character; an objective reasonable-person finding alone does not resolve that requirement. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. This ordinary branch excludes §42.07(c)’s special repeat, child-harm-intent, injunction, utility, court-employee and judge circumstances. Those circumstances can produce Class A, state jail or third-degree punishment and require their own findings.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(10)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(1-a), (b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "counterman",
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-repeat",
+    "name": "Harassment (qualifying prior harassment conviction)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)",
+    "citation": "Tex. Penal Code § 42.07(a)",
+    "conduct": "The actor was previously convicted under §42.07. This Class A profile does not assume the higher known-court-employee or known-judge repeat circumstances. The underlying act must separately satisfy one of §42.07(a)(1)-(10), including its intent and any repetition, knowledge, likelihood, consent or public-concern conditions. Protected speech is not made criminal simply by the recipient’s occupation or a prior conviction. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure.  For liability based on a true threat, constitutional protection requires at least recklessness about the communication’s threatening character; intent to harass and an objective reasonable-person finding do not alone establish that subjective awareness. This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)(1)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "27.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "counterman",
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-utility",
+    "name": "Harassment (known or reasonably recognizable utility worker on duty)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)",
+    "citation": "Tex. Penal Code § 42.07(a)",
+    "conduct": "The victim is an employee/agent of a statutory utility, the actor knows or reasonably should know that status, and the person is performing duties within that employment/agency. The underlying act must separately satisfy one of §42.07(a)(1)-(10), including its intent and any repetition, knowledge, likelihood, consent or public-concern conditions. Protected speech is not made criminal simply by the recipient’s occupation or a prior conviction. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure.  For liability based on a true threat, constitutional protection requires at least recklessness about the communication’s threatening character; intent to harass and an objective reasonable-person finding do not alone establish that subjective awareness. This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)(1)(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(4)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.01",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "27.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "counterman",
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-court-employee",
+    "name": "Harassment (known court employee without prior enhancement)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)",
+    "citation": "Tex. Penal Code § 42.07(a)",
+    "conduct": "The actor knows the victim is a court employee as defined in (b)(1), whose duties relate to court administration; that definition excludes a judge. This profile does not assume a prior §42.07 conviction. The underlying act must separately satisfy one of §42.07(a)(1)-(10), including its intent and any repetition, knowledge, likelihood, consent or public-concern conditions. Protected speech is not made criminal simply by the recipient’s occupation or a prior conviction. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure.  For liability based on a true threat, constitutional protection requires at least recklessness about the communication’s threatening character; intent to harass and an objective reasonable-person finding do not alone establish that subjective awareness. This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)(1)(D)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "27.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "counterman",
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-court-employee-repeat",
+    "name": "Harassment (known court employee and prior harassment conviction)",
+    "officialTitle": "HARASSMENT.",
+    "category": "felony",
+    "code": "42.07(a)",
+    "citation": "Tex. Penal Code § 42.07(a)",
+    "conduct": "The actor knows the victim is a statutory court employee and has a prior conviction under this section. A judge is not a court employee under this definition. The underlying act must separately satisfy one of §42.07(a)(1)-(10), including its intent and any repetition, knowledge, likelihood, consent or public-concern conditions. Protected speech is not made criminal simply by the recipient’s occupation or a prior conviction. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure.  For liability based on a true threat, constitutional protection requires at least recklessness about the communication’s threatening character; intent to harass and an objective reasonable-person finding do not alone establish that subjective awareness. This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "State jail felony: ordinarily 180 days to two years and a possible fine up to $10,000. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "27.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "counterman",
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-judge",
+    "name": "Harassment (known judge without prior enhancement)",
+    "officialTitle": "HARASSMENT.",
+    "category": "felony",
+    "code": "42.07(a)",
+    "citation": "Tex. Penal Code § 42.07(a)",
+    "conduct": "The actor knows the victim is a judge. This branch does not require the judge to be performing an official duty, and does not assume the prior conviction needed for (c)(3). The underlying act must separately satisfy one of §42.07(a)(1)-(10), including its intent and any repetition, knowledge, likelihood, consent or public-concern conditions. Protected speech is not made criminal simply by the recipient’s occupation or a prior conviction. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure.  For liability based on a true threat, constitutional protection requires at least recklessness about the communication’s threatening character; intent to harass and an objective reasonable-person finding do not alone establish that subjective awareness. This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "State jail felony: ordinarily 180 days to two years and a possible fine up to $10,000. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "27.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "counterman",
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-judge-repeat",
+    "name": "Harassment (known judge and prior harassment conviction)",
+    "officialTitle": "HARASSMENT.",
+    "category": "felony",
+    "code": "42.07(a)",
+    "citation": "Tex. Penal Code § 42.07(a)",
+    "conduct": "The actor knows the victim is a judge and has a prior conviction under this section. No official-duty condition is imported from another offense. The underlying act must separately satisfy one of §42.07(a)(1)-(10), including its intent and any repetition, knowledge, likelihood, consent or public-concern conditions. Protected speech is not made criminal simply by the recipient’s occupation or a prior conviction. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure.  For liability based on a true threat, constitutional protection requires at least recklessness about the communication’s threatening character; intent to harass and an objective reasonable-person finding do not alone establish that subjective awareness. This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b), (d), (e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "27.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "counterman",
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-electronic-child-harm",
+    "name": "Harassment (electronic; child harm)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(7)",
+    "citation": "Tex. Penal Code § 42.07(a)(7)",
+    "conduct": "The act must satisfy repeated electronic communications under (a)(7). The offense is against a child younger than 18 and the actor intends that child to commit suicide or engage in conduct causing serious bodily injury to the child. Ordinary upset or distress does not establish that specific intent. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. A facial-validity ruling does not eliminate an as-applied challenge to punishment for protected expression. The content and context of particular communications matter.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(7)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)(1)(B)(i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(1-a), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "27.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-electronic-prior-injunction",
+    "name": "Harassment (electronic; prior injunction)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(7)",
+    "citation": "Tex. Penal Code § 42.07(a)(7)",
+    "conduct": "The act must satisfy repeated electronic communications under (a)(7). The actor previously violated a temporary restraining order or injunction issued under Civil Practice and Remedies Code Chapter 129A. A prior order alone, without the specified violation, is not the enhancement. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. A facial-validity ruling does not eliminate an as-applied challenge to punishment for protected expression. The content and context of particular communications matter.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(7)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)(1)(B)(ii)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(1-a), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "27.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "129A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "129A.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-publication-child-harm",
+    "name": "Harassment (publication; child harm)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(8)",
+    "citation": "Tex. Penal Code § 42.07(a)(8)",
+    "conduct": "The act must satisfy repeated Internet publication under (a)(8), including its exclusion for communications connected with a matter of public concern. The offense is against a child younger than 18 and the actor intends that child to commit suicide or engage in conduct causing serious bodily injury to the child. Ordinary upset or distress does not establish that specific intent. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. A facial-validity ruling does not eliminate an as-applied challenge to punishment for protected expression. The content and context of particular communications matter.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(8)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)(1)(B)(i)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(1-a), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "27.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-07-publication-prior-injunction",
+    "name": "Harassment (publication; prior injunction)",
+    "officialTitle": "HARASSMENT.",
+    "category": "misdemeanor",
+    "code": "42.07(a)(8)",
+    "citation": "Tex. Penal Code § 42.07(a)(8)",
+    "conduct": "The act must satisfy repeated Internet publication under (a)(8), including its exclusion for communications connected with a matter of public concern. The actor previously violated a temporary restraining order or injunction issued under Civil Practice and Remedies Code Chapter 129A. A prior order alone, without the specified violation, is not the enhancement. The actor must have intent to harass, annoy, alarm, abuse, torment or embarrass another, and the particular listed act must also be proved. Unwanted or upsetting expression is not automatically criminal. Constitutionally protected communications remain outside permissible punishment; application depends on the actual facts, not merely a listener’s displeasure. A facial-validity ruling does not eliminate an as-applied challenge to punishment for protected expression. The content and context of particular communications matter.  This describes the retained current text, including amendments effective September 1 and December 4, 2025; conduct before those dates requires the applicable earlier version, not automatic use of the current grade.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(a)(8)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(c)(1)(B)(ii)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": "(b)(1-a), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "27.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "129A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "129A.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160012",
+    "caseContextKeys": [
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-072-threat",
+    "name": "Stalking (threat course)",
+    "officialTitle": "STALKING.",
+    "category": "felony",
+    "code": "42.072(a)",
+    "citation": "Tex. Penal Code § 42.072(a)",
+    "conduct": "On more than one occasion under the same scheme/course directed at a specific other person, knowingly engaging in the specified conduct. In addition to the underlying conduct, it must actually cause the specified fear of injury, death or an offense, or the listed harassed/terrified/intimidated/annoyed/alarmed/abused/tormented/embarrassed/offended reaction in the person or a listed family, household or dating partner, and would cause the corresponding statutory effect in a reasonable person in similar circumstances. Neither a single occasion nor only an objective reaction satisfies all three statutory parts. Different types of conduct may form the same course. The actor knows or reasonably should know the other person will regard the conduct as threatening injury/death to that person or an offense against the listed family/household/dating partner or property. For liability based on a true threat, constitutional protection requires at least recklessness about the communication’s threatening character; an objective reasonable-person finding alone does not resolve that requirement.  This ordinary profile does not assume a qualifying stalking prior.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(c), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "121.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "",
+    "caseContextKeys": [
+      "counterman",
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-072-threat-repeat",
+    "name": "Stalking (threat course; qualifying prior)",
+    "officialTitle": "STALKING.",
+    "category": "felony",
+    "code": "42.072(a)",
+    "citation": "Tex. Penal Code § 42.072(a)",
+    "conduct": "On more than one occasion under the same scheme/course directed at a specific other person, knowingly engaging in the specified conduct. In addition to the underlying conduct, it must actually cause the specified fear of injury, death or an offense, or the listed harassed/terrified/intimidated/annoyed/alarmed/abused/tormented/embarrassed/offended reaction in the person or a listed family, household or dating partner, and would cause the corresponding statutory effect in a reasonable person in similar circumstances. Neither a single occasion nor only an objective reaction satisfies all three statutory parts. Different types of conduct may form the same course. The actor knows or reasonably should know the other person will regard the conduct as threatening injury/death to that person or an offense against the listed family/household/dating partner or property. For liability based on a true threat, constitutional protection requires at least recklessness about the communication’s threatening character; an objective reasonable-person finding alone does not resolve that requirement.  A prior conviction under this section, or another state, federally recognized tribe, US territory or federal law with substantially similar elements, must be established for the repeat enhancement. A generic harassment prior is not automatically a stalking prior.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(c), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "121.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "",
+    "caseContextKeys": [
+      "counterman",
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-072-harassment",
+    "name": "Stalking (harassment course)",
+    "officialTitle": "STALKING.",
+    "category": "felony",
+    "code": "42.072(a)",
+    "citation": "Tex. Penal Code § 42.072(a)",
+    "conduct": "On more than one occasion under the same scheme/course directed at a specific other person, knowingly engaging in the specified conduct. In addition to the underlying conduct, it must actually cause the specified fear of injury, death or an offense, or the listed harassed/terrified/intimidated/annoyed/alarmed/abused/tormented/embarrassed/offended reaction in the person or a listed family, household or dating partner, and would cause the corresponding statutory effect in a reasonable person in similar circumstances. Neither a single occasion nor only an objective reaction satisfies all three statutory parts. Different types of conduct may form the same course. The course includes actual conduct constituting §42.07 harassment; it must still meet stalking’s additional actual-effect and reasonable-person requirements. The incorporation does not erase protected-speech limits. A facial-validity ruling does not eliminate an as-applied challenge to punishment for protected expression. The content and context of particular communications matter.  This ordinary profile does not assume a qualifying stalking prior. For liability based on a true threat, constitutional protection requires at least recklessness about the communication’s threatening character; intent to harass and an objective reasonable-person finding do not alone establish that subjective awareness.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(c), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "121.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "",
+    "caseContextKeys": [
+      "counterman",
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-42-072-harassment-repeat",
+    "name": "Stalking (harassment course; qualifying prior)",
+    "officialTitle": "STALKING.",
+    "category": "felony",
+    "code": "42.072(a)",
+    "citation": "Tex. Penal Code § 42.072(a)",
+    "conduct": "On more than one occasion under the same scheme/course directed at a specific other person, knowingly engaging in the specified conduct. In addition to the underlying conduct, it must actually cause the specified fear of injury, death or an offense, or the listed harassed/terrified/intimidated/annoyed/alarmed/abused/tormented/embarrassed/offended reaction in the person or a listed family, household or dating partner, and would cause the corresponding statutory effect in a reasonable person in similar circumstances. Neither a single occasion nor only an objective reaction satisfies all three statutory parts. Different types of conduct may form the same course. The course includes actual conduct constituting §42.07 harassment; it must still meet stalking’s additional actual-effect and reasonable-person requirements. The incorporation does not erase protected-speech limits. A facial-validity ruling does not eliminate an as-applied challenge to punishment for protected expression. The content and context of particular communications matter.  A prior conviction under this section, or another state, federally recognized tribe, US territory or federal law with substantially similar elements, must be established for the repeat enhancement. A generic harassment prior is not automatically a stalking prior. For liability based on a true threat, constitutional protection requires at least recklessness about the communication’s threatening character; intent to harass and an objective reasonable-person finding do not alone establish that subjective awareness.",
+    "penalty": "Second-degree felony: ordinarily two to 20 years in prison and a possible fine up to $10,000. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.0021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.005",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "71.006",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.022",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "573.024",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.072",
+        "subdivision": "(c), (d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "121.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "",
+    "caseContextKeys": [
+      "counterman",
+      "owens"
+    ]
+  },
+  {
+    "id": "tx-pc-33-07-web-page",
+    "name": "Online impersonation (another person’s name/persona for web page)",
+    "officialTitle": "ONLINE IMPERSONATION.",
+    "category": "felony",
+    "code": "33.07(a)(1)",
+    "citation": "Tex. Penal Code § 33.07(a)(1)",
+    "conduct": "Without the other person’s consent and with intent to harm, defraud, intimidate or threaten anyone, using that person’s name/persona to create a page on a commercial social-networking site or other Internet website. Mere resemblance or a name reference is not enough. Section 33.07(e) provides a defense for the listed service entities or conduct consisting solely of action as their employee. The exact entity and solely-employee conditions matter; an ordinary user does not automatically qualify. Qualification as a federally defined interactive computer service requires that separate incorporated definition, not a label supplied by this choice. Subsection (d) permits prosecution under this or another applicable law, but does not itself decide cumulative punishment.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "33.07",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "33.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "33.07",
+        "subdivision": "(d), (e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "51.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "66.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "",
+    "caseContextKeys": []
+  },
+  {
+    "id": "tx-pc-33-07-website-message",
+    "name": "Online impersonation (another person’s name/persona for website messages)",
+    "officialTitle": "ONLINE IMPERSONATION.",
+    "category": "felony",
+    "code": "33.07(a)(2)",
+    "citation": "Tex. Penal Code § 33.07(a)(2)",
+    "conduct": "Without the other person’s consent and with intent to harm, defraud, intimidate or threaten anyone, using that person’s name/persona to post/send one or more messages on/through a commercial social-networking site or other Internet website. The express electronic-mail/message-board-program exclusion applies; those communications must not be automatically assigned to this branch. Section 33.07(e) provides a defense for the listed service entities or conduct consisting solely of action as their employee. The exact entity and solely-employee conditions matter; an ordinary user does not automatically qualify. Qualification as a federally defined interactive computer service requires that separate incorporated definition, not a label supplied by this choice. Subsection (d) permits prosecution under this or another applicable law, but does not itself decide cumulative punishment.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "33.07",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "33.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "33.07",
+        "subdivision": "(d), (e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "51.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "66.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "",
+    "caseContextKeys": []
+  },
+  {
+    "id": "tx-pc-33-07-false-attribution",
+    "name": "Online impersonation (communication falsely attributed to another)",
+    "officialTitle": "ONLINE IMPERSONATION.",
+    "category": "misdemeanor",
+    "code": "33.07(b)",
+    "citation": "Tex. Penal Code § 33.07(b)",
+    "conduct": "Sending email, instant/text message or similar communication referencing another’s identifying information without consent, with intent both to make a recipient reasonably believe the other person authorized/transmitted it and to harm or defraud anyone. A mere reference to another person does not satisfy those elements. This ordinary profile does not assume intent to solicit an emergency-personnel response. Section 33.07(e) provides a defense for the listed service entities or conduct consisting solely of action as their employee. The exact entity and solely-employee conditions matter; an ordinary user does not automatically qualify. Qualification as a federally defined interactive computer service requires that separate incorporated definition, not a label supplied by this choice. Subsection (d) permits prosecution under this or another applicable law, but does not itself decide cumulative punishment.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "33.07",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "33.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "33.07",
+        "subdivision": "(d), (e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "51.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "66.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "",
+    "caseContextKeys": []
+  },
+  {
+    "id": "tx-pc-33-07-emergency-response",
+    "name": "Online impersonation (false attribution intending emergency response)",
+    "officialTitle": "ONLINE IMPERSONATION.",
+    "category": "felony",
+    "code": "33.07(b)",
+    "citation": "Tex. Penal Code § 33.07(b)",
+    "conduct": "Committing the (b) communication offense with its no-consent, intended reasonable false attribution and harm/defraud intent, and additionally intending to solicit a response by emergency personnel. The enhancement requires the response intent, not an invented requirement that a response actually occurs. Section 33.07(e) provides a defense for the listed service entities or conduct consisting solely of action as their employee. The exact entity and solely-employee conditions matter; an ordinary user does not automatically qualify. Qualification as a federally defined interactive computer service requires that separate incorporated definition, not a label supplied by this choice. Subsection (d) permits prosecution under this or another applicable law, but does not itself decide cumulative punishment.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying priors and other statutory findings can change the punishment; no repeat predicate is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "33.07",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "33.07",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "33.07",
+        "subdivision": "(d), (e), (f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "32.51",
+        "subdivision": "(a)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "51.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "UT",
+        "section": "66.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.41",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "",
+    "caseContextKeys": []
+  }
+]

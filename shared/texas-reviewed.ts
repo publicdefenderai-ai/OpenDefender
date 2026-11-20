@@ -1,3 +1,4 @@
+import communications from "./texas-communications-stalking.json";
 import childSexual from "./texas-child-sexual-offenses.json";
 import intoxicationHarm from "./texas-intoxication-harm.json";
 import prohibited from "./texas-prohibited-possession.json";
@@ -22,7 +23,7 @@ import additions from "./texas-assault-public-intoxication.json";
 import { texasDwiConduct, texasDwiQualifications, texasDwiRecords } from "./texas-dwi";
 export { texasDwiUrl as texasReviewedUrl } from "./texas-dwi";
 
-const labels: Record<string, string> = { TX: "Tax", FI: "Fin.", UT: "Util.", OC: "Occ.", GV: "Gov’t", IN: "Ins.", HS: "Health & Safety", HR: "Hum. Res.", PE: "Penal", TN: "Transp.", FA: "Fam.", AL: "Alco. Bev." };
+const labels: Record<string, string> = { CP: "Civ. Prac. & Rem.", TX: "Tax", FI: "Fin.", UT: "Util.", OC: "Occ.", GV: "Gov’t", IN: "Ins.", HS: "Health & Safety", HR: "Hum. Res.", PE: "Penal", TN: "Transp.", FA: "Fam.", AL: "Alco. Bev." };
 
 export function texasReviewedCitation(ref: { code: string; section: string; subdivision?: string | null }) {
   if (ref.code === "CR") return `Tex. Code Crim. Proc. art. ${ref.section}${ref.subdivision ?? ""}`;
@@ -57,6 +58,7 @@ export const texasReviewedRecords = [
   ...prohibited,
   ...intoxicationHarm,
   ...childSexual,
+  ...communications,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 

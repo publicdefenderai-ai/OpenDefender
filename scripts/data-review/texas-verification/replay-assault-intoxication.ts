@@ -1,3 +1,5 @@
+import communicationsRows from "../../../shared/texas-communications-stalking.json";
+import communicationsEvidence from "../output/texas-communications-evidence.json";
 import childRows from "../../../shared/texas-child-sexual-offenses.json";
 import childEvidence from "../output/texas-child-sexual-evidence.json";
 import harmRows from "../../../shared/texas-intoxication-harm.json";
@@ -60,6 +62,7 @@ import protectedAssaultRows from "../../../shared/texas-protected-assault.json";
 import protectedAssaultEvidence from "../output/texas-protected-assault-evidence.json";
 
 const batches = new Map([
+  ["communications", { rows: communicationsRows, evidence: Object.entries(communicationsEvidence) }],
   ["child-sexual", { rows: childRows, evidence: Object.entries(childEvidence) }],
   ["intoxication-harm", { rows: harmRows, evidence: Object.entries(harmEvidence) }],
   ["prohibited-possession", { rows: prohibitedRows, evidence: Object.entries(prohibitedEvidence) }],
