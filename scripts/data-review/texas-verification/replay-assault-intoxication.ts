@@ -1,3 +1,5 @@
+import commerceRows from "../../../shared/texas-sexual-commerce.json";
+import commerceEvidence from "../output/texas-sexual-commerce-evidence.json";
 import contactRows from "../../../shared/texas-indecent-contact.json";
 import contactEvidence from "../output/texas-indecent-contact-evidence.json";
 import protectiveRows from "../../../shared/texas-protective-firearms.json";
@@ -68,6 +70,7 @@ import protectedAssaultRows from "../../../shared/texas-protected-assault.json";
 import protectedAssaultEvidence from "../output/texas-protected-assault-evidence.json";
 
 const batches = new Map([
+  ["sexual-commerce", { rows: commerceRows, evidence: Object.entries(commerceEvidence) }],
   ["indecent-contact", { rows: contactRows, evidence: Object.entries(contactEvidence) }],
   ["protective-firearms", { rows: protectiveRows, evidence: Object.entries(protectiveEvidence) }],
   ["animal-cruelty", { rows: animalRows, evidence: Object.entries(animalEvidence) }],

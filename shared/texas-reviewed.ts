@@ -1,3 +1,4 @@
+import commerce from "./texas-sexual-commerce.json";
 import indecentContact from "./texas-indecent-contact.json";
 import protectiveFirearms from "./texas-protective-firearms.json";
 import animals from "./texas-animal-cruelty.json";
@@ -64,6 +65,7 @@ export const texasReviewedRecords = [
   ...communications,
   ...animals,
   ...indecentContact,
+  ...commerce,
   ...protectiveFirearms,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
