@@ -394,3 +394,31 @@ for (const [scenario, caseUsesId, suffix] of [
     }
   });
 }
+
+// Exercise generated process copy rather than a fixture that mirrors its wording.
+test('generated counsel and bail information preserves qualifications on screen and print', async ({ page }) => {
+  const { execFileSync } = await import('node:child_process');
+  const caseData = { jurisdiction: 'OR', charges: '', caseStage: 'arraignment', custodyStatus: 'in_custody', hasAttorney: false };
+  // Use the project's TS loader for the engine's retained JSON dependencies.
+  const generated = JSON.parse(execFileSync(process.execPath, ['--import', 'tsx', '--input-type=module', '-e',
+    `import { generateEnhancedGuidance } from './server/services/guidance-engine.ts'; console.log(JSON.stringify(generateEnhancedGuidance(${JSON.stringify(caseData)})));`,
+  ], { encoding: 'utf8' }));
+  const plan = { ...generated, caseData, generatedAt: new Date().toISOString() };
+  await setup(page);
+  await page.route('**/api/legal-guidance/design-results', route => route.fulfill({ json: { success: true, guidance: plan } }));
+  await page.goto('/case-guidance?session=design-results');
+  const screen = page.getByTestId('guidance-dashboard');
+  await expect(screen).toBeVisible();
+  const bail = generated.immediateActions.find((item: { action: string }) => item.action.includes('through the court process'))!.action;
+  const counsel = generated.immediateActions.find((item: { action: string }) => item.action.startsWith('Court-appointed counsel may'))!.action;
+  await expect(screen).toContainText(bail);
+  await expect(screen).toContainText(counsel);
+  await expect(screen).not.toContainText('Talk to the judge about bail');
+  await expect(screen).not.toContainText('the court will appoint a public defender');
+  await page.emulateMedia({ media: 'print' });
+  const printable = page.getByTestId('print-guidance-plan');
+  await expect(printable).toBeVisible();
+  await expect(printable).toContainText(bail);
+  await expect(printable).toContainText(counsel);
+  await expect(printable).toContainText('not determined by this roadmap');
+});
