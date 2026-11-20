@@ -1,3 +1,4 @@
+import transition from "../scripts/data-review/output/texas-child-sexual-hb1422-transition.json";
 import { createHash } from "node:crypto";
 import { expect, it } from "vitest";
 import rows from "../shared/texas-child-sexual-offenses.json";
@@ -66,4 +67,17 @@ it("rebuilds individually supported identities and fails closed on altered or mi
 it("places all reviewed choices in the established sexual-offenses group",()=>{
  for(const r of rows)expect(chargeCategories["Sexual Offenses"]).toContain(r.id);
  for(const r of rows.filter(r=>r.id.endsWith("extra")))expect(r.conduct).toContain("fear that any person will become a victim of listed trafficking, or fear that death");
+});
+
+it("binds the enrolled amendment and any-element transition rather than a prosecution date",()=>{
+ expect(createHash("sha256").update(transition.text).digest("hex")).toBe(transition.textSha256);
+ for(const span of transition.spans){expect(transition.text.slice(span.start,span.end)).toBe(span.text);expect(createHash("sha256").update(span.text).digest("hex")).toBe(span.sha256);}
+ expect(transition.spans.find(s=>s.section==="21")!.text).toContain("younger than 10 [ six ]");
+ expect(transition.spans.find(s=>s.section==="23")!.text).toContain("if any element of the offense occurred before that date");
+ expect(transition.spans.find(s=>s.section==="24")!.text).toContain("September 1, 2025");
+});
+it.each(["tx-pc-22-021-a-under10","tx-pc-22-021-b-under10","tx-pc-22-021-c-under10","tx-pc-22-021-d-under10","tx-pc-22-021-e-under10","tx-sexual-assault-in-the-first-degree"])("keeps conduct-date qualification beside the minimum for %s",id=>{
+ const r=rows.find(r=>r.id===id)!;
+ expect(r.penalty).toContain("on or after September 1, 2025");expect(r.penalty).toContain("any element occurred before that date");expect(r.penalty).toContain("immediately preceding (f)(1) used younger than six");expect(r.penalty).toContain("five to 99 years or life");expect(r.penalty).toContain("separate 25-year minimum under (f)(2)");
+ expect(getChargeById(id)!.maxPenalty).toBe(r.penalty);
 });
