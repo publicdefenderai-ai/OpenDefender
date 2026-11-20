@@ -141,6 +141,38 @@
           "sha256": "1664092f7238791cd320f305b655c9b134cb1f72eac03215fa8bbc0cfb2bbf7e"
         }
       ]
+    },
+    {
+      "id": "hb1730",
+      "sourceUrl": "https://capitol.texas.gov/tlodocs/88R/billtext/html/HB01730F.htm",
+      "retrievedAt": "2026-11-20T22:24:22.175234+00:00",
+      "htmlSha256": "d2c65a7e63d40bf8f574f4ba5877c651f9cd23acc2c811aef4c29ec7c1578fe5",
+      "text": "88(R) HB 1730 - Enrolled version - Bill Text td { font-family: Courier, Arial, sans-serif; font-size: 10pt; } table { empty-cells:show; } H.B. No. 1730 AN ACT relating to the punishment for the offense of indecent exposure; increasing a criminal penalty. BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF TEXAS: SECTION 1. Section 21.08(b), Penal Code, is amended to read as follows: (b) An offense under this section is a Class B misdemeanor , except that the offense is: (1) a Class A misdemeanor if it is shown on the trial of the offense that the defendant has been previously convicted one time of an offense under this section; and (2) a state jail felony if it is shown on the trial of the offense that the defendant has been previously convicted two or more times of an offense under this section . SECTION 2. The change in law made by this Act applies only to an offense committed on or after the effective date of this Act. An offense committed before the effective date of this Act is governed by the law in effect on the date the offense was committed, and the former law is continued in effect for that purpose. For purposes of this section, an offense was committed before the effective date of this Act if any element of the offense occurred before that date. SECTION 3. This Act takes effect September 1, 2023. ______________________________ ______________________________ President of the Senate Speaker of the House I certify that H.B. No. 1730 was passed by the House on April 13, 2023, by the following vote: Yeas 148, Nays 0, 2 present, not voting. ______________________________ Chief Clerk of the House I certify that H.B. No. 1730 was passed by the Senate on May 24, 2023, by the following vote: Yeas 30, Nays 1. ______________________________ Secretary of the Senate APPROVED: _____________________ Date _____________________ Governor",
+      "textSha256": "2785997f6ec7915d99dc433b395b98ad5de0b54c820b17fd062085d119df4baa",
+      "normalization": "HTML data joined and whitespace collapsed; amendment brackets retained",
+      "spans": [
+        {
+          "section": "1",
+          "start": 311,
+          "end": 806,
+          "text": "SECTION 1. Section 21.08(b), Penal Code, is amended to read as follows: (b) An offense under this section is a Class B misdemeanor , except that the offense is: (1) a Class A misdemeanor if it is shown on the trial of the offense that the defendant has been previously convicted one time of an offense under this section; and (2) a state jail felony if it is shown on the trial of the offense that the defendant has been previously convicted two or more times of an offense under this section . ",
+          "sha256": "f6e43d3b4858e80fd744234d929f40c94f235e5c5691bd98949d6ab0fd3c9bbf"
+        },
+        {
+          "section": "2",
+          "start": 806,
+          "end": 1274,
+          "text": "SECTION 2. The change in law made by this Act applies only to an offense committed on or after the effective date of this Act. An offense committed before the effective date of this Act is governed by the law in effect on the date the offense was committed, and the former law is continued in effect for that purpose. For purposes of this section, an offense was committed before the effective date of this Act if any element of the offense occurred before that date. ",
+          "sha256": "71e8561f3b9ed931d264bb1fc2ca074c12b2d1e364b246d362c6a26b4bc024f3"
+        },
+        {
+          "section": "3",
+          "start": 1274,
+          "end": 1325,
+          "text": "SECTION 3. This Act takes effect September 1, 2023.",
+          "sha256": "6ecf4e2e724ecf3b5feb7c8b63ac531b501b01e42946c1a3a22299167e34367f"
+        }
+      ]
     }
   ]
 }

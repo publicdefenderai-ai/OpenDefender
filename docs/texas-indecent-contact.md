@@ -24,7 +24,7 @@ Every new §22.012 summary expressly excludes both special scenarios and says th
 
 ## Dates and consequences
 
-Four official enrolled acts are retained with full text, acquisition metadata, hashes and exact selected spans: 2023 SB 1179 and HB 55, and 2025 SB 1610 and HB 2593. The summaries distinguish the 2023 public-lewdness civil-commitment and indecent-assault provider/prior changes from the retained 2025 versions. Their transition clauses treat an offense with any element before the effective date as governed by earlier law. Current charging date alone does not determine applicable grading.
+Five official enrolled acts are retained with full text, acquisition metadata, hashes and exact selected spans: 2023 SB 1179, HB 1730 and HB 55, and 2025 SB 1610 and HB 2593. The summaries distinguish the 2023 public-lewdness civil-commitment, indecent-exposure repeat/civil-commitment, and indecent-assault provider/prior changes from the retained 2025 versions. Their transition clauses treat an offense with any element before the effective date as governed by earlier law. H.B. 1730 created the one-prior and two-or-more-prior exposure grades effective September 1, 2023; S.B. 1179 separately added the civil-commitment grade that day. S.B. 1610 reenacted their combined text in 2025. This packet does not resolve how the separate 2023 versions interacted before that reenactment. Current charging date alone does not determine applicable grading.
 
 For exposure, the penalty text identifies article 62.001(5)(F)'s second-violation registration rule and its deferred-adjudication exception. Articles 62.001, 62.051 and 62.101 are retained. It does not assign everyone the same registration period or claim that other registration consequences never apply.
 
@@ -39,7 +39,7 @@ Against merged main `4edd905456ceb9f831066dc1bb810abf8e87634e`, the offline fixt
 ## Verification
 
 - All 30 regenerated records match their committed manifest entries exactly.
-- 63 unique focused tests pass across five suites after correcting the instruction-label convention; no assertion was removed or skipped.
+- 64 focused tests pass across five suites, including an enrolled-act guard distinguishing the 2023 exposure enhancements from the 2025 reenactment; no assertion was removed or skipped.
 - Typecheck passed.
 - Production build passed; all 24 isolated built-selector scenarios passed without retries.
 - No database, import, migration, monitoring, receipt-renewal or deployment operation was performed.

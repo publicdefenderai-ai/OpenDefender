@@ -30,6 +30,19 @@ it("binds prospective transition clauses to enrolled acts without changing sourc
  for(const doc of transitions.documents){expect(createHash("sha256").update(doc.text).digest("hex")).toBe(doc.textSha256);for(const s of doc.spans){expect(doc.text.slice(s.start,s.end)).toBe(s.text);expect(createHash("sha256").update(s.text).digest("hex")).toBe(s.sha256);}expect(doc.spans.some(s=>s.text.includes("if any element of the offense"))).toBe(true);}
  for(const r of group("22.012"))expect(r.penalty).toContain("September 1, 2023");
 });
+it("anchors exposure enhancements to 2023 and distinguishes the 2025 reenactment",()=>{
+ const hb=transitions.documents.find(d=>d.id==="hb1730")!;
+ expect(hb.spans.find(s=>s.section==="1")?.text).toContain("previously convicted two or more times");
+ expect(hb.spans.find(s=>s.section==="2")?.text).toContain("if any element of the offense");
+ expect(hb.spans.find(s=>s.section==="3")?.text).toContain("September 1, 2023");
+ expect(transitions.documents.find(d=>d.id==="sb1179")?.spans.find(s=>s.section==="3")?.text).toContain("felony of the third degree");
+ for(const r of group("21.08")){
+  expect(r.penalty).toContain("apply to offenses committed on or after September 1, 2023");
+  expect(r.penalty).toContain("reenacted the combined text effective September 1, 2025");
+  expect(r.penalty).toContain("If any element occurred before September 1, 2023, earlier law governs");
+  expect(r.penalty).not.toContain("; The charging date");
+ }
+});
 it("maps the verified genital-exposure instruction only to its supported conduct",()=>{
  for(const r of rows){expect(chargeCategories["Sexual Offenses"]).toContain(r.id);const instruction=getInstructionRef(getChargeById(r.id)!);if(r.id.startsWith("tx-pc-21-08-genitals")){expect(instruction).toContain("CPJC 21.8: Indecent Exposure of Genitals");expect(instruction).toContain("grading separate");}else expect(instruction).toBeNull();}
 });
