@@ -1682,6 +1682,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
         </Button>
         <Button
           onClick={onNext}
+          data-testid="button-next-additional-details"
           disabled={isLast && captchaRequired && !captchaToken}
           className="flex-1 case-continue"
         >

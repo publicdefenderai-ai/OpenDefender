@@ -165,17 +165,11 @@ for (const [viewportName, viewport] of ENGLISH_GUIDANCE_VIEWPORTS) {
     .locator("li")
     .filter({ hasText: "Preserve all messages, call logs" });
   await expect(evidenceTrigger).toBeVisible();
-  await evidenceTrigger.click();
-  await expect(evidenceItem).toBeHidden();
-  await evidenceTrigger.click();
+  // The current reader keeps these sections expanded instead of collapsible.
+  // Preserve the substantive visibility and width checks for their full text.
   await expect(evidenceItem).toBeVisible();
   await expectReadableWithinMobileViewport(page, evidenceItem);
-
-  const warningsSection = dashboard.getByText("Warnings & Court Preparation");
-  await expect(warningsSection).toBeVisible();
-  await warningsSection.click();
-  await expect(longWarningItem).toBeHidden();
-  await warningsSection.click();
+  await expect(warningsContent.getByRole("heading")).toBeVisible();
   await expect(longWarningItem).toBeVisible();
   await expectReadableWithinMobileViewport(page, longWarningItem);
 
@@ -353,8 +347,11 @@ async function completeStatus(page: Page) {
   await page.locator('[role="option"]').filter({ hasText: /^No$/ }).click();
   await page.getByTestId("button-continue-status").click();
   await page.getByTestId("button-continue-background").click();
-  await page.locator('button:has(svg.lucide-arrow-right)').last().click();
-  await page.locator('button:has(svg.lucide-arrow-right)').last().click();
+  // Wait for the distinct screen: clicking the exiting arrow twice can leave
+  // the questionnaire on its final screen without ever submitting guidance.
+  await expect(page.getByTestId("button-prev-additional-details")).toBeVisible();
+  await page.getByTestId("button-next-additional-details").click();
+  await page.getByTestId("button-generate-guidance").click();
 }
 
 async function expectNoHorizontalOverflow(page: Page) {
@@ -383,6 +380,7 @@ async function expectNoHorizontalOverflow(page: Page) {
     };
   });
 
+  expect(dimensions.overflowingElements, JSON.stringify(dimensions)).toEqual([]);
   expect(
     dimensions.documentScrollWidth,
     JSON.stringify(dimensions),

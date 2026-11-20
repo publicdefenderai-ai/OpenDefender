@@ -217,6 +217,7 @@ const testProcess = spawn(
     "tests/e2e/source-readiness-gate.spec.ts",
     "tests/e2e/multilingual-mobile-layout.spec.ts",
     "tests/e2e/localized-mobile-actions.spec.ts",
+    "tests/e2e/localized-guidance-statute-errors.spec.ts",
   ],
   {
     env: {
