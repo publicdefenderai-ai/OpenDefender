@@ -4,7 +4,7 @@ Base: `9cebb7bbf1c4a4afec0ffad19e1a6195ee973fc0`. This packet changes no catalog
 
 ## Existing scope and candidate work
 
-The frozen exact-ID ledger contains 121 existing records: 33 retained, 61 official-title aliases and 27 requiring exact reselection. It covers 89 distinct provision keys, with 94 offense links, two grading links and no penalty links. The two NYC local-ordinance references are not state-Senate text verification. The pure offline manifest builder still yields 94 configured selectable IDs; this is not a measured live count or evidence that their substantive penalties have been reviewed.
+The frozen exact-ID ledger contains 121 existing records: 33 retained, 61 official-title aliases and 27 requiring exact reselection. It covers 89 distinct provision keys, with 94 offense links, two grading links and no penalty links. The two NYC local-ordinance references are not state-Senate text verification. The pure offline manifest builder still yields 94 configured selectable IDs; these 121/94 figures are dated baseline accounting, not future catalog ceilings. This is not a measured live count or evidence that their substantive penalties have been reviewed.
 
 The new benchmark is our purposive sample of 28 official Penal Law sections across person, property and public-order families, selected before matching their citations to the catalog. It is not an official frequency ranking, a statistical sample or a statewide denominator. Matches are explicitly `same_section_requires_scope_review`, never automatic coverage. Judicial instruction URLs returned HTTP 403 in the local transport; they are not silently counted as acquired evidence.
 

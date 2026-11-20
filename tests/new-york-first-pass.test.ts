@@ -17,14 +17,18 @@ describe('New York candidate-only first pass',()=>{
   expect(packet.publicationBlockers.join(' ')).toContain('API-only');
  });
  it('preserves all 121 exact existing identities and all 27 reselection holds in the pure offline builder',()=>{
-  expect(baseline.rows.map(r=>r.id).sort()).toEqual(manifest.catalogRecords.map(r=>r.chargeId).sort());
+  expect(baseline.rows).toHaveLength(121);
+  const currentIds=new Set(manifest.catalogRecords.map(r=>r.chargeId));
+  for(const row of baseline.rows)expect(currentIds.has(row.id)).toBe(true);
   const held=baseline.rows.filter(r=>r.disposition==='require_exact_reselection').map(r=>r.id).sort();
   expect(held).toHaveLength(27);
-  expect(held).toEqual(manifest.catalogRecords.filter(r=>r.disposition==='require_exact_reselection').map(r=>r.chargeId).sort());
+  const currentHolds=new Set(manifest.catalogRecords.filter(r=>r.disposition==='require_exact_reselection').map(r=>r.chargeId));
+  for(const id of held)expect(currentHolds.has(id)).toBe(true);
   const seed=buildNewYorkSourceDatabaseSeed(manifest as unknown as NewYorkAuthorityManifest);
   for(const id of held)expect(seed.selectableChargeIds).not.toContain(id);
-  expect(seed.selectableChargeIds).toHaveLength(94);
-  expect(seed.catalogRecords).toHaveLength(121);
+  // The frozen snapshot is 121 records / 94 configured IDs, not a future catalog ceiling.
+  // Additional reviewed IDs may grow the current manifest without rewriting history.
+  expect(new Set(seed.catalogRecords.map(r=>r.chargeId)).size).toBe(seed.catalogRecords.length);
  });
  it('independently checks Class B trespass and the Class A property classifications',()=>{
   expect(source('140.10').text).toContain('is a class B misdemeanor');
