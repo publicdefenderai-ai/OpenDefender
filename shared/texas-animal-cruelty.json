@@ -1,0 +1,2486 @@
+[
+  {
+    "id": "tx-pc-42-092-torture",
+    "name": "Cruelty to nonlivestock animals (torture)",
+    "officialTitle": "CRUELTY TO NONLIVESTOCK ANIMALS.",
+    "category": "felony",
+    "code": "42.092(b)(1)",
+    "citation": "Tex. Penal Code § 42.092(b)(1)",
+    "conduct": "Torturing an animal, or killing or causing serious bodily injury to it in a cruel manner. The current statute permits intentional, knowing, reckless or criminally negligent conduct. Criminal negligence was added effective September 1, 2025; conduct with any element before that date requires the earlier law, which did not include that mental state. Covered animals include domesticated creatures, stray or feral cats/dogs and previously captured wild creatures, but exclude uncaptured wild creatures and livestock. Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense. Reasonable fear of bodily injury to a person from a statutorily defined dangerous wild animal is a defense. For alleged criminal negligence only, actual discharge of duties as a licensed veterinarian or a person assisting that veterinarian is a defense.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. One prior conviction under §42.092(b)(1), (2), (7) or (8), or under §42.09 changes this branch to Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed. A conviction also creates the five-year animal-possession/control restriction in §42.107; that is a separate offense, not an extension of this custody term.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(b)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(c-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "822.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.251",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "72010001"
+  },
+  {
+    "id": "tx-pc-42-092-kill-poison-injure",
+    "name": "Cruelty to nonlivestock animals (kill or poison or injure)",
+    "officialTitle": "CRUELTY TO NONLIVESTOCK ANIMALS.",
+    "category": "felony",
+    "code": "42.092(b)(2)",
+    "citation": "Tex. Penal Code § 42.092(b)(2)",
+    "conduct": "Without the owner’s effective consent, killing, administering poison to, or causing serious bodily injury to an animal. The current statute permits intentional, knowing, reckless or criminally negligent conduct. Criminal negligence was added effective September 1, 2025; conduct with any element before that date requires the earlier law, which did not include that mental state. Covered animals include domesticated creatures, stray or feral cats/dogs and previously captured wild creatures, but exclude uncaptured wild creatures and livestock. Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense. Reasonable fear of bodily injury to a person from a statutorily defined dangerous wild animal is a defense. For alleged criminal negligence only, actual discharge of duties as a licensed veterinarian or a person assisting that veterinarian is a defense. Subsections (b)(2) and (b)(6) also have specific defenses for an animal discovered on the actor’s property in the act of or after injuring/killing livestock or damaging crops and killed/injured at that discovery, and for qualifying public-servant or electricity/natural-gas work. These are not blanket defenses to other cruelty branches.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. One prior conviction under §42.092(b)(1), (2), (7) or (8), or under §42.09 changes this branch to Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed. A conviction also creates the five-year animal-possession/control restriction in §42.107; that is a separate offense, not an extension of this custody term.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(b)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(c-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "822.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.251",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "72010001"
+  },
+  {
+    "id": "tx-pc-42-092-neglect",
+    "name": "Cruelty to nonlivestock animals (neglect)",
+    "officialTitle": "CRUELTY TO NONLIVESTOCK ANIMALS.",
+    "category": "misdemeanor",
+    "code": "42.092(b)(3)",
+    "citation": "Tex. Penal Code § 42.092(b)(3)",
+    "conduct": "Unreasonably failing to provide necessary food, water, care or shelter for an animal in the person’s custody. The current statute permits intentional, knowing, reckless or criminally negligent conduct. Criminal negligence was added effective September 1, 2025; conduct with any element before that date requires the earlier law, which did not include that mental state. Covered animals include domesticated creatures, stray or feral cats/dogs and previously captured wild creatures, but exclude uncaptured wild creatures and livestock. Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense. Reasonable fear of bodily injury to a person from a statutorily defined dangerous wild animal is a defense. For alleged criminal negligence only, actual discharge of duties as a licensed veterinarian or a person assisting that veterinarian is a defense.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed. A conviction also creates the five-year animal-possession/control restriction in §42.107; that is a separate offense, not an extension of this custody term.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(b)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "822.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.251",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990643"
+  },
+  {
+    "id": "tx-pc-42-092-abandon",
+    "name": "Cruelty to nonlivestock animals (abandon)",
+    "officialTitle": "CRUELTY TO NONLIVESTOCK ANIMALS.",
+    "category": "misdemeanor",
+    "code": "42.092(b)(4)",
+    "citation": "Tex. Penal Code § 42.092(b)(4)",
+    "conduct": "Unreasonably abandoning an animal in the person’s custody, including without reasonable arrangements for someone else to assume custody. The current statute permits intentional, knowing, reckless or criminally negligent conduct. Criminal negligence was added effective September 1, 2025; conduct with any element before that date requires the earlier law, which did not include that mental state. Covered animals include domesticated creatures, stray or feral cats/dogs and previously captured wild creatures, but exclude uncaptured wild creatures and livestock. Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense. Reasonable fear of bodily injury to a person from a statutorily defined dangerous wild animal is a defense. For alleged criminal negligence only, actual discharge of duties as a licensed veterinarian or a person assisting that veterinarian is a defense. Returning a qualifying stray/feral animal through the defined trap-neuter-return program, or returning a trapped wild creature in accordance with Texas wildlife law, supplies the specific abandonment defenses.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed. A conviction also creates the five-year animal-possession/control restriction in §42.107; that is a separate offense, not an extension of this custody term.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(b)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "822.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.251",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(e-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(e-2)",
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": "73990643"
+  },
+  {
+    "id": "tx-pc-42-092-transport-confine",
+    "name": "Cruelty to nonlivestock animals (transport or confine)",
+    "officialTitle": "CRUELTY TO NONLIVESTOCK ANIMALS.",
+    "category": "misdemeanor",
+    "code": "42.092(b)(5)",
+    "citation": "Tex. Penal Code § 42.092(b)(5)",
+    "conduct": "Transporting or confining an animal in a cruel manner. The current statute permits intentional, knowing, reckless or criminally negligent conduct. Criminal negligence was added effective September 1, 2025; conduct with any element before that date requires the earlier law, which did not include that mental state. Covered animals include domesticated creatures, stray or feral cats/dogs and previously captured wild creatures, but exclude uncaptured wild creatures and livestock. Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense. Reasonable fear of bodily injury to a person from a statutorily defined dangerous wild animal is a defense. For alleged criminal negligence only, actual discharge of duties as a licensed veterinarian or a person assisting that veterinarian is a defense.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed. A conviction also creates the five-year animal-possession/control restriction in §42.107; that is a separate offense, not an extension of this custody term.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(b)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "822.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.251",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990643"
+  },
+  {
+    "id": "tx-pc-42-092-injure",
+    "name": "Cruelty to nonlivestock animals (injure)",
+    "officialTitle": "CRUELTY TO NONLIVESTOCK ANIMALS.",
+    "category": "misdemeanor",
+    "code": "42.092(b)(6)",
+    "citation": "Tex. Penal Code § 42.092(b)(6)",
+    "conduct": "Without the owner’s effective consent, causing bodily injury to an animal. The current statute permits intentional, knowing, reckless or criminally negligent conduct. Criminal negligence was added effective September 1, 2025; conduct with any element before that date requires the earlier law, which did not include that mental state. Covered animals include domesticated creatures, stray or feral cats/dogs and previously captured wild creatures, but exclude uncaptured wild creatures and livestock. Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense. Reasonable fear of bodily injury to a person from a statutorily defined dangerous wild animal is a defense. For alleged criminal negligence only, actual discharge of duties as a licensed veterinarian or a person assisting that veterinarian is a defense. Subsections (b)(2) and (b)(6) also have specific defenses for an animal discovered on the actor’s property in the act of or after injuring/killing livestock or damaging crops and killed/injured at that discovery, and for qualifying public-servant or electricity/natural-gas work. These are not blanket defenses to other cruelty branches.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed. A conviction also creates the five-year animal-possession/control restriction in §42.107; that is a separate offense, not an extension of this custody term.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(b)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "822.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.251",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990643"
+  },
+  {
+    "id": "tx-pc-42-092-fight",
+    "name": "Cruelty to nonlivestock animals (fight)",
+    "officialTitle": "CRUELTY TO NONLIVESTOCK ANIMALS.",
+    "category": "felony",
+    "code": "42.092(b)(7)",
+    "citation": "Tex. Penal Code § 42.092(b)(7)",
+    "conduct": "Causing one animal to fight with another animal, if at least one of the animals is not a dog. Dog-versus-dog fighting is not this branch. The current statute permits intentional, knowing, reckless or criminally negligent conduct. Criminal negligence was added effective September 1, 2025; conduct with any element before that date requires the earlier law, which did not include that mental state. Covered animals include domesticated creatures, stray or feral cats/dogs and previously captured wild creatures, but exclude uncaptured wild creatures and livestock. Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense. Reasonable fear of bodily injury to a person from a statutorily defined dangerous wild animal is a defense. For alleged criminal negligence only, actual discharge of duties as a licensed veterinarian or a person assisting that veterinarian is a defense.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. One prior conviction under any branch of §42.092 or §42.09 changes this branch to Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed. A conviction also creates the five-year animal-possession/control restriction in §42.107; that is a separate offense, not an extension of this custody term.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(b)(7)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(c-2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "822.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.251",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-092-lure",
+    "name": "Cruelty to nonlivestock animals (lure)",
+    "officialTitle": "CRUELTY TO NONLIVESTOCK ANIMALS.",
+    "category": "felony",
+    "code": "42.092(b)(8)",
+    "citation": "Tex. Penal Code § 42.092(b)(8)",
+    "conduct": "Using a live animal as a lure in dog-race training or dog coursing on a racetrack. The current statute permits intentional, knowing, reckless or criminally negligent conduct. Criminal negligence was added effective September 1, 2025; conduct with any element before that date requires the earlier law, which did not include that mental state. Covered animals include domesticated creatures, stray or feral cats/dogs and previously captured wild creatures, but exclude uncaptured wild creatures and livestock. Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense. Reasonable fear of bodily injury to a person from a statutorily defined dangerous wild animal is a defense. For alleged criminal negligence only, actual discharge of duties as a licensed veterinarian or a person assisting that veterinarian is a defense.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. One prior conviction under any branch of §42.092 or §42.09 changes this branch to Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed. A conviction also creates the five-year animal-possession/control restriction in §42.107; that is a separate offense, not an extension of this custody term.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(b)(8)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(c-2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "822.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.251",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-092-overwork",
+    "name": "Cruelty to nonlivestock animals (overwork)",
+    "officialTitle": "CRUELTY TO NONLIVESTOCK ANIMALS.",
+    "category": "misdemeanor",
+    "code": "42.092(b)(9)",
+    "citation": "Tex. Penal Code § 42.092(b)(9)",
+    "conduct": "Seriously overworking an animal. The current statute permits intentional, knowing, reckless or criminally negligent conduct. Criminal negligence was added effective September 1, 2025; conduct with any element before that date requires the earlier law, which did not include that mental state. Covered animals include domesticated creatures, stray or feral cats/dogs and previously captured wild creatures, but exclude uncaptured wild creatures and livestock. Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense. Reasonable fear of bodily injury to a person from a statutorily defined dangerous wild animal is a defense. For alleged criminal negligence only, actual discharge of duties as a licensed veterinarian or a person assisting that veterinarian is a defense.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed. A conviction also creates the five-year animal-possession/control restriction in §42.107; that is a separate offense, not an extension of this custody term.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(b)(9)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": "(d-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "822.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "OC",
+        "section": "801.251",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990643"
+  },
+  {
+    "id": "tx-pc-42-09-torture",
+    "name": "Cruelty to livestock animals (torture)",
+    "officialTitle": "CRUELTY TO LIVESTOCK ANIMALS.",
+    "category": "felony",
+    "code": "42.09(a)(1)",
+    "citation": "Tex. Penal Code § 42.09(a)(1)",
+    "conduct": "Torturing a livestock animal. The required mental state is intentional or knowing; recklessness or criminal negligence alone is not the statutory mental state for this section. Livestock covers the specific cattle, sheep, swine, goats, ratites/poultry, equines, agricultural hoofstock and agricultural fowl listed in §42.09(b)(5). Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-09-neglect",
+    "name": "Cruelty to livestock animals (neglect)",
+    "officialTitle": "CRUELTY TO LIVESTOCK ANIMALS.",
+    "category": "misdemeanor",
+    "code": "42.09(a)(2)",
+    "citation": "Tex. Penal Code § 42.09(a)(2)",
+    "conduct": "Unreasonably failing to provide necessary food, water or care for a livestock animal in the person’s custody. The required mental state is intentional or knowing; recklessness or criminal negligence alone is not the statutory mental state for this section. Livestock covers the specific cattle, sheep, swine, goats, ratites/poultry, equines, agricultural hoofstock and agricultural fowl listed in §42.09(b)(5). Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-09-abandon",
+    "name": "Cruelty to livestock animals (abandon)",
+    "officialTitle": "CRUELTY TO LIVESTOCK ANIMALS.",
+    "category": "misdemeanor",
+    "code": "42.09(a)(3)",
+    "citation": "Tex. Penal Code § 42.09(a)(3)",
+    "conduct": "Unreasonably abandoning a livestock animal in the person’s custody, including without reasonable arrangements for another person to assume custody. The required mental state is intentional or knowing; recklessness or criminal negligence alone is not the statutory mental state for this section. Livestock covers the specific cattle, sheep, swine, goats, ratites/poultry, equines, agricultural hoofstock and agricultural fowl listed in §42.09(b)(5). Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-09-transport-confine",
+    "name": "Cruelty to livestock animals (transport or confine)",
+    "officialTitle": "CRUELTY TO LIVESTOCK ANIMALS.",
+    "category": "misdemeanor",
+    "code": "42.09(a)(4)",
+    "citation": "Tex. Penal Code § 42.09(a)(4)",
+    "conduct": "Transporting or confining a livestock animal in a cruel and unusual manner. The required mental state is intentional or knowing; recklessness or criminal negligence alone is not the statutory mental state for this section. Livestock covers the specific cattle, sheep, swine, goats, ratites/poultry, equines, agricultural hoofstock and agricultural fowl listed in §42.09(b)(5). Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-09-poison",
+    "name": "Cruelty to livestock animals (poison)",
+    "officialTitle": "CRUELTY TO LIVESTOCK ANIMALS.",
+    "category": "felony",
+    "code": "42.09(a)(5)",
+    "citation": "Tex. Penal Code § 42.09(a)(5)",
+    "conduct": "Administering poison to another person’s livestock animal, other than cattle, horses, sheep, swine or goats, without legal authority or the owner’s effective consent. The required mental state is intentional or knowing; recklessness or criminal negligence alone is not the statutory mental state for this section. Livestock covers the specific cattle, sheep, swine, goats, ratites/poultry, equines, agricultural hoofstock and agricultural fowl listed in §42.09(b)(5). Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-09-fight",
+    "name": "Cruelty to livestock animals (fight)",
+    "officialTitle": "CRUELTY TO LIVESTOCK ANIMALS.",
+    "category": "felony",
+    "code": "42.09(a)(6)",
+    "citation": "Tex. Penal Code § 42.09(a)(6)",
+    "conduct": "Causing one livestock animal to fight another livestock animal or a nonlivestock animal covered by §42.092. The required mental state is intentional or knowing; recklessness or criminal negligence alone is not the statutory mental state for this section. Livestock covers the specific cattle, sheep, swine, goats, ratites/poultry, equines, agricultural hoofstock and agricultural fowl listed in §42.09(b)(5). Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-09-lure",
+    "name": "Cruelty to livestock animals (lure)",
+    "officialTitle": "CRUELTY TO LIVESTOCK ANIMALS.",
+    "category": "felony",
+    "code": "42.09(a)(7)",
+    "citation": "Tex. Penal Code § 42.09(a)(7)",
+    "conduct": "Using a live livestock animal as a lure in dog-race training or dog coursing on a racetrack. The required mental state is intentional or knowing; recklessness or criminal negligence alone is not the statutory mental state for this section. Livestock covers the specific cattle, sheep, swine, goats, ratites/poultry, equines, agricultural hoofstock and agricultural fowl listed in §42.09(b)(5). Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(a)(7)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-09-trip-horse",
+    "name": "Cruelty to livestock animals (trip or horse)",
+    "officialTitle": "CRUELTY TO LIVESTOCK ANIMALS.",
+    "category": "felony",
+    "code": "42.09(a)(8)",
+    "citation": "Tex. Penal Code § 42.09(a)(8)",
+    "conduct": "Using an object to cause a horse to fall or lose its balance. Tripping it to identify its ownership or provide veterinary care is a specific defense. The required mental state is intentional or knowing; recklessness or criminal negligence alone is not the statutory mental state for this section. Livestock covers the specific cattle, sheep, swine, goats, ratites/poultry, equines, agricultural hoofstock and agricultural fowl listed in §42.09(b)(5). Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(a)(8)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-09-overwork",
+    "name": "Cruelty to livestock animals (overwork)",
+    "officialTitle": "CRUELTY TO LIVESTOCK ANIMALS.",
+    "category": "misdemeanor",
+    "code": "42.09(a)(9)",
+    "citation": "Tex. Penal Code § 42.09(a)(9)",
+    "conduct": "Seriously overworking a livestock animal. The required mental state is intentional or knowing; recklessness or criminal negligence alone is not the statutory mental state for this section. Livestock covers the specific cattle, sheep, swine, goats, ratites/poultry, equines, agricultural hoofstock and agricultural fowl listed in §42.09(b)(5). Custody concerns care and control, not only ownership. Generally accepted and otherwise lawful fishing, hunting, trapping, wildlife/depredation control and livestock husbandry/agriculture practices are statutory exceptions; an activity label alone does not establish lawfulness. Bona fide scientific experimentation is a defense.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Two prior convictions under §42.09, two under §42.092, or one under each changes this branch to State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Other repeat-offender/deadly-weapon findings require their own statutory analysis; no prior is assumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(a)(9)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.092",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PW",
+        "section": "71.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-091-a-attack",
+    "name": "Attack on assistance animal (direct attack)",
+    "officialTitle": "ATTACK ON ASSISTANCE ANIMAL.",
+    "category": "misdemeanor",
+    "code": "42.091(a)",
+    "citation": "Tex. Penal Code § 42.091(a), (c)(1)",
+    "conduct": "Intentionally, knowingly or recklessly attacking an assistance animal. Assistance animal has the specific Human Resources Code §121.002 definition, including required special training/equipment; not every pet or emotional-support animal qualifies. Custody includes responsibility for care and control regardless of ownership. The grade follows the actual attack, injury or death, not merely the intended outcome.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Repeat-offender or other statutory findings require separate analysis. The court must order owner restitution under §42.091(d) for related veterinary/medical bills, replacement or retraining costs and other reasonably incurred expenses. A conviction also creates the five-year animal-possession/control restriction under §42.107.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "121.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-091-a-injure",
+    "name": "Attack on assistance animal (direct injure)",
+    "officialTitle": "ATTACK ON ASSISTANCE ANIMAL.",
+    "category": "felony",
+    "code": "42.091(a)",
+    "citation": "Tex. Penal Code § 42.091(a), (c)(2)",
+    "conduct": "Intentionally, knowingly or recklessly injuring an assistance animal. Assistance animal has the specific Human Resources Code §121.002 definition, including required special training/equipment; not every pet or emotional-support animal qualifies. Custody includes responsibility for care and control regardless of ownership. The grade follows the actual attack, injury or death, not merely the intended outcome.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Repeat-offender or other statutory findings require separate analysis. The court must order owner restitution under §42.091(d) for related veterinary/medical bills, replacement or retraining costs and other reasonably incurred expenses. A conviction also creates the five-year animal-possession/control restriction under §42.107.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "121.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-091-a-kill",
+    "name": "Attack on assistance animal (direct kill)",
+    "officialTitle": "ATTACK ON ASSISTANCE ANIMAL.",
+    "category": "felony",
+    "code": "42.091(a)",
+    "citation": "Tex. Penal Code § 42.091(a), (c)(3)",
+    "conduct": "Intentionally, knowingly or recklessly killing an assistance animal. Assistance animal has the specific Human Resources Code §121.002 definition, including required special training/equipment; not every pet or emotional-support animal qualifies. Custody includes responsibility for care and control regardless of ownership. The grade follows the actual attack, injury or death, not merely the intended outcome.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Repeat-offender or other statutory findings require separate analysis. The court must order owner restitution under §42.091(d) for related veterinary/medical bills, replacement or retraining costs and other reasonably incurred expenses. A conviction also creates the five-year animal-possession/control restriction under §42.107.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(c)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "121.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(d)",
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-091-b-attack",
+    "name": "Attack on assistance animal (owned or controlled animal attack)",
+    "officialTitle": "ATTACK ON ASSISTANCE ANIMAL.",
+    "category": "misdemeanor",
+    "code": "42.091(b)",
+    "citation": "Tex. Penal Code § 42.091(b), (c)(1)",
+    "conduct": "Intentionally, knowingly or recklessly inciting or permitting an animal owned by or in the actor’s custody to attack an assistance animal, with the corresponding attack, injury or death actually resulting from that conduct. Assistance animal has the specific Human Resources Code §121.002 definition, including required special training/equipment; not every pet or emotional-support animal qualifies. Custody includes responsibility for care and control regardless of ownership. The grade follows the actual attack, injury or death, not merely the intended outcome.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Repeat-offender or other statutory findings require separate analysis. The mandatory owner-restitution provision in §42.091(d) expressly names subsection (a), not this subsection (b) offense; other restitution authority requires separate assessment. A conviction also creates the five-year animal-possession/control restriction under §42.107.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "121.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-091-b-injure",
+    "name": "Attack on assistance animal (owned or controlled animal injure)",
+    "officialTitle": "ATTACK ON ASSISTANCE ANIMAL.",
+    "category": "felony",
+    "code": "42.091(b)",
+    "citation": "Tex. Penal Code § 42.091(b), (c)(2)",
+    "conduct": "Intentionally, knowingly or recklessly inciting or permitting an animal owned by or in the actor’s custody to injure an assistance animal, with the corresponding attack, injury or death actually resulting from that conduct. Assistance animal has the specific Human Resources Code §121.002 definition, including required special training/equipment; not every pet or emotional-support animal qualifies. Custody includes responsibility for care and control regardless of ownership. The grade follows the actual attack, injury or death, not merely the intended outcome.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. Repeat-offender or other statutory findings require separate analysis. The mandatory owner-restitution provision in §42.091(d) expressly names subsection (a), not this subsection (b) offense; other restitution authority requires separate assessment. A conviction also creates the five-year animal-possession/control restriction under §42.107.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "121.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-091-b-kill",
+    "name": "Attack on assistance animal (owned or controlled animal kill)",
+    "officialTitle": "ATTACK ON ASSISTANCE ANIMAL.",
+    "category": "felony",
+    "code": "42.091(b)",
+    "citation": "Tex. Penal Code § 42.091(b), (c)(3)",
+    "conduct": "Intentionally, knowingly or recklessly inciting or permitting an animal owned by or in the actor’s custody to kill an assistance animal, with the corresponding attack, injury or death actually resulting from that conduct. Assistance animal has the specific Human Resources Code §121.002 definition, including required special training/equipment; not every pet or emotional-support animal qualifies. Custody includes responsibility for care and control regardless of ownership. The grade follows the actual attack, injury or death, not merely the intended outcome.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Repeat-offender or other statutory findings require separate analysis. The mandatory owner-restitution provision in §42.091(d) expressly names subsection (a), not this subsection (b) offense; other restitution authority requires separate assessment. A conviction also creates the five-year animal-possession/control restriction under §42.107.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(b)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(c)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.091",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HR",
+        "section": "121.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.09",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.107",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]
