@@ -89,6 +89,9 @@ export interface ScenarioExpect {
    */
   requiredActionKeywords?: string[];
 
+  /** Strings that must not appear in immediate actions (case-insensitive). */
+  absentActionKeywords?: string[];
+
   /**
    * Every area string must appear in `result.uncertainties[].area` (exact match).
    */
@@ -1280,23 +1283,25 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// PRIORITY 1 — DUI × CA: DMV hearing window appears
+// PRIORITY 1 — DUI × CA: administrative hearing information without a national deadline
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const p1DuiScenarios: EvalScenario[] = [
   {
-    label: 'P1-18: DUI × CA — DMV hearing action present in immediateActions',
+    label: 'P1-18: DUI × CA — administrative license-hearing information is present',
     input: { ...baseMapped, jurisdiction: 'CA', charges: 'dui', caseStage: 'arraignment', custodyStatus: 'released' },
     expect: {
-      requiredActionKeywords: ['DMV'],
+      requiredActionKeywords: ['Administrative license-hearing', 'applicable notice'],
+      absentActionKeywords: ['10 days'],
       hasImmediateActions: true,
     },
   },
   {
-    label: 'P1-19: DUI × CA — DMV hearing action mentions 10 days',
+    label: 'P1-19: DUI alias × CA — notice-based hearing information has no national ten-day claim',
     input: { ...baseMapped, jurisdiction: 'CA', charges: 'driving under the influence', caseStage: 'arraignment', custodyStatus: 'released' },
     expect: {
-      requiredActionKeywords: ['10 days'],
+      requiredActionKeywords: ['Administrative license-hearing', 'applicable notice'],
+      absentActionKeywords: ['10 days'],
     },
   },
   {

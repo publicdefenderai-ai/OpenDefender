@@ -12,7 +12,7 @@ const PRINT_CARD_TITLES = [
 test.describe("quick-reference card printing", () => {
   test("print media includes every rights card without site navigation", async ({ page }) => {
     await page.goto("/quick-reference-cards");
-    await expect(page.getByRole("heading", { name: "Know your rights. Be prepared." })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Know your rights. At a glance." })).toBeVisible();
 
     await page.emulateMedia({ media: "print" });
 
