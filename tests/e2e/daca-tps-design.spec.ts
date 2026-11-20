@@ -23,8 +23,9 @@ for (const language of ['en', 'es', 'zh'] as const) for (const theme of ['light'
     await expect(root.locator('#daca li')).toHaveCount(10);
     await expect(root.locator('#tps li')).toHaveCount(3);
     await expect(root.locator('.daca-tps-topics > div')).toHaveCount(3);
-    await expect(root.getByTestId('link-uscis-daca')).toHaveAccessibleName(design.daca);
-    await expect(root.getByTestId('link-uscis-tps')).toHaveAccessibleName(design.tps);
+    await expect(root.getByTestId('link-uscis-daca')).toHaveAccessibleName(`${design.daca} (${design.newTab})`);
+    await expect(root.getByTestId('link-uscis-tps')).toHaveAccessibleName(`${design.tps} (${design.newTab})`);
+    for (const link of await root.locator('.daca-tps-reading a[target="_blank"], .daca-tps-resources a[target="_blank"]').all()) await expect(link).toHaveAccessibleName(new RegExp(design.newTab));
     const nav = root.getByRole('navigation',{name:design.nav});
     await expect(nav.getByRole('link')).toHaveCount(4);
     for (const link of await nav.getByRole('link').all()) {
