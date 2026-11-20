@@ -777,3 +777,13 @@ A pre-change rendered fixture preserves 50 text fragments per locale plus the ex
 - Final design closeout: audit mobile navigation, light/dark appearance, keyboard paths, print surfaces and remaining empty/loading/error states across the completed routes. The How To screenshot replacement has landed. A further visual-variety pass remains a separate, deferred improvement.
 
 Legal-content and production-data work are tracked separately from this design inventory.
+
+### DACA and TPS
+
+The approved daca-tps-content.html reading direction is implemented as separate DACA and TPS sections, each pairing an introductory column with its detailed requirements, limitations and renewal information. Expiration concerns and official resources follow. The descriptive heading avoids promising personalized next steps. Four keyboard-accessible section links replace the previous card-heavy presentation, and scroll-triggered reveals are removed. All content stays expanded for search and print.
+
+The published translation keys and immigration-updates copy remain unchanged, including the fixed DACA eligibility dates, the four framework qualifications, the October 29, 2026 reference date, renewal caveats, TPS country-specific warning, benefits and re-registration language. This is not a new certification of current immigration policy. Both existing USCIS destinations and test IDs survive; their formerly English-only bottom link labels are translated. An internal link to immigration legal help is added. Shared header, footer, breadcrumb and changing-law notice remain.
+
+A pre-change rendered fixture captures 35 text fragments per language and all existing article links. The release-listed browser spec checks all fragments, visible qualifications, the six eligibility items and four framework items, three TPS benefits, three expiration topics, the full heading text, four keyboard jumps, one main landmark, translated resource labels, desktop/320px bounds and print visibility in all three languages and both themes. The six new cases and seven existing immigration-content cases passed (13 total). Desktop/light and mobile/dark screenshots were visually inspected. Typecheck, build and locale-parity results are recorded in the PR. No full-suite, deployment or legal-review-completion claim.
+
+Next page-specific immigration batch: After Deportation. Raids Toolkit and Workplace Raids have separate review PRs and are not merged by this batch.
