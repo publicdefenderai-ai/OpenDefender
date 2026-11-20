@@ -47,7 +47,7 @@ export default function AfterDeportation() {
     <PageBreadcrumb items={[{label:design.home,href:"/"},{label:design.immigration,href:"/immigration-guidance"}]} currentPage={t("afterDeportation.heroTitle")} />
     <header className="after-deportation-hero">
       <div><p className="after-deportation-tagline">{t("afterDeportation.heroTagline")}</p>
-        <h1>{t("afterDeportation.heroTitle")}</h1><p>{t("afterDeportation.heroSubtitle")}</p>
+        <h1 data-testid="immigration-detail-title">{t("afterDeportation.heroTitle")}</h1><p data-testid="immigration-detail-subtitle">{t("afterDeportation.heroSubtitle")}</p>
       </div>
       <img src="/images/design/after-deportation.svg" className="after-deportation-art" width="260" height="240" alt="" aria-hidden="true" />
     </header>
