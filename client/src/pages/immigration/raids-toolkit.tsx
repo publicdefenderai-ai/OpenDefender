@@ -1,44 +1,48 @@
-import { BrandShieldIcon } from "@/components/brand-logo";
 import {
-  Shield,
   AlertTriangle,
   Phone,
   ExternalLink,
-  CheckCircle2,
   FileText,
-  Users
 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
-import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import "./raids-toolkit.css";
 import { useScrollToTop } from '@/hooks/use-scroll-to-top';
 import { ScenarioGuide } from '@/components/immigration/scenario-guide';
 import { SafetyChecklist } from '@/components/immigration/safety-checklist';
 import { EmergencyCard } from '@/components/immigration/emergency-card';
-import { ImmigrationDetailLayout } from '@/components/immigration/immigration-detail-layout';
+import { ScanFirstPageFrame, PageSectionNav } from '@/components/layout/scan-first-page-frame';
+import { PageBreadcrumb } from '@/components/navigation/page-breadcrumb';
+import { RapidlyEvolvingNotice } from '@/components/immigration/rapidly-evolving-notice';
+import { immigrationToolkitCopy } from '@/locales/immigration-toolkit-design';
+import { translationUnavailableNotice } from '@shared/translation-unavailable-notice';
 import { ClickToCallLink } from '@/components/ui/click-to-call';
 
 export default function RaidsToolkit() {
   useScrollToTop();
   const { t, i18n } = useTranslation();
   const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
+  const locale = i18n.language?.startsWith('zh') ? 'zh' : lang;
+  const design = immigrationToolkitCopy[locale];
 
-  const breadcrumbItems = [
-    { label: t('breadcrumb.home', 'Home'), href: '/' },
-    { label: t('breadcrumb.immigrationGuidance', 'Immigration Guidance'), href: '/immigration-guidance' }
-  ];
+
 
   return (
-    <ImmigrationDetailLayout
-      title={lang === 'es' ? 'Kit de Preparación para Redadas' : 'Raids Preparedness Toolkit'}
-      subtitle={lang === 'es'
-        ? 'Recursos de preparación comunitaria y orientación específica para diferentes escenarios de encuentro con ICE. Prepárese antes de que ocurra una emergencia.'
-        : 'Community preparedness resources and scenario-specific guidance for different ICE encounters. Prepare before an emergency happens.'}
-      breadcrumbItems={breadcrumbItems}
-      icon={<BrandShieldIcon size={28} />}
-      alert={
+    <ScanFirstPageFrame mainClassName="immigration-toolkit-page">
+      <PageBreadcrumb items={[{label:design.home,href:'/'},{label:design.immigration,href:'/immigration-guidance'}]} currentPage={design.page} />
+      <header className="immigration-toolkit-hero">
+        <div>
+          <h1>{design.title}<span>{design.accent}</span></h1>
+          {locale === 'zh' && <p role="note" lang="zh" data-testid="toolkit-translation-notice">{translationUnavailableNotice(i18n.language)}</p>}
+          <p lang={lang}>{lang === 'es'
+              ? 'Recursos de preparación comunitaria y orientación específica para diferentes escenarios de encuentro con ICE. Prepárese antes de que ocurra una emergencia.'
+              : 'Community preparedness resources and scenario-specific guidance for different ICE encounters. Prepare before an emergency happens.'}</p>
+        </div>
+        <img className="immigration-toolkit-art" src="/images/design/immigration-toolkit.svg" width="260" height="240" alt="" aria-hidden="true" />
+      </header>
+      <div lang={lang} className="immigration-toolkit-notice">
         <Alert className="border-red-300 bg-red-50 dark:border-red-700 dark:bg-red-950/40">
           <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400" />
           <AlertDescription className="text-red-900 dark:text-red-200">
@@ -48,47 +52,14 @@ export default function RaidsToolkit() {
               : 'Preparation is key. Have a plan before an emergency happens. These rights apply to ALL persons in the United States.'}
           </AlertDescription>
         </Alert>
-      }
-    >
-
-      {/* Quick Links */}
-      <section className="py-8 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <a href="#scenarios" className="flex flex-col items-center gap-2 p-4 rounded-lg border hover:border-primary hover:bg-primary/5 transition-all">
-                <BrandShieldIcon size={32} />
-                <span className="text-sm font-medium text-center">
-                  {lang === 'es' ? 'Guías por Escenario' : 'Scenario Guides'}
-                </span>
-              </a>
-              <a href="#checklist" className="flex flex-col items-center gap-2 p-4 rounded-lg border hover:border-primary hover:bg-primary/5 transition-all">
-                <CheckCircle2 className="h-8 w-8 text-primary" />
-                <span className="text-sm font-medium text-center">
-                  {lang === 'es' ? 'Lista de Preparación' : 'Safety Checklist'}
-                </span>
-              </a>
-              <a href="#emergency-card" className="flex flex-col items-center gap-2 p-4 rounded-lg border hover:border-primary hover:bg-primary/5 transition-all">
-                <FileText className="h-8 w-8 text-primary" />
-                <span className="text-sm font-medium text-center">
-                  {lang === 'es' ? 'Tarjeta de Emergencia' : 'Emergency Card'}
-                </span>
-              </a>
-              <a href="/immigration-guidance/know-your-rights" className="flex flex-col items-center gap-2 p-4 rounded-lg border hover:border-primary hover:bg-primary/5 transition-all">
-                <Users className="h-8 w-8 text-primary" />
-                <span className="text-sm font-medium text-center">
-                  {lang === 'es' ? 'Tarjetas Rojas' : 'Red Cards'}
-                </span>
-              </a>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
+      </div>
+      <PageSectionNav ariaLabel={design.nav} items={[{id:'scenarios',label:design.sections[0]},{id:'checklist',label:design.sections[1]},{id:'emergency-card',label:design.sections[2]},{id:'resources',label:design.sections[3]}]} />
+      <a className="immigration-toolkit-rights" href="/immigration-guidance/know-your-rights">{design.rights}</a>
+      <RapidlyEvolvingNotice />
+      <div lang={lang}>
       {/* Scenario Guides Section */}
-      <section id="scenarios" className="py-12 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
+      <section id="scenarios" tabIndex={-1} className="immigration-toolkit-section">
+        <div className="min-w-0">
             <h2 className="text-2xl font-bold mb-2">
               {lang === 'es' ? 'Guías por Escenario' : 'Scenario Guides'}
             </h2>
@@ -97,18 +68,15 @@ export default function RaidsToolkit() {
                 ? 'Seleccione un escenario para ver instrucciones paso a paso sobre qué hacer durante un encuentro con ICE.'
                 : 'Select a scenario to see step-by-step instructions on what to do during an ICE encounter.'}
             </p>
-          </ScrollReveal>
 
-          <ScrollReveal delay={0.1}>
             <ScenarioGuide />
-          </ScrollReveal>
+
         </div>
       </section>
 
       {/* Safety Checklist Section */}
-      <section id="checklist" className="py-12 bg-background">
-        <div className="max-w-4xl mx-auto px-4">
-          <ScrollReveal>
+      <section id="checklist" tabIndex={-1} className="immigration-toolkit-section">
+        <div className="min-w-0">
             <h2 className="text-2xl font-bold mb-2">
               {lang === 'es' ? 'Lista de Preparación de Seguridad' : 'Safety Preparedness Checklist'}
             </h2>
@@ -117,18 +85,15 @@ export default function RaidsToolkit() {
                 ? 'Use esta lista interactiva para prepararse para posibles encuentros de inmigración. Su progreso se guarda en su dispositivo.'
                 : 'Use this interactive checklist to prepare for potential immigration encounters. Your progress is saved on your device.'}
             </p>
-          </ScrollReveal>
 
-          <ScrollReveal delay={0.1}>
             <SafetyChecklist />
-          </ScrollReveal>
+
         </div>
       </section>
 
       {/* Emergency Card Section */}
-      <section id="emergency-card" className="py-12 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4">
-          <ScrollReveal>
+      <section id="emergency-card" tabIndex={-1} className="immigration-toolkit-section">
+        <div className="min-w-0">
             <h2 className="text-2xl font-bold mb-2">
               {lang === 'es' ? 'Tarjeta de Contacto de Emergencia' : 'Emergency Contact Card'}
             </h2>
@@ -137,31 +102,27 @@ export default function RaidsToolkit() {
                 ? 'Cree una tarjeta personalizada con sus contactos de emergencia para tenerla a mano.'
                 : 'Create a personalized card with your emergency contacts to have ready.'}
             </p>
-          </ScrollReveal>
 
-          <ScrollReveal delay={0.1}>
             <EmergencyCard />
-          </ScrollReveal>
+
         </div>
       </section>
 
       {/* Additional Resources */}
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-2xl font-bold mb-6 text-center">
+      <section id="resources" tabIndex={-1} className="immigration-toolkit-section">
+        <div className="min-w-0">
+            <h2 className="text-2xl font-bold mb-6">
               {lang === 'es' ? 'Recursos Adicionales' : 'Additional Resources'}
             </h2>
-          </ScrollReveal>
+
 
           <div className="grid md:grid-cols-3 gap-6">
-            <ScrollReveal delay={0.1}>
-              <Card className="h-full">
+              <Card className="immigration-toolkit-resource h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
+                  <h3 className="flex items-center gap-2 text-lg">
                     <Phone className="h-5 w-5 text-primary" />
                     {lang === 'es' ? 'Líneas de Emergencia' : 'Emergency Hotlines'}
-                  </CardTitle>
+                  </h3>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div>
@@ -190,15 +151,13 @@ export default function RaidsToolkit() {
                   </div>
                 </CardContent>
               </Card>
-            </ScrollReveal>
 
-            <ScrollReveal delay={0.2}>
-              <Card className="h-full">
+              <Card className="immigration-toolkit-resource h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
+                  <h3 className="flex items-center gap-2 text-lg">
                     <FileText className="h-5 w-5 text-primary" />
                     {lang === 'es' ? 'Materiales Imprimibles' : 'Printable Materials'}
-                  </CardTitle>
+                  </h3>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <a
@@ -221,15 +180,13 @@ export default function RaidsToolkit() {
                   </a>
                 </CardContent>
               </Card>
-            </ScrollReveal>
 
-            <ScrollReveal delay={0.3}>
-              <Card className="h-full">
+              <Card className="immigration-toolkit-resource h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
+                  <h3 className="flex items-center gap-2 text-lg">
                     <ExternalLink className="h-5 w-5 text-primary" />
                     {lang === 'es' ? 'Enlaces Externos' : 'External Links'}
-                  </CardTitle>
+                  </h3>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <a
@@ -261,15 +218,14 @@ export default function RaidsToolkit() {
                   </a>
                 </CardContent>
               </Card>
-            </ScrollReveal>
+
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 bg-primary/5">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <ScrollReveal>
+      <section id="family-help" tabIndex={-1} className="immigration-toolkit-section">
+        <div className="min-w-0">
             <h2 className="text-2xl font-bold mb-4">
               {lang === 'es' ? 'Preparación Familiar' : 'Family Preparedness'}
             </h2>
@@ -278,7 +234,7 @@ export default function RaidsToolkit() {
                 ? 'Cree un plan completo para su familia, incluyendo poderes notariales y planes de cuidado de niños.'
                 : 'Create a comprehensive plan for your family, including power of attorney and childcare plans.'}
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap gap-4">
               <Button asChild size="lg">
                 <a href="/immigration-guidance/family-planning">
                   {lang === 'es' ? 'Crear Plan Familiar' : 'Create Family Plan'}
@@ -295,10 +251,11 @@ export default function RaidsToolkit() {
                 </a>
               </Button>
             </div>
-          </ScrollReveal>
+
         </div>
       </section>
 
-    </ImmigrationDetailLayout>
+    </div>
+    </ScanFirstPageFrame>
   );
 }
