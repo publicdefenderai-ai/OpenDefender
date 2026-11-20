@@ -1,199 +1,76 @@
+import "./workplace-raids.css";
 import { BrandShieldIcon } from "@/components/brand-logo";
-import { motion } from "framer-motion";
-import {
-  Building2,
-  AlertTriangle,
-  Phone,
-  FileText,
-  Shield,
-  ExternalLink
-} from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Building2, AlertTriangle, FileText } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
-import { useTranslation } from 'react-i18next';
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useTranslation } from "react-i18next";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { ImmigrationDetailLayout } from "@/components/immigration/immigration-detail-layout";
-
+import { ScanFirstPageFrame, PageSectionNav } from "@/components/layout/scan-first-page-frame";
+import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
+import { RapidlyEvolvingNotice } from "@/components/immigration/rapidly-evolving-notice";
+import { workplaceRaidsCopy } from "@/locales/workplace-raids-design";
 export default function WorkplaceRaids() {
   useScrollToTop();
   const { t, i18n } = useTranslation();
-  const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
-  
-  const breadcrumbItems = [
-    { label: t('breadcrumb.home', 'Home'), href: '/' },
-    { label: t('breadcrumb.immigrationGuidance', 'Immigration Guidance'), href: '/immigration-guidance' }
-  ];
-  
-  return (
-    <ImmigrationDetailLayout
-      title={t('immigration.raids.title')}
-      subtitle={t('immigration.raids.subtitle')}
-      breadcrumbItems={breadcrumbItems}
-      icon={<Building2 className="h-7 w-7" />}
-      alert={
-        <Alert className="border-red-300 bg-red-50 dark:border-red-700 dark:bg-red-950/40">
-          <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400" />
-          <AlertDescription className="text-red-900 dark:text-red-200" data-testid="alert-workplace-critical">
-            <strong>{t('immigration.raids.criticalAlert')}</strong> {t('immigration.raids.criticalAlertText')}
-          </AlertDescription>
-        </Alert>
-      }
-    >
-
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8">
-            <ScrollReveal>
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle data-testid="text-your-rights-title">
-                    {t('immigration.raids.yourRights.title')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="border-l-2 border-green-500 pl-4">
-                    <strong className="text-foreground">{t('immigration.raids.yourRights.silent')}</strong>
-                    <p className="text-sm text-muted-foreground">{t('immigration.raids.yourRights.silentText')}</p>
-                  </div>
-                  <div className="border-l-2 border-green-500 pl-4">
-                    <strong className="text-foreground">{t('immigration.raids.yourRights.refuse')}</strong>
-                    <p className="text-sm text-muted-foreground">{t('immigration.raids.yourRights.refuseText')}</p>
-                  </div>
-                  <div className="border-l-2 border-green-500 pl-4">
-                    <strong className="text-foreground">{t('immigration.raids.yourRights.attorney')}</strong>
-                    <p className="text-sm text-muted-foreground">{t('immigration.raids.yourRights.attorneyText')}</p>
-                  </div>
-                  <div className="border-l-2 border-green-500 pl-4">
-                    <strong className="text-foreground">{t('immigration.raids.yourRights.basis')}</strong>
-                    <p className="text-sm text-muted-foreground">{t('immigration.raids.yourRights.basisText')}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.1}>
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle data-testid="text-what-not-to-do-title">
-                    {t('immigration.raids.whatNotToDo.title')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="border-l-2 border-red-500 pl-4">
-                    <strong className="text-foreground">{t('immigration.raids.whatNotToDo.run')}</strong>
-                    <p className="text-sm text-muted-foreground">{t('immigration.raids.whatNotToDo.runText')}</p>
-                  </div>
-                  <div className="border-l-2 border-red-500 pl-4">
-                    <strong className="text-foreground">{t('immigration.raids.whatNotToDo.falseDocs')}</strong>
-                    <p className="text-sm text-muted-foreground">{t('immigration.raids.whatNotToDo.falseDocsText')}</p>
-                  </div>
-                  <div className="border-l-2 border-red-500 pl-4">
-                    <strong className="text-foreground">{t('immigration.raids.whatNotToDo.lie')}</strong>
-                    <p className="text-sm text-muted-foreground">{t('immigration.raids.whatNotToDo.lieText')}</p>
-                  </div>
-                  <div className="border-l-2 border-red-500 pl-4">
-                    <strong className="text-foreground">{t('immigration.raids.whatNotToDo.sign')}</strong>
-                    <p className="text-sm text-muted-foreground">{t('immigration.raids.whatNotToDo.signText')}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-2xl font-bold text-center mb-8" data-testid="text-employer-obligations-title">
-              {t('immigration.raids.employer.title')}
-            </h2>
-          </ScrollReveal>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <ScrollReveal delay={0.1}>
-              <Card>
-                <CardHeader>
-                  <CardTitle>
-                    {t('immigration.raids.employer.mustProvide')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
-                    <li>{t('immigration.raids.employer.must1')}</li>
-                    <li>{t('immigration.raids.employer.must2')}</li>
-                    <li>{t('immigration.raids.employer.must3')}</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <Card>
-                <CardHeader>
-                  <CardTitle>
-                    {t('immigration.raids.employer.canDo')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
-                    <li>{t('immigration.raids.employer.can1')}</li>
-                    <li>{t('immigration.raids.employer.can2')}</li>
-                    <li>{t('immigration.raids.employer.can3')}</li>
-                    <li>{t('immigration.raids.employer.can4')}</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <Card className="bg-primary/5 border-primary/20">
-              <CardHeader>
-                <CardTitle data-testid="text-after-raid-title">
-                  {t('immigration.raids.afterRaid.title')}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold mb-3">{t('immigration.raids.afterRaid.detained')}</h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
-                      <li>{t('immigration.raids.afterRaid.detained1')}</li>
-                      <li>{t('immigration.raids.afterRaid.detained2')}</li>
-                      <li>{t('immigration.raids.afterRaid.detained3')}</li>
-                      <li>{t('immigration.raids.afterRaid.detained4')}</li>
-                      <li>{t('immigration.raids.afterRaid.detained5')}</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-3">{t('immigration.raids.afterRaid.notDetained')}</h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
-                      <li>{t('immigration.raids.afterRaid.notDetained1')}</li>
-                      <li>{t('immigration.raids.afterRaid.notDetained2')}</li>
-                      <li>{t('immigration.raids.afterRaid.notDetained3')}</li>
-                      <li>{t('immigration.raids.afterRaid.notDetained4')}</li>
-                      <li>{t('immigration.raids.afterRaid.notDetained5')}</li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </ScrollReveal>
-        </div>
-      </section>
-
+  const locale = i18n.language?.startsWith("es") ? "es" : i18n.language?.startsWith("zh") ? "zh" : "en";
+  const lang = locale === "es" ? "es" : "en";
+  const copy = workplaceRaidsCopy[locale];
+  return <ScanFirstPageFrame mainClassName="workplace-page">
+    <PageBreadcrumb items={[
+      {label: copy.home, href: "/"},
+      {label: copy.immigration, href: "/immigration-guidance"}
+    ]} currentPage={t("immigration.raids.title")} />
+    <header className="workplace-hero">
+      <div><h1 data-testid="immigration-detail-title">{t("immigration.raids.title")}</h1>
+      <p data-testid="immigration-detail-subtitle">{t("immigration.raids.subtitle")}</p></div>
+      <img className="workplace-art" src="/images/design/workplace-raids.svg" width="240" height="220" alt="" aria-hidden="true" />
+    </header>
+    <Alert className="border-red-300 bg-red-50 dark:border-red-700 dark:bg-red-950/40">
+      <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400" />
+      <AlertDescription className="text-red-900 dark:text-red-200" data-testid="alert-workplace-critical">
+        <strong>{t("immigration.raids.criticalAlert")}</strong>{" "}{t("immigration.raids.criticalAlertText")}
+      </AlertDescription>
+    </Alert>
+    <PageSectionNav ariaLabel={copy.nav} items={[
+      {id: "workplace-encounter", label: copy.sections[0]},
+      {id: "workplace-employer", label: copy.sections[1]},
+      {id: "workplace-after", label: copy.sections[2]},
+      {id: "work-authorization", label: copy.sections[3]},
+      {id: "workplace-help", label: copy.sections[4]}
+    ]} />
+    <RapidlyEvolvingNotice />
+    <section id="workplace-encounter" className="workplace-section workplace-columns" tabIndex={-1}>
+      {(["yourRights", "whatNotToDo"] as const).map((group,index) => <div key={group}>
+        <h2 data-testid={index === 0 ? "text-your-rights-title" : "text-what-not-to-do-title"}>{t(`immigration.raids.${group}.title`)}</h2>
+        {(index === 0 ? ["silent","refuse","attorney","basis"] : ["run","falseDocs","lie","sign"]).map(key => <div className="workplace-item" key={key}>
+          <h3>{t(`immigration.raids.${group}.${key}`)}</h3><p>{t(`immigration.raids.${group}.${key}Text`)}</p>
+        </div>)}
+      </div>)}
+    </section>
+    <section id="workplace-employer" className="workplace-section" tabIndex={-1}>
+      <h2 data-testid="text-employer-obligations-title">{t("immigration.raids.employer.title")}</h2>
+      <div className="workplace-columns">
+        {(["must", "can"] as const).map(group => <div key={group}>
+          <h3>{t(`immigration.raids.employer.${group === "must" ? "mustProvide" : "canDo"}`)}</h3>
+          <ul>{Array.from({length: group === "must" ? 3 : 4}, (_,i) => <li key={i}>{t(`immigration.raids.employer.${group}${i+1}`)}</li>)}</ul>
+        </div>)}
+      </div>
+    </section>
+    <section id="workplace-after" className="workplace-section" tabIndex={-1}>
+      <h2 data-testid="text-after-raid-title">{t("immigration.raids.afterRaid.title")}</h2>
+      <div className="workplace-columns">
+        {(["detained", "notDetained"] as const).map(group => <div key={group}>
+          <h3>{t(`immigration.raids.afterRaid.${group}`)}</h3>
+          <ul>{[1,2,3,4,5].map(i => <li key={i}>{t(`immigration.raids.afterRaid.${group}${i}`)}</li>)}</ul>
+        </div>)}
+      </div>
+      <div className="workplace-links"><a href="/immigration-guidance/find-detained">{copy.detention}</a><a href="/immigration-guidance/family-planning">{copy.family}</a></div>
+    </section>
+    {locale === "zh" && <p className="workplace-language">{copy.englishNotice}</p>}
       {/* Work Authorization Rights Section */}
-      <section className="py-12 bg-muted/30" id="work-authorization">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-2xl font-bold mb-2 flex items-center gap-3">
+      <section className="workplace-section" id="work-authorization" tabIndex={-1} lang={locale === "zh" ? "en" : undefined}>
+        <div className="workplace-authorization">
+            <h2 className="flex items-center gap-3">
               <FileText className="h-6 w-6 text-primary" />
               {lang === 'es' ? 'Sus Derechos de Autorización de Trabajo' : 'Your Work Authorization Rights'}
             </h2>
@@ -202,19 +79,13 @@ export default function WorkplaceRaids() {
                 ? 'Conozca sus derechos si su permiso de trabajo expira, es revocado, o su empleador inicia una auditoría de I-9.'
                 : 'Know your rights if your work permit expires, is revoked, or your employer initiates an I-9 audit.'}
             </p>
-          </ScrollReveal>
-
-          <div className="grid lg:grid-cols-2 gap-6 mb-8">
-            <ScrollReveal delay={0.1}>
-              <Card className="h-full">
-                <CardHeader className="pb-3">
-                  <CardTitle className="flex items-center gap-2 text-lg">
+          <div className="workplace-columns">
+              <div className="workplace-detail">
+                  <h3>
                     <BrandShieldIcon size={20} />
                     {lang === 'es' ? 'Derechos del Trabajador' : 'Worker Rights'}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="border-l-2 border-green-500 pl-4">
+                  </h3>
+                  <div className="workplace-item">
                     <strong className="text-foreground">
                       {lang === 'es' ? 'Usted elige los documentos' : 'You choose the documents'}
                     </strong>
@@ -232,7 +103,7 @@ export default function WorkplaceRaids() {
                       {lang === 'es' ? 'USCIS I-9 Central →' : 'USCIS I-9 Central →'}
                     </a>
                   </div>
-                  <div className="border-l-2 border-green-500 pl-4">
+                  <div className="workplace-item">
                     <strong className="text-foreground">
                       {lang === 'es' ? 'Puede tener otra autorización' : 'You may still have authorization'}
                     </strong>
@@ -242,7 +113,7 @@ export default function WorkplaceRaids() {
                         : 'Even when your work permit has expired or been revoked, you might still be legally authorized to work through other means, such as a work permit renewal, temporary protections, asylum, or adjusting status to permanent residency. Before an employer fires you, you should have the chance to present other documentation.'}
                     </p>
                   </div>
-                  <div className="border-l-2 border-green-500 pl-4">
+                  <div className="workplace-item">
                     <strong className="text-foreground">
                       {lang === 'es' ? 'Protección contra represalias' : 'Anti-retaliation protection'}
                     </strong>
@@ -252,7 +123,7 @@ export default function WorkplaceRaids() {
                         : 'An employer cannot use an I-9 audit as a pretext to fire employees because they have demanded unpaid wages or exercised their workplace rights. Unscrupulous employers sometimes use internal I-9 audits to retaliate against workers who complain or take collective action.'}
                     </p>
                   </div>
-                  <div className="border-l-2 border-green-500 pl-4">
+                  <div className="workplace-item">
                     <strong className="text-foreground">
                       {lang === 'es' ? 'Derechos sindicales' : 'Union protections'}
                     </strong>
@@ -262,25 +133,17 @@ export default function WorkplaceRaids() {
                         : 'Union members may have additional rights under collective bargaining agreements. Contact your union directly for more information.'}
                     </p>
                   </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <Card className="h-full">
-                <CardHeader className="pb-3">
-                  <CardTitle className="flex items-center gap-2 text-lg">
+              </div>
+              <div className="workplace-detail">
+                  <h3>
                     <Building2 className="h-5 w-5 text-blue-600" />
                     {lang === 'es' ? 'Reverificación del I-9' : 'I-9 Reverification'}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
+                  </h3>
                   <p className="text-sm text-muted-foreground">
                     {lang === 'es'
                       ? 'Si al momento de ser contratado presentó un documento con fecha de vencimiento (como un permiso de trabajo), la ley federal requiere que su empleador verifique sus documentos nuevamente antes de que expire. Esto se llama reverificación.'
                       : 'If at the time of hire you presented a document with an expiration date (like a work permit), federal law requires your employer to check your documents again before it expires. This is called reverification.'}
                   </p>
-
                   <Alert className="bg-amber-50 border-amber-200 dark:bg-amber-950/30 dark:border-amber-800">
                     <AlertTriangle className="h-4 w-4 text-amber-600" />
                     <AlertDescription className="text-amber-800 dark:text-amber-200 text-sm">
@@ -290,7 +153,6 @@ export default function WorkplaceRaids() {
                         : 'A work permit can become invalid before its expiration date if it has been "revoked." If your permit is revoked, it can no longer be used to show work authorization, and your employer may require reverification.'}
                     </AlertDescription>
                   </Alert>
-
                   <Alert className="bg-amber-50 border-amber-200 dark:bg-amber-950/30 dark:border-amber-800">
                     <AlertTriangle className="h-4 w-4 text-amber-600" />
                     <AlertDescription className="text-amber-800 dark:text-amber-200 text-sm">
@@ -300,7 +162,6 @@ export default function WorkplaceRaids() {
                         : 'In June 2025, DHS issued specific guidance about work permit revocations for E-Verify employers, alerting them to a "Status Change Report." There have been instances of individuals being erroneously identified in this report. This guidance only applies to E-Verify employers.'}
                     </AlertDescription>
                   </Alert>
-
                   <Alert className="bg-red-50 border-red-200 dark:bg-red-950/30 dark:border-red-800">
                     <AlertTriangle className="h-4 w-4 text-red-600" />
                     <AlertDescription className="text-red-800 dark:text-red-200 text-sm">
@@ -310,12 +171,8 @@ export default function WorkplaceRaids() {
                         : 'In October 2025, USCIS eliminated the automatic work permit extension (previously up to 540 days) for people who applied to renew. Verify your current permit status with an attorney.'}
                     </AlertDescription>
                   </Alert>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
+              </div>
           </div>
-
-          <ScrollReveal delay={0.3}>
             <div className="flex flex-wrap justify-center gap-4">
               <Badge variant="outline" className="text-xs py-1 px-3">
                 {lang === 'es'
@@ -323,35 +180,16 @@ export default function WorkplaceRaids() {
                   : 'Source: NILC, "Understanding Your Rights When Losing Work Authorization" (Dec. 2025)'}
               </Badge>
             </div>
-          </ScrollReveal>
         </div>
       </section>
-
-      <section className="py-12 bg-background">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <ScrollReveal>
-            <h2 className="text-2xl font-bold mb-4">{t('immigration.raids.emergency.title')}</h2>
-            <p className="text-muted-foreground mb-6">{t('immigration.raids.emergency.subtitle')}</p>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Card>
-                <CardContent className="pt-6">
-                  <Phone className="h-6 w-6 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold">{t('immigration.raids.emergency.nilc')}</h3>
-                  <p className="text-xl font-bold text-primary mt-2">1-844-NILC-123</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="pt-6">
-                  <Phone className="h-6 w-6 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold">{t('immigration.raids.emergency.aclu')}</h3>
-                  <p className="text-xl font-bold text-primary mt-2">1-800-775-2258</p>
-                </CardContent>
-              </Card>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-    </ImmigrationDetailLayout>
-  );
+    <section id="workplace-help" className="workplace-section" tabIndex={-1}>
+      <h2>{copy.help}</h2><p>{copy.helpNote}</p>
+      <div className="workplace-resources">
+        <a href="/immigration-guidance/find-attorney">{copy.legalHelp}</a>
+        <a href="https://www.nilc.org/request-for-legal-assistance/" target="_blank" rel="noopener noreferrer">{copy.nilc}</a>
+        <a href="https://www.aclu.org/affiliates" target="_blank" rel="noopener noreferrer">{copy.aclu}</a>
+        <a href="/immigration-guidance/raids-toolkit">{copy.toolkit}</a>
+      </div>
+    </section>
+  </ScanFirstPageFrame>;
 }

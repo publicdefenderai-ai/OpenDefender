@@ -759,3 +759,21 @@ The immigration-family-content.html direction opens with the approved illustrati
 The preview predates the official caregiver-form replacement. The implementation therefore retains the current POAGenerator component unchanged: five state choices, government form and instruction links, state-specific cautions, no personal-data fields and the Chinese notice for English-only guidance. The old custom document generator is not restored. The legacy #generator link remains supported.
 
 A pre-change rendered fixture captures 46 English, 46 Spanish and 47 Chinese-session fragments, including full warnings. The release checks cover those fragments, all three disclosures, six planning steps, keyboard navigation, preservation of the selected state, image loading, print-state restoration, both themes and phone layouts. The existing caregiver-form browser spec additionally exercises all five states at desktop and 320px widths in all three interface languages. The legal text, shared form component and form data are unchanged.
+
+### Workplace Raids
+
+The approved workplace-raids-content.html supplies the building illustration and sectioned reading direction. The production refresh keeps the published title, encounter guidance, employer lists, after-raid information and work-authorization text. A five-section index replaces the long sequence of animated cards; the critical encounter alert remains near the top and the shared changing-law notice remains visible. All sections remain expanded and printable. The English/Spanish work-authorization material is explicitly marked English in Chinese sessions, with a translated availability note.
+
+The former emergency contact cards are a deliberate content-preservation exception: the unverified `1-844-NILC-123` and `1-800-775-2258` numbers are removed. NILC's official assistance page says it no longer accepts legal-assistance requests by phone and generally does not handle individual immigration cases (https://www.nilc.org/request-for-legal-assistance/). ACLU directs legal-assistance requests to local affiliates (https://www.aclu.org/about/contact-us). The replacement links describe those resources without promising immediate representation or emergency response. Sources checked November 20, 2026. This does not certify the remaining published work-authorization claims as current.
+
+A pre-change rendered fixture preserves 50 text fragments per locale plus the existing USCIS destination. The release-listed browser spec checks those fragments, both removed numbers, replacement destinations, five keyboard section jumps, one main landmark, illustration loading, the Chinese language marker, print visibility and 1280px/320px bounds across three languages and both themes. Typecheck, production build, 27 design-locale checks and six browser cases passed. Desktop/light and mobile/dark screenshots were visually inspected. No full-suite, production deployment, or legal-approval claim.
+
+### Remaining implementation inventory (November 20, 2026)
+
+- Awaiting review: Raids Preparedness Toolkit, PR 276. Workplace Raids is this batch.
+- Remaining immigration pages: DACA/TPS and After Deportation.
+- Remaining page-specific professional designs: attorney access/verification, workspace, document catalog, playbook catalog/detail and document wizard. Existing shared styling is not counted as a completed page-specific refresh.
+- Remaining developer tools: API reference, embeddable widgets and browser extensions. The Developer landing/reference page has already been refreshed.
+- Final design closeout: audit mobile navigation, light/dark appearance, keyboard paths, print surfaces and remaining empty/loading/error states across the completed routes. The How To screenshot replacement has landed. A further visual-variety pass remains a separate, deferred improvement.
+
+Legal-content and production-data work are tracked separately from this design inventory.
