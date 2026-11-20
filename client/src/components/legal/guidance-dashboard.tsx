@@ -748,9 +748,9 @@ function YourChargesSection({
                   <AlertDescription className="min-w-0">
                    <span className="font-semibold">
                      {i18n.language === 'es'
-                       ? 'Se necesita volver a seleccionar el cargo.'
+                       ? 'Se necesita confirmar la selección del cargo.'
                        : i18n.language === 'zh'
-                         ? '需要重新选择罪名。'
+                         ? '需要确认所选指控。'
                          : 'Charge selection needs to be confirmed.'}
                    </span>{' '}
                    {i18n.language === 'es'
