@@ -40022,45 +40022,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
   },
   {
-    id: 'tx-sexual-assault-in-the-first-degree',
-    name: 'Aggravated Sexual Assault',
-    code: '22.021',
-    jurisdiction: 'TX',
-    category: 'felony',
-    description: 'Sexual assault involving serious bodily injury, use of a deadly weapon, an act intended to threaten death, or a victim who is a child, elderly, or disabled under Texas Penal Code § 22.021.',
-    maxPenalty: 'Up to life imprisonment and/or substantial fines',
-    commonDefenses: ['Consent', 'Mistaken identity', 'False accusation', 'Insufficient evidence'],
-    evidenceToGather: ['Medical examination', 'DNA evidence', 'Witness statements', 'Communication records'],
-    specificRights: ['Right to privacy protection', 'Right to victim advocate', 'Right to challenge evidence'],
-    urgentActions: ['Contact attorney specializing in sex crimes', 'Preserve all evidence', 'Understand plea options']
-  },
-  {
-    id: 'tx-sexual-assault-in-the-second-degree',
-    name: 'Sexual Assault',
-    code: '22.011',
-    jurisdiction: 'TX',
-    category: 'felony',
-    description: 'Non-consensual sexual contact, or sexual contact with a person who cannot consent, under Texas Penal Code § 22.011.',
-    maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Consent', 'Mistaken identity', 'False accusation', 'Insufficient evidence'],
-    evidenceToGather: ['Medical examination', 'DNA evidence', 'Witness statements', 'Communication records'],
-    specificRights: ['Right to privacy protection', 'Right to victim advocate', 'Right to challenge evidence'],
-    urgentActions: ['Contact attorney specializing in sex crimes', 'Preserve all evidence', 'Understand plea options']
-  },
-  {
-    id: 'tx-statutory-rape',
-    name: 'Statutory Rape',
-    code: '22.011(a)(2)(A)',
-    jurisdiction: 'TX',
-    category: 'felony',
-    description: 'Sexual intercourse with minor under Texas law',
-    maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
-    commonDefenses: ['Consent', 'Mistaken identity', 'False accusation', 'Insufficient evidence'],
-    evidenceToGather: ['Medical examination', 'DNA evidence', 'Witness statements', 'Communication records'],
-    specificRights: ['Right to privacy protection', 'Right to victim advocate', 'Right to challenge evidence'],
-    urgentActions: ['Contact attorney specializing in sex crimes', 'Preserve all evidence', 'Understand plea options']
-  },
-  {
     id: 'tx-child-sexual-abuse',
     name: 'Child Sexual Abuse',
     code: '21.11',
@@ -94693,7 +94654,6 @@ export const NY_THIRD_DEGREE_POSSESSION_ID = 'ny-possession-of-controlled-substa
 export const TEXAS_CANONICAL_TITLES: Record<string, string> = {
   "tx-involuntary-manslaughter": "Manslaughter",
   "tx-vehicular-homicide": "Intoxication Manslaughter",
-  "tx-statutory-rape": "Sexual Assault",
   "tx-sexual-exploitation-of-minor": "Sexual Performance by a Child",
   "tx-identity-theft": "Fraudulent Use or Possession of Identifying Information",
   "tx-auto-burglary": "Burglary of Vehicles",
@@ -94906,6 +94866,10 @@ for (const group of ["Violent Crimes", "Assault Crimes"]) {
 for (const group of ["DUI & Traffic", "DUI/Traffic Crimes"]) {
   const ids = texasReviewedRecords.filter(row => ["49.045", "49.07", "49.08"].includes(row.references[0].section)).map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
+}
+for (const group of ["Violent Crimes", "Sexual Offenses"]) {
+  const ids = texasReviewedRecords.filter(row => ["21.11", "22.011", "22.021"].includes(row.references[0].section)).map(row => row.id);
+  chargeCategories[group] = [...new Set([...(chargeCategories[group] ?? []), ...ids])];
 }
 for (const group of ["Weapons", "Public Order"]) {
   const ids = texasReviewedRecords.filter(row => ["46.04", "46.041", "46.10", "38.11"].includes(row.references[0].section)).map(row => row.id);
