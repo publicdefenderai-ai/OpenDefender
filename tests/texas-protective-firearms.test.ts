@@ -1,3 +1,4 @@
+import transition from "../scripts/data-review/output/texas-protective-duration-transition.json";
 import { createHash } from "node:crypto";
 import { expect, it } from "vitest";
 import rows from "../shared/texas-protective-firearms.json";
@@ -53,4 +54,30 @@ it("rebuilds individually supported identities and fails closed on altered or mi
     expect(resolveGuidanceCharge({id:r.id,name:r.name,code:r.code,classification:r.category},"TX")).toMatchObject({id:r.id});
     if (r.id.startsWith("tx-pc-")) expect(resolveGuidanceCharge({name:r.name,code:r.code,classification:r.category},"TX")).toBeUndefined();
   }
+});
+
+it("preserves the three event-based duration rules and Chapter 7B precedence", () => {
+  const source=evidence["FA:85.025"].text;
+  expect(source).toContain("final decree of dissolution of the marriage is approved and signed");
+  expect(source).toContain("final order in the suit is rendered");
+  expect(source).toContain("final disposition of the criminal case");
+  for (const id of ["dissolution-order", "family-order"]) {
+    const r=rows.find(row=>row.id.endsWith(id))!;
+    for (const part of ["Under (a-2)", "Under (a-3)", "Under (a-4)", "applicant’s family or household", "Penal Code Title 5", "§25.11", "not from issuance", "orders rendered on or after September 1, 2025"])
+      expect(r.conduct).toContain(part);
+    expect(getChargeById(r.id)!.description).toBe(r.conduct);
+  }
+  const chapter=rows.find(r=>r.id.endsWith("chapter7b-order"))!;
+  expect(chapter.conduct).toContain("(a-2), (a-3) and (a-4)");
+  expect(chapter.conduct).toContain("must not replace article 7B.007’s controlling duration rules");
+});
+it("binds the official rendition-date applicability rather than automatically extending older orders", () => {
+  expect(createHash("sha256").update(transition.text).digest("hex")).toBe(transition.textSha256);
+  for (const span of transition.spans) {
+    expect(transition.text.slice(span.start,span.end)).toBe(span.text);
+    expect(createHash("sha256").update(span.text).digest("hex")).toBe(span.sha256);
+  }
+  expect(transition.spans.find(s=>s.section==="11")!.text).toContain("apply only to a protective order rendered on or after");
+  expect(transition.spans.find(s=>s.section==="11")!.text).toContain("law in effect on the date the order is rendered");
+  expect(transition.spans.find(s=>s.section==="12")!.text).toContain("September 1, 2025");
 });
