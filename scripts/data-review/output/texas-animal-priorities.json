@@ -1,0 +1,31 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "year": 2025,
+  "statewideAdult": 831210,
+  "statewideJuvenile": 44782,
+  "eligibleCodes": 2378,
+  "excludedCodes": 57,
+  "excludedAdult": 71549,
+  "rows": [
+    {
+      "rank": 98,
+      "code": "73990643",
+      "label": "CRUELTY NON-LVSTK:FAIL PRV/ABDN/TRNSPT/BI/OVWK",
+      "law": "PC",
+      "citation": "42.092(c)",
+      "adult": 1128,
+      "juvenile": 4
+    },
+    {
+      "rank": 138,
+      "code": "72010001",
+      "label": "CRUELTY NON-LIVESTK ANIM:KILL/POISON/SBI",
+      "law": "PC",
+      "citation": "42.092(c-1)",
+      "adult": 583,
+      "juvenile": 12
+    }
+  ]
+}

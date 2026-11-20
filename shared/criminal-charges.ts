@@ -94872,7 +94872,7 @@ for (const group of ["Violent Crimes", "Sexual Offenses"]) {
   chargeCategories[group] = [...new Set([...(chargeCategories[group] ?? []), ...ids])];
 }
 for (const group of ["Public Order"]) {
-  const ids = texasReviewedRecords.filter(row => ["42.07", "42.072", "33.07"].includes(row.references[0].section)).map(row => row.id);
+  const ids = texasReviewedRecords.filter(row => ["42.07", "42.072", "33.07", "42.09", "42.091", "42.092"].includes(row.references[0].section)).map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
 for (const group of ["Weapons", "Public Order"]) {

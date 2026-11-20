@@ -1,0 +1,31 @@
+{
+  "sourceUrl": "https://capitol.texas.gov/tlodocs/89R/billtext/html/HB00285F.htm",
+  "retrievedAt": "2026-11-20T17:20:19.583040+00:00",
+  "htmlSha256": "51a2ce345da27fab28ea41c0b9a80b233cabb16a4b74bae2b90e11677e84aebe",
+  "normalization": "HTML text data joined, whitespace collapsed; enrolled amendment brackets retained",
+  "text": "89(R) HB 285 - Enrolled version - Bill Text td { font-family: Courier, Arial, sans-serif; font-size: 10pt; } table { empty-cells:show; } H.B. No. 285 AN ACT relating to the prosecution of the offense of cruelty to nonlivestock animals. BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF TEXAS: SECTION 1. Section 42.092, Penal Code, is amended by amending Subsection (b) and adding Subsection (d-1) to read as follows: (b) A person commits an offense if the person intentionally, knowingly, [ or ] recklessly , or with criminal negligence : (1) tortures an animal or in a cruel manner kills or causes serious bodily injury to an animal; (2) without the owner's effective consent, kills, administers poison to, or causes serious bodily injury to an animal; (3) fails unreasonably to provide necessary food, water, care, or shelter for an animal in the person's custody; (4) abandons unreasonably an animal in the person's custody; (5) transports or confines an animal in a cruel manner; (6) without the owner's effective consent, causes bodily injury to an animal; (7) causes one animal to fight with another animal, if either animal is not a dog; (8) uses a live animal as a lure in dog race training or in dog coursing on a racetrack; or (9) seriously overworks an animal. (d-1) It is a defense to prosecution for alleged criminal negligence that the conduct occurred during the actual discharge of the actor's duties while employed as a veterinarian licensed under Chapter 801, Occupations Code, or as a person assisting the veterinarian. SECTION 2. The change in law made by this Act applies only to an offense committed on or after the effective date of this Act. An offense committed before the effective date of this Act is governed by the law in effect on the date the offense was committed, and the former law is continued in effect for that purpose. For purposes of this section, an offense was committed before the effective date of this Act if any element of the offense occurred before that date. SECTION 3. This Act takes effect September 1, 2025. ______________________________ ______________________________ President of the Senate Speaker of the House I certify that H.B. No. 285 was passed by the House on May 2, 2025, by the following vote: Yeas 125, Nays 5, 2 present, not voting. ______________________________ Chief Clerk of the House I certify that H.B. No. 285 was passed by the Senate on May 23, 2025, by the following vote: Yeas 31, Nays 0. ______________________________ Secretary of the Senate APPROVED: _____________________ Date _____________________ Governor",
+  "textSha256": "64778ce32cfd0a1c307a96624df221aeb093e39b6faf510b55a49c77bfb9a99c",
+  "spans": [
+    {
+      "section": "1",
+      "start": 292,
+      "end": 1539,
+      "text": "SECTION 1. Section 42.092, Penal Code, is amended by amending Subsection (b) and adding Subsection (d-1) to read as follows: (b) A person commits an offense if the person intentionally, knowingly, [ or ] recklessly , or with criminal negligence : (1) tortures an animal or in a cruel manner kills or causes serious bodily injury to an animal; (2) without the owner's effective consent, kills, administers poison to, or causes serious bodily injury to an animal; (3) fails unreasonably to provide necessary food, water, care, or shelter for an animal in the person's custody; (4) abandons unreasonably an animal in the person's custody; (5) transports or confines an animal in a cruel manner; (6) without the owner's effective consent, causes bodily injury to an animal; (7) causes one animal to fight with another animal, if either animal is not a dog; (8) uses a live animal as a lure in dog race training or in dog coursing on a racetrack; or (9) seriously overworks an animal. (d-1) It is a defense to prosecution for alleged criminal negligence that the conduct occurred during the actual discharge of the actor's duties while employed as a veterinarian licensed under Chapter 801, Occupations Code, or as a person assisting the veterinarian. ",
+      "sha256": "54f7f5343e8aee22cda2d95fbf2e801960e030f79d0c8b3d29fd77d0ea01f8a0"
+    },
+    {
+      "section": "2",
+      "start": 1539,
+      "end": 2007,
+      "text": "SECTION 2. The change in law made by this Act applies only to an offense committed on or after the effective date of this Act. An offense committed before the effective date of this Act is governed by the law in effect on the date the offense was committed, and the former law is continued in effect for that purpose. For purposes of this section, an offense was committed before the effective date of this Act if any element of the offense occurred before that date. ",
+      "sha256": "71e8561f3b9ed931d264bb1fc2ca074c12b2d1e364b246d362c6a26b4bc024f3"
+    },
+    {
+      "section": "3",
+      "start": 2007,
+      "end": 2586,
+      "text": "SECTION 3. This Act takes effect September 1, 2025. ______________________________ ______________________________ President of the Senate Speaker of the House I certify that H.B. No. 285 was passed by the House on May 2, 2025, by the following vote: Yeas 125, Nays 5, 2 present, not voting. ______________________________ Chief Clerk of the House I certify that H.B. No. 285 was passed by the Senate on May 23, 2025, by the following vote: Yeas 31, Nays 0. ______________________________ Secretary of the Senate APPROVED: _____________________ Date _____________________ Governor",
+      "sha256": "48de1f8053e8915bf71427b9e28f03ce40c950241f186ee6fbe9d4a063c481a4"
+    }
+  ]
+}
