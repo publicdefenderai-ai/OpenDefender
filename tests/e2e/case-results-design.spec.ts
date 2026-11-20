@@ -357,7 +357,7 @@ test('Ohio restore withholds the saved narrative during verification and restore
   await expect(screen.getByRole('status')).toBeVisible();
   await expect(screen).not.toContainText(guidance.overview);
   releaseCheck();
-  await expect(screen.getByRole('status')).toContainText('Se necesita volver a seleccionar el cargo');
+  await expect(screen.getByRole('status')).toContainText('Se necesita confirmar la selección del cargo');
   available = true;
   await screen.getByRole('button', { name: 'Volver a comprobar los cargos de Ohio' }).click();
   await expect(screen).toContainText(guidance.overview);

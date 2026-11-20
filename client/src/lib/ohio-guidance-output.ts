@@ -15,8 +15,8 @@ export function requiresOhioChargeConfirmation(plan: SavedPlan) {
 }
 
 export function ohioReselectionNotice(language: string) {
-  if (language.startsWith("es")) return "Se necesita volver a seleccionar el cargo. Confirme el cargo en la lista actual de Ohio antes de imprimir o exportar la hoja de ruta.";
-  if (language.startsWith("zh")) return "需要重新选择罪名。请先在俄亥俄州当前罪名列表中确认罪名，再打印或导出案件路线图。";
+  if (language.startsWith("es")) return "Se necesita confirmar la selección del cargo. Confirme el cargo en la lista actual de Ohio antes de imprimir o exportar la hoja de ruta.";
+  if (language.startsWith("zh")) return "需要确认所选指控。请先在俄亥俄州当前罪名列表中确认罪名，再打印或导出案件路线图。";
   return "Charge selection needs to be confirmed. Confirm the charge in the current Ohio list before printing or exporting the roadmap.";
 }
 

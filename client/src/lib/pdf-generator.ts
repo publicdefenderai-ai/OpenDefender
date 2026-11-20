@@ -332,7 +332,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     /** Shown before charge explanations whose translation is machine-assisted and not yet reviewed */
     translationDraftWarning: '⚠ Traducción provisional: Esta traducción fue generada automáticamente y aún no ha sido revisada por un profesional legal bilingüe. Verifique términos críticos con su abogado.',
      jurisdictionCoverageWarning: '⚠ Detalle específico del estado aún no verificado: Esta es información general sobre el cargo. Pida a un abogado autorizado que confirme la regla, los plazos y las penas de su caso.',
-     chargeReselectionWarning: '⚠ Se necesita volver a seleccionar el cargo: este registro histórico no coincide con un cargo de California verificable. Seleccione el cargo exacto de la lista actual o pida ayuda a un abogado.',
+     chargeReselectionWarning: '⚠ Se necesita confirmar la selección del cargo: este registro histórico no coincide con un cargo de California verificable. Seleccione el cargo exacto de la lista actual o pida ayuda a un abogado.',
   } : {
     title: 'Your Case Roadmap',
     generated: 'Generated',
@@ -411,7 +411,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     ? '⚠ 州级具体信息尚未核实：这是一般性的罪名信息。请向持牌律师确认您案件适用的规则、期限和刑罚。'
     : labels.jurisdictionCoverageWarning;
   const chargeReselectionWarningLocalized: string = isChinese
-    ? '⚠ 需要重新选择罪名：此历史记录无法与可核实的加州罪名匹配。请从当前列表中选择确切罪名，或向律师寻求帮助。'
+    ? '⚠ 需要确认所选指控：此历史记录无法与可核实的加州罪名匹配。请从当前列表中选择确切罪名，或向律师寻求帮助。'
     : labels.chargeReselectionWarning;
   const disclosureFooter = isChinese
     ? '一般教育信息；并非法律建议。内容可能不完整、属于估算、已过时或由AI生成。请核实截止日期和引证。'

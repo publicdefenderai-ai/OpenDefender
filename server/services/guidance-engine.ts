@@ -787,7 +787,7 @@ function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any
   }
   
   if (caseData.hasAttorney === false) {
-    alerts.push('Counsel can assist with early proceedings, including release issues. For people who need representation, court information explains appointed-counsel eligibility and application procedures.');
+    alerts.push('Counsel can assist with early proceedings, including release issues. Court information explains eligibility and application procedures for appointed counsel, which may be a public defender or another assigned lawyer.');
   }
   
   // Add charge-specific critical alerts
@@ -978,7 +978,7 @@ function buildNextSteps(caseData: CaseData, stageData: any): string[] {
       steps.push(
         'Legal representation options and applicable appointed-counsel procedures',
         'Notify family/employer of situation',
-        'Gather bail money and documentation',
+        'Release conditions, any financial requirements, and documents considered in the court process',
         'Prepare for arraignment hearing'
       );
       break;
