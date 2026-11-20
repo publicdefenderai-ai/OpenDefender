@@ -2,6 +2,12 @@
 
 This candidate adds 27 individually scoped choices and corrects three existing identities without replacing their saved meaning. The retained 2025 DPS priorities are rank 69, code 36010005 (1,886 adult arrests); rank 71, code 11990002 (1,831); and rank 75, code 11990004 (1,592). The combined 5,309 represents adult arrests, not convictions, unique people or counts for each statutory subdivision.
 
+## Conduct-date limitation for the 25-year minimum
+
+H.B. 1422 (2025), §§21, 23(a) and 24, changes §22.021(f)(1) from younger than six to younger than 10 only for offenses committed on or after September 1, 2025. Under its transition clause, an offense is earlier if any element occurred before that date. Earlier conduct is governed by its then-applicable law, not the charging or trial date; the immediately preceding version used younger than six. For ages six through nine in that preceding version, age alone did not impose the 25-year minimum; the ordinary first-degree range was five to 99 years or life, unless (f)(2) or another applicable punishment rule required more. The distinct (f)(2) under-14/additional-aggravator rule is preserved.
+
+The five under-10 rows and general aggravated-sexual-assault record put this qualification beside their penalty. The retained enrolled-bill artifact independently binds §§21,23,24 with exact text offsets/hashes. No existing source acquisition dates, receipt dates or manifest timestamp change.
+
 ## Records
 
 | Reviewed identity | Conduct reference | Ordinary punishment profile |
@@ -15,23 +21,23 @@ This candidate adds 27 individually scoped choices and corrects three existing i
 | Sexual assault (child: child anus contacting another person) (`tx-pc-22-011-d`) | Tex. Penal Code § 22.011(a)(2)(D) | Second-degree felony |
 | Sexual assault (child: child mouth contacting another person) (`tx-pc-22-011-e`) | Tex. Penal Code § 22.011(a)(2)(E) | Second-degree felony |
 | Aggravated sexual assault (penetration of anus or sexual organ; victim aged 10 to 13 without additional aggravator) (`tx-pc-22-021-a-age10-13`) | Tex. Penal Code § 22.021(a)(1)(B)(i) | First-degree felony |
-| Aggravated sexual assault (penetration of anus or sexual organ; victim younger than 10) (`tx-pc-22-021-a-under10`) | Tex. Penal Code § 22.021(a)(1)(B)(i) | First-degree felony with a 25-year minimum under §22.021(f) |
+| Aggravated sexual assault (penetration of anus or sexual organ; victim younger than 10) (`tx-pc-22-021-a-under10`) | Tex. Penal Code § 22.021(a)(1)(B)(i) | First-degree felony with a 25-year minimum under §22.021(f)(1), subject to September 1, 2025 transition above |
 | Aggravated sexual assault (penetration of anus or sexual organ; victim younger than 14 with additional aggravator) (`tx-pc-22-021-a-under14-extra`) | Tex. Penal Code § 22.021(a)(1)(B)(i) | First-degree felony with a 25-year minimum under §22.021(f) |
 | Aggravated sexual assault (penetration of anus or sexual organ; victim aged 14 to 16 with additional aggravator) (`tx-pc-22-021-a-age14-16-extra`) | Tex. Penal Code § 22.021(a)(1)(B)(i) | First-degree felony |
 | Aggravated sexual assault (penetration of mouth by actor’s sexual organ; victim aged 10 to 13 without additional aggravator) (`tx-pc-22-021-b-age10-13`) | Tex. Penal Code § 22.021(a)(1)(B)(ii) | First-degree felony |
-| Aggravated sexual assault (penetration of mouth by actor’s sexual organ; victim younger than 10) (`tx-pc-22-021-b-under10`) | Tex. Penal Code § 22.021(a)(1)(B)(ii) | First-degree felony with a 25-year minimum under §22.021(f) |
+| Aggravated sexual assault (penetration of mouth by actor’s sexual organ; victim younger than 10) (`tx-pc-22-021-b-under10`) | Tex. Penal Code § 22.021(a)(1)(B)(ii) | First-degree felony with a 25-year minimum under §22.021(f)(1), subject to September 1, 2025 transition above |
 | Aggravated sexual assault (penetration of mouth by actor’s sexual organ; victim younger than 14 with additional aggravator) (`tx-pc-22-021-b-under14-extra`) | Tex. Penal Code § 22.021(a)(1)(B)(ii) | First-degree felony with a 25-year minimum under §22.021(f) |
 | Aggravated sexual assault (penetration of mouth by actor’s sexual organ; victim aged 14 to 16 with additional aggravator) (`tx-pc-22-021-b-age14-16-extra`) | Tex. Penal Code § 22.021(a)(1)(B)(ii) | First-degree felony |
 | Aggravated sexual assault (child sexual organ contacting another person; victim aged 10 to 13 without additional aggravator) (`tx-pc-22-021-c-age10-13`) | Tex. Penal Code § 22.021(a)(1)(B)(iii) | First-degree felony |
-| Aggravated sexual assault (child sexual organ contacting another person; victim younger than 10) (`tx-pc-22-021-c-under10`) | Tex. Penal Code § 22.021(a)(1)(B)(iii) | First-degree felony with a 25-year minimum under §22.021(f) |
+| Aggravated sexual assault (child sexual organ contacting another person; victim younger than 10) (`tx-pc-22-021-c-under10`) | Tex. Penal Code § 22.021(a)(1)(B)(iii) | First-degree felony with a 25-year minimum under §22.021(f)(1), subject to September 1, 2025 transition above |
 | Aggravated sexual assault (child sexual organ contacting another person; victim younger than 14 with additional aggravator) (`tx-pc-22-021-c-under14-extra`) | Tex. Penal Code § 22.021(a)(1)(B)(iii) | First-degree felony with a 25-year minimum under §22.021(f) |
 | Aggravated sexual assault (child sexual organ contacting another person; victim aged 14 to 16 with additional aggravator) (`tx-pc-22-021-c-age14-16-extra`) | Tex. Penal Code § 22.021(a)(1)(B)(iii) | First-degree felony |
 | Aggravated sexual assault (child anus contacting another person; victim aged 10 to 13 without additional aggravator) (`tx-pc-22-021-d-age10-13`) | Tex. Penal Code § 22.021(a)(1)(B)(iv) | First-degree felony |
-| Aggravated sexual assault (child anus contacting another person; victim younger than 10) (`tx-pc-22-021-d-under10`) | Tex. Penal Code § 22.021(a)(1)(B)(iv) | First-degree felony with a 25-year minimum under §22.021(f) |
+| Aggravated sexual assault (child anus contacting another person; victim younger than 10) (`tx-pc-22-021-d-under10`) | Tex. Penal Code § 22.021(a)(1)(B)(iv) | First-degree felony with a 25-year minimum under §22.021(f)(1), subject to September 1, 2025 transition above |
 | Aggravated sexual assault (child anus contacting another person; victim younger than 14 with additional aggravator) (`tx-pc-22-021-d-under14-extra`) | Tex. Penal Code § 22.021(a)(1)(B)(iv) | First-degree felony with a 25-year minimum under §22.021(f) |
 | Aggravated sexual assault (child anus contacting another person; victim aged 14 to 16 with additional aggravator) (`tx-pc-22-021-d-age14-16-extra`) | Tex. Penal Code § 22.021(a)(1)(B)(iv) | First-degree felony |
 | Aggravated sexual assault (child mouth contacting another person; victim aged 10 to 13 without additional aggravator) (`tx-pc-22-021-e-age10-13`) | Tex. Penal Code § 22.021(a)(1)(B)(v) | First-degree felony |
-| Aggravated sexual assault (child mouth contacting another person; victim younger than 10) (`tx-pc-22-021-e-under10`) | Tex. Penal Code § 22.021(a)(1)(B)(v) | First-degree felony with a 25-year minimum under §22.021(f) |
+| Aggravated sexual assault (child mouth contacting another person; victim younger than 10) (`tx-pc-22-021-e-under10`) | Tex. Penal Code § 22.021(a)(1)(B)(v) | First-degree felony with a 25-year minimum under §22.021(f)(1), subject to September 1, 2025 transition above |
 | Aggravated sexual assault (child mouth contacting another person; victim younger than 14 with additional aggravator) (`tx-pc-22-021-e-under14-extra`) | Tex. Penal Code § 22.021(a)(1)(B)(v) | First-degree felony with a 25-year minimum under §22.021(f) |
 | Aggravated sexual assault (child mouth contacting another person; victim aged 14 to 16 with additional aggravator) (`tx-pc-22-021-e-age14-16-extra`) | Tex. Penal Code § 22.021(a)(1)(B)(v) | First-degree felony |
 | Sexual Assault (`tx-sexual-assault-in-the-second-degree`) | Tex. Penal Code § 22.011 | Second-degree felony |
