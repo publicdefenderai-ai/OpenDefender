@@ -1,0 +1,2756 @@
+[
+  {
+    "id": "tx-pc-21-07-intercourse",
+    "name": "Public lewdness (intercourse; ordinary)",
+    "officialTitle": "PUBLIC LEWDNESS.",
+    "category": "misdemeanor",
+    "code": "21.07(a)(1)",
+    "citation": "Tex. Penal Code § 21.07(a)(1)",
+    "conduct": "Knowingly engaging in sexual intercourse: penetration of the female sex organ by the male sex organ, under the statutory definition. The act must occur in a public place or, if not public, the actor must be reckless about whether another person is present who will be offended or alarmed. Private consensual conduct without that statutory circumstance is not automatically public lewdness. A public place is one to which the public or a substantial group has access. This ordinary branch excludes an actor civilly committed as a sexually violent predator under Chapter 841, for whom §21.07(b) provides third-degree grading.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The civil-commitment enhancement applies to conduct on or after September 1, 2023; if any element occurred before that date, the then-applicable law governs. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.07",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.07",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "21.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-21-07-intercourse-svp",
+    "name": "Public lewdness (intercourse; civilly committed SVP)",
+    "officialTitle": "PUBLIC LEWDNESS.",
+    "category": "felony",
+    "code": "21.07(a)(1)",
+    "citation": "Tex. Penal Code § 21.07(a)(1)",
+    "conduct": "Knowingly engaging in sexual intercourse: penetration of the female sex organ by the male sex organ, under the statutory definition. The act must occur in a public place or, if not public, the actor must be reckless about whether another person is present who will be offended or alarmed. Private consensual conduct without that statutory circumstance is not automatically public lewdness. A public place is one to which the public or a substantial group has access. This branch requires that the actor be civilly committed as a sexually violent predator under Health and Safety Code Chapter 841; a label, diagnosis or registration status alone does not establish civil commitment.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The civil-commitment enhancement applies to conduct on or after September 1, 2023; if any element occurred before that date, the then-applicable law governs. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.07",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.07",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "21.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-21-07-deviate-intercourse",
+    "name": "Public lewdness (deviate intercourse; ordinary)",
+    "officialTitle": "PUBLIC LEWDNESS.",
+    "category": "misdemeanor",
+    "code": "21.07(a)(2)",
+    "citation": "Tex. Penal Code § 21.07(a)(2)",
+    "conduct": "Knowingly engaging in deviate sexual intercourse: the defined genital-to-mouth/anus contact or penetration of another person’s genitals/anus with an object. The act must occur in a public place or, if not public, the actor must be reckless about whether another person is present who will be offended or alarmed. Private consensual conduct without that statutory circumstance is not automatically public lewdness. A public place is one to which the public or a substantial group has access. This ordinary branch excludes an actor civilly committed as a sexually violent predator under Chapter 841, for whom §21.07(b) provides third-degree grading.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The civil-commitment enhancement applies to conduct on or after September 1, 2023; if any element occurred before that date, the then-applicable law governs. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.07",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.07",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "21.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-21-07-deviate-intercourse-svp",
+    "name": "Public lewdness (deviate intercourse; civilly committed SVP)",
+    "officialTitle": "PUBLIC LEWDNESS.",
+    "category": "felony",
+    "code": "21.07(a)(2)",
+    "citation": "Tex. Penal Code § 21.07(a)(2)",
+    "conduct": "Knowingly engaging in deviate sexual intercourse: the defined genital-to-mouth/anus contact or penetration of another person’s genitals/anus with an object. The act must occur in a public place or, if not public, the actor must be reckless about whether another person is present who will be offended or alarmed. Private consensual conduct without that statutory circumstance is not automatically public lewdness. A public place is one to which the public or a substantial group has access. This branch requires that the actor be civilly committed as a sexually violent predator under Health and Safety Code Chapter 841; a label, diagnosis or registration status alone does not establish civil commitment.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The civil-commitment enhancement applies to conduct on or after September 1, 2023; if any element occurred before that date, the then-applicable law governs. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.07",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.07",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "21.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-21-07-sexual-contact",
+    "name": "Public lewdness (sexual contact; ordinary)",
+    "officialTitle": "PUBLIC LEWDNESS.",
+    "category": "misdemeanor",
+    "code": "21.07(a)(3)",
+    "citation": "Tex. Penal Code § 21.07(a)(3)",
+    "conduct": "Knowingly engaging in sexual contact: touching another person’s anus, breast or genitals with intent to arouse or gratify any person’s sexual desire. The act must occur in a public place or, if not public, the actor must be reckless about whether another person is present who will be offended or alarmed. Private consensual conduct without that statutory circumstance is not automatically public lewdness. A public place is one to which the public or a substantial group has access. This ordinary branch excludes an actor civilly committed as a sexually violent predator under Chapter 841, for whom §21.07(b) provides third-degree grading.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The civil-commitment enhancement applies to conduct on or after September 1, 2023; if any element occurred before that date, the then-applicable law governs. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.07",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.07",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "21.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-21-07-sexual-contact-svp",
+    "name": "Public lewdness (sexual contact; civilly committed SVP)",
+    "officialTitle": "PUBLIC LEWDNESS.",
+    "category": "felony",
+    "code": "21.07(a)(3)",
+    "citation": "Tex. Penal Code § 21.07(a)(3)",
+    "conduct": "Knowingly engaging in sexual contact: touching another person’s anus, breast or genitals with intent to arouse or gratify any person’s sexual desire. The act must occur in a public place or, if not public, the actor must be reckless about whether another person is present who will be offended or alarmed. Private consensual conduct without that statutory circumstance is not automatically public lewdness. A public place is one to which the public or a substantial group has access. This branch requires that the actor be civilly committed as a sexually violent predator under Health and Safety Code Chapter 841; a label, diagnosis or registration status alone does not establish civil commitment.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The civil-commitment enhancement applies to conduct on or after September 1, 2023; if any element occurred before that date, the then-applicable law governs. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.07",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.07",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "21.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-21-08-anus-ordinary",
+    "name": "Indecent exposure (anus; ordinary)",
+    "officialTitle": "INDECENT EXPOSURE.",
+    "category": "misdemeanor",
+    "code": "21.08(a)",
+    "citation": "Tex. Penal Code § 21.08(a)",
+    "conduct": "Exposing the anus with intent to arouse or gratify any person’s sexual desire, while reckless about whether another person is present who will be offended or alarmed. Mere nudity, or exposure without both the specific intent and recklessness, does not by itself establish this offense. A public place is not a statutory requirement. This ordinary branch has no prior §21.08 conviction and excludes a civilly committed sexually violent predator.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. The one-prior and two-or-more-prior grades (H.B. 1730) and the civil-commitment grade (S.B. 1179) apply to offenses committed on or after September 1, 2023. S.B. 1610 reenacted the combined text effective September 1, 2025. If any element occurred before September 1, 2023, earlier law governs; the charging date alone does not determine the applicable grade. A second §21.08 violation is a reportable conviction under Code of Criminal Procedure article 62.001(5)(F), except if that second violation results in deferred adjudication; registration duties and duration require the applicable Chapter 62 analysis. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": "(5)(F)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "36150001"
+  },
+  {
+    "id": "tx-pc-21-08-anus-one-prior",
+    "name": "Indecent exposure (anus; one prior)",
+    "officialTitle": "INDECENT EXPOSURE.",
+    "category": "misdemeanor",
+    "code": "21.08(a)",
+    "citation": "Tex. Penal Code § 21.08(a)",
+    "conduct": "Exposing the anus with intent to arouse or gratify any person’s sexual desire, while reckless about whether another person is present who will be offended or alarmed. Mere nudity, or exposure without both the specific intent and recklessness, does not by itself establish this offense. A public place is not a statutory requirement. This branch requires exactly one previous conviction under §21.08 and excludes a civilly committed sexually violent predator.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The one-prior and two-or-more-prior grades (H.B. 1730) and the civil-commitment grade (S.B. 1179) apply to offenses committed on or after September 1, 2023. S.B. 1610 reenacted the combined text effective September 1, 2025. If any element occurred before September 1, 2023, earlier law governs; the charging date alone does not determine the applicable grade. A second §21.08 violation is a reportable conviction under Code of Criminal Procedure article 62.001(5)(F), except if that second violation results in deferred adjudication; registration duties and duration require the applicable Chapter 62 analysis. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": "(5)(F)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-21-08-anus-two-priors",
+    "name": "Indecent exposure (anus; two priors)",
+    "officialTitle": "INDECENT EXPOSURE.",
+    "category": "felony",
+    "code": "21.08(a)",
+    "citation": "Tex. Penal Code § 21.08(a)",
+    "conduct": "Exposing the anus with intent to arouse or gratify any person’s sexual desire, while reckless about whether another person is present who will be offended or alarmed. Mere nudity, or exposure without both the specific intent and recklessness, does not by itself establish this offense. A public place is not a statutory requirement. This branch requires two or more previous convictions under §21.08 and excludes a civilly committed sexually violent predator.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The one-prior and two-or-more-prior grades (H.B. 1730) and the civil-commitment grade (S.B. 1179) apply to offenses committed on or after September 1, 2023. S.B. 1610 reenacted the combined text effective September 1, 2025. If any element occurred before September 1, 2023, earlier law governs; the charging date alone does not determine the applicable grade. A second §21.08 violation is a reportable conviction under Code of Criminal Procedure article 62.001(5)(F), except if that second violation results in deferred adjudication; registration duties and duration require the applicable Chapter 62 analysis. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": "(5)(F)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-21-08-anus-svp",
+    "name": "Indecent exposure (anus; svp)",
+    "officialTitle": "INDECENT EXPOSURE.",
+    "category": "felony",
+    "code": "21.08(a)",
+    "citation": "Tex. Penal Code § 21.08(a)",
+    "conduct": "Exposing the anus with intent to arouse or gratify any person’s sexual desire, while reckless about whether another person is present who will be offended or alarmed. Mere nudity, or exposure without both the specific intent and recklessness, does not by itself establish this offense. A public place is not a statutory requirement. This branch requires civil commitment as a sexually violent predator under Health and Safety Code Chapter 841, not merely registration status, a diagnosis or an allegation.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The one-prior and two-or-more-prior grades (H.B. 1730) and the civil-commitment grade (S.B. 1179) apply to offenses committed on or after September 1, 2023. S.B. 1610 reenacted the combined text effective September 1, 2025. If any element occurred before September 1, 2023, earlier law governs; the charging date alone does not determine the applicable grade. A second §21.08 violation is a reportable conviction under Code of Criminal Procedure article 62.001(5)(F), except if that second violation results in deferred adjudication; registration duties and duration require the applicable Chapter 62 analysis. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": "(5)(F)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-21-08-genitals-ordinary",
+    "name": "Indecent exposure (genitals; ordinary)",
+    "officialTitle": "INDECENT EXPOSURE.",
+    "category": "misdemeanor",
+    "code": "21.08(a)",
+    "citation": "Tex. Penal Code § 21.08(a)",
+    "conduct": "Exposing the genitals (any part) with intent to arouse or gratify any person’s sexual desire, while reckless about whether another person is present who will be offended or alarmed. Mere nudity, or exposure without both the specific intent and recklessness, does not by itself establish this offense. A public place is not a statutory requirement. This ordinary branch has no prior §21.08 conviction and excludes a civilly committed sexually violent predator.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. The one-prior and two-or-more-prior grades (H.B. 1730) and the civil-commitment grade (S.B. 1179) apply to offenses committed on or after September 1, 2023. S.B. 1610 reenacted the combined text effective September 1, 2025. If any element occurred before September 1, 2023, earlier law governs; the charging date alone does not determine the applicable grade. A second §21.08 violation is a reportable conviction under Code of Criminal Procedure article 62.001(5)(F), except if that second violation results in deferred adjudication; registration duties and duration require the applicable Chapter 62 analysis. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": "(5)(F)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "36150001"
+  },
+  {
+    "id": "tx-pc-21-08-genitals-one-prior",
+    "name": "Indecent exposure (genitals; one prior)",
+    "officialTitle": "INDECENT EXPOSURE.",
+    "category": "misdemeanor",
+    "code": "21.08(a)",
+    "citation": "Tex. Penal Code § 21.08(a)",
+    "conduct": "Exposing the genitals (any part) with intent to arouse or gratify any person’s sexual desire, while reckless about whether another person is present who will be offended or alarmed. Mere nudity, or exposure without both the specific intent and recklessness, does not by itself establish this offense. A public place is not a statutory requirement. This branch requires exactly one previous conviction under §21.08 and excludes a civilly committed sexually violent predator.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The one-prior and two-or-more-prior grades (H.B. 1730) and the civil-commitment grade (S.B. 1179) apply to offenses committed on or after September 1, 2023. S.B. 1610 reenacted the combined text effective September 1, 2025. If any element occurred before September 1, 2023, earlier law governs; the charging date alone does not determine the applicable grade. A second §21.08 violation is a reportable conviction under Code of Criminal Procedure article 62.001(5)(F), except if that second violation results in deferred adjudication; registration duties and duration require the applicable Chapter 62 analysis. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": "(5)(F)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-21-08-genitals-two-priors",
+    "name": "Indecent exposure (genitals; two priors)",
+    "officialTitle": "INDECENT EXPOSURE.",
+    "category": "felony",
+    "code": "21.08(a)",
+    "citation": "Tex. Penal Code § 21.08(a)",
+    "conduct": "Exposing the genitals (any part) with intent to arouse or gratify any person’s sexual desire, while reckless about whether another person is present who will be offended or alarmed. Mere nudity, or exposure without both the specific intent and recklessness, does not by itself establish this offense. A public place is not a statutory requirement. This branch requires two or more previous convictions under §21.08 and excludes a civilly committed sexually violent predator.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The one-prior and two-or-more-prior grades (H.B. 1730) and the civil-commitment grade (S.B. 1179) apply to offenses committed on or after September 1, 2023. S.B. 1610 reenacted the combined text effective September 1, 2025. If any element occurred before September 1, 2023, earlier law governs; the charging date alone does not determine the applicable grade. A second §21.08 violation is a reportable conviction under Code of Criminal Procedure article 62.001(5)(F), except if that second violation results in deferred adjudication; registration duties and duration require the applicable Chapter 62 analysis. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": "(5)(F)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-21-08-genitals-svp",
+    "name": "Indecent exposure (genitals; svp)",
+    "officialTitle": "INDECENT EXPOSURE.",
+    "category": "felony",
+    "code": "21.08(a)",
+    "citation": "Tex. Penal Code § 21.08(a)",
+    "conduct": "Exposing the genitals (any part) with intent to arouse or gratify any person’s sexual desire, while reckless about whether another person is present who will be offended or alarmed. Mere nudity, or exposure without both the specific intent and recklessness, does not by itself establish this offense. A public place is not a statutory requirement. This branch requires civil commitment as a sexually violent predator under Health and Safety Code Chapter 841, not merely registration status, a diagnosis or an allegation.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The one-prior and two-or-more-prior grades (H.B. 1730) and the civil-commitment grade (S.B. 1179) apply to offenses committed on or after September 1, 2023. S.B. 1610 reenacted the combined text effective September 1, 2025. If any element occurred before September 1, 2023, earlier law governs; the charging date alone does not determine the applicable grade. A second §21.08 violation is a reportable conviction under Code of Criminal Procedure article 62.001(5)(F), except if that second violation results in deferred adjudication; registration duties and duration require the applicable Chapter 62 analysis. Other repeat or sentencing findings require separate analysis.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": "(b)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": "(5)(F)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-012-touch-ordinary",
+    "name": "Indecent assault (touch; ordinary)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.012(a)(1)",
+    "citation": "Tex. Penal Code § 22.012(a)(1)",
+    "conduct": "Touching another person’s anus, breast or genitals. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. This ordinary branch excludes a prior conviction under this section and the qualifying treatment-provider circumstances. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "36230001"
+  },
+  {
+    "id": "tx-pc-22-012-touch-prior",
+    "name": "Indecent assault (touch; prior)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "felony",
+    "code": "22.012(a)(1)",
+    "citation": "Tex. Penal Code § 22.012(a)(1)",
+    "conduct": "Touching another person’s anus, breast or genitals. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. This branch requires a previous §22.012 conviction other than one punishable under the treatment-provider paragraph (b)(1)(B); a prior provider-paragraph conviction instead triggers the separate third-degree provision. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)(1)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-012-touch-provider",
+    "name": "Indecent assault (touch; provider)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "felony",
+    "code": "22.012(a)(1)",
+    "citation": "Tex. Penal Code § 22.012(a)(1)",
+    "conduct": "Touching another person’s anus, breast or genitals. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. The actor must be a health care services provider or mental health services provider as defined in §22.011(c), with the act both during treatment/service to the victim and beyond generally accepted practices for that treatment/service. This branch excludes a prior conviction punishable under the treatment-provider paragraph. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)(1)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-012-touch-provider-prior",
+    "name": "Indecent assault (touch; provider prior)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "felony",
+    "code": "22.012(a)(1)",
+    "citation": "Tex. Penal Code § 22.012(a)(1)",
+    "conduct": "Touching another person’s anus, breast or genitals. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. This branch requires a previous §22.012 conviction punishable under the treatment-provider paragraph (b)(1)(B); it is not limited to a defendant who is providing treatment during the current offense. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-012-touch-with-ordinary",
+    "name": "Indecent assault (touch with; ordinary)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.012(a)(2)",
+    "citation": "Tex. Penal Code § 22.012(a)(2)",
+    "conduct": "Touching another person with the anus, breast or genitals of any person. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. This ordinary branch excludes a prior conviction under this section and the qualifying treatment-provider circumstances. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "36230001"
+  },
+  {
+    "id": "tx-pc-22-012-touch-with-prior",
+    "name": "Indecent assault (touch with; prior)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "felony",
+    "code": "22.012(a)(2)",
+    "citation": "Tex. Penal Code § 22.012(a)(2)",
+    "conduct": "Touching another person with the anus, breast or genitals of any person. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. This branch requires a previous §22.012 conviction other than one punishable under the treatment-provider paragraph (b)(1)(B); a prior provider-paragraph conviction instead triggers the separate third-degree provision. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)(1)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-012-touch-with-provider",
+    "name": "Indecent assault (touch with; provider)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "felony",
+    "code": "22.012(a)(2)",
+    "citation": "Tex. Penal Code § 22.012(a)(2)",
+    "conduct": "Touching another person with the anus, breast or genitals of any person. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. The actor must be a health care services provider or mental health services provider as defined in §22.011(c), with the act both during treatment/service to the victim and beyond generally accepted practices for that treatment/service. This branch excludes a prior conviction punishable under the treatment-provider paragraph. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)(1)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-012-touch-with-provider-prior",
+    "name": "Indecent assault (touch with; provider prior)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "felony",
+    "code": "22.012(a)(2)",
+    "citation": "Tex. Penal Code § 22.012(a)(2)",
+    "conduct": "Touching another person with the anus, breast or genitals of any person. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. This branch requires a previous §22.012 conviction punishable under the treatment-provider paragraph (b)(1)(B); it is not limited to a defendant who is providing treatment during the current offense. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-012-expose-other-ordinary",
+    "name": "Indecent assault (expose other; ordinary)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.012(a)(3)",
+    "citation": "Tex. Penal Code § 22.012(a)(3)",
+    "conduct": "Exposing or attempting to expose another person’s genitals, pubic area, anus, buttocks or female areola. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. This ordinary branch excludes a prior conviction under this section and the qualifying treatment-provider circumstances. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "36230001"
+  },
+  {
+    "id": "tx-pc-22-012-expose-other-prior",
+    "name": "Indecent assault (expose other; prior)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "felony",
+    "code": "22.012(a)(3)",
+    "citation": "Tex. Penal Code § 22.012(a)(3)",
+    "conduct": "Exposing or attempting to expose another person’s genitals, pubic area, anus, buttocks or female areola. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. This branch requires a previous §22.012 conviction other than one punishable under the treatment-provider paragraph (b)(1)(B); a prior provider-paragraph conviction instead triggers the separate third-degree provision. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)(1)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-012-expose-other-provider",
+    "name": "Indecent assault (expose other; provider)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "felony",
+    "code": "22.012(a)(3)",
+    "citation": "Tex. Penal Code § 22.012(a)(3)",
+    "conduct": "Exposing or attempting to expose another person’s genitals, pubic area, anus, buttocks or female areola. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. The actor must be a health care services provider or mental health services provider as defined in §22.011(c), with the act both during treatment/service to the victim and beyond generally accepted practices for that treatment/service. This branch excludes a prior conviction punishable under the treatment-provider paragraph. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)(1)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-012-expose-other-provider-prior",
+    "name": "Indecent assault (expose other; provider prior)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "felony",
+    "code": "22.012(a)(3)",
+    "citation": "Tex. Penal Code § 22.012(a)(3)",
+    "conduct": "Exposing or attempting to expose another person’s genitals, pubic area, anus, buttocks or female areola. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. This branch requires a previous §22.012 conviction punishable under the treatment-provider paragraph (b)(1)(B); it is not limited to a defendant who is providing treatment during the current offense. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-012-bodily-substance-ordinary",
+    "name": "Indecent assault (bodily substance; ordinary)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "misdemeanor",
+    "code": "22.012(a)(4)",
+    "citation": "Tex. Penal Code § 22.012(a)(4)",
+    "conduct": "Causing another person to contact any person’s blood, seminal fluid, vaginal fluid, saliva, urine or feces. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. This ordinary branch excludes a prior conviction under this section and the qualifying treatment-provider circumstances. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "36230001"
+  },
+  {
+    "id": "tx-pc-22-012-bodily-substance-prior",
+    "name": "Indecent assault (bodily substance; prior)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "felony",
+    "code": "22.012(a)(4)",
+    "citation": "Tex. Penal Code § 22.012(a)(4)",
+    "conduct": "Causing another person to contact any person’s blood, seminal fluid, vaginal fluid, saliva, urine or feces. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. This branch requires a previous §22.012 conviction other than one punishable under the treatment-provider paragraph (b)(1)(B); a prior provider-paragraph conviction instead triggers the separate third-degree provision. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)(1)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-012-bodily-substance-provider",
+    "name": "Indecent assault (bodily substance; provider)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "felony",
+    "code": "22.012(a)(4)",
+    "citation": "Tex. Penal Code § 22.012(a)(4)",
+    "conduct": "Causing another person to contact any person’s blood, seminal fluid, vaginal fluid, saliva, urine or feces. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. The actor must be a health care services provider or mental health services provider as defined in §22.011(c), with the act both during treatment/service to the victim and beyond generally accepted practices for that treatment/service. This branch excludes a prior conviction punishable under the treatment-provider paragraph. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)(1)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-012-bodily-substance-provider-prior",
+    "name": "Indecent assault (bodily substance; provider prior)",
+    "officialTitle": "INDECENT ASSAULT.",
+    "category": "felony",
+    "code": "22.012(a)(4)",
+    "citation": "Tex. Penal Code § 22.012(a)(4)",
+    "conduct": "Causing another person to contact any person’s blood, seminal fluid, vaginal fluid, saliva, urine or feces. The conduct must be without the other person’s consent and with intent to arouse or gratify any person’s sexual desire. Neither contact alone nor an unconsented act without that sexual intent establishes this section. This branch requires a previous §22.012 conviction punishable under the treatment-provider paragraph (b)(1)(B); it is not limited to a defendant who is providing treatment during the current offense. These choices cover the common grading text retained in both 2025 versions of subsection (b). They exclude an elderly individual (65 or older), a disabled individual as defined in §22.04(c), and the qualifying civil-commitment-facility officer/employee/contractor circumstances described in the other (b)(3). Those special scenarios can carry higher grades and need their own assessment; they are not treated as ordinary misdemeanors here. If the same conduct violates another criminal law, §22.012(c) permits prosecution under this section, the other law, or both; this choice does not displace child-specific or other sexual-offense statutes.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The prior/provider enhancements were enacted effective September 1, 2023; if any element occurred before that date, earlier law governs. Both retained special (b)(3) amendments apply prospectively from September 1, 2025 with the same any-element transition. Other sentencing enhancements and registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.012",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.011",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.04",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.081",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]

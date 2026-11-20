@@ -1,3 +1,4 @@
+import indecentContact from "../shared/texas-indecent-contact.json";
 import protectiveFirearms from "../shared/texas-protective-firearms.json";
 import animals from "../shared/texas-animal-cruelty.json";
 import communications from "../shared/texas-communications-stalking.json";
@@ -106,7 +107,7 @@ describe("Texas ranked drug possession", () => {
   });
 
   it("withholds each exact charge when any required current link is missing or superseded", async () => {
-    const rankedIds = new Set([...ids, ...theftRows.map(row => row.id), ...propertyRows.map(row => row.id), ...arrestRows.map(row => row.id), ...closeoutRows.map(row => row.id), ...carryRows.map(row => row.id), ...lossRows.map(row => row.id), ...burglaryRows.map(row => row.id), ...weights.map(row => row.id), ...delivery.map(row => row.id), ...family.map(row => row.id), ...justice.map(row => row.id), ...road.map(row => row.id), ...fraud.map(row => row.id), ...protectedAssault.map(row => row.id), ...robbery.map(row => row.id), ...threats.map(row => row.id), ...prohibited.map(row => row.id), ...intoxicationHarm.map(row => row.id), ...childSexual.map(row => row.id), ...communications.map(row => row.id), ...animals.map(row => row.id), ...protectiveFirearms.map(row => row.id)]);
+    const rankedIds = new Set([...ids, ...theftRows.map(row => row.id), ...propertyRows.map(row => row.id), ...arrestRows.map(row => row.id), ...closeoutRows.map(row => row.id), ...carryRows.map(row => row.id), ...lossRows.map(row => row.id), ...burglaryRows.map(row => row.id), ...weights.map(row => row.id), ...delivery.map(row => row.id), ...family.map(row => row.id), ...justice.map(row => row.id), ...road.map(row => row.id), ...fraud.map(row => row.id), ...protectedAssault.map(row => row.id), ...robbery.map(row => row.id), ...threats.map(row => row.id), ...prohibited.map(row => row.id), ...intoxicationHarm.map(row => row.id), ...childSexual.map(row => row.id), ...communications.map(row => row.id), ...animals.map(row => row.id), ...protectiveFirearms.map(row => row.id), ...indecentContact.map(row => row.id)]);
     for (const record of manifest.catalogRecords.filter(row => rankedIds.has(row.chargeId))) {
       const all = record.provisions.map(p => ({chargeId:record.chargeId, sourceKey:p.sourceKey,
         contentHash:p.contentHash, subdivision:p.subdivision, supportRole:p.supportRole, citation:p.citation}));
