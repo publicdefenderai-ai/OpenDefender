@@ -4,7 +4,8 @@ import {readFileSync} from 'node:fs';
 import {expect,it} from 'vitest';
 import packet from '../scripts/data-review/output/florida-reviewed-closeout-corrections.json';
 import prior from '../scripts/data-review/florida-reviewed-closeout/previous-definitions.json';
-import receipt from '../scripts/data-review/output/florida-reviewed-refresh-receipt.json';
+import proposal from '../scripts/data-review/florida-launch/restoration-proposal.json';
+const receipt=proposal.proposedReceipt; // Historical approval must still reject corrected content.
 import report from '../scripts/data-review/output/florida-reviewed-analysis.json';
 import ledger from '../shared/florida-reviewed-eligibility.json';
 import {getChargeExplanation} from '../shared/charge-explanations';
