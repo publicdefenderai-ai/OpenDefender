@@ -1,3 +1,4 @@
+import protectiveFirearms from "./texas-protective-firearms.json";
 import communications from "./texas-communications-stalking.json";
 import childSexual from "./texas-child-sexual-offenses.json";
 import intoxicationHarm from "./texas-intoxication-harm.json";
@@ -59,6 +60,7 @@ export const texasReviewedRecords = [
   ...intoxicationHarm,
   ...childSexual,
   ...communications,
+  ...protectiveFirearms,
 ];
 export const texasReviewedById = new Map(texasReviewedRecords.map(row => [row.id, row]));
 
