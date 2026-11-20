@@ -11,14 +11,22 @@ describe('Florida first-launch readiness accounting', () => {
     expect(count.offlineEligible + count.configuredWithheld).toBe(count.configuredChoices);
     expect(result.reviewed.current).toBe(false);
     expect(result.reviewed.expired).toBe(false);
-    expect(result.reviewed.reportHashMatches).toBe(false);
-    expect(result.reviewed.eligibilityHashMatches).toBe(false);
+    expect(result.reviewed.reportHashMatches).toBe(true);
+    expect(result.reviewed.eligibilityHashMatches).toBe(true);
     expect(result.reviewed.withheldIds).toHaveLength(101);
     expect(new Set(result.reviewed.requiredSections).size).toBe(result.reviewed.requiredSections.length);
     expect(result.excludedLegacy).toHaveLength(92);
     expect(result.benchmark.absentSections).toBe(0);
     expect(result.benchmark.scopeReviewedCitations).toHaveLength(11);
     expect(result.benchmark.statewideDenominator).toBeNull();
+  });
+  it('recognizes the installed receipt at its check time without claiming production eligibility', () => {
+    const receipt = JSON.parse(readFileSync('scripts/data-review/output/florida-reviewed-refresh-receipt.json', 'utf8'));
+    const result = buildFloridaLaunchReadiness(new Date(receipt.checkedAt));
+    expect(result.reviewed).toMatchObject({ current: true, expired: false, reportHashMatches: true, eligibilityHashMatches: true, withheldIds: [] });
+    const atExpiry = buildFloridaLaunchReadiness(new Date(receipt.expiresAt));
+    expect(atExpiry.reviewed.current).toBe(false);
+    expect(atExpiry.reviewed.withheldIds).toHaveLength(101);
   });
   it('recomputes deadlines at the requested clock without rewriting approvals', () => {
     const receipt = 'scripts/data-review/output/florida-reviewed-refresh-receipt.json';
