@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import captured from '../fixtures/immigration-family-published-content';
+import { immigrationFamilyCopy } from '../../client/src/locales/immigration-family-design';
 
 for (const language of ['en', 'es', 'zh'] as const) for (const theme of ['light', 'dark']) {
   test(`family planning content, disclosures and navigation: ${language}/${theme}`, async ({ page }, info) => {
@@ -11,6 +12,8 @@ for (const language of ['en', 'es', 'zh'] as const) for (const theme of ['light'
     await page.goto('/immigration-guidance/family-planning');
     const root = page.locator('.immigration-family-page');
     await expect(page.locator('main')).toHaveCount(1);
+    const copy = immigrationFamilyCopy[language];
+    await expect(root.getByRole('heading', { level: 1 })).toHaveText(`${copy.title} ${copy.accent}`);
     await expect(root.getByTestId('alert-family-planning')).toBeVisible();
     const art = root.locator('.immigration-family-art');
     await expect(art).toHaveAttribute('aria-hidden', 'true');

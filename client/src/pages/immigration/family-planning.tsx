@@ -46,7 +46,7 @@ export default function FamilyPlanning() {
       ]} currentPage={t("immigration.family.title")} />
       <header className="immigration-family-hero">
         <div>
-          <h1 data-testid="immigration-detail-title">{design.title}<span>{design.accent}</span></h1>
+          <h1 data-testid="immigration-detail-title">{design.title}{" "}<span>{design.accent}</span></h1>
           <p data-testid="immigration-detail-subtitle">{t("immigration.family.subtitle")}</p>
         </div>
         <img className="immigration-family-art" src="/images/design/immigration-family.svg" width="280" height="230" alt="" aria-hidden="true" />
