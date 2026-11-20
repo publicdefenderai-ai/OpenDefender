@@ -350,7 +350,7 @@ async function completeStatus(page: Page) {
   // Wait for the distinct screen: clicking the exiting arrow twice can leave
   // the questionnaire on its final screen without ever submitting guidance.
   await expect(page.getByTestId("button-prev-additional-details")).toBeVisible();
-  await page.getByTestId("button-prev-additional-details").locator("..").locator("button").last().click();
+  await page.getByTestId("button-next-additional-details").click();
   await page.getByTestId("button-generate-guidance").click();
 }
 
