@@ -29,7 +29,7 @@ it("separates actual, represented and believed minors and punishment-only school
  for(const tag of ["actual","represented","believed"]){const r=row("tx-pc-43-021-minor-"+tag);expect(r.penalty).toContain("Second-degree");const school=row(r.id+"-school");expect(school.penalty).toContain("Underlying second-degree felony");expect(school.penalty).toContain("Punished as a first-degree");}
  expect(row("tx-pc-43-021-minor-represented").conduct).toContain("does not require proof that the person actually is a minor");expect(row("tx-pc-43-021-adult-prior-school").penalty).toContain("Punished as a second-degree");
  expect(evidence["PE:43.021"].text).toContain("punishment prescribed for the next highest category");
- for(const r of rows.filter(r=>r.references[0].section==="43.021")){expect(r.penalty).toContain("not simply an under-18 label");expect(r.penalty).toContain("School-enhanced repeat and minor cases");}
+ for(const r of rows.filter(r=>r.references[0].section==="43.021" && !/^tx-pc-43-021-minor-(actual|represented|believed)$/.test(r.id))){expect(r.penalty).toContain("not simply an under-18 label");expect(r.penalty).toContain("School-enhanced repeat and minor cases");}
 });
 it("protects the actual enactment chronology against misleading latest-date inferences",()=>{
  expect(bill("HB01540","29")).toContain("state jail felony [ Class A misdemeanor ]");expect(bill("HB01540","61")).toContain("1,000 feet");expect(bill("SB01831","9")).toContain("1,000 feet");expect(bill("SB01527","2.04")).toContain("redesignated as Section 43.021(b-1)");expect(bill("HB01778","2.01")).toContain("person with respect to whom");
@@ -70,3 +70,14 @@ it("rebuilds individually supported identities and fails closed on altered or mi
 });
 
 
+
+it("states reportability including deferred adjudication for each unenhanced second-degree minor solicitation branch",()=>{
+ expect(evidence["CR:62.001"].text).toContain("or a deferred adjudication");
+ expect(evidence["CR:62.001"].text).toContain("if the offense is punishable as a felony of the second degree");
+ for(const tag of ["actual","represented","believed"]){
+  const r=row("tx-pc-43-021-minor-"+tag);
+  expect(r.penalty).toContain("including deferred adjudication, is a reportable conviction or adjudication under article 62.001(5)(B-1)");
+  expect(r.penalty).not.toContain("does not rule registration out");
+  expect(row(r.id+"-school").penalty).toContain("School-enhanced repeat and minor cases therefore require the applicable Chapter 62 assessment");
+ }
+});

@@ -18,7 +18,7 @@ Online promotion, compelling prostitution as its own selectable offense, and tra
 
 ## Consequences and historical boundaries
 
-A school/function/UIL finding increases the prescribed **punishment** to the next category; the summaries do not silently rename the underlying grade. The deferred-adjudication and no-double-use prior rules are limited to the sections that actually contain them. The article 62.001(5)(B-1) registration condition is “punishable as a felony of the second degree,” not simply a minor-victim label. School-enhanced repeat and minor cases are expressly left for the applicable Chapter 62 assessment rather than ruled out or assigned automatic lifetime registration.
+A school/function/UIL finding increases the prescribed **punishment** to the next category; the summaries do not silently rename the underlying grade. The deferred-adjudication and no-double-use prior rules are limited to the sections that actually contain them. The article 62.001(5)(B-1) registration condition is “punishable as a felony of the second degree,” not simply a minor-victim label. The three unenhanced actual/represented/believed-minor choices state expressly that conviction or adjudication, including deferred adjudication, is reportable under article 62.001(5)(B-1). Registration duration is not presented as automatically lifelong. School-enhanced repeat and minor cases are expressly left for the applicable Chapter 62 assessment rather than ruled out or assigned automatic lifetime registration.
 
 The receiving-fee custody summaries include article 42A.515's mandatory suspension/community-supervision rules for the applicable Class B and state-jail offenses, prior/jury exceptions, and the program requirement only where a local program is established. Aggravated promotion includes the express registration listing and qualified judge/jury/deferred-supervision restrictions. These are not presented as unconditional incarceration or a blanket prohibition on every form of supervision. The first-offender solicitation program is optional and subject to eligibility and prosecutor consent.
 
@@ -39,10 +39,11 @@ Against merged main `9cebb7bbf1c4a4afec0ffad19e1a6195ee973fc0`, offline counts a
 
 ## Verification
 
-- 63 focused tests passed across five suites: legal distinctions, chronological guards, source integrity, incomplete/changed dependencies, saved identity, translation fallback and instruction guards.
+- 64 focused tests passed across five suites: legal distinctions, chronological guards, source integrity, incomplete/changed dependencies, saved identity, translation fallback and instruction guards.
 - All 21 regenerated manifest records match exactly; all 501 previous records and all non-record manifest fields are unchanged.
 - Typecheck and production build passed; all 25 isolated built-selector checks passed without skips or retries.
 - The build/browser checks preceded the clean integration of independent merged PR 287 DACA/TPS UI changes. No Texas files overlapped; final evidence replay was rerun after integration. No claim is made that the complete browser/full-regression suites were rerun.
+- The registration wording refinement passed the five focused suites (64 tests). Replaying all 21 records leaves the committed manifest unchanged: its statutory evidence and identities are unchanged by the three penalty-text clarifications.
 - No production/database operation, import, migration, receipt renewal, monitoring activation or deployment was performed.
 
 ```sh
