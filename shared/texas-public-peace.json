@@ -1,0 +1,2367 @@
+[
+  {
+    "id": "tx-pc-42-01-public-discharge",
+    "name": "Disorderly conduct (public discharge)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(7)",
+    "citation": "Tex. Penal Code § 42.01(a)(7)",
+    "conduct": "Intentionally or knowingly discharging a firearm in a public place other than a public road or a qualifying sport shooting range. Public place includes places to which the public or a substantial group has access, including public school campuses or school grounds. Section 42.01(c)(1) also addresses conduct producing its proscribed consequences in the public place. A statutory defense applies if the person discharging the firearm had a reasonable fear of bodily injury to that person or another from a dangerous wild animal as specifically defined by Health and Safety Code §822.101; this is not a defense based on any animal or any generalized fear. Sport shooting range has the incorporated Local Government Code §250.001 definition.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. The ordinary grade is assigned by §42.01(d), not by a blanket firearm-offense category. Applicable prior-conviction enhancements require their own findings. These firearm branches predate the section’s 2023 amendment adding the Parks and Wildlife employee exception. The latest section-version date does not mean these offenses or grades first began in 2023; earlier conduct requires the law then applicable.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(7)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "822.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "250.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "53110006"
+  },
+  {
+    "id": "tx-pc-42-01-alarming-display",
+    "name": "Disorderly conduct (alarming display)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(8)",
+    "citation": "Tex. Penal Code § 42.01(a)(8)",
+    "conduct": "Intentionally or knowingly displaying a firearm or other deadly weapon in a public place in a manner calculated to alarm. Mere possession or the visibility of a lawfully carried firearm does not by itself establish the required manner calculated to alarm. Public place includes places to which the public or a substantial group has access, including public school campuses or school grounds. Section 42.01(c)(1) also addresses conduct producing its proscribed consequences in the public place. Deadly weapon includes a firearm and the other weapons or things described by §1.07(a)(17).",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. The ordinary grade is assigned by §42.01(d), not by a blanket firearm-offense category. Applicable prior-conviction enhancements require their own findings. These firearm branches predate the section’s 2023 amendment adding the Parks and Wildlife employee exception. The latest section-version date does not mean these offenses or grades first began in 2023; earlier conduct requires the law then applicable.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(8)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "53110006"
+  },
+  {
+    "id": "tx-pc-42-01-road-discharge",
+    "name": "Disorderly conduct (road discharge)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(9)",
+    "citation": "Tex. Penal Code § 42.01(a)(9)",
+    "conduct": "Intentionally or knowingly discharging a firearm on or across a public road. A statutory defense applies if the person discharging the firearm had a reasonable fear of bodily injury to that person or another from a dangerous wild animal as specifically defined by Health and Safety Code §822.101; this is not a defense based on any animal or any generalized fear. This branch does not apply to a Parks and Wildlife Department employee acting within the scope of §12.013(c), to take wildlife on a public road or right-of-way that is mortally injured or behaving consistently with disease.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, with no jail term as the ordinary punishment. The ordinary grade is assigned by §42.01(d), not by a blanket firearm-offense category. Applicable prior-conviction enhancements require their own findings. Section 12.43(c) permits a fine up to $2,000, up to 180 days in jail, or both when there are three qualifying previous §42.01/§49.02 convictions and each prior offense was committed in the 24 months before the current offense; no prior is assumed. These firearm branches predate the section’s 2023 amendment adding the Parks and Wildlife employee exception. The latest section-version date does not mean these offenses or grades first began in 2023; earlier conduct requires the law then applicable. The employee exception added by H.B. 3065 applies to offenses with no element before September 1, 2023.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(9)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "822.101",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(e-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PW",
+        "section": "12.013",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-12",
+    "name": "Discharge of firearm in certain municipalities (reckless discharge; population at least 100,000)",
+    "officialTitle": "DISCHARGE OF FIREARM IN CERTAIN MUNICIPALITIES.",
+    "category": "misdemeanor",
+    "code": "42.12(a)",
+    "citation": "Tex. Penal Code § 42.12(a)",
+    "conduct": "Recklessly discharging a firearm inside the corporate limits of a municipality having a population of 100,000 or more. Recklessness requires awareness and conscious disregard of a substantial, unjustifiable risk; an accident alone does not establish that mental state. The municipal boundary and population threshold must be established; a county population or an address near a city is not a substitute. Under Government Code §311.005(3), population means the most recent federal decennial census unless the statute or context requires a different definition.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. This section was added effective September 1, 1995. Earlier conduct requires the law then applicable. Section 42.12(c) permits prosecution under either this section or another Penal Code section when the conduct constitutes both; local ordinance authority is preserved by (d). Repeat-offender or other sentencing consequences require separate statutory findings.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.12",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.12",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.12",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.12",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "311.005",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "52130007"
+  },
+  {
+    "id": "tx-pc-42-03-obstruct-ordinary",
+    "name": "Obstructing highway or other passageway (obstruct; ordinary)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "misdemeanor",
+    "code": "42.03(a)(1)",
+    "citation": "Tex. Penal Code § 42.03(a)(1)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly obstructing a listed passageway accessible to the public or a substantial group, or another place used for the passage of persons, vehicles or conveyances. Obstruct means making passage impassable, unreasonably inconvenient or hazardous; the actor may act alone or with others. This ordinary branch excludes the emergency-access and reckless-driving-exhibition circumstances in (c-1), (d) and (e). For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "53070004"
+  },
+  {
+    "id": "tx-pc-42-03-obstruct-emergency-vehicle",
+    "name": "Obstructing highway or other passageway (obstruct; emergency vehicle)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(1)",
+    "citation": "Tex. Penal Code § 42.03(a)(1)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly obstructing a listed passageway accessible to the public or a substantial group, or another place used for the passage of persons, vehicles or conveyances. Obstruct means making passage impassable, unreasonably inconvenient or hazardous; the actor may act alone or with others. In committing the offense, the actor knowingly prevents passage of an authorized emergency vehicle operating its emergency audible OR visual signals required by Transportation Code §546.003. Vehicle status alone is insufficient; both the required operating signal and knowing prevention must be established. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(c-1)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "546.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "546.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "546.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "547.305",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "547.702",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-obstruct-emergency-facility",
+    "name": "Obstructing highway or other passageway (obstruct; emergency facility)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(1)",
+    "citation": "Tex. Penal Code § 42.03(a)(1)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly obstructing a listed passageway accessible to the public or a substantial group, or another place used for the passage of persons, vehicles or conveyances. Obstruct means making passage impassable, unreasonably inconvenient or hazardous; the actor may act alone or with others. In committing the offense, the actor knowingly obstructs access to a Chapter 241 licensed hospital or another health-care facility providing emergency medical care as defined by §773.003. Not every clinic or office qualifies. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(c-1)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "241.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "241.021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "241.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-obstruct-exhibition",
+    "name": "Obstructing highway or other passageway (obstruct; exhibition)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "misdemeanor",
+    "code": "42.03(a)(1)",
+    "citation": "Tex. Penal Code § 42.03(a)(1)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly obstructing a listed passageway accessible to the public or a substantial group, or another place used for the passage of persons, vehicles or conveyances. Obstruct means making passage impassable, unreasonably inconvenient or hazardous; the actor may act alone or with others. At the time of the offense, the actor was operating a motor vehicle while engaging in the defined reckless driving exhibition. This ordinary exhibition branch excludes (e) priors, intoxication and resulting bodily injury, and the (c-1) emergency-access circumstances. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings. A reckless driving exhibition has the narrow §42.03(f) definition: a motor-vehicle operator on a highway or street, in the presence of at least two people assembled to watch, intentionally breaks rear-tire traction, continuously spins those tires by pressing the accelerator and increasing engine speed, AND steers to rotate the vehicle. All three acts are required; ordinary reckless driving or a single tire spin is not automatically this exhibition.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. Property used or intended for use in this (d)/(e) offense and specified proceeds may qualify as contraband under article 59.01; forfeiture requires the separate Chapter 59 process and applicable protections, rather than occurring automatically on arrest.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.02",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.05",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-obstruct-exhibition-prior",
+    "name": "Obstructing highway or other passageway (obstruct; exhibition prior)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(1)",
+    "citation": "Tex. Penal Code § 42.03(a)(1)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly obstructing a listed passageway accessible to the public or a substantial group, or another place used for the passage of persons, vehicles or conveyances. Obstruct means making passage impassable, unreasonably inconvenient or hazardous; the actor may act alone or with others. At the time of the offense, the actor was operating a motor vehicle while engaging in the defined reckless driving exhibition, and has a prior conviction for an offense punishable under §42.03(d); not every driving conviction qualifies. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings. A reckless driving exhibition has the narrow §42.03(f) definition: a motor-vehicle operator on a highway or street, in the presence of at least two people assembled to watch, intentionally breaks rear-tire traction, continuously spins those tires by pressing the accelerator and increasing engine speed, AND steers to rotate the vehicle. All three acts are required; ordinary reckless driving or a single tire spin is not automatically this exhibition.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. Property used or intended for use in this (d)/(e) offense and specified proceeds may qualify as contraband under article 59.01; forfeiture requires the separate Chapter 59 process and applicable protections, rather than occurring automatically on arrest. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(e)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.02",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.05",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-obstruct-exhibition-intoxicated",
+    "name": "Obstructing highway or other passageway (obstruct; exhibition intoxicated)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(1)",
+    "citation": "Tex. Penal Code § 42.03(a)(1)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly obstructing a listed passageway accessible to the public or a substantial group, or another place used for the passage of persons, vehicles or conveyances. Obstruct means making passage impassable, unreasonably inconvenient or hazardous; the actor may act alone or with others. At the time of the offense, the actor was operating a motor vehicle while engaging in the defined reckless driving exhibition AND was intoxicated under §49.01 (loss of normal mental/physical faculties from the specified substances or alcohol concentration of at least 0.08). For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings. A reckless driving exhibition has the narrow §42.03(f) definition: a motor-vehicle operator on a highway or street, in the presence of at least two people assembled to watch, intentionally breaks rear-tire traction, continuously spins those tires by pressing the accelerator and increasing engine speed, AND steers to rotate the vehicle. All three acts are required; ordinary reckless driving or a single tire spin is not automatically this exhibition.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. Property used or intended for use in this (d)/(e) offense and specified proceeds may qualify as contraband under article 59.01; forfeiture requires the separate Chapter 59 process and applicable protections, rather than occurring automatically on arrest. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(e)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.02",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.05",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-obstruct-exhibition-injury",
+    "name": "Obstructing highway or other passageway (obstruct; exhibition injury)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(1)",
+    "citation": "Tex. Penal Code § 42.03(a)(1)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly obstructing a listed passageway accessible to the public or a substantial group, or another place used for the passage of persons, vehicles or conveyances. Obstruct means making passage impassable, unreasonably inconvenient or hazardous; the actor may act alone or with others. At the time of the offense, the actor was operating a motor vehicle while engaging in the defined reckless driving exhibition, and a person suffered bodily injury as a result of the offense. The injury need not be serious bodily injury, but its causal connection to the offense must be established. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings. A reckless driving exhibition has the narrow §42.03(f) definition: a motor-vehicle operator on a highway or street, in the presence of at least two people assembled to watch, intentionally breaks rear-tire traction, continuously spins those tires by pressing the accelerator and increasing engine speed, AND steers to rotate the vehicle. All three acts are required; ordinary reckless driving or a single tire spin is not automatically this exhibition.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. Property used or intended for use in this (d)/(e) offense and specified proceeds may qualify as contraband under article 59.01; forfeiture requires the separate Chapter 59 process and applicable protections, rather than occurring automatically on arrest. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(e)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.02",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.05",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-order-obstruction-ordinary",
+    "name": "Obstructing highway or other passageway (order obstruction; ordinary)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "misdemeanor",
+    "code": "42.03(a)(2)(A)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(A)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to prevent obstruction of a listed passageway. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. Obstruct means making passage impassable, unreasonably inconvenient or hazardous. This ordinary branch excludes the emergency-access and reckless-driving-exhibition circumstances in (c-1), (d) and (e). For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "53070004"
+  },
+  {
+    "id": "tx-pc-42-03-order-obstruction-emergency-vehicle",
+    "name": "Obstructing highway or other passageway (order obstruction; emergency vehicle)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(2)(A)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(A)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to prevent obstruction of a listed passageway. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. Obstruct means making passage impassable, unreasonably inconvenient or hazardous. In committing the offense, the actor knowingly prevents passage of an authorized emergency vehicle operating its emergency audible OR visual signals required by Transportation Code §546.003. Vehicle status alone is insufficient; both the required operating signal and knowing prevention must be established. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(c-1)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "546.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "546.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "546.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "547.305",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "547.702",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-order-obstruction-emergency-facility",
+    "name": "Obstructing highway or other passageway (order obstruction; emergency facility)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(2)(A)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(A)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to prevent obstruction of a listed passageway. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. Obstruct means making passage impassable, unreasonably inconvenient or hazardous. In committing the offense, the actor knowingly obstructs access to a Chapter 241 licensed hospital or another health-care facility providing emergency medical care as defined by §773.003. Not every clinic or office qualifies. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(c-1)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "241.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "241.021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "241.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-order-obstruction-exhibition",
+    "name": "Obstructing highway or other passageway (order obstruction; exhibition)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "misdemeanor",
+    "code": "42.03(a)(2)(A)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(A)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to prevent obstruction of a listed passageway. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. Obstruct means making passage impassable, unreasonably inconvenient or hazardous. At the time of the offense, the actor was operating a motor vehicle while engaging in the defined reckless driving exhibition. This ordinary exhibition branch excludes (e) priors, intoxication and resulting bodily injury, and the (c-1) emergency-access circumstances. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings. A reckless driving exhibition has the narrow §42.03(f) definition: a motor-vehicle operator on a highway or street, in the presence of at least two people assembled to watch, intentionally breaks rear-tire traction, continuously spins those tires by pressing the accelerator and increasing engine speed, AND steers to rotate the vehicle. All three acts are required; ordinary reckless driving or a single tire spin is not automatically this exhibition.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. Property used or intended for use in this (d)/(e) offense and specified proceeds may qualify as contraband under article 59.01; forfeiture requires the separate Chapter 59 process and applicable protections, rather than occurring automatically on arrest.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.02",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.05",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-order-obstruction-exhibition-prior",
+    "name": "Obstructing highway or other passageway (order obstruction; exhibition prior)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(2)(A)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(A)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to prevent obstruction of a listed passageway. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. Obstruct means making passage impassable, unreasonably inconvenient or hazardous. At the time of the offense, the actor was operating a motor vehicle while engaging in the defined reckless driving exhibition, and has a prior conviction for an offense punishable under §42.03(d); not every driving conviction qualifies. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings. A reckless driving exhibition has the narrow §42.03(f) definition: a motor-vehicle operator on a highway or street, in the presence of at least two people assembled to watch, intentionally breaks rear-tire traction, continuously spins those tires by pressing the accelerator and increasing engine speed, AND steers to rotate the vehicle. All three acts are required; ordinary reckless driving or a single tire spin is not automatically this exhibition.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. Property used or intended for use in this (d)/(e) offense and specified proceeds may qualify as contraband under article 59.01; forfeiture requires the separate Chapter 59 process and applicable protections, rather than occurring automatically on arrest. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(e)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.02",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.05",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-order-obstruction-exhibition-intoxicated",
+    "name": "Obstructing highway or other passageway (order obstruction; exhibition intoxicated)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(2)(A)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(A)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to prevent obstruction of a listed passageway. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. Obstruct means making passage impassable, unreasonably inconvenient or hazardous. At the time of the offense, the actor was operating a motor vehicle while engaging in the defined reckless driving exhibition AND was intoxicated under §49.01 (loss of normal mental/physical faculties from the specified substances or alcohol concentration of at least 0.08). For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings. A reckless driving exhibition has the narrow §42.03(f) definition: a motor-vehicle operator on a highway or street, in the presence of at least two people assembled to watch, intentionally breaks rear-tire traction, continuously spins those tires by pressing the accelerator and increasing engine speed, AND steers to rotate the vehicle. All three acts are required; ordinary reckless driving or a single tire spin is not automatically this exhibition.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. Property used or intended for use in this (d)/(e) offense and specified proceeds may qualify as contraband under article 59.01; forfeiture requires the separate Chapter 59 process and applicable protections, rather than occurring automatically on arrest. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(e)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.02",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.05",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-order-obstruction-exhibition-injury",
+    "name": "Obstructing highway or other passageway (order obstruction; exhibition injury)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(2)(A)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(A)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to prevent obstruction of a listed passageway. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. Obstruct means making passage impassable, unreasonably inconvenient or hazardous. At the time of the offense, the actor was operating a motor vehicle while engaging in the defined reckless driving exhibition, and a person suffered bodily injury as a result of the offense. The injury need not be serious bodily injury, but its causal connection to the offense must be established. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings. A reckless driving exhibition has the narrow §42.03(f) definition: a motor-vehicle operator on a highway or street, in the presence of at least two people assembled to watch, intentionally breaks rear-tire traction, continuously spins those tires by pressing the accelerator and increasing engine speed, AND steers to rotate the vehicle. All three acts are required; ordinary reckless driving or a single tire spin is not automatically this exhibition.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. Property used or intended for use in this (d)/(e) offense and specified proceeds may qualify as contraband under article 59.01; forfeiture requires the separate Chapter 59 process and applicable protections, rather than occurring automatically on arrest. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(e)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.02",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.05",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-order-hazard-ordinary",
+    "name": "Obstructing highway or other passageway (order hazard; ordinary)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "misdemeanor",
+    "code": "42.03(a)(2)(B)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(B)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to maintain public safety by dispersing people dangerously close to a fire, riot or other hazard. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. This ordinary branch excludes the emergency-access and reckless-driving-exhibition circumstances in (c-1), (d) and (e). For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "53070004"
+  },
+  {
+    "id": "tx-pc-42-03-order-hazard-emergency-vehicle",
+    "name": "Obstructing highway or other passageway (order hazard; emergency vehicle)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(2)(B)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(B)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to maintain public safety by dispersing people dangerously close to a fire, riot or other hazard. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. In committing the offense, the actor knowingly prevents passage of an authorized emergency vehicle operating its emergency audible OR visual signals required by Transportation Code §546.003. Vehicle status alone is insufficient; both the required operating signal and knowing prevention must be established. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(c-1)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": "(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "546.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "546.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "546.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "547.305",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "547.702",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-order-hazard-emergency-facility",
+    "name": "Obstructing highway or other passageway (order hazard; emergency facility)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(2)(B)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(B)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to maintain public safety by dispersing people dangerously close to a fire, riot or other hazard. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. In committing the offense, the actor knowingly obstructs access to a Chapter 241 licensed hospital or another health-care facility providing emergency medical care as defined by §773.003. Not every clinic or office qualifies. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(c-1)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "241.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "241.021",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "241.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "773.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-order-hazard-exhibition",
+    "name": "Obstructing highway or other passageway (order hazard; exhibition)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "misdemeanor",
+    "code": "42.03(a)(2)(B)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(B)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to maintain public safety by dispersing people dangerously close to a fire, riot or other hazard. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. At the time of the offense, the actor was operating a motor vehicle while engaging in the defined reckless driving exhibition. This ordinary exhibition branch excludes (e) priors, intoxication and resulting bodily injury, and the (c-1) emergency-access circumstances. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings. A reckless driving exhibition has the narrow §42.03(f) definition: a motor-vehicle operator on a highway or street, in the presence of at least two people assembled to watch, intentionally breaks rear-tire traction, continuously spins those tires by pressing the accelerator and increasing engine speed, AND steers to rotate the vehicle. All three acts are required; ordinary reckless driving or a single tire spin is not automatically this exhibition.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. Property used or intended for use in this (d)/(e) offense and specified proceeds may qualify as contraband under article 59.01; forfeiture requires the separate Chapter 59 process and applicable protections, rather than occurring automatically on arrest.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.02",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.05",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-order-hazard-exhibition-prior",
+    "name": "Obstructing highway or other passageway (order hazard; exhibition prior)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(2)(B)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(B)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to maintain public safety by dispersing people dangerously close to a fire, riot or other hazard. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. At the time of the offense, the actor was operating a motor vehicle while engaging in the defined reckless driving exhibition, and has a prior conviction for an offense punishable under §42.03(d); not every driving conviction qualifies. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings. A reckless driving exhibition has the narrow §42.03(f) definition: a motor-vehicle operator on a highway or street, in the presence of at least two people assembled to watch, intentionally breaks rear-tire traction, continuously spins those tires by pressing the accelerator and increasing engine speed, AND steers to rotate the vehicle. All three acts are required; ordinary reckless driving or a single tire spin is not automatically this exhibition.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. Property used or intended for use in this (d)/(e) offense and specified proceeds may qualify as contraband under article 59.01; forfeiture requires the separate Chapter 59 process and applicable protections, rather than occurring automatically on arrest. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(e)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.02",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.05",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-order-hazard-exhibition-intoxicated",
+    "name": "Obstructing highway or other passageway (order hazard; exhibition intoxicated)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(2)(B)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(B)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to maintain public safety by dispersing people dangerously close to a fire, riot or other hazard. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. At the time of the offense, the actor was operating a motor vehicle while engaging in the defined reckless driving exhibition AND was intoxicated under §49.01 (loss of normal mental/physical faculties from the specified substances or alcohol concentration of at least 0.08). For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings. A reckless driving exhibition has the narrow §42.03(f) definition: a motor-vehicle operator on a highway or street, in the presence of at least two people assembled to watch, intentionally breaks rear-tire traction, continuously spins those tires by pressing the accelerator and increasing engine speed, AND steers to rotate the vehicle. All three acts are required; ordinary reckless driving or a single tire spin is not automatically this exhibition.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. Property used or intended for use in this (d)/(e) offense and specified proceeds may qualify as contraband under article 59.01; forfeiture requires the separate Chapter 59 process and applicable protections, rather than occurring automatically on arrest. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(e)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.02",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.05",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-42-03-order-hazard-exhibition-injury",
+    "name": "Obstructing highway or other passageway (order hazard; exhibition injury)",
+    "officialTitle": "OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY.",
+    "category": "felony",
+    "code": "42.03(a)(2)(B)",
+    "citation": "Tex. Penal Code § 42.03(a)(2)(B)",
+    "conduct": "Without legal privilege or authority, intentionally, knowingly or recklessly disobeying a reasonable request or order to move to maintain public safety by dispersing people dangerously close to a fire, riot or other hazard. The actor must know or be informed that the issuer is a peace officer, firefighter or person authorized to control use of the premises. At the time of the offense, the actor was operating a motor vehicle while engaging in the defined reckless driving exhibition, and a person suffered bodily injury as a result of the offense. The injury need not be serious bodily injury, but its causal connection to the offense must be established. For covered speech, communication, peaceful expression or gatherings under §42.04, an order to move, disperse or otherwise remedy the violation is required before arrest if the actor has not yet intentionally harmed the protected interests. The statutory defenses include absence of a required order, a manifestly unreasonable order, and prompt compliance. This is not a blanket prohibition on protests or gatherings. A reckless driving exhibition has the narrow §42.03(f) definition: a motor-vehicle operator on a highway or street, in the presence of at least two people assembled to watch, intentionally breaks rear-tire traction, continuously spins those tires by pressing the accelerator and increasing engine speed, AND steers to rotate the vehicle. All three acts are required; ordinary reckless driving or a single tire spin is not automatically this exhibition.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The emergency-access felony and reckless-driving-exhibition grades began September 1, 2021. The 2023 legislation reconciled the concurrent text and added the rule that conduct also constituting an offense under another law may be prosecuted under this section or the other law, but not both; it did not first create the 2021 grades. If any element predates the applicable substantive amendment, the earlier law governs. No prior or other enhancement is presumed. Property used or intended for use in this (d)/(e) offense and specified proceeds may qualify as contraband under article 59.01; forfeiture requires the separate Chapter 59 process and applicable protections, rather than occurring automatically on arrest. If community supervision is granted for this state-jail-felony obstruction conviction, article 42A.517 requires at least ten days of county-jail confinement as a condition; the ten days are not an unconditional prison minimum or an automatic grant of supervision.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(a)(2)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(e)(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.03",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.02",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "59.05",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.517",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]

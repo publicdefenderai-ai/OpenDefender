@@ -264,3 +264,14 @@ test("Texas sexual-commerce selector distinguishes receiving, paying and promoti
  for(const r of rows)expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,name:r.name,code:r.code,description:r.conduct,maxPenalty:r.penalty,category:r.category});
  expect(charges.some((c:{id:string})=>c.id==="tx-solicitation")).toBe(false);
 });
+
+test("Texas public-peace choices keep branch grades and retire generic disorderly conduct", async ({request})=>{
+ const response=await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");expect(response.ok()).toBe(true);
+ const {charges}=await response.json();const rows=JSON.parse(readFileSync("shared/texas-public-peace.json","utf8"));
+ for(const r of rows){expect(charges.filter((c:{id:string})=>c.id===r.id)).toHaveLength(1);expect(charges.find((c:{id:string})=>c.id===r.id)).toMatchObject({id:r.id,name:r.name,code:r.code,description:r.conduct,maxPenalty:r.penalty,category:r.category});}
+ expect(charges.some((c:{id:string})=>c.id==="tx-disorderly-conduct")).toBe(false);
+ expect(charges.some((c:{id:string})=>c.id==="tx-discharge-of-firearm-in-city")).toBe(false);
+ expect(charges.find((c:{id:string})=>c.id==="tx-pc-42-01-road-discharge").maxPenalty).toContain("Class C misdemeanor");
+ expect(charges.find((c:{id:string})=>c.id==="tx-pc-42-03-obstruct-exhibition").description).toContain("All three acts are required");
+ expect(charges.find((c:{id:string})=>c.id==="tx-pc-42-03-obstruct-emergency-vehicle").description).toContain("audible OR visual");
+});

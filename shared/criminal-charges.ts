@@ -1,4 +1,4 @@
-import { texasHeldThreatId, texasHeldOfficerId, texasHeldFraudIds, texasHeldRoadId, texasHeldDeliveryIds, texasHeldCarryId, texasHeldTheftId, texasReviewedRecords } from "./texas-reviewed";
+import { texasHeldDisorderlyId, texasHeldThreatId, texasHeldOfficerId, texasHeldFraudIds, texasHeldRoadId, texasHeldDeliveryIds, texasHeldCarryId, texasHeldTheftId, texasReviewedRecords } from "./texas-reviewed";
 import { texasDwiRecords } from "./texas-dwi";
 import { floridaRemainingChargeText, floridaRemainingDisplayName } from "./florida-legacy-remaining";
 import { floridaSexualChargeText, floridaSexualDisplayName } from "./florida-legacy-sexual";
@@ -40430,8 +40430,8 @@ export const criminalCharges: CriminalCharge[] = [
     code: '42.01',
     jurisdiction: 'TX',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Texas law',
-    maxPenalty: 'Penalties vary by jurisdiction',
+    description: 'Historical section-wide identity requiring selection of the applicable conduct and grading branch.',
+    maxPenalty: 'Select the applicable reviewed disorderly-conduct branch to determine the penalty.',
     commonDefenses: ['Consult with attorney for applicable defenses'],
     evidenceToGather: ['Gather all relevant documentation and evidence'],
     specificRights: ['Constitutional rights apply to all criminal cases'],
@@ -94872,7 +94872,7 @@ for (const group of ["Violent Crimes", "Sexual Offenses"]) {
   chargeCategories[group] = [...new Set([...(chargeCategories[group] ?? []), ...ids])];
 }
 for (const group of ["Public Order"]) {
-  const ids = texasReviewedRecords.filter(row => ["42.07", "42.072", "33.07", "42.09", "42.091", "42.092"].includes(row.references[0].section)).map(row => row.id);
+  const ids = texasReviewedRecords.filter(row => ["42.01", "42.03", "42.12", "42.07", "42.072", "33.07", "42.09", "42.091", "42.092"].includes(row.references[0].section)).map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
 for (const group of ["Weapons", "Public Order"]) {
@@ -94924,7 +94924,7 @@ function withAuthorityDisplayName(charge: CriminalCharge): CriminalCharge {
 export function getChargeById(id: string): CriminalCharge | undefined {
   const normalizedId = normalizeChargeId(id);
   if (
-    normalizedId === texasHeldThreatId || normalizedId === texasHeldOfficerId || texasHeldFraudIds.has(normalizedId) || normalizedId === texasHeldRoadId || texasHeldDeliveryIds.has(normalizedId) || normalizedId === texasHeldCarryId || normalizedId === texasHeldTheftId ||
+    normalizedId === texasHeldDisorderlyId || normalizedId === texasHeldThreatId || normalizedId === texasHeldOfficerId || texasHeldFraudIds.has(normalizedId) || normalizedId === texasHeldRoadId || texasHeldDeliveryIds.has(normalizedId) || normalizedId === texasHeldCarryId || normalizedId === texasHeldTheftId ||
     NY_CHARGE_IDS_REQUIRING_RESELECTION.has(normalizedId) ||
     OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(normalizedId)
   ) return undefined;

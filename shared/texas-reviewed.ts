@@ -1,3 +1,4 @@
+import publicPeace from "./texas-public-peace.json";
 import commerce from "./texas-sexual-commerce.json";
 import indecentContact from "./texas-indecent-contact.json";
 import protectiveFirearms from "./texas-protective-firearms.json";
@@ -27,7 +28,7 @@ import additions from "./texas-assault-public-intoxication.json";
 import { texasDwiConduct, texasDwiQualifications, texasDwiRecords } from "./texas-dwi";
 export { texasDwiUrl as texasReviewedUrl } from "./texas-dwi";
 
-const labels: Record<string, string> = { PW: "Parks & Wild.", CP: "Civ. Prac. & Rem.", TX: "Tax", FI: "Fin.", UT: "Util.", OC: "Occ.", GV: "Gov’t", IN: "Ins.", HS: "Health & Safety", HR: "Hum. Res.", PE: "Penal", TN: "Transp.", FA: "Fam.", AL: "Alco. Bev." };
+const labels: Record<string, string> = { LG: "Loc. Gov’t", PW: "Parks & Wild.", CP: "Civ. Prac. & Rem.", TX: "Tax", FI: "Fin.", UT: "Util.", OC: "Occ.", GV: "Gov’t", IN: "Ins.", HS: "Health & Safety", HR: "Hum. Res.", PE: "Penal", TN: "Transp.", FA: "Fam.", AL: "Alco. Bev." };
 
 export function texasReviewedCitation(ref: { code: string; section: string; subdivision?: string | null }) {
   if (ref.code === "CR") return `Tex. Code Crim. Proc. art. ${ref.section}${ref.subdivision ?? ""}`;
@@ -36,6 +37,7 @@ export function texasReviewedCitation(ref: { code: string; section: string; subd
 }
 
 export const texasReviewedRecords = [
+  ...publicPeace,
   ...texasDwiRecords.map(row => ({
     ...row, officialTitle: "DRIVING WHILE INTOXICATED.", category: "misdemeanor",
     citation: texasReviewedCitation(row.references[1]), conduct: texasDwiConduct,
@@ -136,7 +138,14 @@ export function isTexasAmbiguousThreat(charge: TexasSavedSelection, jurisdiction
     (/^(?:(?:Tex\.\s*)?Penal Code\s*)?(?:§\s*)?22\.07(?:$|\()/.test(charge.code?.trim() ?? "") || /^terroristic threat$/i.test(charge.name.trim()));
 }
 
+export const texasHeldDisorderlyId = "tx-disorderly-conduct";
+export function isTexasAmbiguousDisorderly(charge: TexasSavedSelection, jurisdiction?: string) {
+  if (charge.id) return charge.id === texasHeldDisorderlyId;
+  return /^(TX|Texas)$/i.test(jurisdiction ?? "") &&
+    (/^(?:(?:Tex\.\s*)?Penal Code\s*)?(?:§\s*)?42\.01(?:$|\()/.test(charge.code?.trim() ?? "") || /^disorderly conduct$/i.test(charge.name.trim()));
+}
+
 export function needsTexasChargeReselection(charge: TexasSavedSelection, jurisdiction?: string) {
-  return isTexasAmbiguousThreat(charge, jurisdiction) || isTexasAmbiguousOfficerAssault(charge, jurisdiction) || isTexasAmbiguousFraud(charge, jurisdiction) || isTexasAmbiguousCollision(charge, jurisdiction) || isTexasAmbiguousDelivery(charge, jurisdiction) || isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
+  return isTexasAmbiguousDisorderly(charge, jurisdiction) || isTexasAmbiguousThreat(charge, jurisdiction) || isTexasAmbiguousOfficerAssault(charge, jurisdiction) || isTexasAmbiguousFraud(charge, jurisdiction) || isTexasAmbiguousCollision(charge, jurisdiction) || isTexasAmbiguousDelivery(charge, jurisdiction) || isTexasHeldTheftSelection(charge, jurisdiction) || isTexasHeldCarrySelection(charge, jurisdiction) ||
     isTexasAmbiguousVehicleBurglary(charge, jurisdiction);
 }
