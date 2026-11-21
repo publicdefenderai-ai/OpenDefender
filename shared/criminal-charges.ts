@@ -94868,7 +94868,7 @@ for (const group of ["DUI & Traffic", "DUI/Traffic Crimes"]) {
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
 for (const group of ["Violent Crimes", "Sexual Offenses"]) {
-  const ids = texasReviewedRecords.filter(row => ["21.11", "22.011", "22.021", "21.07", "21.08", "22.012"].includes(row.references[0].section)).map(row => row.id);
+  const ids = texasReviewedRecords.filter(row => ["21.11", "22.011", "22.021", "21.07", "21.08", "22.012", "43.02", "43.021", "43.03", "43.032", "43.04"].includes(row.references[0].section)).map(row => row.id);
   chargeCategories[group] = [...new Set([...(chargeCategories[group] ?? []), ...ids])];
 }
 for (const group of ["Public Order"]) {
