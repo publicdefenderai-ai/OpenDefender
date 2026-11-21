@@ -1,4 +1,4 @@
-import { texasHeldThreatId, texasHeldOfficerId, texasHeldFraudIds, texasHeldRoadId, texasHeldDeliveryIds, texasHeldCarryId, texasReviewedById, texasReviewedUrl } from "@shared/texas-reviewed";
+import { texasHeldDisorderlyId, texasHeldThreatId, texasHeldOfficerId, texasHeldFraudIds, texasHeldRoadId, texasHeldDeliveryIds, texasHeldCarryId, texasReviewedById, texasReviewedUrl } from "@shared/texas-reviewed";
 import { texasReviewedTextHashes } from "./texas-reviewed-hashes";
 import { createHash } from "node:crypto";
 import { criminalCharges, type CriminalCharge } from "@shared/criminal-charges";
@@ -34,6 +34,8 @@ export interface TexasSourceDocument {
 }
 
 const CODE_MAP: Array<[string, string]> = [
+  ["Loc. Gov’t Code", "LG"],
+  ["Local Government Code", "LG"],
   ["Fin. Code", "FI"],
   ["Finance Code", "FI"],
   ["Util. Code", "UT"],
@@ -65,6 +67,7 @@ const CODE_MAP: Array<[string, string]> = [
 ];
 
 const CODE_PREFIX: Record<string, string> = {
+  LG: "Tex. Loc. Gov’t Code",
   FI: "Tex. Fin. Code",
   UT: "Tex. Util. Code",
   GV: "Tex. Gov’t Code",
@@ -235,7 +238,7 @@ function provisionFromDocument(
 }
 
 export function texasReferencesForCharge(charge: CriminalCharge) {
-  if (charge.id === texasHeldThreatId || charge.id === texasHeldOfficerId || texasHeldFraudIds.has(charge.id) || charge.id === texasHeldRoadId || charge.id === texasHeldCarryId || texasHeldDeliveryIds.has(charge.id)) return [];
+  if (charge.id === texasHeldDisorderlyId || charge.id === texasHeldThreatId || charge.id === texasHeldOfficerId || texasHeldFraudIds.has(charge.id) || charge.id === texasHeldRoadId || charge.id === texasHeldCarryId || texasHeldDeliveryIds.has(charge.id)) return [];
   const reviewed = texasReviewedById.get(charge.id);
   if (reviewed) return reviewed.references;
   return parseTexasCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "").map((ref, i) => ({
@@ -258,7 +261,7 @@ export function buildTexasManifestRecord(
       catalogCode: charge.code,
       catalogCategory: charge.category,
       disposition: "require_exact_reselection",
-      dispositionReason: error ?? (charge.id === texasHeldThreatId ? "The section-wide terroristic-threat identity requires selection of its intent and grading branch." : charge.id === texasHeldOfficerId ? "The legacy officer-assault identity requires selection of the applicable role, conduct and grade." : texasHeldFraudIds.has(charge.id) ? "The generic fraud identity requires selection of its conduct and quantity/grade branch." : charge.id === texasHeldRoadId ? "The generic collision identity requires selection of the applicable duty and injury/damage grade." : texasHeldDeliveryIds.has(charge.id) ? "The section-wide drug identity requires selection of the applicable substance group and weight branch." : charge.id === texasHeldCarryId ? "The section-wide carrying-weapons identity requires selection of the applicable conduct and grading branch." :
+      dispositionReason: error ?? (charge.id === texasHeldDisorderlyId ? "The section-wide disorderly-conduct identity requires selection of the applicable reviewed conduct and grading branch; no automatic successor is assigned." : charge.id === texasHeldThreatId ? "The section-wide terroristic-threat identity requires selection of its intent and grading branch." : charge.id === texasHeldOfficerId ? "The legacy officer-assault identity requires selection of the applicable role, conduct and grade." : texasHeldFraudIds.has(charge.id) ? "The generic fraud identity requires selection of its conduct and quantity/grade branch." : charge.id === texasHeldRoadId ? "The generic collision identity requires selection of the applicable duty and injury/damage grade." : texasHeldDeliveryIds.has(charge.id) ? "The section-wide drug identity requires selection of the applicable substance group and weight branch." : charge.id === texasHeldCarryId ? "The section-wide carrying-weapons identity requires selection of the applicable conduct and grading branch." :
         "The catalog citation is not a Texas statutory citation supported by TCSS; do not infer a state-law replacement."),
       canonicalTitle: null,
       provisions: [],
