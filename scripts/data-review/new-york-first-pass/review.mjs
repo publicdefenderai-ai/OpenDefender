@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
+import {buildOverlayInventory} from './overlay-inventory.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url));
 const read=name=>JSON.parse(fs.readFileSync(path.join(here,name),'utf8'));
 export const hash=value=>createHash('sha256').update(value).digest('hex');
@@ -16,7 +17,7 @@ const specs=[
  {id:'ny-vandalism',section:'145.00',scope:'subdivisions 1–4, including incorporated abandoned-building definition',grade:'A',dependencies:['70.15','80.05','80.00','RPA:1971-A','RPA:1971'],
  proposedConduct:'Without a right or reasonable ground to believe one has a right: intentionally damaging another person\'s property; intentionally participating in destruction of an abandoned building as statutorily defined; recklessly damaging another person\'s property in an amount exceeding $250; or intentionally disabling/removing communication equipment to prevent an emergency-assistance request under subdivision 4. An ownership interest in that equipment is not a defense to subdivision 4.',
  correction:'Replace the one-year ceiling and generic destruction label with the official title and actual alternative conduct. Do not turn the greater-than-$250 reckless threshold into an at-least-$250 threshold.'},
- {id:'ny-trespass-after-warning',section:'140.10',scope:'subdivisions (a)–(g), with 140.00 unlawful-entry definition and incorporated camp definitions',grade:'B',dependencies:['140.00','70.15','80.05','80.00','PBH:1392'],
+ {id:'ny-trespass-after-warning',section:'140.10',proposedCitationOverlay:{citation:'N.Y. Penal Law § 140.10',sourceUrl:'https://www.nysenate.gov/legislation/laws/PEN/140.10',replacesCitation:'N.Y. Penal Law § 140.05',status:'candidate_only_not_runtime'},scope:'subdivisions (a)–(g), with 140.00 unlawful-entry definition and incorporated camp definitions',grade:'B',dependencies:['140.00','70.15','80.05','80.00','PBH:1392'],
  proposedConduct:'Knowingly entering or remaining unlawfully in a building or on real property under one of the specific conditions in subdivisions (a)–(g): enclosing barriers; specified school or camp conditions; specified public-housing conditions; or a designated, conspicuously posted no-trespass railroad zone. A generic warning or ban alone does not establish every required statutory condition.',
  correction:'Replace the generic warning-based description and the one-year/$1,000 penalty with the actual Class B classification. Do not promise a fixed warning expiration or an entitlement not established by the statute.'}
 ];
@@ -40,6 +41,7 @@ export function validateBindings(packet,sources){
   const actual=[...new Set(record.bindings.map(b=>b.sourceKey))].sort();
   if(JSON.stringify(expected)!==JSON.stringify(actual))throw Error('Dependency coverage mismatch');
   for(const b of record.bindings){const source=byKey.get(b.sourceKey);if(!source||!Number.isInteger(b.start)||!Number.isInteger(b.end)||b.start<0||b.end<=b.start||b.end>source.text.length||b.contentSha256!==source.contentSha256||source.text.slice(b.start,b.end)!==b.text)throw Error('Invalid evidence span');}
+  if(JSON.stringify(record.proposedCitationOverlay)!==JSON.stringify(spec.proposedCitationOverlay))throw Error('Candidate citation overlay mismatch');
   if(record.grade!==spec.grade||record.researchOnly!==true)throw Error('Unexpected grade or approval');
   if(!record.bindings.find(b=>b.role==='grading')?.text.replace(/\s+/g,' ').includes(`class ${spec.grade} misdemeanor`))throw Error('Missing exact grading');
  }
@@ -60,7 +62,8 @@ export function build(sources=read('candidate-sources.json'),baseline=read('base
   const matches=baseline.rows.filter(r=>r.provisions.some(p=>p.lawId==='PEN'&&p.section===section));
   return {citation:`N.Y. Penal Law § ${section}`,section,officialTitle:source.officialTitle,sourceKey:source.sourceKey,contentSha256:source.contentSha256,status:matches.length?'same_section_requires_scope_review':'no_baseline_section_mapping',matches:matches.map(r=>({id:r.id,disposition:r.disposition}))};
  });
- const packet={status:'candidate_research_not_API_manifest_or_approval',baselineCommit:baseline.baseCommit,baselineSha256:hash(JSON.stringify(baseline)),sourcesSha256:hash(JSON.stringify(sources)),selectionMethod:'28 purposive statutory citations selected across offense families before catalog matching; official Senate text is the independent reference. No frequency, randomness or statewide completeness claim.',counts:{baselineRows:121,retained:33,renamed:61,heldForReselection:27,benchmarkCitations:28,sourceDocuments:sources.length,candidateReviewedRecords:4,newPublishedRecords:0,liveSelections:null},publicationBlockers:['Official Senate API key not available in this research process; human-page evidence does not satisfy the existing API-only authority contract.','Substantive amendment/effective-date chronology remains to be reconciled; page acquisition time is not an effective date.','Candidate summaries are not wired to selector, saved guidance or exports; translations and production-path verification remain publication prerequisites.'],benchmark,records};
+ const citationOverlayInventory=buildOverlayInventory(read('overlay-baseline.json'),baseline);
+ const packet={citationOverlayInventory,status:'candidate_research_not_API_manifest_or_approval',baselineCommit:baseline.baseCommit,baselineSha256:hash(JSON.stringify(baseline)),sourcesSha256:hash(JSON.stringify(sources)),selectionMethod:'28 purposive statutory citations selected across offense families before catalog matching; official Senate text is the independent reference. No frequency, randomness or statewide completeness claim.',counts:{baselineRows:121,retained:33,renamed:61,heldForReselection:27,benchmarkCitations:28,sourceDocuments:sources.length,candidateReviewedRecords:4,newPublishedRecords:0,liveSelections:null},publicationBlockers:['Official Senate API key not available in this research process; human-page evidence does not satisfy the existing API-only authority contract.','Substantive amendment/effective-date chronology remains to be reconciled; page acquisition time is not an effective date.','Before publication, reconcile citation overlays with exact offense identity and replace directive urgentActions with supported informational wording; matching section numbers alone do not establish substantive correctness.','Candidate summaries are not wired to selector, saved guidance or exports; translations and production-path verification remain publication prerequisites.'],benchmark,records};
  validateBindings(packet,sources);return packet;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){

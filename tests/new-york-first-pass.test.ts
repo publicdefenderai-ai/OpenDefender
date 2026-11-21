@@ -85,3 +85,48 @@ describe('read-only official API candidate collector',()=>{
   await expect(collect('/private/tmp/unused-ny-output','')).rejects.toThrow('NY_SENATE_API_KEY');
  });
 });
+
+describe('New York training-data citation overlay reconciliation',()=>{
+ it('accounts for every frozen overlay without treating section matches as approval',async()=>{
+  const {buildOverlayInventory}=await import('../scripts/data-review/new-york-first-pass/overlay-inventory.mjs');
+  const frozen=JSON.parse(fs.readFileSync('scripts/data-review/new-york-first-pass/overlay-baseline.json','utf8'));
+  const inventory=buildOverlayInventory(frozen,baseline);
+  expect(inventory).toEqual(packet.citationOverlayInventory);
+  expect(inventory.counts).toEqual({overlays:74,sectionIdentityMismatches:14,matchingSectionsStillUnreviewed:30,existingHolds:23,absentFromFrozenCatalog:7,officialUrlCitationMismatches:1});
+  expect(new Set(inventory.rows.map(r=>r.id)).size).toBe(74);
+  expect(inventory.rows.filter(r=>r.sectionStatus==='existing_reselection_hold').every(r=>r.proposedTreatment.startsWith('Preserve existing exact-reselection hold'))).toBe(true);
+ });
+ it('binds the trespass candidate citation to 140.10, preserving the runtime-only mismatch as an outstanding correction',()=>{
+  const record=packet.records.find(r=>r.id==='ny-trespass-after-warning')!;
+  expect(record.proposedCitationOverlay).toEqual({citation:'N.Y. Penal Law § 140.10',sourceUrl:'https://www.nysenate.gov/legislation/laws/PEN/140.10',replacesCitation:'N.Y. Penal Law § 140.05',status:'candidate_only_not_runtime'});
+  expect(record.bindings.find(b=>b.role==='conduct')!.sourceKey).toBe('ny:PEN:140.10');
+  const row=packet.citationOverlayInventory.rows.find(r=>r.id===record.id)!;
+  expect(row.overlayKeys).toEqual(['ny:PEN:140.05']);expect(row.manifestKeys).toEqual(['ny:PEN:140.10']);
+  expect(row.sectionStatus).toBe('section_identity_mismatch');
+  expect(packet.publicationBlockers.join(' ')).toContain('directive urgentActions');
+  const altered=copy(packet);altered.records.find(r=>r.id==='ny-trespass-after-warning')!.proposedCitationOverlay!.citation='N.Y. Penal Law § 140.05';
+  expect(()=>validateBindings(altered,sources)).toThrow('citation overlay mismatch');
+ });
+ it('checks both law and section identities, compound citations and the independent official URL',async()=>{
+  const {citationKeys,buildOverlayInventory}=await import('../scripts/data-review/new-york-first-pass/overlay-inventory.mjs');
+  expect(citationKeys('N.Y. Alco. Bev. Cont. Law § 65-b')).toEqual(['ny:ABC:65-B']);
+  expect(citationKeys('N.Y. Penal Law §§ 110.00, 160.10')).toEqual(['ny:PEN:110.00','ny:PEN:160.10']);
+  const row=packet.citationOverlayInventory.rows.find(r=>r.id==='ny-felon-in-possession-of-firearm')!;
+  expect(row.officialUrlStatus).toBe('differs_from_overlay_section');expect(row.sectionStatus).toBe('existing_reselection_hold');
+  expect(()=>citationKeys('Unknown law § 140.10')).toThrow();
+  const inventory=buildOverlayInventory([{...row,citation:'N.Y. Penal Law § 265.01'}],baseline);
+  expect(inventory.rows[0].officialUrlStatus).toBe('matches_overlay_section');
+  expect(inventory.rows[0].sectionStatus).toBe('existing_reselection_hold');
+ });
+ it('enumerates all current NY training-data overlays without freezing later runtime corrections',async()=>{
+  const {CHARGE_CITATIONS}=await import('../shared/criminal-charge-citations');
+  const {trainingOverlays,buildOverlayInventory}=await import('../scripts/data-review/new-york-first-pass/overlay-inventory.mjs');
+  const current=trainingOverlays(CHARGE_CITATIONS);
+  expect(current.map(r=>r.id).sort()).toEqual(Object.entries(CHARGE_CITATIONS).filter(([id,r])=>id.startsWith('ny-')&&r.source?.includes('Training data')).map(([id])=>id).sort());
+  expect(buildOverlayInventory(current,baseline).rows).toHaveLength(current.length);
+  // The 74-row evidence snapshot stays historical when a later publication PR repairs an overlay.
+  const corrected=current.map(r=>r.id==='ny-trespass-after-warning'?{...r,citation:'N.Y. Penal Law § 140.10',sourceUrl:'https://www.nysenate.gov/legislation/laws/PEN/140.10'}:r);
+  const repaired=buildOverlayInventory(corrected,baseline).rows.find(r=>r.id==='ny-trespass-after-warning');
+  if(repaired)expect(repaired.sectionStatus).toBe('same_section_scope_unreviewed');
+ });
+});

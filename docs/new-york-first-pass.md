@@ -21,6 +21,33 @@ Four existing identities receive individually bound candidate corrections:
 
 These are proposed ordinary penalties for individuals. PEN 70.15(1), (1-a) and (2) supply imprisonment rules; 80.05(1), (2), (5) and (6), with 80.00(2)–(3), supply fine rules and limitations. The double-gain fine is an alternative, not an automatic addition. Corporate penalties are excluded from this summary. Restitution and fees are not represented as included in the fine cap. The 70.15 ameliorative text is retained; no prospective-only assumption is made. Higher-degree offenses and case-specific sentencing remain distinct.
 
+## Citation overlay identity reconciliation
+
+The frozen scan covers all **74 New York citation overlays labeled Training data** at the research baseline: **14 section-identity mismatches, 30 same-section matches requiring substantive review, 23 existing reselection holds, and seven overlays absent from the frozen catalog**. This is an identity comparison, not new statutory verification of those 74 entries. It changes no runtime overlay and approves none of them. Existing `high` confidence flags are retained as observed metadata, not adopted as evidence.
+
+The trespass candidate now explicitly proposes `N.Y. Penal Law § 140.10` and its official 140.10 URL, replacing the overlay's 140.05 citation and URL together with the conduct/grade correction. A later publication change must update the catalog explanation, citation overlay and authority mapping consistently. Matching the candidate summary while leaving the old Read-the-Law target would be incomplete.
+
+| Exact ID | Training-data overlay | Frozen manifest identity |
+| --- | --- | --- |
+| `ny-alcohol-in-park` | ny:ABC:106 | ny:NYC:10-125 |
+| `ny-computer-fraud` | ny:PEN:156.27 | ny:PEN:156.05 |
+| `ny-conspiracy` | ny:PEN:105.10 | ny:PEN:105.00 |
+| `ny-curfew-violation` | ny:FCT:712 | ny:NYC:10-222 |
+| `ny-fake-id` | ny:ABC:65-B | ny:PEN:170.25 |
+| `ny-forgery` | ny:PEN:170.10 | ny:PEN:170.05 |
+| `ny-harassment-stalking` | ny:PEN:240.26 | ny:PEN:120.45 |
+| `ny-insurance-fraud` | ny:PEN:176.05 | ny:PEN:176.15 |
+| `ny-money-laundering` | ny:PEN:470.05 | ny:PEN:470.20 |
+| `ny-possession-of-prohibited-weapon` | ny:PEN:265.02 | ny:PEN:265.01 |
+| `ny-recidivist-enhancement` | ny:PEN:70.10 | ny:PEN:70.08 |
+| `ny-solicitation` | ny:PEN:230.04 | ny:PEN:230.00 |
+| `ny-theft-by-receiving` | ny:PEN:165.40 | ny:PEN:165.50 |
+| `ny-trespass-after-warning` | ny:PEN:140.05 | ny:PEN:140.10 |
+
+The held `ny-felon-in-possession-of-firearm` also has an internal disagreement: its overlay cites 265.01-b while its official URL points to 265.01. It remains held; this inventory does not infer a replacement. The other mismatches likewise require exact offense reconciliation, not automatic adoption of either side. The 30 same-section rows are not proof of correct subdivisions, grades, penalties, jury instructions or source currency.
+
+`overlay-baseline.json` records the exact observed overlays; `overlay-inventory.mjs` deterministically compares law and section identities, accounts for compound citations, and separately checks official Senate URLs. Frozen accounting remains reproducible without requiring future runtime corrections to preserve these mismatches. Before any product publication, the four corrected identities also need their directive `urgentActions` rewritten as supported informational content under the existing information-not-advice framework; this research-only PR does not change those fields.
+
 ## Exact next dependency
 
 `NY_SENATE_API_KEY` was not present in this research process. Do not paste it into chat, put it in a command argument or use the existing seed-capable importer. In the existing approved secret environment, a separately authorized read-only acquisition can run:

@@ -1,4 +1,1513 @@
 {
+  "citationOverlayInventory": {
+    "status": "research_inventory_no_runtime_change",
+    "scope": "Every NY overlay whose source contains Training data; comparison to the frozen first-pass baseline, not substantive verification.",
+    "counts": {
+      "overlays": 74,
+      "sectionIdentityMismatches": 14,
+      "matchingSectionsStillUnreviewed": 30,
+      "existingHolds": 23,
+      "absentFromFrozenCatalog": 7,
+      "officialUrlCitationMismatches": 1
+    },
+    "rows": [
+      {
+        "id": "ny-accessory-after-the-fact",
+        "citation": "N.Y. Penal Law § 205.50",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York hindering prosecution; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/205.50",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "MPC § 2.07 / NY accessory statute",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:205.50"
+        ],
+        "manifestKeys": [
+          "ny:PEN:205.50"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-aggravated-unlicensed-operation",
+        "citation": "N.Y. Veh. & Traf. Law § 511",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York aggravated unlicensed operation; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-511/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "511",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:VAT:511"
+        ],
+        "manifestKeys": [
+          "ny:VAT:511"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-aiding-and-abetting",
+        "citation": "N.Y. Penal Law § 20.00",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York criminal liability statute; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/20.00",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "MPC § 2.06 / NY accomplice statute",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:20.00"
+        ],
+        "manifestKeys": [
+          "ny:PEN:20.00"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-alcohol-in-park",
+        "citation": "N.Y. Alco. Bev. Cont. Law § 106(6)",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York consumption of alcohol in public park; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-106/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "10-125",
+        "baselineDisposition": "retain",
+        "overlayKeys": [
+          "ny:ABC:106"
+        ],
+        "manifestKeys": [
+          "ny:NYC:10-125"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-animal-at-large",
+        "citation": "N.Y. Agric. & Mkts. Law § 121",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York dog running at large / dangerous dog; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-121/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "121",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:AGM:121"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-animal-cruelty-misdemeanor",
+        "citation": "N.Y. Agric. & Mkts. Law § 353",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York overdriving, torturing and injuring animals (misdemeanor); no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-353/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "353",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:AGM:353"
+        ],
+        "manifestKeys": [
+          "ny:AGM:353"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-attempted-robbery",
+        "citation": "N.Y. Penal Law §§ 110.00, 160.10",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York attempt + robbery second degree",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-110-00/",
+        "instructionRef": "CJI2d PL 160.15",
+        "instructionUrl": "https://www.nycourts.gov/judges/cji/2-PenalLaw/160/160.15.pdf",
+        "catalogCode": "NY attempted robbery statute / MPC § 5.01",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:PEN:110.00",
+          "ny:PEN:160.10"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-auto-burglary",
+        "citation": "N.Y. Penal Law § 140.20",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York burglary third degree (vehicle as structure)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/140.20",
+        "instructionRef": "CJI2d PL 140.20",
+        "instructionUrl": "https://www.nycourts.gov/judges/cji/2-PenalLaw/140/140.20.pdf",
+        "catalogCode": "140.15",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:PEN:140.20"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-bad-checks",
+        "citation": "N.Y. Penal Law § 190.05",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York issuing a bad check; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/190.05",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": null,
+        "baselineDisposition": null,
+        "overlayKeys": [
+          "ny:PEN:190.05"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "absent_from_frozen_catalog",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Do not infer an active catalog record or publish from this overlay."
+      },
+      {
+        "id": "ny-bank-robbery",
+        "citation": "N.Y. Penal Law § 160.15",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York robbery first degree (armed, financial institution); federal § 2113 applies concurrently",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/160.15",
+        "instructionRef": "CJI2d PL 160.15",
+        "instructionUrl": "https://www.nycourts.gov/judges/cji/2-PenalLaw/160/160.15.pdf",
+        "catalogCode": "367.72",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:PEN:160.15"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-check-fraud",
+        "citation": "N.Y. Penal Law § 190.05",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York issuing a bad check; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/190.05",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "190.05",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:190.05"
+        ],
+        "manifestKeys": [
+          "ny:PEN:190.05"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-computer-fraud",
+        "citation": "N.Y. Penal Law § 156.27",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York computer tampering statute; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/156.27",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "156.05",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:156.27"
+        ],
+        "manifestKeys": [
+          "ny:PEN:156.05"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-conspiracy",
+        "citation": "N.Y. Penal Law § 105.10",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York conspiracy statute; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/105.10",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "MPC § 5.03 / NY conspiracy statute",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:105.10"
+        ],
+        "manifestKeys": [
+          "ny:PEN:105.00"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-contempt-of-court",
+        "citation": "N.Y. Jud. Law § 750",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York criminal contempt of court; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-750/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "750",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:JUD:750"
+        ],
+        "manifestKeys": [
+          "ny:JUD:750"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-credit-card-fraud",
+        "citation": "N.Y. Penal Law § 165.17",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York unlawful use of a credit card; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/165.17",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "190.80",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:PEN:165.17"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-criminal-attempt",
+        "citation": "N.Y. Penal Law § 110.00",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York attempt statute; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/110.00",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "MPC § 5.01 / NY attempt statute",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:110.00"
+        ],
+        "manifestKeys": [
+          "ny:PEN:110.00"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-criminal-contempt",
+        "citation": "N.Y. Penal Law § 215.50",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York criminal contempt in the second degree; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/215.50",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "215.50",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:215.50"
+        ],
+        "manifestKeys": [
+          "ny:PEN:215.50"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-criminal-possession-of-stolen-property",
+        "citation": "N.Y. Penal Law § 165.40",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York criminal possession of stolen property; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/165.40",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "165.40",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:165.40"
+        ],
+        "manifestKeys": [
+          "ny:PEN:165.40"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-criminal-solicitation",
+        "citation": "N.Y. Penal Law § 100.00",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York solicitation statute; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/100.00",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "MPC § 5.02 / NY solicitation statute",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:100.00"
+        ],
+        "manifestKeys": [
+          "ny:PEN:100.00"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-curfew-violation",
+        "citation": "N.Y. Fam. Ct. Act § 712",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York juvenile curfew (PINS); no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-712/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "722",
+        "baselineDisposition": "retain",
+        "overlayKeys": [
+          "ny:FCT:712"
+        ],
+        "manifestKeys": [
+          "ny:NYC:10-222"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-defective-vehicle-equipment",
+        "citation": "N.Y. Veh. & Traf. Law § 375",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York defective equipment; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-375/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "375",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:VAT:375"
+        ],
+        "manifestKeys": [
+          "ny:VAT:375"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-discharge-of-firearm-in-city",
+        "citation": "N.Y. Penal Law § 265.35",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York unlawfully possessing or discharging a firearm; verify against Justia before promoting to high; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/265.35",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "265.35",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:265.35"
+        ],
+        "manifestKeys": [
+          "ny:PEN:265.35"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-disturbing-the-peace",
+        "citation": "N.Y. Penal Law § 240.20",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York disorderly conduct; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.20",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": null,
+        "baselineDisposition": null,
+        "overlayKeys": [
+          "ny:PEN:240.20"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "absent_from_frozen_catalog",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Do not infer an active catalog record or publish from this overlay."
+      },
+      {
+        "id": "ny-driving-while-suspended",
+        "citation": "N.Y. Veh. & Traf. Law § 511",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York aggravated unlicensed operation; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-511/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": null,
+        "baselineDisposition": null,
+        "overlayKeys": [
+          "ny:VAT:511"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "absent_from_frozen_catalog",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Do not infer an active catalog record or publish from this overlay."
+      },
+      {
+        "id": "ny-driving-without-insurance",
+        "citation": "N.Y. Veh. & Traf. Law § 319",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York operating without insurance; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-319/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "319",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:VAT:319"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-embezzlement",
+        "citation": "N.Y. Penal Law § 155.05(2)(b)",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York embezzlement under larceny statute; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/155.05",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "155.05",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:PEN:155.05"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-expired-inspection",
+        "citation": "N.Y. Veh. & Traf. Law § 306",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York vehicle safety and emissions inspection; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-306/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "306",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:VAT:306"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-expired-registration",
+        "citation": "N.Y. Veh. & Traf. Law § 401",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York expired vehicle registration; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-401/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "401",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:VAT:401"
+        ],
+        "manifestKeys": [
+          "ny:VAT:401"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-failure-to-pay-child-support",
+        "citation": "N.Y. Penal Law § 260.05",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York endangering the welfare of a child (nonsupport); no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/260.05",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "260.05",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:260.05"
+        ],
+        "manifestKeys": [
+          "ny:PEN:260.05"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-fake-id",
+        "citation": "N.Y. Alco. Bev. Cont. Law § 65-b",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York misrepresentation of age by a minor; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-65-b/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "170.25",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:ABC:65-B"
+        ],
+        "manifestKeys": [
+          "ny:PEN:170.25"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-false-info-to-police",
+        "citation": "N.Y. Penal Law § 240.50",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York falsely reporting an incident; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.50",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "240.50",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:240.50"
+        ],
+        "manifestKeys": [
+          "ny:PEN:240.50"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-felon-in-possession-of-firearm",
+        "citation": "N.Y. Penal Law § 265.01-b",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York criminal possession of a firearm (felon); verify against Justia before promoting to high; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/265.01",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "265.01",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:PEN:265.01-B"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "differs_from_overlay_section",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-firearm-in-felony-enhancement",
+        "citation": "N.Y. Penal Law § 265.09",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York criminal use of a firearm enhancement; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/265.09",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "NY firearm enhancement statute",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:265.09"
+        ],
+        "manifestKeys": [
+          "ny:PEN:265.09"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-forgery",
+        "citation": "N.Y. Penal Law § 170.10",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York forgery second degree; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/170.10",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "170.05",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:170.10"
+        ],
+        "manifestKeys": [
+          "ny:PEN:170.05"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-gang-enhancement",
+        "citation": "N.Y. Penal Law § 460.22",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York criminal enterprise enhancement; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/460.22",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "NY gang enhancement statute",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:PEN:460.22"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-harassment-stalking",
+        "citation": "N.Y. Penal Law § 240.26",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York harassment/stalking; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.26",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "120.45",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:240.26"
+        ],
+        "manifestKeys": [
+          "ny:PEN:120.45"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-hate-crime-enhancement",
+        "citation": "N.Y. Penal Law § 485.05",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York hate crime enhancement; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/485.05",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "NY hate crime statute",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:485.05"
+        ],
+        "manifestKeys": [
+          "ny:PEN:485.05"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-hit-and-run",
+        "citation": "N.Y. Veh. & Traf. Law § 600",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York leaving scene of accident without reporting; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-600/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "600",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:VAT:600"
+        ],
+        "manifestKeys": [
+          "ny:VAT:600"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-hunting-fishing-no-license",
+        "citation": "N.Y. Envtl. Conserv. Law § 11-0713",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York hunting or fishing without a license; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-11-0713/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "71-0925",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:ENV:11-0713"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-identity-theft",
+        "citation": "N.Y. Penal Law § 190.78",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York identity theft statute; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/190.78",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "190.78",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:190.78"
+        ],
+        "manifestKeys": [
+          "ny:PEN:190.78"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-illegal-camping",
+        "citation": "N.Y. Penal Law § 140.05",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York trespass (camping); no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/140.05",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "240.37",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:PEN:140.05"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-illegal-fireworks",
+        "citation": "N.Y. Gen. Bus. Law § 270",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York illegal fireworks; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-270/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "405",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:GBS:270"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-insurance-fraud",
+        "citation": "N.Y. Penal Law § 176.05",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York insurance fraud statute; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/176.05",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "176.15",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:176.05"
+        ],
+        "manifestKeys": [
+          "ny:PEN:176.15"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-juvenile-delinquency-felony",
+        "citation": "N.Y. Fam. Ct. Act § 301.2(1)",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York juvenile delinquency (felony level); no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-301-2/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "FCA §301.2",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:FCT:301.2"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-juvenile-delinquency-misdemeanor",
+        "citation": "N.Y. Fam. Ct. Act § 301.2(1)",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York juvenile delinquency (misdemeanor level); no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-301-2/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "FCA §301.2",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:FCT:301.2"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-juvenile-firearm-possession",
+        "citation": "N.Y. Penal Law § 265.05",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York unlawful possession of weapon by person under 16; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/265.05",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "NY juvenile firearm possession statute",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:265.05"
+        ],
+        "manifestKeys": [
+          "ny:PEN:265.05"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-juvenile-transfer-adult-court",
+        "citation": "N.Y. Fam. Ct. Act § 725",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York removal to criminal court; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-725/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "NY Juvenile Court Act — transfer / waiver provisions",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:FCT:725"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-littering",
+        "citation": "N.Y. Envtl. Conserv. Law § 27-0511",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York littering; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-27-0511/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "71-2505",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:ENV:27-0511"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-mail-fraud",
+        "citation": "N.Y. Penal Law § 190.65(1)(a)",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York scheme to defraud via mail; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/190.65",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "235.45",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:PEN:190.65"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-menacing",
+        "citation": "N.Y. Penal Law § 120.15",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York menacing third degree; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/120.15",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "120.15",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:120.15"
+        ],
+        "manifestKeys": [
+          "ny:PEN:120.15"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-minor-in-possession",
+        "citation": "N.Y. Alco. Bev. Cont. Law § 65-c",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York unlawful possession of an alcoholic beverage by a person under 21; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-65-c/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "65-c",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:ABC:65-C"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-money-laundering",
+        "citation": "N.Y. Penal Law § 470.05",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York money laundering statute; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/470.05",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "NY money laundering statute",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:470.05"
+        ],
+        "manifestKeys": [
+          "ny:PEN:470.20"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-noise-violation",
+        "citation": "N.Y. Penal Law § 240.20(2)",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York disorderly conduct (unreasonable noise); no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.20",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "240.20",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:240.20"
+        ],
+        "manifestKeys": [
+          "ny:PEN:240.20"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-panhandling",
+        "citation": "N.Y. Penal Law § 240.35(1)",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York loitering (begging); no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.35",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "240.35",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:PEN:240.35"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-possession-of-prohibited-weapon",
+        "citation": "N.Y. Penal Law § 265.02",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York criminal possession of a weapon in the third degree; verify against Justia before promoting to high; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/265.02",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "265.01",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:265.02"
+        ],
+        "manifestKeys": [
+          "ny:PEN:265.01"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-probation-violation",
+        "citation": "N.Y. Penal Law § 65.10",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York probation conditions / revocation under CPL § 410.70; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/65.10",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "410.70",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:PEN:65.10"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-protective-order-violation",
+        "citation": "N.Y. Penal Law § 215.51",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York criminal contempt first degree (violation of order of protection); no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/215.51",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "215.51",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:215.51"
+        ],
+        "manifestKeys": [
+          "ny:PEN:215.51"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-recidivist-enhancement",
+        "citation": "N.Y. Penal Law § 70.10",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York persistent felony offender; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/70.10",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "NY habitual offender / recidivist statute",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:70.10"
+        ],
+        "manifestKeys": [
+          "ny:PEN:70.08"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-reckless-driving",
+        "citation": "N.Y. Veh. & Traf. Law § 1212",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York reckless driving; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-1212/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "1212",
+        "baselineDisposition": "retain",
+        "overlayKeys": [
+          "ny:VAT:1212"
+        ],
+        "manifestKeys": [
+          "ny:VAT:1212"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-reckless-driving-criminal",
+        "citation": "N.Y. Veh. & Traf. Law § 1212",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York reckless driving; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-1212/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": null,
+        "baselineDisposition": null,
+        "overlayKeys": [
+          "ny:VAT:1212"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "absent_from_frozen_catalog",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Do not infer an active catalog record or publish from this overlay."
+      },
+      {
+        "id": "ny-rico-organized-crime",
+        "citation": "N.Y. Penal Law § 460.20",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York enterprise corruption (RICO equivalent); no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/460.20",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "NY organized crime / racketeering statute",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:460.20"
+        ],
+        "manifestKeys": [
+          "ny:PEN:460.20"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-robbery-in-the-third-degree",
+        "citation": "N.Y. Penal Law § 160.05",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York robbery in the third degree; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/160.05",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "160.05",
+        "baselineDisposition": "retain",
+        "overlayKeys": [
+          "ny:PEN:160.05"
+        ],
+        "manifestKeys": [
+          "ny:PEN:160.05"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-sexual-assault-in-the-second-degree",
+        "citation": "N.Y. Penal Law § 130.30",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York rape in the second degree; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/130.30",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": null,
+        "baselineDisposition": null,
+        "overlayKeys": [
+          "ny:PEN:130.30"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "absent_from_frozen_catalog",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Do not infer an active catalog record or publish from this overlay."
+      },
+      {
+        "id": "ny-solicitation",
+        "citation": "N.Y. Penal Law § 230.04",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York patronizing a prostitute; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/230.04",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "230.00",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:230.04"
+        ],
+        "manifestKeys": [
+          "ny:PEN:230.00"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-statutory-rape",
+        "citation": "N.Y. Penal Law § 130.25",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York rape third degree (statutory)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/130.25",
+        "instructionRef": "CJI2d PL 130.25",
+        "instructionUrl": "https://www.nycourts.gov/judges/cji/2-PenalLaw/130/130.25.pdf",
+        "catalogCode": null,
+        "baselineDisposition": null,
+        "overlayKeys": [
+          "ny:PEN:130.25"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "absent_from_frozen_catalog",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Do not infer an active catalog record or publish from this overlay."
+      },
+      {
+        "id": "ny-tax-fraud",
+        "citation": "N.Y. Tax Law § 1801",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York tax fraud statute; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-1801/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "1801",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:TAX:1801"
+        ],
+        "manifestKeys": [
+          "ny:TAX:1801"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-theft-by-receiving",
+        "citation": "N.Y. Penal Law § 165.40",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York criminal possession of stolen property; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/165.40",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "165.50",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:165.40"
+        ],
+        "manifestKeys": [
+          "ny:PEN:165.50"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Resolve exact offense identity across catalog, manifest and overlay before publication; do not automatically choose either side."
+      },
+      {
+        "id": "ny-theft-of-services",
+        "citation": "N.Y. Penal Law § 165.15",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York theft of services; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/165.15",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "165.15",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:165.15"
+        ],
+        "manifestKeys": [
+          "ny:PEN:165.15"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-trespass-after-warning",
+        "citation": "N.Y. Penal Law § 140.05",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York trespass after warning; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/140.05",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "140.10",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:140.05"
+        ],
+        "manifestKeys": [
+          "ny:PEN:140.10"
+        ],
+        "sectionStatus": "section_identity_mismatch",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Candidate PEN 140.10 citation and URL must replace PEN 140.05 with the reviewed conduct/grade correction; runtime unchanged here."
+      },
+      {
+        "id": "ny-truancy",
+        "citation": "N.Y. Educ. Law § 3212",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York compulsory attendance / truancy; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-3212/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "3212",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:EDN:3212"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      },
+      {
+        "id": "ny-turnstile-jumping",
+        "citation": "N.Y. Penal Law § 165.15(3)",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York theft of services / turnstile jumping; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/165.15",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "165.15",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:165.15"
+        ],
+        "manifestKeys": [
+          "ny:PEN:165.15"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-unlawful-carrying-of-weapon",
+        "citation": "N.Y. Penal Law § 265.01",
+        "confidence": "high",
+        "lastVerified": "2026-06",
+        "source": "Training data — New York criminal possession of a weapon; verify against Justia before promoting to high; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/265.01",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "265.01",
+        "baselineDisposition": "exact_alias_rename",
+        "overlayKeys": [
+          "ny:PEN:265.01"
+        ],
+        "manifestKeys": [
+          "ny:PEN:265.01"
+        ],
+        "sectionStatus": "same_section_scope_unreviewed",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Section identity agrees only; independently verify scope, grade, penalties, instructions and provenance before publication."
+      },
+      {
+        "id": "ny-unregistered-vehicle",
+        "citation": "N.Y. Veh. & Traf. Law § 401",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York registration of vehicles; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://law.justia.com/codes/new-york/section-401/",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": null,
+        "baselineDisposition": null,
+        "overlayKeys": [
+          "ny:VAT:401"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "absent_from_frozen_catalog",
+        "officialUrlStatus": "not_official_senate_URL",
+        "proposedTreatment": "Do not infer an active catalog record or publish from this overlay."
+      },
+      {
+        "id": "ny-wire-fraud",
+        "citation": "N.Y. Penal Law § 190.65",
+        "confidence": "medium",
+        "lastVerified": "2026-04",
+        "source": "Training data — New York scheme to defraud; no CJI2d (no per-charge CJI2d instruction identified)",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/190.65",
+        "instructionRef": null,
+        "instructionUrl": null,
+        "catalogCode": "346.12",
+        "baselineDisposition": "require_exact_reselection",
+        "overlayKeys": [
+          "ny:PEN:190.65"
+        ],
+        "manifestKeys": [],
+        "sectionStatus": "existing_reselection_hold",
+        "officialUrlStatus": "matches_overlay_section",
+        "proposedTreatment": "Preserve existing exact-reselection hold; no automatic successor substitution."
+      }
+    ]
+  },
   "status": "candidate_research_not_API_manifest_or_approval",
   "baselineCommit": "9cebb7bbf1c4a4afec0ffad19e1a6195ee973fc0",
   "baselineSha256": "5c3bd5a203c7bced0d97950a361756ba48b943454914f9c5443fb8637c7b3e73",
@@ -18,6 +1527,7 @@
   "publicationBlockers": [
     "Official Senate API key not available in this research process; human-page evidence does not satisfy the existing API-only authority contract.",
     "Substantive amendment/effective-date chronology remains to be reconciled; page acquisition time is not an effective date.",
+    "Before publication, reconcile citation overlays with exact offense identity and replace directive urgentActions with supported informational wording; matching section numbers alone do not establish substantive correctness.",
     "Candidate summaries are not wired to selector, saved guidance or exports; translations and production-path verification remain publication prerequisites."
   ],
   "benchmark": [
@@ -612,6 +2122,12 @@
     {
       "id": "ny-trespass-after-warning",
       "section": "140.10",
+      "proposedCitationOverlay": {
+        "citation": "N.Y. Penal Law § 140.10",
+        "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/140.10",
+        "replacesCitation": "N.Y. Penal Law § 140.05",
+        "status": "candidate_only_not_runtime"
+      },
       "scope": "subdivisions (a)–(g), with 140.00 unlawful-entry definition and incorporated camp definitions",
       "grade": "B",
       "dependencies": [
