@@ -18,12 +18,19 @@ function logOpenLawsFailure(operation: string, error: unknown): void {
  * OpenLaws API Client
  * Integrates with OpenLaws API for comprehensive 50-state statute coverage
  * 
- * API Documentation: https://docs.openlaws.us/version-104/api-reference
+ * API Documentation: https://docs.openlaws.us/api-reference
  * Coverage: 50 states + DC + Puerto Rico + Federal (4.3M+ statute sections)
  * 
- * Updated December 2025 to use working hierarchical division endpoints
- * Uses generic breadth-first search to find sections across all jurisdictions
+ * Citation lookups use the provider’s direct Bluebook endpoint.
+ * Hierarchical methods remain available for browsing and imports.
  */
+
+export class OpenLawsLookupError extends Error {
+  constructor(public readonly status: 400 | 503, message: string) {
+    super(message);
+    this.name = 'OpenLawsLookupError';
+  }
+}
 
 export interface OpenLawsConfig {
   apiKey?: string;
@@ -388,7 +395,7 @@ export class OpenLawsClient {
     const normalized = citation.trim();
     
     // Pattern 1: Federal "18 U.S.C. § 1001" or "Title 18, § 1001"
-    const federalPattern = /(?:Title\s+)?(\d+)\s*U\.?S\.?C\.?A?\.?\s*§?\s*(\d+(?:[a-zA-Z])?)/i;
+    const federalPattern = /(?:Title\s+)?(\d+)\s*U\.?S\.?C\.?A?\.?\s*§?\s*(\d+[a-zA-Z]*(?:-\d+[a-zA-Z]*)*)/i;
     const federalMatch = normalized.match(federalPattern);
     if (federalMatch) {
       return {
@@ -669,40 +676,54 @@ export class OpenLawsClient {
     return [...prioritized, ...rest];
   }
 
-  /**
-   * Search for a statute by citation string
-   * Uses generic BFS to find the section in any jurisdiction
-   */
+  /** Direct lookup avoids incomplete hierarchy scans being reported as missing law. */
   async searchByCitation(citation: string, options: { signal?: AbortSignal } = {}): Promise<OpenLawsStatute | null> {
     this.lastSearchStatus = 'not_run';
     if (!this.isConfigured) {
       this.lastSearchStatus = 'unavailable';
-      throw new Error('OpenLaws API not configured');
+      throw new OpenLawsLookupError(503, 'OpenLaws unavailable');
     }
-
     const parsed = this.parseCitation(citation);
-    if (!parsed) {
-      return null;
-    }
+    if (!parsed) throw new OpenLawsLookupError(400, 'Invalid citation format');
 
-    const { jurisdiction, section, codeHint } = parsed;
-    const lawKey = STATE_STATUTE_KEYS[jurisdiction];
-    if (!lawKey) {
-      devLog('openlaws', `Unknown jurisdiction: ${jurisdiction}`);
-      return null;
-    }
-
+    // Keep the full citation, including subsections, for the provider to resolve.
+    const query = citation.trim().replace(/U\.?S\.?C\.?A?\.?/i, 'U.S.C.');
     try {
-      const division = await this.findSectionInLaw(jurisdiction, lawKey, section, codeHint, 6, options.signal);
-      this.lastSearchStatus = 'available';
-      if (division) {
-        return this.divisionToStatute(division, citation);
+      const { data: division } = await this.axios.get<OpenLawsDivision>(
+        `/jurisdictions/${parsed.jurisdiction}/laws/citations`,
+        { params: { query }, signal: options.signal },
+      );
+      if (!division || division.jurisdiction_key !== parsed.jurisdiction ||
+          typeof division.path !== 'string' ||
+          ![division.plaintext_content, division.markdown_content].some(text => typeof text === 'string' && text.trim())) {
+        throw new OpenLawsLookupError(503, 'OpenLaws returned incomplete text');
       }
-      return null;
+      // Federal section numbers repeat across titles. Never display another title's text.
+      if (parsed.jurisdiction === 'FED' && (division.law_key !== 'FED-USC' ||
+          !division.path.split('.').includes(parsed.codeHint!) ||
+          !division.path.split('.').includes(`section_${parsed.section.toLowerCase().replace(/[.:-]/g, '_')}`))) {
+        throw new OpenLawsLookupError(503, 'OpenLaws returned a different statute');
+      }
+      const statute = this.divisionToStatute(division, citation);
+      // Plaintext retains subsection labels; raw OpenLaws Markdown requires its
+      // custom list renderer and otherwise shows every numbered paragraph as 1.
+      if (typeof division.plaintext_content === 'string' && division.plaintext_content.trim()) {
+        statute.content = division.plaintext_content.trim();
+      }
+      this.lastSearchStatus = 'available';
+      return statute;
     } catch (error) {
+      const status = axios.isAxiosError(error) ? error.response?.status : undefined;
+      if (status === 404) {
+        this.lastSearchStatus = 'available';
+        return null;
+      }
       this.lastSearchStatus = 'unavailable';
       logOpenLawsFailure('citation search', error);
-      return null;
+      if (error instanceof OpenLawsLookupError) throw error;
+      if (status === 400) throw new OpenLawsLookupError(400, 'Invalid citation format');
+      // Authentication, quota, timeout and malformed responses are not absence of law.
+      throw new OpenLawsLookupError(503, 'OpenLaws unavailable');
     }
   }
 
