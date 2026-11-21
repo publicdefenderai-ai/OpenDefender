@@ -1,6 +1,6 @@
 import { beforeEach, expect, it, vi } from 'vitest';
 import axios, { AxiosError, type AxiosAdapter } from 'axios';
-import { federalStatuteLookups } from './fixtures/federal-statute-lookups';
+import { federalStatuteLookups, additionalStatuteLookups } from './fixtures/federal-statute-lookups';
 vi.mock('../server/db', () => ({ db: {} }));
 vi.mock('../server/services/operations-metrics', () => ({ recordProviderMetric: vi.fn() }));
 import { OpenLawsClient } from '../server/services/openlaws-client';
@@ -107,3 +107,28 @@ it('rejects malformed user input before contacting the provider', async () => {
   expect(status).toBe(400);
   expect(calls).toHaveLength(0);
 });
+it('resolves a hyphenated federal section without truncating its identity', async () => {
+  adapter = async config => {
+    calls.push({ url: config.url, query: config.params.query });
+    return { config, status: 200, statusText: 'OK', headers: {}, data: {
+      ...division(42, '2000e-2'), path: 'title_42.chapter_21.section_2000e_2',
+    } };
+  };
+  expect(client.parseCitation('42 U.S.C. § 2000e-2')).toMatchObject({ section: '2000e-2' });
+  expect(await client.searchByCitation('42 U.S.C. § 2000e-2')).toMatchObject({ section: '2000e-2' });
+  expect(calls[0].query).toBe('42 U.S.C. § 2000e-2');
+});
+
+for (const item of additionalStatuteLookups.filter(item => item.jurisdiction !== 'FED')) {
+  it(`routes the state smoke citation intact: ${item.citation}`, async () => {
+    adapter = async config => {
+      calls.push({ url: config.url, query: config.params.query });
+      return { config, status: 200, statusText: 'OK', headers: {}, data: {
+        ...division(18, item.section), jurisdiction_key: item.jurisdiction,
+        law_key: `${item.jurisdiction}-STAT`, path: `code.section_${item.section.replace(/[.:-]/g, '_')}`,
+      } };
+    };
+    expect(await client.searchByCitation(item.citation)).toMatchObject({ jurisdiction: item.jurisdiction, section: item.section });
+    expect(calls).toEqual([{ url: `/jurisdictions/${item.jurisdiction}/laws/citations`, query: item.citation }]);
+  });
+}

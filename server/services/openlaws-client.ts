@@ -395,7 +395,7 @@ export class OpenLawsClient {
     const normalized = citation.trim();
     
     // Pattern 1: Federal "18 U.S.C. § 1001" or "Title 18, § 1001"
-    const federalPattern = /(?:Title\s+)?(\d+)\s*U\.?S\.?C\.?A?\.?\s*§?\s*(\d+(?:[a-zA-Z])?)/i;
+    const federalPattern = /(?:Title\s+)?(\d+)\s*U\.?S\.?C\.?A?\.?\s*§?\s*(\d+[a-zA-Z]*(?:-\d+[a-zA-Z]*)*)/i;
     const federalMatch = normalized.match(federalPattern);
     if (federalMatch) {
       return {
@@ -701,7 +701,7 @@ export class OpenLawsClient {
       // Federal section numbers repeat across titles. Never display another title's text.
       if (parsed.jurisdiction === 'FED' && (division.law_key !== 'FED-USC' ||
           !division.path.split('.').includes(parsed.codeHint!) ||
-          !division.path.split('.').includes(`section_${parsed.section.toLowerCase()}`))) {
+          !division.path.split('.').includes(`section_${parsed.section.toLowerCase().replace(/[.:-]/g, '_')}`))) {
         throw new OpenLawsLookupError(503, 'OpenLaws returned a different statute');
       }
       const statute = this.divisionToStatute(division, citation);
