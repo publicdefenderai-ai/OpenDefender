@@ -49,7 +49,7 @@ export default function DacaTps() {
         <div className="daca-tps-notice">
           <h3>{copy.frameworkTitle}</h3>
           <ul>{copy.framework.map(text => <li key={text}>{text}</li>)}</ul>
-          <a href="https://www.uscis.gov/DACA" target="_blank" rel="noopener noreferrer">USCIS DACA</a>
+          <a href="https://www.uscis.gov/DACA" target="_blank" rel="noopener noreferrer">USCIS DACA<span className="sr-only"> ({design.newTab})</span></a>
         </div>
         <div>
           <h3>{t("immigration.daca.dacaSection.renewal")}</h3>
@@ -67,7 +67,7 @@ export default function DacaTps() {
         <div className="daca-tps-notice">
           <h3>{t("immigration.daca.tpsSection.countries")}</h3>
           <p>{copy.currentTps}</p>
-          <a href="https://www.uscis.gov/humanitarian/temporary-protected-status" target="_blank" rel="noopener noreferrer">{copy.countryLink}</a>
+          <a href="https://www.uscis.gov/humanitarian/temporary-protected-status" target="_blank" rel="noopener noreferrer">{copy.countryLink}<span className="sr-only"> ({design.newTab})</span></a>
         </div>
         <div>
           <h3>{t("immigration.daca.tpsSection.benefits")}</h3>
@@ -92,8 +92,8 @@ export default function DacaTps() {
     <section className="daca-tps-followup" id="official-resources" tabIndex={-1}>
       <h2>{t("immigration.daca.resources")}</h2>
       <div className="daca-tps-resources">
-        <a href="https://www.uscis.gov/DACA" target="_blank" rel="noopener noreferrer" data-testid="link-uscis-daca">{design.daca}</a>
-        <a href="https://www.uscis.gov/humanitarian/temporary-protected-status" target="_blank" rel="noopener noreferrer" data-testid="link-uscis-tps">{design.tps}</a>
+        <a href="https://www.uscis.gov/DACA" target="_blank" rel="noopener noreferrer" data-testid="link-uscis-daca">{design.daca}<span className="sr-only"> ({design.newTab})</span></a>
+        <a href="https://www.uscis.gov/humanitarian/temporary-protected-status" target="_blank" rel="noopener noreferrer" data-testid="link-uscis-tps">{design.tps}<span className="sr-only"> ({design.newTab})</span></a>
       </div>
     </section>
   </ScanFirstPageFrame>;

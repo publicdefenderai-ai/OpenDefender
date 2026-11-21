@@ -786,4 +786,14 @@ The published translation keys and immigration-updates copy remain unchanged, in
 
 A pre-change rendered fixture captures 35 text fragments per language and all existing article links. The release-listed browser spec checks all fragments, visible qualifications, the six eligibility items and four framework items, three TPS benefits, three expiration topics, the full heading text, four keyboard jumps, one main landmark, translated resource labels, desktop/320px bounds and print visibility in all three languages and both themes. The six new cases and seven existing immigration-content cases passed (13 total). Desktop/light and mobile/dark screenshots were visually inspected. Typecheck, build and locale-parity results are recorded in the PR. No full-suite, deployment or legal-review-completion claim.
 
-Next page-specific immigration batch: After Deportation. Raids Toolkit and Workplace Raids have separate review PRs and are not merged by this batch.
+Next page-specific immigration batch: After Deportation. Workplace Raids (PR 282) and DACA/TPS (PR 287) are merged. Raids Toolkit has a separate review PR.
+
+### After Deportation
+
+The approved immigration-after-content.html layout and phone/document illustration guide the refresh. Two audience links lead to the removed person's information and the family's information. The existing overview, four first-days steps, documents and money lists, four family topics, eight organizations and seven FAQ answers remain. All 13 legacy anchors survive and are focusable; native anchor navigation replaces imperative scroll buttons. The shared header, footer, breadcrumb and changing-law notice remain. Organization names are now the links instead of small standalone icons, with localized new-tab cues.
+
+Native FAQ disclosures support keyboard operation. Before printing, closed answers open; after printing, the reader's previous open/closed choices return. The listeners clean up on unmount. The decorative illustration is hidden on phones and in print. Existing substantive statements are preserved rather than replaced by draft-preview wording; this batch does not certify benefit, consular, transfer-service or immigration claims as current.
+
+A pre-change rendered fixture captures 71 fragments, 11 link destinations and all seven FAQ answers per language. The new release-listed spec checks preservation, all legacy anchors, direct legal-next navigation, keyboard section links, disclosure operation, print/restore behavior, image loading, single-main structure, new-tab cues and desktop/320px bounds across three languages and both themes. The DACA/TPS spec also checks its restored translated new-tab cues. Desktop/light and Chinese mobile/dark renders were visually inspected.
+
+PR 287 follow-ups: the outdated Workplace Raids inventory line is corrected; all four page-owned USCIS links now include translated screen-reader new-tab labels. A separate content pass remains for the dated DACA/TPS policy statements and status-lapse heading. No policy text is changed here.
