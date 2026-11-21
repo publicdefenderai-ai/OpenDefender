@@ -1,0 +1,2135 @@
+[
+  {
+    "id": "tx-pc-43-02-ordinary",
+    "name": "Prostitution (receiving fee; ordinary)",
+    "officialTitle": "PROSTITUTION.",
+    "category": "misdemeanor",
+    "code": "43.02(a)",
+    "citation": "Tex. Penal Code § 43.02(a)",
+    "conduct": "Knowingly offering or agreeing to receive a fee from another to engage in sexual conduct. This is the receiving-fee offense, not the separate paying-fee offense in §43.021. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. No qualifying previous conviction under §43.02(a). It is a defense that the actor engaged in this conduct because the actor was the victim of trafficking under §20A.02 or compelling prostitution under §43.05; the causal connection to this conduct matters. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. The paying-fee offense moved to separate §43.021 in 2021 while receiving-fee conduct remained in §43.02; earlier conduct requires the applicable historical law. Later technical amendments do not by themselves establish when a penalty first began. Other sentencing and diversion rules require separate assessment. Article 42A.515(a) requires suspension of the sentence and community supervision for the Class B offense, except when the jury assesses punishment under subsection (e); the ordinary custody maximum does not remove that requirement. When supervision is imposed under article 42A.515, participation in a commercially sexually exploited persons court program is required if one is established in the county of residence, not unconditionally statewide.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.515",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "20A.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": "40040009"
+  },
+  {
+    "id": "tx-pc-43-02-one-two-priors",
+    "name": "Prostitution (receiving fee; one two priors)",
+    "officialTitle": "PROSTITUTION.",
+    "category": "misdemeanor",
+    "code": "43.02(a)",
+    "citation": "Tex. Penal Code § 43.02(a)",
+    "conduct": "Knowingly offering or agreeing to receive a fee from another to engage in sexual conduct. This is the receiving-fee offense, not the separate paying-fee offense in §43.021. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. One or two qualifying previous convictions under §43.02(a). It is a defense that the actor engaged in this conduct because the actor was the victim of trafficking under §20A.02 or compelling prostitution under §43.05; the causal connection to this conduct matters. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The paying-fee offense moved to separate §43.021 in 2021 while receiving-fee conduct remained in §43.02; earlier conduct requires the applicable historical law. Later technical amendments do not by themselves establish when a penalty first began. Other sentencing and diversion rules require separate assessment. When supervision is imposed under article 42A.515, participation in a commercially sexually exploited persons court program is required if one is established in the county of residence, not unconditionally statewide.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.515",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "20A.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-02-three-priors",
+    "name": "Prostitution (receiving fee; three priors)",
+    "officialTitle": "PROSTITUTION.",
+    "category": "felony",
+    "code": "43.02(a)",
+    "citation": "Tex. Penal Code § 43.02(a)",
+    "conduct": "Knowingly offering or agreeing to receive a fee from another to engage in sexual conduct. This is the receiving-fee offense, not the separate paying-fee offense in §43.021. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. Three or more qualifying previous convictions under §43.02(a). It is a defense that the actor engaged in this conduct because the actor was the victim of trafficking under §20A.02 or compelling prostitution under §43.05; the causal connection to this conduct matters. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The paying-fee offense moved to separate §43.021 in 2021 while receiving-fee conduct remained in §43.02; earlier conduct requires the applicable historical law. Later technical amendments do not by themselves establish when a penalty first began. Other sentencing and diversion rules require separate assessment. For this state-jail offense punished under §12.35(a), article 42A.515(b) requires suspension and community supervision unless the defendant previously had another qualifying §43.02(c)(2) state-jail conviction punished under §12.35; the requirement also does not apply when a jury assesses punishment. When supervision is imposed under article 42A.515, participation in a commercially sexually exploited persons court program is required if one is established in the county of residence, not unconditionally statewide.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "20A.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.05",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.515",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "20A.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.021",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-021-adult-first",
+    "name": "Solicitation of prostitution (adult first)",
+    "officialTitle": "SOLICITATION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.021(a)",
+    "citation": "Tex. Penal Code § 43.021(a)",
+    "conduct": "Knowingly offering or agreeing to pay a fee to another person for the purpose of engaging in sexual conduct with that person or another. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. This branch excludes any actual, represented or believed under-18 circumstance and any qualifying prior solicitation conviction. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both. This choice excludes the school/function/UIL proximity circumstance in §43.021(b-1), which raises the prescribed punishment by one category.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The ordinary state-jail/prior-third-degree scheme began September 1, 2021, not 2025. The school/function/UIL punishment increase was enacted in 2021 and relocated to §43.021(b-1) in 2023; relocation did not first create the increase. The current minor-predicate wording was amended effective September 1, 2025. If any element predates an applicable change, the earlier law governs; charging date alone is insufficient. Other sentencing findings require separate analysis. Article 62.001(5)(B-1) uses the registration condition “punishable as a felony of the second degree,” not simply an under-18 label. School-enhanced repeat and minor cases therefore require the applicable Chapter 62 assessment; this choice does not rule registration out or assign automatic lifetime registration. A local first-offender solicitation program is optional and subject to statutory eligibility and prosecutor consent, not mandatory for every conviction.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.04",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "169.002",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "40040022"
+  },
+  {
+    "id": "tx-pc-43-021-adult-first-school",
+    "name": "Solicitation of prostitution (adult first; school-zone punishment)",
+    "officialTitle": "SOLICITATION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.021(a)",
+    "citation": "Tex. Penal Code § 43.021(a)",
+    "conduct": "Knowingly offering or agreeing to pay a fee to another person for the purpose of engaging in sexual conduct with that person or another. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. This branch excludes any actual, represented or believed under-18 circumstance and any qualifying prior solicitation conviction. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both. The offense location must be on or within 1,000 feet of school premises, or premises where an official school function or University Interscholastic League sponsored/sanctioned event was taking place. School means a public or private primary or secondary school; premises has the incorporated §481.134 definition. Proximity to an unrelated venue alone does not establish this condition.",
+    "penalty": "Underlying state jail felony; §43.021(b-1) raises the punishment to the next category. Punished as a third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The ordinary state-jail/prior-third-degree scheme began September 1, 2021, not 2025. The school/function/UIL punishment increase was enacted in 2021 and relocated to §43.021(b-1) in 2023; relocation did not first create the increase. The current minor-predicate wording was amended effective September 1, 2025. If any element predates an applicable change, the earlier law governs; charging date alone is insufficient. Other sentencing findings require separate analysis. Article 62.001(5)(B-1) uses the registration condition “punishable as a felony of the second degree,” not simply an under-18 label. School-enhanced repeat and minor cases therefore require the applicable Chapter 62 assessment; this choice does not rule registration out or assign automatic lifetime registration. A local first-offender solicitation program is optional and subject to statutory eligibility and prosecutor consent, not mandatory for every conviction.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.04",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "169.002",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-021-adult-prior",
+    "name": "Solicitation of prostitution (adult prior)",
+    "officialTitle": "SOLICITATION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.021(a)",
+    "citation": "Tex. Penal Code § 43.021(a)",
+    "conduct": "Knowingly offering or agreeing to pay a fee to another person for the purpose of engaging in sexual conduct with that person or another. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. This branch excludes any actual, represented or believed under-18 circumstance and requires a prior conviction under §43.021(a) or former §43.02(b) as it existed before September 1, 2021. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both. This choice excludes the school/function/UIL proximity circumstance in §43.021(b-1), which raises the prescribed punishment by one category.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The ordinary state-jail/prior-third-degree scheme began September 1, 2021, not 2025. The school/function/UIL punishment increase was enacted in 2021 and relocated to §43.021(b-1) in 2023; relocation did not first create the increase. The current minor-predicate wording was amended effective September 1, 2025. If any element predates an applicable change, the earlier law governs; charging date alone is insufficient. Other sentencing findings require separate analysis. Article 62.001(5)(B-1) uses the registration condition “punishable as a felony of the second degree,” not simply an under-18 label. School-enhanced repeat and minor cases therefore require the applicable Chapter 62 assessment; this choice does not rule registration out or assign automatic lifetime registration. A local first-offender solicitation program is optional and subject to statutory eligibility and prosecutor consent, not mandatory for every conviction.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.04",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "169.002",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-021-adult-prior-school",
+    "name": "Solicitation of prostitution (adult prior; school-zone punishment)",
+    "officialTitle": "SOLICITATION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.021(a)",
+    "citation": "Tex. Penal Code § 43.021(a)",
+    "conduct": "Knowingly offering or agreeing to pay a fee to another person for the purpose of engaging in sexual conduct with that person or another. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. This branch excludes any actual, represented or believed under-18 circumstance and requires a prior conviction under §43.021(a) or former §43.02(b) as it existed before September 1, 2021. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both. The offense location must be on or within 1,000 feet of school premises, or premises where an official school function or University Interscholastic League sponsored/sanctioned event was taking place. School means a public or private primary or secondary school; premises has the incorporated §481.134 definition. Proximity to an unrelated venue alone does not establish this condition.",
+    "penalty": "Underlying third-degree felony; §43.021(b-1) raises the punishment to the next category. Punished as a second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. The ordinary state-jail/prior-third-degree scheme began September 1, 2021, not 2025. The school/function/UIL punishment increase was enacted in 2021 and relocated to §43.021(b-1) in 2023; relocation did not first create the increase. The current minor-predicate wording was amended effective September 1, 2025. If any element predates an applicable change, the earlier law governs; charging date alone is insufficient. Other sentencing findings require separate analysis. Article 62.001(5)(B-1) uses the registration condition “punishable as a felony of the second degree,” not simply an under-18 label. School-enhanced repeat and minor cases therefore require the applicable Chapter 62 assessment; this choice does not rule registration out or assign automatic lifetime registration. A local first-offender solicitation program is optional and subject to statutory eligibility and prosecutor consent, not mandatory for every conviction.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.04",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "169.002",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-021-minor-actual",
+    "name": "Solicitation of prostitution (minor actual)",
+    "officialTitle": "SOLICITATION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.021(a)",
+    "citation": "Tex. Penal Code § 43.021(a)",
+    "conduct": "Knowingly offering or agreeing to pay a fee to another person for the purpose of engaging in sexual conduct with that person or another. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. The person with respect to whom the actor offers or agrees to engage in sexual conduct is actually younger than 18; knowledge of that person’s age is not required. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both. This choice excludes the school/function/UIL proximity circumstance in §43.021(b-1), which raises the prescribed punishment by one category.",
+    "penalty": "Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. The ordinary state-jail/prior-third-degree scheme began September 1, 2021, not 2025. The school/function/UIL punishment increase was enacted in 2021 and relocated to §43.021(b-1) in 2023; relocation did not first create the increase. The current minor-predicate wording was amended effective September 1, 2025. If any element predates an applicable change, the earlier law governs; charging date alone is insufficient. Other sentencing findings require separate analysis. A conviction or adjudication for this second-degree solicitation offense, including deferred adjudication, is a reportable conviction or adjudication under article 62.001(5)(B-1) for sex-offender registration purposes. The applicable registration duties and duration are governed by Chapter 62; this summary does not assign automatic lifetime registration. A local first-offender solicitation program is optional and subject to statutory eligibility and prosecutor consent, not mandatory for every conviction.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.04",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "169.002",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-021-minor-actual-school",
+    "name": "Solicitation of prostitution (minor actual; school-zone punishment)",
+    "officialTitle": "SOLICITATION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.021(a)",
+    "citation": "Tex. Penal Code § 43.021(a)",
+    "conduct": "Knowingly offering or agreeing to pay a fee to another person for the purpose of engaging in sexual conduct with that person or another. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. The person with respect to whom the actor offers or agrees to engage in sexual conduct is actually younger than 18; knowledge of that person’s age is not required. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both. The offense location must be on or within 1,000 feet of school premises, or premises where an official school function or University Interscholastic League sponsored/sanctioned event was taking place. School means a public or private primary or secondary school; premises has the incorporated §481.134 definition. Proximity to an unrelated venue alone does not establish this condition.",
+    "penalty": "Underlying second-degree felony; §43.021(b-1) raises the punishment to the next category. Punished as a first-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. The ordinary state-jail/prior-third-degree scheme began September 1, 2021, not 2025. The school/function/UIL punishment increase was enacted in 2021 and relocated to §43.021(b-1) in 2023; relocation did not first create the increase. The current minor-predicate wording was amended effective September 1, 2025. If any element predates an applicable change, the earlier law governs; charging date alone is insufficient. Other sentencing findings require separate analysis. Article 62.001(5)(B-1) uses the registration condition “punishable as a felony of the second degree,” not simply an under-18 label. School-enhanced repeat and minor cases therefore require the applicable Chapter 62 assessment; this choice does not rule registration out or assign automatic lifetime registration. A local first-offender solicitation program is optional and subject to statutory eligibility and prosecutor consent, not mandatory for every conviction.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.04",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "169.002",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-021-minor-represented",
+    "name": "Solicitation of prostitution (minor represented)",
+    "officialTitle": "SOLICITATION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.021(a)",
+    "citation": "Tex. Penal Code § 43.021(a)",
+    "conduct": "Knowingly offering or agreeing to pay a fee to another person for the purpose of engaging in sexual conduct with that person or another. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. The person with respect to whom the actor offers or agrees to engage in sexual conduct is represented to the actor as younger than 18; this branch does not require proof that the person actually is a minor. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both. This choice excludes the school/function/UIL proximity circumstance in §43.021(b-1), which raises the prescribed punishment by one category.",
+    "penalty": "Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. The ordinary state-jail/prior-third-degree scheme began September 1, 2021, not 2025. The school/function/UIL punishment increase was enacted in 2021 and relocated to §43.021(b-1) in 2023; relocation did not first create the increase. The current minor-predicate wording was amended effective September 1, 2025. If any element predates an applicable change, the earlier law governs; charging date alone is insufficient. Other sentencing findings require separate analysis. A conviction or adjudication for this second-degree solicitation offense, including deferred adjudication, is a reportable conviction or adjudication under article 62.001(5)(B-1) for sex-offender registration purposes. The applicable registration duties and duration are governed by Chapter 62; this summary does not assign automatic lifetime registration. A local first-offender solicitation program is optional and subject to statutory eligibility and prosecutor consent, not mandatory for every conviction.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.04",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "169.002",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-021-minor-represented-school",
+    "name": "Solicitation of prostitution (minor represented; school-zone punishment)",
+    "officialTitle": "SOLICITATION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.021(a)",
+    "citation": "Tex. Penal Code § 43.021(a)",
+    "conduct": "Knowingly offering or agreeing to pay a fee to another person for the purpose of engaging in sexual conduct with that person or another. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. The person with respect to whom the actor offers or agrees to engage in sexual conduct is represented to the actor as younger than 18; this branch does not require proof that the person actually is a minor. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both. The offense location must be on or within 1,000 feet of school premises, or premises where an official school function or University Interscholastic League sponsored/sanctioned event was taking place. School means a public or private primary or secondary school; premises has the incorporated §481.134 definition. Proximity to an unrelated venue alone does not establish this condition.",
+    "penalty": "Underlying second-degree felony; §43.021(b-1) raises the punishment to the next category. Punished as a first-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. The ordinary state-jail/prior-third-degree scheme began September 1, 2021, not 2025. The school/function/UIL punishment increase was enacted in 2021 and relocated to §43.021(b-1) in 2023; relocation did not first create the increase. The current minor-predicate wording was amended effective September 1, 2025. If any element predates an applicable change, the earlier law governs; charging date alone is insufficient. Other sentencing findings require separate analysis. Article 62.001(5)(B-1) uses the registration condition “punishable as a felony of the second degree,” not simply an under-18 label. School-enhanced repeat and minor cases therefore require the applicable Chapter 62 assessment; this choice does not rule registration out or assign automatic lifetime registration. A local first-offender solicitation program is optional and subject to statutory eligibility and prosecutor consent, not mandatory for every conviction.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.04",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "169.002",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-021-minor-believed",
+    "name": "Solicitation of prostitution (minor believed)",
+    "officialTitle": "SOLICITATION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.021(a)",
+    "citation": "Tex. Penal Code § 43.021(a)",
+    "conduct": "Knowingly offering or agreeing to pay a fee to another person for the purpose of engaging in sexual conduct with that person or another. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. The actor believes the person with respect to whom the offer or agreement concerns sexual conduct is younger than 18; this branch does not require proof that the person actually is a minor. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both. This choice excludes the school/function/UIL proximity circumstance in §43.021(b-1), which raises the prescribed punishment by one category.",
+    "penalty": "Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. The ordinary state-jail/prior-third-degree scheme began September 1, 2021, not 2025. The school/function/UIL punishment increase was enacted in 2021 and relocated to §43.021(b-1) in 2023; relocation did not first create the increase. The current minor-predicate wording was amended effective September 1, 2025. If any element predates an applicable change, the earlier law governs; charging date alone is insufficient. Other sentencing findings require separate analysis. A conviction or adjudication for this second-degree solicitation offense, including deferred adjudication, is a reportable conviction or adjudication under article 62.001(5)(B-1) for sex-offender registration purposes. The applicable registration duties and duration are governed by Chapter 62; this summary does not assign automatic lifetime registration. A local first-offender solicitation program is optional and subject to statutory eligibility and prosecutor consent, not mandatory for every conviction.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b)(2)(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.04",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "169.002",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-021-minor-believed-school",
+    "name": "Solicitation of prostitution (minor believed; school-zone punishment)",
+    "officialTitle": "SOLICITATION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.021(a)",
+    "citation": "Tex. Penal Code § 43.021(a)",
+    "conduct": "Knowingly offering or agreeing to pay a fee to another person for the purpose of engaging in sexual conduct with that person or another. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. The actor believes the person with respect to whom the offer or agreement concerns sexual conduct is younger than 18; this branch does not require proof that the person actually is a minor. For this section, a qualifying guilty/no-contest plea for deferred adjudication can count as a prior even if sentence was never imposed or probation was later discharged. The same conviction may be used for this section’s enhancement or Chapter 12 Subchapter D enhancement, but not both. The offense location must be on or within 1,000 feet of school premises, or premises where an official school function or University Interscholastic League sponsored/sanctioned event was taking place. School means a public or private primary or secondary school; premises has the incorporated §481.134 definition. Proximity to an unrelated venue alone does not establish this condition.",
+    "penalty": "Underlying second-degree felony; §43.021(b-1) raises the punishment to the next category. Punished as a first-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. The ordinary state-jail/prior-third-degree scheme began September 1, 2021, not 2025. The school/function/UIL punishment increase was enacted in 2021 and relocated to §43.021(b-1) in 2023; relocation did not first create the increase. The current minor-predicate wording was amended effective September 1, 2025. If any element predates an applicable change, the earlier law governs; charging date alone is insufficient. Other sentencing findings require separate analysis. Article 62.001(5)(B-1) uses the registration condition “punishable as a felony of the second degree,” not simply an under-18 label. School-enhanced repeat and minor cases therefore require the applicable Chapter 62 assessment; this choice does not rule registration out or assign automatic lifetime registration. A local first-offender solicitation program is optional and subject to statutory eligibility and prosecutor consent, not mandatory for every conviction.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b)(2)(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(b-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.021",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "481.134",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.04",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "HS",
+        "section": "169.002",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-03-proceeds-ordinary",
+    "name": "Promotion of prostitution (proceeds; ordinary)",
+    "officialTitle": "PROMOTION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.03(a)(1)",
+    "citation": "Tex. Penal Code § 43.03(a)(1)",
+    "conduct": "Knowingly receiving money or other property under an agreement to participate in the proceeds of prostitution. The actor must be acting other than as a person receiving compensation for personally rendered prostitution services; that excluded personal-services role is not automatically promotion. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. This ordinary branch excludes a previous §43.03 conviction and conduct involving a person younger than 18.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. These promotion grades were increased effective September 1, 2019. The minor branch’s wording was broadened effective September 1, 2023; if any element predates the applicable amendment, earlier law governs. A prior is not assumed, and the deferred-adjudication rule in §43.021 is not automatically imported into this separate section. Other sentencing or registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-03-proceeds-prior",
+    "name": "Promotion of prostitution (proceeds; prior)",
+    "officialTitle": "PROMOTION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.03(a)(1)",
+    "citation": "Tex. Penal Code § 43.03(a)(1)",
+    "conduct": "Knowingly receiving money or other property under an agreement to participate in the proceeds of prostitution. The actor must be acting other than as a person receiving compensation for personally rendered prostitution services; that excluded personal-services role is not automatically promotion. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. This branch requires a previous §43.03 conviction and excludes conduct involving a person younger than 18.",
+    "penalty": "Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. These promotion grades were increased effective September 1, 2019. The minor branch’s wording was broadened effective September 1, 2023; if any element predates the applicable amendment, earlier law governs. A prior is not assumed, and the deferred-adjudication rule in §43.021 is not automatically imported into this separate section. Other sentencing or registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-03-proceeds-minor",
+    "name": "Promotion of prostitution (proceeds; minor)",
+    "officialTitle": "PROMOTION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.03(a)(1)",
+    "citation": "Tex. Penal Code § 43.03(a)(1)",
+    "conduct": "Knowingly receiving money or other property under an agreement to participate in the proceeds of prostitution. The actor must be acting other than as a person receiving compensation for personally rendered prostitution services; that excluded personal-services role is not automatically promotion. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. This branch involves a person younger than 18, regardless of the actor’s knowledge of age. The current provision does not add the former requirement that the minor be engaging in prostitution.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. These promotion grades were increased effective September 1, 2019. The minor branch’s wording was broadened effective September 1, 2023; if any element predates the applicable amendment, earlier law governs. A prior is not assumed, and the deferred-adjudication rule in §43.021 is not automatically imported into this separate section. Other sentencing or registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-03-solicit-ordinary",
+    "name": "Promotion of prostitution (solicit; ordinary)",
+    "officialTitle": "PROMOTION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.03(a)(2)",
+    "citation": "Tex. Penal Code § 43.03(a)(2)",
+    "conduct": "Knowingly soliciting another to engage in sexual conduct with another person for compensation. The actor must be acting other than as a person receiving compensation for personally rendered prostitution services; that excluded personal-services role is not automatically promotion. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. This ordinary branch excludes a previous §43.03 conviction and conduct involving a person younger than 18.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. These promotion grades were increased effective September 1, 2019. The minor branch’s wording was broadened effective September 1, 2023; if any element predates the applicable amendment, earlier law governs. A prior is not assumed, and the deferred-adjudication rule in §43.021 is not automatically imported into this separate section. Other sentencing or registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-03-solicit-prior",
+    "name": "Promotion of prostitution (solicit; prior)",
+    "officialTitle": "PROMOTION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.03(a)(2)",
+    "citation": "Tex. Penal Code § 43.03(a)(2)",
+    "conduct": "Knowingly soliciting another to engage in sexual conduct with another person for compensation. The actor must be acting other than as a person receiving compensation for personally rendered prostitution services; that excluded personal-services role is not automatically promotion. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. This branch requires a previous §43.03 conviction and excludes conduct involving a person younger than 18.",
+    "penalty": "Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. These promotion grades were increased effective September 1, 2019. The minor branch’s wording was broadened effective September 1, 2023; if any element predates the applicable amendment, earlier law governs. A prior is not assumed, and the deferred-adjudication rule in §43.021 is not automatically imported into this separate section. Other sentencing or registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-03-solicit-minor",
+    "name": "Promotion of prostitution (solicit; minor)",
+    "officialTitle": "PROMOTION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.03(a)(2)",
+    "citation": "Tex. Penal Code § 43.03(a)(2)",
+    "conduct": "Knowingly soliciting another to engage in sexual conduct with another person for compensation. The actor must be acting other than as a person receiving compensation for personally rendered prostitution services; that excluded personal-services role is not automatically promotion. A fee can be money, goods, services or another benefit. Sexual conduct has the specific §43.01 definitions of intercourse, deviate intercourse and sexual contact; not every interaction or payment qualifies. This branch involves a person younger than 18, regardless of the actor’s knowledge of age. The current provision does not add the former requirement that the minor be engaging in prostitution.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. These promotion grades were increased effective September 1, 2019. The minor branch’s wording was broadened effective September 1, 2023; if any element predates the applicable amendment, earlier law governs. A prior is not assumed, and the deferred-adjudication rule in §43.021 is not automatically imported into this separate section. Other sentencing or registration consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-032",
+    "name": "Continuous promotion of prostitution (two or more acts over at least 30 days)",
+    "officialTitle": "CONTINUOUS PROMOTION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.032(a)",
+    "citation": "Tex. Penal Code § 43.032(a)",
+    "conduct": "During a period of 30 or more days, engaging two or more times in conduct constituting promotion of prostitution under §43.03. Each predicate requires its own knowing proceeds-agreement or compensated-solicitation conduct and the personal-services exclusion. A single act or a shorter period does not establish this offense. The jury need not agree on the exact predicate acts/dates, but must unanimously agree on two or more qualifying acts over the required period. The same-victim restrictions in subsections (c) and (d) limit an additional §43.03 conviction in the same case and multiple continuous-promotion counts; the statutory alternative-charge, outside-period and lesser-included exceptions remain.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. This offense was added effective September 1, 2025; it is not assigned to earlier conduct. This choice covers only a conduct period entirely on or after that effective date; an earlier or straddling period requires separate applicability review. Other enhancements and consequences require separate assessment.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.032",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.032",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.032",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.032",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.032",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-43-04",
+    "name": "Aggravated promotion of prostitution (enterprise using two or more persons)",
+    "officialTitle": "AGGRAVATED PROMOTION OF PROSTITUTION.",
+    "category": "felony",
+    "code": "43.04(a)",
+    "citation": "Tex. Penal Code § 43.04(a)",
+    "conduct": "Knowingly owning, investing in, financing, controlling, supervising or managing a prostitution enterprise that uses two or more persons engaged in prostitution. A transaction or association alone is not a substitute for the stated enterprise role and two-person requirement. Prostitution has the specific §43.02 receiving-fee meaning.",
+    "penalty": "First-degree felony: ordinarily five to 99 years or life in prison and a possible fine up to $10,000. The current first-degree grade for the enterprise offense began September 1, 2019; if any element predates that amendment, earlier law governs. Registration and community-supervision restrictions require their applicable statutory analysis. Section 43.04 is expressly listed as a reportable registration conviction. Ordinary judge-ordered community supervision is excluded by article 42A.054(a)(14), with the separate victim-only finding exception in (e); jury-recommended supervision is excluded by article 42A.056(6). Deferred adjudication is a separate question with article 42A.102(b)(2) history restrictions, not a blanket promise of eligibility.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "43.04",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "43.04",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "43.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "62.001",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.051",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "62.101",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.32",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.054",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.056",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "CR",
+        "section": "42A.102",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]
