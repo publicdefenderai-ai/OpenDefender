@@ -28,7 +28,7 @@ The Texas browser checks now follow snapshot-bound pagination because the fixtur
 
 - App typecheck and production build passed.
 - Five focused suites:27 passed, zero failed.
-- Isolated production browser checks: 27 passed, zero failed; no retries.
+- Isolated production browser checks across DWI, assault/intoxication and ranked-possession suites: 29 passed, zero failed; no retries.
 - After integrating main, public-source coverage and records/bail focused checks passed; the Texas held count remains 77.
 - Full regression suite and production data checks were not run.
 
@@ -90,3 +90,5 @@ No import, receipt issuance/renewal, activation, production operation or publica
 ## Next research scope
 
 The remaining Class C disorderly-conduct branches in §42.01(a)(1)–(6) and (10)–(12) are queued for the next Texas review. They are not added by this batch.
+
+Pagination follow-up: all three Texas browser specs share the same snapshot-bound catalog helper. Every page must carry a valid unchanged snapshot and total; duplicate IDs, premature termination and offset drift fail. Original charge, grading, instruction and withholding assertions remain. The focused coverage and records/bail suites passed 12/12 after the inherited 77-held coverage correction; typecheck and production build passed.
