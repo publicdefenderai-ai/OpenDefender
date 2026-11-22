@@ -82,3 +82,19 @@ describe('fast legal validation', () => {
   // though the validation operation itself completes in milliseconds.
   }, 30_000);
 });
+it.each([false, true])('reports an OpenLaws failure even alongside a successful lookup (failure first: %s)', async failureFirst => {
+  vi.useRealTimers();
+  searchByCitation.mockReset();
+  const failure = () => Promise.reject(new Error('OpenLaws unavailable'));
+  const success = () => Promise.resolve({ content: 'Provider text' });
+  searchByCitation.mockImplementationOnce(failureFirst ? failure : success)
+    .mockImplementationOnce(failureFirst ? success : failure);
+  validateWithCaseLaw.mockResolvedValue({ isAvailable: false, providerStatus: 'not_run' });
+  const { validateLegalGuidance } = await import('../server/services/legal-accuracy-validator');
+  const result = await validateLegalGuidance(
+    { overview: '18 USC 1001 and 18 USC 1343', criticalAlerts: [], immediateActions: [], nextSteps: [], deadlines: [], rights: [], warnings: [] },
+    { jurisdiction: 'federal', charges: ['unknown-charge'], caseStage: 'arrest' },
+  );
+  expect(searchByCitation).toHaveBeenCalledTimes(2);
+  expect(result.sourceEnrichment?.providerStatuses?.OpenLaws).toBe('unavailable');
+}, 30_000);
