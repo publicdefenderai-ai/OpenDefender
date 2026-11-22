@@ -1,0 +1,722 @@
+[
+  {
+    "id": "tx-pc-42-01-fighting-words",
+    "name": "Disorderly conduct (fighting words)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(1)",
+    "citation": "Tex. Penal Code § 42.01(a)(1)",
+    "conduct": "Using abusive, indecent, profane or vulgar language in a public place that, by its very utterance, tends to incite an immediate breach of the peace. This is the narrow fighting-words limitation: harsh criticism, profanity, insults, or a listener’s offense alone are insufficient. Context and the likelihood of an immediate violent response matter; no actual fight is required. Criticism of police is not criminal merely because it is offensive. City of Houston v. Hill, 482 U.S. 451 (1987), distinguishes protected verbal challenge from fighting words; the statute is not permission to punish unpopular viewpoints. Intentionally or knowingly engaging in the specified conduct is required. Under (a-1), public place includes a public school campus or school grounds; §1.07(a)(40) otherwise covers places to which the public or a substantial group has access. Under (c)(1), conduct is deemed to occur in public or near a private residence if it produces its offensive or proscribed consequences there; the actor’s physical location alone is not conclusive. Subsection (f) excludes a student younger than 12 whose specified conduct occurred on a public school campus during regular school hours. All of those conditions matter; this is not a blanket exception for every child or every setting.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, with no jail term as the ordinary punishment. Under §12.43(c), three prior convictions under §42.01 or §49.02, or any combination of those offenses, can permit a fine up to $2,000, up to 180 days in jail, or both if each prior offense was committed in the 24 months before this offense. This is a repeat-punishment provision, not automatic reclassification of every repeat incident; qualifying convictions and dates must be established. Earlier conduct requires the applicable historical statute; the section’s latest September 1, 2023 amendment did not first create these branches. The school exception originally used sixth grade or lower in 2011; S.B. 393 changed it to younger than 12 effective September 1, 2013. The current age rule is not backdated.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      }
+    ]
+  },
+  {
+    "id": "tx-pc-42-01-fighting-gesture",
+    "name": "Disorderly conduct (gesture tending to immediate violence)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(2)",
+    "citation": "Tex. Penal Code § 42.01(a)(2)",
+    "conduct": "Making an offensive gesture or display in a public place that tends to incite an immediate breach of the peace. Coggin v. State, 123 S.W.3d 82 (Tex. App.—Austin 2003), applies the fighting-words limitation to this branch. A rude gesture, including a raised middle finger, is not automatically criminal: its context must satisfy the tendency to provoke an immediate violent reaction. Actual violence need not occur, but an observer’s offense or irritation alone is insufficient. Intentionally or knowingly engaging in the specified conduct is required. Under (a-1), public place includes a public school campus or school grounds; §1.07(a)(40) otherwise covers places to which the public or a substantial group has access. Under (c)(1), conduct is deemed to occur in public or near a private residence if it produces its offensive or proscribed consequences there; the actor’s physical location alone is not conclusive. Subsection (f) excludes a student younger than 12 whose specified conduct occurred on a public school campus during regular school hours. All of those conditions matter; this is not a blanket exception for every child or every setting.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, with no jail term as the ordinary punishment. Under §12.43(c), three prior convictions under §42.01 or §49.02, or any combination of those offenses, can permit a fine up to $2,000, up to 180 days in jail, or both if each prior offense was committed in the 24 months before this offense. This is a repeat-punishment provision, not automatic reclassification of every repeat incident; qualifying convictions and dates must be established. Earlier conduct requires the applicable historical statute; the section’s latest September 1, 2023 amendment did not first create these branches. The school exception originally used sixth grade or lower in 2011; S.B. 393 changed it to younger than 12 effective September 1, 2013. The current age rule is not backdated.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      }
+    ]
+  },
+  {
+    "id": "tx-pc-42-01-chemical-odor",
+    "name": "Disorderly conduct (chemical odor)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(3)",
+    "citation": "Tex. Penal Code § 42.01(a)(3)",
+    "conduct": "Creating, by chemical means, a noxious AND unreasonable odor in a public place. An unpleasant smell alone does not establish chemical creation, both odor conditions, the required mental state and public-place circumstances. Intentionally or knowingly engaging in the specified conduct is required. Under (a-1), public place includes a public school campus or school grounds; §1.07(a)(40) otherwise covers places to which the public or a substantial group has access. Under (c)(1), conduct is deemed to occur in public or near a private residence if it produces its offensive or proscribed consequences there; the actor’s physical location alone is not conclusive. Subsection (f) excludes a student younger than 12 whose specified conduct occurred on a public school campus during regular school hours. All of those conditions matter; this is not a blanket exception for every child or every setting.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, with no jail term as the ordinary punishment. Under §12.43(c), three prior convictions under §42.01 or §49.02, or any combination of those offenses, can permit a fine up to $2,000, up to 180 days in jail, or both if each prior offense was committed in the 24 months before this offense. This is a repeat-punishment provision, not automatic reclassification of every repeat incident; qualifying convictions and dates must be established. Earlier conduct requires the applicable historical statute; the section’s latest September 1, 2023 amendment did not first create these branches. The school exception originally used sixth grade or lower in 2011; S.B. 393 changed it to younger than 12 effective September 1, 2013. The current age rule is not backdated.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      }
+    ]
+  },
+  {
+    "id": "tx-pc-42-01-public-noise",
+    "name": "Disorderly conduct (unreasonable public noise)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(5)",
+    "citation": "Tex. Penal Code § 42.01(a)(5)",
+    "conduct": "Making unreasonable noise in a public place other than a sport shooting range as defined in Local Government Code §250.001(a)(2). Subsection (c)(2) presumes unreasonableness only when the noise exceeds 85 decibels AFTER notice from a magistrate or peace officer that it is a public nuisance. Exactly 85 decibels, a private complaint alone, or an earlier measurement alone does not establish that presumption. It is not a universal 85-decibel minimum for the offense: other evidence can establish unreasonable noise. Under §2.05(a), predicate facts must be proved beyond a reasonable doubt; the jury may, but is not bound to, infer the presumed fact, and the other elements still require proof. Noise from lawfully conducted space-flight activities within Civil Practice and Remedies Code §100A.001 is excluded by (g). When conduct is speech, communication, an associated gathering or nonviolent expressive assembly and has not yet intentionally harmed the protected interests, §42.04 requires an order to move, disperse or remedy the violation before arrest. It supplies defenses where a required order was absent, manifestly unreasonable, or promptly obeyed. This safeguard is specifically applicable to this noise branch, not automatically every disorderly-conduct subdivision. Intentionally or knowingly engaging in the specified conduct is required. Under (a-1), public place includes a public school campus or school grounds; §1.07(a)(40) otherwise covers places to which the public or a substantial group has access. Under (c)(1), conduct is deemed to occur in public or near a private residence if it produces its offensive or proscribed consequences there; the actor’s physical location alone is not conclusive. Subsection (f) excludes a student younger than 12 whose specified conduct occurred on a public school campus during regular school hours. All of those conditions matter; this is not a blanket exception for every child or every setting.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, with no jail term as the ordinary punishment. Under §12.43(c), three prior convictions under §42.01 or §49.02, or any combination of those offenses, can permit a fine up to $2,000, up to 180 days in jail, or both if each prior offense was committed in the 24 months before this offense. This is a repeat-punishment provision, not automatic reclassification of every repeat incident; qualifying convictions and dates must be established. Earlier conduct requires the applicable historical statute; the section’s latest September 1, 2023 amendment did not first create these branches. The school exception originally used sixth grade or lower in 2011; S.B. 393 changed it to younger than 12 effective September 1, 2013. The current age rule is not backdated. The lawful space-flight noise exclusion was added effective September 1, 2013 by H.B. 1791.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "100A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "250.001",
+        "subdivision": "(a)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      }
+    ]
+  },
+  {
+    "id": "tx-pc-42-01-residential-noise",
+    "name": "Disorderly conduct (unreasonable noise near another residence)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(5)",
+    "citation": "Tex. Penal Code § 42.01(a)(5)",
+    "conduct": "Making unreasonable noise in or near a private residence that the actor has no right to occupy. Lack of a right to occupy that residence is an express condition of this branch. Subsection (c)(2) presumes unreasonableness only when the noise exceeds 85 decibels AFTER notice from a magistrate or peace officer that it is a public nuisance. Exactly 85 decibels, a private complaint alone, or an earlier measurement alone does not establish that presumption. It is not a universal 85-decibel minimum for the offense: other evidence can establish unreasonable noise. Under §2.05(a), predicate facts must be proved beyond a reasonable doubt; the jury may, but is not bound to, infer the presumed fact, and the other elements still require proof. Noise from lawfully conducted space-flight activities within Civil Practice and Remedies Code §100A.001 is excluded by (g). When conduct is speech, communication, an associated gathering or nonviolent expressive assembly and has not yet intentionally harmed the protected interests, §42.04 requires an order to move, disperse or remedy the violation before arrest. It supplies defenses where a required order was absent, manifestly unreasonable, or promptly obeyed. This safeguard is specifically applicable to this noise branch, not automatically every disorderly-conduct subdivision. Intentionally or knowingly engaging in the specified conduct is required. Under (a-1), public place includes a public school campus or school grounds; §1.07(a)(40) otherwise covers places to which the public or a substantial group has access. Under (c)(1), conduct is deemed to occur in public or near a private residence if it produces its offensive or proscribed consequences there; the actor’s physical location alone is not conclusive. Subsection (f) excludes a student younger than 12 whose specified conduct occurred on a public school campus during regular school hours. All of those conditions matter; this is not a blanket exception for every child or every setting.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, with no jail term as the ordinary punishment. Under §12.43(c), three prior convictions under §42.01 or §49.02, or any combination of those offenses, can permit a fine up to $2,000, up to 180 days in jail, or both if each prior offense was committed in the 24 months before this offense. This is a repeat-punishment provision, not automatic reclassification of every repeat incident; qualifying convictions and dates must be established. Earlier conduct requires the applicable historical statute; the section’s latest September 1, 2023 amendment did not first create these branches. The school exception originally used sixth grade or lower in 2011; S.B. 393 changed it to younger than 12 effective September 1, 2013. The current age rule is not backdated. The lawful space-flight noise exclusion was added effective September 1, 2013 by H.B. 1791.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CP",
+        "section": "100A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      }
+    ]
+  },
+  {
+    "id": "tx-pc-42-01-public-fight",
+    "name": "Disorderly conduct (public fighting)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(6)",
+    "citation": "Tex. Penal Code § 42.01(a)(6)",
+    "conduct": "Fighting WITH ANOTHER in a public place. A verbal disagreement or rude speech alone is not this physical-fighting branch. The statute requires the actor’s intentional or knowing participation. Applicable justification defenses, including self-defense under Chapter 9, require their own factual conditions; being involved in a disturbance does not automatically defeat them. Intentionally or knowingly engaging in the specified conduct is required. Under (a-1), public place includes a public school campus or school grounds; §1.07(a)(40) otherwise covers places to which the public or a substantial group has access. Under (c)(1), conduct is deemed to occur in public or near a private residence if it produces its offensive or proscribed consequences there; the actor’s physical location alone is not conclusive. Subsection (f) excludes a student younger than 12 whose specified conduct occurred on a public school campus during regular school hours. All of those conditions matter; this is not a blanket exception for every child or every setting.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, with no jail term as the ordinary punishment. Under §12.43(c), three prior convictions under §42.01 or §49.02, or any combination of those offenses, can permit a fine up to $2,000, up to 180 days in jail, or both if each prior offense was committed in the 24 months before this offense. This is a repeat-punishment provision, not automatic reclassification of every repeat incident; qualifying convictions and dates must be established. Earlier conduct requires the applicable historical statute; the section’s latest September 1, 2023 amendment did not first create these branches. The school exception originally used sixth grade or lower in 2011; S.B. 393 changed it to younger than 12 effective September 1, 2013. The current age rule is not backdated.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "9.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.31",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      }
+    ]
+  },
+  {
+    "id": "tx-pc-42-01-public-exposure",
+    "name": "Disorderly conduct (public exposure)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(10)",
+    "citation": "Tex. Penal Code § 42.01(a)(10)",
+    "conduct": "Exposing the anus or genitals in a public place while reckless about whether another may be present who will be offended or alarmed. Intentional or knowing exposure and the additional recklessness condition must both be established. This branch does not require the sexual-arousal/gratification intent of §21.08, and exposure is not automatically that separate Class B offense. The under-12 campus exception in (f) does not list (a)(10). Intentionally or knowingly engaging in the specified conduct is required. Under (a-1), public place includes a public school campus or school grounds; §1.07(a)(40) otherwise covers places to which the public or a substantial group has access. Under (c)(1), conduct is deemed to occur in public or near a private residence if it produces its offensive or proscribed consequences there; the actor’s physical location alone is not conclusive.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, with no jail term as the ordinary punishment. Under §12.43(c), three prior convictions under §42.01 or §49.02, or any combination of those offenses, can permit a fine up to $2,000, up to 180 days in jail, or both if each prior offense was committed in the 24 months before this offense. This is a repeat-punishment provision, not automatic reclassification of every repeat incident; qualifying convictions and dates must be established. Earlier conduct requires the applicable historical statute; the section’s latest September 1, 2023 amendment did not first create these branches.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(10)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(c)",
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "21.08",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ]
+  },
+  {
+    "id": "tx-pc-42-01-looking-dwelling",
+    "name": "Disorderly conduct (looking into a dwelling)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(11)(A)",
+    "citation": "Tex. Penal Code § 42.01(a)(11)(A)",
+    "conduct": "For a LEWD OR UNLAWFUL PURPOSE, entering another’s property AND looking into a dwelling there through a window or other opening. An accidental glance or presence alone does not establish that purpose. The precise location/entry conditions belong to this subdivision; the other two looking branches are not substituted for it. The under-12 campus exception in (f) does not list (a)(11). Intentionally or knowingly engaging in the specified conduct is required.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, with no jail term as the ordinary punishment. Under §12.43(c), three prior convictions under §42.01 or §49.02, or any combination of those offenses, can permit a fine up to $2,000, up to 180 days in jail, or both if each prior offense was committed in the 24 months before this offense. This is a repeat-punishment provision, not automatic reclassification of every repeat incident; qualifying convictions and dates must be established. Earlier conduct requires the applicable historical statute; the section’s latest September 1, 2023 amendment did not first create these branches.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(11)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(c)",
+        "supportRole": "penalty"
+      }
+    ]
+  },
+  {
+    "id": "tx-pc-42-01-looking-hotel-room",
+    "name": "Disorderly conduct (looking into another guest room)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(11)(B)",
+    "citation": "Tex. Penal Code § 42.01(a)(11)(B)",
+    "conduct": "For a LEWD OR UNLAWFUL PURPOSE, being on the premises of a hotel or comparable establishment and looking into a guest room not the actor’s own through a window or other opening. An accidental glance or presence alone does not establish that purpose. The precise location/entry conditions belong to this subdivision; the other two looking branches are not substituted for it. The under-12 campus exception in (f) does not list (a)(11). Intentionally or knowingly engaging in the specified conduct is required.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, with no jail term as the ordinary punishment. Under §12.43(c), three prior convictions under §42.01 or §49.02, or any combination of those offenses, can permit a fine up to $2,000, up to 180 days in jail, or both if each prior offense was committed in the 24 months before this offense. This is a repeat-punishment provision, not automatic reclassification of every repeat incident; qualifying convictions and dates must be established. Earlier conduct requires the applicable historical statute; the section’s latest September 1, 2023 amendment did not first create these branches.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(11)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(c)",
+        "supportRole": "penalty"
+      }
+    ]
+  },
+  {
+    "id": "tx-pc-42-01-looking-private-area",
+    "name": "Disorderly conduct (looking into a privacy area)",
+    "officialTitle": "DISORDERLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "42.01(a)(11)(C)",
+    "citation": "Tex. Penal Code § 42.01(a)(11)(C)",
+    "conduct": "For a LEWD OR UNLAWFUL PURPOSE, being on the premises of a public place and looking into an area designed to give its user privacy, such as a restroom, shower stall or changing/dressing room. An accidental glance or presence alone does not establish that purpose. The precise location/entry conditions belong to this subdivision; the other two looking branches are not substituted for it. The under-12 campus exception in (f) does not list (a)(11). Intentionally or knowingly engaging in the specified conduct is required.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, with no jail term as the ordinary punishment. Under §12.43(c), three prior convictions under §42.01 or §49.02, or any combination of those offenses, can permit a fine up to $2,000, up to 180 days in jail, or both if each prior offense was committed in the 24 months before this offense. This is a repeat-punishment provision, not automatic reclassification of every repeat incident; qualifying convictions and dates must be established. Earlier conduct requires the applicable historical statute; the section’s latest September 1, 2023 amendment did not first create these branches.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a)(11)(C)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(a-1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "42.01",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": "(a)(40)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": "(c)",
+        "supportRole": "penalty"
+      }
+    ]
+  }
+]

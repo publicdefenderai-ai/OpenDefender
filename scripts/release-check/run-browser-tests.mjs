@@ -82,6 +82,8 @@ const testProcess = spawn(
     "tests/e2e/standalone-guides-design.spec.ts",
     "tests/e2e/immigration-bond-design.spec.ts",
     "tests/e2e/immigration-attorney-design.spec.ts",
+    "tests/e2e/immigration-toolkit-design.spec.ts",
+
     "tests/e2e/immigration-family-design.spec.ts",
     "tests/e2e/daca-tps-design.spec.ts",
     "tests/e2e/after-deportation-design.spec.ts",
