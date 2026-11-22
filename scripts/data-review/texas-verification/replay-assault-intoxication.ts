@@ -1,3 +1,19 @@
+import recordsBailRows from "../../../shared/texas-records-bail.json";
+import recordsBailEvidence from "../output/texas-records-bail-evidence.json";
+import peaceRows from "../../../shared/texas-public-peace.json";
+import peaceEvidence from "../output/texas-public-peace-evidence.json";
+import commerceRows from "../../../shared/texas-sexual-commerce.json";
+import commerceEvidence from "../output/texas-sexual-commerce-evidence.json";
+import contactRows from "../../../shared/texas-indecent-contact.json";
+import contactEvidence from "../output/texas-indecent-contact-evidence.json";
+import protectiveRows from "../../../shared/texas-protective-firearms.json";
+import protectiveEvidence from "../output/texas-protective-firearms-evidence.json";
+import animalRows from "../../../shared/texas-animal-cruelty.json";
+import animalEvidence from "../output/texas-animal-cruelty-evidence.json";
+import communicationsRows from "../../../shared/texas-communications-stalking.json";
+import communicationsEvidence from "../output/texas-communications-evidence.json";
+import childRows from "../../../shared/texas-child-sexual-offenses.json";
+import childEvidence from "../output/texas-child-sexual-evidence.json";
 import harmRows from "../../../shared/texas-intoxication-harm.json";
 import harmEvidence from "../output/texas-intoxication-harm-evidence.json";
 import prohibitedRows from "../../../shared/texas-prohibited-possession.json";
@@ -58,6 +74,14 @@ import protectedAssaultRows from "../../../shared/texas-protected-assault.json";
 import protectedAssaultEvidence from "../output/texas-protected-assault-evidence.json";
 
 const batches = new Map([
+  ["records-bail", { rows: recordsBailRows, evidence: Object.entries(recordsBailEvidence) }],
+  ["public-peace", { rows: peaceRows, evidence: Object.entries(peaceEvidence) }],
+  ["sexual-commerce", { rows: commerceRows, evidence: Object.entries(commerceEvidence) }],
+  ["indecent-contact", { rows: contactRows, evidence: Object.entries(contactEvidence) }],
+  ["protective-firearms", { rows: protectiveRows, evidence: Object.entries(protectiveEvidence) }],
+  ["animal-cruelty", { rows: animalRows, evidence: Object.entries(animalEvidence) }],
+  ["communications", { rows: communicationsRows, evidence: Object.entries(communicationsEvidence) }],
+  ["child-sexual", { rows: childRows, evidence: Object.entries(childEvidence) }],
   ["intoxication-harm", { rows: harmRows, evidence: Object.entries(harmEvidence) }],
   ["prohibited-possession", { rows: prohibitedRows, evidence: Object.entries(prohibitedEvidence) }],
   ["threats-alerts", { rows: threatRows, evidence: Object.entries(threatEvidence) }],

@@ -1,269 +1,137 @@
+import "./family-planning.css";
+import { useEffect } from "react";
 import { BrandShieldIcon } from "@/components/brand-logo";
-import { motion } from "framer-motion";
-import { 
-  Heart, 
-  
-  AlertTriangle
-} from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AlertTriangle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { useTranslation } from 'react-i18next';
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useTranslation } from "react-i18next";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { ImmigrationDetailLayout } from "@/components/immigration/immigration-detail-layout";
+import { ScanFirstPageFrame, PageSectionNav } from "@/components/layout/scan-first-page-frame";
+import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
+import { RapidlyEvolvingNotice } from "@/components/immigration/rapidly-evolving-notice";
 import { POAGenerator } from "@/components/immigration/poa-generator";
+import { immigrationFamilyCopy } from "@/locales/immigration-family-design";
 
 export default function FamilyPlanning() {
   useScrollToTop();
-  const { t } = useTranslation();
-  
-  const breadcrumbItems = [
-    { label: t('breadcrumb.home', 'Home'), href: '/' },
-    { label: t('breadcrumb.immigrationGuidance', 'Immigration Guidance'), href: '/immigration-guidance' }
-  ];
-  
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language?.startsWith("es") ? "es" : i18n.language?.startsWith("zh") ? "zh" : "en";
+  const design = immigrationFamilyCopy[locale];
+
+  // Include every explanation in browser print, then restore the reader's choices.
+  useEffect(() => {
+    let openedForPrint: HTMLDetailsElement[] = [];
+    const beforePrint = () => {
+      const closed = Array.from(document.querySelectorAll<HTMLDetailsElement>(".immigration-family-document:not([open])"));
+      openedForPrint.push(...closed);
+      closed.forEach(detail => { detail.open = true; });
+    };
+    const afterPrint = () => {
+      openedForPrint.forEach(detail => { detail.open = false; });
+      openedForPrint = [];
+    };
+    window.addEventListener("beforeprint", beforePrint);
+    window.addEventListener("afterprint", afterPrint);
+    return () => {
+      window.removeEventListener("beforeprint", beforePrint);
+      window.removeEventListener("afterprint", afterPrint);
+      afterPrint();
+    };
+  }, []);
+
   return (
-    <ImmigrationDetailLayout
-      title={t('immigration.family.title')}
-      subtitle={t('immigration.family.subtitle')}
-      breadcrumbItems={breadcrumbItems}
-      icon={<Heart className="h-7 w-7" />}
-      alert={
-        <Alert className="border-blue-300 bg-blue-50 dark:border-blue-700 dark:bg-blue-950/40">
-          <AlertDescription className="text-blue-900 dark:text-blue-200" data-testid="alert-family-planning">
-            <div className="flex items-start gap-3">
-              <BrandShieldIcon size={20} className="mt-0.5 shrink-0" />
-              <span><strong>{t('immigration.family.planningAlert')}</strong> {t('immigration.family.planningAlertText')}</span>
+    <ScanFirstPageFrame mainClassName="immigration-family-page">
+      <PageBreadcrumb items={[
+        { label: design.home, href: "/" },
+        { label: design.immigration, href: "/immigration-guidance" }
+      ]} currentPage={t("immigration.family.title")} />
+      <header className="immigration-family-hero">
+        <div>
+          <h1 data-testid="immigration-detail-title">{design.title}{" "}<span>{design.accent}</span></h1>
+          <p data-testid="immigration-detail-subtitle">{t("immigration.family.subtitle")}</p>
+        </div>
+        <img className="immigration-family-art" src="/images/design/immigration-family.svg" width="280" height="230" alt="" aria-hidden="true" />
+      </header>
+      <Alert className="border-blue-300 bg-blue-50 dark:border-blue-700 dark:bg-blue-950/40">
+        <AlertDescription className="text-blue-900 dark:text-blue-200" data-testid="alert-family-planning">
+          <div className="flex items-start gap-3">
+            <BrandShieldIcon size={20} className="mt-0.5 shrink-0" />
+            <span><strong>{t("immigration.family.planningAlert")}</strong> {t("immigration.family.planningAlertText")}</span>
+          </div>
+        </AlertDescription>
+      </Alert>
+      <PageSectionNav ariaLabel={design.nav} items={[
+        { id: "fp-plan", label: design.sections[0] },
+        { id: "fp-documents", label: design.sections[1] },
+        { id: "generator", label: design.sections[2] },
+        { id: "fp-practical", label: design.sections[3] },
+        { id: "fp-help", label: design.sections[4] }
+      ]} />
+      <RapidlyEvolvingNotice />
+
+      <section id="fp-plan" tabIndex={-1} className="immigration-family-section">
+        <h2 data-testid="text-emergency-plan-title">{t("immigration.family.emergencyPlan.title")}</h2>
+        <div className="immigration-family-columns">
+          {(["communication", "documentPrep"] as const).map(topic => (
+            <div key={topic}>
+              <h3>{t(`immigration.family.emergencyPlan.${topic}.title`)}</h3>
+              <ol className="immigration-family-steps">
+                {[1, 2, 3].map(step => (
+                  <li key={step}>
+                    <strong>{t(`immigration.family.emergencyPlan.${topic}.step${step}`)}</strong>
+                    <p>{t(`immigration.family.emergencyPlan.${topic}.step${step}Text`)}</p>
+                  </li>
+                ))}
+              </ol>
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="fp-documents" tabIndex={-1} className="immigration-family-section">
+        <h2 data-testid="text-essential-documents-title">{t("immigration.family.documents.title")}</h2>
+        {(["poa", "caregiver", "guardianship"] as const).map(document => (
+          <details className="immigration-family-document" key={document}>
+            <summary>{t(`immigration.family.documents.${document}.title`)}<span aria-hidden="true" /></summary>
+            <div>
+              <p>{t(`immigration.family.documents.${document}.description`)}</p>
+              <ul>
+                {Array.from({ length: document === "guardianship" ? 4 : 3 }, (_, index) => (
+                  <li key={index}>{t(`immigration.family.documents.${document}.item${index + 1}`)}</li>
+                ))}
+              </ul>
+            </div>
+          </details>
+        ))}
+      </section>
+
+      <section id="generator" tabIndex={-1} className="immigration-family-section">
+        <h2 data-testid="text-generator-title">{t("immigration.family.generator.title")}</h2>
+        <p className="immigration-family-tool-intro">{t("immigration.family.generator.description")}</p>
+        {/* Keep the current official-form selector, not the superseded preview generator. */}
+        <POAGenerator />
+      </section>
+
+      <section id="fp-practical" tabIndex={-1} className="immigration-family-section">
+        <h2 data-testid="text-financial-planning-title">{t("immigration.family.financial.title")}</h2>
+        <div className="immigration-family-needs">
+          {(["bank", "property", "medical"] as const).map(topic => (
+            <article key={topic}>
+              <h3>{t(`immigration.family.financial.${topic}`)}</h3>
+              <p>{t(`immigration.family.financial.${topic}Text`)}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="fp-help" tabIndex={-1} className="immigration-family-section">
+        <h2>{design.help}</h2>
+        <Alert className="bg-green-50 border-green-200 dark:bg-green-950/50 dark:border-green-800">
+          <AlertTriangle className="h-5 w-5 text-green-600" />
+          <AlertDescription className="text-green-800 dark:text-green-200">
+            <strong>{t("immigration.family.freeHelp")}</strong> {t("immigration.family.freeHelpText")}
           </AlertDescription>
         </Alert>
-      }
-    >
-
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-2xl font-bold text-center mb-8" data-testid="text-essential-documents-title">
-              {t('immigration.family.documents.title')}
-            </h2>
-          </ScrollReveal>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ScrollReveal delay={0.1}>
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-lg">
-                    {t('immigration.family.documents.poa.title')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {t('immigration.family.documents.poa.description')}
-                  </p>
-                  <ul className="text-sm text-muted-foreground space-y-2 list-disc list-inside">
-                    <li>{t('immigration.family.documents.poa.item1')}</li>
-                    <li>{t('immigration.family.documents.poa.item2')}</li>
-                    <li>{t('immigration.family.documents.poa.item3')}</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-lg">
-                    {t('immigration.family.documents.caregiver.title')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {t('immigration.family.documents.caregiver.description')}
-                  </p>
-                  <ul className="text-sm text-muted-foreground space-y-2 list-disc list-inside">
-                    <li>{t('immigration.family.documents.caregiver.item1')}</li>
-                    <li>{t('immigration.family.documents.caregiver.item2')}</li>
-                    <li>{t('immigration.family.documents.caregiver.item3')}</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-lg">
-                    {t('immigration.family.documents.guardianship.title')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {t('immigration.family.documents.guardianship.description')}
-                  </p>
-                  <ul className="text-sm text-muted-foreground space-y-2 list-disc list-inside">
-                    <li>{t('immigration.family.documents.guardianship.item1')}</li>
-                    <li>{t('immigration.family.documents.guardianship.item2')}</li>
-                    <li>{t('immigration.family.documents.guardianship.item3')}</li>
-                    <li>{t('immigration.family.documents.guardianship.item4')}</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-          </div>
-
-          <div id="generator" className="max-w-4xl mx-auto mt-12 pt-12 border-t border-border">
-            <ScrollReveal>
-              <h3 className="text-xl font-bold text-center mb-2" data-testid="text-generator-title">
-                {t('immigration.family.generator.title')}
-              </h3>
-              <p className="text-muted-foreground text-center mb-8">
-                {t('immigration.family.generator.description')}
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.1}>
-              <POAGenerator />
-            </ScrollReveal>
-          </div>
-        </div>
       </section>
-
-      <section className="py-12 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-2xl font-bold text-center mb-8" data-testid="text-emergency-plan-title">
-              {t('immigration.family.emergencyPlan.title')}
-            </h2>
-          </ScrollReveal>
-          
-          <div className="grid lg:grid-cols-2 gap-8">
-            <ScrollReveal delay={0.1}>
-              <Card>
-                <CardHeader>
-                  <CardTitle>
-                    {t('immigration.family.emergencyPlan.communication.title')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-sm font-semibold text-primary">1</span>
-                    <div>
-                      <strong className="text-foreground">{t('immigration.family.emergencyPlan.communication.step1')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.family.emergencyPlan.communication.step1Text')}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-sm font-semibold text-primary">2</span>
-                    <div>
-                      <strong className="text-foreground">{t('immigration.family.emergencyPlan.communication.step2')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.family.emergencyPlan.communication.step2Text')}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-sm font-semibold text-primary">3</span>
-                    <div>
-                      <strong className="text-foreground">{t('immigration.family.emergencyPlan.communication.step3')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.family.emergencyPlan.communication.step3Text')}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <Card>
-                <CardHeader>
-                  <CardTitle>
-                    {t('immigration.family.emergencyPlan.documentPrep.title')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-sm font-semibold text-primary">1</span>
-                    <div>
-                      <strong className="text-foreground">{t('immigration.family.emergencyPlan.documentPrep.step1')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.family.emergencyPlan.documentPrep.step1Text')}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-sm font-semibold text-primary">2</span>
-                    <div>
-                      <strong className="text-foreground">{t('immigration.family.emergencyPlan.documentPrep.step2')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.family.emergencyPlan.documentPrep.step2Text')}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-sm font-semibold text-primary">3</span>
-                    <div>
-                      <strong className="text-foreground">{t('immigration.family.emergencyPlan.documentPrep.step3')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.family.emergencyPlan.documentPrep.step3Text')}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-2xl font-bold text-center mb-8" data-testid="text-financial-planning-title">
-              {t('immigration.family.financial.title')}
-            </h2>
-          </ScrollReveal>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            <ScrollReveal delay={0.1}>
-              <Card className="h-full">
-                <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-2">{t('immigration.family.financial.bank')}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t('immigration.family.financial.bankText')}
-                  </p>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <Card className="h-full">
-                <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-2">{t('immigration.family.financial.property')}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t('immigration.family.financial.propertyText')}
-                  </p>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <Card className="h-full">
-                <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-2">{t('immigration.family.financial.medical')}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t('immigration.family.financial.medicalText')}
-                  </p>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4">
-          <ScrollReveal>
-            <Alert className="bg-green-50 border-green-200 dark:bg-green-950/50 dark:border-green-800">
-              <AlertTriangle className="h-5 w-5 text-green-600" />
-              <AlertDescription className="text-green-800 dark:text-green-200">
-                <strong>{t('immigration.family.freeHelp')}</strong> {t('immigration.family.freeHelpText')}
-              </AlertDescription>
-            </Alert>
-          </ScrollReveal>
-        </div>
-      </section>
-
-    </ImmigrationDetailLayout>
+    </ScanFirstPageFrame>
   );
 }

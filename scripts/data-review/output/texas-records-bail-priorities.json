@@ -1,0 +1,49 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "year": 2025,
+  "statewideAdult": 831210,
+  "statewideJuvenile": 44782,
+  "eligibleCodes": 2378,
+  "excludedCodes": 57,
+  "excludedAdult": 71549,
+  "rows": [
+    {
+      "rank": 91,
+      "code": "50150004",
+      "label": "BAIL JUMPING AND FAIL TO APPEAR FELONY",
+      "law": "PC",
+      "citation": "38.10(f)",
+      "adult": 1260,
+      "juvenile": 0
+    },
+    {
+      "rank": 92,
+      "code": "73990623",
+      "label": "TAMPER W/GOVERNMENT RECORD",
+      "law": "PC",
+      "citation": "37.10(c)(1)",
+      "adult": 1257,
+      "juvenile": 3
+    },
+    {
+      "rank": 95,
+      "code": "50150003",
+      "label": "BAIL JUMPING AND FAIL TO APPEAR",
+      "law": "PC",
+      "citation": "38.10(d)",
+      "adult": 1183,
+      "juvenile": 0
+    },
+    {
+      "rank": 110,
+      "code": "48030005",
+      "label": "FALSE STMNT TO PO/SP INV/LAW ENF EMPL/CORR OFF",
+      "law": "PC",
+      "citation": "37.08(c)",
+      "adult": 877,
+      "juvenile": 30
+    }
+  ]
+}

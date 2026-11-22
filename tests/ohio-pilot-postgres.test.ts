@@ -385,7 +385,15 @@ describe("Ohio pilot refresh against an isolated PostgreSQL cluster", { timeout:
         force: true,
         compare: async () => unchanged,
       });
-      expect(activated.fresh).toBe(true);
+      // Diagnose the actual refusal in this disposable cluster rather than
+      // reporting only false/true or changing the fail-closed assertion.
+      const activationDiagnostic = activated.fresh ? undefined : {
+        status: activated,
+        runs: (await pool.query(`SELECT operation, status, error_message
+          FROM statute_ingestion_runs ORDER BY started_at DESC LIMIT 5`)).rows,
+        selectable: [...await authority.getCurrentAuthoritySelectableChargeIds("OH")],
+      };
+      expect(activated.fresh, JSON.stringify(activationDiagnostic)).toBe(true);
 
       // Keep a fixture of the old official page, then amend the actual
       // source-first pin used by the production manifest. All three

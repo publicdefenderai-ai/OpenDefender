@@ -42,6 +42,18 @@ const deliveryTransfer = {
   instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F81_Controlled_Substance_Offenses%2FCPJC81-13.htm&version=048",
 };
 export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInjury | undefined>> = {
+  "tx-pc-21-08-genitals-ordinary": {instructionRef: "CPJC 21.8: Indecent Exposure of Genitals (underlying conduct only; genital-exposure theory only; prior and civil-commitment grading separate)", instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F21_Sexual_Offenses%2FCPJC21-8.htm&version=055"},
+  "tx-pc-21-08-genitals-one-prior": {instructionRef: "CPJC 21.8: Indecent Exposure of Genitals (underlying conduct only; genital-exposure theory only; prior and civil-commitment grading separate)", instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F21_Sexual_Offenses%2FCPJC21-8.htm&version=055"},
+  "tx-pc-21-08-genitals-two-priors": {instructionRef: "CPJC 21.8: Indecent Exposure of Genitals (underlying conduct only; genital-exposure theory only; prior and civil-commitment grading separate)", instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F21_Sexual_Offenses%2FCPJC21-8.htm&version=055"},
+  "tx-pc-21-08-genitals-svp": {instructionRef: "CPJC 21.8: Indecent Exposure of Genitals (underlying conduct only; genital-exposure theory only; prior and civil-commitment grading separate)", instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F21_Sexual_Offenses%2FCPJC21-8.htm&version=055"},
+  "tx-pc-21-11-contact": {instructionRef: "CPJC 21.11: Indecency with Child by Contact: Touching by Defendant (underlying conduct only; defendant-touching theory only)", instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F21_Sexual_Offenses%2FCPJC21-11.htm&version=055"},
+  "tx-pc-21-11-exposure": {instructionRef: "CPJC 21.13: Indecency with Child: Exposure by Defendant (underlying conduct only; actor-exposure theory only)", instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F21_Sexual_Offenses%2FCPJC21-13.htm&version=055"},
+  "tx-pc-21-11-cause-exposure": {instructionRef: "CPJC 21.14: Indecency with Child: Exposure by Child (underlying conduct only; causing-child-exposure theory only)", instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F21_Sexual_Offenses%2FCPJC21-14.htm&version=055"},
+  "tx-statutory-rape": {instructionRef: "CPJC 21.19: Sexual Assault of Child (underlying conduct only; sexual-organ penetration theory only; other conduct and special grading separate)", instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F21_Sexual_Offenses%2FCPJC21-19.htm&version=055"},
+  "tx-pc-22-021-a-age10-13": {instructionRef: "CPJC 21.29: Aggravated Sexual Assault of Child under Fourteen (underlying conduct only; sexual-organ penetration theory only; special grading separate)", instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F21_Sexual_Offenses%2FCPJC21-29.htm&version=055"},
+  "tx-pc-22-021-a-under10": {instructionRef: "CPJC 21.29: Aggravated Sexual Assault of Child under Fourteen (underlying conduct only; sexual-organ penetration theory only; special grading separate)", instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F21_Sexual_Offenses%2FCPJC21-29.htm&version=055"},
+  "tx-pc-22-021-a-under14-extra": {instructionRef: "CPJC 21.29: Aggravated Sexual Assault of Child under Fourteen (underlying conduct only; sexual-organ penetration theory only; special grading separate)", instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F21_Sexual_Offenses%2FCPJC21-29.htm&version=055"},
+  "tx-pc-22-021-a-age14-16-extra": {instructionRef: "CPJC 21.28: Aggravated Sexual Assault of Child between Fourteen and Seventeen (underlying conduct only; sexual-organ penetration theory only; special grading separate)", instructionUrl: "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F21_Sexual_Offenses%2FCPJC21-28.htm&version=055"},
   ...Object.fromEntries(intoxicationHarm.map(row => {
     const section = row.references[0].section;
     const item = section === "49.045" ? "49-17" : section === "49.07" ? "49-26" : "49-25";
@@ -54,23 +66,23 @@ export const texasVerifiedInstructions: Readonly<Record<string, typeof bodilyInj
   },
   "tx-pc-22-07-ordinary-fear": {
     "instructionRef": "CPJC 22.28: Terroristic Threat (individual imminent-serious-injury fear theory only; underlying conduct only, special grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=055"
   },
   "tx-pc-22-07-family": {
     "instructionRef": "CPJC 22.28: Terroristic Threat (individual imminent-serious-injury fear theory only; underlying conduct only, special grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=055"
   },
   "tx-pc-22-07-public-servant": {
     "instructionRef": "CPJC 22.28: Terroristic Threat (individual imminent-serious-injury fear theory only; underlying conduct only, special grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=055"
   },
   "tx-pc-22-07-peace-officer": {
     "instructionRef": "CPJC 22.28: Terroristic Threat (individual imminent-serious-injury fear theory only; underlying conduct only, special grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=055"
   },
   "tx-pc-22-07-judge": {
     "instructionRef": "CPJC 22.28: Terroristic Threat (individual imminent-serious-injury fear theory only; underlying conduct only, special grading separate)",
-    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=048"
+    "instructionUrl": "https://bookviewer.texasbarpractice.com/bookviewer/eviewer?bookValue=CPJC&keyName=..%2F22_Assaultive_Offenses%2FCPJC22-28.htm&version=055"
   },
   "tx-pc-20-02-ordinary": {
     "instructionRef": "CPJC 20.7: Unlawful Restraint (force, intimidation or deception theory only; underlying conduct only; child-acquiescence alternatives and grading separate)",

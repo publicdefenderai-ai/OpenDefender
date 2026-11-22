@@ -74,6 +74,7 @@ const testProcess = spawn(
     "tests/e2e/how-to-design.spec.ts",
     "tests/e2e/rights-design.spec.ts",
     "tests/e2e/statutes-design.spec.ts",
+    "tests/e2e/statutes-citation-lookup.spec.ts",
     "tests/e2e/quick-reference-print.spec.ts",
     "tests/e2e/diversion-directory.spec.ts",
     "tests/e2e/case-timeline-design.spec.ts",
@@ -82,6 +83,11 @@ const testProcess = spawn(
     "tests/e2e/immigration-bond-design.spec.ts",
     "tests/e2e/immigration-attorney-design.spec.ts",
     "tests/e2e/immigration-toolkit-design.spec.ts",
+
+    "tests/e2e/immigration-family-design.spec.ts",
+    "tests/e2e/daca-tps-design.spec.ts",
+    "tests/e2e/after-deportation-design.spec.ts",
+    "tests/e2e/workplace-raids-design.spec.ts",
     "tests/e2e/right-to-counsel-design.spec.ts",
     "tests/e2e/immigration-situations-design.spec.ts",
     "tests/e2e/immigration-rights-design.spec.ts",
@@ -217,6 +223,7 @@ const testProcess = spawn(
     "tests/e2e/source-readiness-gate.spec.ts",
     "tests/e2e/multilingual-mobile-layout.spec.ts",
     "tests/e2e/localized-mobile-actions.spec.ts",
+    "tests/e2e/localized-guidance-statute-errors.spec.ts",
   ],
   {
     env: {

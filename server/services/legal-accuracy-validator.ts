@@ -225,6 +225,7 @@ async function validateCitations(
   
   const allStatutes = [...statutes, ...federalStatutes];
   let openLawsStatus: 'available' | 'unavailable' | 'not_run' = includeLiveStatuteLookup ? 'unavailable' : 'not_run';
+  let lookupFailed = false;
   const sourceController = includeLiveStatuteLookup ? new AbortController() : undefined;
   const sourceTimer = sourceController
     ? setTimeout(() => sourceController.abort(), LIVE_SOURCE_TIMEOUT_MS)
@@ -247,7 +248,9 @@ async function validateCitations(
             const liveResult = await openLawsClient.searchByCitation(citation, {
               signal: sourceController?.signal,
             });
-            openLawsStatus = openLawsClient.getLastSearchStatus?.() ?? (liveResult ? 'available' : 'unavailable');
+            // A resolved lookup (including a provider 404) reached the provider.
+            // Keep a prior failure visible and avoid shared singleton status.
+            if (!lookupFailed) openLawsStatus = 'available';
             if (liveResult) {
               verified++;
               confirmedByOpenLaws = true;
@@ -255,6 +258,8 @@ async function validateCitations(
             }
           } catch {
             // OpenLaws unavailable or not configured; proceed to flag
+            lookupFailed = true;
+            openLawsStatus = 'unavailable';
           }
         }
 

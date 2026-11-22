@@ -171,10 +171,10 @@ const chargeGuidance = {
   'dui': {
     name: 'DUI/DWI',
     immediateActions: [
-      'An independent blood or breath test may be requested in some jurisdictions — attorneys advise asking about this option promptly as timing matters.',
-      'Document any medical conditions affecting tests',
-      'Take photos of arrest scene and conditions',
-      'Request DMV hearing within 10 days (varies by state)'
+      'Availability and timing of independent blood or breath testing under the applicable law',
+      'Medical conditions that may affect test results',
+      'Scene conditions and any existing photographs or recordings',
+      'Administrative license-hearing procedures and the deadline stated in the applicable notice'
     ],
     evidenceToGather: [
       'Breathalyzer calibration records',
@@ -184,10 +184,10 @@ const chargeGuidance = {
       'Weather and road condition reports'
     ],
     defenseStrategies: [
-      'Challenge breathalyzer accuracy and maintenance',
-      'Question field sobriety test administration',
-      'Examine probable cause for initial stop',
-      'Review Miranda rights administration'
+      'Breath-test accuracy and device maintenance',
+      'How field sobriety tests were administered',
+      'Legal grounds for the stop and detention',
+      'Custodial questioning and applicable rights'
     ],
     collateralConsequences: [
       'License suspension (administrative and criminal)',
@@ -468,7 +468,7 @@ const stageGuidance = {
     rights: [
       'You have the right to stay silent and not answer questions',
       'You have the right to a lawyer',
-      'You have the right to ask for bail so you can get out of jail',
+      'Protection against excessive bail; release eligibility and hearing procedures depend on applicable law',
       'You have the right to make a phone call',
       'You have the right to see a doctor if you\'re hurt',
       'You have the right to know what you\'re being charged with'
@@ -484,8 +484,8 @@ const stageGuidance = {
     name: 'First Court Appearance',
     criticalActions: [
       '**Plea at Arraignment**: Most attorneys advise entering a not guilty plea at arraignment — this preserves all options while the case and evidence are reviewed with counsel.',
-      'Ask for a public defender if you can\'t afford a lawyer',
-      'Talk to the judge about bail so you can get out of jail',
+      'Court-appointed counsel may be available under applicable eligibility rules; court information explains the application process',
+      'Release or bail requests are considered through the court process; eligibility, conditions and outcomes depend on the case and applicable law',
       'Get a copy of the papers that say what you\'re charged with'
     ],
     courtPreparation: [
@@ -624,8 +624,8 @@ function buildMockQA(caseData: CaseData, specificCharges: any[]): MockQAItem[] {
       },
       {
         question: "Do you have an attorney or do you need one appointed?",
-        suggestedResponse: hasAttorney == null ? "State whether you have counsel, if known." : hasAttorney ? "Yes, Your Honor, I have an attorney." : "I would like to request a public defender, Your Honor.",
-        explanation: hasAttorney == null ? "If you need a lawyer, you can ask how appointment works." : hasAttorney ? "Confirm you have representation." : "If you cannot afford a lawyer, the court will appoint a public defender to represent you.",
+        suggestedResponse: hasAttorney == null ? "State whether you have counsel, if known." : hasAttorney ? "Yes, Your Honor, I have an attorney." : "If you want appointed counsel, one possible question is: \"How do I apply for a court-appointed lawyer?\"",
+        explanation: hasAttorney == null ? "If you need a lawyer, you can ask how appointment works." : hasAttorney ? "Confirm you have representation." : "Court-appointed counsel may be available under applicable eligibility rules. Appointment can involve a public defender or another assigned lawyer; it is not determined by this roadmap.",
         category: 'procedural'
       },
       {
@@ -787,7 +787,7 @@ function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any
   }
   
   if (caseData.hasAttorney === false) {
-    alerts.push('Requesting a public defender promptly matters — representation before arraignment can affect bail and initial proceedings.');
+    alerts.push('Counsel can assist with early proceedings, including release issues. Court information explains eligibility and application procedures for appointed counsel, which may be a public defender or another assigned lawyer.');
   }
   
   // Add charge-specific critical alerts
@@ -854,7 +854,7 @@ function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, spe
   // Add attorney action if needed with URGENT priority
   if (caseData.hasAttorney === false && caseData.caseStage === 'arrest') {
     actions.unshift({ 
-      action: 'Ask for a public defender right away if you can\'t afford a lawyer', 
+      action: 'Court-appointed counsel eligibility and application procedures for people who need representation',
       urgency: 'urgent',
       treatment: 'legal-information',
     });
@@ -976,9 +976,9 @@ function buildNextSteps(caseData: CaseData, stageData: any): string[] {
   switch (caseData.caseStage) {
     case 'arrest':
       steps.push(
-        'Contact attorney or request public defender',
+        'Legal representation options and applicable appointed-counsel procedures',
         'Notify family/employer of situation',
-        'Gather bail money and documentation',
+        'Release conditions, any financial requirements, and documents considered in the court process',
         'Prepare for arraignment hearing'
       );
       break;
@@ -1111,7 +1111,7 @@ function buildBasicRights(caseStage: string): string[] {
   const basicRights = [
     'Right to remain silent',
     'Right to attorney representation',
-    'Right to reasonable bail',
+    'Protection against excessive bail; release is not guaranteed',
     'Right to fair and speedy trial',
     'Right to confront witnesses',
     'Right to present defense evidence'
@@ -1126,8 +1126,8 @@ function buildResources(jurisdiction: string, hasAttorney: boolean | null | unde
   if (hasAttorney === false) {
     resources.push({
       type: 'Public Defender Office',
-      description: 'Free legal representation if you qualify financially. Income thresholds shown are approximate — eligibility is determined by the court at your first appearance, not by these figures alone.',
-      contact: 'Contact your local public defender office',
+      description: 'Court-appointed representation depends on applicable eligibility rules, including financial eligibility. Income figures shown are approximate; this roadmap does not decide eligibility or when appointment occurs.',
+      contact: 'Local public defender office or court information about appointed counsel',
       hours: 'Monday-Friday 8:00 AM - 5:00 PM'
     });
   }
@@ -1181,7 +1181,7 @@ function buildOverview(caseData: CaseData, specificCharges: any[], jurisdictionD
   if (hasAttorney == null) {
     actions = 'If you have a lawyer, they can help review your court papers. If you need representation, you can ask the court about appointed counsel.';
   } else if (hasAttorney === false) {
-    actions = 'Securing legal representation is the immediate priority — the public defender\'s office provides representation at no cost for those who qualify. Making statements to police before speaking with an attorney is something legal professionals consistently advise against.';
+    actions = 'Court-appointed counsel may be available under applicable eligibility rules; the court or local defender office can explain the process. Statements to police may become evidence, and a lawyer can explain the rights and choices relevant to the case.';
   } else if (caseStage === 'arrest') {
     actions = 'Attorneys consistently advise against making statements without counsel present. Attending the arraignment hearing on time is the other immediate priority.';
   } else if (caseStage === 'arraignment') {
@@ -1265,9 +1265,9 @@ export const CHARGE_CONSEQUENCE_MAP: Record<string, CollateralConsequenceItem[]>
   dui: [
     {
       category: 'drivers_license',
-      consequence: 'A DUI conviction typically triggers an automatic administrative license suspension separate from any criminal sentence, and may require an ignition interlock device.',
-      timing: 'Upon arrest (administrative) and conviction (criminal)',
-      actionNote: 'Request a DMV hearing to contest the administrative suspension — the deadline is often 10 days from arrest, but this window varies by state. Check your arrest paperwork or your state DMV website immediately. This is one common consequence; a DUI conviction can carry additional consequences depending on your state and circumstances.',
+      consequence: 'A qualifying test result or test refusal may trigger administrative license action independently of the criminal case. A conviction can have separate licensing consequences, and ignition-interlock requirements depend on the applicable law.',
+      timing: 'Administrative notice and criminal disposition follow separate procedures',
+      actionNote: 'DMV hearing deadlines and their starting events vary by state and notice type. The applicable notice and state DMV information identify the process; a lawyer can explain how it relates to the criminal case. Other consequences depend on the jurisdiction and circumstances.',
     },
   ],
   assault: [
@@ -1323,7 +1323,7 @@ export const CHARGE_CONSEQUENCE_MAP: Record<string, CollateralConsequenceItem[]>
       category: 'drivers_license',
       consequence: 'Serious traffic violations — including reckless driving, hit-and-run, or habitual offenses — can result in license suspension, revocation, or points accumulation leading to disqualification.',
       timing: 'Upon conviction or administrative action',
-      actionNote: 'Request a DMV hearing if your license is administratively suspended. Commercial driver\'s license (CDL) holders face stricter consequences.',
+      actionNote: 'Administrative hearing options and deadlines depend on the applicable notice and state rules. Commercial driver\'s license (CDL) holders can face additional consequences.',
     },
   ],
   weapons: [

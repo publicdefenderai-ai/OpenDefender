@@ -759,3 +759,49 @@ The immigration-toolkit-content.html direction uses the approved document-folder
 The four scenario definitions and 20 checklist definitions are unchanged. The checklist continues to store checked IDs locally and confirms resets. All 12 contact-card inputs retain their existing mappings; their labels are now associated with the fields and the three-column groups stack on mobile. Scenario, step and category controls announce their selected states, and checklist rows expose checkbox semantics. Emergency-card entries are escaped as text before insertion into the print document; both print documents declare their language. The existing card page size is retained; physical pagination for arbitrary-length entries is not certified by this refresh.
 
 The pre-change rendered fixture records 61 initial fragments and 13 distinct destinations per interface language, plus all 14 step/after-encounter views across four scenarios. Six release-browser cases verify preservation, each encounter view at 320px, checklist filters/persistence/reset, contact selection, both print outputs, text escaping, input labels, section navigation, theme layouts and image loading. Existing legal and service-contact wording is preserved, not substantively revalidated.
+
+### Immigration family emergency planning
+
+The immigration-family-content.html direction opens with the approved illustration of two people planning at a table and “Plan for your family. Prepare together.” The communication and document-preparation steps come first. Three native disclosures retain the legal-document explanations and lists, followed by caregiver forms, everyday needs and the published help notice. All five sections have keyboard-accessible navigation. Browser printing opens the document explanations and restores their prior disclosure state afterward.
+
+The preview predates the official caregiver-form replacement. The implementation therefore retains the current POAGenerator component unchanged: five state choices, government form and instruction links, state-specific cautions, no personal-data fields and the Chinese notice for English-only guidance. The old custom document generator is not restored. The legacy #generator link remains supported.
+
+A pre-change rendered fixture captures 46 English, 46 Spanish and 47 Chinese-session fragments, including full warnings. The release checks cover those fragments, all three disclosures, six planning steps, keyboard navigation, preservation of the selected state, image loading, print-state restoration, both themes and phone layouts. The existing caregiver-form browser spec additionally exercises all five states at desktop and 320px widths in all three interface languages. The legal text, shared form component and form data are unchanged.
+
+### Workplace Raids
+
+The approved workplace-raids-content.html supplies the building illustration and sectioned reading direction. The production refresh keeps the published title, encounter guidance, employer lists, after-raid information and work-authorization text. A five-section index replaces the long sequence of animated cards; the critical encounter alert remains near the top and the shared changing-law notice remains visible. All sections remain expanded and printable. The English/Spanish work-authorization material is explicitly marked English in Chinese sessions, with a translated availability note.
+
+The former emergency contact cards are a deliberate content-preservation exception: the unverified `1-844-NILC-123` and `1-800-775-2258` numbers are removed. NILC's official assistance page says it no longer accepts legal-assistance requests by phone and generally does not handle individual immigration cases (https://www.nilc.org/request-for-legal-assistance/). ACLU directs legal-assistance requests to local affiliates (https://www.aclu.org/about/contact-us). The replacement links describe those resources without promising immediate representation or emergency response. Sources checked November 20, 2026. This does not certify the remaining published work-authorization claims as current.
+
+A pre-change rendered fixture preserves 50 text fragments per locale plus the existing USCIS destination. The release-listed browser spec checks those fragments, both removed numbers, replacement destinations, five keyboard section jumps, one main landmark, illustration loading, the Chinese language marker, print visibility and 1280px/320px bounds across three languages and both themes. Typecheck, production build, 27 design-locale checks and six browser cases passed. Desktop/light and mobile/dark screenshots were visually inspected. No full-suite, production deployment, or legal-approval claim.
+
+### Remaining implementation inventory (November 20, 2026)
+
+- Awaiting review: Raids Preparedness Toolkit, PR 276. Workplace Raids is this batch.
+- Remaining immigration pages: DACA/TPS and After Deportation.
+- Remaining page-specific professional designs: attorney access/verification, workspace, document catalog, playbook catalog/detail and document wizard. Existing shared styling is not counted as a completed page-specific refresh.
+- Remaining developer tools: API reference, embeddable widgets and browser extensions. The Developer landing/reference page has already been refreshed.
+- Final design closeout: audit mobile navigation, light/dark appearance, keyboard paths, print surfaces and remaining empty/loading/error states across the completed routes. The How To screenshot replacement has landed. A further visual-variety pass remains a separate, deferred improvement.
+
+Legal-content and production-data work are tracked separately from this design inventory.
+
+### DACA and TPS
+
+The approved daca-tps-content.html reading direction is implemented as separate DACA and TPS sections, each pairing an introductory column with its detailed requirements, limitations and renewal information. Expiration concerns and official resources follow. The descriptive heading avoids promising personalized next steps. Four keyboard-accessible section links replace the previous card-heavy presentation, and scroll-triggered reveals are removed. All content stays expanded for search and print.
+
+The published translation keys and immigration-updates copy remain unchanged, including the fixed DACA eligibility dates, the four framework qualifications, the October 29, 2026 reference date, renewal caveats, TPS country-specific warning, benefits and re-registration language. This is not a new certification of current immigration policy. Both existing USCIS destinations and test IDs survive; their formerly English-only bottom link labels are translated. An internal link to immigration legal help is added. Shared header, footer, breadcrumb and changing-law notice remain.
+
+A pre-change rendered fixture captures 35 text fragments per language and all existing article links. The release-listed browser spec checks all fragments, visible qualifications, the six eligibility items and four framework items, three TPS benefits, three expiration topics, the full heading text, four keyboard jumps, one main landmark, translated resource labels, desktop/320px bounds and print visibility in all three languages and both themes. The six new cases and seven existing immigration-content cases passed (13 total). Desktop/light and mobile/dark screenshots were visually inspected. Typecheck, build and locale-parity results are recorded in the PR. No full-suite, deployment or legal-review-completion claim.
+
+Next page-specific immigration batch: After Deportation. Workplace Raids (PR 282) and DACA/TPS (PR 287) are merged. Raids Toolkit has a separate review PR.
+
+### After Deportation
+
+The approved immigration-after-content.html layout and phone/document illustration guide the refresh. Two audience links lead to the removed person's information and the family's information. The existing overview, four first-days steps, documents and money lists, four family topics, eight organizations and seven FAQ answers remain. All 13 legacy anchors survive and are focusable; native anchor navigation replaces imperative scroll buttons. The shared header, footer, breadcrumb and changing-law notice remain. Organization names are now the links instead of small standalone icons, with localized new-tab cues.
+
+Native FAQ disclosures support keyboard operation. Before printing, closed answers open; after printing, the reader's previous open/closed choices return. The listeners clean up on unmount. The decorative illustration is hidden on phones and in print. Existing substantive statements are preserved rather than replaced by draft-preview wording; this batch does not certify benefit, consular, transfer-service or immigration claims as current.
+
+A pre-change rendered fixture captures 71 fragments, 11 link destinations and all seven FAQ answers per language. The new release-listed spec checks preservation, all legacy anchors, direct legal-next navigation, keyboard section links, disclosure operation, print/restore behavior, image loading, single-main structure, new-tab cues and desktop/320px bounds across three languages and both themes. The DACA/TPS spec also checks its restored translated new-tab cues. Desktop/light and Chinese mobile/dark renders were visually inspected.
+
+PR 287 follow-ups: the outdated Workplace Raids inventory line is corrected; all four page-owned USCIS links now include translated screen-reader new-tab labels. A separate content pass remains for the dated DACA/TPS policy statements and status-lapse heading. No policy text is changed here.

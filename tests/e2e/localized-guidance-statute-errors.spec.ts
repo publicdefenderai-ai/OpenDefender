@@ -1,4 +1,22 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test as base, type Page } from "@playwright/test";
+
+// A missing scenario mock must fail this test, not send an uncredentialed
+// provider request to the shared server and cascade into unrelated tests.
+const test = base.extend<{ citationIsolation: void }>({
+  citationIsolation: [async ({ context, page }, use) => {
+    const unmatched: string[] = [];
+    await context.route("**/api/openlaws/**", async route => {
+      unmatched.push(new URL(route.request().url()).pathname);
+      await route.abort("blockedbyclient");
+    });
+    await use();
+    // Page-specific scenario routes take precedence over the context guard.
+    // Drain handlers before Playwright removes the page's routes at teardown.
+    if (!page.isClosed()) await page.unrouteAll({ behavior: "wait" });
+    await context.unrouteAll({ behavior: "wait" });
+    expect(unmatched, "Every OpenLaws request needs an explicit scenario mock").toEqual([]);
+  }, { auto: true }],
+});
 
 // The guidance stream below is synthetic; it must not depend on a real AI key.
 test.beforeEach(async ({page}) => {
@@ -165,17 +183,11 @@ for (const [viewportName, viewport] of ENGLISH_GUIDANCE_VIEWPORTS) {
     .locator("li")
     .filter({ hasText: "Preserve all messages, call logs" });
   await expect(evidenceTrigger).toBeVisible();
-  await evidenceTrigger.click();
-  await expect(evidenceItem).toBeHidden();
-  await evidenceTrigger.click();
+  // The current reader keeps these sections expanded instead of collapsible.
+  // Preserve the substantive visibility and width checks for their full text.
   await expect(evidenceItem).toBeVisible();
   await expectReadableWithinMobileViewport(page, evidenceItem);
-
-  const warningsSection = dashboard.getByText("Warnings & Court Preparation");
-  await expect(warningsSection).toBeVisible();
-  await warningsSection.click();
-  await expect(longWarningItem).toBeHidden();
-  await warningsSection.click();
+  await expect(warningsContent.getByRole("heading")).toBeVisible();
   await expect(longWarningItem).toBeVisible();
   await expectReadableWithinMobileViewport(page, longWarningItem);
 
@@ -303,8 +315,12 @@ async function mockFloridaAuthorityWithSharedCitation(page: Page) {
 }
 
 async function mockDelayedCitation(page: Page) {
+  let release!: () => void;
+  const released = new Promise<void>(resolve => { release = resolve; });
+  let handled!: () => void;
+  const completed = new Promise<void>(resolve => { handled = resolve; });
   await page.route("**/api/openlaws/citation/**", async (route) => {
-    await new Promise((resolve) => setTimeout(resolve, 1_000));
+    await released;
     await route.fulfill({
       status: 200,
       contentType: "application/json",
@@ -321,7 +337,9 @@ async function mockDelayedCitation(page: Page) {
         },
       }),
     });
+    handled();
   });
+  return { release, completed };
 }
 
 async function openQAFlow(page: Page) {
@@ -339,9 +357,14 @@ async function selectJurisdiction(page: Page) {
 async function selectCharge(page: Page) {
   await page.locator("#charge-search").fill("murder in the first degree");
   const charge = page.getByTestId("checkbox-charge-fl-murder-in-the-first-degree");
-  await charge.waitFor({ state: "visible" });
-  await charge.locator("..").click();
-  await page.getByTestId("button-next-case-details").click();
+  await expect(charge).toBeVisible();
+  // The row center can hit its statute/jury links at narrow widths. Click the
+  // charge-name text, then prove the intended choice actually changed state.
+  await charge.locator("..").locator("span.font-medium").first().click();
+  await expect(charge).toBeChecked();
+  const next = page.getByTestId("button-next-case-details");
+  await expect(next).toBeEnabled();
+  await next.click();
 }
 
 async function completeStatus(page: Page) {
@@ -353,8 +376,11 @@ async function completeStatus(page: Page) {
   await page.locator('[role="option"]').filter({ hasText: /^No$/ }).click();
   await page.getByTestId("button-continue-status").click();
   await page.getByTestId("button-continue-background").click();
-  await page.locator('button:has(svg.lucide-arrow-right)').last().click();
-  await page.locator('button:has(svg.lucide-arrow-right)').last().click();
+  // Wait for the distinct screen: clicking the exiting arrow twice can leave
+  // the questionnaire on its final screen without ever submitting guidance.
+  await expect(page.getByTestId("button-prev-additional-details")).toBeVisible();
+  await page.getByTestId("button-next-additional-details").click();
+  await page.getByTestId("button-generate-guidance").click();
 }
 
 async function expectNoHorizontalOverflow(page: Page) {
@@ -383,6 +409,7 @@ async function expectNoHorizontalOverflow(page: Page) {
     };
   });
 
+  expect(dimensions.overflowingElements, JSON.stringify(dimensions)).toEqual([]);
   expect(
     dimensions.documentScrollWidth,
     JSON.stringify(dimensions),
@@ -576,29 +603,43 @@ test("matching charges reuse shared live statute text", async ({ page }) => {
 for (const language of LOCALIZED_ERRORS) {
   test(
     `${language.name} guidance localizes the live statute loading label`,
-    async ({ page }) => {
+    async ({ page, request }) => {
       await page.setViewportSize(MOBILE_VIEWPORT);
       await page.addInitScript(
         (locale) => window.localStorage.setItem("i18nextLng", locale),
         language.code,
       );
       await mockGuidanceStream(page);
-      await mockDelayedCitation(page);
+      const citation = await mockDelayedCitation(page);
 
-      await openQAFlow(page);
-      await selectJurisdiction(page);
-      await selectCharge(page);
-      await completeStatus(page);
+      try {
+        await openQAFlow(page);
+        await selectJurisdiction(page);
+        await selectCharge(page);
+        await completeStatus(page);
 
-      await expect(page.getByTestId("button-close-dashboard")).toBeVisible({
-        timeout: 30_000,
-      });
-      const statuteToggle = page.getByTestId("live-statute-toggle");
-      await expect(statuteToggle).toHaveAccessibleName(language.readLaw);
-      await statuteToggle.click();
+        await expect(page.getByTestId("button-close-dashboard")).toBeVisible({
+          timeout: 30_000,
+        });
+        const statuteToggle = page.getByTestId("live-statute-toggle");
+        await expect(statuteToggle).toHaveAccessibleName(language.readLaw);
+        await statuteToggle.click();
 
-      const statutePanel = page.getByTestId("live-statute-panel");
-      await expect(statutePanel).toContainText(language.fetching);
+        const statutePanel = page.getByTestId("live-statute-panel");
+        await expect(statutePanel).toContainText(language.fetching);
+      } finally {
+        // Also release on assertion failure so teardown can drain the handler.
+        citation.release();
+      }
+      await citation.completed;
+      await expect(page.getByTestId("live-statute-panel")).toContainText(
+        "A person is guilty of murder in the first degree if the killing is premeditated.",
+      );
+      await expect(page.getByTestId("live-statute-panel")).not.toContainText(language.fetching);
+      // Exercise teardown and prove the shared fixture server survived it.
+      await page.close();
+      const status = await request.get("/api/ai/status");
+      expect(status.ok()).toBe(true);
     },
   );
 }

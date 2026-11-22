@@ -748,9 +748,9 @@ function YourChargesSection({
                   <AlertDescription className="min-w-0">
                    <span className="font-semibold">
                      {i18n.language === 'es'
-                       ? 'Se necesita volver a seleccionar el cargo.'
+                       ? 'Se necesita confirmar la selección del cargo.'
                        : i18n.language === 'zh'
-                         ? '需要重新选择罪名。'
+                         ? '需要确认所选指控。'
                          : 'Charge selection needs to be confirmed.'}
                    </span>{' '}
                    {i18n.language === 'es'
@@ -1833,7 +1833,7 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
                   {guidance.caseData.hasAttorney === false && onShowPublicDefender && (
                     <Button
                       variant="outline"
-                      className="w-full justify-start h-auto py-4 px-4"
+                      className="w-full justify-start h-auto whitespace-normal break-words py-4 px-4"
                       onClick={onShowPublicDefender}
                     >
                       <div className="flex min-w-0 w-full items-start gap-3">
@@ -1852,7 +1852,7 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
                   {/* Legal Aid Organizations */}
                   <Button
                     variant="outline"
-                    className="w-full justify-start h-auto py-4 px-4"
+                    className="w-full justify-start h-auto whitespace-normal break-words py-4 px-4"
                     onClick={() => guardedNavigate('/resources')}
                   >
                     <div className="flex min-w-0 w-full items-start gap-3">
@@ -1870,7 +1870,7 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
                   {/* Court Self-Help Center */}
                   <Button
                     variant="outline"
-                    className="w-full justify-start h-auto py-4 px-4"
+                    className="w-full justify-start h-auto whitespace-normal break-words py-4 px-4"
                     onClick={() => guardedNavigate('/court-locator')}
                   >
                     <div className="flex min-w-0 w-full items-start gap-3">

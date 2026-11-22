@@ -1,0 +1,2424 @@
+{
+  "baseCommit": "9cebb7bbf1c4a4afec0ffad19e1a6195ee973fc0",
+  "manifestSha256": "16c4229137bd308e1c502f15469de40c4376d26237112230e9a02543c5711dc1",
+  "manifestGeneratedAt": "2026-09-10T04:58:55.942Z",
+  "openPullRequestsChecked": [
+    276,
+    288
+  ],
+  "openNewYorkReviewPullRequests": [],
+  "pendingReviewScope": "Repository open-PR titles and branch names inspected; neither open PR targets New York charge review. Unpublished external work is unknown.",
+  "rows": [
+    {
+      "catalogLabel": "Murder in the First Degree",
+      "catalogCode": "125.27",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Murder in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-murder-in-the-first-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:125.27",
+          "lawId": "PEN",
+          "section": "125.27",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "46f6c43f8cf287212352ad7d63f83cd0581911ad7f7dc9506eed26ecc251db62",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-09-06"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Murder in the Second Degree",
+      "catalogCode": "125.25",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Murder in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-murder-in-the-second-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:125.25",
+          "lawId": "PEN",
+          "section": "125.25",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "0ef3e35a8e07b2198c87f6700837e560147b0ebc523145517f87dcfbb253a4ba",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-09-06"
+        },
+        {
+          "sourceKey": "ny:PEN:125.25",
+          "lawId": "PEN",
+          "section": "125.25",
+          "supportRole": "grading",
+          "subdivision": null,
+          "contentHash": "0ef3e35a8e07b2198c87f6700837e560147b0ebc523145517f87dcfbb253a4ba",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-09-06"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Voluntary Manslaughter",
+      "catalogCode": "125.20",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Manslaughter in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-voluntary-manslaughter",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:125.20",
+          "lawId": "PEN",
+          "section": "125.20",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "7d550d1c2a061ad63aedc3d7b64108a32ac010bbe1e33d09563ae7a9ac95725b",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2019-01-25"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Involuntary Manslaughter",
+      "catalogCode": "125.15",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Manslaughter in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-involuntary-manslaughter",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:125.15",
+          "lawId": "PEN",
+          "section": "125.15",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "ffe2ead08b48f12255e7f9f3b003145732e0ddb0e88d1e58cac4d6cd2218e3eb",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2019-01-25"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminally Negligent Homicide",
+      "catalogCode": "125.10",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Criminally negligent homicide",
+      "apiStatus": "verified",
+      "id": "ny-criminally-negligent-homicide",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:125.10",
+          "lawId": "PEN",
+          "section": "125.10",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "7cb67900be11f4dcb37092549e9da39c4d0f4dbd7170a1383d8e52f148b1483c",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Vehicular Homicide",
+      "catalogCode": "125.12",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Vehicular manslaughter in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-vehicular-homicide",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:125.12",
+          "lawId": "PEN",
+          "section": "125.12",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "c1cf8c728cefd0a9c148fa4d18b6776bd3276b78529f469e798cf7808e622ead",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Felony Murder",
+      "catalogCode": "125.25",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Murder in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-felony-murder",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:125.25:125_25_3",
+          "lawId": "PEN",
+          "section": "125.25",
+          "supportRole": "offense",
+          "subdivision": "125.25(3)",
+          "contentHash": "0ef3e35a8e07b2198c87f6700837e560147b0ebc523145517f87dcfbb253a4ba",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-09-06"
+        },
+        {
+          "sourceKey": "ny:PEN:125.25",
+          "lawId": "PEN",
+          "section": "125.25",
+          "supportRole": "grading",
+          "subdivision": null,
+          "contentHash": "0ef3e35a8e07b2198c87f6700837e560147b0ebc523145517f87dcfbb253a4ba",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-09-06"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Assault in the First Degree",
+      "catalogCode": "120.10",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Assault in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-assault-in-the-first-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:120.10",
+          "lawId": "PEN",
+          "section": "120.10",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "7d0a1ff86d5e90ebb276e684fccfbbd5ee2d1a6df75e7e3bc05fdc12daabf7f4",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Assault in the Second Degree",
+      "catalogCode": "120.05",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Assault in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-assault-in-the-second-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:120.05",
+          "lawId": "PEN",
+          "section": "120.05",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "0a7e9b0b56ef5043102183282d4b50b39d1b48298e4c521086e3f39becb23627",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-07-26"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Assault in the Third Degree",
+      "catalogCode": "120.00",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Assault in the third degree",
+      "apiStatus": "verified",
+      "id": "ny-assault-in-the-third-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:120.00",
+          "lawId": "PEN",
+          "section": "120.00",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "704ca3bb274d5d08a6a70b6e946731785901e3eaf74f7ebea61642d4744d90b3",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Aggravated Assault",
+      "catalogCode": "120.11",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Aggravated assault upon a police officer or a peace officer",
+      "apiStatus": "verified",
+      "id": "ny-aggravated-assault",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:120.11",
+          "lawId": "PEN",
+          "section": "120.11",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "6c34ab981aa485af0ca0b068c186ba22e694a554a9bfb67697b1f5cef9ff5f6a",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Assault with Deadly Weapon",
+      "catalogCode": "120.10",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Assault in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-assault-with-deadly-weapon",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:120.10:120_10_1",
+          "lawId": "PEN",
+          "section": "120.10",
+          "supportRole": "offense",
+          "subdivision": "120.10(1)",
+          "contentHash": "7d0a1ff86d5e90ebb276e684fccfbbd5ee2d1a6df75e7e3bc05fdc12daabf7f4",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Assault on Peace Officer",
+      "catalogCode": "120.08",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Assault on a peace officer, police officer, firefighter or emergency medical services professional",
+      "apiStatus": "verified",
+      "id": "ny-assault-on-peace-officer",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:120.08",
+          "lawId": "PEN",
+          "section": "120.08",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "b314d44b75f9e689cc44ff95e797ff669468d90b0883511851602f3f2e9fbc0b",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2019-01-11"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Menacing",
+      "catalogCode": "120.15",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Menacing in the third degree",
+      "apiStatus": "verified",
+      "id": "ny-menacing",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:120.15",
+          "lawId": "PEN",
+          "section": "120.15",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "ae1c574ac3467529e85f1506ac75f6166bb34171e53b484555e44281e91155c2",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Rape in the First Degree",
+      "catalogCode": "130.35",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Rape in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-rape-in-the-first-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:130.35",
+          "lawId": "PEN",
+          "section": "130.35",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "3eed66ea56f123e8192f23348341e245a53a53b7994ed7530ecb554df7dfc1e7",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-09-06"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Rape in the Second Degree",
+      "catalogCode": "130.30",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Rape in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-rape-in-the-second-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:130.30",
+          "lawId": "PEN",
+          "section": "130.30",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "1087010b59a3f928f957e900c1f9bde6e782c4b7cd9f17eef6175ce3dbbbaf84",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-09-06"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Rape in the Third Degree",
+      "catalogCode": "130.25",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Rape in the third degree",
+      "apiStatus": "verified",
+      "id": "ny-sexual-assault-in-the-third-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:130.25",
+          "lawId": "PEN",
+          "section": "130.25",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "15f32b3c6aa02417b509410839d871378fca6ac2460f5783de11f477433768a9",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-09-06"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Child Sexual Abuse",
+      "catalogCode": "130.65",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Sexual abuse in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-child-sexual-abuse",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:130.65",
+          "lawId": "PEN",
+          "section": "130.65",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "d93664c63bb21d8ac2b77b353b4eeef799058799de14cbe3088e4dfa12c68f3a",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Sexual Exploitation of Minor",
+      "catalogCode": "263.15",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Promoting a sexual performance by a child",
+      "apiStatus": "verified",
+      "id": "ny-sexual-exploitation-of-minor",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:263.15",
+          "lawId": "PEN",
+          "section": "263.15",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "5085f746fb455beb4b2a8a97cb4b95334e8ae64ddaea395067476f88b03f1e25",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2025-07-11"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Grand Theft in the First Degree",
+      "catalogCode": "155.42",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Grand larceny in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-grand-theft-in-the-first-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:155.42",
+          "lawId": "PEN",
+          "section": "155.42",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "7107b3a2eb979185064b65a098e4333c28c20988db17da9fd523e8f180cada44",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-07-26"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Grand Theft in the Second Degree",
+      "catalogCode": "155.40",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Grand larceny in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-grand-theft-in-the-second-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:155.40",
+          "lawId": "PEN",
+          "section": "155.40",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "b96dabb12f87002fd242d6d4e265755581f16bb6b53f4de98541589811f6351e",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-07-26"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Theft by Receiving",
+      "catalogCode": "165.50",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Criminal possession of stolen property in the third degree",
+      "apiStatus": "verified",
+      "id": "ny-theft-by-receiving",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:165.50",
+          "lawId": "PEN",
+          "section": "165.50",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "59499c9ee78a84b2d8d273448b8cf664f872f6932aec9f4925f80191c853df07",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Identity Theft",
+      "catalogCode": "190.78",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Identity theft in the third degree",
+      "apiStatus": "verified",
+      "id": "ny-identity-theft",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:190.78",
+          "lawId": "PEN",
+          "section": "190.78",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "00c00b95e3a5ff8d13695a84655e936f05d07f8876a1cf7969c33e528c74068a",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2025-03-28"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Credit Card Fraud",
+      "catalogCode": "190.80",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Identity theft in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-credit-card-fraud",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Embezzlement",
+      "catalogCode": "155.05",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Larceny; defined",
+      "apiStatus": "verified",
+      "id": "ny-embezzlement",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Burglary in the First Degree",
+      "catalogCode": "140.30",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Burglary in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-burglary-in-the-first-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:140.30",
+          "lawId": "PEN",
+          "section": "140.30",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "a2f95fa7fb84c4d752e995889fb58cdc8ebf7c21529059fa7788fea1db3edb3b",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Burglary in the Second Degree",
+      "catalogCode": "140.25",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Burglary in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-burglary-in-the-second-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:140.25",
+          "lawId": "PEN",
+          "section": "140.25",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "f4a98b53b8c6a3dad301c222fc29184c935571d21d701a6f5166fe2c426833f4",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Burglary in the Third Degree",
+      "catalogCode": "140.20",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Burglary in the third degree",
+      "apiStatus": "verified",
+      "id": "ny-burglary-in-the-third-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:140.20",
+          "lawId": "PEN",
+          "section": "140.20",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "8fa131bb03e16307f610df52c5f278ed4101eb64011084487bb2d8639c07ce1d",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Auto Burglary",
+      "catalogCode": "140.15",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Criminal trespass in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-auto-burglary",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Robbery in the First Degree",
+      "catalogCode": "160.15",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Robbery in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-robbery-in-the-first-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:160.15",
+          "lawId": "PEN",
+          "section": "160.15",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "9aa78e235f64714e74c11189680e4bf753f9fa00f036b1cf708e6de3aace55f4",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Robbery in the Second Degree",
+      "catalogCode": "160.10",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Robbery in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-robbery-in-the-second-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:160.10",
+          "lawId": "PEN",
+          "section": "160.10",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "4d225f7cd858b975f6831ab9c1b763e5b797cb40b6371d1b727d467e4fe709d1",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Robbery in the Third Degree",
+      "catalogCode": "160.05",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Robbery in the third degree",
+      "apiStatus": "verified",
+      "id": "ny-robbery-in-the-third-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:160.05",
+          "lawId": "PEN",
+          "section": "160.05",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "5bfd3a7d6dc8d195bb633880d7d57efdf0ca644c780263bf4a6c3e72af02b793",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Bank Robbery",
+      "catalogCode": "367.72",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Robbery in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-bank-robbery",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Criminal Possession of a Controlled Substance in the Seventh Degree",
+      "catalogCode": "220.03",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Criminal possession of a controlled substance in the seventh degree",
+      "apiStatus": "verified",
+      "id": "ny-possession-of-controlled-substance",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:220.03",
+          "lawId": "PEN",
+          "section": "220.03",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "49d3529eae36e1d854b27812a88fdc322234adc2f2d1b8fdc11b53a54700d51e",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2021-10-15"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminal Possession of a Controlled Substance in the Fifth Degree",
+      "catalogCode": "220.06",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Criminal possession of a controlled substance in the fifth degree",
+      "apiStatus": "verified",
+      "id": "ny-possession-of-controlled-substance-fifth-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:220.06",
+          "lawId": "PEN",
+          "section": "220.06",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "b8a2bcaa0848b72c8865857b6e25cfc96ec82aa847e064d5936aff2ac255b4b7",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2021-04-02"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminal Possession of a Controlled Substance in the Fourth Degree",
+      "catalogCode": "220.09",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Criminal possession of a controlled substance in the fourth degree",
+      "apiStatus": "verified",
+      "id": "ny-possession-of-controlled-substance-fourth-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:220.09",
+          "lawId": "PEN",
+          "section": "220.09",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "b880bc9bb86d9099d8749d17316a23aa812a29bdbf1b63fa6e5d85892a2bdb7f",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2021-04-02"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminal Possession of a Controlled Substance in the Third Degree",
+      "catalogCode": "220.16",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Criminal possession of a controlled substance in the third degree",
+      "apiStatus": "verified",
+      "id": "ny-possession-of-controlled-substance-third-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:220.16",
+          "lawId": "PEN",
+          "section": "220.16",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "05599b639c0537bc7c5c3cc9d28630a87ea6835de26c2b10c2b278dec5440e7d",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminal Possession of a Controlled Substance in the Second Degree",
+      "catalogCode": "220.18",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Criminal possession of a controlled substance in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-possession-of-controlled-substance-second-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:220.18",
+          "lawId": "PEN",
+          "section": "220.18",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "5c06a648fa7fafd0cda9e4b111015a8ffadab6747fe3c904adbb7522e4279f70",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminal Possession of a Controlled Substance in the First Degree",
+      "catalogCode": "220.21",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Criminal possession of a controlled substance in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-possession-of-controlled-substance-first-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:220.21",
+          "lawId": "PEN",
+          "section": "220.21",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "cb42b088ddea9802ea165c7e35ec442380e6c9dcdb76c2916225a958754139ec",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminal Sale of a Controlled Substance in the Fifth Degree",
+      "catalogCode": "220.31",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Criminal sale of a controlled substance in the fifth degree",
+      "apiStatus": "verified",
+      "id": "ny-criminal-sale-of-controlled-substance-fifth-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:220.31",
+          "lawId": "PEN",
+          "section": "220.31",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "6f364c81272cef03a4a248d19ead794cc9d7d75f8aa309e713ac1e0375e9a468",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Unlawful Manufacture of Methamphetamine in the Third Degree",
+      "catalogCode": "220.73",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Unlawful manufacture of methamphetamine in the third degree",
+      "apiStatus": "verified",
+      "id": "ny-unlawful-manufacture-of-methamphetamine-third-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:220.73",
+          "lawId": "PEN",
+          "section": "220.73",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "c2cfb5d5fb9036c1b692fad8f1b5e007f2cd2a84d7ffc67251afc47c986e0c90",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Operating as a Major Trafficker",
+      "catalogCode": "220.77",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Operating as a major trafficker",
+      "apiStatus": "verified",
+      "id": "ny-operating-as-major-trafficker",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:220.77",
+          "lawId": "PEN",
+          "section": "220.77",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "6e06e82e8d10b6fdaa2ad48b3fda5297e5125591756664f5d131adcd3799840f",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminally Using Drug Paraphernalia in the Second Degree",
+      "catalogCode": "220.50",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Criminally using drug paraphernalia in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-criminally-using-drug-paraphernalia-second-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:220.50",
+          "lawId": "PEN",
+          "section": "220.50",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "8314ed92ef12d6e797ca96ef870e356425ba74f4c04bfb8e597bcc685df4e8da",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminal Nuisance in the First Degree",
+      "catalogCode": "240.46",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Criminal nuisance in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-criminal-nuisance-first-degree",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:240.46",
+          "lawId": "PEN",
+          "section": "240.46",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "e4f9380e5ec4e2c14b1beb48f50806a1b91f13a67c87113ab9ca9d227b9da7bb",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Unlawful Carrying of Weapon",
+      "catalogCode": "265.01",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Criminal possession of a weapon in the fourth degree",
+      "apiStatus": "verified",
+      "id": "ny-unlawful-carrying-of-weapon",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:265.01",
+          "lawId": "PEN",
+          "section": "265.01",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "8728f46d7ef1e10db91e12b1bf41fb96c90184c869c529e5259405e600b1d012",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-11-29"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Felon in Possession of Firearm",
+      "catalogCode": "265.01",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Criminal possession of a weapon in the fourth degree",
+      "apiStatus": "verified",
+      "id": "ny-felon-in-possession-of-firearm",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Discharge of Firearm in City",
+      "catalogCode": "265.35",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Prohibited use of weapons",
+      "apiStatus": "verified",
+      "id": "ny-discharge-of-firearm-in-city",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:265.35",
+          "lawId": "PEN",
+          "section": "265.35",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "98e2bd64ef62a9acd4f43b9ae58cb95659c638fe89e7c172b03a03aa9770b87d",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Possession of Prohibited Weapon",
+      "catalogCode": "265.01",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Criminal possession of a weapon in the fourth degree",
+      "apiStatus": "verified",
+      "id": "ny-possession-of-prohibited-weapon",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:265.01",
+          "lawId": "PEN",
+          "section": "265.01",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "8728f46d7ef1e10db91e12b1bf41fb96c90184c869c529e5259405e600b1d012",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-11-29"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Wire Fraud",
+      "catalogCode": "346.12",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "A required offense or grading provision was not returned by the official API; the compound charge is incomplete.",
+      "canonicalTitle": null,
+      "apiStatus": "api_error",
+      "id": "ny-wire-fraud",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Mail Fraud",
+      "catalogCode": "235.45",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "A required offense or grading provision was not returned by the official API; the compound charge is incomplete.",
+      "canonicalTitle": null,
+      "apiStatus": "api_error",
+      "id": "ny-mail-fraud",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Check Fraud",
+      "catalogCode": "190.05",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Issuing a bad check",
+      "apiStatus": "verified",
+      "id": "ny-check-fraud",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:190.05",
+          "lawId": "PEN",
+          "section": "190.05",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "cdbf36ad570a0c5d54a95e11497e94606639b9580327d18f57eb5ccef9bb5ab5",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Insurance Fraud",
+      "catalogCode": "176.15",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Insurance fraud in the fourth degree",
+      "apiStatus": "verified",
+      "id": "ny-insurance-fraud",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:176.15",
+          "lawId": "PEN",
+          "section": "176.15",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "633f1ded10be2504abde7f5ae9ce3a3c97bb4d13599fc08fab22eeacf517e27e",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Tax Fraud",
+      "catalogCode": "1801",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Tax fraud acts",
+      "apiStatus": "verified",
+      "id": "ny-tax-fraud",
+      "provisions": [
+        {
+          "sourceKey": "ny:TAX:1801",
+          "lawId": "TAX",
+          "section": "1801",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "7498105c23ecf135572133feb7afd62efd28673f542c298f28b77386ba8d26f3",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2023-05-12"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Forgery",
+      "catalogCode": "170.05",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Forgery in the third degree",
+      "apiStatus": "verified",
+      "id": "ny-forgery",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:170.05",
+          "lawId": "PEN",
+          "section": "170.05",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "4021ba00226667a0f258f4fb6ed1d726a89ea3cf49a2d7ef58ff8b412772ec2c",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Computer Fraud",
+      "catalogCode": "156.05",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Unauthorized use of a computer",
+      "apiStatus": "verified",
+      "id": "ny-computer-fraud",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:156.05",
+          "lawId": "PEN",
+          "section": "156.05",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "19462ec1c862c2be0e2d89c0797fe03a7f9dc5a439b33dc2023fd6f83577a47f",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Disorderly Conduct",
+      "catalogCode": "240.20",
+      "catalogCategory": "infraction",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Disorderly conduct",
+      "apiStatus": "verified",
+      "id": "ny-disorderly-conduct",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:240.20",
+          "lawId": "PEN",
+          "section": "240.20",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "518f03cf75c2737425527a6c004a063932dc7390884babe3ba3a456180ee029b",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Appearing in Public Under the Influence",
+      "catalogCode": "240.40",
+      "catalogCategory": "infraction",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Appearance in public under the influence of narcotics or a drug other than alcohol",
+      "apiStatus": "verified",
+      "id": "ny-public-intoxication",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:240.40",
+          "lawId": "PEN",
+          "section": "240.40",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "50083b5aa926df4599a8cc3622acca7ddbcf96051719bbb21282a82fb7f48288",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Trespassing",
+      "catalogCode": "140.05",
+      "catalogCategory": "infraction",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Trespass",
+      "apiStatus": "verified",
+      "id": "ny-trespassing",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:140.05",
+          "lawId": "PEN",
+          "section": "140.05",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "b43fbc43d89cd2cf0709cb3928d6d1d5439079ae3e6f01f9659108e17829f24f",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Vandalism",
+      "catalogCode": "145.00",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Criminal mischief in the fourth degree",
+      "apiStatus": "verified",
+      "id": "ny-vandalism",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:145.00",
+          "lawId": "PEN",
+          "section": "145.00",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "17a7c48c530c65d51f4512b1977fd3fc57f662b9dc4d85437bbdba7d60c83e04",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Loitering",
+      "catalogCode": "240.35",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Loitering",
+      "apiStatus": "verified",
+      "id": "ny-loitering",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:240.35",
+          "lawId": "PEN",
+          "section": "240.35",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "75835cef7432275fded35eeb6042d3c906bc3ae539d122a57265df51ba53ebca",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2020-06-19"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "DUI First Offense",
+      "catalogCode": "1192",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Operating a motor vehicle while under the influence of alcohol or drugs",
+      "apiStatus": "verified",
+      "id": "ny-dui-first-offense",
+      "provisions": [
+        {
+          "sourceKey": "ny:VAT:1192",
+          "lawId": "VAT",
+          "section": "1192",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "aa5be85509d6b59104997e407c74ff737d593dbecd316c043b2587369ca30211",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "DUI Second Offense",
+      "catalogCode": "1192",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Operating a motor vehicle while under the influence of alcohol or drugs",
+      "apiStatus": "verified",
+      "id": "ny-dui-second-offense",
+      "provisions": [
+        {
+          "sourceKey": "ny:VAT:1192",
+          "lawId": "VAT",
+          "section": "1192",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "aa5be85509d6b59104997e407c74ff737d593dbecd316c043b2587369ca30211",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "DUI Third Offense",
+      "catalogCode": "1192",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Operating a motor vehicle while under the influence of alcohol or drugs",
+      "apiStatus": "verified",
+      "id": "ny-dui-third-offense",
+      "provisions": [
+        {
+          "sourceKey": "ny:VAT:1192",
+          "lawId": "VAT",
+          "section": "1192",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "aa5be85509d6b59104997e407c74ff737d593dbecd316c043b2587369ca30211",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Reckless Driving",
+      "catalogCode": "1212",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Reckless driving",
+      "apiStatus": "verified",
+      "id": "ny-reckless-driving",
+      "provisions": [
+        {
+          "sourceKey": "ny:VAT:1212",
+          "lawId": "VAT",
+          "section": "1212",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "5133f7d1317b16418f37ba2fb4bb6a2dfd9096c4b47874c5753d98c28b29ed39",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-11-29"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Hit and Run",
+      "catalogCode": "600",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Leaving scene of an incident without reporting",
+      "apiStatus": "verified",
+      "id": "ny-hit-and-run",
+      "provisions": [
+        {
+          "sourceKey": "ny:VAT:600",
+          "lawId": "VAT",
+          "section": "600",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "9dc6abdd995df388a7db0233445d46eb2ccd9beae08e821f972c52d20225f134",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2022-11-04"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Theft of Services (Fare Evasion)",
+      "catalogCode": "165.15",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Theft of services",
+      "apiStatus": "verified",
+      "id": "ny-theft-of-services",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:165.15",
+          "lawId": "PEN",
+          "section": "165.15",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "3a58d03b164b53fb1cd7dc5c5412b82737f65e237eedfbbba9cb61490eb12d1f",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2019-01-18"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Petit Larceny",
+      "catalogCode": "155.25",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Petit larceny",
+      "apiStatus": "verified",
+      "id": "ny-petit-larceny",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:155.25",
+          "lawId": "PEN",
+          "section": "155.25",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "46b0fb8314ceb2014777c7b98790b8150dd07f255a51c3e26aab57e345d39c6a",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Aggravated Unlicensed Operation of a Motor Vehicle",
+      "catalogCode": "511",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Operation while license or privilege is suspended or revoked; aggravated unlicensed operation",
+      "apiStatus": "verified",
+      "id": "ny-aggravated-unlicensed-operation",
+      "provisions": [
+        {
+          "sourceKey": "ny:VAT:511",
+          "lawId": "VAT",
+          "section": "511",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "c2347d9b949991547c5f344cda1b3ec1d8f154bd3df855b531cedf63257ed6cd",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-11-08"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminal Contempt",
+      "catalogCode": "215.50",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Criminal contempt in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-criminal-contempt",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:215.50",
+          "lawId": "PEN",
+          "section": "215.50",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "0664b7f47576fadedce2fab41cb9bb3b54faabbe9179101d0b3c0161c5d4181d",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminal Possession of Stolen Property",
+      "catalogCode": "165.40",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Criminal possession of stolen property in the fifth degree",
+      "apiStatus": "verified",
+      "id": "ny-criminal-possession-of-stolen-property",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:165.40",
+          "lawId": "PEN",
+          "section": "165.40",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "fba3ecf784d36081f45d9f44c0412916cc00837ab19cf9b2a86e811ebce71851",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Harassment",
+      "catalogCode": "240.26",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Harassment in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-harassment",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:240.26",
+          "lawId": "PEN",
+          "section": "240.26",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "11c94a8ba36470409dc9f1bb6fa44caf88666a920e93d7be21bec81af8cdeb23",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Turnstile Jumping (Transit Fraud)",
+      "catalogCode": "165.15",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Theft of services",
+      "apiStatus": "verified",
+      "id": "ny-turnstile-jumping",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:165.15",
+          "lawId": "PEN",
+          "section": "165.15",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "3a58d03b164b53fb1cd7dc5c5412b82737f65e237eedfbbba9cb61490eb12d1f",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2019-01-18"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Open Container Violation",
+      "catalogCode": "1227",
+      "catalogCategory": "infraction",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Consumption or possession of alcoholic beverages in certain motor vehicles",
+      "apiStatus": "verified",
+      "id": "ny-open-container",
+      "provisions": [
+        {
+          "sourceKey": "ny:VAT:1227",
+          "lawId": "VAT",
+          "section": "1227",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "6575c42c3af5ebd89e3c1cadf4db66127d88f9e360139afb9eb9e8ff10c5fd3e",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2021-04-09"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Failure to Appear",
+      "catalogCode": "215.59",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Bail jumping and failing to respond to an appearance ticket; defense",
+      "apiStatus": "verified",
+      "id": "ny-failure-to-appear",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Probation Violation",
+      "catalogCode": "410.70",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "A required offense or grading provision was not returned by the official API; the compound charge is incomplete.",
+      "canonicalTitle": null,
+      "apiStatus": "api_error",
+      "id": "ny-probation-violation",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Resisting Arrest / Obstruction",
+      "catalogCode": "205.30",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Resisting arrest",
+      "apiStatus": "verified",
+      "id": "ny-resisting-arrest",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:205.30",
+          "lawId": "PEN",
+          "section": "205.30",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "0caa75e5c5dd127c171fc4070d9850d9b4debc2cc7ef94386db8be7ee614403d",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Violation of Protective Order",
+      "catalogCode": "215.51",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Criminal contempt in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-protective-order-violation",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:215.51",
+          "lawId": "PEN",
+          "section": "215.51",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "6d813d890f3ca37feee9dfe9588d29c6b1fc14a6af55d5ed5fff54495a0797d2",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Open Container Violation",
+      "catalogCode": "1227-a",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "A required offense or grading provision was not returned by the official API; the compound charge is incomplete.",
+      "canonicalTitle": null,
+      "apiStatus": "api_error",
+      "id": "ny-open-container-violation",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Minor in Possession of Alcohol",
+      "catalogCode": "65-c",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "A required offense or grading provision was not returned by the official API; the compound charge is incomplete.",
+      "canonicalTitle": null,
+      "apiStatus": "api_error",
+      "id": "ny-minor-in-possession",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Providing False Information to Police",
+      "catalogCode": "240.50",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Falsely reporting an incident in the third degree",
+      "apiStatus": "verified",
+      "id": "ny-false-info-to-police",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:240.50",
+          "lawId": "PEN",
+          "section": "240.50",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "ad4b953da5c0faafaf0bae3008c6a1b8dc96fbb9260c6931af058772f81b812a",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Harassment / Stalking",
+      "catalogCode": "120.45",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Stalking in the fourth degree",
+      "apiStatus": "verified",
+      "id": "ny-harassment-stalking",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:120.45",
+          "lawId": "PEN",
+          "section": "120.45",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "788a04107da00a000e5e3fe60e69910f5bb0d84acb186b17e282f2f0111ca310",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-10-24"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Contempt of Court",
+      "catalogCode": "750",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Power of courts to punish for criminal contempts",
+      "apiStatus": "verified",
+      "id": "ny-contempt-of-court",
+      "provisions": [
+        {
+          "sourceKey": "ny:JUD:750",
+          "lawId": "JUD",
+          "section": "750",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "ed1edfc1426e6f03b2b6c449dcfe0f2ecbeaf544460858fe0b0e7e8a9f201f4c",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Solicitation / Prostitution",
+      "catalogCode": "230.00",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Prostitution",
+      "apiStatus": "verified",
+      "id": "ny-solicitation",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:230.00",
+          "lawId": "PEN",
+          "section": "230.00",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "765494244490881424966f22c3e7be1d40910ade90da4fe01ef5801efecf1e62",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Driving Without Insurance",
+      "catalogCode": "319",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Penalties",
+      "apiStatus": "verified",
+      "id": "ny-driving-without-insurance",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Driving with Expired Registration",
+      "catalogCode": "401",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Registration of motor vehicles; fees; renewals",
+      "apiStatus": "verified",
+      "id": "ny-expired-registration",
+      "provisions": [
+        {
+          "sourceKey": "ny:VAT:401",
+          "lawId": "VAT",
+          "section": "401",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "70af2f4f1921e3f7a968125e706a0042506a74a7fce463d7e238bbd6f5b5efe6",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2026-05-29"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Driving with Expired/No Inspection",
+      "catalogCode": "306",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Enforcement",
+      "apiStatus": "verified",
+      "id": "ny-expired-inspection",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Criminal Nonsupport / Failure to Pay Child Support",
+      "catalogCode": "260.05",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Non-support of a child in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-failure-to-pay-child-support",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:260.05",
+          "lawId": "PEN",
+          "section": "260.05",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "7fe76685e67875a7e4c85dfeba9197c4a8a8898ba3633b454c24485d3798e658",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Noise Violation / Disturbing the Peace by Noise",
+      "catalogCode": "240.20",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Disorderly conduct",
+      "apiStatus": "verified",
+      "id": "ny-noise-violation",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:240.20",
+          "lawId": "PEN",
+          "section": "240.20",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "518f03cf75c2737425527a6c004a063932dc7390884babe3ba3a456180ee029b",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Indecent Exposure / Public Urination",
+      "catalogCode": "245.01",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Exposure of a person",
+      "apiStatus": "verified",
+      "id": "ny-indecent-exposure",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:245.01",
+          "lawId": "PEN",
+          "section": "245.01",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "85069a197c4da9e970119de84c02dbf435383a11dcdfbccb3561b849210f4f6f",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Possession of Fake/Fraudulent ID",
+      "catalogCode": "170.25",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Criminal possession of a forged instrument in the second degree",
+      "apiStatus": "verified",
+      "id": "ny-fake-id",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:170.25",
+          "lawId": "PEN",
+          "section": "170.25",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "bdb17dac1152856df187bcdb861a57c6b3a59463dc1f71f6cc3124f50d786175",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Animal at Large / Leash Law Violation",
+      "catalogCode": "121",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Night quarantine",
+      "apiStatus": "verified",
+      "id": "ny-animal-at-large",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Animal Cruelty (Misdemeanor)",
+      "catalogCode": "353",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Overdriving, torturing and injuring animals; failure to provide proper sustenance",
+      "apiStatus": "verified",
+      "id": "ny-animal-cruelty-misdemeanor",
+      "provisions": [
+        {
+          "sourceKey": "ny:AGM:353",
+          "lawId": "AGM",
+          "section": "353",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "63f88e9cc1da3a60af20a1054f980b7ca0e10c6d78e7ad771ac8b64c0d570ae3",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Illegal Camping / Sleeping in Public",
+      "catalogCode": "240.37",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Loitering for the purpose of engaging in a prostitution offense",
+      "apiStatus": "verified",
+      "id": "ny-illegal-camping",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Panhandling / Aggressive Solicitation",
+      "catalogCode": "240.35",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Loitering",
+      "apiStatus": "verified",
+      "id": "ny-panhandling",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Curfew Violation",
+      "catalogCode": "722",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "This is a New York City ordinance and is kept as a separately identified local reference.",
+      "canonicalTitle": "Curfew Violation",
+      "apiStatus": "local_ordinance",
+      "id": "ny-curfew-violation",
+      "provisions": [
+        {
+          "sourceKey": "ny:NYC:10-222",
+          "lawId": "NYC",
+          "section": "10-222",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "bbaf505f045bebd5d385eb11604d2e081337d22d15693768a7f9c5798648df15",
+          "retrievedAt": null,
+          "effectiveDateStart": null
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Trespass After Warning / Return After Ban",
+      "catalogCode": "140.10",
+      "catalogCategory": "misdemeanor",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Criminal trespass in the third degree",
+      "apiStatus": "verified",
+      "id": "ny-trespass-after-warning",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:140.10",
+          "lawId": "PEN",
+          "section": "140.10",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "97b988c0bce27f7ec4b833140bcbc171fc7e12abdb62c38c8c56cc73596bd540",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Defective Vehicle Equipment / Broken Taillight",
+      "catalogCode": "375",
+      "catalogCategory": "infraction",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Equipment",
+      "apiStatus": "verified",
+      "id": "ny-defective-vehicle-equipment",
+      "provisions": [
+        {
+          "sourceKey": "ny:VAT:375",
+          "lawId": "VAT",
+          "section": "375",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "f50abd45ed12b20b6d0ef83d562ea78a6824d877a873e73ad6372fb345cb46b1",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2026-08-28"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Truancy / Chronic Absenteeism",
+      "catalogCode": "3212",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Definition of persons in parental relation and their duties; duties of certain other persons",
+      "apiStatus": "verified",
+      "id": "ny-truancy",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Littering / Illegal Dumping",
+      "catalogCode": "71-2505",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Enforcement",
+      "apiStatus": "verified",
+      "id": "ny-littering",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Illegal Discharge of Fireworks",
+      "catalogCode": "405",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "A required offense or grading provision was not returned by the official API; the compound charge is incomplete.",
+      "canonicalTitle": null,
+      "apiStatus": "api_error",
+      "id": "ny-illegal-fireworks",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Possession of Alcohol in Park / Prohibited Area",
+      "catalogCode": "10-125",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "This is a New York City ordinance and is kept as a separately identified local reference.",
+      "canonicalTitle": "Possession of Alcohol in Park / Prohibited Area",
+      "apiStatus": "local_ordinance",
+      "id": "ny-alcohol-in-park",
+      "provisions": [
+        {
+          "sourceKey": "ny:NYC:10-125",
+          "lawId": "NYC",
+          "section": "10-125",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "95371a3a57757c26e31df1e247726c49bb29c53b9254ae6172b75a8bd1c3ace7",
+          "retrievedAt": null,
+          "effectiveDateStart": null
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Fishing / Hunting Without a License",
+      "catalogCode": "71-0925",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Civil penalties",
+      "apiStatus": "verified",
+      "id": "ny-hunting-fishing-no-license",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Criminal Attempt",
+      "catalogCode": "MPC § 5.01 / NY attempt statute",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Attempt to commit a crime",
+      "apiStatus": "verified",
+      "id": "ny-criminal-attempt",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:110.00",
+          "lawId": "PEN",
+          "section": "110.00",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "414b7a69be600e77c978c5b044768f98c4d1758a5c56712fb40b47b0b59a6f2d",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminal Conspiracy",
+      "catalogCode": "MPC § 5.03 / NY conspiracy statute",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Conspiracy in the sixth degree",
+      "apiStatus": "verified",
+      "id": "ny-conspiracy",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:105.00",
+          "lawId": "PEN",
+          "section": "105.00",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "9ce28a568950c22fe7f87301be760aeed2f25419c373ffd1bb01644c8b6181ee",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Aiding and Abetting / Accomplice Liability",
+      "catalogCode": "MPC § 2.06 / NY accomplice statute",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Criminal liability for conduct of another",
+      "apiStatus": "verified",
+      "id": "ny-aiding-and-abetting",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:20.00",
+          "lawId": "PEN",
+          "section": "20.00",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "07d0d5f5f6c03e03480e1e37e6adc48b4cfdf12d094a7e98d61a69dc31d5f7f6",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Accessory After the Fact",
+      "catalogCode": "MPC § 2.07 / NY accessory statute",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Hindering prosecution; definition of term",
+      "apiStatus": "verified",
+      "id": "ny-accessory-after-the-fact",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:205.50",
+          "lawId": "PEN",
+          "section": "205.50",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "6043dac82aad0403aa3444db0255d80e0bd035878a5a200ab3fb472d17c1e55c",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Attempted Murder",
+      "catalogCode": "NY attempted murder statute / MPC § 5.01",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Attempt to commit a crime",
+      "apiStatus": "verified",
+      "id": "ny-attempted-murder",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Attempted Robbery",
+      "catalogCode": "NY attempted robbery statute / MPC § 5.01",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Attempt to commit a crime",
+      "apiStatus": "verified",
+      "id": "ny-attempted-robbery",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Attempted Sexual Assault",
+      "catalogCode": "NY attempted sexual assault statute / MPC § 5.01",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Attempt to commit a crime",
+      "apiStatus": "verified",
+      "id": "ny-attempted-sexual-assault",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Criminal Solicitation",
+      "catalogCode": "MPC § 5.02 / NY solicitation statute",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Criminal solicitation in the fifth degree",
+      "apiStatus": "verified",
+      "id": "ny-criminal-solicitation",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:100.00",
+          "lawId": "PEN",
+          "section": "100.00",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "692a3632f65a79c3f2034795fa06d105cf80fe74af3f9f047a60d039a8c54724",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminal Street Gang Enhancement",
+      "catalogCode": "NY gang enhancement statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog label or section is ambiguous or mismatched; the user must select an exact supported offense.",
+      "canonicalTitle": "Enterprise corruption",
+      "apiStatus": "verified",
+      "id": "ny-gang-enhancement",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Hate Crime Enhancement",
+      "catalogCode": "NY hate crime statute",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Hate crimes",
+      "apiStatus": "verified",
+      "id": "ny-hate-crime-enhancement",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:485.05",
+          "lawId": "PEN",
+          "section": "485.05",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "c1db244b259938a45c542ffbd7ca839605fe7665b116c371fab4e80202c6c817",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2024-09-06"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Prior Felony / Recidivist Sentencing Enhancement",
+      "catalogCode": "NY habitual offender / recidivist statute",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Sentence of imprisonment for persistent violent felony offender; criteria",
+      "apiStatus": "verified",
+      "id": "ny-recidivist-enhancement",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:70.08",
+          "lawId": "PEN",
+          "section": "70.08",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "c22e60c63d12faa339ced06f0d5d667424a10505edb47830fc17d965ba635846",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2025-05-16"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Use of a Firearm in Commission of a Felony",
+      "catalogCode": "NY firearm enhancement statute",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Criminal use of a firearm in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-firearm-in-felony-enhancement",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:265.09",
+          "lawId": "PEN",
+          "section": "265.09",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "e201ecbacad9589df85914472d6e90d5e670b7de6855f03abeda8b411c5802ab",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Criminal Sale of a Controlled Substance in or Near School Grounds",
+      "catalogCode": "220.44",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official NY source title.",
+      "canonicalTitle": "Criminal sale of a controlled substance in or near school grounds",
+      "apiStatus": "verified",
+      "id": "ny-criminal-sale-of-controlled-substance-near-school-grounds",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:220.44",
+          "lawId": "PEN",
+          "section": "220.44",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "64e023468a2afc26a536c6d82192e5a706ce24ca51c9b7c1eec5c0fd2e4c7c82",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "RICO / Organized Crime (Racketeering)",
+      "catalogCode": "NY organized crime / racketeering statute",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Enterprise corruption",
+      "apiStatus": "verified",
+      "id": "ny-rico-organized-crime",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:460.20",
+          "lawId": "PEN",
+          "section": "460.20",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "258d993dc9c3b8b29b27590082ffb744c2bf89ccbac9726b4a1b22ecc55c1624",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Money Laundering",
+      "catalogCode": "NY money laundering statute",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Money laundering in the first degree",
+      "apiStatus": "verified",
+      "id": "ny-money-laundering",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:470.20",
+          "lawId": "PEN",
+          "section": "470.20",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "cfb88bb746696446281b67986f99dc64820adcecc3dc693fbdd79514d74db77a",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    },
+    {
+      "catalogLabel": "Juvenile Delinquency Adjudication (Felony-Level Act)",
+      "catalogCode": "FCA §301.2",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official NY source did not return a current section; do not infer a replacement.",
+      "canonicalTitle": null,
+      "apiStatus": "api_error",
+      "id": "ny-juvenile-delinquency-felony",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Juvenile Delinquency Adjudication (Misdemeanor-Level Act)",
+      "catalogCode": "FCA §301.2",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official NY source did not return a current section; do not infer a replacement.",
+      "canonicalTitle": null,
+      "apiStatus": "api_error",
+      "id": "ny-juvenile-delinquency-misdemeanor",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Juvenile Transfer to Adult Court (Waiver Hearing)",
+      "catalogCode": "NY Juvenile Court Act — transfer / waiver provisions",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "A required offense or grading provision was not returned by the official API; the compound charge is incomplete.",
+      "canonicalTitle": null,
+      "apiStatus": "api_error",
+      "id": "ny-juvenile-transfer-adult-court",
+      "provisions": []
+    },
+    {
+      "catalogLabel": "Juvenile Firearm Possession",
+      "catalogCode": "NY juvenile firearm possession statute",
+      "catalogCategory": "felony",
+      "disposition": "exact_alias_rename",
+      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "canonicalTitle": "Unlawful possession of weapons by persons under sixteen",
+      "apiStatus": "verified",
+      "id": "ny-juvenile-firearm-possession",
+      "provisions": [
+        {
+          "sourceKey": "ny:PEN:265.05",
+          "lawId": "PEN",
+          "section": "265.05",
+          "supportRole": "offense",
+          "subdivision": null,
+          "contentHash": "c4e61558264d038f88a582dac69493d505d3d753e961c81bb7efde0bb4398c29",
+          "retrievedAt": "2026-09-10T04:58:55.942Z",
+          "effectiveDateStart": "2014-09-22"
+        }
+      ]
+    }
+  ],
+  "legacyClaimsForCandidateRecords": {
+    "ny-petit-larceny": {
+      "name": "Petit Larceny",
+      "code": "155.25",
+      "description": "Stealing property valued at $1,000 or less under New York Penal Law § 155.25. One of the most commonly charged offenses in New York courts.",
+      "maxPenalty": "Class A misdemeanor: up to 1 year jail and/or $1,000 fine"
+    },
+    "ny-criminal-possession-of-stolen-property": {
+      "name": "Criminal Possession of Stolen Property",
+      "code": "165.40",
+      "description": "Knowingly possessing stolen property with intent to benefit from it under New York Penal Law § 165.40 (fifth degree, property value $1,000 or less)",
+      "maxPenalty": "Class A misdemeanor: up to 1 year jail and/or $1,000 fine"
+    },
+    "ny-vandalism": {
+      "name": "Vandalism",
+      "code": "145.00",
+      "description": "Destruction of property under New York law",
+      "maxPenalty": "Up to 1 year jail and/or fines"
+    },
+    "ny-trespass-after-warning": {
+      "name": "Trespass After Warning / Return After Ban",
+      "code": "140.10",
+      "description": "Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under NY law",
+      "maxPenalty": "Up to 1 year jail and/or $1,000 fine"
+    }
+  }
+}

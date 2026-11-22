@@ -1,0 +1,38 @@
+import {afterEach, expect, it, vi} from 'vitest';
+import * as ohio from '../server/data/ohio-residual-source';
+import * as florida from '../server/data/florida-reviewed-source-records';
+import {loadOhioAuthorityManifest} from '../server/data/ohio-manifest-loader';
+import {loadFloridaAuthorityManifest} from '../server/data/florida-manifest-loader';
+import {buildOhioSourceDatabaseSeed} from '../server/data/ohio-source-database-seed';
+import {buildFloridaSourceDatabaseSeed} from '../server/data/florida-source-database-seed';
+import receipt from '../scripts/data-review/output/florida-reviewed-refresh-receipt.json';
+afterEach(()=>vi.restoreAllMocks());
+it('rechecks Ohio family freshness on every build, including false results',()=>{
+ const now=new Date(receipt.checkedAt);
+ const manifest=loadOhioAuthorityManifest(undefined,now);
+ const ids=new Set(ohio.OHIO_RESIDUAL_SOURCES.map(r=>r.chargeId));
+ const scoped={...manifest,catalogRecords:manifest.catalogRecords.filter(r=>ids.has(r.chargeId))};
+ expect(scoped.catalogRecords.length).toBeGreaterThan(1);
+ const check=vi.spyOn(ohio,'isOhioResidualSourceFresh').mockReturnValue(true);
+ expect(buildOhioSourceDatabaseSeed(scoped,now).selectableChargeIds.length).toBeGreaterThan(1);
+ expect(check).toHaveBeenCalledTimes(1);
+ check.mockReturnValue(false);
+ expect(buildOhioSourceDatabaseSeed(scoped,now).selectableChargeIds).toEqual([]);
+ expect(check).toHaveBeenCalledTimes(2);
+ check.mockReturnValue(true);
+ expect(buildOhioSourceDatabaseSeed(scoped,now).selectableChargeIds.length).toBeGreaterThan(1);
+ expect(check).toHaveBeenCalledTimes(3);
+});
+it('uses the real Florida receipt at its exact expiry without cross-build caching',()=>{
+ const now=new Date(receipt.checkedAt);
+ const manifest=loadFloridaAuthorityManifest(undefined,now);
+ const ids=new Set(florida.FLORIDA_REVIEWED_SOURCE_RECORDS.map(r=>r.chargeId));
+ const scoped={...manifest,catalogRecords:manifest.catalogRecords.filter(r=>ids.has(r.chargeId))};
+ const check=vi.spyOn(florida,'isFloridaReviewedSourceFresh');
+ expect(buildFloridaSourceDatabaseSeed(scoped,now).selectableChargeIds).toHaveLength(101);
+ expect(check).toHaveBeenCalledTimes(1);
+ expect(buildFloridaSourceDatabaseSeed(scoped,new Date(receipt.expiresAt)).selectableChargeIds).toEqual([]);
+ expect(check).toHaveBeenCalledTimes(2);
+ expect(buildFloridaSourceDatabaseSeed(scoped,now).selectableChargeIds).toHaveLength(101);
+ expect(check).toHaveBeenCalledTimes(3);
+});
