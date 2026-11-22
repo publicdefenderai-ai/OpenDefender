@@ -1,3 +1,4 @@
+import recordsBail from "./texas-records-bail.json";
 import publicPeace from "./texas-public-peace.json";
 import commerce from "./texas-sexual-commerce.json";
 import indecentContact from "./texas-indecent-contact.json";
@@ -37,6 +38,7 @@ export function texasReviewedCitation(ref: { code: string; section: string; subd
 }
 
 export const texasReviewedRecords = [
+  ...recordsBail,
   ...publicPeace,
   ...texasDwiRecords.map(row => ({
     ...row, officialTitle: "DRIVING WHILE INTOXICATED.", category: "misdemeanor",

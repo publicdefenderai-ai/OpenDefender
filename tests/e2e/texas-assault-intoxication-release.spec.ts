@@ -1,12 +1,11 @@
 import { expect, test } from "@playwright/test";
 import { readFileSync } from "node:fs";
+import { allTexasCharges } from "./helpers/texas-catalog";
 const rows = JSON.parse(readFileSync("shared/texas-assault-public-intoxication.json", "utf8")) as Array<{
   id: string; name: string; conduct: string; penalty: string; category: string;
 }>;
 test("Texas selector distinguishes ordinary family assault, felony predicates and public danger", async ({ request }) => {
-  const result = await request.get("/api/criminal-charges?jurisdiction=TX&limit=500");
-  expect(result.ok()).toBe(true);
-  const { charges } = await result.json();
+  const charges = await allTexasCharges(request);
   for (const row of rows) {
     const charge = charges.find((value: { id: string }) => value.id === row.id);
     if (row.id === "tx-public-intoxication") {

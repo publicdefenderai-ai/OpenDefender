@@ -1,3 +1,4 @@
+import recordsBail from "../../scripts/data-review/output/texas-records-bail-evidence.json";
 import publicPeace from "../../scripts/data-review/output/texas-public-peace-evidence.json";
 import commerce from "../../scripts/data-review/output/texas-sexual-commerce-evidence.json";
 import indecentContact from "../../scripts/data-review/output/texas-indecent-contact-evidence.json";
@@ -29,8 +30,8 @@ import { texasDwiHashes } from "@shared/texas-dwi";
 import { TEXAS_DWI_SNAPSHOT_HASHES } from "./texas-dwi-snapshot-hashes";
 
 export const texasReviewedTextHashes: Readonly<Record<string, string>> = {
-  ...texasDwiHashes, ...Object.fromEntries(Object.entries({ ...evidence, ...possession, ...theft, ...propertyAccess, ...arrest, ...closeout, ...carry, ...loss, ...burglary, ...weights, ...delivery, ...family, ...justice, ...road, ...fraud, ...protectedAssault, ...robbery, ...threats, ...prohibited, ...intoxicationHarm, ...childSexual, ...communications, ...animals, ...protectiveFirearms, ...indecentContact, ...commerce, ...publicPeace }).map(([key, doc]) => [key, doc.textSha256])),
+  ...texasDwiHashes, ...Object.fromEntries(Object.entries({ ...evidence, ...possession, ...theft, ...propertyAccess, ...arrest, ...closeout, ...carry, ...loss, ...burglary, ...weights, ...delivery, ...family, ...justice, ...road, ...fraud, ...protectedAssault, ...robbery, ...threats, ...prohibited, ...intoxicationHarm, ...childSexual, ...communications, ...animals, ...protectiveFirearms, ...indecentContact, ...commerce, ...publicPeace, ...recordsBail }).map(([key, doc]) => [key, doc.textSha256])),
 };
 export const texasReviewedSnapshotHashes: Readonly<Record<string, string>> = {
-  ...TEXAS_DWI_SNAPSHOT_HASHES, ...Object.fromEntries(Object.entries({ ...evidence, ...possession, ...theft, ...propertyAccess, ...arrest, ...closeout, ...carry, ...loss, ...burglary, ...weights, ...delivery, ...family, ...justice, ...road, ...fraud, ...protectedAssault, ...robbery, ...threats, ...prohibited, ...intoxicationHarm, ...childSexual, ...communications, ...animals, ...protectiveFirearms, ...indecentContact, ...commerce, ...publicPeace }).map(([key, doc]) => [`tx:${key}`, doc.snapshotHash])),
+  ...TEXAS_DWI_SNAPSHOT_HASHES, ...Object.fromEntries(Object.entries({ ...evidence, ...possession, ...theft, ...propertyAccess, ...arrest, ...closeout, ...carry, ...loss, ...burglary, ...weights, ...delivery, ...family, ...justice, ...road, ...fraud, ...protectedAssault, ...robbery, ...threats, ...prohibited, ...intoxicationHarm, ...childSexual, ...communications, ...animals, ...protectiveFirearms, ...indecentContact, ...commerce, ...publicPeace, ...recordsBail }).map(([key, doc]) => [`tx:${key}`, doc.snapshotHash])),
 };
