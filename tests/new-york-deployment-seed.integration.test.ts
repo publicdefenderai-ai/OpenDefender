@@ -11,7 +11,7 @@ describe.skipIf(!runIntegration)("New York deployment bootstrap", () => {
     const result = await seedNewYorkSourceDatabase(loadNewYorkAuthorityManifest());
     expect(result.success).toBe(true);
     expect(result.catalogRecordCount).toBe(121);
-    expect(result.selectableChargeCount).toBe(94);
+    expect(result.selectableChargeCount).toBe(91);
 
     const selectableIds = await getCurrentNewYorkSelectableChargeIds();
     expect(selectableIds.has("ny-grand-theft-in-the-first-degree")).toBe(true);

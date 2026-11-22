@@ -546,6 +546,7 @@ export function buildNewYorkSourceDatabaseSeed(
   }
 
   const selectableChargeIds = manifest.catalogRecords
+    .filter((record) => !isChargeIdRequiringReselection(record.chargeId))
     .filter((record) =>
       record.disposition === "retain" || record.disposition === "exact_alias_rename",
     )
