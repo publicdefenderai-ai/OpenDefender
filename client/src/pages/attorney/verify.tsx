@@ -44,12 +44,12 @@ export default function AttorneyVerify() {
         </Link>
         <section className="attorney-access-heading" aria-labelledby="attorney-access-title">
           <h1 id="attorney-access-title">{t("attorneyPortal.verify.title", "Attorney Verification")}</h1>
-          <p lang="en">{t("attorney.verify.subtitle", "Please verify your bar membership to access document generation tools.")}</p>
+          <p>{t("attorneyPortal.verify.subtitle", "Please verify your bar membership to access document generation tools.")}</p>
         </section>
         <section className="attorney-access-workspace" aria-labelledby="attorney-access-form-title">
           <h2 id="attorney-access-form-title">{t("attorneyPortal.verify.formTitle", "Bar Membership Verification")}</h2>
-          <p className="attorney-access-description" lang="en">
-            {t("attorney.verify.formDescription", "Enter your bar association information and confirm the required attestations to continue.")}
+          <p className="attorney-access-description">
+            {t("attorneyPortal.verify.formDescription", "Confirm the required attestations to access attorney document tools.")}
           </p>
           <VerificationForm onSuccess={handleVerificationSuccess} />
         </section>

@@ -1,5 +1,10 @@
 import { expect, test, type Page } from '@playwright/test';
 import published from '../fixtures/attorney-access-published-content';
+const explanatoryCopy = {
+  en: ['Please verify your bar membership to access document generation tools.', 'Confirm the required attestations to access attorney document tools.'],
+  es: ['Por favor verifique su membresía al colegio de abogados para acceder a las herramientas de generación de documentos.', 'Confirme las certificaciones requeridas para acceder a las herramientas de documentos para abogados.'],
+  zh: ['请验证您的律师执照以使用文件生成工具。', '确认所需的认证声明以使用律师文件工具。'],
+};
 async function mockAccess(page: Page, enabled = true, verified = false) {
   await page.route('**/api/attorney/config', r => r.fulfill({ json: { success: true, enabled } }));
   await page.route('**/api/attorney/session', r => r.fulfill({ json: { success: true, isVerified: verified,
@@ -22,8 +27,12 @@ for (const language of ['en', 'es', 'zh'] as const) for (const theme of ['light'
     });
     await page.goto('/attorney/verify');
     const root = page.locator('.attorney-access-width');
-    for (const text of published[language]) await expect(root).toContainText(text);
-    await expect(root).toContainText('Enter your bar association information and confirm the required attestations to continue.');
+    // The old English-only subtitle is intentionally replaced by the existing locale copy.
+    for (const text of published[language].filter(text => text !== explanatoryCopy.en[0])) await expect(root).toContainText(text);
+    await expect(root.locator('.attorney-access-heading p')).toHaveText(explanatoryCopy[language][0]);
+    await expect(root.locator('.attorney-access-description')).toHaveText(explanatoryCopy[language][1]);
+    await expect(root.locator('.attorney-access-heading p[lang], .attorney-access-description[lang]')).toHaveCount(0);
+    await expect(root).not.toContainText('Enter your bar association information');
     await expect(page.locator('main')).toHaveCount(1);
     await expect(root.getByRole('checkbox')).toHaveCount(3);
     await expect(root.getByRole('textbox')).toHaveCount(0);
