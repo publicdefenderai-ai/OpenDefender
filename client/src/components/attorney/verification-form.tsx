@@ -83,7 +83,7 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
         )}
 
         {/* Attestation Checkboxes */}
-        <div className="space-y-4 rounded-lg border p-4 bg-slate-50 dark:bg-slate-900/50">
+        <div data-attorney-attestations className="space-y-4 rounded-lg border p-4 bg-slate-50 dark:bg-slate-900/50">
           <div className="flex items-center gap-2 mb-3">
             <BrandShieldIcon size={16} />
             <span className="font-medium text-sm">
@@ -95,9 +95,10 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
             control={form.control}
             name="isLicensedAttorneyActingForClient"
             render={({ field }) => (
-              <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+              <FormItem data-attorney-attestation className="flex flex-row items-start space-x-3 space-y-0">
                 <FormControl>
                   <Checkbox
+                    ref={field.ref}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                   />
@@ -119,9 +120,10 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
             control={form.control}
             name="understandsPrivilegeRequirements"
             render={({ field }) => (
-              <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+              <FormItem data-attorney-attestation className="flex flex-row items-start space-x-3 space-y-0">
                 <FormControl>
                   <Checkbox
+                    ref={field.ref}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                   />
@@ -143,9 +145,9 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
             control={form.control}
             name="acceptsDisclosures"
             render={({ field }) => (
-              <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+              <FormItem data-attorney-attestation className="flex flex-row items-start space-x-3 space-y-0">
                 <FormControl>
-                  <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                  <Checkbox ref={field.ref} checked={field.value} onCheckedChange={field.onChange} />
                 </FormControl>
                 <div className="space-y-1 leading-none">
                   <FormLabel className="font-normal">
@@ -164,7 +166,7 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
         </div>
 
         {/* Privacy Notice */}
-        <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-950/30">
+        <Alert data-attorney-privacy className="border-blue-200 bg-blue-50 dark:bg-blue-950/30">
           <Info className="h-4 w-4 text-blue-600" />
           <AlertDescription className="text-blue-800 dark:text-blue-200">
             {t(
