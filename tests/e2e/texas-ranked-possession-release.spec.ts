@@ -242,7 +242,7 @@ test("Texas public-peace choices keep branch grades and retire generic disorderl
 
 test("Texas records and bail branches remain complete beyond the first 500 catalog choices", async ({ request }) => {
   const charges = await allTexasCharges(request);
-  expect(charges).toHaveLength(537);
+  expect(charges).toHaveLength(547);
   const batch = JSON.parse(readFileSync("shared/texas-records-bail.json", "utf8"));
   for (const row of batch) expect(charges.find(c => c.id === row.id)).toMatchObject({name:row.name,code:row.code,description:row.conduct,maxPenalty:row.penalty,category:row.category});
   for (const id of ["tx-failure-to-appear", "tx-false-info-to-police"]) expect(charges.some(c => c.id === id)).toBe(false);
@@ -256,4 +256,15 @@ test("Texas deadly-conduct and fluid-contact branches retain distinct predicates
  expect(charges.find(c=>c.id==="tx-pc-22-05-discharge-vehicle").description).toContain("reckless as to whether it is occupied");
  expect(charges.find(c=>c.id==="tx-pc-22-11-public-duty-other-liquid").maxPenalty).toContain("not backdated");
  expect(charges.find(c=>c.id==="tx-pc-22-11-tcco-retaliation-listed").description).toContain("applicable duty or retaliation nexus");
+});
+
+test("Texas Class C disorderly branches preserve speech limits and exact privacy locations", async ({request}) => {
+ const charges=await allTexasCharges(request);
+ const batch=JSON.parse(readFileSync("shared/texas-disorderly-class-c.json","utf8"));
+ for(const row of batch)expect(charges.find(c=>c.id===row.id)).toMatchObject({id:row.id,name:row.name,code:row.code,category:"misdemeanor",description:row.conduct,maxPenalty:row.penalty});
+ expect(charges.some(c=>c.id==="tx-disorderly-conduct")).toBe(false);
+ expect(charges.some(c=>c.code==="42.01(a)(4)")).toBe(false);
+ expect(charges.find(c=>c.id==="tx-pc-42-01-fighting-words").description).toContain("insults, or a listener’s offense alone are insufficient");
+ expect(charges.find(c=>c.id==="tx-pc-42-01-public-noise").description).toContain("AFTER notice");
+ expect(charges.find(c=>c.id==="tx-pc-42-01-looking-dwelling").description).toContain("entering another’s property AND");
 });

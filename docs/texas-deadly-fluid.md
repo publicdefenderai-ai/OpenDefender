@@ -22,16 +22,16 @@ The H.B. 2017/Chapter 51 intoxication predicate remains separately unresolved. T
 
 Twenty-three statutory documents and three official enacted bills support the batch. Bills retain normalized text, original acquisition hashes and independently sliceable section spans. Existing supporting evidence is reused with genuine timestamps; reacquired primary sections that already existed were checked for identical text rather than overwritten.
 
-Base: main `a06ffc0cf7f0090b18435625a9800a6d8486faad`. Pending PR 298 is not incorporated; its ten disorderly-conduct choices are a separate review. All 595 inherited manifest records and metadata are unchanged. Configured/offline-eligible/held counts are 614/537/77; 299 source keys and 6,462 snapshot/link references. These are offline figures, not live availability.
+Base: corrected PR 298 (`d876ca253c4ca19b1b8670da00c409210901a9ed`), with main `a06ffc0cf7f0090b18435625a9800a6d8486faad` also integrated. Merge PR 298 first, then retarget this draft to main. Its ten disorderly-conduct choices and optional DPS-alias typing correction are inherited, not new changes in this batch. All 605 inherited manifest records and metadata are unchanged. Configured/offline-eligible/held counts are 624/547/77; 300 source keys and 6,562 snapshot/link references. These are offline figures, not live availability.
 
 The new exact IDs do not replace an existing section-wide catalog identity. Code-only saved guidance cannot select a new subdivision automatically. Spanish and Chinese explicitly use English fallback; no unverified CPJC citation is added.
 
 ## Verification
 
 - Source-only replay reconstructs all 19 records exactly.
-- Five focused suites: 25 passed, zero failed.
-- Production build passed; final integrated typecheck remains pending.
-- Three isolated Texas browser suites: 30 passed, zero failed/skipped; no retries.
+- Final combined focused checks pending.
+- Final combined typecheck and production build pending.
+- Final combined browser checks pending.
 - Full regression and production checks were not run.
 
 No imports, production writes, receipt changes, activation or publication are included. Complete snapshot-bound pagination from PR 295 remains in use.

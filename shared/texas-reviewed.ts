@@ -1,3 +1,4 @@
+import disorderlyClassC from "./texas-disorderly-class-c.json";
 import deadlyFluid from "./texas-deadly-fluid.json";
 import recordsBail from "./texas-records-bail.json";
 import publicPeace from "./texas-public-peace.json";
@@ -39,6 +40,7 @@ export function texasReviewedCitation(ref: { code: string; section: string; subd
 }
 
 export const texasReviewedRecords = [
+  ...disorderlyClassC,
   ...deadlyFluid,
   ...recordsBail,
   ...publicPeace,
