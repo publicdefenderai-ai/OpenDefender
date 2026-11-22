@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 const here=path.dirname(fileURLToPath(import.meta.url));
 const root=path.resolve(here,'../../..');
 export async function fetchCandidateDocument(reference,apiKey,fetcher=fetch){
- const match=/^ny:(PEN|RPA|PBH):([0-9]+\.[0-9]+|[0-9]+(?:-A)?)$/.exec(reference.sourceKey);
+ const match=/^ny:(PEN|RPA|PBH|CPL|FCT):([0-9]+\.[0-9]+|[0-9]+(?:-A)?)$/.exec(reference.sourceKey);
  if(!match||!apiKey)throw Error('Exact source identity and NY_SENATE_API_KEY are required');
  const [,lawId,section]=match;
  try{
