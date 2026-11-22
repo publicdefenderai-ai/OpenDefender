@@ -1,0 +1,61 @@
+{
+  "section": "42.01",
+  "published": [
+    {
+      "id": "tx-pc-42-01-fighting-words",
+      "subdivision": "(a)(1)"
+    },
+    {
+      "id": "tx-pc-42-01-fighting-gesture",
+      "subdivision": "(a)(2)"
+    },
+    {
+      "id": "tx-pc-42-01-chemical-odor",
+      "subdivision": "(a)(3)"
+    },
+    {
+      "id": "tx-pc-42-01-public-noise",
+      "subdivision": "(a)(5)"
+    },
+    {
+      "id": "tx-pc-42-01-residential-noise",
+      "subdivision": "(a)(5)"
+    },
+    {
+      "id": "tx-pc-42-01-public-fight",
+      "subdivision": "(a)(6)"
+    },
+    {
+      "id": "tx-pc-42-01-public-exposure",
+      "subdivision": "(a)(10)"
+    },
+    {
+      "id": "tx-pc-42-01-looking-dwelling",
+      "subdivision": "(a)(11)(A)"
+    },
+    {
+      "id": "tx-pc-42-01-looking-hotel-room",
+      "subdivision": "(a)(11)(B)"
+    },
+    {
+      "id": "tx-pc-42-01-looking-private-area",
+      "subdivision": "(a)(11)(C)"
+    }
+  ],
+  "preserved": [
+    "(a)(7)",
+    "(a)(8)",
+    "(a)(9)"
+  ],
+  "held": [
+    {
+      "subdivision": "(a)(4)",
+      "reason": "Abuse/threat speech requires a sufficiently supported application of judicial speech limitations. Jimmerson explicitly did not decide the narrowing-construction question; Counterman does not by itself resolve all applications. No new selectable identity is created for this branch."
+    }
+  ],
+  "absent": [
+    "(a)(12)"
+  ],
+  "legacyIdentity": "tx-disorderly-conduct",
+  "legacyDisposition": "require_exact_reselection"
+}

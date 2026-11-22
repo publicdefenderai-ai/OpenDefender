@@ -1,3 +1,5 @@
+import disorderlyRows from "../../../shared/texas-disorderly-class-c.json";
+import disorderlyEvidence from "../output/texas-disorderly-class-c-evidence.json";
 import recordsBailRows from "../../../shared/texas-records-bail.json";
 import recordsBailEvidence from "../output/texas-records-bail-evidence.json";
 import peaceRows from "../../../shared/texas-public-peace.json";
@@ -74,6 +76,7 @@ import protectedAssaultRows from "../../../shared/texas-protected-assault.json";
 import protectedAssaultEvidence from "../output/texas-protected-assault-evidence.json";
 
 const batches = new Map([
+  ["disorderly-class-c", { rows: disorderlyRows, evidence: Object.entries(disorderlyEvidence) }],
   ["records-bail", { rows: recordsBailRows, evidence: Object.entries(recordsBailEvidence) }],
   ["public-peace", { rows: peaceRows, evidence: Object.entries(peaceEvidence) }],
   ["sexual-commerce", { rows: commerceRows, evidence: Object.entries(commerceEvidence) }],
