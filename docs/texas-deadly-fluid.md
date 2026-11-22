@@ -29,10 +29,12 @@ The new exact IDs do not replace an existing section-wide catalog identity. Code
 ## Verification
 
 - Source-only replay reconstructs all 19 records exactly.
-- Final combined focused checks pending.
-- Final combined typecheck and production build pending.
-- Final combined browser checks pending.
+- Six combined focused suites: 33 passed, zero failed; process exit 0.
+- Combined app typecheck exit 0 and production build exit 0.
+- Three combined isolated Texas browser suites: 31 passed, zero failed/skipped, no retries; process exit 0.
 - Full regression and production checks were not run.
+- Validation revision: `8c13f0150c8d01652b48e95bd7e1d462b386a537`; the following documentation-only update records these results.
+- The stacked diff also contains the three already-merged PR 296 NY citation-guard files inherited from main. They are not additional Texas changes. A combined merge-tree with pending NY PR 300 is clean; PR 298 must merge before this draft, while PR 300 can merge in either order.
 
 No imports, production writes, receipt changes, activation or publication are included. Complete snapshot-bound pagination from PR 295 remains in use.
 
