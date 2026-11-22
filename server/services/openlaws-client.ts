@@ -687,7 +687,11 @@ export class OpenLawsClient {
     if (!parsed) throw new OpenLawsLookupError(400, 'Invalid citation format');
 
     // Keep the full citation, including subsections, for the provider to resolve.
-    const query = citation.trim().replace(/U\.?S\.?C\.?A?\.?/i, 'U.S.C.');
+    let query = citation.trim().replace(/U\.?S\.?C\.?A?\.?/i, 'U.S.C.');
+    // The app accepts TX shorthand, but live OpenLaws rejects it. Normalize only
+    // an explicit Penal Code citation; never infer a code from a bare section.
+    const texasPenal = query.match(/^TX\s+Penal\s+Code\.?\s*§?\s*(\d+(?:\.\d+)*(?:\([a-z0-9]+\))*)$/i);
+    if (texasPenal) query = `Tex. Penal Code § ${texasPenal[1]}`;
     try {
       const { data: division } = await this.axios.get<OpenLawsDivision>(
         `/jurisdictions/${parsed.jurisdiction}/laws/citations`,

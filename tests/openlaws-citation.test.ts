@@ -120,7 +120,7 @@ it('resolves a hyphenated federal section without truncating its identity', asyn
 });
 
 for (const item of additionalStatuteLookups.filter(item => item.jurisdiction !== 'FED')) {
-  it(`routes the state smoke citation intact: ${item.citation}`, async () => {
+  it(`routes the state smoke citation: ${item.citation}`, async () => {
     adapter = async config => {
       calls.push({ url: config.url, query: config.params.query });
       return { config, status: 200, statusText: 'OK', headers: {}, data: {
@@ -129,6 +129,27 @@ for (const item of additionalStatuteLookups.filter(item => item.jurisdiction !==
       } };
     };
     expect(await client.searchByCitation(item.citation)).toMatchObject({ jurisdiction: item.jurisdiction, section: item.section });
-    expect(calls).toEqual([{ url: `/jurisdictions/${item.jurisdiction}/laws/citations`, query: item.citation }]);
+    expect(calls).toEqual([{ url: `/jurisdictions/${item.jurisdiction}/laws/citations`, query: item.citation === 'TX Penal Code 22.01' ? 'Tex. Penal Code § 22.01' : item.citation }]);
   });
 }
+
+it.each([
+  ['TX Penal Code 22.01', 'Tex. Penal Code § 22.01'],
+  ['tx penal code § 22.01', 'Tex. Penal Code § 22.01'],
+  [' TX   Penal Code 22.01(a)(1) ', 'Tex. Penal Code § 22.01(a)(1)'],
+  ['Tex. Penal Code § 22.01', 'Tex. Penal Code § 22.01'],
+  ['TX Code 22.01', 'TX Code 22.01'],
+])('normalizes only explicit Texas Penal Code shorthand: %s', async (input, expected) => {
+  adapter = async config => {
+    calls.push({ url: config.url, query: config.params.query });
+    // Reproduce the provider's observed refusal of shorthand.
+    if (/^TX Penal Code/i.test(config.params.query)) throw new AxiosError('invalid format', '', config, undefined,
+      { config, status: 400, statusText: 'Bad Request', data: {}, headers: {} });
+    return { config, status: 200, statusText: 'OK', headers: {}, data: {
+      ...division(18, '22.01'), jurisdiction_key: 'TX', law_key: 'TX-STAT', path: 'penal_code.section_22_01',
+    } };
+  };
+  const result = await client.searchByCitation(input);
+  expect(calls).toEqual([{ url: '/jurisdictions/TX/laws/citations', query: expected }]);
+  expect(result).toMatchObject({ citation: input, jurisdiction: 'TX', section: '22.01' });
+});
