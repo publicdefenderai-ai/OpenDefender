@@ -1,0 +1,4424 @@
+[
+  {
+    "id": "tx-pc-37-08-investigator",
+    "name": "False report (investigator)",
+    "officialTitle": "FALSE REPORT TO PEACE OFFICER, FEDERAL SPECIAL INVESTIGATOR, LAW ENFORCEMENT EMPLOYEE, CORRECTIONS OFFICER, OR JAILER.",
+    "category": "misdemeanor",
+    "code": "37.08(a)(1)",
+    "citation": "Tex. Penal Code § 37.08(a)(1)",
+    "conduct": "With intent to deceive, knowingly making a false statement material to a criminal investigation to a peace officer or federal special investigator who is conducting the criminal investigation. The recipient must have the specified official role and be conducting the investigation. An innocent mistake, a merely irrelevant falsehood, or silence alone does not satisfy these stated elements. The actor’s intent to deceive is separate from knowing the statement is false.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. The ordinary Class B grade is not changed merely because the investigation concerns a felony. Qualifying repeat-offender findings require separate analysis. The 2011 H.B. 3423 text expressly covers federal special investigators and authorized agency employees; the 2019 addition of corrections officers/jailers did not first create the other recipient branches. Earlier conduct requires the law then applicable.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.08",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.08",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.08",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "48030005"
+  },
+  {
+    "id": "tx-pc-37-08-agency-employee",
+    "name": "False report (agency employee)",
+    "officialTitle": "FALSE REPORT TO PEACE OFFICER, FEDERAL SPECIAL INVESTIGATOR, LAW ENFORCEMENT EMPLOYEE, CORRECTIONS OFFICER, OR JAILER.",
+    "category": "misdemeanor",
+    "code": "37.08(a)(2)",
+    "citation": "Tex. Penal Code § 37.08(a)(2)",
+    "conduct": "With intent to deceive, knowingly making a false statement material to a criminal investigation to an employee of a law enforcement agency authorized by that agency to conduct the criminal investigation. The actor must know the employee is conducting that investigation; employment at the agency alone is not enough. An innocent mistake, a merely irrelevant falsehood, or silence alone does not satisfy these stated elements. The actor’s intent to deceive is separate from knowing the statement is false.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. The ordinary Class B grade is not changed merely because the investigation concerns a felony. Qualifying repeat-offender findings require separate analysis. The 2011 H.B. 3423 text expressly covers federal special investigators and authorized agency employees; the 2019 addition of corrections officers/jailers did not first create the other recipient branches. Earlier conduct requires the law then applicable.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.08",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.08",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.08",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "48030005"
+  },
+  {
+    "id": "tx-pc-37-08-corrections-jailer",
+    "name": "False report (corrections jailer)",
+    "officialTitle": "FALSE REPORT TO PEACE OFFICER, FEDERAL SPECIAL INVESTIGATOR, LAW ENFORCEMENT EMPLOYEE, CORRECTIONS OFFICER, OR JAILER.",
+    "category": "misdemeanor",
+    "code": "37.08(a)(3)",
+    "citation": "Tex. Penal Code § 37.08(a)(3)",
+    "conduct": "With intent to deceive, knowingly making a false statement material to a criminal investigation to a corrections officer or jailer. Unlike (a)(1) and (a)(2), this subdivision does not itself add a requirement that the recipient be conducting the investigation. The false statement must still be material to a criminal investigation. An innocent mistake, a merely irrelevant falsehood, or silence alone does not satisfy these stated elements. The actor’s intent to deceive is separate from knowing the statement is false.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. The ordinary Class B grade is not changed merely because the investigation concerns a felony. Qualifying repeat-offender findings require separate analysis. The corrections-officer/jailer branch was added effective September 1, 2019 by S.B. 405; if any element predates that date, earlier law governs.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.08",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.08",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.08",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": "(3)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "59.01",
+        "subdivision": "(5)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "48030005"
+  },
+  {
+    "id": "tx-pc-38-10-ordinary",
+    "name": "Bail jumping and failure to appear (ordinary)",
+    "officialTitle": "BAIL JUMPING AND FAILURE TO APPEAR.",
+    "category": "misdemeanor",
+    "code": "38.10(a)",
+    "citation": "Tex. Penal Code § 38.10(a)",
+    "conduct": "After being lawfully released from custody, with or without bail, on a condition of subsequently appearing, intentionally or knowingly failing to appear according to the terms of that release. A missed date alone does not establish the lawful-release condition, its terms or the required mental state. The offense requiring the appearance is neither punishable by fine only nor classified as a felony. It is a defense that the appearance was incident to community supervision, parole or an intermittent sentence. A reasonable excuse for the failure to appear is also a statutory defense.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The grade follows the classification of the offense requiring appearance, not a blanket felony label for every missed date. The statute was renumbered from former §38.11 and amended effective September 1, 1994; this is not an assertion that bail jumping was first criminalized in 1994. Earlier conduct requires its applicable law. Bond forfeiture, release conditions and any other charges are separate questions.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.10",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.10",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.10",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "50150003"
+  },
+  {
+    "id": "tx-pc-38-10-fine-only",
+    "name": "Bail jumping and failure to appear (fine only)",
+    "officialTitle": "BAIL JUMPING AND FAILURE TO APPEAR.",
+    "category": "misdemeanor",
+    "code": "38.10(a)",
+    "citation": "Tex. Penal Code § 38.10(a)",
+    "conduct": "After being lawfully released from custody, with or without bail, on a condition of subsequently appearing, intentionally or knowingly failing to appear according to the terms of that release. A missed date alone does not establish the lawful-release condition, its terms or the required mental state. The offense for which the appearance was required is punishable by fine only. It is a defense that the appearance was incident to community supervision, parole or an intermittent sentence. A reasonable excuse for the failure to appear is also a statutory defense.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, with no jail term as the ordinary punishment. The grade follows the classification of the offense requiring appearance, not a blanket felony label for every missed date. The statute was renumbered from former §38.11 and amended effective September 1, 1994; this is not an assertion that bail jumping was first criminalized in 1994. Earlier conduct requires its applicable law. Bond forfeiture, release conditions and any other charges are separate questions.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.10",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.10",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-38-10-felony",
+    "name": "Bail jumping and failure to appear (felony)",
+    "officialTitle": "BAIL JUMPING AND FAILURE TO APPEAR.",
+    "category": "felony",
+    "code": "38.10(a)",
+    "citation": "Tex. Penal Code § 38.10(a)",
+    "conduct": "After being lawfully released from custody, with or without bail, on a condition of subsequently appearing, intentionally or knowingly failing to appear according to the terms of that release. A missed date alone does not establish the lawful-release condition, its terms or the required mental state. The offense for which the appearance was required is classified as a felony. It is a defense that the appearance was incident to community supervision, parole or an intermittent sentence. A reasonable excuse for the failure to appear is also a statutory defense.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The grade follows the classification of the offense requiring appearance, not a blanket felony label for every missed date. The statute was renumbered from former §38.11 and amended effective September 1, 1994; this is not an assertion that bail jumping was first criminalized in 1994. Earlier conduct requires its applicable law. Bond forfeiture, release conditions and any other charges are separate questions.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "38.10",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "38.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.10",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "50150004"
+  },
+  {
+    "id": "tx-pc-37-10-false-entry-ordinary",
+    "name": "Tampering with governmental record (false entry; ordinary)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "misdemeanor",
+    "code": "37.10(a)(1)",
+    "citation": "Tex. Penal Code § 37.10(a)(1)",
+    "conduct": "Knowingly making a false entry in, or false alteration of, a governmental record. An ordinary governmental record within §37.01(2)(A) or (B), with no intent to defraud or harm another. This excludes all special record types in (c)(2)–(6) and (d). This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990623"
+  },
+  {
+    "id": "tx-pc-37-10-false-entry-ordinary-harm",
+    "name": "Tampering with governmental record (false entry; ordinary harm)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(1)",
+    "citation": "Tex. Penal Code § 37.10(a)(1)",
+    "conduct": "Knowingly making a false entry in, or false alteration of, a governmental record. An ordinary governmental record within §37.01(2)(A) or (B), with intent to defraud or harm another. That additional intent must be established; it does not follow automatically from a false statement. This excludes all special record types in (c)(2)–(6) and (d). This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990623"
+  },
+  {
+    "id": "tx-pc-37-10-false-entry-issued-document",
+    "name": "Tampering with governmental record (false entry; issued document)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(1)",
+    "citation": "Tex. Penal Code § 37.10(a)(1)",
+    "conduct": "Knowingly making a false entry in, or false alteration of, a governmental record. A license, certificate, permit, seal, title, letter of patent or similar document issued by government, another state or the United States, with no intent to defraud or harm another. This scope does not include the school/PEIMS portion of (c)(2)(A), foreign-government documents or other special record predicates. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions. Subsection (g) creates a presumption concerning intent to defraud or harm for two or more of the same type of specified government-issued records or blank forms. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt, the jury may but is not bound to infer the intent, and the State must still prove the other elements; it is not automatic guilt.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-false-entry-issued-document-harm",
+    "name": "Tampering with governmental record (false entry; issued document harm)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(1)",
+    "citation": "Tex. Penal Code § 37.10(a)(1)",
+    "conduct": "Knowingly making a false entry in, or false alteration of, a governmental record. A license, certificate, permit, seal, title, letter of patent or similar document issued by government, another state or the United States, with intent to defraud or harm another. This scope does not include the school/PEIMS portion of (c)(2)(A), foreign-government documents or other special record predicates. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions. Subsection (g) creates a presumption concerning intent to defraud or harm for two or more of the same type of specified government-issued records or blank forms. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt, the jury may but is not bound to infer the intent, and the State must still prove the other elements; it is not automatic guilt.",
+    "penalty": "Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-false-entry-expert-report",
+    "name": "Tampering with governmental record (false entry; expert report)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(1)",
+    "citation": "Tex. Penal Code § 37.10(a)(1)",
+    "conduct": "Knowingly making a false entry in, or false alteration of, a governmental record. A written report of a medical, chemical, toxicological, ballistic or other expert examination or test performed on physical evidence to determine its connection or relevance to a criminal action. A general medical record or unrelated laboratory result is not enough. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific forensic-report/device-report third-degree provisions were added effective September 1, 2009 by H.B. 1813. They do not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-false-entry-testing-device-report",
+    "name": "Tampering with governmental record (false entry; testing device report)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(1)",
+    "citation": "Tex. Penal Code § 37.10(a)(1)",
+    "conduct": "Knowingly making a false entry in, or false alteration of, a governmental record. A written report of certification, inspection or maintenance of an instrument, apparatus, implement, machine or similar device used in an examination or test of physical evidence to determine its connection or relevance to a criminal action. This is not every equipment or maintenance record. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific forensic-report/device-report third-degree provisions were added effective September 1, 2009 by H.B. 1813. They do not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-false-entry-search-warrant",
+    "name": "Tampering with governmental record (false entry; search warrant)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(1)",
+    "citation": "Tex. Penal Code § 37.10(a)(1)",
+    "conduct": "Knowingly making a false entry in, or false alteration of, a governmental record. A search warrant issued by a magistrate. An application, affidavit, arrest warrant or other court paper is not automatically this search-warrant predicate. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific search-warrant third-degree provision was added effective September 1, 2015 by H.B. 644. It does not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(D)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-fabricate-present-use-ordinary",
+    "name": "Tampering with governmental record (fabricate present use; ordinary)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "misdemeanor",
+    "code": "37.10(a)(2)",
+    "citation": "Tex. Penal Code § 37.10(a)(2)",
+    "conduct": "Making, presenting or using any record, document or thing with knowledge of its falsity AND intent that it be taken as a genuine governmental record. The apparent-government-record intent is required in addition to knowledge of falsity. An ordinary governmental record within §37.01(2)(A) or (B), with no intent to defraud or harm another. This excludes all special record types in (c)(2)–(6) and (d). This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions. Under (j), a disclaimer such as “NOT A GOVERNMENT DOCUMENT” is not a defense unless it is diagonally printed clearly and indelibly on BOTH front and back in solid red capital letters at least one-quarter inch high. That statutory qualification is not a general promise that a labeled false document is lawful.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed. The disclaimer-format rule in (j) was added effective September 1, 2009; it is not backdated to earlier conduct.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990623"
+  },
+  {
+    "id": "tx-pc-37-10-fabricate-present-use-ordinary-harm",
+    "name": "Tampering with governmental record (fabricate present use; ordinary harm)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(2)",
+    "citation": "Tex. Penal Code § 37.10(a)(2)",
+    "conduct": "Making, presenting or using any record, document or thing with knowledge of its falsity AND intent that it be taken as a genuine governmental record. The apparent-government-record intent is required in addition to knowledge of falsity. An ordinary governmental record within §37.01(2)(A) or (B), with intent to defraud or harm another. That additional intent must be established; it does not follow automatically from a false statement. This excludes all special record types in (c)(2)–(6) and (d). This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions. Under (j), a disclaimer such as “NOT A GOVERNMENT DOCUMENT” is not a defense unless it is diagonally printed clearly and indelibly on BOTH front and back in solid red capital letters at least one-quarter inch high. That statutory qualification is not a general promise that a labeled false document is lawful.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed. The disclaimer-format rule in (j) was added effective September 1, 2009; it is not backdated to earlier conduct.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990623"
+  },
+  {
+    "id": "tx-pc-37-10-fabricate-present-use-issued-document",
+    "name": "Tampering with governmental record (fabricate present use; issued document)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(2)",
+    "citation": "Tex. Penal Code § 37.10(a)(2)",
+    "conduct": "Making, presenting or using any record, document or thing with knowledge of its falsity AND intent that it be taken as a genuine governmental record. The apparent-government-record intent is required in addition to knowledge of falsity. A license, certificate, permit, seal, title, letter of patent or similar document issued by government, another state or the United States, with no intent to defraud or harm another. This scope does not include the school/PEIMS portion of (c)(2)(A), foreign-government documents or other special record predicates. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions. Under (j), a disclaimer such as “NOT A GOVERNMENT DOCUMENT” is not a defense unless it is diagonally printed clearly and indelibly on BOTH front and back in solid red capital letters at least one-quarter inch high. That statutory qualification is not a general promise that a labeled false document is lawful. Subsection (g) creates a presumption concerning intent to defraud or harm for two or more of the same type of specified government-issued records or blank forms. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt, the jury may but is not bound to infer the intent, and the State must still prove the other elements; it is not automatic guilt.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed. The disclaimer-format rule in (j) was added effective September 1, 2009; it is not backdated to earlier conduct.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-fabricate-present-use-issued-document-harm",
+    "name": "Tampering with governmental record (fabricate present use; issued document harm)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(2)",
+    "citation": "Tex. Penal Code § 37.10(a)(2)",
+    "conduct": "Making, presenting or using any record, document or thing with knowledge of its falsity AND intent that it be taken as a genuine governmental record. The apparent-government-record intent is required in addition to knowledge of falsity. A license, certificate, permit, seal, title, letter of patent or similar document issued by government, another state or the United States, with intent to defraud or harm another. This scope does not include the school/PEIMS portion of (c)(2)(A), foreign-government documents or other special record predicates. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions. Under (j), a disclaimer such as “NOT A GOVERNMENT DOCUMENT” is not a defense unless it is diagonally printed clearly and indelibly on BOTH front and back in solid red capital letters at least one-quarter inch high. That statutory qualification is not a general promise that a labeled false document is lawful. Subsection (g) creates a presumption concerning intent to defraud or harm for two or more of the same type of specified government-issued records or blank forms. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt, the jury may but is not bound to infer the intent, and the State must still prove the other elements; it is not automatic guilt.",
+    "penalty": "Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed. The disclaimer-format rule in (j) was added effective September 1, 2009; it is not backdated to earlier conduct.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-fabricate-present-use-expert-report",
+    "name": "Tampering with governmental record (fabricate present use; expert report)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(2)",
+    "citation": "Tex. Penal Code § 37.10(a)(2)",
+    "conduct": "Making, presenting or using any record, document or thing with knowledge of its falsity AND intent that it be taken as a genuine governmental record. The apparent-government-record intent is required in addition to knowledge of falsity. A written report of a medical, chemical, toxicological, ballistic or other expert examination or test performed on physical evidence to determine its connection or relevance to a criminal action. A general medical record or unrelated laboratory result is not enough. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions. Under (j), a disclaimer such as “NOT A GOVERNMENT DOCUMENT” is not a defense unless it is diagonally printed clearly and indelibly on BOTH front and back in solid red capital letters at least one-quarter inch high. That statutory qualification is not a general promise that a labeled false document is lawful.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific forensic-report/device-report third-degree provisions were added effective September 1, 2009 by H.B. 1813. They do not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed. The disclaimer-format rule in (j) was added effective September 1, 2009; it is not backdated to earlier conduct.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-fabricate-present-use-testing-device-report",
+    "name": "Tampering with governmental record (fabricate present use; testing device report)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(2)",
+    "citation": "Tex. Penal Code § 37.10(a)(2)",
+    "conduct": "Making, presenting or using any record, document or thing with knowledge of its falsity AND intent that it be taken as a genuine governmental record. The apparent-government-record intent is required in addition to knowledge of falsity. A written report of certification, inspection or maintenance of an instrument, apparatus, implement, machine or similar device used in an examination or test of physical evidence to determine its connection or relevance to a criminal action. This is not every equipment or maintenance record. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions. Under (j), a disclaimer such as “NOT A GOVERNMENT DOCUMENT” is not a defense unless it is diagonally printed clearly and indelibly on BOTH front and back in solid red capital letters at least one-quarter inch high. That statutory qualification is not a general promise that a labeled false document is lawful.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific forensic-report/device-report third-degree provisions were added effective September 1, 2009 by H.B. 1813. They do not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed. The disclaimer-format rule in (j) was added effective September 1, 2009; it is not backdated to earlier conduct.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-fabricate-present-use-search-warrant",
+    "name": "Tampering with governmental record (fabricate present use; search warrant)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(2)",
+    "citation": "Tex. Penal Code § 37.10(a)(2)",
+    "conduct": "Making, presenting or using any record, document or thing with knowledge of its falsity AND intent that it be taken as a genuine governmental record. The apparent-government-record intent is required in addition to knowledge of falsity. A search warrant issued by a magistrate. An application, affidavit, arrest warrant or other court paper is not automatically this search-warrant predicate. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions. Under (j), a disclaimer such as “NOT A GOVERNMENT DOCUMENT” is not a defense unless it is diagonally printed clearly and indelibly on BOTH front and back in solid red capital letters at least one-quarter inch high. That statutory qualification is not a general promise that a labeled false document is lawful.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific search-warrant third-degree provision was added effective September 1, 2015 by H.B. 644. It does not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed. The disclaimer-format rule in (j) was added effective September 1, 2009; it is not backdated to earlier conduct.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(D)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-destroy-conceal-impair-ordinary",
+    "name": "Tampering with governmental record (destroy conceal impair; ordinary)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "misdemeanor",
+    "code": "37.10(a)(3)",
+    "citation": "Tex. Penal Code § 37.10(a)(3)",
+    "conduct": "Intentionally destroying, concealing, removing or otherwise impairing the verity, legibility or availability of a governmental record. Mere careless handling is not the stated intentional conduct. An ordinary governmental record within §37.01(2)(A) or (B), with no intent to defraud or harm another. This excludes all special record types in (c)(2)–(6) and (d). This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Subsection (b) excepts destruction pursuant to legal authorization and the specific §441.204 transfer of lieutenant-governor records. For local records, legal authorization includes the applicable Local Government Code retention/destruction rules; known litigation or a pending public-records request can prohibit destruction despite an otherwise expired retention period. An ordinary office instruction alone does not establish legal authorization.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "441.204",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "201.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990623"
+  },
+  {
+    "id": "tx-pc-37-10-destroy-conceal-impair-ordinary-harm",
+    "name": "Tampering with governmental record (destroy conceal impair; ordinary harm)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(3)",
+    "citation": "Tex. Penal Code § 37.10(a)(3)",
+    "conduct": "Intentionally destroying, concealing, removing or otherwise impairing the verity, legibility or availability of a governmental record. Mere careless handling is not the stated intentional conduct. An ordinary governmental record within §37.01(2)(A) or (B), with intent to defraud or harm another. That additional intent must be established; it does not follow automatically from a false statement. This excludes all special record types in (c)(2)–(6) and (d). This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Subsection (b) excepts destruction pursuant to legal authorization and the specific §441.204 transfer of lieutenant-governor records. For local records, legal authorization includes the applicable Local Government Code retention/destruction rules; known litigation or a pending public-records request can prohibit destruction despite an otherwise expired retention period. An ordinary office instruction alone does not establish legal authorization.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "441.204",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "201.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990623"
+  },
+  {
+    "id": "tx-pc-37-10-destroy-conceal-impair-issued-document",
+    "name": "Tampering with governmental record (destroy conceal impair; issued document)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(3)",
+    "citation": "Tex. Penal Code § 37.10(a)(3)",
+    "conduct": "Intentionally destroying, concealing, removing or otherwise impairing the verity, legibility or availability of a governmental record. Mere careless handling is not the stated intentional conduct. A license, certificate, permit, seal, title, letter of patent or similar document issued by government, another state or the United States, with no intent to defraud or harm another. This scope does not include the school/PEIMS portion of (c)(2)(A), foreign-government documents or other special record predicates. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Subsection (b) excepts destruction pursuant to legal authorization and the specific §441.204 transfer of lieutenant-governor records. For local records, legal authorization includes the applicable Local Government Code retention/destruction rules; known litigation or a pending public-records request can prohibit destruction despite an otherwise expired retention period. An ordinary office instruction alone does not establish legal authorization. Subsection (g) creates a presumption concerning intent to defraud or harm for two or more of the same type of specified government-issued records or blank forms. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt, the jury may but is not bound to infer the intent, and the State must still prove the other elements; it is not automatic guilt.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "441.204",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "201.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-destroy-conceal-impair-issued-document-harm",
+    "name": "Tampering with governmental record (destroy conceal impair; issued document harm)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(3)",
+    "citation": "Tex. Penal Code § 37.10(a)(3)",
+    "conduct": "Intentionally destroying, concealing, removing or otherwise impairing the verity, legibility or availability of a governmental record. Mere careless handling is not the stated intentional conduct. A license, certificate, permit, seal, title, letter of patent or similar document issued by government, another state or the United States, with intent to defraud or harm another. This scope does not include the school/PEIMS portion of (c)(2)(A), foreign-government documents or other special record predicates. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Subsection (b) excepts destruction pursuant to legal authorization and the specific §441.204 transfer of lieutenant-governor records. For local records, legal authorization includes the applicable Local Government Code retention/destruction rules; known litigation or a pending public-records request can prohibit destruction despite an otherwise expired retention period. An ordinary office instruction alone does not establish legal authorization. Subsection (g) creates a presumption concerning intent to defraud or harm for two or more of the same type of specified government-issued records or blank forms. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt, the jury may but is not bound to infer the intent, and the State must still prove the other elements; it is not automatic guilt.",
+    "penalty": "Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "441.204",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "201.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-destroy-conceal-impair-expert-report",
+    "name": "Tampering with governmental record (destroy conceal impair; expert report)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(3)",
+    "citation": "Tex. Penal Code § 37.10(a)(3)",
+    "conduct": "Intentionally destroying, concealing, removing or otherwise impairing the verity, legibility or availability of a governmental record. Mere careless handling is not the stated intentional conduct. A written report of a medical, chemical, toxicological, ballistic or other expert examination or test performed on physical evidence to determine its connection or relevance to a criminal action. A general medical record or unrelated laboratory result is not enough. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Subsection (b) excepts destruction pursuant to legal authorization and the specific §441.204 transfer of lieutenant-governor records. For local records, legal authorization includes the applicable Local Government Code retention/destruction rules; known litigation or a pending public-records request can prohibit destruction despite an otherwise expired retention period. An ordinary office instruction alone does not establish legal authorization.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific forensic-report/device-report third-degree provisions were added effective September 1, 2009 by H.B. 1813. They do not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "441.204",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "201.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-destroy-conceal-impair-testing-device-report",
+    "name": "Tampering with governmental record (destroy conceal impair; testing device report)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(3)",
+    "citation": "Tex. Penal Code § 37.10(a)(3)",
+    "conduct": "Intentionally destroying, concealing, removing or otherwise impairing the verity, legibility or availability of a governmental record. Mere careless handling is not the stated intentional conduct. A written report of certification, inspection or maintenance of an instrument, apparatus, implement, machine or similar device used in an examination or test of physical evidence to determine its connection or relevance to a criminal action. This is not every equipment or maintenance record. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Subsection (b) excepts destruction pursuant to legal authorization and the specific §441.204 transfer of lieutenant-governor records. For local records, legal authorization includes the applicable Local Government Code retention/destruction rules; known litigation or a pending public-records request can prohibit destruction despite an otherwise expired retention period. An ordinary office instruction alone does not establish legal authorization.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific forensic-report/device-report third-degree provisions were added effective September 1, 2009 by H.B. 1813. They do not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "441.204",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "201.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-destroy-conceal-impair-search-warrant",
+    "name": "Tampering with governmental record (destroy conceal impair; search warrant)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(3)",
+    "citation": "Tex. Penal Code § 37.10(a)(3)",
+    "conduct": "Intentionally destroying, concealing, removing or otherwise impairing the verity, legibility or availability of a governmental record. Mere careless handling is not the stated intentional conduct. A search warrant issued by a magistrate. An application, affidavit, arrest warrant or other court paper is not automatically this search-warrant predicate. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Subsection (b) excepts destruction pursuant to legal authorization and the specific §441.204 transfer of lieutenant-governor records. For local records, legal authorization includes the applicable Local Government Code retention/destruction rules; known litigation or a pending public-records request can prohibit destruction despite an otherwise expired retention period. An ordinary office instruction alone does not establish legal authorization.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific search-warrant third-degree provision was added effective September 1, 2015 by H.B. 644. It does not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(D)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "GV",
+        "section": "441.204",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "201.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.002",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "LG",
+        "section": "202.003",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawful-use-ordinary",
+    "name": "Tampering with governmental record (possess sell unlawful use; ordinary)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "misdemeanor",
+    "code": "37.10(a)(4)",
+    "citation": "Tex. Penal Code § 37.10(a)(4)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with intent that it be used unlawfully. Mere possession without the required unlawful-use intent is insufficient. An ordinary governmental record within §37.01(2)(A) or (B), with no intent to defraud or harm another. This excludes all special record types in (c)(2)–(6) and (d). This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990623"
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawful-use-ordinary-harm",
+    "name": "Tampering with governmental record (possess sell unlawful use; ordinary harm)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(4)",
+    "citation": "Tex. Penal Code § 37.10(a)(4)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with intent that it be used unlawfully. Mere possession without the required unlawful-use intent is insufficient. An ordinary governmental record within §37.01(2)(A) or (B), with intent to defraud or harm another. That additional intent must be established; it does not follow automatically from a false statement. This excludes all special record types in (c)(2)–(6) and (d). This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990623"
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawful-use-issued-document",
+    "name": "Tampering with governmental record (possess sell unlawful use; issued document)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(4)",
+    "citation": "Tex. Penal Code § 37.10(a)(4)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with intent that it be used unlawfully. Mere possession without the required unlawful-use intent is insufficient. A license, certificate, permit, seal, title, letter of patent or similar document issued by government, another state or the United States, with no intent to defraud or harm another. This scope does not include the school/PEIMS portion of (c)(2)(A), foreign-government documents or other special record predicates. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. A blank form alone does not establish this special record type; the specified record-type condition must also be proven. Subsection (g) creates a presumption concerning intent to defraud or harm for two or more of the same type of specified government-issued records or blank forms. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt, the jury may but is not bound to infer the intent, and the State must still prove the other elements; it is not automatic guilt.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawful-use-issued-document-harm",
+    "name": "Tampering with governmental record (possess sell unlawful use; issued document harm)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(4)",
+    "citation": "Tex. Penal Code § 37.10(a)(4)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with intent that it be used unlawfully. Mere possession without the required unlawful-use intent is insufficient. A license, certificate, permit, seal, title, letter of patent or similar document issued by government, another state or the United States, with intent to defraud or harm another. This scope does not include the school/PEIMS portion of (c)(2)(A), foreign-government documents or other special record predicates. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. A blank form alone does not establish this special record type; the specified record-type condition must also be proven. Subsection (g) creates a presumption concerning intent to defraud or harm for two or more of the same type of specified government-issued records or blank forms. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt, the jury may but is not bound to infer the intent, and the State must still prove the other elements; it is not automatic guilt.",
+    "penalty": "Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawful-use-expert-report",
+    "name": "Tampering with governmental record (possess sell unlawful use; expert report)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(4)",
+    "citation": "Tex. Penal Code § 37.10(a)(4)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with intent that it be used unlawfully. Mere possession without the required unlawful-use intent is insufficient. A written report of a medical, chemical, toxicological, ballistic or other expert examination or test performed on physical evidence to determine its connection or relevance to a criminal action. A general medical record or unrelated laboratory result is not enough. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. A blank form alone does not establish this special record type; the specified record-type condition must also be proven.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific forensic-report/device-report third-degree provisions were added effective September 1, 2009 by H.B. 1813. They do not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawful-use-testing-device-report",
+    "name": "Tampering with governmental record (possess sell unlawful use; testing device report)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(4)",
+    "citation": "Tex. Penal Code § 37.10(a)(4)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with intent that it be used unlawfully. Mere possession without the required unlawful-use intent is insufficient. A written report of certification, inspection or maintenance of an instrument, apparatus, implement, machine or similar device used in an examination or test of physical evidence to determine its connection or relevance to a criminal action. This is not every equipment or maintenance record. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. A blank form alone does not establish this special record type; the specified record-type condition must also be proven.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific forensic-report/device-report third-degree provisions were added effective September 1, 2009 by H.B. 1813. They do not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawful-use-search-warrant",
+    "name": "Tampering with governmental record (possess sell unlawful use; search warrant)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(4)",
+    "citation": "Tex. Penal Code § 37.10(a)(4)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with intent that it be used unlawfully. Mere possession without the required unlawful-use intent is insufficient. A search warrant issued by a magistrate. An application, affidavit, arrest warrant or other court paper is not automatically this search-warrant predicate. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. A blank form alone does not establish this special record type; the specified record-type condition must also be proven.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific search-warrant third-degree provision was added effective September 1, 2015 by H.B. 644. It does not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(D)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-make-present-use-false-ordinary",
+    "name": "Tampering with governmental record (make present use false; ordinary)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "misdemeanor",
+    "code": "37.10(a)(5)",
+    "citation": "Tex. Penal Code § 37.10(a)(5)",
+    "conduct": "Making, presenting or using a governmental record with knowledge of its falsity. Unlike (a)(2), this subdivision does not itself add an intent that it be taken as genuine. An ordinary governmental record within §37.01(2)(A) or (B), with no intent to defraud or harm another. This excludes all special record types in (c)(2)–(6) and (d). This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990623"
+  },
+  {
+    "id": "tx-pc-37-10-make-present-use-false-ordinary-harm",
+    "name": "Tampering with governmental record (make present use false; ordinary harm)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(5)",
+    "citation": "Tex. Penal Code § 37.10(a)(5)",
+    "conduct": "Making, presenting or using a governmental record with knowledge of its falsity. Unlike (a)(2), this subdivision does not itself add an intent that it be taken as genuine. An ordinary governmental record within §37.01(2)(A) or (B), with intent to defraud or harm another. That additional intent must be established; it does not follow automatically from a false statement. This excludes all special record types in (c)(2)–(6) and (d). This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990623"
+  },
+  {
+    "id": "tx-pc-37-10-make-present-use-false-issued-document",
+    "name": "Tampering with governmental record (make present use false; issued document)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(5)",
+    "citation": "Tex. Penal Code § 37.10(a)(5)",
+    "conduct": "Making, presenting or using a governmental record with knowledge of its falsity. Unlike (a)(2), this subdivision does not itself add an intent that it be taken as genuine. A license, certificate, permit, seal, title, letter of patent or similar document issued by government, another state or the United States, with no intent to defraud or harm another. This scope does not include the school/PEIMS portion of (c)(2)(A), foreign-government documents or other special record predicates. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions. Subsection (g) creates a presumption concerning intent to defraud or harm for two or more of the same type of specified government-issued records or blank forms. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt, the jury may but is not bound to infer the intent, and the State must still prove the other elements; it is not automatic guilt.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-make-present-use-false-issued-document-harm",
+    "name": "Tampering with governmental record (make present use false; issued document harm)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(5)",
+    "citation": "Tex. Penal Code § 37.10(a)(5)",
+    "conduct": "Making, presenting or using a governmental record with knowledge of its falsity. Unlike (a)(2), this subdivision does not itself add an intent that it be taken as genuine. A license, certificate, permit, seal, title, letter of patent or similar document issued by government, another state or the United States, with intent to defraud or harm another. This scope does not include the school/PEIMS portion of (c)(2)(A), foreign-government documents or other special record predicates. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions. Subsection (g) creates a presumption concerning intent to defraud or harm for two or more of the same type of specified government-issued records or blank forms. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt, the jury may but is not bound to infer the intent, and the State must still prove the other elements; it is not automatic guilt.",
+    "penalty": "Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-make-present-use-false-expert-report",
+    "name": "Tampering with governmental record (make present use false; expert report)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(5)",
+    "citation": "Tex. Penal Code § 37.10(a)(5)",
+    "conduct": "Making, presenting or using a governmental record with knowledge of its falsity. Unlike (a)(2), this subdivision does not itself add an intent that it be taken as genuine. A written report of a medical, chemical, toxicological, ballistic or other expert examination or test performed on physical evidence to determine its connection or relevance to a criminal action. A general medical record or unrelated laboratory result is not enough. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific forensic-report/device-report third-degree provisions were added effective September 1, 2009 by H.B. 1813. They do not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-make-present-use-false-testing-device-report",
+    "name": "Tampering with governmental record (make present use false; testing device report)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(5)",
+    "citation": "Tex. Penal Code § 37.10(a)(5)",
+    "conduct": "Making, presenting or using a governmental record with knowledge of its falsity. Unlike (a)(2), this subdivision does not itself add an intent that it be taken as genuine. A written report of certification, inspection or maintenance of an instrument, apparatus, implement, machine or similar device used in an examination or test of physical evidence to determine its connection or relevance to a criminal action. This is not every equipment or maintenance record. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific forensic-report/device-report third-degree provisions were added effective September 1, 2009 by H.B. 1813. They do not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-make-present-use-false-search-warrant",
+    "name": "Tampering with governmental record (make present use false; search warrant)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(5)",
+    "citation": "Tex. Penal Code § 37.10(a)(5)",
+    "conduct": "Making, presenting or using a governmental record with knowledge of its falsity. Unlike (a)(2), this subdivision does not itself add an intent that it be taken as genuine. A search warrant issued by a magistrate. An application, affidavit, arrest warrant or other court paper is not automatically this search-warrant predicate. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. It is a defense under (f) that the false entry or information could have no effect on the government’s purpose for requiring the record; this defense is not automatically extended to the other conduct subdivisions.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific search-warrant third-degree provision was added effective September 1, 2015 by H.B. 644. It does not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(D)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawfully-obtained-ordinary",
+    "name": "Tampering with governmental record (possess sell unlawfully obtained; ordinary)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "misdemeanor",
+    "code": "37.10(a)(6)",
+    "citation": "Tex. Penal Code § 37.10(a)(6)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with knowledge that it was obtained unlawfully. This knowledge requirement is distinct from (a)(4)’s intent that it be used unlawfully. An ordinary governmental record within §37.01(2)(A) or (B), with no intent to defraud or harm another. This excludes all special record types in (c)(2)–(6) and (d). This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Actual discharge of official duties as a public servant is an affirmative defense to possession under (a)(6); the text does not extend this defense to selling or offering to sell.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990623"
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawfully-obtained-ordinary-harm",
+    "name": "Tampering with governmental record (possess sell unlawfully obtained; ordinary harm)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(6)",
+    "citation": "Tex. Penal Code § 37.10(a)(6)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with knowledge that it was obtained unlawfully. This knowledge requirement is distinct from (a)(4)’s intent that it be used unlawfully. An ordinary governmental record within §37.01(2)(A) or (B), with intent to defraud or harm another. That additional intent must be established; it does not follow automatically from a false statement. This excludes all special record types in (c)(2)–(6) and (d). This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Actual discharge of official duties as a public servant is an affirmative defense to possession under (a)(6); the text does not extend this defense to selling or offering to sell.",
+    "penalty": "State jail felony: ordinarily 180 days to two years in state jail and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.35",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.425",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "73990623"
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawfully-obtained-issued-document",
+    "name": "Tampering with governmental record (possess sell unlawfully obtained; issued document)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(6)",
+    "citation": "Tex. Penal Code § 37.10(a)(6)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with knowledge that it was obtained unlawfully. This knowledge requirement is distinct from (a)(4)’s intent that it be used unlawfully. A license, certificate, permit, seal, title, letter of patent or similar document issued by government, another state or the United States, with no intent to defraud or harm another. This scope does not include the school/PEIMS portion of (c)(2)(A), foreign-government documents or other special record predicates. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Actual discharge of official duties as a public servant is an affirmative defense to possession under (a)(6); the text does not extend this defense to selling or offering to sell. A blank form alone does not establish this special record type; the specified record-type condition must also be proven. Subsection (g) creates a presumption concerning intent to defraud or harm for two or more of the same type of specified government-issued records or blank forms. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt, the jury may but is not bound to infer the intent, and the State must still prove the other elements; it is not automatic guilt.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawfully-obtained-issued-document-harm",
+    "name": "Tampering with governmental record (possess sell unlawfully obtained; issued document harm)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(6)",
+    "citation": "Tex. Penal Code § 37.10(a)(6)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with knowledge that it was obtained unlawfully. This knowledge requirement is distinct from (a)(4)’s intent that it be used unlawfully. A license, certificate, permit, seal, title, letter of patent or similar document issued by government, another state or the United States, with intent to defraud or harm another. This scope does not include the school/PEIMS portion of (c)(2)(A), foreign-government documents or other special record predicates. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Actual discharge of official duties as a public servant is an affirmative defense to possession under (a)(6); the text does not extend this defense to selling or offering to sell. A blank form alone does not establish this special record type; the specified record-type condition must also be proven. Subsection (g) creates a presumption concerning intent to defraud or harm for two or more of the same type of specified government-issued records or blank forms. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt, the jury may but is not bound to infer the intent, and the State must still prove the other elements; it is not automatic guilt.",
+    "penalty": "Second-degree felony: ordinarily two to twenty years in prison and a possible fine up to $10,000. The ordinary Class A/state-jail and issued-document third-/second-degree distinction predates the latest 2023 amendment; a current section-version date is not the first effective date of each grade. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(A)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.33",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawfully-obtained-expert-report",
+    "name": "Tampering with governmental record (possess sell unlawfully obtained; expert report)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(6)",
+    "citation": "Tex. Penal Code § 37.10(a)(6)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with knowledge that it was obtained unlawfully. This knowledge requirement is distinct from (a)(4)’s intent that it be used unlawfully. A written report of a medical, chemical, toxicological, ballistic or other expert examination or test performed on physical evidence to determine its connection or relevance to a criminal action. A general medical record or unrelated laboratory result is not enough. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Actual discharge of official duties as a public servant is an affirmative defense to possession under (a)(6); the text does not extend this defense to selling or offering to sell. A blank form alone does not establish this special record type; the specified record-type condition must also be proven.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific forensic-report/device-report third-degree provisions were added effective September 1, 2009 by H.B. 1813. They do not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(B)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawfully-obtained-testing-device-report",
+    "name": "Tampering with governmental record (possess sell unlawfully obtained; testing device report)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(6)",
+    "citation": "Tex. Penal Code § 37.10(a)(6)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with knowledge that it was obtained unlawfully. This knowledge requirement is distinct from (a)(4)’s intent that it be used unlawfully. A written report of certification, inspection or maintenance of an instrument, apparatus, implement, machine or similar device used in an examination or test of physical evidence to determine its connection or relevance to a criminal action. This is not every equipment or maintenance record. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Actual discharge of official duties as a public servant is an affirmative defense to possession under (a)(6); the text does not extend this defense to selling or offering to sell. A blank form alone does not establish this special record type; the specified record-type condition must also be proven.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific forensic-report/device-report third-degree provisions were added effective September 1, 2009 by H.B. 1813. They do not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(C)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-37-10-possess-sell-unlawfully-obtained-search-warrant",
+    "name": "Tampering with governmental record (possess sell unlawfully obtained; search warrant)",
+    "officialTitle": "TAMPERING WITH GOVERNMENTAL RECORD.",
+    "category": "felony",
+    "code": "37.10(a)(6)",
+    "citation": "Tex. Penal Code § 37.10(a)(6)",
+    "conduct": "Possessing, selling or offering to sell a governmental record or blank governmental record form with knowledge that it was obtained unlawfully. This knowledge requirement is distinct from (a)(4)’s intent that it be used unlawfully. A search warrant issued by a magistrate. An application, affidavit, arrest warrant or other court paper is not automatically this search-warrant predicate. This choice excludes the special school/PEIMS records, student-residency enrollment records, contingency-interest appraisal, specified ballot-application information, temporary tags and motor-vehicle financial-responsibility records in §37.10(c)(2)(A), (c)(3)–(6) and (d), except for the expressly described issued-document portion of (c)(2)(A) when selected. A record combining multiple special predicates requires separate grading analysis. Actual discharge of official duties as a public servant is an affirmative defense to possession under (a)(6); the text does not extend this defense to selling or offering to sell. A blank form alone does not establish this special record type; the specified record-type condition must also be proven.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. The specific search-warrant third-degree provision was added effective September 1, 2015 by H.B. 644. It does not inherit (c)(2)(A)’s second-degree clause merely because there is intent to defraud or harm. This choice excludes a record also qualifying under (c)(2)(A); mixed special-record predicates require separate analysis. Earlier conduct requires the applicable historical law; where the retained enactment uses an any-element transition, an element before its effective date invokes the earlier law. Other repeat-offender or sentencing findings require separate analysis and are not presumed.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(c)(2)(D)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "37.10",
+        "subdivision": "(j)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]

@@ -1,3 +1,5 @@
+import recordsBailRows from "../../../shared/texas-records-bail.json";
+import recordsBailEvidence from "../output/texas-records-bail-evidence.json";
 import peaceRows from "../../../shared/texas-public-peace.json";
 import peaceEvidence from "../output/texas-public-peace-evidence.json";
 import commerceRows from "../../../shared/texas-sexual-commerce.json";
@@ -72,6 +74,7 @@ import protectedAssaultRows from "../../../shared/texas-protected-assault.json";
 import protectedAssaultEvidence from "../output/texas-protected-assault-evidence.json";
 
 const batches = new Map([
+  ["records-bail", { rows: recordsBailRows, evidence: Object.entries(recordsBailEvidence) }],
   ["public-peace", { rows: peaceRows, evidence: Object.entries(peaceEvidence) }],
   ["sexual-commerce", { rows: commerceRows, evidence: Object.entries(commerceEvidence) }],
   ["indecent-contact", { rows: contactRows, evidence: Object.entries(contactEvidence) }],
