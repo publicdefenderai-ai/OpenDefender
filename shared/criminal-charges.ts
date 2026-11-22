@@ -40453,7 +40453,7 @@ export const criminalCharges: CriminalCharge[] = [
   ...texasReviewedRecords.map((row): CriminalCharge => ({
     id: row.id, name: row.name, code: row.code, jurisdiction: "TX", category: row.category === "felony" ? "felony" : "misdemeanor",
     description: row.conduct, maxPenalty: row.penalty,
-    searchAliases: [row.citation, row.dpsCode, ...(row.officialTitle === "DRIVING WHILE INTOXICATED." ? [`DWI ${row.code}`] : [])].filter(Boolean),
+    searchAliases: [row.citation, "dpsCode" in row && typeof row.dpsCode === "string" ? row.dpsCode : undefined, ...(row.officialTitle === "DRIVING WHILE INTOXICATED." ? [`DWI ${row.code}`] : [])].filter((alias): alias is string => typeof alias === "string" && alias.length > 0),
     commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: [],
   })),
   {

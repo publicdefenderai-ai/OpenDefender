@@ -64,6 +64,8 @@ it("rebuilds exact records, rejects changed/missing evidence, and preserves save
   const generatedAt=new Date(Math.max(...Object.values(evidence).map(doc=>Date.parse(doc.retrievedAt))));
   for (const r of rows) {
     const charge=getChargeById(r.id)!;
+    expect(charge.searchAliases).toContain(r.citation);
+    expect(charge.searchAliases?.every(alias=>typeof alias==="string"&&alias.length>0)).toBe(true);
     const docs=r.references.map(ref=>{
       const d=sources.get(ref.code+":"+ref.section)!;
       expect(d.textSha256).toBe(createHash("sha256").update(d.text).digest("hex"));
