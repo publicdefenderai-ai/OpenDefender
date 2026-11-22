@@ -242,8 +242,18 @@ test("Texas public-peace choices keep branch grades and retire generic disorderl
 
 test("Texas records and bail branches remain complete beyond the first 500 catalog choices", async ({ request }) => {
   const charges = await allTexasCharges(request);
-  expect(charges).toHaveLength(518);
+  expect(charges).toHaveLength(537);
   const batch = JSON.parse(readFileSync("shared/texas-records-bail.json", "utf8"));
   for (const row of batch) expect(charges.find(c => c.id === row.id)).toMatchObject({name:row.name,code:row.code,description:row.conduct,maxPenalty:row.penalty,category:row.category});
   for (const id of ["tx-failure-to-appear", "tx-false-info-to-police"]) expect(charges.some(c => c.id === id)).toBe(false);
+});
+
+
+test("Texas deadly-conduct and fluid-contact branches retain distinct predicates", async ({request}) => {
+ const charges=await allTexasCharges(request);const rows=JSON.parse(readFileSync("shared/texas-deadly-fluid.json","utf8"));
+ for(const row of rows)expect(charges.find(c=>c.id===row.id)).toMatchObject({id:row.id,name:row.name,code:row.code,category:row.category,description:row.conduct,maxPenalty:row.penalty});
+ expect(charges.find(c=>c.id==="tx-pc-22-05-reckless-danger").maxPenalty).toMatch(/^Class A/);
+ expect(charges.find(c=>c.id==="tx-pc-22-05-discharge-vehicle").description).toContain("reckless as to whether it is occupied");
+ expect(charges.find(c=>c.id==="tx-pc-22-11-public-duty-other-liquid").maxPenalty).toContain("not backdated");
+ expect(charges.find(c=>c.id==="tx-pc-22-11-tcco-retaliation-listed").description).toContain("applicable duty or retaliation nexus");
 });

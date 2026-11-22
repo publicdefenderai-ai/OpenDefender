@@ -1,3 +1,4 @@
+import deadlyFluid from "./texas-deadly-fluid.json";
 import recordsBail from "./texas-records-bail.json";
 import publicPeace from "./texas-public-peace.json";
 import commerce from "./texas-sexual-commerce.json";
@@ -38,6 +39,7 @@ export function texasReviewedCitation(ref: { code: string; section: string; subd
 }
 
 export const texasReviewedRecords = [
+  ...deadlyFluid,
   ...recordsBail,
   ...publicPeace,
   ...texasDwiRecords.map(row => ({
