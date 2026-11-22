@@ -768,11 +768,11 @@ The former emergency contact cards are a deliberate content-preservation excepti
 
 A pre-change rendered fixture preserves 50 text fragments per locale plus the existing USCIS destination. The release-listed browser spec checks those fragments, both removed numbers, replacement destinations, five keyboard section jumps, one main landmark, illustration loading, the Chinese language marker, print visibility and 1280px/320px bounds across three languages and both themes. Typecheck, production build, 27 design-locale checks and six browser cases passed. Desktop/light and mobile/dark screenshots were visually inspected. No full-suite, production deployment, or legal-approval claim.
 
-### Remaining implementation inventory (November 20, 2026)
+### Remaining implementation inventory (November 22, 2026)
 
-- Awaiting review: Raids Preparedness Toolkit, PR 276. Workplace Raids is this batch.
-- Remaining immigration pages: DACA/TPS and After Deportation.
-- Remaining page-specific professional designs: attorney access/verification, workspace, document catalog, playbook catalog/detail and document wizard. Existing shared styling is not counted as a completed page-specific refresh.
+- Awaiting review: Raids Preparedness Toolkit, PR 276. Workplace Raids (282), DACA/TPS (287) and After Deportation (288) are merged.
+- Attorney access/verification is prepared in this review batch; the production attorney gate remains unchanged.
+- Remaining page-specific professional designs after attorney access: workspace, document catalog, playbook catalog/detail and document wizard. Existing shared styling is not counted as a completed page-specific refresh.
 - Remaining developer tools: API reference, embeddable widgets and browser extensions. The Developer landing/reference page has already been refreshed.
 - Final design closeout: audit mobile navigation, light/dark appearance, keyboard paths, print surfaces and remaining empty/loading/error states across the completed routes. The How To screenshot replacement has landed. A further visual-variety pass remains a separate, deferred improvement.
 
@@ -786,7 +786,7 @@ The published translation keys and immigration-updates copy remain unchanged, in
 
 A pre-change rendered fixture captures 35 text fragments per language and all existing article links. The release-listed browser spec checks all fragments, visible qualifications, the six eligibility items and four framework items, three TPS benefits, three expiration topics, the full heading text, four keyboard jumps, one main landmark, translated resource labels, desktop/320px bounds and print visibility in all three languages and both themes. The six new cases and seven existing immigration-content cases passed (13 total). Desktop/light and mobile/dark screenshots were visually inspected. Typecheck, build and locale-parity results are recorded in the PR. No full-suite, deployment or legal-review-completion claim.
 
-Next page-specific immigration batch: After Deportation. Workplace Raids (PR 282) and DACA/TPS (PR 287) are merged. Raids Toolkit has a separate review PR.
+After Deportation (PR 288) is now merged. Raids Toolkit has a separate review PR.
 
 ### After Deportation
 
@@ -797,3 +797,14 @@ Native FAQ disclosures support keyboard operation. Before printing, closed answe
 A pre-change rendered fixture captures 71 fragments, 11 link destinations and all seven FAQ answers per language. The new release-listed spec checks preservation, all legacy anchors, direct legal-next navigation, keyboard section links, disclosure operation, print/restore behavior, image loading, single-main structure, new-tab cues and desktop/320px bounds across three languages and both themes. The DACA/TPS spec also checks its restored translated new-tab cues. Desktop/light and Chinese mobile/dark renders were visually inspected.
 
 PR 287 follow-ups: the outdated Workplace Raids inventory line is corrected; all four page-owned USCIS links now include translated screen-reader new-tab labels. A separate content pass remains for the dated DACA/TPS policy statements and status-lapse heading. No policy text is changed here.
+
+
+### Attorney access and verification (review batch)
+
+Reference: attorney-access-content.html, SHA-256 `2ecf463b220598beefdf94fd810853ac12fd6114257c8befcce33c455fa1ba9d`. The restrained reading/form column, separated attestation rows, plum privacy notice and solid submission action follow the approved professional-page direction. Published wording remains in place instead of substituting the preview's simplified text. The header, footer, disclaimer destination and back destination remain.
+
+The production attorney-config gate is unchanged. The browser tests enable access only through mocked responses. The three checkbox attestations, validation rules, exact verification request, pending/error/retry handling and verified-session redirect remain. No bar-number field, persistent storage or new endpoint is introduced. Connecting each existing checkbox to its form ref fixes keyboard focus on the first invalid attestation. Page styles are scoped to attorney access; the shared form's other consumers do not receive the new presentation.
+
+A pre-change trilingual fixture preserves the rendered text. The release-listed browser spec covers six language/theme cases at desktop and 320px, keyboard selection, invalid submission, request payload, failed submission and retry, plus disabled access, existing verified sessions and pending submission (nine cases total). All nine passed; the attorney gate unit tests passed 5/5. Desktop/light and Chinese mobile/dark screenshots were inspected. Typecheck and production build results are recorded in the PR. No full-suite or production activation claim.
+
+Content follow-up: the existing subtitle and form description are English-only, and the description refers to entering bar information even though this form contains attestations only. The existing mixed-language disclosure prefix and English validation messages also remain. Preserving this copy does not certify bar-membership verification or attorney-client privilege. These wording and translation issues should be resolved separately before enabling the portal.
