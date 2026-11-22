@@ -2,7 +2,7 @@
 
 ## Scope and integration
 
-48 individually identified choices: three recipient branches under §37.08(a), three appearance-offense grades under §38.10, and six §37.10(a) conduct theories with seven bounded record/grade scopes each. This branch is stacked on PR 293 (`ce1c1ee4e7a7a33484e9a14c1f3b84eb85e28632`); merge 293 first, then retarget this branch to main and verify the combined counts. NY research PR 294 touches no files in this batch.
+48 individually identified choices: three recipient branches under §37.08(a), three appearance-offense grades under §38.10, and six §37.10(a) conduct theories with seven bounded record/grade scopes each. PRs 292 and 293 are merged. This branch integrates main at `b260737c744b9bc728c0334ac61668d6c196e8f3` and targets main directly; its prerequisite is resolved. NY research PR 294 touches no files in this batch.
 
 The four DPS 2025 adult-arrest codes ranked 91, 92, 95 and 110 total 4,577 records. These prioritize research; they are not counts of unique people, nor counts attributable to the 48 subdivisions. The workbook hash and exact ranked rows are retained in `texas-records-bail-priorities.json`.
 
@@ -29,6 +29,7 @@ The Texas browser checks now follow snapshot-bound pagination because the fixtur
 - App typecheck and production build passed.
 - Five focused suites:27 passed, zero failed.
 - Isolated production browser checks: 27 passed, zero failed; no retries.
+- After integrating main, public-source coverage and records/bail focused checks passed; the Texas held count remains 77.
 - Full regression suite and production data checks were not run.
 
 No import, receipt issuance/renewal, activation, production operation or publication is included.
@@ -85,3 +86,7 @@ No import, receipt issuance/renewal, activation, production operation or publica
 | `tx-pc-37-10-possess-sell-unlawfully-obtained-expert-report` | 37.10(a)(6) | Third-degree felony |
 | `tx-pc-37-10-possess-sell-unlawfully-obtained-testing-device-report` | 37.10(a)(6) | Third-degree felony |
 | `tx-pc-37-10-possess-sell-unlawfully-obtained-search-warrant` | 37.10(a)(6) | Third-degree felony |
+
+## Next research scope
+
+The remaining Class C disorderly-conduct branches in §42.01(a)(1)–(6) and (10)–(12) are queued for the next Texas review. They are not added by this batch.
