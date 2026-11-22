@@ -48,6 +48,7 @@ import { northCarolinaSourceDatabase } from "./services/north-carolina-source-da
 import { loadNorthCarolinaAuthorityManifest } from "./data/north-carolina-manifest-loader";
 import { getCurrentAuthoritySelectableChargeIds, filterAuthorityBackedCharges } from "./services/authority-eligibility";
 import { openLawsClient } from "./services/openlaws-client";
+import { createOpenLawsCitationHandler } from "./openlaws-citation-route";
 import { buildPublicSourceCoverageReport } from "./data/public-source-coverage";
 import rateLimit from "express-rate-limit";
 import { devLog, opsLog, errLog } from "./utils/dev-logger";
@@ -2689,25 +2690,7 @@ export async function registerRoutes(
   });
 
   // OpenLaws API - Search by citation
-  app.get("/api/openlaws/citation/:citation", async (req, res) => {
-    try {
-      const rawCitation = decodeURIComponent(req.params.citation);
-      // Accept only characters found in valid legal citations; reject anything else.
-      if (!/^[A-Za-z0-9\s§.()\-:,/]+$/.test(rawCitation) || rawCitation.length > 120) {
-        return res.status(400).json({ success: false, error: "Invalid citation format" });
-      }
-      const citation = rawCitation;
-      const statute = await openLawsClient.searchByCitation(citation);
-      if (statute) {
-        res.json({ success: true, statute });
-      } else {
-        res.status(404).json({ success: false, error: "Statute not found" });
-      }
-    } catch (error) {
-      errLog("OpenLaws citation search failed", error);
-      res.status(500).json({ success: false, error: "Search failed" });
-    }
-  });
+  app.get("/api/openlaws/citation/:citation", createOpenLawsCitationHandler(openLawsClient));
 
   // ============================================================================
   // Attorney Document Generation API
