@@ -540,10 +540,11 @@ export function ScenarioGuide({ scenarioId }: ScenarioGuideProps) {
   return (
     <div className="space-y-6">
       {/* Scenario selector */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="toolkit-scenarios grid grid-cols-2 md:grid-cols-4 gap-3">
         {scenarios.map((scenario) => (
           <button
             key={scenario.id}
+            aria-pressed={activeScenario === scenario.id}
             onClick={() => {
               setActiveScenario(scenario.id);
               setActiveStep(0);
@@ -575,12 +576,13 @@ export function ScenarioGuide({ scenarioId }: ScenarioGuideProps) {
       </Alert>
 
       {/* Step navigation */}
-      <div className="flex gap-2 overflow-x-auto pb-2">
+      <div className="toolkit-steps flex flex-wrap gap-2 pb-2">
         {currentScenario.steps.map((step, index) => (
           <button
             key={index}
+            aria-pressed={activeStep === index}
             onClick={() => setActiveStep(index)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-normal transition-all ${
               activeStep === index
                 ? 'bg-primary text-primary-foreground'
                 : 'bg-muted text-muted-foreground hover:bg-muted/80'
@@ -593,8 +595,9 @@ export function ScenarioGuide({ scenarioId }: ScenarioGuideProps) {
           </button>
         ))}
         <button
+          aria-pressed={activeStep === currentScenario.steps.length}
           onClick={() => setActiveStep(currentScenario.steps.length)}
-          className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+          className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-normal transition-all ${
             activeStep === currentScenario.steps.length
               ? 'bg-primary text-primary-foreground'
               : 'bg-muted text-muted-foreground hover:bg-muted/80'
@@ -606,7 +609,7 @@ export function ScenarioGuide({ scenarioId }: ScenarioGuideProps) {
 
       {/* Step content */}
       {activeStep < currentScenario.steps.length ? (
-        <Card>
+        <Card className="toolkit-tool">
           <CardHeader>
             <CardTitle className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
