@@ -2,7 +2,7 @@
 
 Research-only mapping of **18 conduct alternatives** across Penal Law 120.05, 120.10 and 121.12. Another **ten specialized alternatives in 120.05 are explicitly held** for membership, duty, location and incorporated-dependency review. This is partial substantive coverage of 120.05, not a claim that its entire section is publication-ready.
 
-The packet retains 24 official Senate statutory documents: 18 reused with byte-identical original acquisition metadata and six newly acquired on November 22, 2026. Four mappings are Class B violent felonies and fourteen are Class D violent felonies. No catalog, explanation, citation overlay, eligibility, receipt, database or live selection is changed.
+The packet retains 24 official Senate statutory documents: 18 reused with byte-identical original acquisition metadata and six newly acquired on November 22, 2026 Pacific (November 23 UTC). Four mappings are Class B violent felonies and fourteen are Class D violent felonies. No catalog, explanation, citation overlay, eligibility, receipt, database or live selection is changed.
 
 ## Exact mapped scopes
 
