@@ -94860,7 +94860,7 @@ for (const group of ["TX", "DUI & Traffic", "DUI/Traffic Crimes"]) {
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...texasDwiRecords.map(row => row.id)])];
 }
 for (const group of ["Violent Crimes", "Assault Crimes"]) {
-  const ids = texasReviewedRecords.filter(row => row.references[0].section === "22.01").map(row => row.id);
+  const ids = texasReviewedRecords.filter(row => ["22.01", "22.05", "22.11"].includes(row.references[0].section)).map(row => row.id);
   chargeCategories[group] = [...new Set([...(chargeCategories[group] ?? []), ...ids])];
 }
 for (const group of ["DUI & Traffic", "DUI/Traffic Crimes"]) {

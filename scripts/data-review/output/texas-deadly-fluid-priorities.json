@@ -1,0 +1,40 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "year": 2025,
+  "statewideAdult": 831210,
+  "statewideJuvenile": 44782,
+  "eligibleCodes": 2378,
+  "excludedCodes": 57,
+  "excludedAdult": 71549,
+  "rows": [
+    {
+      "rank": 76,
+      "code": "13160017",
+      "label": "HARASSMENT OF PUBLIC SERVANT",
+      "law": "PC",
+      "citation": "22.11(b)",
+      "adult": 1567,
+      "juvenile": 197
+    },
+    {
+      "rank": 81,
+      "code": "53990001",
+      "label": "DEADLY CONDUCT",
+      "law": "PC",
+      "citation": "22.05(a)",
+      "adult": 1500,
+      "juvenile": 99
+    },
+    {
+      "rank": 82,
+      "code": "52130008",
+      "label": "DEADLY CONDUCT DISCHARGE FIREARM",
+      "law": "PC",
+      "citation": "22.05(b)",
+      "adult": 1498,
+      "juvenile": 130
+    }
+  ]
+}
