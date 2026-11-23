@@ -114,7 +114,8 @@ describe("public-source coverage gate", () => {
       // Ohio includes retired manslaughter, aggravated-assault, vandalism, insurance-fraud and domestic-violence
       // identities requiring explicit reselection.
       // Texas includes generic identity-theft, forgery and disorderly-conduct selections held for exact reselection.
-      [129, 69, 109, 94, 93, 92, 78, 60, 27, 21],
+      // New York includes the three held generic/MPC placeholder identities.
+      [129, 69, 109, 94, 93, 92, 78, 60, 30, 21],
     );
     for (const target of report.nextHighestValueCoverageTargets) {
       expect(target.coveragePercentage).toBeGreaterThanOrEqual(0);

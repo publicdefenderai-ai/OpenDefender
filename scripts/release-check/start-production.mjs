@@ -168,6 +168,7 @@ const releaseCheckOhioSourceFirstChargeIds = [
 ];
 
 function getReleaseCheckAuthoritySelectableChargeIds() {
+  const nyPlaceholderHolds = new Set(JSON.parse(readFileSync(resolve(process.cwd(), "shared/new-york-placeholder-hold-ids.json"), "utf8")));
   return [...new Set([
     ...releaseCheckAuthorityManifestFiles.flatMap((fileName) => {
       // Ohio's on-disk ledger predates canonical reselection. Use the bounded
@@ -185,7 +186,8 @@ function getReleaseCheckAuthoritySelectableChargeIds() {
           record.provisions.length > 0 &&
           typeof record.chargeId === "string",
         )
-        .map((record) => record.chargeId);
+        .map((record) => record.chargeId)
+        .filter(id => !nyPlaceholderHolds.has(id));
     }),
     // Include the previously approved IDs so the runtime receipt gate, not fixture omission,
     // determines their availability. This does not bypass freshness or grant production eligibility.

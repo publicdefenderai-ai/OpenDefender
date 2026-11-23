@@ -1,3 +1,4 @@
+import { hasHeldNewYorkPlaceholder, newYorkPlaceholderNotice } from "@shared/new-york-placeholder-hold";
 import { lawyerQuestions, counselCopyKey } from "../../locales/guidance-reader";
 import { flushSync } from "react-dom";
 import { requiresOhioChargeConfirmation, ohioChargesAreCurrent, canOutputOhioPlan, ohioReselectionNotice, OhioChargeConfirmationError } from "@/lib/ohio-guidance-output";
@@ -1036,6 +1037,7 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
   const practicalActions = [...practicalStarterActions, ...generatedPracticalActions.map(action => action.action)];
 
   async function handlePrint() {
+    if (hasHeldNewYorkPlaceholder(guidance)) { alert(newYorkPlaceholderNotice(i18n.language)); return; }
     if (!requiresOhioChargeConfirmation(guidance)) {
       window.print();
       return;
@@ -1095,6 +1097,21 @@ export function GuidanceDashboard({ guidance: savedPlan, onClose, onNewSession, 
     section?.focus({ preventScroll: true });
     section?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
   };
+
+  if (hasHeldNewYorkPlaceholder(guidance)) {
+    return <>
+      <GuidancePrintPlan guidance={guidance} language={i18n.language} />
+      <section className="guidance-results space-y-4 print:hidden" data-testid="guidance-dashboard">
+        <h1 className="guidance-result-title">{t('design.guidanceRoadmapTitle', { jurisdiction: 'New York' })}</h1>
+        <p role="status">{newYorkPlaceholderNotice(i18n.language)}</p>
+        <div className="flex flex-wrap gap-2">
+          {onNewSession && <Button onClick={onNewSession} data-testid="button-new-session">{t('legalGuidance.dashboard.newSession')}</Button>}
+          <Button variant="outline" onClick={handlePrint} data-testid="button-print-guidance">{t('legalGuidance.dashboard.print')}</Button>
+          <Button variant="outline" onClick={onClose}>{t('legalGuidance.dashboard.close')}</Button>
+        </div>
+      </section>
+    </>;
+  }
 
   if (needsOhioConfirmation && (
     !authority.isFetchedAfterMount || !authority.isSuccess || authority.fetchStatus !== "idle" ||

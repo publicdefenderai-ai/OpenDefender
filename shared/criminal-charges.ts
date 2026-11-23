@@ -1,3 +1,4 @@
+import { NEW_YORK_PLACEHOLDER_HOLD_IDS } from './new-york-placeholder-hold';
 import { texasHeldDisorderlyId, texasHeldThreatId, texasHeldOfficerId, texasHeldFraudIds, texasHeldRoadId, texasHeldDeliveryIds, texasHeldCarryId, texasHeldTheftId, texasReviewedRecords } from "./texas-reviewed";
 import { texasDwiRecords } from "./texas-dwi";
 import { floridaRemainingChargeText, floridaRemainingDisplayName } from "./florida-legacy-remaining";
@@ -94528,6 +94529,7 @@ export const CHARGE_ID_ALIASES: Record<string, string> = {
  * guidance is generated.
  */
 export const NY_CHARGE_IDS_REQUIRING_RESELECTION = new Set([
+  ...NEW_YORK_PLACEHOLDER_HOLD_IDS,
   'ny-distribution-of-controlled-substance',
   'ny-manufacturing-controlled-substance',
   'ny-drug-trafficking',
