@@ -69,3 +69,9 @@ it("rebuilds exact records, rejects changed/missing evidence, and preserves save
     expect(resolveGuidanceCharge({name:r.name,code:r.code,classification:r.category},"TX")).toBeUndefined();
   }
 });
+
+it("does not restrict the other-liquid branches to human or animal fluids",()=>{
+ const other=rows.filter(r=>r.id.endsWith("other-liquid"));expect(other).toHaveLength(7);
+ for(const r of other){expect(r.conduct).toContain("any other fluid or liquid");expect(r.conduct).toContain("not limited to fluids from a person or animal");}
+ expect(evidence["PE:22.11"].text).toContain("any other fluid or liquid");
+});

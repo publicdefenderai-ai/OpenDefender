@@ -61,3 +61,7 @@ No imports, production writes, receipt changes, activation or publication are in
 | `tx-pc-22-11-public-duty-other-liquid` | 22.11(a)(3) | Third-degree felony |
 | `tx-pc-22-11-public-retaliation-listed` | 22.11(a)(3) | Third-degree felony |
 | `tx-pc-22-11-public-retaliation-other-liquid` | 22.11(a)(3) | Third-degree felony |
+
+## Other-liquid clarification
+
+The seven other-liquid summaries expressly state that this branch is not limited to fluids from a person or animal; the human/animal qualifier describes the six enumerated bodily substances. This copy-only clarification preserves all 19 generated manifest records and source metadata. Validation: 19 focused tests across four files, 31 browser scenarios across three Texas release specs, typecheck and production build passed; the 19-record replay remains identical.
