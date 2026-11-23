@@ -1,0 +1,56 @@
+.attorney-access-width {
+  width: min(100% - 48px, 760px);
+  margin: 0 auto;
+  padding: 44px 0 80px;
+  outline: none;
+}
+.attorney-access-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  color: var(--primary);
+  font-weight: 600;
+}
+.attorney-access-back:hover { text-decoration: underline; text-underline-offset: 5px; }
+.attorney-access-back:focus-visible { outline: 2px solid var(--primary); outline-offset: 5px; }
+.attorney-access-heading { padding: 24px 0 36px; }
+.attorney-access-heading h1 {
+  max-width: 12ch;
+  font-size: clamp(2.6rem, 5.5vw, 4.3rem);
+  line-height: 1.06;
+  letter-spacing: -.045em;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  margin: 0 0 22px;
+}
+.attorney-access-heading p { font-size: 1.125rem; line-height: 1.7; color: var(--muted-foreground); max-width: 62ch; }
+.attorney-access-workspace { border-top: 1px solid var(--border); padding-top: 30px; }
+.attorney-access-workspace h2 { font-size: 1.5rem; font-weight: 500; letter-spacing: -.02em; }
+.attorney-access-description { margin: 12px 0 24px; line-height: 1.7; color: var(--muted-foreground); }
+.attorney-access [data-attorney-attestations] { border: 0; border-radius: 0; padding: 0; background: none; }
+.attorney-access [data-attorney-attestations] > div:first-child { color: var(--muted-foreground); margin-bottom: 0; }
+.attorney-access [data-attorney-attestation] { padding: 22px 0; margin-top: 0; border-bottom: 1px solid var(--border); gap: 16px; }
+.attorney-access [data-attorney-attestation] > div { margin-left: 0; min-width: 0; }
+.attorney-access [data-attorney-attestation] label { display: block; font-size: 1rem; line-height: 1.75; cursor: pointer; overflow-wrap: anywhere; }
+.attorney-access [data-attorney-attestation] [role="checkbox"] { flex-shrink: 0; width: 20px; height: 20px; margin-top: 3px; }
+.attorney-access [data-attorney-privacy] {
+  border: 0;
+  border-left: 3px solid var(--primary);
+  border-radius: 0;
+  background: var(--muted);
+  padding: 22px;
+  margin-block: 28px;
+}
+.attorney-access [data-attorney-privacy] > svg { color: var(--primary); top: 24px; }
+.attorney-access [data-attorney-privacy] > div { color: var(--foreground); font-size: .9375rem; line-height: 1.75; }
+.attorney-access button[type="submit"] { width: auto; min-width: 220px; max-width: 100%; min-height: 48px; height: auto; white-space: normal; padding: 12px 24px; border-radius: 4px; }
+@media (max-width: 600px) {
+  .attorney-access-width { width: calc(100% - 40px); padding: 24px 0 48px; }
+  .attorney-access-heading { padding: 22px 0 28px; }
+  .attorney-access button[type="submit"] { width: 100%; min-width: 0; }
+}
+@media print {
+  .attorney-access-width { width: 100%; padding: 0; }
+  .attorney-access-back, .attorney-access button[type="submit"] { display: none; }
+}
