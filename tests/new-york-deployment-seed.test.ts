@@ -9,9 +9,9 @@ describe("committed New York deployment seed", () => {
 
     expect(manifest.source).toBe("NY Open Legislation API (legislation.nysenate.gov)");
     expect(manifest.catalogRecords).toHaveLength(121);
-    expect(seed.sources).toHaveLength(89);
-    expect(seed.snapshots).toHaveLength(96);
-    expect(seed.links).toHaveLength(96);
+    expect(seed.sources).toHaveLength(86);
+    expect(seed.snapshots).toHaveLength(93);
+    expect(seed.links).toHaveLength(93);
     expect(seed.selectableChargeIds).toHaveLength(91);
     expect(seed.selectableChargeIds).toContain("ny-grand-theft-in-the-first-degree");
     expect(seed.selectableChargeIds).not.toContain("ny-auto-burglary");

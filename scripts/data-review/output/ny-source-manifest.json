@@ -5493,8 +5493,8 @@
       "catalogLabel": "Criminal Conspiracy",
       "catalogCode": "MPC § 5.03 / NY conspiracy statute",
       "catalogCategory": "felony",
-      "disposition": "exact_alias_rename",
-      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "Legacy generic or MPC content does not establish an exact New York offense; withhold this identity pending supported subdivision-specific review and explicit reselection. Do not infer a successor.",
       "canonicalTitle": "Conspiracy in the sixth degree",
       "provisions": [
         {
@@ -5853,8 +5853,8 @@
       "catalogLabel": "Prior Felony / Recidivist Sentencing Enhancement",
       "catalogCode": "NY habitual offender / recidivist statute",
       "catalogCategory": "felony",
-      "disposition": "exact_alias_rename",
-      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "Legacy generic or MPC content does not establish an exact New York offense; withhold this identity pending supported subdivision-specific review and explicit reselection. Do not infer a successor.",
       "canonicalTitle": "Sentence of imprisonment for persistent violent felony offender; criteria",
       "provisions": [
         {
@@ -6104,8 +6104,8 @@
       "catalogLabel": "Money Laundering",
       "catalogCode": "NY money laundering statute",
       "catalogCategory": "felony",
-      "disposition": "exact_alias_rename",
-      "dispositionReason": "The source is official and exact, but the user-facing legacy label should be renamed to the official title before attorney approval.",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "Legacy generic or MPC content does not establish an exact New York offense; withhold this identity pending supported subdivision-specific review and explicit reselection. Do not infer a successor.",
       "canonicalTitle": "Money laundering in the first degree",
       "provisions": [
         {
