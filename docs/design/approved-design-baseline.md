@@ -779,8 +779,8 @@ A pre-change rendered fixture preserves 50 text fragments per locale plus the ex
 ### Remaining implementation inventory (November 22, 2026)
 
 - Awaiting review: Raids Preparedness Toolkit, PR 276. Workplace Raids (282), DACA/TPS (287) and After Deportation (288) are merged.
-- Attorney access/verification is prepared in this review batch; the production attorney gate remains unchanged.
-- Remaining page-specific professional designs after attorney access: workspace, document catalog, playbook catalog/detail and document wizard. Existing shared styling is not counted as a completed page-specific refresh.
+- Attorney access/verification (PR 299) is merged. The workspace is prepared in this review batch; the production attorney gate remains unchanged.
+- Remaining page-specific professional designs after the workspace: document catalog, playbook catalog/detail and document wizard. Existing shared styling is not counted as a completed page-specific refresh.
 - Remaining developer tools: API reference, embeddable widgets and browser extensions. The Developer landing/reference page has already been refreshed.
 - Final design closeout: audit mobile navigation, light/dark appearance, keyboard paths, print surfaces and remaining empty/loading/error states across the completed routes. The How To screenshot replacement has landed. A further visual-variety pass remains a separate, deferred improvement.
 
@@ -816,3 +816,14 @@ The production attorney-config gate is unchanged. The browser tests enable acces
 A pre-change trilingual fixture preserves the rendered text. The release-listed browser spec covers six language/theme cases at desktop and 320px, keyboard selection, invalid submission, request payload, failed submission and retry, plus disabled access, existing verified sessions and pending submission (nine cases total). All nine passed; the attorney gate unit tests passed 5/5. Desktop/light and Chinese mobile/dark screenshots were inspected. Typecheck and production build results are recorded in the PR. No full-suite or production activation claim.
 
 The subtitle and form description use the existing attorneyPortal.verify translations in all three languages, without English-only language overrides. The description now accurately describes attestations instead of requesting bar-information fields. Browser assertions pin both translated paragraphs. Content follow-up: the existing mixed-language disclosure prefix and English validation messages remain. Preserving this copy does not certify bar-membership verification or attorney-client privilege. These wording and translation issues should be resolved separately before enabling the portal.
+
+
+### Attorney workspace (review batch)
+
+Reference: attorney-workspace-content.html, SHA-256 `70622d4f38b2554277f843695f7e46bc8b5aced65bc8b878453d2a76d3fbbf26`. Document generation receives a prominent opening panel. Court records, document summarization and case playbooks follow as reading rows; shared resources and guided chat remain below. The published title, descriptions, feature lists and all eight destinations are preserved, rather than adopting the preview's shortened text. The workspace no longer waits for a scroll/entrance animation. Native headings and links replace card-title divs and nested link/button controls.
+
+The config gate, loading/unverified states, verification form, session handling and route destinations are unchanged. The summarizer still uses the existing component in public mode, with its disclosure, consent and upload sequence intact. The dialog now has a spoken title and restores keyboard focus to its launch button after closing. No generation request, upload, new storage or API change is introduced by the layout.
+
+The pre-change fixture captures 40 published fragments and eight destinations in each language. All 42 translation keys from the page remain. The existing summarizer tile falls back to English in Spanish and Chinese sessions; it is now marked lang="en". Translation and review of the existing feature claims remain follow-ups, not implied approvals.
+
+The release-listed workspace spec checks the captured content, all destinations, one main landmark, desktop/320px bounds in three languages and both themes, print visibility, consent before upload, keyboard launch/close/focus return, no POST on opening the tool, and disabled/unverified access. Combined workspace and access specs passed 17/17; gate unit tests passed 5/5. Typecheck and build pass. Desktop/light and Chinese mobile/dark screenshots were inspected. Full suite, live attorney activation, and paid AI processing were not run.
