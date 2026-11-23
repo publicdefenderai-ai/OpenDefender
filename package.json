@@ -54,7 +54,8 @@
     "content:review:support": "tsx scripts/content-review/review-content.ts support",
     "content:review:resources": "tsx scripts/content-review/review-content.ts resources",
     "content:report": "tsx scripts/content-review/generate-report.ts",
-    "content:all": "npm run content:review && npm run content:report"
+    "content:all": "npm run content:review && npm run content:report",
+    "test:batch-consistency": "vitest run tests/public-source-coverage.test.ts tests/source-readiness-contract.test.ts tests/guidance-route.test.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.93.0",

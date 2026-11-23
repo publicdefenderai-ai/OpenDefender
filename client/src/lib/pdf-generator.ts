@@ -1,3 +1,4 @@
+import { hasHeldNewYorkPlaceholder, NewYorkPlaceholderConfirmationError } from "@shared/new-york-placeholder-hold";
 import { lawyerQuestions, guidanceReaderCopy, counselCopyKey } from "../locales/guidance-reader";
 import { isOhioPlan, canOutputOhioPlan, OhioChargeConfirmationError } from "./ohio-guidance-output";
 import { translationUnavailableNotice, translationSupplementNotice } from "@shared/translation-unavailable-notice";
@@ -226,6 +227,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
   if (isOhioPlan(guidance) && !await canOutputOhioPlan(guidance)) {
     throw new OhioChargeConfirmationError();
   }
+  if (hasHeldNewYorkPlaceholder(guidance)) throw new NewYorkPlaceholderConfirmationError();
   const doc = new jsPDF();
   const pageWidth = doc.internal.pageSize.getWidth();
   const margin = 15;

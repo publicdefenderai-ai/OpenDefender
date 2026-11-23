@@ -156,6 +156,12 @@ function makeGuidance(
 // ── Tests ─────────────────────────────────────────────────────────────────────
 
 describe('generateGuidancePDF — charge summary row citation logic', () => {
+  it('rejects held New York plans before rendering any PDF content', async () => {
+    for (const id of ['ny-conspiracy','ny-recidivist-enhancement','ny-money-laundering']) {
+      const guidance = makeGuidance([{id,name:'Historical unsafe charge',classification:'felony',code:'legacy'}]);
+      await expect(generateGuidancePDF({...guidance,caseData:{...guidance.caseData,jurisdiction:'New York'}},'en')).rejects.toThrow('Confirm the New York charge selection');
+    }
+  });
   beforeEach(() => {
     clearCaptured();
     vi.clearAllMocks();

@@ -1,3 +1,4 @@
+import { isHeldNewYorkPlaceholder } from './new-york-placeholder-hold';
 import { needsTexasChargeReselection } from "./texas-reviewed";
 import { isReviewedOhioChargeId } from "./ohio-reviewed-identity";
 import {
@@ -24,6 +25,7 @@ export function resolveGuidanceCharge(
   classification: GuidanceChargeClassification,
   jurisdiction?: string,
 ): CriminalCharge | undefined {
+  if (isHeldNewYorkPlaceholder(classification, jurisdiction)) return undefined;
   const isCalifornia = jurisdiction?.toUpperCase() === "CA" || classification.id?.startsWith("ca-");
 
   // A code alone may match several statutory branches. Saved Ohio cases

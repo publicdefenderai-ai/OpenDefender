@@ -422,3 +422,38 @@ test('generated counsel and bail information preserves qualifications on screen 
   await expect(printable).toContainText(counsel);
   await expect(printable).toContainText('not determined by this roadmap');
 });
+
+for (const language of ['en','es','zh']) for (const representation of ['id','code-only']) {
+  test(`New York placeholder roadmap ${representation} is withheld on screen and print in ${language}`, async ({page}) => {
+    await setup(page,language);
+    await page.route('**/api/legal-guidance/design-results',route=>route.fulfill({json:{success:true,guidance:{...guidance,
+      overview:'HISTORICAL_UNSAFE_PENALTY',rights:['HISTORICAL_UNSAFE_RIGHTS'],
+      caseData:{...guidance.caseData,jurisdiction:'New York',charges:representation==='id'?'ny-conspiracy':'NY money laundering statute'},
+      chargeClassifications:representation==='id'?[{id:'ny-conspiracy',name:'HISTORICAL_UNSAFE_NAME',code:'MPC § 5.03 / NY conspiracy statute',classification:'felony'}]:[],
+    }}}));
+    // Even stale/misconfigured API responses must not override the exact hold.
+    await page.route('**/api/criminal-charges?**',route=>route.fulfill({json:{success:true,charges:[{id:'ny-conspiracy'}],count:1,totalAvailable:1}}));
+    await page.addInitScript(()=>{(window as any).__printed=false;window.print=()=>{(window as any).__printed=true;};});
+    await page.goto('/case-guidance?session=design-results');
+    await expect(page.getByTestId('guidance-dashboard').getByRole('status')).toBeVisible();
+    for(const text of ['HISTORICAL_UNSAFE_PENALTY','HISTORICAL_UNSAFE_RIGHTS','HISTORICAL_UNSAFE_NAME'])await expect(page.getByText(text,{exact:false})).toHaveCount(0);
+    await expect(page.getByTestId('button-export-pdf')).toHaveCount(0);
+    const printLabels={en:'Print',es:'Imprimir',zh:'打印'};
+    await expect(page.getByTestId('button-print-guidance')).toHaveText(printLabels[language as keyof typeof printLabels]);
+    await expect(page.getByTestId('button-print-guidance')).toHaveAccessibleName(printLabels[language as keyof typeof printLabels]);
+    const dialog=page.waitForEvent('dialog').then(async d=>{expect(d.message()).not.toContain('legalGuidance');await d.dismiss();});
+    await page.getByTestId('button-print-guidance').click();await dialog;expect(await page.evaluate(()=>(window as any).__printed)).toBe(false);
+    await page.emulateMedia({media:'print'});const printed=page.getByTestId('print-guidance-plan');await expect(printed).toBeVisible();await expect(printed).not.toContainText('HISTORICAL_UNSAFE');
+  });
+}
+test('New York charge-free roadmap remains usable and exportable with catalog offline',async({page})=>{
+  await setup(page);await page.route('**/api/legal-guidance/design-results',route=>route.fulfill({json:{success:true,guidance:{...guidance,caseData:{...guidance.caseData,jurisdiction:'NY',charges:''},chargeClassifications:[]}}}));
+  await page.route('**/api/criminal-charges?**',route=>route.abort());await page.goto('/case-guidance?session=design-results');await expect(page.getByTestId('guidance-dashboard')).toContainText(guidance.overview);
+  await page.emulateMedia({media:'print'});await expect(page.getByTestId('print-guidance-plan')).toContainText(guidance.overview);await page.emulateMedia({media:'screen'});
+  await page.getByTestId('button-export-pdf').click();const download=page.waitForEvent('download');await page.getByTestId('button-confirm-export').click();expect(await (await download).failure()).toBeNull();
+});
+
+test('New York unrelated saved charge keeps its roadmap',async({page})=>{
+  await setup(page);await page.route('**/api/legal-guidance/design-results',route=>route.fulfill({json:{success:true,guidance:{...guidance,caseData:{...guidance.caseData,jurisdiction:'NY',charges:'ny-petit-larceny'},chargeClassifications:[{id:'ny-petit-larceny',name:'Petit larceny',code:'155.25',classification:'misdemeanor'}]}}}));
+  await page.route('**/api/criminal-charges?**',route=>route.fulfill({json:{success:true,charges:[{id:'ny-petit-larceny'}],count:1,totalAvailable:1}}));await page.goto('/case-guidance?session=design-results');await expect(page.getByTestId('guidance-dashboard')).toContainText(guidance.overview);await expect(page.getByTestId('button-export-pdf')).toBeVisible();
+});

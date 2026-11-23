@@ -1,6 +1,6 @@
 import {describe,it,expect} from 'vitest';
 import {CHARGE_CITATIONS} from '../shared/criminal-charge-citations';
-import {getChargeById,getVerifiedCitation,isCitationVerified,getVerifiedSourceUrl,getInstructionRef,getInstructionUrl,getInstructionPaywall,classifyChargesForGuidance} from '../shared/criminal-charges';
+import {criminalCharges,getChargeById,getVerifiedCitation,isCitationVerified,getVerifiedSourceUrl,getInstructionRef,getInstructionUrl,getInstructionPaywall,classifyChargesForGuidance} from '../shared/criminal-charges';
 import research from '../scripts/data-review/new-york-first-pass/candidate-review.json';
 import frozen from '../scripts/data-review/new-york-first-pass/overlay-baseline.json';
 import baseline from '../scripts/data-review/new-york-first-pass/baseline.json';
@@ -29,7 +29,7 @@ describe('New York interim citation mismatch safeguard',()=>{
  });
  it('withholds verified citations, source links and instruction metadata for every affected ID',()=>{
   for(const id of ids){
-   const charge=getChargeById(id);expect(charge,id).toBeDefined();
+   const charge=criminalCharges.find(c=>c.id===id);expect(charge,id).toBeDefined();
    expect(isCitationVerified(charge!),id).toBe(false);
    expect(getVerifiedCitation(charge!),id).toBeNull();
    expect(getVerifiedSourceUrl(charge!),id).toBeNull();
@@ -41,16 +41,16 @@ describe('New York interim citation mismatch safeguard',()=>{
    expect(charge!.dataConfidence,id).not.toBe('high');
   }
  });
- it('omits the disputed citation from canonical guidance classifications without retiring charge identities',()=>{
+ it('omits disputed citations and respects the later placeholder identity holds',()=>{
   const classifications=classifyChargesForGuidance(ids);
-  expect(classifications.map(c=>c.id).sort()).toEqual([...ids].sort());
+  expect(classifications.map(c=>c.id).sort()).toEqual(ids.filter(id=>!['ny-conspiracy','ny-recidivist-enhancement','ny-money-laundering'].includes(id)).sort());
   for(const c of classifications){expect(c.verifiedCitation,c.id).toBeNull();expect(c,c.id).not.toHaveProperty('code');}
  });
  it('leaves catalog identity/section/category unchanged and does not substitute a different offense',()=>{
   for(const id of ids){
-   const charge=getChargeById(id)!;const original=baseline.rows.find(r=>r.id===id)!;
+   const charge=getChargeById(id)??criminalCharges.find(c=>c.id===id)!;const original=baseline.rows.find(r=>r.id===id)!;
    expect(charge.code,id).toBe(original.catalogCode);
-   expect(charge.name,id).toBe(original.disposition==='exact_alias_rename'?original.canonicalTitle:original.catalogLabel);
+   expect(charge.name,id).toBe(getChargeById(id)&&original.disposition==='exact_alias_rename'?original.canonicalTitle:original.catalogLabel);
    expect(charge.category,id).toBe(original.catalogCategory);
   }
   expect(CHARGE_CITATIONS['ny-trespass-after-warning'].citation).toBe('N.Y. Penal Law § 140.05');
