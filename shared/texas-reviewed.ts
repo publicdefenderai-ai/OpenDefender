@@ -1,3 +1,4 @@
+import serviceForgery from "./texas-service-forgery.json";
 import disorderlyClassC from "./texas-disorderly-class-c.json";
 import deadlyFluid from "./texas-deadly-fluid.json";
 import recordsBail from "./texas-records-bail.json";
@@ -40,6 +41,7 @@ export function texasReviewedCitation(ref: { code: string; section: string; subd
 }
 
 export const texasReviewedRecords = [
+  ...serviceForgery,
   ...disorderlyClassC,
   ...deadlyFluid,
   ...recordsBail,
@@ -123,11 +125,11 @@ export function isTexasAmbiguousCollision(charge: TexasSavedSelection, jurisdict
     (/^(?:(?:Tex\.\s*)?(?:Transp\.|Transportation) Code\s*)?(?:§\s*)?550\.(?:021|022|024)(?:$|\()/.test(charge.code?.trim() ?? "") || /^hit(?:-| )and(?:-| )run$/i.test(charge.name.trim()));
 }
 
-export const texasHeldFraudIds = new Set(["tx-identity-theft", "tx-credit-card-fraud"]);
+export const texasHeldFraudIds = new Set(["tx-identity-theft", "tx-credit-card-fraud", "tx-forgery"]);
 export function isTexasAmbiguousFraud(charge: TexasSavedSelection, jurisdiction?: string) {
   if (charge.id) return texasHeldFraudIds.has(charge.id);
   return /^(TX|Texas)$/i.test(jurisdiction ?? "") &&
-    (/^(?:(?:Tex\.\s*)?Penal Code\s*)?(?:§\s*)?32\.(?:315|31|51)(?:$|\()/.test(charge.code?.trim() ?? "") || /^(?:identity theft|credit card fraud)$/i.test(charge.name.trim()));
+    (/^(?:(?:Tex\.\s*)?Penal Code\s*)?(?:§\s*)?32\.(?:21|315|31|51)(?:$|\()/.test(charge.code?.trim() ?? "") || /^(?:forgery|identity theft|credit card fraud)$/i.test(charge.name.trim()));
 }
 
 export const texasHeldOfficerId = "tx-assault-on-peace-officer";

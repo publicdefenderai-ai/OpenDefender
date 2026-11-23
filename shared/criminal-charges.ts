@@ -40404,8 +40404,8 @@ export const criminalCharges: CriminalCharge[] = [
     code: '32.21',
     jurisdiction: 'TX',
     category: 'felony',
-    description: 'Creating false documents under Texas law',
-    maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
+    description: 'Historical section-wide forgery identity requiring the applicable conduct, purpose, writing type, value, victim and date.',
+    maxPenalty: 'Select the applicable reviewed forgery branch to determine the penalty.',
     commonDefenses: ['Consult with attorney for applicable defenses'],
     evidenceToGather: ['Gather all relevant documentation and evidence'],
     specificRights: ['Constitutional rights apply to all criminal cases'],
@@ -94888,7 +94888,7 @@ for (const group of ["Violent Crimes", "Theft & Property"]) {
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
 for (const group of ["Fraud Crimes", "Theft Crimes"]) {
-  const ids = texasReviewedRecords.filter(row => ["32.31", "32.315", "32.51"].includes(row.references[0].section)).map(row => row.id);
+  const ids = texasReviewedRecords.filter(row => ["31.04", "32.21", "32.31", "32.315", "32.51"].includes(row.references[0].section)).map(row => row.id);
   chargeCategories[group] = [...new Set([...chargeCategories[group], ...ids])];
 }
 for (const group of ["DUI & Traffic", "DUI/Traffic Crimes"]) {

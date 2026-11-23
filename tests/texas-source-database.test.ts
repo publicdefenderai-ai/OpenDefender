@@ -35,24 +35,21 @@ describe("Texas authority manifest", () => {
 
     expect(manifest.catalogRecords).toHaveLength(txCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(txCount);
-    expect(seed.sources).toHaveLength(300);
-    expect(seed.snapshots).toHaveLength(6562);
-    expect(seed.links).toHaveLength(6562);
-    expect(seed.selectableChargeIds).toHaveLength(547);
+    expect(seed.sources).toHaveLength(304);
+    expect(seed.snapshots).toHaveLength(7502);
+    expect(seed.links).toHaveLength(7502);
+    expect(seed.selectableChargeIds).toHaveLength(595);
     expect(seed.selectableChargeIds).toContain("tx-aggravated-assault");
     expect(seed.selectableChargeIds).not.toContain("tx-bank-robbery");
     expect(seed.selectableChargeIds).not.toContain("tx-wire-fraud");
     expect(manifest.catalogRecords.filter((record) =>
-      record.disposition === "require_exact_reselection")).toHaveLength(77);
+      record.disposition === "require_exact_reselection")).toHaveLength(78);
   });
 
   it("stores TCSS text, hashes, currentness evidence, and official source identity", () => {
-    const charge = criminalCharges.find((candidate) => candidate.id === "tx-forgery")!;
-    const record = buildTexasManifestRecord(
-      charge,
-      [document("PE", "32.21", "FORGERY.")],
-      importedAt,
-    );
+    const record = loadTexasAuthorityManifest().catalogRecords.find(
+      candidate => candidate.chargeId === "tx-pc-32-21-value-under-100",
+    )!;
     const seed = buildTexasSourceDatabaseSeed({
       jurisdiction: "TX",
       generatedAt: importedAt,
@@ -64,7 +61,7 @@ describe("Texas authority manifest", () => {
     expect(record.provisions[0]).toMatchObject({
       section: "32.21",
       officialTitle: "FORGERY.",
-      content: expect.stringContaining("statutory elements"),
+      content: expect.stringContaining("forges a writing"),
       hashBasis: "source_content",
       effectiveDateStart: "September 1, 2025",
     });
@@ -74,7 +71,7 @@ describe("Texas authority manifest", () => {
       accessPolicy: "store_text",
       canStoreContent: true,
     });
-    expect(seed.selectableChargeIds).toEqual(["tx-forgery"]);
+    expect(seed.selectableChargeIds).toEqual(["tx-pc-32-21-value-under-100"]);
   });
 
   it("extracts the latest complete effective date from amended TCSS text", () => {
