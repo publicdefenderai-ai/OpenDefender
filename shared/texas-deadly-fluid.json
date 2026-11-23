@@ -1,0 +1,1881 @@
+[
+  {
+    "id": "tx-pc-22-05-reckless-danger",
+    "name": "Deadly conduct (reckless imminent serious-injury danger)",
+    "officialTitle": "DEADLY CONDUCT.",
+    "category": "misdemeanor",
+    "code": "22.05(a)",
+    "citation": "Tex. Penal Code § 22.05(a)",
+    "conduct": "Recklessly engaging in conduct that places ANOTHER in IMMINENT danger of SERIOUS bodily injury. Recklessness requires conscious disregard of the substantial, unjustifiable risk; a mere accident or remote possibility does not itself establish these conditions. Actual injury and use of a firearm are not required. Under (c), knowingly pointing a firearm at or toward another creates a presumption of recklessness and danger whether or not the actor believed it loaded. The presumption does not apply to a peace officer lawfully discharging official duties. Under §2.05(a), predicate facts require proof beyond a reasonable doubt, the jury may but is not bound to draw the inference, and the State must still prove the other elements. This presumption is not proof of actual discharge under (b). Section 22.06 supplies only a limited effective-consent or reasonable-belief-in-consent defense: the conduct did not threaten or inflict serious bodily injury, OR the victim knew it was a risk of the victim’s occupation, recognized medical treatment, or a scientific experiment conducted by recognized methods. Consent alone is not a general defense to serious-injury danger. The defense is unavailable for conduct required for initiation or continued membership of the actor or victim in a criminal street gang. Applicable Chapter 9 justification defenses retain their own conditions.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. S.B. 1637 changed the firearm-pointing presumption and added the narrow officer exception effective September 1, 2025. If any element occurred before that date, the Act preserves earlier law. The Class A/third-degree grades predate that amendment; a current version date does not first create them.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.21",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.22",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.31",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.32",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.33",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.51",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "53990001"
+  },
+  {
+    "id": "tx-pc-22-05-discharge-individual",
+    "name": "Deadly conduct (firearm discharge toward people)",
+    "officialTitle": "DEADLY CONDUCT.",
+    "category": "felony",
+    "code": "22.05(b)(1)",
+    "citation": "Tex. Penal Code § 22.05(b)(1)",
+    "conduct": "Knowingly discharging a firearm AT OR IN THE DIRECTION OF one or more individuals. Actual discharge must be proved; merely pointing an unloaded gun does not itself establish this felony branch. The occupancy-recklessness clause in (b)(2) is not imported into (b)(1). Under (f), this branch does not apply to a legally qualifying peace officer who, at the time, was in actual official duty AND reasonably believed the firearm discharge justified under Chapter 9. Officer status alone is insufficient, and this specific exception is not extended to (b)(2). Section 22.06 supplies only a limited effective-consent or reasonable-belief-in-consent defense: the conduct did not threaten or inflict serious bodily injury, OR the victim knew it was a risk of the victim’s occupation, recognized medical treatment, or a scientific experiment conducted by recognized methods. Consent alone is not a general defense to serious-injury danger. The defense is unavailable for conduct required for initiation or continued membership of the actor or victim in a criminal street gang. Applicable Chapter 9 justification defenses retain their own conditions.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. S.B. 1637 changed the firearm-pointing presumption and added the narrow officer exception effective September 1, 2025. If any element occurred before that date, the Act preserves earlier law. The Class A/third-degree grades predate that amendment; a current version date does not first create them.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(b)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.21",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.22",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.31",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.32",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.33",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.51",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "52130008"
+  },
+  {
+    "id": "tx-pc-22-05-discharge-habitation",
+    "name": "Deadly conduct (firearm discharge toward habitation)",
+    "officialTitle": "DEADLY CONDUCT.",
+    "category": "felony",
+    "code": "22.05(b)(2)",
+    "citation": "Tex. Penal Code § 22.05(b)(2)",
+    "conduct": "Knowingly discharging a firearm at or in the direction of a habitation AND being reckless as to whether it is occupied. Under §30.01, habitation means a structure or vehicle adapted for overnight accommodation, including separately secured or occupied portions and appurtenant or connected structures. The State must prove conscious disregard of the occupancy risk; the statute does not require proof that someone was actually inside. Discharge and occupancy recklessness are separate conditions. The narrow peace-officer exception in (f) applies only to (b)(1), not this branch; generally applicable Chapter 9 justification requires its own conditions. Section 22.06 supplies only a limited effective-consent or reasonable-belief-in-consent defense: the conduct did not threaten or inflict serious bodily injury, OR the victim knew it was a risk of the victim’s occupation, recognized medical treatment, or a scientific experiment conducted by recognized methods. Consent alone is not a general defense to serious-injury danger. The defense is unavailable for conduct required for initiation or continued membership of the actor or victim in a criminal street gang. Applicable Chapter 9 justification defenses retain their own conditions.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. S.B. 1637 changed the firearm-pointing presumption and added the narrow officer exception effective September 1, 2025. If any element occurred before that date, the Act preserves earlier law. The Class A/third-degree grades predate that amendment; a current version date does not first create them.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(b)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.21",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.22",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.31",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.32",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.33",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.51",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "52130008"
+  },
+  {
+    "id": "tx-pc-22-05-discharge-building",
+    "name": "Deadly conduct (firearm discharge toward building)",
+    "officialTitle": "DEADLY CONDUCT.",
+    "category": "felony",
+    "code": "22.05(b)(2)",
+    "citation": "Tex. Penal Code § 22.05(b)(2)",
+    "conduct": "Knowingly discharging a firearm at or in the direction of a building AND being reckless as to whether it is occupied. Under §30.01, building means an enclosed structure intended for use or occupation as a habitation or for trade, manufacture, ornament or use. The State must prove conscious disregard of the occupancy risk; the statute does not require proof that someone was actually inside. Discharge and occupancy recklessness are separate conditions. The narrow peace-officer exception in (f) applies only to (b)(1), not this branch; generally applicable Chapter 9 justification requires its own conditions. Section 22.06 supplies only a limited effective-consent or reasonable-belief-in-consent defense: the conduct did not threaten or inflict serious bodily injury, OR the victim knew it was a risk of the victim’s occupation, recognized medical treatment, or a scientific experiment conducted by recognized methods. Consent alone is not a general defense to serious-injury danger. The defense is unavailable for conduct required for initiation or continued membership of the actor or victim in a criminal street gang. Applicable Chapter 9 justification defenses retain their own conditions.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. S.B. 1637 changed the firearm-pointing presumption and added the narrow officer exception effective September 1, 2025. If any element occurred before that date, the Act preserves earlier law. The Class A/third-degree grades predate that amendment; a current version date does not first create them.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(b)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.21",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.22",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.31",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.32",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.33",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.51",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "52130008"
+  },
+  {
+    "id": "tx-pc-22-05-discharge-vehicle",
+    "name": "Deadly conduct (firearm discharge toward vehicle)",
+    "officialTitle": "DEADLY CONDUCT.",
+    "category": "felony",
+    "code": "22.05(b)(2)",
+    "citation": "Tex. Penal Code § 22.05(b)(2)",
+    "conduct": "Knowingly discharging a firearm at or in the direction of a vehicle AND being reckless as to whether it is occupied. Under §30.01, vehicle means a device in, on or by which a person or property is or may be propelled, moved or drawn in the normal course of commerce or transportation. The State must prove conscious disregard of the occupancy risk; the statute does not require proof that someone was actually inside. Discharge and occupancy recklessness are separate conditions. The narrow peace-officer exception in (f) applies only to (b)(1), not this branch; generally applicable Chapter 9 justification requires its own conditions. Section 22.06 supplies only a limited effective-consent or reasonable-belief-in-consent defense: the conduct did not threaten or inflict serious bodily injury, OR the victim knew it was a risk of the victim’s occupation, recognized medical treatment, or a scientific experiment conducted by recognized methods. Consent alone is not a general defense to serious-injury danger. The defense is unavailable for conduct required for initiation or continued membership of the actor or victim in a criminal street gang. Applicable Chapter 9 justification defenses retain their own conditions.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. S.B. 1637 changed the firearm-pointing presumption and added the narrow officer exception effective September 1, 2025. If any element occurred before that date, the Act preserves earlier law. The Class A/third-degree grades predate that amendment; a current version date does not first create them.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(b)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.05",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.06",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "30.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "71.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.21",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.22",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.31",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.32",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.33",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "9.51",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "CR",
+        "section": "2A.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "52130008"
+  },
+  {
+    "id": "tx-pc-22-11-confined-listed",
+    "name": "Fluid-contact harassment (confined actor; listed bodily substances)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(1)",
+    "citation": "Tex. Penal Code § 22.11(a)(1)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: While imprisoned or confined in a correctional or detention facility, causing another person to contact blood, seminal fluid, vaginal fluid, saliva, urine or feces of the actor, another person or an animal. The recipient need not be a public servant under this branch. The facility must satisfy (d): a secure correctional facility; the qualifying Family Code §51.02 secure correctional/detention facilities operated by or under contract with a juvenile board or TJJD; or another facility operated by or under contract with TJJD. Mere arrest without the specified confinement is not this predicate. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-11-confined-other-liquid",
+    "name": "Fluid-contact harassment (confined actor; other fluid/liquid)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(1)",
+    "citation": "Tex. Penal Code § 22.11(a)(1)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: While imprisoned or confined in a correctional or detention facility, causing another person to contact any other fluid or liquid (apart from the six listed bodily substances of the actor, another person or an animal; this other-liquid branch is not limited to fluids from a person or animal). The recipient need not be a public servant under this branch. The facility must satisfy (d): a secure correctional facility; the qualifying Family Code §51.02 secure correctional/detention facilities operated by or under contract with a juvenile board or TJJD; or another facility operated by or under contract with TJJD. Mere arrest without the specified confinement is not this predicate. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025. This choice’s other-fluid predicate is limited to the 2025 expansion, not backdated.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(13)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "FA",
+        "section": "51.02",
+        "subdivision": "(14)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-11-tcco-duty-listed",
+    "name": "Fluid-contact harassment (TCCO officer on duty; listed bodily substances)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(2)(A)(i)",
+    "citation": "Tex. Penal Code § 22.11(a)(2)(A)(i)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: While committed to a civil commitment facility, causing an officer or employee of the Texas Civil Commitment Office to contact blood, seminal fluid, vaginal fluid, saliva, urine or feces of the actor, another person or an animal while that officer or employee lawfully discharges official duty AT a civil commitment facility. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense. Civil commitment is the specific §1.07(a)(8-a) facility predicate, not an inference from imprisonment alone. Subsection (f)’s distinctive-uniform/badge presumption concerns the specified TCCO or contractor status; it does not dispense with proof of the applicable duty or retaliation nexus, any required contract scope, intent or contact. Under §2.05(a) the predicate facts must be proved beyond a reasonable doubt, the jury may decline the inference, and other elements still require proof.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(2)(A)(i)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.083",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-11-tcco-duty-other-liquid",
+    "name": "Fluid-contact harassment (TCCO officer on duty; other fluid/liquid)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(2)(A)(i)",
+    "citation": "Tex. Penal Code § 22.11(a)(2)(A)(i)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: While committed to a civil commitment facility, causing an officer or employee of the Texas Civil Commitment Office to contact any other fluid or liquid (apart from the six listed bodily substances of the actor, another person or an animal; this other-liquid branch is not limited to fluids from a person or animal) while that officer or employee lawfully discharges official duty AT a civil commitment facility. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense. Civil commitment is the specific §1.07(a)(8-a) facility predicate, not an inference from imprisonment alone. Subsection (f)’s distinctive-uniform/badge presumption concerns the specified TCCO or contractor status; it does not dispense with proof of the applicable duty or retaliation nexus, any required contract scope, intent or contact. Under §2.05(a) the predicate facts must be proved beyond a reasonable doubt, the jury may decline the inference, and other elements still require proof.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025. This choice’s other-fluid predicate is limited to the 2025 expansion, not backdated.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(2)(A)(i)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.083",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-11-tcco-retaliation-listed",
+    "name": "Fluid-contact harassment (TCCO retaliation; listed bodily substances)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(2)(A)(ii)",
+    "citation": "Tex. Penal Code § 22.11(a)(2)(A)(ii)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: While committed to a civil commitment facility, causing an officer or employee of the Texas Civil Commitment Office to contact blood, seminal fluid, vaginal fluid, saliva, urine or feces of the actor, another person or an animal in retaliation for or on account of that person’s exercise of official power or performance of official duty. This branch does not import (i)’s contemporaneous-duty-at-facility requirement. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense. Civil commitment is the specific §1.07(a)(8-a) facility predicate, not an inference from imprisonment alone. Subsection (f)’s distinctive-uniform/badge presumption concerns the specified TCCO or contractor status; it does not dispense with proof of the applicable duty or retaliation nexus, any required contract scope, intent or contact. Under §2.05(a) the predicate facts must be proved beyond a reasonable doubt, the jury may decline the inference, and other elements still require proof.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(2)(A)(ii)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.083",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-11-tcco-retaliation-other-liquid",
+    "name": "Fluid-contact harassment (TCCO retaliation; other fluid/liquid)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(2)(A)(ii)",
+    "citation": "Tex. Penal Code § 22.11(a)(2)(A)(ii)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: While committed to a civil commitment facility, causing an officer or employee of the Texas Civil Commitment Office to contact any other fluid or liquid (apart from the six listed bodily substances of the actor, another person or an animal; this other-liquid branch is not limited to fluids from a person or animal) in retaliation for or on account of that person’s exercise of official power or performance of official duty. This branch does not import (i)’s contemporaneous-duty-at-facility requirement. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense. Civil commitment is the specific §1.07(a)(8-a) facility predicate, not an inference from imprisonment alone. Subsection (f)’s distinctive-uniform/badge presumption concerns the specified TCCO or contractor status; it does not dispense with proof of the applicable duty or retaliation nexus, any required contract scope, intent or contact. Under §2.05(a) the predicate facts must be proved beyond a reasonable doubt, the jury may decline the inference, and other elements still require proof.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025. This choice’s other-fluid predicate is limited to the 2025 expansion, not backdated.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(2)(A)(ii)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.083",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-11-contractor-duty-listed",
+    "name": "Fluid-contact harassment (authorized contractor performing service; listed bodily substances)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(2)(B)(i)",
+    "citation": "Tex. Penal Code § 22.11(a)(2)(B)(i)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: While committed to a civil commitment facility, causing a person contracting with the state to perform a service in the facility, or that contractor’s employee, to contact blood, seminal fluid, vaginal fluid, saliva, urine or feces of the actor, another person or an animal while performing a service within the contract’s scope, with the actor KNOWING the person or employee is authorized by the state to provide that service. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense. Civil commitment is the specific §1.07(a)(8-a) facility predicate, not an inference from imprisonment alone. Subsection (f)’s distinctive-uniform/badge presumption concerns the specified TCCO or contractor status; it does not dispense with proof of the applicable duty or retaliation nexus, any required contract scope, intent or contact. Under §2.05(a) the predicate facts must be proved beyond a reasonable doubt, the jury may decline the inference, and other elements still require proof.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(2)(B)(i)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.083",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-11-contractor-duty-other-liquid",
+    "name": "Fluid-contact harassment (authorized contractor performing service; other fluid/liquid)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(2)(B)(i)",
+    "citation": "Tex. Penal Code § 22.11(a)(2)(B)(i)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: While committed to a civil commitment facility, causing a person contracting with the state to perform a service in the facility, or that contractor’s employee, to contact any other fluid or liquid (apart from the six listed bodily substances of the actor, another person or an animal; this other-liquid branch is not limited to fluids from a person or animal) while performing a service within the contract’s scope, with the actor KNOWING the person or employee is authorized by the state to provide that service. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense. Civil commitment is the specific §1.07(a)(8-a) facility predicate, not an inference from imprisonment alone. Subsection (f)’s distinctive-uniform/badge presumption concerns the specified TCCO or contractor status; it does not dispense with proof of the applicable duty or retaliation nexus, any required contract scope, intent or contact. Under §2.05(a) the predicate facts must be proved beyond a reasonable doubt, the jury may decline the inference, and other elements still require proof.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025. This choice’s other-fluid predicate is limited to the 2025 expansion, not backdated.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(2)(B)(i)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.083",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-11-contractor-retaliation-listed",
+    "name": "Fluid-contact harassment (contract-service retaliation; listed bodily substances)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(2)(B)(ii)",
+    "citation": "Tex. Penal Code § 22.11(a)(2)(B)(ii)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: While committed to a civil commitment facility, causing the specified state contractor or contractor’s employee to contact blood, seminal fluid, vaginal fluid, saliva, urine or feces of the actor, another person or an animal in retaliation for or on account of performance of a service within the contract’s scope. This branch does not rewrite the contractor as any person present at the facility or import (i)’s separate contemporaneous-service conditions. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense. Civil commitment is the specific §1.07(a)(8-a) facility predicate, not an inference from imprisonment alone. Subsection (f)’s distinctive-uniform/badge presumption concerns the specified TCCO or contractor status; it does not dispense with proof of the applicable duty or retaliation nexus, any required contract scope, intent or contact. Under §2.05(a) the predicate facts must be proved beyond a reasonable doubt, the jury may decline the inference, and other elements still require proof.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(2)(B)(ii)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.083",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-11-contractor-retaliation-other-liquid",
+    "name": "Fluid-contact harassment (contract-service retaliation; other fluid/liquid)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(2)(B)(ii)",
+    "citation": "Tex. Penal Code § 22.11(a)(2)(B)(ii)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: While committed to a civil commitment facility, causing the specified state contractor or contractor’s employee to contact any other fluid or liquid (apart from the six listed bodily substances of the actor, another person or an animal; this other-liquid branch is not limited to fluids from a person or animal) in retaliation for or on account of performance of a service within the contract’s scope. This branch does not rewrite the contractor as any person present at the facility or import (i)’s separate contemporaneous-service conditions. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense. Civil commitment is the specific §1.07(a)(8-a) facility predicate, not an inference from imprisonment alone. Subsection (f)’s distinctive-uniform/badge presumption concerns the specified TCCO or contractor status; it does not dispense with proof of the applicable duty or retaliation nexus, any required contract scope, intent or contact. Under §2.05(a) the predicate facts must be proved beyond a reasonable doubt, the jury may decline the inference, and other elements still require proof.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025. This choice’s other-fluid predicate is limited to the 2025 expansion, not backdated.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(2)(B)(ii)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "HS",
+        "section": "841.083",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-pc-22-11-public-duty-listed",
+    "name": "Fluid-contact harassment (known public servant on duty; listed bodily substances)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(3)",
+    "citation": "Tex. Penal Code § 22.11(a)(3)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: Causing another person the actor KNOWS is a public servant to contact blood, seminal fluid, vaginal fluid, saliva, urine or feces of the actor, another person or an animal while that public servant lawfully discharges an official duty. This branch does not require the actor to be confined or civilly committed. Public-servant status follows §1.07(a)(41), not every private employee’s job title. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense. Subsection (e) permits a knowledge-of-public-status presumption from a distinctive uniform or badge indicating that employment. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt; the jury may, but is not bound to, infer knowledge. A uniform is not an automatic finding of all offense elements.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160017"
+  },
+  {
+    "id": "tx-pc-22-11-public-duty-other-liquid",
+    "name": "Fluid-contact harassment (known public servant on duty; other fluid/liquid)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(3)",
+    "citation": "Tex. Penal Code § 22.11(a)(3)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: Causing another person the actor KNOWS is a public servant to contact any other fluid or liquid (apart from the six listed bodily substances of the actor, another person or an animal; this other-liquid branch is not limited to fluids from a person or animal) while that public servant lawfully discharges an official duty. This branch does not require the actor to be confined or civilly committed. Public-servant status follows §1.07(a)(41), not every private employee’s job title. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense. Subsection (e) permits a knowledge-of-public-status presumption from a distinctive uniform or badge indicating that employment. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt; the jury may, but is not bound to, infer knowledge. A uniform is not an automatic finding of all offense elements.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025. This choice’s other-fluid predicate is limited to the 2025 expansion, not backdated.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160017"
+  },
+  {
+    "id": "tx-pc-22-11-public-retaliation-listed",
+    "name": "Fluid-contact harassment (public-service retaliation; listed bodily substances)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(3)",
+    "citation": "Tex. Penal Code § 22.11(a)(3)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: Causing another person the actor KNOWS is a public servant to contact blood, seminal fluid, vaginal fluid, saliva, urine or feces of the actor, another person or an animal in retaliation for or on account of the servant’s exercise of official power or performance of official duty. This branch does not require contemporaneous duty, confinement or civil commitment; the public-service nexus and knowledge must still be proved. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense. Subsection (e) permits a knowledge-of-public-status presumption from a distinctive uniform or badge indicating that employment. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt; the jury may, but is not bound to, infer knowledge. A uniform is not an automatic finding of all offense elements.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160017"
+  },
+  {
+    "id": "tx-pc-22-11-public-retaliation-other-liquid",
+    "name": "Fluid-contact harassment (public-service retaliation; other fluid/liquid)",
+    "officialTitle": "HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT.",
+    "category": "felony",
+    "code": "22.11(a)(3)",
+    "citation": "Tex. Penal Code § 22.11(a)(3)",
+    "conduct": "With intent to assault, harass, annoy, alarm, abuse, torment or embarrass the affected person: Causing another person the actor KNOWS is a public servant to contact any other fluid or liquid (apart from the six listed bodily substances of the actor, another person or an animal; this other-liquid branch is not limited to fluids from a person or animal) in retaliation for or on account of the servant’s exercise of official power or performance of official duty. This branch does not require contemporaneous duty, confinement or civil commitment; the public-service nexus and knowledge must still be proved. Actual contact and the specified intent are required; a threatened splash or accidental contact alone does not establish the completed offense. Neither injury nor infectious disease is an element stated by this section. Under (g), advance warning of the intended violation is not a defense. Subsection (e) permits a knowledge-of-public-status presumption from a distinctive uniform or badge indicating that employment. Under §2.05(a), the predicate facts must be proved beyond a reasonable doubt; the jury may, but is not bound to, infer knowledge. A uniform is not an automatic finding of all offense elements.",
+    "penalty": "Third-degree felony: ordinarily two to ten years in prison and a possible fine up to $10,000. Qualifying repeat-offender and other sentencing findings require separate analysis; none is presumed. The current text reflects S.B. 1610 effective September 1, 2025: it added other fluids/liquids, the additional annoy/abuse/torment/embarrass purposes, the civil-facility status presumption and the warning rule. Listed animal bodily substances were already covered in 2017; they were NOT first added in 2025. If any offense element predates September 1, 2025, earlier law governs under the Act’s transition. The older listed-substance branches are not represented as newly created in 2025. This choice’s other-fluid predicate is limited to the 2025 expansion, not backdated.",
+    "references": [
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(g)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "22.11",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.34",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.42",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "13160017"
+  }
+]
