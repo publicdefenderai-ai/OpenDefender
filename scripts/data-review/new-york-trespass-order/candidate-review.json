@@ -1,0 +1,1324 @@
+{
+  "status": "candidate_research_no_runtime_activation",
+  "baseCommit": "38842e5c4aa002db4ea940352785af79dde8ee1b",
+  "sourcePacketHash": "81bb73969971a3f148f2c2f94f30f12af2fad4cfb254cf152a72c13edeb12c2b",
+  "counts": {
+    "primarySections": 4,
+    "subdivisionMappings": 10,
+    "heldPrimaryAlternatives": 3,
+    "retainedSources": 16,
+    "reusedSources": 12,
+    "newlyAcquiredSources": 4,
+    "publishedChoices": 0,
+    "verifiedLiveChoices": null
+  },
+  "records": [
+    {
+      "candidateId": "ny-pen-140-05-whole",
+      "section": "140.05",
+      "scope": "whole",
+      "officialTitle": "Trespass",
+      "summary": "Knowingly entering or remaining unlawfully in or upon premises; this is a violation, not a misdemeanor.",
+      "statutoryGrade": "violation",
+      "sentencingSummary": "If imprisonment is imposed, no more than fifteen days; ordinary individual fine no more than $250.",
+      "fineQualification": "Section 80.05(5) permits an alternative fine up to twice gain, with 80.00(2)–(3) definitions/findings. These ordinary individual limits exclude corporations; restitution, fees and special dispositions are not resolved here.",
+      "publicationStatus": "blocked_pending_API_legal_dates_CJI_and_product_review",
+      "bindings": [
+        {
+          "role": "statutory_identity",
+          "sourceKey": "ny:PEN:140.05",
+          "contentSha256": "9ca35db6482c30bdb26757cbf8210b59fe82512c9689af5c5a6da5d0228036e0",
+          "start": 0,
+          "end": 19,
+          "text": "§ 140.05. Trespass."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:140.05",
+          "contentSha256": "9ca35db6482c30bdb26757cbf8210b59fe82512c9689af5c5a6da5d0228036e0",
+          "start": 121,
+          "end": 145,
+          "text": "Trespass is a violation."
+        },
+        {
+          "role": "conduct_subdivision",
+          "sourceKey": "ny:PEN:140.05",
+          "contentSha256": "9ca35db6482c30bdb26757cbf8210b59fe82512c9689af5c5a6da5d0228036e0",
+          "start": 21,
+          "end": 119,
+          "text": "A person is guilty of trespass when he knowingly enters or remains\nunlawfully in or upon premises."
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:10.00",
+          "contentSha256": "fce1b50fd1c570a18acbc64a8ad2dd3f0441a1d0d7a2e37697d69275948f2c70",
+          "start": 0,
+          "end": 9109
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:15.05",
+          "contentSha256": "d46131dd4d8df91c1dc2a4d60afdde2b975f31d75d583acd7ba527e73fc624a0",
+          "start": 0,
+          "end": 1618
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:60.01",
+          "contentSha256": "26ac682077046758c02ee14bdb7eeb64cca685577d538b394c4ba9cb505ef02f",
+          "start": 0,
+          "end": 3055
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:65.00",
+          "contentSha256": "2f9eb9fefe298a5b86bf6f90f4934c44c1580587541ec3118da1e3cf8fcaaed6",
+          "start": 0,
+          "end": 7399
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:140.00",
+          "contentSha256": "c7cd579ded50b32cd28c39123e520b89acac12d5686a550988560284011efd37",
+          "start": 0,
+          "end": 2318
+        },
+        {
+          "role": "ordinary_imprisonment",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 3311,
+          "end": 3721,
+          "text": "4. Violation. A sentence of imprisonment for a violation shall be a\ndefinite sentence. When such a sentence is imposed the term shall be\nfixed by the court, and shall not exceed fifteen days.\n\nIn the case of a violation defined outside this chapter, if the\nsentence is expressly specified in the law or ordinance that defines the\noffense and consists solely of a fine, no term of imprisonment shall be\nimposed."
+        },
+        {
+          "role": "ordinary_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 841,
+          "end": 1231,
+          "text": "4. Violation. A sentence to pay a fine for a violation shall be a\nsentence to pay an amount, fixed by the court, not exceeding two hundred\nfifty dollars.\n\nIn the case of a violation defined outside this chapter, if the amount\nof the fine is expressly specified in the law or ordinance that defines\nthe offense, the amount of the fine shall be fixed in accordance with\nthat law or ordinance."
+        },
+        {
+          "role": "alternative_gain_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 1233,
+          "end": 1959,
+          "text": "5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence."
+        }
+      ]
+    },
+    {
+      "candidateId": "ny-pen-140-15-1",
+      "section": "140.15",
+      "scope": "1",
+      "officialTitle": "Criminal trespass in the second degree",
+      "summary": "Knowingly entering or remaining unlawfully in a dwelling. The incorporated dwelling and license/privilege definitions apply.",
+      "statutoryGrade": "class A misdemeanor",
+      "sentencingSummary": "If imprisonment is imposed, no more than 364 days; ordinary individual fine no more than $1,000.",
+      "fineQualification": "Section 80.05(5) permits an alternative fine up to twice gain, with 80.00(2)–(3) definitions/findings. These ordinary individual limits exclude corporations; restitution, fees and special dispositions are not resolved here.",
+      "publicationStatus": "blocked_pending_API_legal_dates_CJI_and_product_review",
+      "bindings": [
+        {
+          "role": "statutory_identity",
+          "sourceKey": "ny:PEN:140.15",
+          "contentSha256": "bf4f1c7ede295c7c642e2672d432954ee0bdafdd8ce8cde1fb7b25d04f714042",
+          "start": 0,
+          "end": 48,
+          "text": "§ 140.15 Criminal trespass in the second degree."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:140.15",
+          "contentSha256": "bf4f1c7ede295c7c642e2672d432954ee0bdafdd8ce8cde1fb7b25d04f714042",
+          "start": 1342,
+          "end": 1406,
+          "text": "Criminal trespass in the second degree is a class A misdemeanor."
+        },
+        {
+          "role": "shared_conduct_preamble",
+          "sourceKey": "ny:PEN:140.15",
+          "contentSha256": "bf4f1c7ede295c7c642e2672d432954ee0bdafdd8ce8cde1fb7b25d04f714042",
+          "start": 50,
+          "end": 116,
+          "text": "A person is guilty of criminal trespass in the second degree when:"
+        },
+        {
+          "role": "conduct_subdivision",
+          "sourceKey": "ny:PEN:140.15",
+          "contentSha256": "bf4f1c7ede295c7c642e2672d432954ee0bdafdd8ce8cde1fb7b25d04f714042",
+          "start": 118,
+          "end": 187,
+          "text": "1. he or she knowingly enters or remains unlawfully in a dwelling; or"
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:10.00",
+          "contentSha256": "fce1b50fd1c570a18acbc64a8ad2dd3f0441a1d0d7a2e37697d69275948f2c70",
+          "start": 0,
+          "end": 9109
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:15.05",
+          "contentSha256": "d46131dd4d8df91c1dc2a4d60afdde2b975f31d75d583acd7ba527e73fc624a0",
+          "start": 0,
+          "end": 1618
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:60.01",
+          "contentSha256": "26ac682077046758c02ee14bdb7eeb64cca685577d538b394c4ba9cb505ef02f",
+          "start": 0,
+          "end": 3055
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:65.00",
+          "contentSha256": "2f9eb9fefe298a5b86bf6f90f4934c44c1580587541ec3118da1e3cf8fcaaed6",
+          "start": 0,
+          "end": 7399
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:140.00",
+          "contentSha256": "c7cd579ded50b32cd28c39123e520b89acac12d5686a550988560284011efd37",
+          "start": 0,
+          "end": 2318
+        },
+        {
+          "role": "ordinary_imprisonment",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 67,
+          "end": 295,
+          "text": "1. Class A misdemeanor. A sentence of imprisonment for a class A\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nhundred sixty-four days."
+        },
+        {
+          "role": "ordinary_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 47,
+          "end": 442,
+          "text": "1. Class A misdemeanor. A sentence to pay a fine for a class A\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding one thousand dollars, provided, however, that a sentence\nimposed for a violation of section 215.80 of this chapter may include a\nfine in an amount equivalent to double the value of the property\nunlawfully disposed of in the commission of the crime."
+        },
+        {
+          "role": "alternative_gain_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 1233,
+          "end": 1959,
+          "text": "5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence."
+        }
+      ]
+    },
+    {
+      "candidateId": "ny-pen-140-15-2",
+      "section": "140.15",
+      "scope": "2",
+      "officialTitle": "Criminal trespass in the second degree",
+      "summary": "A person required to maintain Article 6-C registration and designated level two or three enters or remains at an enumerated school knowing the registration-offense victim attends or formerly attended. Five exceptions remain: registered student, lawful student event participant, parent/guardian attending their child’s event, designated polling place for voting, or limited superintendent/chief-administrator authorization. This branch is not rewritten as the separate unlawful-dwelling branch. Registration status and risk designation must be established independently.",
+      "statutoryGrade": "class A misdemeanor",
+      "sentencingSummary": "If imprisonment is imposed, no more than 364 days; ordinary individual fine no more than $1,000.",
+      "fineQualification": "Section 80.05(5) permits an alternative fine up to twice gain, with 80.00(2)–(3) definitions/findings. These ordinary individual limits exclude corporations; restitution, fees and special dispositions are not resolved here.",
+      "publicationStatus": "blocked_pending_API_legal_dates_CJI_and_product_review",
+      "bindings": [
+        {
+          "role": "statutory_identity",
+          "sourceKey": "ny:PEN:140.15",
+          "contentSha256": "bf4f1c7ede295c7c642e2672d432954ee0bdafdd8ce8cde1fb7b25d04f714042",
+          "start": 0,
+          "end": 48,
+          "text": "§ 140.15 Criminal trespass in the second degree."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:140.15",
+          "contentSha256": "bf4f1c7ede295c7c642e2672d432954ee0bdafdd8ce8cde1fb7b25d04f714042",
+          "start": 1342,
+          "end": 1406,
+          "text": "Criminal trespass in the second degree is a class A misdemeanor."
+        },
+        {
+          "role": "shared_conduct_preamble",
+          "sourceKey": "ny:PEN:140.15",
+          "contentSha256": "bf4f1c7ede295c7c642e2672d432954ee0bdafdd8ce8cde1fb7b25d04f714042",
+          "start": 50,
+          "end": 116,
+          "text": "A person is guilty of criminal trespass in the second degree when:"
+        },
+        {
+          "role": "conduct_subdivision",
+          "sourceKey": "ny:PEN:140.15",
+          "contentSha256": "bf4f1c7ede295c7c642e2672d432954ee0bdafdd8ce8cde1fb7b25d04f714042",
+          "start": 189,
+          "end": 1340,
+          "text": "2. being a person required to maintain registration under article\nsix-C of the correction law and designated a level two or level three\noffender pursuant to subdivision six of section one hundred\nsixty-eight-l of the correction law, he or she enters or remains in a\npublic or private elementary, parochial, intermediate, junior high,\nvocational or high school knowing that the victim of the offense for\nwhich such registration is required attends or formerly attended such\nschool. It shall not be an offense subject to prosecution under this\nsubdivision if: the person is a lawfully registered student at such\nschool; the person is a lawful student participant in a school sponsored\nevent; the person is a parent or a legal guardian of a lawfully\nregistered student at such school and enters the school for the purpose\nof attending their child's or dependent's event or activity; such school\nis the person's designated polling place and he or she enters such\nschool building for the limited purpose of voting; or if the person\nenters such school building for the limited purposes authorized by the\nsuperintendent or chief administrator of such school."
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:10.00",
+          "contentSha256": "fce1b50fd1c570a18acbc64a8ad2dd3f0441a1d0d7a2e37697d69275948f2c70",
+          "start": 0,
+          "end": 9109
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:15.05",
+          "contentSha256": "d46131dd4d8df91c1dc2a4d60afdde2b975f31d75d583acd7ba527e73fc624a0",
+          "start": 0,
+          "end": 1618
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:60.01",
+          "contentSha256": "26ac682077046758c02ee14bdb7eeb64cca685577d538b394c4ba9cb505ef02f",
+          "start": 0,
+          "end": 3055
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:65.00",
+          "contentSha256": "2f9eb9fefe298a5b86bf6f90f4934c44c1580587541ec3118da1e3cf8fcaaed6",
+          "start": 0,
+          "end": 7399
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:COR:168-A",
+          "contentSha256": "5990ba69145b4b830fa0e6d90b16b0a84dd821cb2b4b0319cf7bbe9bbdbd47e7",
+          "start": 0,
+          "end": 10010
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:COR:168-F",
+          "contentSha256": "f7fd99bbbd025df9b9659fc59b3bf79d8f2e999dca5f1b2a9d4828171da258b1",
+          "start": 0,
+          "end": 7120
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:COR:168-L",
+          "contentSha256": "33a3fadf95aab50468d4eb435b5f743e0e75777003bec7c117f471968f2a222c",
+          "start": 0,
+          "end": 10280
+        },
+        {
+          "role": "ordinary_imprisonment",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 67,
+          "end": 295,
+          "text": "1. Class A misdemeanor. A sentence of imprisonment for a class A\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nhundred sixty-four days."
+        },
+        {
+          "role": "ordinary_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 47,
+          "end": 442,
+          "text": "1. Class A misdemeanor. A sentence to pay a fine for a class A\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding one thousand dollars, provided, however, that a sentence\nimposed for a violation of section 215.80 of this chapter may include a\nfine in an amount equivalent to double the value of the property\nunlawfully disposed of in the commission of the crime."
+        },
+        {
+          "role": "alternative_gain_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 1233,
+          "end": 1959,
+          "text": "5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence."
+        }
+      ]
+    },
+    {
+      "candidateId": "ny-pen-215-50-1",
+      "section": "215.50",
+      "scope": "1",
+      "officialTitle": "Criminal contempt in the second degree",
+      "summary": "Disorderly, contemptuous or insolent behavior during a court sitting, in its immediate view and presence, directly tending to interrupt proceedings or impair respect for its authority. Mere disagreement outside these limits is not substituted.",
+      "statutoryGrade": "class A misdemeanor",
+      "sentencingSummary": "If imprisonment is imposed, no more than 364 days; ordinary individual fine no more than $1,000.",
+      "fineQualification": "Section 80.05(5) permits an alternative fine up to twice gain, with 80.00(2)–(3) definitions/findings. These ordinary individual limits exclude corporations; restitution, fees and special dispositions are not resolved here.",
+      "publicationStatus": "blocked_pending_API_legal_dates_CJI_and_product_review",
+      "bindings": [
+        {
+          "role": "statutory_identity",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 0,
+          "end": 48,
+          "text": "§ 215.50 Criminal contempt in the second degree."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 1811,
+          "end": 1875,
+          "text": "Criminal contempt in the second degree is a class A misdemeanor."
+        },
+        {
+          "role": "shared_conduct_preamble",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 50,
+          "end": 159,
+          "text": "A person is guilty of criminal contempt in the second degree when he\nengages in any of the following conduct:"
+        },
+        {
+          "role": "conduct_subdivision",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 161,
+          "end": 387,
+          "text": "1. Disorderly, contemptuous, or insolent behavior, committed during\nthe sitting of a court, in its immediate view and presence and directly\ntending to interrupt its proceedings or to impair the respect due to its\nauthority; or"
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:10.00",
+          "contentSha256": "fce1b50fd1c570a18acbc64a8ad2dd3f0441a1d0d7a2e37697d69275948f2c70",
+          "start": 0,
+          "end": 9109
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:15.05",
+          "contentSha256": "d46131dd4d8df91c1dc2a4d60afdde2b975f31d75d583acd7ba527e73fc624a0",
+          "start": 0,
+          "end": 1618
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:60.01",
+          "contentSha256": "26ac682077046758c02ee14bdb7eeb64cca685577d538b394c4ba9cb505ef02f",
+          "start": 0,
+          "end": 3055
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:65.00",
+          "contentSha256": "2f9eb9fefe298a5b86bf6f90f4934c44c1580587541ec3118da1e3cf8fcaaed6",
+          "start": 0,
+          "end": 7399
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099
+        },
+        {
+          "role": "ordinary_imprisonment",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 67,
+          "end": 295,
+          "text": "1. Class A misdemeanor. A sentence of imprisonment for a class A\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nhundred sixty-four days."
+        },
+        {
+          "role": "ordinary_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 47,
+          "end": 442,
+          "text": "1. Class A misdemeanor. A sentence to pay a fine for a class A\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding one thousand dollars, provided, however, that a sentence\nimposed for a violation of section 215.80 of this chapter may include a\nfine in an amount equivalent to double the value of the property\nunlawfully disposed of in the commission of the crime."
+        },
+        {
+          "role": "alternative_gain_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 1233,
+          "end": 1959,
+          "text": "5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence."
+        }
+      ]
+    },
+    {
+      "candidateId": "ny-pen-215-50-2",
+      "section": "215.50",
+      "scope": "2",
+      "officialTitle": "Criminal contempt in the second degree",
+      "summary": "Breach of the peace, noise or other disturbance directly tending to interrupt court proceedings.",
+      "statutoryGrade": "class A misdemeanor",
+      "sentencingSummary": "If imprisonment is imposed, no more than 364 days; ordinary individual fine no more than $1,000.",
+      "fineQualification": "Section 80.05(5) permits an alternative fine up to twice gain, with 80.00(2)–(3) definitions/findings. These ordinary individual limits exclude corporations; restitution, fees and special dispositions are not resolved here.",
+      "publicationStatus": "blocked_pending_API_legal_dates_CJI_and_product_review",
+      "bindings": [
+        {
+          "role": "statutory_identity",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 0,
+          "end": 48,
+          "text": "§ 215.50 Criminal contempt in the second degree."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 1811,
+          "end": 1875,
+          "text": "Criminal contempt in the second degree is a class A misdemeanor."
+        },
+        {
+          "role": "shared_conduct_preamble",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 50,
+          "end": 159,
+          "text": "A person is guilty of criminal contempt in the second degree when he\nengages in any of the following conduct:"
+        },
+        {
+          "role": "conduct_subdivision",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 389,
+          "end": 497,
+          "text": "2. Breach of the peace, noise, or other disturbance, directly tending\nto interrupt a court's proceedings; or"
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:10.00",
+          "contentSha256": "fce1b50fd1c570a18acbc64a8ad2dd3f0441a1d0d7a2e37697d69275948f2c70",
+          "start": 0,
+          "end": 9109
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:15.05",
+          "contentSha256": "d46131dd4d8df91c1dc2a4d60afdde2b975f31d75d583acd7ba527e73fc624a0",
+          "start": 0,
+          "end": 1618
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:60.01",
+          "contentSha256": "26ac682077046758c02ee14bdb7eeb64cca685577d538b394c4ba9cb505ef02f",
+          "start": 0,
+          "end": 3055
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:65.00",
+          "contentSha256": "2f9eb9fefe298a5b86bf6f90f4934c44c1580587541ec3118da1e3cf8fcaaed6",
+          "start": 0,
+          "end": 7399
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099
+        },
+        {
+          "role": "ordinary_imprisonment",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 67,
+          "end": 295,
+          "text": "1. Class A misdemeanor. A sentence of imprisonment for a class A\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nhundred sixty-four days."
+        },
+        {
+          "role": "ordinary_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 47,
+          "end": 442,
+          "text": "1. Class A misdemeanor. A sentence to pay a fine for a class A\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding one thousand dollars, provided, however, that a sentence\nimposed for a violation of section 215.80 of this chapter may include a\nfine in an amount equivalent to double the value of the property\nunlawfully disposed of in the commission of the crime."
+        },
+        {
+          "role": "alternative_gain_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 1233,
+          "end": 1959,
+          "text": "5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence."
+        }
+      ]
+    },
+    {
+      "candidateId": "ny-pen-215-50-3",
+      "section": "215.50",
+      "scope": "3",
+      "officialTitle": "Criminal contempt in the second degree",
+      "summary": "Intentional disobedience or resistance to lawful court process or mandate, excluding cases involving or growing out of labor disputes as defined in Judiciary Law 753-a(2). Validity, notice and ability-to-comply requirements need judicial/procedural review before publication.",
+      "statutoryGrade": "class A misdemeanor",
+      "sentencingSummary": "If imprisonment is imposed, no more than 364 days; ordinary individual fine no more than $1,000.",
+      "fineQualification": "Section 80.05(5) permits an alternative fine up to twice gain, with 80.00(2)–(3) definitions/findings. These ordinary individual limits exclude corporations; restitution, fees and special dispositions are not resolved here.",
+      "publicationStatus": "blocked_pending_API_legal_dates_CJI_and_product_review",
+      "bindings": [
+        {
+          "role": "statutory_identity",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 0,
+          "end": 48,
+          "text": "§ 215.50 Criminal contempt in the second degree."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 1811,
+          "end": 1875,
+          "text": "Criminal contempt in the second degree is a class A misdemeanor."
+        },
+        {
+          "role": "shared_conduct_preamble",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 50,
+          "end": 159,
+          "text": "A person is guilty of criminal contempt in the second degree when he\nengages in any of the following conduct:"
+        },
+        {
+          "role": "conduct_subdivision",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 499,
+          "end": 743,
+          "text": "3. Intentional disobedience or resistance to the lawful process or\nother mandate of a court except in cases involving or growing out of\nlabor disputes as defined by subdivision two of section seven hundred\nfifty-three-a of the judiciary law; or"
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:10.00",
+          "contentSha256": "fce1b50fd1c570a18acbc64a8ad2dd3f0441a1d0d7a2e37697d69275948f2c70",
+          "start": 0,
+          "end": 9109
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:15.05",
+          "contentSha256": "d46131dd4d8df91c1dc2a4d60afdde2b975f31d75d583acd7ba527e73fc624a0",
+          "start": 0,
+          "end": 1618
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:60.01",
+          "contentSha256": "26ac682077046758c02ee14bdb7eeb64cca685577d538b394c4ba9cb505ef02f",
+          "start": 0,
+          "end": 3055
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:65.00",
+          "contentSha256": "2f9eb9fefe298a5b86bf6f90f4934c44c1580587541ec3118da1e3cf8fcaaed6",
+          "start": 0,
+          "end": 7399
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:JUD:753-A",
+          "contentSha256": "166a8c23203617c1c1c6b28bb085b0d804831d6c896914c2bdfc78ebfdca1c0d",
+          "start": 0,
+          "end": 2552
+        },
+        {
+          "role": "ordinary_imprisonment",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 67,
+          "end": 295,
+          "text": "1. Class A misdemeanor. A sentence of imprisonment for a class A\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nhundred sixty-four days."
+        },
+        {
+          "role": "ordinary_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 47,
+          "end": 442,
+          "text": "1. Class A misdemeanor. A sentence to pay a fine for a class A\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding one thousand dollars, provided, however, that a sentence\nimposed for a violation of section 215.80 of this chapter may include a\nfine in an amount equivalent to double the value of the property\nunlawfully disposed of in the commission of the crime."
+        },
+        {
+          "role": "alternative_gain_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 1233,
+          "end": 1959,
+          "text": "5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence."
+        }
+      ]
+    },
+    {
+      "candidateId": "ny-pen-215-50-4",
+      "section": "215.50",
+      "scope": "4",
+      "officialTitle": "Criminal contempt in the second degree",
+      "summary": "Contumacious and unlawful refusal to be sworn in a court proceeding or, after oath, to answer a legal and proper interrogatory. This is not a rule requiring answers to privileged questions; privilege, immunity and procedural conditions remain publication prerequisites.",
+      "statutoryGrade": "class A misdemeanor",
+      "sentencingSummary": "If imprisonment is imposed, no more than 364 days; ordinary individual fine no more than $1,000.",
+      "fineQualification": "Section 80.05(5) permits an alternative fine up to twice gain, with 80.00(2)–(3) definitions/findings. These ordinary individual limits exclude corporations; restitution, fees and special dispositions are not resolved here.",
+      "publicationStatus": "blocked_pending_API_legal_dates_CJI_and_product_review",
+      "bindings": [
+        {
+          "role": "statutory_identity",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 0,
+          "end": 48,
+          "text": "§ 215.50 Criminal contempt in the second degree."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 1811,
+          "end": 1875,
+          "text": "Criminal contempt in the second degree is a class A misdemeanor."
+        },
+        {
+          "role": "shared_conduct_preamble",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 50,
+          "end": 159,
+          "text": "A person is guilty of criminal contempt in the second degree when he\nengages in any of the following conduct:"
+        },
+        {
+          "role": "conduct_subdivision",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 745,
+          "end": 902,
+          "text": "4. Contumacious and unlawful refusal to be sworn as a witness in any\ncourt proceeding or, after being sworn, to answer any legal and proper\ninterrogatory; or"
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:10.00",
+          "contentSha256": "fce1b50fd1c570a18acbc64a8ad2dd3f0441a1d0d7a2e37697d69275948f2c70",
+          "start": 0,
+          "end": 9109
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:15.05",
+          "contentSha256": "d46131dd4d8df91c1dc2a4d60afdde2b975f31d75d583acd7ba527e73fc624a0",
+          "start": 0,
+          "end": 1618
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:60.01",
+          "contentSha256": "26ac682077046758c02ee14bdb7eeb64cca685577d538b394c4ba9cb505ef02f",
+          "start": 0,
+          "end": 3055
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:65.00",
+          "contentSha256": "2f9eb9fefe298a5b86bf6f90f4934c44c1580587541ec3118da1e3cf8fcaaed6",
+          "start": 0,
+          "end": 7399
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099
+        },
+        {
+          "role": "ordinary_imprisonment",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 67,
+          "end": 295,
+          "text": "1. Class A misdemeanor. A sentence of imprisonment for a class A\nmisdemeanor shall be a definite sentence. When such a sentence is\nimposed the term shall be fixed by the court, and shall not exceed three\nhundred sixty-four days."
+        },
+        {
+          "role": "ordinary_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 47,
+          "end": 442,
+          "text": "1. Class A misdemeanor. A sentence to pay a fine for a class A\nmisdemeanor shall be a sentence to pay an amount, fixed by the court,\nnot exceeding one thousand dollars, provided, however, that a sentence\nimposed for a violation of section 215.80 of this chapter may include a\nfine in an amount equivalent to double the value of the property\nunlawfully disposed of in the commission of the crime."
+        },
+        {
+          "role": "alternative_gain_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 1233,
+          "end": 1959,
+          "text": "5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence."
+        }
+      ]
+    },
+    {
+      "candidateId": "ny-pen-240-26-1",
+      "section": "240.26",
+      "scope": "1",
+      "officialTitle": "Harassment in the second degree",
+      "summary": "With intent to harass, annoy or alarm another, physical contact of the stated kind, or attempting or threatening that contact. A threat must satisfy applicable constitutional and judicial limits; mere offensive speech or a crude outburst is not automatically criminal.",
+      "statutoryGrade": "violation",
+      "sentencingSummary": "If imprisonment is imposed, no more than fifteen days; ordinary individual fine no more than $250.",
+      "fineQualification": "Section 80.05(5) permits an alternative fine up to twice gain, with 80.00(2)–(3) definitions/findings. These ordinary individual limits exclude corporations; restitution, fees and special dispositions are not resolved here.",
+      "publicationStatus": "blocked_pending_API_legal_dates_CJI_and_product_review",
+      "bindings": [
+        {
+          "role": "statutory_identity",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 0,
+          "end": 41,
+          "text": "§ 240.26 Harassment in the second degree."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 760,
+          "end": 807,
+          "text": "Harassment in the second degree is a violation."
+        },
+        {
+          "role": "shared_conduct_preamble",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 43,
+          "end": 156,
+          "text": "A person is guilty of harassment in the second degree when, with\nintent to harass, annoy or alarm another person:"
+        },
+        {
+          "role": "conduct_subdivision",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 158,
+          "end": 298,
+          "text": "1. He or she strikes, shoves, kicks or otherwise subjects such other\nperson to physical contact, or attempts or threatens to do the same; or"
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:10.00",
+          "contentSha256": "fce1b50fd1c570a18acbc64a8ad2dd3f0441a1d0d7a2e37697d69275948f2c70",
+          "start": 0,
+          "end": 9109
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:15.05",
+          "contentSha256": "d46131dd4d8df91c1dc2a4d60afdde2b975f31d75d583acd7ba527e73fc624a0",
+          "start": 0,
+          "end": 1618
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:60.01",
+          "contentSha256": "26ac682077046758c02ee14bdb7eeb64cca685577d538b394c4ba9cb505ef02f",
+          "start": 0,
+          "end": 3055
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:65.00",
+          "contentSha256": "2f9eb9fefe298a5b86bf6f90f4934c44c1580587541ec3118da1e3cf8fcaaed6",
+          "start": 0,
+          "end": 7399
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099
+        },
+        {
+          "role": "ordinary_imprisonment",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 3311,
+          "end": 3721,
+          "text": "4. Violation. A sentence of imprisonment for a violation shall be a\ndefinite sentence. When such a sentence is imposed the term shall be\nfixed by the court, and shall not exceed fifteen days.\n\nIn the case of a violation defined outside this chapter, if the\nsentence is expressly specified in the law or ordinance that defines the\noffense and consists solely of a fine, no term of imprisonment shall be\nimposed."
+        },
+        {
+          "role": "ordinary_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 841,
+          "end": 1231,
+          "text": "4. Violation. A sentence to pay a fine for a violation shall be a\nsentence to pay an amount, fixed by the court, not exceeding two hundred\nfifty dollars.\n\nIn the case of a violation defined outside this chapter, if the amount\nof the fine is expressly specified in the law or ordinance that defines\nthe offense, the amount of the fine shall be fixed in accordance with\nthat law or ordinance."
+        },
+        {
+          "role": "alternative_gain_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 1233,
+          "end": 1959,
+          "text": "5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence."
+        }
+      ]
+    },
+    {
+      "candidateId": "ny-pen-240-26-2",
+      "section": "240.26",
+      "scope": "2",
+      "officialTitle": "Harassment in the second degree",
+      "summary": "With intent to harass, annoy or alarm another, following a person in or about public places. The express labor-activity exclusion applies.",
+      "statutoryGrade": "violation",
+      "sentencingSummary": "If imprisonment is imposed, no more than fifteen days; ordinary individual fine no more than $250.",
+      "fineQualification": "Section 80.05(5) permits an alternative fine up to twice gain, with 80.00(2)–(3) definitions/findings. These ordinary individual limits exclude corporations; restitution, fees and special dispositions are not resolved here.",
+      "publicationStatus": "blocked_pending_API_legal_dates_CJI_and_product_review",
+      "bindings": [
+        {
+          "role": "statutory_identity",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 0,
+          "end": 41,
+          "text": "§ 240.26 Harassment in the second degree."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 760,
+          "end": 807,
+          "text": "Harassment in the second degree is a violation."
+        },
+        {
+          "role": "shared_conduct_preamble",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 43,
+          "end": 156,
+          "text": "A person is guilty of harassment in the second degree when, with\nintent to harass, annoy or alarm another person:"
+        },
+        {
+          "role": "conduct_subdivision",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 300,
+          "end": 370,
+          "text": "2. He or she follows a person in or about a public place or places; or"
+        },
+        {
+          "role": "labor_exclusion",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 532,
+          "end": 758,
+          "text": "Subdivisions two and three of this section shall not apply to\nactivities regulated by the national labor relations act, as amended,\nthe railway labor act, as amended, or the federal employment labor\nmanagement act, as amended."
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:10.00",
+          "contentSha256": "fce1b50fd1c570a18acbc64a8ad2dd3f0441a1d0d7a2e37697d69275948f2c70",
+          "start": 0,
+          "end": 9109
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:15.05",
+          "contentSha256": "d46131dd4d8df91c1dc2a4d60afdde2b975f31d75d583acd7ba527e73fc624a0",
+          "start": 0,
+          "end": 1618
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:60.01",
+          "contentSha256": "26ac682077046758c02ee14bdb7eeb64cca685577d538b394c4ba9cb505ef02f",
+          "start": 0,
+          "end": 3055
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:65.00",
+          "contentSha256": "2f9eb9fefe298a5b86bf6f90f4934c44c1580587541ec3118da1e3cf8fcaaed6",
+          "start": 0,
+          "end": 7399
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099
+        },
+        {
+          "role": "ordinary_imprisonment",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 3311,
+          "end": 3721,
+          "text": "4. Violation. A sentence of imprisonment for a violation shall be a\ndefinite sentence. When such a sentence is imposed the term shall be\nfixed by the court, and shall not exceed fifteen days.\n\nIn the case of a violation defined outside this chapter, if the\nsentence is expressly specified in the law or ordinance that defines the\noffense and consists solely of a fine, no term of imprisonment shall be\nimposed."
+        },
+        {
+          "role": "ordinary_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 841,
+          "end": 1231,
+          "text": "4. Violation. A sentence to pay a fine for a violation shall be a\nsentence to pay an amount, fixed by the court, not exceeding two hundred\nfifty dollars.\n\nIn the case of a violation defined outside this chapter, if the amount\nof the fine is expressly specified in the law or ordinance that defines\nthe offense, the amount of the fine shall be fixed in accordance with\nthat law or ordinance."
+        },
+        {
+          "role": "alternative_gain_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 1233,
+          "end": 1959,
+          "text": "5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence."
+        }
+      ]
+    },
+    {
+      "candidateId": "ny-pen-240-26-3",
+      "section": "240.26",
+      "scope": "3",
+      "officialTitle": "Harassment in the second degree",
+      "summary": "With intent to harass, annoy or alarm another, a course of conduct or repeated acts that alarm or seriously annoy that person and serve no legitimate purpose. The express labor-activity exclusion applies.",
+      "statutoryGrade": "violation",
+      "sentencingSummary": "If imprisonment is imposed, no more than fifteen days; ordinary individual fine no more than $250.",
+      "fineQualification": "Section 80.05(5) permits an alternative fine up to twice gain, with 80.00(2)–(3) definitions/findings. These ordinary individual limits exclude corporations; restitution, fees and special dispositions are not resolved here.",
+      "publicationStatus": "blocked_pending_API_legal_dates_CJI_and_product_review",
+      "bindings": [
+        {
+          "role": "statutory_identity",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 0,
+          "end": 41,
+          "text": "§ 240.26 Harassment in the second degree."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 760,
+          "end": 807,
+          "text": "Harassment in the second degree is a violation."
+        },
+        {
+          "role": "shared_conduct_preamble",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 43,
+          "end": 156,
+          "text": "A person is guilty of harassment in the second degree when, with\nintent to harass, annoy or alarm another person:"
+        },
+        {
+          "role": "conduct_subdivision",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 372,
+          "end": 530,
+          "text": "3. He or she engages in a course of conduct or repeatedly commits acts\nwhich alarm or seriously annoy such other person and which serve no\nlegitimate purpose."
+        },
+        {
+          "role": "labor_exclusion",
+          "sourceKey": "ny:PEN:240.26",
+          "contentSha256": "41026234722ee52982c604080b1a3f39b95ea0c506cb74f4d7ac493af58de5bb",
+          "start": 532,
+          "end": 758,
+          "text": "Subdivisions two and three of this section shall not apply to\nactivities regulated by the national labor relations act, as amended,\nthe railway labor act, as amended, or the federal employment labor\nmanagement act, as amended."
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:10.00",
+          "contentSha256": "fce1b50fd1c570a18acbc64a8ad2dd3f0441a1d0d7a2e37697d69275948f2c70",
+          "start": 0,
+          "end": 9109
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:15.05",
+          "contentSha256": "d46131dd4d8df91c1dc2a4d60afdde2b975f31d75d583acd7ba527e73fc624a0",
+          "start": 0,
+          "end": 1618
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:60.01",
+          "contentSha256": "26ac682077046758c02ee14bdb7eeb64cca685577d538b394c4ba9cb505ef02f",
+          "start": 0,
+          "end": 3055
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:65.00",
+          "contentSha256": "2f9eb9fefe298a5b86bf6f90f4934c44c1580587541ec3118da1e3cf8fcaaed6",
+          "start": 0,
+          "end": 7399
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 0,
+          "end": 3721
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 0,
+          "end": 2039
+        },
+        {
+          "role": "dependency_context",
+          "sourceKey": "ny:PEN:80.00",
+          "contentSha256": "37abae9ec6915e72afecb97975425e9332451377e0b84e7564cf650b577ae500",
+          "start": 0,
+          "end": 3099
+        },
+        {
+          "role": "ordinary_imprisonment",
+          "sourceKey": "ny:PEN:70.15",
+          "contentSha256": "c42ad9782002f5f2f67b588cecd5fd447758be9d6b94d546bdeb806abc8f25a6",
+          "start": 3311,
+          "end": 3721,
+          "text": "4. Violation. A sentence of imprisonment for a violation shall be a\ndefinite sentence. When such a sentence is imposed the term shall be\nfixed by the court, and shall not exceed fifteen days.\n\nIn the case of a violation defined outside this chapter, if the\nsentence is expressly specified in the law or ordinance that defines the\noffense and consists solely of a fine, no term of imprisonment shall be\nimposed."
+        },
+        {
+          "role": "ordinary_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 841,
+          "end": 1231,
+          "text": "4. Violation. A sentence to pay a fine for a violation shall be a\nsentence to pay an amount, fixed by the court, not exceeding two hundred\nfifty dollars.\n\nIn the case of a violation defined outside this chapter, if the amount\nof the fine is expressly specified in the law or ordinance that defines\nthe offense, the amount of the fine shall be fixed in accordance with\nthat law or ordinance."
+        },
+        {
+          "role": "alternative_gain_fine",
+          "sourceKey": "ny:PEN:80.05",
+          "contentSha256": "34340ff33b4dd7ff0da7819c590ba3b14e0618390861b8636f5f8b7428c68dbe",
+          "start": 1233,
+          "end": 1959,
+          "text": "5. Alternative sentence. If a person has gained money or property\nthrough the commission of any misdemeanor or violation then upon\nconviction thereof, the court, in lieu of imposing the fine authorized\nfor the offense under one of the above subdivisions, may sentence the\ndefendant to pay an amount, fixed by the court, not exceeding double the\namount of the defendant's gain from the commission of the offense;\nprovided, however, that the amount fixed by the court pursuant to this\nsubdivision upon a conviction under section 11-1904 of the environmental\nconservation law shall not exceed five thousand dollars.  In such event\nthe provisions of subdivisions two and three of section 80.00 shall be\napplicable to the sentence."
+        }
+      ]
+    }
+  ],
+  "heldAlternatives": [
+    {
+      "candidateId": "ny-pen-215-50-5-held",
+      "section": "215.50",
+      "scope": "5",
+      "status": "held_pending_constitutional_or_jury_procedure_review",
+      "reason": "Speech and courthouse-expression constitutional limits require independent judicial review; retained statutory text alone does not resolve enforceability.",
+      "bindings": [
+        {
+          "role": "held_conduct",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 904,
+          "end": 993,
+          "text": "5. Knowingly publishing a false or grossly inaccurate report of a\ncourt's proceedings; or"
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 1811,
+          "end": 1875,
+          "text": "Criminal contempt in the second degree is a class A misdemeanor."
+        }
+      ]
+    },
+    {
+      "candidateId": "ny-pen-215-50-6-held",
+      "section": "215.50",
+      "scope": "6",
+      "status": "held_pending_constitutional_or_jury_procedure_review",
+      "reason": "The incorporated jury statutes, rules and special statutes have not been exhaustively bound.",
+      "bindings": [
+        {
+          "role": "held_conduct",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 995,
+          "end": 1343,
+          "text": "6. Intentional failure to obey any mandate, process or notice, issued\npursuant to articles sixteen, seventeen, eighteen, or eighteen-a of the\njudiciary law, or to rules adopted pursuant to any such statute or to\nany special statute establishing commissioners of jurors and prescribing\ntheir duties or who refuses to be sworn as provided therein; or"
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 1811,
+          "end": 1875,
+          "text": "Criminal contempt in the second degree is a class A misdemeanor."
+        }
+      ]
+    },
+    {
+      "candidateId": "ny-pen-215-50-7-held",
+      "section": "215.50",
+      "scope": "7",
+      "status": "held_pending_constitutional_or_jury_procedure_review",
+      "reason": "Speech and courthouse-expression constitutional limits require independent judicial review; retained statutory text alone does not resolve enforceability.",
+      "bindings": [
+        {
+          "role": "held_conduct",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 1345,
+          "end": 1809,
+          "text": "7. On or along a public street or sidewalk within a radius of two\nhundred feet of any building established as a courthouse, he calls\naloud, shouts, holds or displays placards or signs containing written or\nprinted matter, concerning the conduct of a trial being held in such\ncourthouse or the character of the court or jury engaged in such trial\nor calling for or demanding any specified action or determination by\nsuch court or jury in connection with such trial."
+        },
+        {
+          "role": "grading",
+          "sourceKey": "ny:PEN:215.50",
+          "contentSha256": "eeaed539aa76cbbf4daf407c141927ff85b3b7b89a2f6c0ee62f4e4dd839bc59",
+          "start": 1811,
+          "end": 1875,
+          "text": "Criminal contempt in the second degree is a class A misdemeanor."
+        }
+      ]
+    }
+  ]
+}
