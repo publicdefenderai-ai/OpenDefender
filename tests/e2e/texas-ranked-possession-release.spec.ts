@@ -242,7 +242,7 @@ test("Texas public-peace choices keep branch grades and retire generic disorderl
 
 test("Texas records and bail branches remain complete beyond the first 500 catalog choices", async ({ request }) => {
   const charges = await allTexasCharges(request);
-  expect(charges).toHaveLength(595);
+  expect(charges).toHaveLength(617);
   const batch = JSON.parse(readFileSync("shared/texas-records-bail.json", "utf8"));
   for (const row of batch) expect(charges.find(c => c.id === row.id)).toMatchObject({name:row.name,code:row.code,description:row.conduct,maxPenalty:row.penalty,category:row.category});
   for (const id of ["tx-failure-to-appear", "tx-false-info-to-police"]) expect(charges.some(c => c.id === id)).toBe(false);
@@ -277,4 +277,14 @@ test("Texas service and forgery choices preserve value, age and legacy boundarie
  expect(charges.find(c=>c.id==="tx-pc-32-21-value-100-750")?.maxPenalty).toMatch(/^Class A/);
  expect(charges.find(c=>c.id==="tx-pc-32-21-value-100-750-elderly")?.maxPenalty).toMatch(/^State jail/);
  expect(charges.find(c=>c.id==="tx-pc-31-04-nonpayment-100-750")?.description).toContain("but not (c)’s separate notice conditions");
+});
+
+
+test("Texas roadway duties preserve specific fines and conditional duties",async({request})=>{
+ const charges=await allTexasCharges(request);const batch=JSON.parse(readFileSync("shared/texas-roadway-duties.json","utf8"));
+ expect(batch).toHaveLength(22);expect(charges.some(c=>c.id==="tx-forgery")).toBe(false);
+ for(const row of batch)expect(charges.find(c=>c.id===row.id)).toMatchObject({code:row.code,category:row.category,description:row.conduct,maxPenalty:row.penalty});
+ expect(charges.find(c=>c.id==="tx-trc-504-945-number-color-one-prior")?.maxPenalty).toContain("maximum fine of $600");
+ expect(charges.find(c=>c.id==="tx-trc-545-421-imminent-danger")?.maxPenalty).toMatch(/^Class A/);
+ expect(charges.find(c=>c.id==="tx-trc-550-025-license-under-200")?.description).toContain("ONLY IF REQUESTED AND AVAILABLE");
 });

@@ -1,3 +1,5 @@
+import roadwayRows from "../../../shared/texas-roadway-duties.json";
+import roadwayEvidence from "../output/texas-roadway-duties-evidence.json";
 import serviceRows from "../../../shared/texas-service-forgery.json";
 import serviceEvidence from "../output/texas-service-forgery-evidence.json";
 import disorderlyRows from "../../../shared/texas-disorderly-class-c.json";
@@ -80,6 +82,7 @@ import protectedAssaultRows from "../../../shared/texas-protected-assault.json";
 import protectedAssaultEvidence from "../output/texas-protected-assault-evidence.json";
 
 const batches = new Map([
+  ["roadway-duties", { rows: roadwayRows, evidence: Object.entries(roadwayEvidence) }],
   ["service-forgery", { rows: serviceRows, evidence: Object.entries(serviceEvidence) }],
   ["disorderly-class-c", { rows: disorderlyRows, evidence: Object.entries(disorderlyEvidence) }],
   ["deadly-fluid", { rows: deadlyFluidRows, evidence: Object.entries(deadlyFluidEvidence) }],

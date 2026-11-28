@@ -1,3 +1,4 @@
+import roadwayDuties from "./texas-roadway-duties.json";
 import serviceForgery from "./texas-service-forgery.json";
 import disorderlyClassC from "./texas-disorderly-class-c.json";
 import deadlyFluid from "./texas-deadly-fluid.json";
@@ -41,6 +42,7 @@ export function texasReviewedCitation(ref: { code: string; section: string; subd
 }
 
 export const texasReviewedRecords = [
+  ...roadwayDuties,
   ...serviceForgery,
   ...disorderlyClassC,
   ...deadlyFluid,
