@@ -1,3 +1,4 @@
+import { NILC_ASSISTANCE_URL, nilcAssistanceCopy } from '@/components/immigration/nilc-assistance';
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -702,10 +703,11 @@ export function ScenarioGuide({ scenarioId }: ScenarioGuideProps) {
             <div className="mt-6 p-4 bg-background rounded-lg">
               <h4 className="font-semibold mb-2 flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                {lang === 'es' ? 'Líneas de emergencia:' : 'Emergency hotlines:'}
+                {lang === 'es' ? 'Contactos y recursos:' : 'Contacts and resources:'}
               </h4>
               <div className="space-y-1 text-sm">
-                <p>NILC: <strong>213-639-3900</strong></p>
+                <p><a href={NILC_ASSISTANCE_URL} target="_blank" rel="noopener noreferrer" className="underline">{nilcAssistanceCopy[lang].label}</a></p>
+                <p>{nilcAssistanceCopy[lang].limits}</p>
                 <p>ACLU: <strong>212-549-2660</strong></p>
                 <p>United We Dream: <strong>1-844-363-1423</strong></p>
               </div>

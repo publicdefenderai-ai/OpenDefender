@@ -39,12 +39,13 @@ describe("immigration help link targets", () => {
     const raidsSource = read("client/src/pages/immigration/raids-toolkit.tsx");
 
     for (const phoneNumber of [
-      'phoneNumber="213-639-3900"',
       'phoneNumber="1-844-363-1423"',
       'phoneNumber="212-549-2660"',
     ]) {
       expect(raidsSource).toContain(phoneNumber);
     }
+    expect(raidsSource).not.toContain('213-639-3900');
+    expect(raidsSource).toContain('href={NILC_ASSISTANCE_URL}');
     expect(detainedSource).toContain('href="tel:18883514024"');
     expect(detainedSource).toContain('href="tel:3126601370"');
     for (const url of [
@@ -69,4 +70,16 @@ describe("immigration help link targets", () => {
     expect(raidsSource).toContain('target="_blank"');
     expect(raidsSource).toContain('rel="noopener noreferrer"');
   });
+});
+
+it("does not present NILC office contact as telephone assistance in toolkit or printed content", () => {
+  for (const file of [
+    "client/src/pages/immigration/raids-toolkit.tsx",
+    "client/src/components/immigration/emergency-card.tsx",
+    "client/src/components/immigration/scenario-guide.tsx",
+    "client/src/components/immigration/safety-checklist.tsx",
+  ]) {
+    expect(read(file)).not.toMatch(/213[- ]?639[- ]?3900/);
+    expect(read(file)).not.toContain("hotline numbers (NILC");
+  }
 });

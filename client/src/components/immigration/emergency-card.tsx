@@ -1,3 +1,4 @@
+import { NILC_ASSISTANCE_URL, nilcAssistanceCopy } from '@/components/immigration/nilc-assistance';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -232,8 +233,9 @@ export function EmergencyCard() {
             ` : ''}
 
             <div class="section">
-              <p class="section-title">${lang === 'es' ? 'Líneas de Emergencia' : 'Emergency Hotlines'}</p>
-              <p class="contact">NILC: <span class="phone">213-639-3900</span></p>
+              <p class="section-title">${lang === 'es' ? 'Contactos y recursos' : 'Contacts and resources'}</p>
+              <p class="contact"><a href="${NILC_ASSISTANCE_URL}">${escapePrint(nilcAssistanceCopy[lang].label)}</a><br>${NILC_ASSISTANCE_URL}</p>
+              <p class="contact">${escapePrint(nilcAssistanceCopy[lang].limits)}</p>
               <p class="contact">United We Dream: <span class="phone">1-844-363-1423</span></p>
             </div>
 

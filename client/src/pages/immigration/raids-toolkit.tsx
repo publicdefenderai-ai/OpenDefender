@@ -1,3 +1,4 @@
+import { NILC_ASSISTANCE_URL, nilcAssistanceCopy } from '@/components/immigration/nilc-assistance';
 import {
   AlertTriangle,
   Phone,
@@ -121,17 +122,14 @@ export default function RaidsToolkit() {
                 <CardHeader>
                   <h3 className="flex items-center gap-2 text-lg">
                     <Phone className="h-5 w-5 text-primary" />
-                    {lang === 'es' ? 'Líneas de Emergencia' : 'Emergency Hotlines'}
+                    {lang === 'es' ? 'Contactos y recursos' : 'Contacts and resources'}
                   </h3>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div>
                     <p className="font-semibold text-sm">NILC</p>
-                    <ClickToCallLink
-                      phoneNumber="213-639-3900"
-                      className="font-bold"
-                      data-testid="link-hotline-nilc"
-                    />
+                    <a href={NILC_ASSISTANCE_URL} target="_blank" rel="noopener noreferrer" className="font-bold underline" data-testid="link-nilc-assistance">{nilcAssistanceCopy[lang].label}</a>
+                    <p className="text-sm">{nilcAssistanceCopy[lang].limits}</p>
                   </div>
                   <div>
                     <p className="font-semibold text-sm">United We Dream</p>

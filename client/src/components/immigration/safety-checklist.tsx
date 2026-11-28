@@ -107,8 +107,8 @@ const checklistItems: ChecklistItem[] = [
     id: 'contact-4',
     category: 'contacts',
     text: {
-      en: 'Program emergency hotline numbers (NILC, ACLU, United We Dream)',
-      es: 'Programe números de líneas de emergencia (NILC, ACLU, United We Dream)'
+      en: 'Legal-help contact details, including each organization’s services and contact limits',
+      es: 'Datos de contacto de ayuda legal, incluidos los servicios y límites de contacto de cada organización'
     },
     priority: 'high'
   },

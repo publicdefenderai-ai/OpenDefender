@@ -19,6 +19,11 @@ for (const language of ['en', 'es', 'zh'] as const) for (const theme of ['light'
    await expect(root.getByTestId('toolkit-translation-notice')).toBeVisible();
    await expect(root.locator('#scenarios').locator('..')).toHaveAttribute('lang','en');
   }
+  await expect(root).not.toContainText('213-639-3900');
+  await expect(root.locator('a[href="tel:2136393900"]')).toHaveCount(0);
+  await expect(root.getByTestId('link-nilc-assistance')).toHaveAttribute('href','https://www.nilc.org/request-for-legal-assistance/');
+  await expect(root.locator('#resources')).toContainText(language==='es'?'NILC no acepta solicitudes de asistencia legal por teléfono':'NILC does not accept legal-assistance requests by phone');
+  await expect(root.locator('#resources')).toContainText(language==='es'?'Por lo general, no ofrece representación directa':'It generally does not provide direct immigration representation');
   const art=root.locator('.immigration-toolkit-art');
   await expect(art).toHaveAttribute('aria-hidden','true');
   await expect.poll(()=>art.evaluate((el:HTMLImageElement)=>el.complete && el.naturalWidth>0)).toBe(true);
@@ -76,6 +81,10 @@ for (const language of ['en', 'es', 'zh'] as const) for (const theme of ['light'
   await expect(printed.locator('b,img,script')).toHaveCount(0);
   await expect(printed.locator('body')).toContainText(mexico.mainPhone);
   await expect(printed.locator('html')).toHaveAttribute('lang',language==='es'?'es':'en');
+  await expect(printed.locator('body')).not.toContainText('213-639-3900');
+  await expect(printed.locator('a[href="https://www.nilc.org/request-for-legal-assistance/"]')).toBeVisible();
+  await expect(printed.locator('body')).toContainText('https://www.nilc.org/request-for-legal-assistance/');
+  await expect(printed.locator('body')).toContainText(language==='es'?'NILC no acepta solicitudes de asistencia legal por teléfono':'NILC does not accept legal-assistance requests by phone');
   await printed.screenshot({path:info.outputPath('emergency-card-print.png')});await printed.close();
   expect(await page.evaluate(()=>JSON.stringify(localStorage))).not.toContain('Sample toolkit');
   await page.reload();
