@@ -1,0 +1,1818 @@
+[
+  {
+    "id": "tx-trc-545-421-ordinary",
+    "name": "Fleeing police vehicle (ordinary)",
+    "officialTitle": "FLEEING OR ATTEMPTING TO ELUDE POLICE OFFICER; OFFENSE.",
+    "category": "misdemeanor",
+    "code": "545.421(a)",
+    "citation": "Tex. Transp. Code § 545.421(a)",
+    "conduct": "Operating a motor vehicle and WILFULLY failing or refusing to stop, fleeing, or attempting to elude a PURSUING police vehicle after a visual or audible stop signal. The signal may be by hand, voice, emergency light or siren. The officer must be in uniform with the badge prominently displayed, and the police vehicle must bear law-enforcement-agency insignia, whether or not it has an emergency light. A signal alone without these conditions does not establish this particular offense. Subtitle C generally applies to highway operation under §542.001; a different offense may have different territorial and conduct predicates. This is not an automatic substitute for Penal Code §38.04 evading arrest or detention, whose separate elements and grades remain distinct. This choice does not include the (d) reckless imminent-serious-injury-danger finding. Section 542.004 exempts persons/vehicles actually engaged in highway work unless specifically covered, but applies while traveling to or from that work.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying repeat-conviction findings require separate analysis; none is presumed. H.B. 1831 clarified the police-vehicle insignia requirement effective September 1, 2009; the (d)/(e) danger and presumption provisions predate that amendment; earlier conduct requires the applicable earlier law.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "545.421",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "545.421",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.421",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.421",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.421",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "542.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "542.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": "48010010"
+  },
+  {
+    "id": "tx-trc-545-421-imminent-danger",
+    "name": "Fleeing police vehicle (reckless imminent serious-injury danger)",
+    "officialTitle": "FLEEING OR ATTEMPTING TO ELUDE POLICE OFFICER; OFFENSE.",
+    "category": "misdemeanor",
+    "code": "545.421(a)",
+    "citation": "Tex. Transp. Code § 545.421(a)",
+    "conduct": "Operating a motor vehicle and WILFULLY failing or refusing to stop, fleeing, or attempting to elude a PURSUING police vehicle after a visual or audible stop signal. The signal may be by hand, voice, emergency light or siren. The officer must be in uniform with the badge prominently displayed, and the police vehicle must bear law-enforcement-agency insignia, whether or not it has an emergency light. A signal alone without these conditions does not establish this particular offense. Subtitle C generally applies to highway operation under §542.001; a different offense may have different territorial and conduct predicates. This is not an automatic substitute for Penal Code §38.04 evading arrest or detention, whose separate elements and grades remain distinct. During commission of the fleeing offense the actor must also recklessly engage in conduct placing ANOTHER in IMMINENT danger of SERIOUS bodily injury. Actual injury is not required. Under (e), knowingly operating while intoxicated during the offense creates a presumption of that reckless danger; intoxication follows §49.01 (impaired faculties or qualifying alcohol concentration), not merely alcohol consumption. Section 2.05(a) requires the predicate facts beyond a reasonable doubt and permits, but does not require, the jury inference; other elements still require proof. Section 542.004 exempts persons/vehicles actually engaged in highway work unless specifically covered, but applies while traveling to or from that work.",
+    "penalty": "Class A misdemeanor: ordinarily up to one year in jail, a fine up to $4,000, or both. Qualifying repeat-conviction findings require separate analysis; none is presumed. H.B. 1831 clarified the police-vehicle insignia requirement effective September 1, 2009; the (d)/(e) danger and presumption provisions predate that amendment; earlier conduct requires the applicable earlier law.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "545.421",
+        "subdivision": "(a)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "545.421",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.421",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.421",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "545.421",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "542.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "38.04",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.07",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "49.01",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "2.05",
+        "subdivision": "(a)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.21",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "TN",
+        "section": "542.004",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": "48010011"
+  },
+  {
+    "id": "tx-trc-550-025-notify-under-200",
+    "name": "Highway fixture/landscaping collision (notify duty; damage under $200)",
+    "officialTitle": "DUTY ON STRIKING STRUCTURE, FIXTURE, OR HIGHWAY LANDSCAPING.",
+    "category": "misdemeanor",
+    "code": "550.025(a)(1)",
+    "citation": "Tex. Transp. Code § 550.025(a)(1)",
+    "conduct": "The operator is involved in a collision resulting ONLY in damage to a structure adjacent to a highway, or a fixture or landscaping legally on or adjacent to a highway. Failing to take REASONABLE STEPS to locate and notify the owner or person in charge of the collision, the operator’s name and address, and the registration number of the vehicle driven. This is a reasonable-steps duty, not a promise that the owner must actually be found. The grade in (b) uses damage to ALL FIXTURES AND LANDSCAPING, less than $200. The grading clause does not expressly say all property or structures; this choice does not resolve a structure-only valuation question. Section 550.001 limits chapter applicability to the specified district road, qualifying business/private paid-parking access, or highway/other public place; private residential access is excluded from the private-access extension. Injury, death or damage to attended vehicles invokes different duties and is not silently treated as this property-only branch. The statute’s silence about a mental-state label does not itself establish every offense element from damage alone; applicable Penal Code §§1.03(b),6.02 and 6.03 remain relevant.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, without confinement as the ordinary punishment. H.B. 2190 replaced accident terminology with collision effective September 1, 2023; it did not create these grades. Earlier conduct requires its applicable version.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "550.025",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "550.025",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-550-025-notify-200-plus",
+    "name": "Highway fixture/landscaping collision (notify duty; damage $200 or more)",
+    "officialTitle": "DUTY ON STRIKING STRUCTURE, FIXTURE, OR HIGHWAY LANDSCAPING.",
+    "category": "misdemeanor",
+    "code": "550.025(a)(1)",
+    "citation": "Tex. Transp. Code § 550.025(a)(1)",
+    "conduct": "The operator is involved in a collision resulting ONLY in damage to a structure adjacent to a highway, or a fixture or landscaping legally on or adjacent to a highway. Failing to take REASONABLE STEPS to locate and notify the owner or person in charge of the collision, the operator’s name and address, and the registration number of the vehicle driven. This is a reasonable-steps duty, not a promise that the owner must actually be found. The grade in (b) uses damage to ALL FIXTURES AND LANDSCAPING, $200 or more. The grading clause does not expressly say all property or structures; this choice does not resolve a structure-only valuation question. Section 550.001 limits chapter applicability to the specified district road, qualifying business/private paid-parking access, or highway/other public place; private residential access is excluded from the private-access extension. Injury, death or damage to attended vehicles invokes different duties and is not silently treated as this property-only branch. The statute’s silence about a mental-state label does not itself establish every offense element from damage alone; applicable Penal Code §§1.03(b),6.02 and 6.03 remain relevant.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying repeat-conviction findings require separate analysis; none is presumed. H.B. 2190 replaced accident terminology with collision effective September 1, 2023; it did not create these grades. Earlier conduct requires its applicable version.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "550.025",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "550.025",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "54990008"
+  },
+  {
+    "id": "tx-trc-550-025-license-under-200",
+    "name": "Highway fixture/landscaping collision (license duty; damage under $200)",
+    "officialTitle": "DUTY ON STRIKING STRUCTURE, FIXTURE, OR HIGHWAY LANDSCAPING.",
+    "category": "misdemeanor",
+    "code": "550.025(a)(2)",
+    "citation": "Tex. Transp. Code § 550.025(a)(2)",
+    "conduct": "The operator is involved in a collision resulting ONLY in damage to a structure adjacent to a highway, or a fixture or landscaping legally on or adjacent to a highway. Failing to show the operator’s driver’s license to the owner or person in charge ONLY IF REQUESTED AND AVAILABLE. No unconditional license-production requirement is inferred. The grade in (b) uses damage to ALL FIXTURES AND LANDSCAPING, less than $200. The grading clause does not expressly say all property or structures; this choice does not resolve a structure-only valuation question. Section 550.001 limits chapter applicability to the specified district road, qualifying business/private paid-parking access, or highway/other public place; private residential access is excluded from the private-access extension. Injury, death or damage to attended vehicles invokes different duties and is not silently treated as this property-only branch. The statute’s silence about a mental-state label does not itself establish every offense element from damage alone; applicable Penal Code §§1.03(b),6.02 and 6.03 remain relevant.",
+    "penalty": "Class C misdemeanor: ordinarily a fine up to $500, without confinement as the ordinary punishment. H.B. 2190 replaced accident terminology with collision effective September 1, 2023; it did not create these grades. Earlier conduct requires its applicable version.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "550.025",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "550.025",
+        "subdivision": "(b)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.23",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-550-025-license-200-plus",
+    "name": "Highway fixture/landscaping collision (license duty; damage $200 or more)",
+    "officialTitle": "DUTY ON STRIKING STRUCTURE, FIXTURE, OR HIGHWAY LANDSCAPING.",
+    "category": "misdemeanor",
+    "code": "550.025(a)(2)",
+    "citation": "Tex. Transp. Code § 550.025(a)(2)",
+    "conduct": "The operator is involved in a collision resulting ONLY in damage to a structure adjacent to a highway, or a fixture or landscaping legally on or adjacent to a highway. Failing to show the operator’s driver’s license to the owner or person in charge ONLY IF REQUESTED AND AVAILABLE. No unconditional license-production requirement is inferred. The grade in (b) uses damage to ALL FIXTURES AND LANDSCAPING, $200 or more. The grading clause does not expressly say all property or structures; this choice does not resolve a structure-only valuation question. Section 550.001 limits chapter applicability to the specified district road, qualifying business/private paid-parking access, or highway/other public place; private residential access is excluded from the private-access extension. Injury, death or damage to attended vehicles invokes different duties and is not silently treated as this property-only branch. The statute’s silence about a mental-state label does not itself establish every offense element from damage alone; applicable Penal Code §§1.03(b),6.02 and 6.03 remain relevant.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying repeat-conviction findings require separate analysis; none is presumed. H.B. 2190 replaced accident terminology with collision effective September 1, 2023; it did not create these grades. Earlier conduct requires its applicable version.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "550.025",
+        "subdivision": "(a)(2)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "550.025",
+        "subdivision": "(b)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "550.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.201",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "541.302",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "54990008"
+  },
+  {
+    "id": "tx-trc-504-945-wrong-vehicle",
+    "name": "License plate (plate issued for another vehicle; ordinary fine)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(1)",
+    "citation": "Tex. Transp. Code § 504.945(a)(1)",
+    "conduct": "Attaching to or displaying on a motor vehicle a license plate with this condition: The plate was issued for a DIFFERENT motor vehicle. This choice uses the ordinary fine-only (b) grade, without the finding that the owner knowingly altered or made identification marks illegible. A proven owner-alteration finding changes the grade to Class B. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Misdemeanor with a specific statutory maximum fine of $200; it is not a generic $500 fine. No confinement is specified for this ordinary branch. The ordinary (b) scheme is subject to the separate fictitious-plate (e) and obscured-letter/number/color (f) rules; neither is folded into this branch.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-wrong-vehicle-owner-alteration",
+    "name": "License plate (plate issued for another vehicle; knowing owner alteration)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(1)",
+    "citation": "Tex. Transp. Code § 504.945(a)(1)",
+    "conduct": "Attaching to or displaying on a motor vehicle a license plate with this condition: The plate was issued for a DIFFERENT motor vehicle. The OWNER must be shown at trial to have KNOWINGLY altered or made illegible the letters, numbers and other identification marks. A defect alone or a different person’s alteration does not automatically establish this Class B branch. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying repeat-conviction findings require separate analysis; none is presumed. The ordinary (b) scheme is subject to the separate fictitious-plate (e) and obscured-letter/number/color (f) rules; neither is folded into this branch.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(1)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-wrong-period",
+    "name": "License plate (wrong registration period; ordinary fine)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(3)",
+    "citation": "Tex. Transp. Code § 504.945(a)(3)",
+    "conduct": "Attaching to or displaying on a motor vehicle a license plate with this condition: The plate is assigned for a registration period other than the one in effect. This choice uses the ordinary fine-only (b) grade, without the finding that the owner knowingly altered or made identification marks illegible. A proven owner-alteration finding changes the grade to Class B. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Misdemeanor with a specific statutory maximum fine of $200; it is not a generic $500 fine. No confinement is specified for this ordinary branch. The ordinary (b) scheme is subject to the separate fictitious-plate (e) and obscured-letter/number/color (f) rules; neither is folded into this branch.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-wrong-period-owner-alteration",
+    "name": "License plate (wrong registration period; knowing owner alteration)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(3)",
+    "citation": "Tex. Transp. Code § 504.945(a)(3)",
+    "conduct": "Attaching to or displaying on a motor vehicle a license plate with this condition: The plate is assigned for a registration period other than the one in effect. The OWNER must be shown at trial to have KNOWINGLY altered or made illegible the letters, numbers and other identification marks. A defect alone or a different person’s alteration does not automatically establish this Class B branch. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying repeat-conviction findings require separate analysis; none is presumed. The ordinary (b) scheme is subject to the separate fictitious-plate (e) and obscured-letter/number/color (f) rules; neither is folded into this branch.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(3)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-blur",
+    "name": "License plate (blurring or reflective matter; ordinary fine)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(5)",
+    "citation": "Tex. Transp. Code § 504.945(a)(5)",
+    "conduct": "Attaching to or displaying on a motor vehicle a license plate with this condition: Blurring or reflective matter SIGNIFICANTLY impairs readability of the registered state’s name or the plate-number letters or numbers AT ANY TIME. This choice uses the ordinary fine-only (b) grade, without the finding that the owner knowingly altered or made identification marks illegible. A proven owner-alteration finding changes the grade to Class B. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Misdemeanor with a specific statutory maximum fine of $200; it is not a generic $500 fine. No confinement is specified for this ordinary branch. The ordinary (b) scheme is subject to the separate fictitious-plate (e) and obscured-letter/number/color (f) rules; neither is folded into this branch.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-blur-owner-alteration",
+    "name": "License plate (blurring or reflective matter; knowing owner alteration)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(5)",
+    "citation": "Tex. Transp. Code § 504.945(a)(5)",
+    "conduct": "Attaching to or displaying on a motor vehicle a license plate with this condition: Blurring or reflective matter SIGNIFICANTLY impairs readability of the registered state’s name or the plate-number letters or numbers AT ANY TIME. The OWNER must be shown at trial to have KNOWINGLY altered or made illegible the letters, numbers and other identification marks. A defect alone or a different person’s alteration does not automatically establish this Class B branch. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying repeat-conviction findings require separate analysis; none is presumed. The ordinary (b) scheme is subject to the separate fictitious-plate (e) and obscured-letter/number/color (f) rules; neither is folded into this branch.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(5)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-device",
+    "name": "License plate (unauthorized device or insignia; ordinary fine)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(6)",
+    "citation": "Tex. Transp. Code § 504.945(a)(6)",
+    "conduct": "Attaching to or displaying on a motor vehicle a license plate with this condition: An attached illuminated device or sticker, decal, emblem or other insignia is NOT AUTHORIZED BY LAW AND interferes with readability of plate-number letters/numbers or the registered state’s name. Mere decoration without these conditions does not establish this branch. This choice uses the ordinary fine-only (b) grade, without the finding that the owner knowingly altered or made identification marks illegible. A proven owner-alteration finding changes the grade to Class B. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Misdemeanor with a specific statutory maximum fine of $200; it is not a generic $500 fine. No confinement is specified for this ordinary branch. The ordinary (b) scheme is subject to the separate fictitious-plate (e) and obscured-letter/number/color (f) rules; neither is folded into this branch.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-device-owner-alteration",
+    "name": "License plate (unauthorized device or insignia; knowing owner alteration)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(6)",
+    "citation": "Tex. Transp. Code § 504.945(a)(6)",
+    "conduct": "Attaching to or displaying on a motor vehicle a license plate with this condition: An attached illuminated device or sticker, decal, emblem or other insignia is NOT AUTHORIZED BY LAW AND interferes with readability of plate-number letters/numbers or the registered state’s name. Mere decoration without these conditions does not establish this branch. The OWNER must be shown at trial to have KNOWINGLY altered or made illegible the letters, numbers and other identification marks. A defect alone or a different person’s alteration does not automatically establish this Class B branch. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying repeat-conviction findings require separate analysis; none is presumed. The ordinary (b) scheme is subject to the separate fictitious-plate (e) and obscured-letter/number/color (f) rules; neither is folded into this branch.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(6)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-angle",
+    "name": "License plate (distorted angular visibility; ordinary fine)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(7)(A)",
+    "citation": "Tex. Transp. Code § 504.945(a)(7)(A)",
+    "conduct": "Attaching to or displaying on a motor vehicle a license plate with this condition: A coating, covering, protective substance or other material distorts angular visibility or detectability. This choice uses the ordinary fine-only (b) grade, without the finding that the owner knowingly altered or made identification marks illegible. A proven owner-alteration finding changes the grade to Class B. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Misdemeanor with a specific statutory maximum fine of $200; it is not a generic $500 fine. No confinement is specified for this ordinary branch. The ordinary (b) scheme is subject to the separate fictitious-plate (e) and obscured-letter/number/color (f) rules; neither is folded into this branch.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(7)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-angle-owner-alteration",
+    "name": "License plate (distorted angular visibility; knowing owner alteration)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(7)(A)",
+    "citation": "Tex. Transp. Code § 504.945(a)(7)(A)",
+    "conduct": "Attaching to or displaying on a motor vehicle a license plate with this condition: A coating, covering, protective substance or other material distorts angular visibility or detectability. The OWNER must be shown at trial to have KNOWINGLY altered or made illegible the letters, numbers and other identification marks. A defect alone or a different person’s alteration does not automatically establish this Class B branch. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying repeat-conviction findings require separate analysis; none is presumed. The ordinary (b) scheme is subject to the separate fictitious-plate (e) and obscured-letter/number/color (f) rules; neither is folded into this branch.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(7)(A)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-state-name",
+    "name": "License plate (at least half the state name obscured; ordinary fine)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(7)(B)",
+    "citation": "Tex. Transp. Code § 504.945(a)(7)(B)",
+    "conduct": "Attaching to or displaying on a motor vehicle a license plate with this condition: A coating, covering, protective substance or other material alters or obscures ONE-HALF OR MORE of the name of the registered state. This half-name threshold is distinct from the letter/number/color branch. This choice uses the ordinary fine-only (b) grade, without the finding that the owner knowingly altered or made identification marks illegible. A proven owner-alteration finding changes the grade to Class B. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Misdemeanor with a specific statutory maximum fine of $200; it is not a generic $500 fine. No confinement is specified for this ordinary branch. The ordinary (b) scheme is subject to the separate fictitious-plate (e) and obscured-letter/number/color (f) rules; neither is folded into this branch.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(7)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-state-name-owner-alteration",
+    "name": "License plate (at least half the state name obscured; knowing owner alteration)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(7)(B)",
+    "citation": "Tex. Transp. Code § 504.945(a)(7)(B)",
+    "conduct": "Attaching to or displaying on a motor vehicle a license plate with this condition: A coating, covering, protective substance or other material alters or obscures ONE-HALF OR MORE of the name of the registered state. This half-name threshold is distinct from the letter/number/color branch. The OWNER must be shown at trial to have KNOWINGLY altered or made illegible the letters, numbers and other identification marks. A defect alone or a different person’s alteration does not automatically establish this Class B branch. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying repeat-conviction findings require separate analysis; none is presumed. The ordinary (b) scheme is subject to the separate fictitious-plate (e) and obscured-letter/number/color (f) rules; neither is folded into this branch.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(7)(B)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-fictitious",
+    "name": "Fictitious license plate",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(4)",
+    "citation": "Tex. Transp. Code § 504.945(a)(4)",
+    "conduct": "Attaching to or displaying on a motor vehicle a FICTITIOUS license plate. Subsection (e) independently supplies Class B; a plate merely assigned to another actual vehicle is the separate (a)(1) scope, not automatically fictitious. The (d) correction/dismissal provision does not include(a)(4). Applicable culpability rules must still be applied; the grade alone does not prove all elements.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying repeat-conviction findings require separate analysis; none is presumed. The fictitious-plate Class B rule predates H.B. 2195 (2023); that Act added the separate obscured-letter/number/color repeat ladder. Earlier conduct requires the applicable earlier version.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(4)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(e)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": "26990177"
+  },
+  {
+    "id": "tx-trc-504-945-number-color-ordinary",
+    "name": "License plate letters/numbers/color obscured (ordinary)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(7)(C)",
+    "citation": "Tex. Transp. Code § 504.945(a)(7)(C)",
+    "conduct": "Attaching to or displaying on a motor vehicle a plate with coating, covering, protective substance or other material that alters, covers or obscures the plate-number letters or numbers or the COLOR of the plate. Unlike (a)(7)(B), no half-state-name threshold is imported. No prior conviction under this exact subsection is shown. Other plate convictions do not automatically satisfy this same-subsection repeat rule. The (f) schedule controls this branch rather than (b)’s $200 or owner-alteration scheme. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Misdemeanor with a specific maximum fine of $300, with no ordinary confinement. These (f) grades were added by H.B. 2195 effective September 1, 2023, preserving earlier law if any offense element predates that date.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(7)(C)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-number-color-one-prior",
+    "name": "License plate letters/numbers/color obscured (one prior)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(7)(C)",
+    "citation": "Tex. Transp. Code § 504.945(a)(7)(C)",
+    "conduct": "Attaching to or displaying on a motor vehicle a plate with coating, covering, protective substance or other material that alters, covers or obscures the plate-number letters or numbers or the COLOR of the plate. Unlike (a)(7)(B), no half-state-name threshold is imported. One prior conviction under (a)(7)(C) must be shown at trial. Other plate convictions do not automatically satisfy this same-subsection repeat rule. The (f) schedule controls this branch rather than (b)’s $200 or owner-alteration scheme. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Misdemeanor with a specific maximum fine of $600, with no ordinary confinement. These (f) grades were added by H.B. 2195 effective September 1, 2023, preserving earlier law if any offense element predates that date.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(7)(C)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)(1)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      }
+    ],
+    "dpsCode": ""
+  },
+  {
+    "id": "tx-trc-504-945-number-color-two-priors",
+    "name": "License plate letters/numbers/color obscured (two priors)",
+    "officialTitle": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED LICENSE PLATE.",
+    "category": "misdemeanor",
+    "code": "504.945(a)(7)(C)",
+    "citation": "Tex. Transp. Code § 504.945(a)(7)(C)",
+    "conduct": "Attaching to or displaying on a motor vehicle a plate with coating, covering, protective substance or other material that alters, covers or obscures the plate-number letters or numbers or the COLOR of the plate. Unlike (a)(7)(B), no half-state-name threshold is imported. Two or more prior convictions under (a)(7)(C) must be shown at trial. Other plate convictions do not automatically satisfy this same-subsection repeat rule. The (f) schedule controls this branch rather than (b)’s $200 or owner-alteration scheme. Subsection (c)’s exclusions apply to (a)(7): normally/customarily installed trailer hitches, wheelchair lifts/carriers and bicycle/motorcycle racks; a transponder attached as its issuing authority requires; and a trailer being towed. These are not blanket exceptions to every subsection. Under (d), the court MAY dismiss eligible (a)(3),(5),(6) or (7) charges if the defect is remedied before the first court appearance, the defendant pays a reimbursement fee up to $10, and shows a department-issued plate was attached establishing registration for the offense period. Dismissal is discretionary and these conditions are cumulative; (a)(1) and fictitious plates under (a)(4) are not included.",
+    "penalty": "Class B misdemeanor: ordinarily up to 180 days in jail, a fine up to $2,000, or both. Qualifying repeat-conviction findings require separate analysis; none is presumed. These (f) grades were added by H.B. 2195 effective September 1, 2023, preserving earlier law if any offense element predates that date.",
+    "references": [
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(a)(7)(C)",
+        "supportRole": "offense"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(f)(2)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(c)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.945",
+        "subdivision": "(d)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "504.001",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "TN",
+        "section": "228.057",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "1.03",
+        "subdivision": "(b)",
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.02",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "6.03",
+        "subdivision": null,
+        "supportRole": "grading"
+      },
+      {
+        "code": "PE",
+        "section": "12.22",
+        "subdivision": null,
+        "supportRole": "penalty"
+      },
+      {
+        "code": "PE",
+        "section": "12.43",
+        "subdivision": null,
+        "supportRole": "penalty"
+      }
+    ],
+    "dpsCode": ""
+  }
+]
