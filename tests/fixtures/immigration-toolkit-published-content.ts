@@ -26,7 +26,7 @@ export default {
       "Identify a trusted person who can care for your children if needed",
       "Share emergency contact information with your children (if age appropriate)",
       "Save an immigration attorney's number in your phone",
-      "Program emergency hotline numbers (NILC, ACLU, United We Dream)",
+      "Legal-help contact details, including each organization’s services and contact limits",
       "Know your consulate's emergency number",
       "Set up a caregiver authorization document so a trusted adult can make school and medical decisions for your child (this does NOT transfer legal custody; requirements vary by state)",
       "Discuss the emergency plan with your family members",
@@ -68,7 +68,7 @@ export default {
       "#checklist",
       "#emergency-card",
       "/immigration-guidance/know-your-rights",
-      "tel:2136393900",
+      "https://www.nilc.org/request-for-legal-assistance/",
       "tel:18443631423",
       "tel:2125492660",
       "/immigration-guidance/know-your-rights",
@@ -134,8 +134,8 @@ export default {
             "2Contact an immigration lawyer immediately",
             "3Report the incident to a local immigrant rights organization",
             "4Do not sign any documents without legal advice - signing something like a voluntary departure form before speaking to a lawyer can lead to deportation without ever seeing a judge",
-            "Emergency hotlines:",
-            "NILC: 213-639-3900",
+            "Contacts and resources:",
+            "NILC assistance information and referrals",
             "ACLU: 212-549-2660",
             "United We Dream: 1-844-363-1423"
           ]
@@ -193,8 +193,8 @@ export default {
             "2Note the time and what happened",
             "3Contact your emergency contact person",
             "4Seek legal help immediately",
-            "Emergency hotlines:",
-            "NILC: 213-639-3900",
+            "Contacts and resources:",
+            "NILC assistance information and referrals",
             "ACLU: 212-549-2660",
             "United We Dream: 1-844-363-1423"
           ]
@@ -239,8 +239,8 @@ export default {
             "2Get contact information from witnesses if possible",
             "3Contact an attorney",
             "4Report to immigrant rights organizations",
-            "Emergency hotlines:",
-            "NILC: 213-639-3900",
+            "Contacts and resources:",
+            "NILC assistance information and referrals",
             "ACLU: 212-549-2660",
             "United We Dream: 1-844-363-1423"
           ]
@@ -285,8 +285,8 @@ export default {
             "2Write down what questions were asked",
             "3Record how long you were stopped",
             "4Contact ACLU if you believe your rights were violated",
-            "Emergency hotlines:",
-            "NILC: 213-639-3900",
+            "Contacts and resources:",
+            "NILC assistance information and referrals",
             "ACLU: 212-549-2660",
             "United We Dream: 1-844-363-1423"
           ]
@@ -321,7 +321,7 @@ export default {
       "Identifique a una persona de confianza que pueda cuidar a sus hijos si es necesario",
       "Comparta información de contacto de emergencia con sus hijos (si es apropiado para su edad)",
       "Guarde el número de un abogado de inmigración en su teléfono",
-      "Programe números de líneas de emergencia (NILC, ACLU, United We Dream)",
+      "Datos de contacto de ayuda legal, incluidos los servicios y límites de contacto de cada organización",
       "Conozca el número de emergencia de su consulado",
       "Prepare un documento de autorización de cuidador para que un adulto de confianza pueda tomar decisiones escolares y médicas por su hijo/a (esto NO transfiere la custodia legal; los requisitos varían según el estado)",
       "Discuta el plan de emergencia con los miembros de su familia",
@@ -363,7 +363,7 @@ export default {
       "#checklist",
       "#emergency-card",
       "/immigration-guidance/know-your-rights",
-      "tel:2136393900",
+      "https://www.nilc.org/request-for-legal-assistance/",
       "tel:18443631423",
       "tel:2125492660",
       "/immigration-guidance/know-your-rights",
@@ -429,8 +429,8 @@ export default {
             "2Contacte a un abogado de inmigración inmediatamente",
             "3Reporte el incidente a una organización local de derechos de inmigrantes",
             "4No firme ningún documento sin consejo legal - firmar algo como una salida voluntaria antes de hablar con un abogado puede resultar en la deportación sin siquiera presentarse ante un juez",
-            "Líneas de emergencia:",
-            "NILC: 213-639-3900",
+            "Contactos y recursos:",
+            "Información de asistencia y referencias de NILC",
             "ACLU: 212-549-2660",
             "United We Dream: 1-844-363-1423"
           ]
@@ -488,8 +488,8 @@ export default {
             "2Anote la hora y lo que sucedió",
             "3Contacte a su persona de contacto de emergencia",
             "4Busque ayuda legal inmediatamente",
-            "Líneas de emergencia:",
-            "NILC: 213-639-3900",
+            "Contactos y recursos:",
+            "Información de asistencia y referencias de NILC",
             "ACLU: 212-549-2660",
             "United We Dream: 1-844-363-1423"
           ]
@@ -534,8 +534,8 @@ export default {
             "2Obtenga información de contacto de testigos si es posible",
             "3Contacte a un abogado",
             "4Reporte a organizaciones de derechos de inmigrantes",
-            "Líneas de emergencia:",
-            "NILC: 213-639-3900",
+            "Contactos y recursos:",
+            "Información de asistencia y referencias de NILC",
             "ACLU: 212-549-2660",
             "United We Dream: 1-844-363-1423"
           ]
@@ -580,8 +580,8 @@ export default {
             "2Escriba qué preguntas le hicieron",
             "3Registre cuánto tiempo lo detuvieron",
             "4Contacte a ACLU si cree que violaron sus derechos",
-            "Líneas de emergencia:",
-            "NILC: 213-639-3900",
+            "Contactos y recursos:",
+            "Información de asistencia y referencias de NILC",
             "ACLU: 212-549-2660",
             "United We Dream: 1-844-363-1423"
           ]
@@ -616,7 +616,7 @@ export default {
       "Identify a trusted person who can care for your children if needed",
       "Share emergency contact information with your children (if age appropriate)",
       "Save an immigration attorney's number in your phone",
-      "Program emergency hotline numbers (NILC, ACLU, United We Dream)",
+      "Legal-help contact details, including each organization’s services and contact limits",
       "Know your consulate's emergency number",
       "Set up a caregiver authorization document so a trusted adult can make school and medical decisions for your child (this does NOT transfer legal custody; requirements vary by state)",
       "Discuss the emergency plan with your family members",
@@ -658,7 +658,7 @@ export default {
       "#checklist",
       "#emergency-card",
       "/immigration-guidance/know-your-rights",
-      "tel:2136393900",
+      "https://www.nilc.org/request-for-legal-assistance/",
       "tel:18443631423",
       "tel:2125492660",
       "/immigration-guidance/know-your-rights",
@@ -724,8 +724,8 @@ export default {
             "2Contact an immigration lawyer immediately",
             "3Report the incident to a local immigrant rights organization",
             "4Do not sign any documents without legal advice - signing something like a voluntary departure form before speaking to a lawyer can lead to deportation without ever seeing a judge",
-            "Emergency hotlines:",
-            "NILC: 213-639-3900",
+            "Contacts and resources:",
+            "NILC assistance information and referrals",
             "ACLU: 212-549-2660",
             "United We Dream: 1-844-363-1423"
           ]
@@ -783,8 +783,8 @@ export default {
             "2Note the time and what happened",
             "3Contact your emergency contact person",
             "4Seek legal help immediately",
-            "Emergency hotlines:",
-            "NILC: 213-639-3900",
+            "Contacts and resources:",
+            "NILC assistance information and referrals",
             "ACLU: 212-549-2660",
             "United We Dream: 1-844-363-1423"
           ]
@@ -829,8 +829,8 @@ export default {
             "2Get contact information from witnesses if possible",
             "3Contact an attorney",
             "4Report to immigrant rights organizations",
-            "Emergency hotlines:",
-            "NILC: 213-639-3900",
+            "Contacts and resources:",
+            "NILC assistance information and referrals",
             "ACLU: 212-549-2660",
             "United We Dream: 1-844-363-1423"
           ]
@@ -875,8 +875,8 @@ export default {
             "2Write down what questions were asked",
             "3Record how long you were stopped",
             "4Contact ACLU if you believe your rights were violated",
-            "Emergency hotlines:",
-            "NILC: 213-639-3900",
+            "Contacts and resources:",
+            "NILC assistance information and referrals",
             "ACLU: 212-549-2660",
             "United We Dream: 1-844-363-1423"
           ]
