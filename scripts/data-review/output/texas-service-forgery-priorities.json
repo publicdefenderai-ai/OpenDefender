@@ -1,0 +1,31 @@
+{
+  "source": "https://www.dps.texas.gov/administration/crime_records/pages/aareststatsoffense26.xlsx",
+  "sha256": "779a075cbb9e423f75330cda4fe9d89585c0b28fe41c5b577cd50161309b9483",
+  "workbookAsOf": "As of 01-13-2026 4:24PM",
+  "year": 2025,
+  "statewideAdult": 831210,
+  "statewideJuvenile": 44782,
+  "eligibleCodes": 2378,
+  "excludedCodes": 57,
+  "excludedAdult": 71549,
+  "rows": [
+    {
+      "rank": 121,
+      "code": "25890001",
+      "label": "FORGERY FINANCIAL INSTRUMENT",
+      "law": "PC",
+      "citation": "32.21(d)",
+      "adult": 788,
+      "juvenile": 0
+    },
+    {
+      "rank": 150,
+      "code": "23990178",
+      "label": "THEFT OF SERV >=$100<$750",
+      "law": "PC",
+      "citation": "31.04(e)(2)",
+      "adult": 480,
+      "juvenile": 26
+    }
+  ]
+}

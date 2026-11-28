@@ -242,7 +242,7 @@ test("Texas public-peace choices keep branch grades and retire generic disorderl
 
 test("Texas records and bail branches remain complete beyond the first 500 catalog choices", async ({ request }) => {
   const charges = await allTexasCharges(request);
-  expect(charges).toHaveLength(547);
+  expect(charges).toHaveLength(595);
   const batch = JSON.parse(readFileSync("shared/texas-records-bail.json", "utf8"));
   for (const row of batch) expect(charges.find(c => c.id === row.id)).toMatchObject({name:row.name,code:row.code,description:row.conduct,maxPenalty:row.penalty,category:row.category});
   for (const id of ["tx-failure-to-appear", "tx-false-info-to-police"]) expect(charges.some(c => c.id === id)).toBe(false);
@@ -267,4 +267,14 @@ test("Texas Class C disorderly branches preserve speech limits and exact privacy
  expect(charges.find(c=>c.id==="tx-pc-42-01-fighting-words").description).toContain("insults, or a listener’s offense alone are insufficient");
  expect(charges.find(c=>c.id==="tx-pc-42-01-public-noise").description).toContain("AFTER notice");
  expect(charges.find(c=>c.id==="tx-pc-42-01-looking-dwelling").description).toContain("entering another’s property AND");
+});
+
+
+test("Texas service and forgery choices preserve value, age and legacy boundaries", async ({request})=>{
+ const charges=await allTexasCharges(request);const batch=JSON.parse(readFileSync("shared/texas-service-forgery.json","utf8"));
+ expect(charges.some(c=>c.id==="tx-forgery")).toBe(false);
+ for(const row of batch)expect(charges.find(c=>c.id===row.id)).toMatchObject({code:row.code,category:row.category,description:row.conduct,maxPenalty:row.penalty});
+ expect(charges.find(c=>c.id==="tx-pc-32-21-value-100-750")?.maxPenalty).toMatch(/^Class A/);
+ expect(charges.find(c=>c.id==="tx-pc-32-21-value-100-750-elderly")?.maxPenalty).toMatch(/^State jail/);
+ expect(charges.find(c=>c.id==="tx-pc-31-04-nonpayment-100-750")?.description).toContain("but not (c)’s separate notice conditions");
 });

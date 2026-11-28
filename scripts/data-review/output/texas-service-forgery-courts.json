@@ -1,0 +1,68 @@
+{
+  "documents": [
+    {
+      "id": "green-2024",
+      "sourceUrl": "https://law.justia.com/cases/texas/court-of-criminal-appeals/2024/pd-1182-20.html",
+      "title": "State v. Green / Lennox, 682 S.W.3d 253 (Tex. Crim. App. Jan. 17, 2024), majority",
+      "retrievedAt": "2026-11-23T00:26:04.721594+00:00",
+      "acquisition": "Selected majority-opinion passages transcribed from browser-tool extraction of the identified mirror. Direct downloads returned HTTP 403. Not a full-opinion download or an official-host acquisition.",
+      "text": "The statute contains four separate forgery offenses in subsections (b), (d), (e), and (e-1). Each subsection constitutes a facially valid offense that the State may rely upon in charging a forgery by tracking the statutory language.\n\nAccordingly, if the State seeks to bring a felony forgery prosecution under Section 32.21(d) or (e), it may simply track the statutory language. It is not required to allege and prove a non-statutory “purpose” element to show that the value ladder is inapplicable.",
+      "textSha256": "f4d23cedc906eca2fde8a670159ded973d4b849584a87b5d26e1a54e01e6b57a",
+      "spans": [
+        {
+          "start": 0,
+          "end": 232,
+          "text": "The statute contains four separate forgery offenses in subsections (b), (d), (e), and (e-1). Each subsection constitutes a facially valid offense that the State may rely upon in charging a forgery by tracking the statutory language.",
+          "sha256": "b62396140fef0e628d975b0d76e60af1b0a3d1f912fde9777937664ac4eedc05"
+        },
+        {
+          "start": 234,
+          "end": 498,
+          "text": "Accordingly, if the State seeks to bring a felony forgery prosecution under Section 32.21(d) or (e), it may simply track the statutory language. It is not required to allege and prove a non-statutory “purpose” element to show that the value ladder is inapplicable.",
+          "sha256": "4272706a7baf01cbb9230c21c5fe7f6f0b6b3398f762cc6d0787fef8f9a6f874"
+        }
+      ]
+    },
+    {
+      "id": "lennox-2026",
+      "sourceUrl": "https://caselaw.findlaw.com/court/tx-court-of-criminal-appeals/118127958.html",
+      "title": "Lennox v. State, PD-0284-25 (Tex. Crim. App. Jan. 29, 2026), Keel majority; excludes appended concurrences/dissents",
+      "retrievedAt": "2026-11-23T00:26:04.721737+00:00",
+      "acquisition": "Selected majority-opinion passages transcribed from browser-tool extraction of the identified mirror. Direct downloads returned HTTP 403. Not a full-opinion download or an official-host acquisition.",
+      "text": "A preservation analysis was not necessary because Green held that subsection (e-1) was an element of the offense if raised at trial. Id. at 275. A trial court must instruct on offense elements even absent objection because they are law applicable to the case.\n\nBecause the error stemmed from the trial court's failure to instruct the jury on law applicable to the case, there was no need to address preservation. Instead, the court of appeals correctly reviewed the error for egregious harm. Lennox II, 2025 WL 793896, at *5-7.\n\nBecause check forgery under subsection (d) is “[s]ubject to” subsection (e-1)’s elements, those elements are law applicable to the case if they are shown at trial and would result in a reduced conviction.\n\nAn uncharged greater offense cannot legitimately manifest itself at trial—it must be pled.\n\nThe court of appeals correctly decided that the jury charge error did not require preservation and was egregiously harmful because it omitted offense elements that might have subjected Appellant to a lower conviction level. We affirm its judgment.",
+      "textSha256": "f50e83a4de665a6b3a131d611c46f0c30508bc1f01e0cb0aefdbc723d6c2639f",
+      "spans": [
+        {
+          "start": 0,
+          "end": 259,
+          "text": "A preservation analysis was not necessary because Green held that subsection (e-1) was an element of the offense if raised at trial. Id. at 275. A trial court must instruct on offense elements even absent objection because they are law applicable to the case.",
+          "sha256": "4c538a71397a9d8cbd6ba9b3f7f3166a87d4079c169a2de36550409bdc236a4e"
+        },
+        {
+          "start": 261,
+          "end": 527,
+          "text": "Because the error stemmed from the trial court's failure to instruct the jury on law applicable to the case, there was no need to address preservation. Instead, the court of appeals correctly reviewed the error for egregious harm. Lennox II, 2025 WL 793896, at *5-7.",
+          "sha256": "35a7c820174bf18040e7509fb18adecf214d84a00be54f9fbcd248abba236529"
+        },
+        {
+          "start": 529,
+          "end": 733,
+          "text": "Because check forgery under subsection (d) is “[s]ubject to” subsection (e-1)’s elements, those elements are law applicable to the case if they are shown at trial and would result in a reduced conviction.",
+          "sha256": "6160a7985e1baeaf9b630e69a37ce87697f99d8455d96e52908506e68c38be13"
+        },
+        {
+          "start": 735,
+          "end": 825,
+          "text": "An uncharged greater offense cannot legitimately manifest itself at trial—it must be pled.",
+          "sha256": "21aac7ddb44b68b269e340069729a51876d288dbd4430ddfd48a2b879e6ad2aa"
+        },
+        {
+          "start": 827,
+          "end": 1074,
+          "text": "The court of appeals correctly decided that the jury charge error did not require preservation and was egregiously harmful because it omitted offense elements that might have subjected Appellant to a lower conviction level. We affirm its judgment.",
+          "sha256": "ac7f3e538eab428ddea283c309f8a9fe40cc98196ae0f4e890b8b255faf0b321"
+        }
+      ]
+    }
+  ]
+}
