@@ -776,11 +776,11 @@ The former emergency contact cards are a deliberate content-preservation excepti
 
 A pre-change rendered fixture preserves 50 text fragments per locale plus the existing USCIS destination. The release-listed browser spec checks those fragments, both removed numbers, replacement destinations, five keyboard section jumps, one main landmark, illustration loading, the Chinese language marker, print visibility and 1280px/320px bounds across three languages and both themes. Typecheck, production build, 27 design-locale checks and six browser cases passed. Desktop/light and mobile/dark screenshots were visually inspected. No full-suite, production deployment, or legal-approval claim.
 
-### Remaining implementation inventory (November 22, 2026)
+### Remaining implementation inventory (November 27, 2026)
 
-- Awaiting review: Raids Preparedness Toolkit, PR 276. Workplace Raids (282), DACA/TPS (287) and After Deportation (288) are merged.
-- Attorney access/verification is prepared in this review batch; the production attorney gate remains unchanged.
-- Remaining page-specific professional designs after attorney access: workspace, document catalog, playbook catalog/detail and document wizard. Existing shared styling is not counted as a completed page-specific refresh.
+- Raids Preparedness Toolkit (276), Workplace Raids (282), DACA/TPS (287) and After Deportation (288) are merged.
+- Attorney access/verification (299) is merged. Workspace (302) awaits review; the document catalog is this review batch. The production attorney gate remains unchanged.
+- Remaining page-specific professional designs after the catalog: playbook catalog/detail and document wizard. Existing shared styling is not counted as a completed page-specific refresh.
 - Remaining developer tools: API reference, embeddable widgets and browser extensions. The Developer landing/reference page has already been refreshed.
 - Final design closeout: audit mobile navigation, light/dark appearance, keyboard paths, print surfaces and remaining empty/loading/error states across the completed routes. The How To screenshot replacement has landed. A further visual-variety pass remains a separate, deferred improvement.
 
@@ -816,3 +816,12 @@ The production attorney-config gate is unchanged. The browser tests enable acces
 A pre-change trilingual fixture preserves the rendered text. The release-listed browser spec covers six language/theme cases at desktop and 320px, keyboard selection, invalid submission, request payload, failed submission and retry, plus disabled access, existing verified sessions and pending submission (nine cases total). All nine passed; the attorney gate unit tests passed 5/5. Desktop/light and Chinese mobile/dark screenshots were inspected. Typecheck and production build results are recorded in the PR. No full-suite or production activation claim.
 
 The subtitle and form description use the existing attorneyPortal.verify translations in all three languages, without English-only language overrides. The description now accurately describes attestations instead of requesting bar-information fields. Browser assertions pin both translated paragraphs. Content follow-up: the existing mixed-language disclosure prefix and English validation messages remain. Preserving this copy does not certify bar-membership verification or attorney-client privilege. These wording and translation issues should be resolved separately before enabling the portal.
+
+
+### Attorney document catalog (review batch)
+
+Reference: attorney-catalog-content.html, SHA-256 `05db97db703637411899e32d1bf63ba5e4f7c0594e12f937114c329ed348bb81`. The page adopts a left-aligned introduction, inline session timer, distinct category tabs, open stage groups and full-length template descriptions. Difficulty and completion estimates remain visible on phones, without colored severity badges. Each entire row remains a single keyboard-accessible drafting link; heading elements now identify the document names. A return link to the attorney workspace is added.
+
+The published template summaries, stage assignments/order, category requests, empty/error handling, default disclosure state, verification guard, session expiry and End Session action remain unchanged. The live timer uses the existing inline variant instead of a floating badge. Ending a session still returns to /attorney with the attestation form. The draft DOCX versus public guidance notice remains prominent. The existing English-only introductory text, stage labels, metadata and session note are marked for pronunciation; translation, template claim accuracy and the existing inactivity wording remain separate content follow-ups. No attorney tool is enabled by this PR.
+
+The fixture captures all 38 published template summaries and both stage maps from main 31ad756, independent of the layout. The release-listed browser spec exercises each entry's full description, difficulty, estimate and exact drafting URL; stage ordering; Other entries; category switching; keyboard disclosure operation; desktop/320px bounds in all three languages and both themes; loading/error/empty results; verification gates; and the existing session-ending request. No document generation is invoked. Typecheck, build and five gate unit tests pass; browser results are recorded in the PR. Desktop/light and Chinese mobile/dark previews were visually inspected. Full-suite and live backend activation are outside this design batch.

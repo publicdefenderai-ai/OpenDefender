@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Clock, Scale, ChevronRight } from "lucide-react";
+import { Scale, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -9,12 +9,6 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import type { DocumentTemplateSummary } from "@/lib/attorney-api";
-
-const difficultyColors: Record<string, string> = {
-  basic: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-  intermediate: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
-  advanced: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
-};
 
 interface CaseStage {
   id: string;
@@ -121,36 +115,15 @@ const immigrationStages: CaseStage[] = [
 
 function TemplateRow({ template }: { template: DocumentTemplateSummary }) {
   return (
-    <Link
-      href={`/attorney/documents/${template.id}`}
-      aria-label={`Draft ${template.name}`}
-      className="block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-    >
-      <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-accent/50 transition-colors cursor-pointer border border-transparent hover:border-border">
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
-              {template.name}
-            </span>
-            <Badge
-              variant="outline"
-              className={`text-xs px-1.5 py-0 ${difficultyColors[template.difficultyLevel] || ""}`}
-            >
-              {template.difficultyLevel.charAt(0).toUpperCase() +
-                template.difficultyLevel.slice(1)}
-            </Badge>
-          </div>
-          <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">
-            {template.description}
-          </p>
-        </div>
-        <div className="flex items-center gap-3 shrink-0">
-          <span className="hidden sm:flex items-center gap-1 text-xs text-muted-foreground">
-            <Clock className="h-3 w-3" />
-            {template.estimatedCompletionTime}
-          </span>
-          <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
-        </div>
+    <Link href={`/attorney/documents/${template.id}`} aria-label={`Draft ${template.name}`} className="attorney-template-row">
+      <div>
+        <h3>{template.name}</h3>
+        <p>{template.description}</p>
+      </div>
+      <div className="attorney-template-meta">
+        <span>{template.difficultyLevel.charAt(0).toUpperCase() + template.difficultyLevel.slice(1)}</span>
+        <span>{template.estimatedCompletionTime}</span>
+        <ChevronRight aria-hidden="true" size={18} />
       </div>
     </Link>
   );
@@ -196,12 +169,12 @@ export function StagedTemplateList({
   const defaultOpen = populatedStages.map((s) => s.id);
 
   return (
-    <Accordion type="multiple" defaultValue={defaultOpen} className="space-y-2">
+    <Accordion type="multiple" defaultValue={defaultOpen} className="attorney-template-stages" lang="en">
       {populatedStages.map((stage) => (
         <AccordionItem
           key={stage.id}
           value={stage.id}
-          className="border rounded-lg px-2 bg-card"
+          className="attorney-template-stage"
         >
           <AccordionTrigger className="hover:no-underline py-3 gap-3">
             <div className="flex items-center gap-3 text-left">
@@ -212,7 +185,7 @@ export function StagedTemplateList({
             </div>
           </AccordionTrigger>
           <AccordionContent className="pb-2 pt-0">
-            <p className="text-xs text-muted-foreground mb-2 px-4">
+            <p className="attorney-template-stage-description">
               {stage.description}
             </p>
             <div className="space-y-0.5">
@@ -227,7 +200,7 @@ export function StagedTemplateList({
       {uncategorized.length > 0 && (
         <AccordionItem
           value="other"
-          className="border rounded-lg px-2 bg-card"
+          className="attorney-template-stage"
         >
           <AccordionTrigger className="hover:no-underline py-3 gap-3">
             <div className="flex items-center gap-3 text-left">

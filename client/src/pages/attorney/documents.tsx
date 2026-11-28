@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { FileText, Folder, LogOut, Clock, Scale, Landmark, Loader2 } from "lucide-react";
+import { Link } from "wouter";
+import "./documents.css";
+import { Folder, LogOut, Clock, Loader2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import { Header } from "@/components/layout/header";
@@ -23,45 +24,34 @@ function DocumentsContent() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <SessionTimer />
+      <div className="attorney-catalog" data-skip-content tabIndex={-1}>
+      <div className="attorney-catalog-top">
+        <Link href="/attorney">{t("attorneyPortal.verify.backToPortal", "Back to Attorney Portal")}</Link>
+        <SessionTimer variant="inline" />
+      </div>
 
-      <section className="border-b border-border/60 bg-[var(--editorial-paper-deep)] py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-[var(--editorial-signal)] mb-6">
-              <FileText className="h-8 w-8 text-white" />
-            </div>
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
+      <header className="attorney-catalog-heading">
+        <h1>
               {t("attorneyPortal.documents.title", "Document Drafting")}
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="attorney-catalog-intro" lang="en">
               {t(
                 "attorney.documents.subtitle",
                 "AI-assisted drafting for criminal and immigration matters. Generates professionally structured starting drafts — always verify local rules and standing orders before filing."
               )}
             </p>
-            <p className="text-sm font-medium text-amber-800 dark:text-amber-300 max-w-2xl mx-auto mt-4 border-t border-amber-200/70 dark:border-amber-800/70 pt-3">
+        <p className="attorney-catalog-notice" lang="en">
               Separate attorney filing drafts: these DOCX documents are not part of a defendant's Case Roadmap, chat guidance, PDF, or print plan.
             </p>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-8 md:py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      </header>
+      <section className="attorney-catalog-list">
+        <div>
           <Tabs defaultValue="criminal" className="space-y-6">
-            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto">
+            <TabsList className="attorney-catalog-tabs">
               <TabsTrigger value="criminal" className="gap-2">
-                <Scale className="h-4 w-4" />
                 {t("attorneyPortal.documents.criminal", "Criminal")}
               </TabsTrigger>
               <TabsTrigger value="immigration" className="gap-2">
-                <Landmark className="h-4 w-4" />
                 {t("attorneyPortal.documents.immigration", "Immigration")}
               </TabsTrigger>
             </TabsList>
@@ -79,7 +69,7 @@ function DocumentsContent() {
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Clock className="h-4 w-4" />
-                <span>
+                <span lang="en">
                   {t(
                     "attorney.documents.sessionNote",
                     "Your session will automatically end after 1 hour of inactivity."
@@ -99,6 +89,7 @@ function DocumentsContent() {
         </div>
       </section>
 
+      </div>
       <Footer />
     </div>
   );
@@ -139,7 +130,7 @@ function CategoryTemplates({ category }: CategoryTemplatesProps) {
 
   if (isLoading) {
     return (
-      <Card className="editorial-card">
+      <Card className="attorney-catalog-state" role="status" lang="en">
         <CardContent className="flex flex-col items-center justify-center py-16">
           <Loader2 className="h-8 w-8 text-[var(--editorial-signal)] animate-spin mb-4" />
           <p className="text-muted-foreground">Loading templates...</p>
@@ -150,7 +141,7 @@ function CategoryTemplates({ category }: CategoryTemplatesProps) {
 
   if (error) {
     return (
-      <Card className="editorial-card border-red-200 dark:border-red-800">
+      <Card className="attorney-catalog-state" role="alert" lang="en">
         <CardContent className="flex flex-col items-center justify-center py-16 text-center">
           <p className="text-red-600">{error}</p>
         </CardContent>
@@ -168,7 +159,7 @@ function CategoryTemplates({ category }: CategoryTemplatesProps) {
   }
 
   return (
-    <Card className="editorial-card border-dashed">
+    <Card className="attorney-catalog-state">
       <CardContent className="flex flex-col items-center justify-center py-16 text-center">
         <div className="w-16 h-16 bg-[var(--editorial-paper-deep)] rounded-full flex items-center justify-center mb-4">
           <Folder className="h-8 w-8 text-muted-foreground" />
